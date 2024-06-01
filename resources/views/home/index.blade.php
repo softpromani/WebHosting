@@ -25,26 +25,24 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                excepturi</p>
+                            <h4 class="title"><a href="">99.99% Up Time</a></h4>
+                            <p class="description">Heavy-duty servers that promise ultra-high availability standard of server performance</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                             <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore</p>
+                            <h4 class="title"><a href="">High-end Security</a></h4>
+                            <p class="description">Secure your data with IDS/IPS threat detection, multi-factor authentication, layered firewalls, Endpoint Detection and Response (EDR) readiness, and more.</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4 class="title"><a href="">Magni Dolores</a></h4>
-                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            <h4 class="title"><a href="">Free Trial for 7 Days</a></h4>
+                            <p class="description">Experience free-tier and get credits to deploy cloud instances with all critical features
                             </p>
                         </div>
                     </div>
@@ -52,8 +50,8 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
                             <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4 class="title"><a href="">Nemo Enim</a></h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                            <h4 class="title"><a href="">Reduced Fixed Capital</a></h4>
+                            <p class="description">Lower capital investment for purchasing high end IT-infra and remove any associated vulnerability and risks
                             </p>
                         </div>
                     </div>
@@ -124,37 +122,37 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="count-box">
-                            <i class="bi bi-emoji-smile"></i>
+                            <i class="bi bi-star-fill"></i>
                             <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Happy Clients</p>
+                            <p>Years of Exp.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
                         <div class="count-box">
-                            <i class="bi bi-journal-richtext"></i>
+                            <i class="bi bi-people"></i>
                             <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Projects</p>
+                            <p>Users</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                         <div class="count-box">
-                            <i class="bi bi-headset"></i>
+                            <i class="bi bi-building"></i>
                             <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Hours Of Support</p>
+                            <p>Data Centers</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                         <div class="count-box">
-                            <i class="bi bi-people"></i>
+                            <i class="bi bi-list-stars"></i>
                             <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Hard Workers</p>
+                            <p>Awards</p>
                         </div>
                     </div>
 

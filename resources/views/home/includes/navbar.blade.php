@@ -49,7 +49,7 @@
             <ul>
               <li><a href="#">QuickBooks/Apps Hosting</a></li>
               <li><a href="#">Hosted VDI Pricing</a></li>
-              <li><a href="#">Linux Virtal Desktop</a></li>
+              <li><a href="#">Linux Virtual Desktop</a></li>
               <li><a href="#">Desktop as a Service</a></li>
               <li><a href="#">Public Cloud</a></li>
               <li><a href="#">Managed Security Pricing</a></li>
