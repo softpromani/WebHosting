@@ -204,17 +204,16 @@
 
                 <div class="section-title">
                     <h2>Services</h2>
-                    <h3>Check our <span>Services</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.</p>
+                    <h3>More Power. Faster. <span>Dedicated.</span></h3>
+                    <p>Our team of specialists will manage the cloud infrastructure while you focus on building your business.</p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <h4><a href="">Reliable Uptime of 99.99%</a></h4>
+                            <p>Ensure consistent availability with our industry-leading Service Level Agreement (SLA), providing a remarkable 99.99% uptime for your hosted QuickBooks.</p>
                         </div>
                     </div>
 
@@ -222,8 +221,8 @@
                         data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Sed ut perspiciatis</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <h4><a href="">Effortless Migration</a></h4>
+                            <p>Simplify your migration with our expert guidance, ensuring a smooth and hassle-free move from your on-premise or existing service provider to Ace Cloud’s platform.</p>
                         </div>
                     </div>
 
@@ -231,8 +230,8 @@
                         data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            <h4><a href="">Always on Support</a></h4>
+                            <p>Our dedicated team is available around the clock on phone, chat, and email to provide immediate assistance and expert guidance whenever you have hosting-related issues.</p>
                         </div>
                     </div>
 
@@ -240,8 +239,8 @@
                         data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4><a href="">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                            <h4><a href="">Security at Priority</a></h4>
+                            <p>Trust in our infrastructure's robust security to safeguard sensitive data with IDS/IPS, next-gen antivirus, authentication, encryption and more for unwavering data protection security measures.</p>
                         </div>
                     </div>
 
@@ -249,8 +248,8 @@
                         data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-slideshow"></i></div>
-                            <h4><a href="">Dele cardo</a></h4>
-                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                            <h4><a href="">Automated Data Backup</a></h4>
+                            <p>Our automated 45-day rolling backup process ensures that accidental data deletion or natural disasters won't disrupt your operations, giving you peace of mind.</p>
                         </div>
                     </div>
 
@@ -258,8 +257,8 @@
                         data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-arch"></i></div>
-                            <h4><a href="">Divera don</a></h4>
-                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                            <h4><a href="">Custom Cloud Workspace</a></h4>
+                            <p>Get a fully customized accounting workspace with cloud-hosted QuickBooks and all other critical applications/add-ons in a single cloud per your business requirements.</p>
                         </div>
                     </div>
 
