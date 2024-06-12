@@ -24,4 +24,4 @@
 
 <!-- Template Main CSS File -->
 <link href="{{ asset('home/assets/css/style.css') }}" rel="stylesheet">
-
+<link href="{{ asset('home/assets/css/main.css') }}" rel="stylesheet">

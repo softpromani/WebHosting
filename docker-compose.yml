@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  # PHP Application Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: webhost-website
+    container_name: Webhosting
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "9001:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+
+
