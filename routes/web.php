@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('/logout',[LoginController::class,'logout'])->name('logout');
     Route::post('update-password',[LoginController::class,'updatePassword'])->name('updatePassword');
     Route::get('web-setting',[WebSettingController::class,'webSetting'])->name('webSetting');
+    Route::post('web-setting/update',[WebSettingController::class,'updateWebSettings'])->name('updateWebSettings');
 
 
 

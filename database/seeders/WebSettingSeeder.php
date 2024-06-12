@@ -16,14 +16,12 @@ class WebSettingSeeder extends Seeder
          $settings = 
         [
             // Andhra Pradesh
-            ['group' => 'theme', 'key' => 'primary','value'=>'#65E82E'],
-            ['group' => 'theme', 'key' => 'secondary','value'=>'grey'],
-            ['group' => 'theme', 'key' => 'info','value'=>'skyblue'],
-            ['group' => 'theme', 'key' => 'dark','value'=>'black'],
-            ['group' => 'theme', 'key' => 'danger','value'=>'red'],
-            ['group' => 'contact', 'key' => 'name','value'=>'Jagritee Srivastava'],
-            ['group' => 'contact', 'key' => 'email','value'=>'jag@gmail.com'],
-            ['group' => 'contact', 'key' => 'phone','value'=>'8765786576'],
+            ['group' => 'theme', 'key' => 'primary','value'=>'#65E82E','type'=>'color'],
+            ['group' => 'theme', 'key' => 'secondary','value'=>'grey','type'=>'color'],
+            ['group' => 'contact', 'key' => 'name','value'=>'Jagritee Srivastava','type'=>'text'],
+            ['group' => 'contact', 'key' => 'email','value'=>'contact@gmail.com','type'=>'text'],
+            ['group' => 'contact', 'key' => 'phone','value'=>'8765786576','type'=>'text'],
+            ['group' => 'contact', 'key' => 'address','value'=>'A108 Adam Street, New York, NY 535022','type'=>'text'],
         ];
 
         DB::table('web_settings')->insert($settings);
