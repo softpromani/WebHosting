@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\WebSettingController;
 use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\home\ProductController;
@@ -22,6 +24,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::post('update-password',[LoginController::class,'updatePassword'])->name('updatePassword');
     Route::get('web-setting',[WebSettingController::class,'webSetting'])->name('webSetting');
     Route::post('web-setting/update',[WebSettingController::class,'updateWebSettings'])->name('updateWebSettings');
+    Route::resource('menu',MenuController::class)->name('','menu');
+    Route::resource('product',AdminProductController::class)->name('','product');
 
 
 

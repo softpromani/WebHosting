@@ -16,9 +16,44 @@ services:
     networks:
       - app-network
 
+  # MySQL Service
+  db:
+    image: mysql:5.7
+    container_name: webhostDB
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: Webhosting
+      MYSQL_USER: manish
+      MYSQL_PASSWORD: 12345678
+      MYSQL_ROOT_PASSWORD: 12345678
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - "3310:3306"
+    networks:
+      - app-network
+
+  # PHPMyAdmin Service
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: webhostDBWeb
+    restart: unless-stopped
+    ports:
+      - "8095:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: manish
+      PMA_PASSWORD: 12345678
+      MYSQL_ROOT_PASSWORD: 12345678
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+# Volumes for persisting database data
+volumes:
+  dbdata:
+
 networks:
   app-network:
     driver: bridge
-
-
-
