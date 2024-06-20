@@ -11,20 +11,33 @@ class WebSettingController extends Controller
     public function webSetting()
     {
         $webSettings = WebSetting::all()->groupBy('group');
+
         return view('admin.webSetting.websetting', compact('webSettings'));
     }
-    function updateWebSettings(Request $request)
+
+   public function updateWebSettings(Request $request)
     {
-        $settings = $request->input('settings', []);
-        // dd($settings);
-        foreach ($settings as $key => $value) {
-            WebSetting::updateOrCreate(
-                ['key' => $key],
-                ['value' => $value]
-            );
+        foreach ($request->settings as $key => $value) {
+            // Handle file uploads
+            if ($request->hasFile("settings.$key")) {
+                // dd("hii");
+                $file = $request->file("settings.$key");
+                $path = $file->store('uploads/setting', 'public'); 
+
+                WebSetting::updateOrCreate(
+                    ['key' => $key],
+                    ['value' => $path]
+                );
+            } else {
+                WebSetting::updateOrCreate(
+                    ['key' => $key],
+                    ['value' => $value]
+                );
+            }
         }
 
-        toast('Web Settings updated successfully', 'success');
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Settings updated successfully.');
     }
-}
+
+
+    }
