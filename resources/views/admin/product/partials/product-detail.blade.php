@@ -46,8 +46,7 @@
      <div class="col-sm-12">
          <div class="form-group productdesc">
              <label for="product_desciption">Product Description</label>
-             <textarea name="product_desciption" id="product_desciption"
-                 value="{{ isset($data->product_description) ? $data->product_description : '' }}"></textarea>
+             <textarea name="product_description" id="product_description"> {!! isset($data->product_description) ? $data->product_description : '' !!} </textarea>
          </div>
          @error('product_desciption')
              <div class="alert mt-2" style=" color:rgb(255, 60, 0); ">{{ $message }}</div>

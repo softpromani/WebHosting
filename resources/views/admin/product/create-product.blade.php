@@ -46,8 +46,6 @@
                 <div class="tab-content py-4" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="step1">
                         {{-- product detail --}}
-
-                        @include('admin.product.partials.product-detail')
                     </div>
                     <div class="tab-pane fade" id="step2">
                         {{-- feature tab --}}
@@ -301,7 +299,6 @@
             // Handle tab click events
             $(document).on('click', '.pronav a.nav-link', function(e) {
                 e.preventDefault();
-                alert('click');
                 var targetTab = $(this).attr('href');
                 var url = $(this).data('url');
                 var product_id =
@@ -332,13 +329,12 @@
             });
 
             // Trigger click on the active tab to load its content initially
+            @if (session()->has('activeTab'))
+                $('#{{ session()->get('activeTab') }}').click();
+            @else
+                $('#nav-tab .nav-link.active').click();
+            @endif
 
         });
-        $('#nav-tab .nav-link.active').trigger('click');
-
-        @if (session()->has('activeTab'))
-            $('#{{ session()->get('activeTab') }}').click();
-            alert();
-        @endif
     </script>
 @endsection

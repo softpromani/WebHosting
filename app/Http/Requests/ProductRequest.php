@@ -30,7 +30,7 @@ class ProductRequest extends FormRequest
                     'product_title' => 'required',
                     'meta_keyword' => 'required',
                     'meta_description' => 'required',
-                    'product_desciption' => 'required',
+                    'product_description' => 'required',
                 ];
             case 'feature':
 
