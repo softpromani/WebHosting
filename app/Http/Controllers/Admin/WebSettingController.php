@@ -18,9 +18,9 @@ class WebSettingController extends Controller
    public function updateWebSettings(Request $request)
     {
         foreach ($request->settings as $key => $value) {
-            // Handle file uploads
+           
             if ($request->hasFile("settings.$key")) {
-                // dd("hii");
+                
                 $file = $request->file("settings.$key");
                 $path = $file->store('uploads/setting', 'public'); 
 

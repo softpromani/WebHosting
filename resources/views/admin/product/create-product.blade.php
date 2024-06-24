@@ -15,243 +15,76 @@
 @endsection
 @section('main-content')
 
-<form action="{{isset($edit)?route('admin.product.update',$product->id):route('admin.product.store')}}" method="POST">
-    @isset($edit) @method('PUT') @endisset
-    @csrf
-<div class="card">
-    <div class="card-header">
-        <nav>
-            <div class="nav nav-pills nav-fill" id="nav-tab" role="tablist">
-              <a class="nav-link active" id="step1-tab" data-toggle="tab" href="#step1">Product Detail</a>
-              <a class="nav-link" id="step2-tab" data-toggle="tab" href="#step2">Features</a>
-              <a class="nav-link" id="step3-tab" data-toggle="tab" href="#step3">Counter</a>
-              <a class="nav-link" id="step4-tab" data-toggle="tab" href="#step4">Testimonial</a>
-              <a class="nav-link" id="step5-tab" data-toggle="tab" href="#step5">Why-Us</a>
-              <a class="nav-link" id="step6-tab" data-toggle="tab" href="#step6">FAQs</a>
-              <a class="nav-link" id="step7-tab" data-toggle="tab" href="#step7">Media</a>
+    <form action="{{ isset($edit) ? route('admin.product.update', $product->id) : route('admin.product.store') }}"
+        method="POST" enctype="multipart/form-data">
+        @isset($edit)
+            @method('PUT')
+        @endisset
+        @csrf
+        <div class="card">
+            <div class="card-header">
+                <nav>
+                    <div class="nav nav-pills nav-fill pronav" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="pro_detail" data-toggle="tab" href="#step1"
+                            data-url="{{ route('admin.product.show', 1) }}">Product Detail</a>
+                        <a class="nav-link" id="feature" data-toggle="tab" href="#step2"
+                            data-url="{{ route('admin.product.show', 2) }}">Features</a>
+                        <a class="nav-link" id="pro_counter" data-toggle="tab" href="#step3"
+                            data-url="{{ route('admin.product.show', 3) }}">Counter</a>
+                        <a class="nav-link" id="pro_testimonal" data-toggle="tab" href="#step4"
+                            data-url="{{ route('admin.product.show', 4) }}">Testimonial</a>
+                        <a class="nav-link" id="why-us" data-toggle="tab" href="#step5"
+                            data-url="{{ route('admin.product.show', 5) }}">Why-Us</a>
+                        <a class="nav-link" id="faqs" data-toggle="tab" href="#step6"
+                            data-url="{{ route('admin.product.show', 6) }}">FAQs</a>
+                        <a class="nav-link" id="media" data-toggle="tab" href="#step7"
+                            data-url="{{ route('admin.product.show', 7) }}">Media</a>
+                    </div>
+                </nav>
             </div>
-          </nav>
-    </div>
-    <div class="card-body">
-        <div class="tab-content py-4" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="step1">
-               {{-- product detail --}}
-               <div class="row">
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input class="form-control" type="text" name="" id="">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label for="meta_keyword">Meta Keywords <small class="text-danger">(multiple Seperate with
-                                ',')</small></label>
-                        <input class="form-control" type="text" name="meta_keyword" id="meta_keyword">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label for="meta_desc">Meta Description</label>
-                        <input class="form-control" type="text" name="meta_desc" id="meta_desc">
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group productdesc">
-                        <label for="product_desciption">Product Description</label>
-                        <textarea name="product_desciption" id="product_desciption"></textarea>
-                    </div>
-                </div>
-            </div>
+            <div class="card-body">
+                <div class="tab-content py-4" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="step1">
+                        {{-- product detail --}}
 
-            </div>
-            <div class="tab-pane fade" id="step2">
-                {{-- feature tab --}}
-             
-                <div class="row feature-div">
-                    <div class="col-md-6 ">
-                        <div class="card">
-                            <span class="text-white p-2 btn btn">x</span>
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="feature_icon">Icon <small class="text-danger">(icon class from <a
-                                                    href="https://fontawesome.com/icons" target="_blank">here
-                                                    ...</a>)</small></label>
-                                        <input type="text" name="feature[]['icon']" id="feature_icon"
-                                            class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="feature_title">Title </label>
-                                        <input type="text" name="feature[]['title']" id="feature_title"
-                                            class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="feature_desc">Detail </label>
-                                        <textarea name="feature[]['desc']" id="feature_desc" class="form-control" required></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('admin.product.partials.product-detail')
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 float-end">
-                        <button type="button" class="btn btn-success mt-3 float-end" onclick="add_feature_div()"
-                        type="button">+</button>
-                    </div>
-                </div>
-            </div>
+                    <div class="tab-pane fade" id="step2">
+                        {{-- feature tab --}}
 
-            {{-- Counter tab --}}
-            
-            <div class="tab-pane fade" id="step3">
-                <div class="row counter-div">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <span class="text-white p-2 btn btn">x</span>
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="counter_icon">Icon <small class="text-danger">(icon class from <a
-                                                    href="https://fontawesome.com/icons" target="_blank">here
-                                                    ...</a>)</small></label>
-                                        <input type="text" name="counter[]['count']" id="feature_icon" class="form-control"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="counter_count">Count </label>
-                                        <input type="number" name="counter[]['count']" id="counter_count" class="form-control"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="counter_title">Title </label>
-                                        <input type="text" name="counter[]['title']" id="counter_title"
-                                            class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                    <button class="btn btn-success float-end" onclick="add_counter_div()"
-                    type="button">+</button>
-                    </div>
-                </div>
-            </div>
-            {{-- Testimonial tab--}}
-            <div class="tab-pane fade" id="step4">
-                
-                <div class="row testimonial-div">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <span class="text-white p-2 btn btn">x</span>
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="testipic">Image <span class="text-danger">(max 300kb)</span></label>
-                                        <input type="file" name="testi[]['pic']" id="testipic" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="testiname">Name</label>
-                                        <input type="text" name="testi[]['name']" id="testiname" class="form-control"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="testideg">Designation</label>
-                                        <input type="text" name="testi[]['deg']" id="testideg" class="form-control"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="testicomment">Comment</label>
-                                        <input type="text" name="testi[]['comment']" id="testicomment"
-                                            class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <button class="btn btn-success float-end" onclick="add_testimonial_div()" type="button">+</button>
-                    </div>
-                </div>
-            </div>
-            {{-- why-us tab --}}
-            <div class="tab-pane fade" id="step5">
-            </div>
 
-            {{-- FAQs --}}
-            
-            <div class="tab-pane fade" id="step6">
-                <div class="row faq-div">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <span class="text-white p-2 btn btn">x</span>
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="faqheading">Question ?</label>
-                                        <input type="text" name="faq[]['heading']" class="form-control"
-                                            id="faqheading" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="faqans">Answer </label>
-                                        <input type="text" name="faq[]['ans']" class="form-control" id="faqans"
-                                            required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <button class="btn btn-success float-end" onclick="add_faq_div()" type="button">+</button></div>
-                    </div>
-                </div>
+                    {{-- Counter tab --}}
 
-            {{-- Media --}}
-            
-            <div class="tab-pane fade" id="step7">
-                <span class="text-warning">Images must be  maximum 1 MB each</span>
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="main_img">Content Image</label>
-                        <input type="file" name="main_img" id="main_img" class="form-control" accept="image/*">
+                    <div class="tab-pane fade" id="step3">
+
                     </div>
-                    <div class="col-md-6">
-                        <label for="slider_img">Silder Images <span class="text-danger">(Select Multiple)</span></label>
-                        <input type="file" name="slider_img[]" id="main_img" class="form-control" accept="image/*" multiple>
+                    {{-- Testimonial tab --}}
+                    <div class="tab-pane fade" id="step4">
+
+                    </div>
+                    {{-- why-us tab --}}
+                    <div class="tab-pane fade" id="step5">
+                    </div>
+
+                    {{-- FAQs --}}
+
+                    <div class="tab-pane fade" id="step6">
+
+                    </div>
+
+                    {{-- Media --}}
+
+                    <div class="tab-pane fade" id="step7">
+
                     </div>
                 </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary float-end" type="submit">Submit</button>
             </div>
         </div>
-    </div>
-    <div class="card-footer">
-        <button class="btn btn-primary float-end" type="submit">Submit</button>
-    </div>
-</div>
-</form>
+    </form>
 @endsection
 @section('script-area')
     <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
@@ -261,151 +94,186 @@
             .catch(error => {
                 console.error(error);
             });
-        ClassicEditor
-            .create(document.querySelector('#feature_desc'))
-            .catch(error => {
-                console.error(error);
-            });
+
+        let featureIndex = 1;
 
         function add_feature_div() {
-            var featdiv = ` <div class="col-md-6 feature-item">
-                        <div class="card">
-                            <span class="text-danger p-2 btn feature-del ">X</span>
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="feature_icon">Icon <small class="text-danger">(icon class from <a
-                                                    href="https://fontawesome.com/icons" target="_blank">here
-                                                    ...</a>)</small></label>
-                                        <input type="text" name="feature[]['icon']" id="feature_icon" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="feature_title">Title </label>
-                                        <input type="text" name="feature[]['title']" id="feature_title"
-                                            class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="feature_desc">Detail </label>
-                                        <textarea name="feature[]['desc']" id="feature_desc" class="form-control feature_desc" required></textarea>
-                                    </div>
-                                </div>
-                            </div>
+            var featureIndex = document.querySelectorAll('.feature-item').length;
+
+            var featdiv = `<div class="col-md-6 feature-item">
+            <div class="card">
+                <span class="text-danger p-2 btn feature-del">X</span>
+                <div class="card-body">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="feature_icon_${featureIndex}">Icon <small class="text-danger">(icon class from <a
+                                        href="https://fontawesome.com/icons" target="_blank">here
+                                        ...</a>)</small></label>
+                            <input type="text" name="feature[${featureIndex}][icon]" id="feature_icon_${featureIndex}" class="form-control">
+                            <span class="alert text-danger" id="error_feature_${featureIndex}_icon"></span>
                         </div>
-                    </div>`;
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="feature_title_${featureIndex}">Title </label>
+                            <input type="text" name="feature[${featureIndex}][title]" id="feature_title_${featureIndex}" class="form-control">
+                            <span class="alert text-danger" id="error_feature_${featureIndex}_title"></span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="feature_desc_${featureIndex}">Detail </label>
+                            <textarea name="feature[${featureIndex}][detail]" id="feature_desc_${featureIndex}" class="form-control feature_desc"></textarea>
+                            <span class="alert text-danger" id="error_feature_${featureIndex}_detail"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>`;
+
             $('.feature-div').append(featdiv);
-            document.querySelectorAll('.feature_desc').forEach((element) => {
-                if (!element.classList.contains('ck-editor-initialized')) {
-                    ClassicEditor.create(element)
-                        .then(editor => {
-                            element.classList.add('ck-editor-initialized');
-                        })
-                        .catch(error => {
-                            console.error(error);
-                        });
-                }
-            });
+
+            var newFeatureDescTextarea = document.getElementById(`feature_desc_${featureIndex}`);
+            if (newFeatureDescTextarea && !newFeatureDescTextarea.classList.contains('ck-editor-initialized')) {
+                ClassicEditor.create(newFeatureDescTextarea)
+                    .then(editor => {
+                        newFeatureDescTextarea.classList.add('ck-editor-initialized');
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+
+            featureIndex++; // Increment featureIndex for next added feature
         }
+
         $(document).on('click', '.feature-del', function() {
             $(this).closest('.col-md-6').remove();
         });
 
 
+
+        let counterIndex = 1;
+
         function add_counter_div() {
-            var counterdiv = `<div class="col-md-6">
-                        <div class="card">
-                            <span class="text-danger p-2 btn btn feature-del">x</span>
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="counter_icon">Icon <small class="text-danger">(icon class from <a
-                                                    href="https://fontawesome.com/icons" target="_blank">here
-                                                    ...</a>)</small></label>
-                                        <input type="text" name="counter[]['icon']" id="feature_icon" class="form-control"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="counter_count">Count </label>
-                                        <input type="number" name="counter[]['count']" id="counter_count" class="form-control"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="counter_title">Title </label>
-                                        <input type="text" name="counter[]['title']" id="counter_title" class="form-control"
-                                            required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`;
-            $('.counter-div').append(counterdiv);
-        }
+            var counterIndex = document.querySelectorAll('.counter-item').length;
 
-        // function add testimonial div
-        function add_testimonial_div() {
-            var html = `<div class="col-md-6">
-                        <div class="card">
-                            <span class="text-danger p-2 btn btn feature-del">x</span>
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="testipic">Image <span class="text-danger">(max 300kb)</span></label>
-                                        <input type="file" name="testi[]['pic']" id="testipic" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="testiname">Name</label>
-                                        <input type="text" name="testi[]['name']" id="testiname" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="testideg">Designation</label>
-                                        <input type="text" name="testi[]['deg']" id="testideg" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="testicomment">Comment</label>
-                                        <input type="text" name="testi[]['comment']" id="testicomment" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`;
-            $('.testimonial-div').append(html);
-        }
-
-        // faq div
-        function add_faq_div() {
-            var html = `<div class="col-md-6">
-                        <div class="card">
-                        <span class="text-danger p-2 btn feature-del">x</span>
+            var counterdiv = `<div class="col-md-6 counter-item">
+                    <div class="card">
+                        <span class="text-danger p-2 btn  counter-del">x</span>
                         <div class="card-body">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="faqheading">Question ?</label>
-                                    <input type="text" name="faq[]['heading']" class="form-control" id="faqheading" required>
+                                    <label for="counter_icon_${counterIndex}">Icon <small class="text-danger">(icon class from <a
+                                                href="https://fontawesome.com/icons" target="_blank">here
+                                                ...</a>)</small></label>
+                                    <input type="text" name="counter[${counterIndex}][icon]" id="counter_icon_${counterIndex}" class="form-control" >
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="faqans">Answer </label>
-                                    <input type="text" name="faq[]['ans']" class="form-control" id="faqans" required>
+                                    <label for="counter_count_${counterIndex}">Count </label>
+                                    <input type="number" name="counter[${counterIndex}][count]" id="counter_count_${counterIndex}" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="counter_title_${counterIndex}">Title </label>
+                                    <input type="text" name="counter[${counterIndex}][title]" id="counter_title_${counterIndex}" class="form-control" >
                                 </div>
                             </div>
                         </div>
-                    </div>`;
-            $('.faq-div').append(html)
+                    </div>
+                </div>`;
+
+            $('.counter-div').append(counterdiv);
+
+            counterIndex++; // Increment counterIndex for next added counter
         }
+
+        $(document).on('click', '.counter-del', function() {
+            $(this).closest('.col-md-6').remove();
+        });
+
+
+        let testimonialIndex = 1;
+
+        function add_testimonial_div() {
+            var testimonialIndex = document.querySelectorAll('.testimonial-item').length;
+
+            var html = `<div class="col-md-6 testimonial-item">
+                <div class="card">
+                    <span class="text-danger p-2 btn btn feature-del">x</span>
+                    <div class="card-body">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="testipic_${testimonialIndex}">Image <span class="text-danger">(max 300kb)</span></label>
+                                <input type="file" name="testi[${testimonialIndex}][pic]" id="testipic_${testimonialIndex}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="testiname_${testimonialIndex}">Name</label>
+                                <input type="text" name="testi[${testimonialIndex}][name]" id="testiname_${testimonialIndex}" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="testideg_${testimonialIndex}">Designation</label>
+                                <input type="text" name="testi[${testimonialIndex}][designation]" id="testideg_${testimonialIndex}" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="testicomment_${testimonialIndex}">Comment</label>
+                                <input type="text" name="testi[${testimonialIndex}][comment]" id="testicomment_${testimonialIndex}" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+
+            $('.testimonial-div').append(html);
+            testimonialIndex++;
+        }
+
+
+
+
+
+        // faq div
+        let faqIndex = 1;
+
+        function add_faq_div() {
+            var faqIndex = document.querySelectorAll('.faq-item').length;
+
+            var html = `<div class="col-md-6 faq-item">
+                <div class="card">
+                    <span class="text-danger p-2 btn faq-del">x</span>
+                    <div class="card-body">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="faqheading_${faqIndex}">Question ?</label>
+                                <input type="text" name="faq[${faqIndex}][question]" class="form-control" id="faqheading_${faqIndex}" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="faqans_${faqIndex}">Answer </label>
+                                <input type="text" name="faq[${faqIndex}][answer]" class="form-control" id="faqans_${faqIndex}" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+
+            $('.faq-div').append(html);
+
+            faqIndex++; // Increment faqIndex for next added FAQ
+        }
+
+
+
 
         // preview of images
         function previewImages(input, previewContainerId) {
@@ -427,5 +295,50 @@
                 });
             }
         }
+
+        // ajax call on tab chnage 
+        $(document).ready(function() {
+            // Handle tab click events
+            $(document).on('click', '.pronav a.nav-link', function(e) {
+                e.preventDefault();
+                alert('click');
+                var targetTab = $(this).attr('href');
+                var url = $(this).data('url');
+                var product_id =
+                    @if (session()->has('product_id'))
+                        {{ session()->get('product_id') }}
+                    @else
+                        0
+                    @endif ;
+                if (product_id != 0) {
+                    url = url + '/' + product_id;
+                }
+                $('.tab-pane').not(targetTab).empty();
+
+                // Load content via AJAX
+                $.ajax({
+                    url: url,
+                    method: 'GET',
+                    success: function(response) {
+                        $(targetTab).html(response);
+                        $(targetTab).tab('show');
+                    },
+
+                    error: function(xhr, status, error) {
+                        console.error('Error fetching tab content:', status, error);
+                        $(targetTab).html('<p>Error loading content.</p>');
+                    }
+                });
+            });
+
+            // Trigger click on the active tab to load its content initially
+
+        });
+        $('#nav-tab .nav-link.active').trigger('click');
+
+        @if (session()->has('activeTab'))
+            $('#{{ session()->get('activeTab') }}').click();
+            alert();
+        @endif
     </script>
 @endsection

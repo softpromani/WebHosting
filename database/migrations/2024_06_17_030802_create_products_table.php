@@ -13,9 +13,18 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('menu_id')->nullable();
+            $table->string('product_title')->nullable();
+            $table->string('slug')->unique();
+            $table->string('meta_keyword')->nullable();
+            $table->longText('meta_description')->nullable();
+            $table->longText('product_description')->nullable();
+            $table->tinyInteger('step')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
+
 
     /**
      * Reverse the migrations.

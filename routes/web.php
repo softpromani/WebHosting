@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\Admin\ProductFeatureController;
 use App\Http\Controllers\Admin\WebSettingController;
 use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\home\ProductController;
@@ -26,6 +27,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::post('web-setting/update',[WebSettingController::class,'updateWebSettings'])->name('updateWebSettings');
     Route::resource('menu',MenuController::class)->name('','menu');
     Route::resource('product',AdminProductController::class)->name('','product');
+    Route::get('product/show/{step}/{product_id?}',[AdminProductController::class, 'show'])->name('product.show');
+    Route::resource('product-feature',ProductFeatureController::class);
 
 
 
