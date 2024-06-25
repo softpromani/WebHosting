@@ -134,7 +134,7 @@ class ProductController extends Controller
                     $picPath = $testiData['pic']->store('testimonials', 'public');
                     $testimonial=ProductTestimonial::create([
                         'product_id' => $product_id,
-                        'pic' => $picPath,
+                        'testimonial_image' => $picPath,
                         'name' => $testiData['name'],
                         'designation' => $testiData['designation'],
                         'comment' => $testiData['comment'],
@@ -210,7 +210,10 @@ class ProductController extends Controller
                     return view('admin.product.partials.faq',['data'=>$data,'product_id'=>$pid]);
                 case 7:
                     $data=Product::find($pid);
-                    return view('admin.product.partials.media',['data'=>$data,'product_id'=>$pid]);
+                    if($data){
+
+                        return view('admin.product.partials.media',['data'=>$data,'product_id'=>$pid]);
+                    }
             }
         } else {
             switch ($step) {
