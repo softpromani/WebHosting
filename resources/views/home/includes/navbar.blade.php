@@ -21,36 +21,9 @@
                                                     href="{{ route('product', $product->slug) }}">{{ $product->product_title }}</a>
                                             </li>
                                         @endforeach
-                                        {{-- <li><a href="#">QuickBooks Accountant</a></li>
-                                        <li><a href="#">QuickBooks Pro</a></li>
-                                        <li><a href="#">QuickBooks Premier</a></li>
-                                        <li><a href="#">QuickBooks POS</a></li>
-                                        <li><a href="#">QuickBooks Add-ons Hosting</a></li> --}}
                                     </ul>
                                 </li>
                             @endforeach
-                            {{-- <li class="dropdown"><a href="#"><span>Sage Application Hosting</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Sage 50</a></li>
-                                    <li><a href="#">Sage 100 ERP</a></li>
-                                    <li><a href="#">Sage 300 ERP</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="#"><span>Tax Software Hosting</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Drake Software</a></li>
-                                    <li><a href="#">ATX Software</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="#"><span>Purchase Licences</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">QuickBooks Enterprise License</a></li>
-                                    <li><a href="#">QuickBooks Pro License</a></li>
-                                </ul>
-                            </li> --}}
                         </ul>
                     </li>
                 @endforeach
