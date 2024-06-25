@@ -22,11 +22,11 @@ class ProductController extends Controller
     public function index(Request $request)
 {
     if ($request->ajax()) {
-        $products = Product::select(['id', 'title', 'meta_keyword', 'meta_description', 'product_description', 'created_at'])->get();
+        $products = Product::select(['id', 'product_title', 'meta_keyword', 'meta_description', 'slug', 'created_at'])->get();
 
         return DataTables::of($products)
             ->addColumn('action', function ($product) {
-                return '<a href="/products/' . $product->id . '/edit" class="btn btn-sm btn-primary">Edit</a>';
+                return '<a href="'.route('admin.product.edit',$product->id).'" class="btn btn-sm btn-primary">Edit</a>';
             })
             ->rawColumns(['product_description', 'action']) // Specify columns containing HTML
             ->make(true);
@@ -54,10 +54,20 @@ class ProductController extends Controller
         $step = $request->input('step');
         switch ($step) {
             case 'pro_detail':
+                if(isset($request->product_id)){
+                     $product = Product::find($request->product_id)->update($validatedData);
+                    toast('Product Details Updated successfully', 'success');
+                    session()->flash('activeTab', 'feature');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$request->product_id]);
+                }
+                else
+                {
                 $product = Product::create($validatedData);
                 toast('Product Details Added successfully', 'success');
                 session()->flash('activeTab', 'feature');
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product->id]);
+                }
+                
 
             case 'feature':
                 $product_id = $request->product_id;
@@ -114,22 +124,23 @@ class ProductController extends Controller
                 session()->flash('activeTab', 'pro_testimonal');
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
 
-            case 'pro_testimonal':
+            case 'pro_testimonial':
                 $product_id = $request->product_id;
 
                 if (!$product_id) {
                     Alert::error('Warning', 'Please Add Product first');
                 }
-
                 foreach ($validatedData['testi'] as $testiData) {
                     $picPath = $testiData['pic']->store('testimonials', 'public');
-                    ProductTestimonial::create([
+                    $testimonial=ProductTestimonial::create([
                         'product_id' => $product_id,
                         'pic' => $picPath,
                         'name' => $testiData['name'],
                         'designation' => $testiData['designation'],
                         'comment' => $testiData['comment'],
                     ]);
+
+                    Media::uploadMedia($testiData['pic'],$testimonial);
                 }
                 toast('Testimonials Added successfully', 'success');
                 session()->flash('activeTab', 'faqs');
@@ -154,14 +165,19 @@ class ProductController extends Controller
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
 
             case 'media':
-                dd($request->all());
-                break;
-
+                 $product_id = $request->product_id;
+                 $product=Product::find($product_id);
+                 Media::uploadMedia($request->main_img,$product,'content');
+                 foreach($request->slider_img as $img){
+                    Media::uploadMedia($img,$product,'slider');
+                 }
+                 toast('FAQs Added successfully', 'success');
+                session()->flash('activeTab', 'media');
+                toast('Product Added successfully', 'success');
+                return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
             default:
                 break;
         }
-        toast('Product Added successfully', 'success');
-        return redirect()->back();
     }
 
 
@@ -181,15 +197,19 @@ class ProductController extends Controller
                     $data=Product::find($pid)->features;
                     return view('admin.product.partials.feature',['data'=>$data,'product_id'=>$pid]);
                 case 3:
-                    
+                    $data=Product::find($pid)->counters;
                     return view('admin.product.partials.counter',['data'=>$data,'product_id'=>$pid]);
                 case 4:
+                    $data=Product::find($pid)->testimonials;
                     return view('admin.product.partials.testimonial',['data'=>$data,'product_id'=>$pid]);
                 case 5:
+                    $data=Product::find($pid)->whyus;
                     return view('admin.product.partials.why-us',['data'=>$data,'product_id'=>$pid]);
                 case 6:
+                    $data=Product::find($pid)->faqs;
                     return view('admin.product.partials.faq',['data'=>$data,'product_id'=>$pid]);
                 case 7:
+                    $data=Product::find($pid);
                     return view('admin.product.partials.media',['data'=>$data,'product_id'=>$pid]);
             }
         } else {
@@ -217,7 +237,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return redirect()->route('admin.product.create')->with(['product_id'=>$id]);
     }
 
     /**
@@ -231,8 +251,68 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $step,string $resource_id)
     {
-        //
+        switch($step){
+            case 'feature' :
+                $data=ProductFeature::find($resource_id);
+                $product_id=$data->product_id;
+                if($data->delete()){
+                    session()->flash('activeTab',$step);
+                    toast('feature deleted successfully','success');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                }
+                else
+                {
+                    session()->flash('activeTab',$step);
+                    toast('Something went wrong','error');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                }
+            case 'pro_counter' :  
+                
+                $data=ProductCounter::find($resource_id);
+                $product_id=$data->product_id;
+                if($data->delete()){
+                    session()->flash('activeTab',$step);
+                    toast('counter deleted successfully','success');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                }
+                else
+                {
+                    session()->flash('activeTab',$step);
+                    toast('Something went wrong','error');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                }  
+            case 'pro_testimonial' :  
+                
+                $data=ProductTestimonial::find($resource_id);
+                $product_id=$data->product_id;
+                if($data->delete()){
+                    session()->flash('activeTab',$step);
+                    toast('testimonial deleted successfully','success');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                }
+                else
+                {
+                    session()->flash('activeTab',$step);
+                    toast('Something went wrong','error');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                }
+            case 'faqs' :  
+                
+                $data=ProductFaq::find($resource_id);
+                $product_id=$data->product_id;
+                if($data->delete()){
+                    session()->flash('activeTab',$step);
+                    toast('faq deleted successfully','success');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                }
+                else
+                {
+                    session()->flash('activeTab',$step);
+                    toast('Something went wrong','error');
+                    return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                }            
+        }
     }
 }

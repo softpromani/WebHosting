@@ -1,52 +1,59 @@
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}" alt=""
-                ></a>
+        <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}" alt=""></a>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
         <nav id="navbar" class="navbar">
             <ul>
                 {{-- <li><a class="nav-link scrollto active" href="{{ route('home') }}">Home</a></li> --}}
-                <li class="dropdown"><a href="#"><span>Accounting Solutions</span> <i
-                            class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li class="dropdown"><a href="#"><span>QuickBooks Hosting</span> <i
-                                    class="bi bi-chevron-right"></i></a>
-                            <ul>
-                                <li><a href="#">QuickBooks Enterprise</a></li>
-                                <li><a href="#">QuickBooks Accountant</a></li>
-                                <li><a href="#">QuickBooks Pro</a></li>
-                                <li><a href="#">QuickBooks Premier</a></li>
-                                <li><a href="#">QuickBooks POS</a></li>
-                                <li><a href="#">QuickBooks Add-ons Hosting</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#"><span>Sage Application Hosting</span> <i
-                                    class="bi bi-chevron-right"></i></a>
-                            <ul>
-                                <li><a href="#">Sage 50</a></li>
-                                <li><a href="#">Sage 100 ERP</a></li>
-                                <li><a href="#">Sage 300 ERP</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#"><span>Tax Software Hosting</span> <i
-                                    class="bi bi-chevron-right"></i></a>
-                            <ul>
-                                <li><a href="#">Drake Software</a></li>
-                                <li><a href="#">ATX Software</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#"><span>Purchase Licences</span> <i
-                                    class="bi bi-chevron-right"></i></a>
-                            <ul>
-                                <li><a href="#">QuickBooks Enterprise License</a></li>
-                                <li><a href="#">QuickBooks Pro License</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+                @foreach ($menu as $m)
+                    <li class="dropdown"><a href="#"><span>{{ $m->name }}</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            @foreach ($m->children as $submenu)
+                                <li class="dropdown"><a href="#"><span>{{ $submenu->name }}</span> <i
+                                            class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        @foreach ($submenu->products as $product)
+                                            <li><a
+                                                    href="{{ route('product', $product->slug) }}">{{ $product->product_title }}</a>
+                                            </li>
+                                        @endforeach
+                                        {{-- <li><a href="#">QuickBooks Accountant</a></li>
+                                        <li><a href="#">QuickBooks Pro</a></li>
+                                        <li><a href="#">QuickBooks Premier</a></li>
+                                        <li><a href="#">QuickBooks POS</a></li>
+                                        <li><a href="#">QuickBooks Add-ons Hosting</a></li> --}}
+                                    </ul>
+                                </li>
+                            @endforeach
+                            {{-- <li class="dropdown"><a href="#"><span>Sage Application Hosting</span> <i
+                                        class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">Sage 50</a></li>
+                                    <li><a href="#">Sage 100 ERP</a></li>
+                                    <li><a href="#">Sage 300 ERP</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#"><span>Tax Software Hosting</span> <i
+                                        class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">Drake Software</a></li>
+                                    <li><a href="#">ATX Software</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#"><span>Purchase Licences</span> <i
+                                        class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">QuickBooks Enterprise License</a></li>
+                                    <li><a href="#">QuickBooks Pro License</a></li>
+                                </ul>
+                            </li> --}}
+                        </ul>
+                    </li>
+                @endforeach
                 <li class="nav-link"><a href="#"><span>Cybersecurity Solutions</span> </a>
                 </li>
                 <li class="nav-link"><a href="#"><span>Cloud Services</span></a>

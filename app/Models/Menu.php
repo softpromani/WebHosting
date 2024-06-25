@@ -17,4 +17,12 @@ class Menu extends Model
     {
         return $this->belongsTo(Menu::class, 'parent_id');
     }
+    public function scopeParentMenus($query)
+    {
+        return $query->whereNull('parent_id');
+    }
+
+    public function products(){
+        return $this->hasMany(Product::class,'menu_id');
+    }
 }

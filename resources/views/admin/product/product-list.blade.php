@@ -17,7 +17,7 @@
                         <th>Title</th>
                         <th>Meta Keyword(s)</th>
                         <th>Meta Description</th>
-                        <th>Product Description</th>
+                        <th>Slug</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -59,7 +59,7 @@
                         "data": "id"
                     },
                     {
-                        "data": "title"
+                        "data": "product_title"
                     },
                     {
                         "data": "meta_keyword"
@@ -68,11 +68,7 @@
                         "data": "meta_description"
                     },
                     {
-                        "data": "product_description",
-                        "ren  der": function(data, type, row, meta) {
-                            
-                            return type === 'display' ? data : '';
-                        }
+                        "data": "slug",
                     },
                     {
                         "data": "action",

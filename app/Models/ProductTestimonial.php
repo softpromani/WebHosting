@@ -10,4 +10,8 @@ class ProductTestimonial extends Model
 {
     use HasFactory, SoftDeletes;
     protected $guarded =[];
+
+    public function media(){
+        return $this->morphOne(Media::class,'mediable');
+    }
 }

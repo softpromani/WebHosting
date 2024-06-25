@@ -87,12 +87,7 @@
 @section('script-area')
     <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
     <script>
-        ClassicEditor
-            .create(document.querySelector('#product_desciption'))
-            .catch(error => {
-                console.error(error);
-            });
-
+      
         let featureIndex = 1;
 
         function add_feature_div() {
@@ -336,5 +331,13 @@
             @endif
 
         });
+
+
+        // delete 
+        function deleteResource(resourceId) {
+            if (confirm('Are you sure you want to delete this resource?')) {
+                document.getElementById('delete-form-' + resourceId).submit();
+            }
+        }
     </script>
 @endsection

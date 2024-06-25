@@ -38,4 +38,25 @@ class Product extends Model
     public function features(){
         return $this->hasMany(ProductFeature::class,'product_id');
     }
+     public function counters(){
+        return $this->hasMany(ProductCounter::class,'product_id');
+    }
+    public function testimonials(){
+        return $this->hasMany(ProductTestimonial::class,'product_id');
+    }
+     public function faqs(){
+        return $this->hasMany(ProductFaq::class,'product_id');
+    }
+
+    public function content_img(){
+        return $this->morphOne(Media::class,'mediable')->where('type','content');
+    }
+
+    public function slide_img(){
+        return $this->morphMany(Media::class,'mediable')->where('type','slider');
+    }
+
+    public function media(){
+        return $this->morphMany(Media::class,'mediable');
+    }
 }

@@ -3,7 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 class ProductRequest extends FormRequest
 {
     /**
@@ -48,7 +49,7 @@ class ProductRequest extends FormRequest
                     'product_id'=>'required|exists:products,id'
                 ];
 
-            case 'pro_testimonal':
+            case 'pro_testimonial':
                 return [
                     'testi.*.pic' => 'required|image|max:3072',
                     'testi.*.name' => 'required',
@@ -58,7 +59,6 @@ class ProductRequest extends FormRequest
                 ];
 
             case 'faqs':
-                // dd("hii");
                 return [
                     'faq.*.question' => 'required|string',
                     'faq.*.answer' => 'required|string',
@@ -73,5 +73,17 @@ class ProductRequest extends FormRequest
             default:
                 return [];
         }
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $response = redirect()
+            ->back()
+            ->withErrors($validator)
+            ->withInput()
+            ->with('step', $this->input('step'))
+            ->with('product_id', $this->input('product_id'));
+
+        throw new HttpResponseException($response);
     }
 }

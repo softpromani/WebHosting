@@ -24,7 +24,7 @@ class Media extends Model
      * @param Model $mediable
      * @return static
      */
-    public static function uploadMedia(UploadedFile $file, Model $mediable)
+    public static function uploadMedia(UploadedFile $file, Model $mediable,string $type=NULL)
     {
         $filePath = $file->store(class_basename($mediable), 'public');
         
@@ -34,6 +34,7 @@ class Media extends Model
             'extension'=>$file->extension(),
             'mediable_id' => $mediable->id,
             'mediable_type' => get_class($mediable),
+            'type'=>$type??NULL
         ]);
     }
 }
