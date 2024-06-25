@@ -13,15 +13,17 @@
     </div>
 </div>
 
+@if($data->media->count()>0)
 <div class="row">
     <div class="col-md-12">
         <h6>Main Image</h6>
-        <img src="{{ asset('storage/' . $data->content_img->media) }}" alt="" class="img-responsive">
+        <img src="{{ asset('storage/' . $data->content_img->media??'') }}" alt="" class="img-responsive">
     </div>
     @foreach ($data->slide_img as $d)
-        <div class="col-md-3 mt-3"> <img src="{{ asset('storage/' . $data->content_img->media) }}" alt=""
+        <div class="col-md-3 mt-3"> <img src="{{ asset('storage/' . $data->content_img->media??'') }}" alt=""
                 class="img-responsive" height="300px">
 
         </div>
     @endforeach
 </div>
+@endif  
