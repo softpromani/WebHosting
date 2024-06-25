@@ -2,19 +2,24 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Product;
-use App\Models\ProductFeature;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Yajra\DataTables\Facades\DataTables;
 
-class ProductFeatureController extends Controller
+class Newseletter extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            $data = Newsletter::select(['id', 'email', 'is_active']);
+            return DataTables::of($data)
+                ->make(true);
+        }
+        return view('admin.newsletter.newsletter');
     }
 
     /**
@@ -30,22 +35,7 @@ class ProductFeatureController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
-        $request->validate([
-            'feature_icon' =>  'required',
-            'feature_title' => 'required',
-            'feature_detail' => 'required',
-        ]);
-        
-        ProductFeature::create([
-            'icon' => $request->feature_icon,
-            'title' => $request->feature_title,
-            'detail' => $request->feature_detail,
-            
-        ]);
-        toast('Product Feature Added  successfully', 'success');
-        session()->flash('activeTab', 'step3');
-        return redirect()->back();
+        //
     }
 
     /**

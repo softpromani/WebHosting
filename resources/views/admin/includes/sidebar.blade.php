@@ -17,15 +17,12 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
                 <li class="nav-item menu-open">
                     <a href="{{ route('admin.dashboard') }}"
                         class="nav-link {{ Route::currentRouteName() == 'admin.dashboard' ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
-                            {{-- <i class="right fas fa-angle-left"></i> --}}
                         </p>
                     </a>
                     {{-- <ul class="nav nav-treeview">
@@ -51,13 +48,14 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.product.index') }}"
-                        class="nav-link {{ Route::currentRouteName() == 'admin.product' ? 'active' : '' }}">
+                        class="nav-link {{ Route::currentRouteName() == 'admin.product.index' ? 'active' : '' }}">
                         <i class="nav-icon fa-brands fa-product-hunt"></i>
                         <p>
                             Product
                         </p>
                     </a>
                 </li>
+
 
                 <li class="nav-item">
                     <a href="{{ route('admin.webSetting') }}"
@@ -68,14 +66,24 @@
                         </p>
                     </a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
+                <li class="nav-item">
+                    <a href="{{ route('admin.newsletter.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.newsletter.index' ? 'active' : '' }}">
+                        <i class="nav-icon fa-brands fa-product-hunt"></i>
                         <p>
-                            Gallery
+                            Newsletter
                         </p>
                     </a>
-                </li> --}}
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.contact-us.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.contact-us.index' ? 'active' : '' }}">
+                        <i class="nav-icon fa-brands fa-product-hunt"></i>
+                        <p>
+                            Contact Us
+                        </p>
+                    </a>
+                </li>
 
             </ul>
         </nav>
