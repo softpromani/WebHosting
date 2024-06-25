@@ -19,6 +19,7 @@
 
     <!-- ======= Footer ======= -->
     @include('home.includes.footer')
+    @include('sweetalert::alert')
     <!-- End Footer -->
 
     <div id="preloader"></div>
