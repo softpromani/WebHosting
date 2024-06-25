@@ -59,18 +59,30 @@
 
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="services-list">
-            <a href="#" class="active">Web Design</a>
-            <a href="#">Software Development</a>
-            <a href="#">Product Management</a>
-            <a href="#">Graphic Design</a>
-            <a href="#">Marketing</a>
+            <a href="#service-details" class="active">Service Details</a>
+            @if ($features)
+            <a href="#featured-services">Featured Services</a>
+            @endif
+
+            @if ($counters)
+            <a href="#counts">Counts</a>
+            @endif
+           
+            @if ($testimonials)
+            <a href="#testimonials">Testimonials</a>
+            @endif
+           
+            @if ($faqs)
+            <a href="#faq">FAQ</a>
+            @endif
+           
           </div>
-          <h4>Enim qui eos rerum in delectus</h4>
-          <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.</p>
+          {{-- <h4>Enim qui eos rerum in delectus</h4> --}}
+          {{-- <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.</p> --}}
         </div>
 
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-          <img src="{{asset('home/assets/img/services.png')}}" alt="no available" class="img-fluid services-img">
+          <img src="{{asset('storage/'.$products->content_img->media)}}" alt="no available" class="img-fluid services-img">
           {{-- <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
           <p>
             Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
@@ -86,9 +98,11 @@
           <p>
             Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
           </p> --}}
-          {!! $products->product_description !!}
+         
         </div>
-
+        <div class="col-12">
+            {!! $products->product_description !!}
+            </div>
       </div>
 
     </div>
