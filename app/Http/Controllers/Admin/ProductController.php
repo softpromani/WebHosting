@@ -11,6 +11,7 @@ use App\Models\ProductFeature;
 use App\Models\ProductTestimonial;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
+use App\Models\ProductWhyUs; 
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -98,6 +99,40 @@ class ProductController extends Controller
 
                 }
                 toast('Features Added successfully', 'success');
+                session()->flash('activeTab', 'pro_counter');
+                return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+
+                
+            case 'whyus':
+                $product_id = $request->product_id;
+            //    dd($validatedData);
+                if (!$product_id) {
+                    Alert::error('Warning', 'Please Add Product first');
+                }
+                $allwhyusStored = true;
+
+                foreach ($validatedData['whyus'] as $whyusData) {
+                    $proWhyus = ProductWhyUs::create([
+                        'product_id' => $product_id,
+                        'icon' => $whyusData['icon'],
+                        'title' => $whyusData['title'],
+                        // 'colour' => $whyusData['colour'],
+                        'detail' => $whyusData['detail'],
+                    ]);
+                    if (!$proWhyus) {
+                        $allwhyusStored = false;
+                    }
+                    if ($allwhyusStored) {
+                        $product = Product::find($product_id);
+                        if($product->step<2)
+                        {
+                        $product->step = 2;
+                        $product->save();
+                        }
+                    }
+
+                }
+                toast('Why-Us Added successfully', 'success');
                 session()->flash('activeTab', 'pro_counter');
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
 
@@ -271,6 +306,20 @@ class ProductController extends Controller
                     toast('Something went wrong','error');
                     return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
                 }
+                case 'whyus' :
+                    $data=ProductWhyUs::find($resource_id);
+                    $product_id=$data->product_id;
+                    if($data->delete()){
+                        session()->flash('activeTab',$step);
+                        toast('Whyus deleted successfully','success');
+                        return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                    }
+                    else
+                    {
+                        session()->flash('activeTab',$step);
+                        toast('Something went wrong','error');
+                        return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
+                    }
             case 'pro_counter' :  
                 
                 $data=ProductCounter::find($resource_id);

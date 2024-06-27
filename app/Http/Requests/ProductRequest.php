@@ -41,6 +41,15 @@ class ProductRequest extends FormRequest
                     'feature.*.detail' => 'required',
                     'product_id'=>'required|exists:products,id'
                 ];
+                case 'whyus':
+
+                    return [
+                        'whyus.*.icon' => 'required',
+                        // 'whyus.*.colour' => 'required',
+                        'whyus.*.title' => 'required',
+                        'whyus.*.detail' => 'required',
+                        'product_id'=>'required|exists:products,id'
+                    ];
             case 'pro_counter':
                 return [
                     'counter.*.icon' => 'required',

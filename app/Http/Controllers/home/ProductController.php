@@ -9,6 +9,7 @@ use App\Models\ProductCounter;
 use App\Models\ProductFaq;
 use App\Models\ProductFeature;
 use App\Models\ProductTestimonial;
+use App\Models\ProductWhyUs;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -21,6 +22,7 @@ class ProductController extends Controller
         $testimonials = ProductTestimonial::where('product_id',$products->id)->get();
         $faqs = ProductFaq::where('product_id',$products->id)->get();
         $medias = Media::where('type','slider')->get();
-        return view('home.product',compact('products','metaKeywords','features','counters','testimonials','faqs','medias'));
+        $whyus = ProductWhyUs::where('product_id',$products->id)->get();
+        return view('home.product',compact('products','features','counters','testimonials','faqs','medias','whyus'));
     }
 }

@@ -52,18 +52,17 @@
 
   <!-- Service Details Section -->
   <section id="service-details" class="service-details section">
-
     <div class="container">
-
       <div class="row gy-4">
-
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="services-list">
             <a href="#service-details" class="active">Service Details</a>
             @if ($features)
             <a href="#featured-services">Featured Services</a>
             @endif
-
+            @if ($whyus)
+            <a href="#whyus-services">Why-Us Services</a>
+            @endif
             @if ($counters)
             <a href="#counts">Counts</a>
             @endif
@@ -109,10 +108,38 @@
 
   </section><!-- /Service Details Section -->
 
+   <!-- Service Details Section -->
+   <section id="whyus-services" class="counts">
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-6" data-aos-delay="200">
+                <img src="{{ asset('home/assets/img/whyus.png') }}" alt="no available" class="img-fluid services-img">  
+            </div>
+            <div class="col-lg-6" data-aos-delay="200">
+                <div class="row">
+                    @foreach ($whyus as $ws)
+                        <div class="col-12 col-md-6 col-lg-4 mb-5" data-aos-delay="100">  
+                            <div class="count-box text-center pb-3 border rounded bg-white shadow " style="min-height: 150px;">
+                                <div class=" mb-4" >
+                                    <i class="{{ $ws->icon ?? '' }}"></i>
+                                </div>
+                                <p><strong>{{ $ws->title ?? '' }}</strong></p>
+                                <p>{!! $ws->detail ?? '' !!}</p>
+                            </div>
+                        </div>    
+                    @endforeach
+                </div>
+            </div>   
+        </div> 
+    </div>
+</section>
+
+
+  <!-- /Service Details Section -->
+
               <!-- ======= Featured Services Section ======= -->
               <section id="featured-services" class="featured-services">
                 <div class="container" data-aos="fade-up">
-    
                     <div class="row">
                         @foreach ($features as $fs)
                         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
@@ -126,9 +153,8 @@
                     </div>
     
                 </div>
-            </section><!-- End Featured Services Section -->
-    
-      
+            </section>
+            <!-- End Featured Services Section -->
      <!-- ======= Counts Section ======= -->
      <section id="counts" class="counts">
         <div class="container" data-aos="fade-up">

@@ -38,6 +38,9 @@ class Product extends Model
     public function features(){
         return $this->hasMany(ProductFeature::class,'product_id');
     }
+    public function whyus(){
+        return $this->hasMany(ProductWhyUs::class,'product_id');
+    }
      public function counters(){
         return $this->hasMany(ProductCounter::class,'product_id');
     }

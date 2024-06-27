@@ -144,7 +144,62 @@
             $(this).closest('.col-md-6').remove();
         });
 
+        
+        let WhyIndex = 1;
 
+        function add_whyus_div() {
+            var WhyIndex = document.querySelectorAll('.whyus-item').length;
+
+            var featdiv = `<div class="col-md-6 whyus-item">
+            <div class="card">
+                <span class="text-danger p-2 btn whyus-del">X</span>
+                <div class="card-body">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="whyus_icon_${WhyIndex}">Icon <small class="text-danger">(icon class from <a
+                                        href="https://fontawesome.com/icons" target="_blank">here
+                                        ...</a>)</small></label>
+                            <input type="text" name="whyus[${WhyIndex}][icon]" id="whyus_icon_${WhyIndex}" class="form-control">
+                            <span class="alert text-danger" id="error_whyus_${WhyIndex}_icon"></span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="whyus_title_${WhyIndex}">Title </label>
+                            <input type="text" name="whyus[${WhyIndex}][title]" id="whyus_title_${WhyIndex}" class="form-control">
+                            <span class="alert text-danger" id="error_whyus_${WhyIndex}_title"></span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="whyus_desc_${WhyIndex}">Detail </label>
+                            <textarea name="whyus[${WhyIndex}][detail]" id="whyus_desc_${WhyIndex}" class="form-control whyus_desc"></textarea>
+                            <span class="alert text-danger" id="error_whyus_${WhyIndex}_detail"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>`;
+
+            $('.whyus-div').append(featdiv);
+
+            var newWhyusDescTextarea = document.getElementById(`whyus_desc_${WhyIndex}`);
+            if (newWhyusDescTextarea && !newWhyusDescTextarea.classList.contains('ck-editor-initialized')) {
+                ClassicEditor.create(newWhyusDescTextarea)
+                    .then(editor => {
+                        newWhyusDescTextarea.classList.add('ck-editor-initialized');
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+
+            WhyIndex++; // Increment WhyIndex for next added whyus
+        }
+
+        $(document).on('click', '.whyus-del', function() {
+            $(this).closest('.col-md-6').remove();
+        });
 
         let counterIndex = 1;
 
