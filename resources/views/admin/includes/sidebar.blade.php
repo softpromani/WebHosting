@@ -69,7 +69,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.newsletter.index') }}"
                         class="nav-link {{ Route::currentRouteName() == 'admin.newsletter.index' ? 'active' : '' }}">
-                        <i class="nav-icon fa-brands fa-product-hunt"></i>
+                        <i class="nav-icon fa-solid fa-envelope"></i>
                         <p>
                             Newsletter
                         </p>
@@ -78,9 +78,36 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.contact-us.index') }}"
                         class="nav-link {{ Route::currentRouteName() == 'admin.contact-us.index' ? 'active' : '' }}">
-                        <i class="nav-icon fa-brands fa-product-hunt"></i>
+                        <i class="nav-icon fa-solid fa-address-book"></i>
                         <p>
                             Contact Us
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.faqs.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.faqs.index' ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-question-circle"></i>
+                        <p>
+                            Faqs
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.team.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.team.index' ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-users"></i>
+                        <p>
+                            Teams
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.testimonial.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.testimonial.index' ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-quote-left"></i>
+                        <p>
+                            Testimonial
                         </p>
                     </a>
                 </li>

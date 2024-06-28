@@ -26,7 +26,8 @@
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
                             <h4 class="title"><a href="">99.99% Up Time</a></h4>
-                            <p class="description">Heavy-duty servers that promise ultra-high availability standard of server performance</p>
+                            <p class="description">Heavy-duty servers that promise ultra-high availability standard of
+                                server performance</p>
                         </div>
                     </div>
 
@@ -34,7 +35,9 @@
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                             <div class="icon"><i class="bx bx-file"></i></div>
                             <h4 class="title"><a href="">High-end Security</a></h4>
-                            <p class="description">Secure your data with IDS/IPS threat detection, multi-factor authentication, layered firewalls, Endpoint Detection and Response (EDR) readiness, and more.</p>
+                            <p class="description">Secure your data with IDS/IPS threat detection, multi-factor
+                                authentication, layered firewalls, Endpoint Detection and Response (EDR) readiness, and
+                                more.</p>
                         </div>
                     </div>
 
@@ -42,7 +45,8 @@
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
                             <h4 class="title"><a href="">Free Trial for 7 Days</a></h4>
-                            <p class="description">Experience free-tier and get credits to deploy cloud instances with all critical features
+                            <p class="description">Experience free-tier and get credits to deploy cloud instances with all
+                                critical features
                             </p>
                         </div>
                     </div>
@@ -51,7 +55,8 @@
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
                             <div class="icon"><i class="bx bx-world"></i></div>
                             <h4 class="title"><a href="">Reduced Fixed Capital</a></h4>
-                            <p class="description">Lower capital investment for purchasing high end IT-infra and remove any associated vulnerability and risks
+                            <p class="description">Lower capital investment for purchasing high end IT-infra and remove any
+                                associated vulnerability and risks
                             </p>
                         </div>
                     </div>
@@ -203,7 +208,8 @@
                 <div class="section-title">
                     <h2>Services</h2>
                     <h3>More Power. Faster. <span>Dedicated.</span></h3>
-                    <p>Our team of specialists will manage the cloud infrastructure while you focus on building your business.</p>
+                    <p>Our team of specialists will manage the cloud infrastructure while you focus on building your
+                        business.</p>
                 </div>
 
                 <div class="row">
@@ -211,7 +217,8 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
                             <h4><a href="">Reliable Uptime of 99.99%</a></h4>
-                            <p>Ensure consistent availability with our industry-leading Service Level Agreement (SLA), providing a remarkable 99.99% uptime for your hosted QuickBooks.</p>
+                            <p>Ensure consistent availability with our industry-leading Service Level Agreement (SLA),
+                                providing a remarkable 99.99% uptime for your hosted QuickBooks.</p>
                         </div>
                     </div>
 
@@ -220,7 +227,8 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
                             <h4><a href="">Effortless Migration</a></h4>
-                            <p>Simplify your migration with our expert guidance, ensuring a smooth and hassle-free move from your on-premise or existing service provider to Ace Cloud’s platform.</p>
+                            <p>Simplify your migration with our expert guidance, ensuring a smooth and hassle-free move from
+                                your on-premise or existing service provider to Ace Cloud’s platform.</p>
                         </div>
                     </div>
 
@@ -229,7 +237,8 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
                             <h4><a href="">Always on Support</a></h4>
-                            <p>Our dedicated team is available around the clock on phone, chat, and email to provide immediate assistance and expert guidance whenever you have hosting-related issues.</p>
+                            <p>Our dedicated team is available around the clock on phone, chat, and email to provide
+                                immediate assistance and expert guidance whenever you have hosting-related issues.</p>
                         </div>
                     </div>
 
@@ -238,7 +247,9 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-world"></i></div>
                             <h4><a href="">Security at Priority</a></h4>
-                            <p>Trust in our infrastructure's robust security to safeguard sensitive data with IDS/IPS, next-gen antivirus, authentication, encryption and more for unwavering data protection security measures.</p>
+                            <p>Trust in our infrastructure's robust security to safeguard sensitive data with IDS/IPS,
+                                next-gen antivirus, authentication, encryption and more for unwavering data protection
+                                security measures.</p>
                         </div>
                     </div>
 
@@ -247,7 +258,8 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-slideshow"></i></div>
                             <h4><a href="">Automated Data Backup</a></h4>
-                            <p>Our automated 45-day rolling backup process ensures that accidental data deletion or natural disasters won't disrupt your operations, giving you peace of mind.</p>
+                            <p>Our automated 45-day rolling backup process ensures that accidental data deletion or natural
+                                disasters won't disrupt your operations, giving you peace of mind.</p>
                         </div>
                     </div>
 
@@ -256,7 +268,8 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-arch"></i></div>
                             <h4><a href="">Custom Cloud Workspace</a></h4>
-                            <p>Get a fully customized accounting workspace with cloud-hosted QuickBooks and all other critical applications/add-ons in a single cloud per your business requirements.</p>
+                            <p>Get a fully customized accounting workspace with cloud-hosted QuickBooks and all other
+                                critical applications/add-ons in a single cloud per your business requirements.</p>
                         </div>
                     </div>
 
@@ -271,85 +284,21 @@
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper">
+                        @foreach ($testimonial as $t)
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <img src="{{ asset($t->pic) }}" class="testimonial-img" alt="">
+                                    <h3>{{ $t->name }}</h3>
+                                    <h4>{{ $t->position }}</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        {{ $t->description }}
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div><!-- End testimonial item -->
+                        @endforeach
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('home/assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img"
-                                    alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('home/assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img"
-                                    alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('home/assets/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img"
-                                    alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                                    duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('home/assets/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img"
-                                    alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
-                                    minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
-                                    labore illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('home/assets/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img"
-                                    alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
 
                     </div>
                     <div class="swiper-pagination"></div>
@@ -371,78 +320,26 @@
                 </div>
 
                 <div class="row">
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset('home/assets/img/team/team-1.jpg') }}" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    @foreach ($teamMembers as $index => $member)
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="{{ ($index + 1) * 100 }}">
+                            <div class="member">
+                                <div class="member-img">
+                                    <img src="{{ asset($member->pic) }}" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href="{{ $member->twitter }}"><i class="bi bi-twitter"></i></a>
+                                        <a href="{{ $member->facebook }}"><i class="bi bi-facebook"></i></a>
+                                        <a href="{{ $member->instagram }}"><i class="bi bi-instagram"></i></a>
+                                        <a href="{{ $member->linkedin }}"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $member->name }}</h4>
+                                    <span>{{ $member->position }}</span>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset('home/assets/img/team/team-2.jpg') }}" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset('home/assets/img/team/team-3.jpg') }}" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset('home/assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
 
@@ -551,93 +448,20 @@
                     <div class="col-xl-10">
                         <ul class="faq-list">
 
-                            <li>
-                                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur
-                                    a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
-                                        non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
-                                        purus non.
-                                    </p>
-                                </div>
-                            </li>
+                            @foreach ($faqs as $index => $faq)
+                                <li>
+                                    <div data-bs-toggle="collapse" class="collapsed question"
+                                        href="#faq{{ $index }}">
+                                        {{ $faq->question }} <i class="bi bi-chevron-down icon-show"></i><i
+                                            class="bi bi-chevron-up icon-close"></i>
+                                    </div>
+                                    <div id="faq{{ $index }}" class="collapse" data-bs-parent=".faq-list">
+                                        <p>{!! $faq->answer !!}</p>
+                                    </div>
+                                </li>
+                            @endforeach
 
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat
-                                    scelerisque varius morbi enim nunc faucibus a pellentesque? <i
-                                        class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                        donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.
-                                    </p>
-                                </div>
-                            </li>
 
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet
-                                    consectetur adipiscing elit pellentesque habitant morbi? <i
-                                        class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                        pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit.
-                                        Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis
-                                        tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor
-                                    orci dapibus. Aliquam eleifend mi in nulla? <i
-                                        class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                        donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam
-                                    pellentesque nec nam aliquam sem et tortor consequat? <i
-                                        class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
-                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl
-                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae
-                                    purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i
-                                        class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
-                                        integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                                        eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                                        Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
-                                        Nibh tellus molestie nunc non blandit massa enim nec.
-                                    </p>
-                                </div>
-                            </li>
 
                         </ul>
                     </div>

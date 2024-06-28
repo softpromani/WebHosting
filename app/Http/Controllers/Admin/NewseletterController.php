@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
 
-class Newseletter extends Controller
+class NewseletterController extends Controller
 {
     /**
      * Display a listing of the resource.

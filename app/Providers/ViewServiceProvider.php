@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Faq;
+use App\Models\Team;
+use App\Models\Testimonial;
 use App\Models\WebSetting;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -29,6 +32,18 @@ class ViewServiceProvider extends ServiceProvider
         View::composer('home.includes.head',function($view){
             $theme_setting=WebSetting::select('key','value')->where('group', 'Theme')->get();
             $view->with('theme_setting',$theme_setting);
+        });
+        View::composer('home.index',function($view){
+            $testimonial=Testimonial::get();
+            $view->with('testimonial',$testimonial);
+        });
+        View::composer('home.index',function($view){
+            $teamMembers=Team::get();
+            $view->with('teamMembers',$teamMembers);
+        });
+        View::composer('home.index',function($view){
+            $faqs=Faq::get();
+            $view->with('faqs',$faqs);
         });
 
     }

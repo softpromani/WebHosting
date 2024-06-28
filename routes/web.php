@@ -3,9 +3,13 @@
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\Newseletter;
+use App\Http\Controllers\Admin\NewseletterController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\WebSettingController;
 use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\home\ProductController;
@@ -38,7 +42,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('product/show/{step}/{product_id?}',[AdminProductController::class, 'show'])->name('product.show');
     Route::delete('product/delete/{step}/{resource_id?}',[AdminProductController::class, 'destroy'])->name('product.destroy');
     Route::resource('contact-us',ContactUsController::class);
-    Route::resource('newsletter',Newseletter::class);
+    Route::resource('newsletter',NewseletterController::class);
+    Route::resource('testimonial',TestimonialController::class);
+    Route::resource('team',TeamController::class);
+    Route::resource('faqs',FaqController::class);
     
 
 
