@@ -200,13 +200,17 @@ class ProductController extends Controller
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
 
             case 'media':
+                // dd($request->slider_img);
+                
                  $product_id = $request->product_id;
                  $product=Product::find($product_id);
                  Media::uploadMedia($request->main_img,$product,'content');
+                 Media::uploadMedia($request->faq_img,$product,'faq');
+                 Media::uploadMedia($request->whyUs_img,$product,'whyUs');
                  foreach($request->slider_img as $img){
                     Media::uploadMedia($img,$product,'slider');
                  }
-                 toast('FAQs Added successfully', 'success');
+                 toast('Media Added successfully', 'success');
                 session()->flash('activeTab', 'media');
                 toast('Product Added successfully', 'success');
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);

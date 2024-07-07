@@ -37,7 +37,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('web-setting',[WebSettingController::class,'webSetting'])->name('webSetting');
     Route::post('web-setting/update',[WebSettingController::class,'updateWebSettings'])->name('updateWebSettings');
     Route::resource('menu',MenuController::class)->name('','menu');
-    Route::resource('product',AdminProductController::class)->name('','product');
+    Route::resource('product', AdminProductController::class)->names([
+    'index' => 'admin.product.index', // Example of naming a resource route
+    'create' => 'admin.product.create',
+    'store' => 'admin.product.store',
+    'show' => 'admin.product.show', // This line conflicts with your custom route name
+    'edit' => 'admin.product.edit',
+    'update' => 'admin.product.update',
+    'destroy' => 'admin.product.destroy',
+]);
     
     Route::get('product/show/{step}/{product_id?}',[AdminProductController::class, 'show'])->name('product.show');
     Route::delete('product/delete/{step}/{resource_id?}',[AdminProductController::class, 'destroy'])->name('product.destroy');

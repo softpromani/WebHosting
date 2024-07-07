@@ -34,7 +34,7 @@ class Media extends Model
             'extension'=>$file->extension(),
             'mediable_id' => $mediable->id,
             'mediable_type' => get_class($mediable),
-            'type'=>$type??NULL
+            'type'=>$type ?? NULL
         ]);
     }
 }
