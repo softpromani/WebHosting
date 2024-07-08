@@ -75,8 +75,8 @@ class ProductRequest extends FormRequest
                 ];
             case 'media':
                 return [
-                    'main_img' => 'required|file|image|max:1024',
-                    'slider_img.*' => 'required|file|image|max:1024',
+                    'main_img' => 'nullable|file|image|max:1024',
+                    'slider_img.*' => 'nullable|file|image|max:1024',
                     'product_id'=>'required|exists:products,id'
                 ];
             default:

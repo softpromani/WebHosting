@@ -11,7 +11,7 @@ use App\Models\ProductFeature;
 use App\Models\ProductTestimonial;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
-use App\Models\ProductWhyUs; 
+use App\Models\ProductWhyUs;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -68,7 +68,7 @@ class ProductController extends Controller
                 session()->flash('activeTab', 'feature');
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product->id]);
                 }
-                
+
 
             case 'feature':
                 $product_id = $request->product_id;
@@ -102,10 +102,9 @@ class ProductController extends Controller
                 session()->flash('activeTab', 'pro_counter');
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
 
-                
+
             case 'whyus':
                 $product_id = $request->product_id;
-            //    dd($validatedData);
                 if (!$product_id) {
                     Alert::error('Warning', 'Please Add Product first');
                 }
@@ -196,23 +195,38 @@ class ProductController extends Controller
                 }
                 toast('FAQs Added successfully', 'success');
                 session()->flash('activeTab', 'media');
-                
+
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
 
             case 'media':
                 // dd($request->slider_img);
-                
+
                  $product_id = $request->product_id;
                  $product=Product::find($product_id);
-                 Media::uploadMedia($request->main_img,$product,'content');
-                 Media::uploadMedia($request->faq_img,$product,'faq');
-                 Media::uploadMedia($request->whyUs_img,$product,'whyUs');
-                 foreach($request->slider_img as $img){
-                    Media::uploadMedia($img,$product,'slider');
+                 if($request->hasFile('main_img')){
+                     Media::uploadMedia($request->main_img,$product,'content');
                  }
-                 toast('Media Added successfully', 'success');
+
+                 if($request->hasFile('faq_img')){
+                    Media::uploadMedia($request->faq_img,$product,'faq');
+                 }
+
+                 if($request->hasFile('whyUs_img')){
+                    Media::uploadMedia($request->whyUs_img,$product,'whyUs');
+                 }
+
+                 if($request->hasFile('product_banner')){
+                    Media::uploadMedia($request->product_banner,$product,'product_banner');
+                 }
+
+                 if($request->hasFile('slider_img')){
+                    foreach($request->slider_img as $img){
+                        Media::uploadMedia($img,$product,'slider');
+                    }
+                }
+
+                toast('Media Added successfully', 'success');
                 session()->flash('activeTab', 'media');
-                toast('Product Added successfully', 'success');
                 return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
             default:
                 break;
@@ -324,8 +338,8 @@ class ProductController extends Controller
                         toast('Something went wrong','error');
                         return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
                     }
-            case 'pro_counter' :  
-                
+            case 'pro_counter' :
+
                 $data=ProductCounter::find($resource_id);
                 $product_id=$data->product_id;
                 if($data->delete()){
@@ -338,9 +352,9 @@ class ProductController extends Controller
                     session()->flash('activeTab',$step);
                     toast('Something went wrong','error');
                     return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
-                }  
-            case 'pro_testimonial' :  
-                
+                }
+            case 'pro_testimonial' :
+
                 $data=ProductTestimonial::find($resource_id);
                 $product_id=$data->product_id;
                 if($data->delete()){
@@ -354,8 +368,8 @@ class ProductController extends Controller
                     toast('Something went wrong','error');
                     return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
                 }
-            case 'faqs' :  
-                
+            case 'faqs' :
+
                 $data=ProductFaq::find($resource_id);
                 $product_id=$data->product_id;
                 if($data->delete()){
@@ -368,7 +382,7 @@ class ProductController extends Controller
                     session()->flash('activeTab',$step);
                     toast('Something went wrong','error');
                     return redirect()->route('admin.product.create')->with(['product_id'=>$product_id]);
-                }            
+                }
         }
     }
 }
