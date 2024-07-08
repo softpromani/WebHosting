@@ -49,27 +49,34 @@
     <div class="row mt-5">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5>Main Image</h5>
-                    <img src="{{ asset('storage/' . $data->content_img->media ?? '') }}" alt=""
-                        class="img-responsive content-image">
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Faqs Image</h5>
-                    <img src="{{ asset('storage/' . $data->faqImg->media ?? '') }}" alt=""
-                        class="img-responsive content-image">
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Why Us Image</h5>
-                    <img src="{{ asset('storage/' . $data->whyUsImg->media ?? '') }}" alt=""
-                        class="img-responsive content-image">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <h5>Product Banner</h5>
-                    <img src="{{ asset('storage/' . $data->whyUsImg->media ?? '') }}" alt=""
-                        class="img-responsive content-image">
-                </div>
+                @if ($data->content_img)
+                    <div class="col-md-4 mb-3">
+                        <h5>Main Image</h5>
+                        <img src="{{ asset('storage/' . $data->content_img->media ?? '') }}" alt=""
+                            class="img-responsive content-image">
+                    </div>
+                @endif
+                @if ($data->faqImg)
+                    <div class="col-md-4 mb-3">
+                        <h5>Faqs Image</h5>
+                        <img src="{{ asset('storage/' . $data->faqImg->media ?? '') }}" alt=""
+                            class="img-responsive content-image">
+                    </div>
+                @endif
+                @if ($data->whyUsImg)
+                    <div class="col-md-4 mb-3">
+                        <h5>Why Us Image</h5>
+                        <img src="{{ asset('storage/' . $data->whyUsImg->media ?? '') }}" alt=""
+                            class="img-responsive content-image">
+                    </div>
+                @endif
+                @if ($data->product_banner)
+                    <div class="col-md-6 mb-3">
+                        <h5>Product Banner</h5>
+                        <img src="{{ asset('storage/' . $data->product_banner->media ?? '') }}" alt=""
+                            class="img-responsive content-image">
+                    </div>
+                @endif
             </div>
 
 
