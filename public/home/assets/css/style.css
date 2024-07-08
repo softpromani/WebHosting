@@ -1864,8 +1864,12 @@ section {
   font-size: 15px;
 }
 
+.product-content-description{
+    padding: 0 100px !important;
+}
+
 .service-details ul li {
-  padding: 5px 0;
+  padding: 5px 50px;
   /* display: flex;
   align-items: center; */
 }

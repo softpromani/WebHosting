@@ -1266,7 +1266,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-8 product-content-description">
                     {!! $products->product_description !!}
                 </div>
             </div>
