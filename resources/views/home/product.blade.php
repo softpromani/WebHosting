@@ -32,7 +32,7 @@
         }
 
         .bg-theme {
-    background-color: var(--primary-color) !important
+    background-color: #3721de !important
 }
 
         .main-timeline {
