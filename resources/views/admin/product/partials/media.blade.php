@@ -45,7 +45,7 @@
     </div>
 </div>
 
-@if ($data->media->count() > 0)
+@if ($data && $data->media->count() > 0)
     <div class="row mt-5">
         <div class="col-md-12">
             <div class="row">
