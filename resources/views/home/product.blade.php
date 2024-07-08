@@ -27,12 +27,11 @@
             --section-space: 120px;
             --section-space-mobile: 80px;
             --section-title-space: 60px;
-            --primary-color: "#3721de";
             --ripple-ani-duration: 5s,
         }
 
         .bg-theme {
-    background-color: #3721de !important
+    background-color: var(--primary-color) !important
 }
 
         .main-timeline {
