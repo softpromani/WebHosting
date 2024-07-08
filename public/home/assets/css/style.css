@@ -1866,8 +1866,8 @@ section {
 
 .service-details ul li {
   padding: 5px 0;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 
 .service-details ul i {
