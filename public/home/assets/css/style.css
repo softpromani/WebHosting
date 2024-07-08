@@ -700,7 +700,7 @@ section {
 .featured-services .icon-box::before {
   content: "";
   position: absolute;
-  background: #0f68dc;
+  background: var(--primary-color);
   right: 0;
   left: 0;
   bottom: 0;
@@ -743,7 +743,8 @@ section {
 }
 
 .featured-services .icon-box:hover .title a,
-.featured-services .icon-box:hover .description {
+.featured-services .icon-box:hover .description,
+.featured-services .icon-box:hover .description p {
   color: var(--text-color);
 }
 

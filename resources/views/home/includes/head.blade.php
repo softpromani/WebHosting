@@ -16,7 +16,7 @@
         :root {
             --primary-color: {{ $theme_setting->where('key', 'primary')->first()->value ?? '#65E82E' }};
             --secondary-color: {{ $theme_setting->where('key', 'secondary')->first()->value ?? '#3b8af2' }};
-            --text-color: #fff;
+            --text-color: #fff !important;
         }
     </style>
     <!-- Vendor CSS Files -->

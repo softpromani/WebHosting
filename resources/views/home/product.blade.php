@@ -1356,7 +1356,7 @@
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon"><i class="{{ $fs->icon ?? '' }}"></i></div>
                             <h4 class="title"><a href="">{{ $fs->title ?? '' }}</a></h4>
-                            <p class="description">{!! $fs->detail ?? '' !!}</p>
+                            <div class="description">{!! $fs->detail ?? '' !!}</div>
                         </div>
                     </div>
                 @endforeach
