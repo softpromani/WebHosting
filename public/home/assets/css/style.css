@@ -1605,7 +1605,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: var(--primary-color);
+  background: #0d58ba;
   border: 0;
   padding: 10px 30px;
   color: var(--text-color);
@@ -1678,7 +1678,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: var(--primary-color);
+  background: #0d58ba;
   color: var(--text-color);
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
