@@ -27,9 +27,13 @@
             --section-space: 120px;
             --section-space-mobile: 80px;
             --section-title-space: 60px;
-            --ripple-ani-duration: 5s
+            --primary-color: "#3721de";
+            --ripple-ani-duration: 5s,
         }
 
+        .bg-theme {
+    background-color: var(--primary-color) !important
+}
 
         .main-timeline {
             font-family: 'Poppins', sans-serif;
@@ -552,7 +556,7 @@
             opacity: 1
         }
 
-        
+
 
 
 
