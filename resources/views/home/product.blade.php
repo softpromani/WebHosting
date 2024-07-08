@@ -552,9 +552,7 @@
             opacity: 1
         }
 
-        .bg-theme {
-            background-color: #66d039 !important
-        }
+        
 
 
 
@@ -1492,7 +1490,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row justify-content-center">
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-sm-12 ">
                                 <div class="card">
                                     <img src="{{ asset('home/assets/img/th.jpg') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -1503,7 +1501,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-sm-12 ">
                                 <div class="card">
                                     <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -1514,7 +1512,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-sm-12 ">
                                 <div class="card">
                                     <img src="{{ asset('home/assets/img/cta.jpg') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -1525,7 +1523,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-sm-12 ">
                                 <div class="card">
                                     <img src="{{ asset('home/assets/img/whyus.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -1541,7 +1539,7 @@
 
                     <div class="carousel-item">
                         <div class="row justify-content-center">
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-sm-12 ">
                                 <div class="card">
                                     <img src="{{ asset('home/assets/img/th.jpg') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -1552,7 +1550,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-sm-12">
                                 <div class="card">
                                     <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -1563,7 +1561,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-sm-12 ">
                                 <div class="card">
                                     <img src="{{ asset('home/assets/img/cta.jpg') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -1574,7 +1572,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-sm-12">
                                 <div class="card">
                                     <img src="{{ asset('home/assets/img/whyus.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
