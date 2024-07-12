@@ -51,6 +51,7 @@ class ProductController extends Controller
     {
         // Retrieve the validated input data
         $validatedData = $request->validated();
+        // dd($request->product_banner);
         // Get the current step
         $step = $request->input('step');
         switch ($step) {

@@ -77,6 +77,7 @@ class ProductRequest extends FormRequest
                 return [
                     'main_img' => 'nullable|file|image|max:1024',
                     'slider_img.*' => 'nullable|file|image|max:1024',
+                    'product_banner'=>'nullable|file|image|max:1024',
                     'product_id'=>'required|exists:products,id'
                 ];
             default:

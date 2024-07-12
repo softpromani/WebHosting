@@ -65,6 +65,10 @@ class Product extends Model
     {
         return $this->morphMany(Media::class, 'mediable')->where('type', 'slider');
     }
+    public function product_banner()
+    {
+        return $this->morphOne(Media::class, 'mediable')->where('type', 'product_banner');
+    }
 
     public function media(){
         return $this->morphMany(Media::class,'mediable');

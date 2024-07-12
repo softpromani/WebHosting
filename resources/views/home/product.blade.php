@@ -1,6 +1,7 @@
 @extends('home.includes.layout')
 @section('title', 'Contact Us')
 @section('header-area')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         :root {
             --theme-color: #684DF4;
@@ -31,8 +32,8 @@
         }
 
         .bg-theme {
-    background-color: var(--primary-color) !important
-}
+            background-color: var(--primary-color) !important
+        }
 
         .main-timeline {
             font-family: 'Poppins', sans-serif;
@@ -1175,6 +1176,35 @@
         .user-blog .owl-theme .owl-controls.clickable .owl-page:hover span {
             background: #82b53f;
         }
+
+
+        /* swiper css */
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #000;
+            /* Change the color to match your design */
+        }
     </style>
 @endsection
 @section('content')
@@ -1261,12 +1291,12 @@
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card">
                         <div class="card-img">
-                            <img src="{{ asset('storage/' . $products->content_img->media) }}" alt="no available"
+                            <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
                                 class="img-fluid services-img rounded">
                         </div>
                     </div>
                 </div>
-                <div class="col-8 product-content-description">
+                <div class="col-lg-8 product-content-description">
                     {!! $products->product_description !!}
                 </div>
             </div>
@@ -1292,15 +1322,15 @@
                 <div class="col-md-12">
                     <div class="main-timeline">
                         @forelse ($products->whyus as $data)
-                        <div class="timeline">
-                            <a href="#" class="timeline-content">
-                                <div class="timeline-icon"><i class="{{ $data->icon }}"></i></div>
-                                <h3 class="title">{{ $data->title }}</h3>
-                                <p class="description">
-                                    {!! $data->detail !!}
-                                </p>
-                            </a>
-                        </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon"><i class="{{ $data->icon }}"></i></div>
+                                    <h3 class="title">{{ $data->title }}</h3>
+                                    <p class="description">
+                                        {!! $data->detail !!}
+                                    </p>
+                                </a>
+                            </div>
                         @empty
                             <p>No data uploaded</p>
                         @endforelse
@@ -1314,17 +1344,15 @@
     </section>
     <!-- /Why Us Details Section -->
 
-    <!-- Product banner Details Section -->
-    <section id="whyus-services" class="counts">
-        <div class="container" data-aos="fade-up">
-            <img src="{{ asset('home/assets/img/product-demo-banner.png') }}" style="width: inherit;" />
-        </div>
-    </section>
-    <!-- /Product banner Details Section -->
-
+   <!-- Product banner Details Section -->
+<section id="whyus-services" class="counts" style="position: relative;">
+    <div class="container-fluid"
+        style="width: 100%; padding: 0; background-image: url('{{ asset('home/assets/img/product-demo-banner.png') }}'); background-size: cover; background-position: center;">
+        <img src="{{ asset('home/assets/img/product-demo-banner.png') }}" style="width: inherit;z-index:-100" />
+    </div>
 
     <!-- Contact Details Section -->
-    <section id="whyus-services" class="counts">
+    <section id="whyus-services-contact" class="container-fluid" style="position: absolute !important; top: 87%; left: 50%; transform: translate(-50%, -50%); z-index: 100;">
         <div class="container" data-aos="fade-up">
             <div class="cta-sec6 background-image bg-theme" data-bg-src="{{ asset('home/assets/img/cta_bg_6.jpg') }}">
                 <div class="cta-content">
@@ -1333,13 +1361,15 @@
                                     src="{{ asset('home/assets/img/call.svg') }}" alt=""></a>
                         </div>
                         <div class="media-body"><span class="header-info_label text-white">Call For More Info</span>
-                            <p class="header-info_link"><a href="tel:+91{{ settingValue('phone') }}">{{ settingValue('phone') }}</a></p>
+                            <p class="header-info_link"><a
+                                    href="tel:+91{{ settingValue('phone') }}">{{ settingValue('phone') }}</a></p>
                         </div>
                     </div>
                     <div class="title-area mb-0">
                         <h4 class="sec-title text-white">Let’s Request a Schedule For Free Consultation</h4>
                     </div>
-                    <div class="cta-group"><a href="{{ route('contactUs') }}" class="th-btn th-border style-radius">Contact Us</a>
+                    <div class="cta-group"><a href="{{ route('contactUs') }}"
+                            class="th-btn th-border style-radius">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -1347,19 +1377,29 @@
     </section>
     <!-- /Contact Details Section -->
 
+</section>
+
+
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
-            <div class="row">
-                @foreach ($features as $fs)
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                            <div class="icon"><i class="{{ $fs->icon ?? '' }}"></i></div>
-                            <h4 class="title"><a href="">{{ $fs->title ?? '' }}</a></h4>
-                            <div class="description">{!! $fs->detail ?? '' !!}</div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper p-3">
+                    @foreach ($features as $fs)
+                        <div class="swiper-slide">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="icon"><i class="{{ $fs->icon ?? '' }}"></i></div>
+                                <h4 class="title"><a href="">{{ $fs->title ?? '' }}</a></h4>
+                                <div class="description">{!! $fs->detail ?? '' !!}</div>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
 
         </div>
@@ -1451,7 +1491,7 @@
                 <div class="col-xl-4">
                     <div class="card">
                         <div class="card-img">
-                            <img src="{{ asset('storage/' . $products->faqImg->media) }}" alt="no available"
+                            <img src="{{ asset('storage/' . optional($products->faqImg)->media) }}" alt="no available"
                                 class="img-fluid services-img rounded">
                         </div>
                     </div>
@@ -1489,122 +1529,82 @@
                 Blogs
             </div>
 
-            <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-3 col-sm-12 ">
-                                <div class="card">
-                                    <img src="{{ asset('home/assets/img/th.jpg') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Read more...</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-12 ">
-                                <div class="card">
-                                    <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Read more...</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-12 ">
-                                <div class="card">
-                                    <img src="{{ asset('home/assets/img/cta.jpg') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Read more...</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-12 ">
-                                <div class="card">
-                                    <img src="{{ asset('home/assets/img/whyus.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Read more...</a>
-                                    </div>
-                                </div>
+            <div class="swiper blogSwiper">
+                <div class="swiper-wrapper p-3">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="{{ asset('home/assets/img/th.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read more...</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-3 col-sm-12 ">
-                                <div class="card">
-                                    <img src="{{ asset('home/assets/img/th.jpg') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Read more...</a>
-                                    </div>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="{{ asset('home/assets/img/th.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read more...</a>
                             </div>
-                            <div class="col-lg-3 col-sm-12">
-                                <div class="card">
-                                    <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Read more...</a>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read more...</a>
                             </div>
-                            <div class="col-lg-3 col-sm-12 ">
-                                <div class="card">
-                                    <img src="{{ asset('home/assets/img/cta.jpg') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Read more...</a>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read more...</a>
                             </div>
-                            <div class="col-lg-3 col-sm-12">
-                                <div class="card">
-                                    <img src="{{ asset('home/assets/img/whyus.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up
-                                            the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Read more...</a>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read more...</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
 
 
-
-        </div>
     </section>
 
 
@@ -1640,7 +1640,66 @@
         </div>
     </section>
     <!-- End Testimonials Section -->
+@endsection
 
+@section('script-area')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+            },
+        });
+        var swiper = new Swiper(".blogSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
 @endsection
