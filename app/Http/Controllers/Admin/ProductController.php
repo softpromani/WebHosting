@@ -27,7 +27,7 @@ class ProductController extends Controller
 
         return DataTables::of($products)
             ->addColumn('action', function ($product) {
-                return '<a href="'.route('admin.product.edit',$product->id).'" class="btn btn-sm btn-primary">Edit</a>';
+                return '<a href="'.route('admin.admin.product.edit',$product->id).'" class="btn btn-sm btn-primary">Edit</a>';
             })
             ->rawColumns(['product_description', 'action']) // Specify columns containing HTML
             ->make(true);
@@ -294,7 +294,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        return redirect()->route('admin.product.create')->with(['product_id'=>$id]);
+        return redirect()->route('admin.admin.product.create')->with(['product_id'=>$id]);
     }
 
     /**

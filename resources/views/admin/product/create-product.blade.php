@@ -15,7 +15,7 @@
 @endsection
 @section('main-content')
 
-    <form action="{{ isset($edit) ? route('admin.product.update', $product->id) : route('admin.product.store') }}"
+    <form action="{{ isset($edit) ? route('admin.admin.product.update', $product->id) : route('admin.admin.product.store') }}"
         method="POST" enctype="multipart/form-data">
         @isset($edit)
             @method('PUT')
@@ -87,7 +87,6 @@
 @section('script-area')
     <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
     <script>
-      
         let featureIndex = 1;
 
         function add_feature_div() {
@@ -144,7 +143,7 @@
             $(this).closest('.col-md-6').remove();
         });
 
-        
+
         let WhyIndex = 1;
 
         function add_whyus_div() {

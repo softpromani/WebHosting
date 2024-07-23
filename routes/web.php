@@ -39,8 +39,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::resource('menu',MenuController::class)->name('','menu');
     Route::resource('product', AdminProductController::class);
 
-    Route::get('product/show/{step}/{product_id?}',[AdminProductController::class, 'show'])->name('product.show');
-    Route::delete('product/delete/{step}/{resource_id?}',[AdminProductController::class, 'destroy'])->name('product.destroy');
+    Route::get('product/show/{step}/{product_id?}',[AdminProductController::class, 'show'])->name('show');
+    Route::delete('product/delete/{step}/{resource_id?}',[AdminProductController::class, 'destroy'])->name('destroy');
     Route::resource('contact-us',ContactUsController::class);
     Route::resource('newsletter',NewseletterController::class);
     Route::resource('testimonial',TestimonialController::class);
