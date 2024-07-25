@@ -1,3 +1,176 @@
+<style>
+    .nav-tabs {
+        border-bottom: none;
+    }
+
+    .nav-item {
+        margin-bottom: 28px;
+    }
+
+    .tab-style-05 .nav-tabs .nav-item .nav-link.active,
+    .tab-style-05 .nav-tabs .nav-item .nav-link.show,
+    .tab-style-05 .nav-tabs .nav-item .nav-link:hover i {
+        /* color: #0056b3; */
+        color: var(--primary-color);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
+    }
+
+    .tab-style-05 .nav-tabs .nav-item .nav-link.active i,
+    .tab-style-05 .nav-tabs .nav-item .nav-link.show,
+    .tab-style-05 .nav-tabs .nav-item .nav-link:hover i {
+        /* color: #0056b3; */
+        color: var(--primary-color);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
+    }
+
+    .nav-link {
+        border-radius: 5px;
+        padding: 20px 25px;
+        color: #333;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-link:hover {
+        background: #e9ecef;
+        /* color: #0056b3; */
+        color: var(--primary-color);
+    }
+
+    .nav-link.active,
+    .nav-link.active:hover {
+        background: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        color: var(--primary-color);
+        /* color: #0056b3; */
+    }
+
+    .icon-extra-medium {
+        font-size: 1.2rem;
+    }
+
+    .fs-18 {
+        font-size: 18px;
+    }
+
+    .fw-500 {
+        font-weight: 500;
+    }
+
+    .fw-600 {
+        font-weight: 600 !important;
+    }
+
+    .mb-25px {
+        margin-bottom: 30px !important;
+    }
+
+    .icon-text-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+        /* color: #5057ac; */
+    }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-right: 15px;
+    }
+
+    .icon-circle i {
+        font-size: 22px;
+        color: var(--primary-color);
+        /* color: #5057ac; */
+    }
+
+    .header-text {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .alt-font {
+        font-family: 'Arial', sans-serif;
+        /* Custom font family */
+        color: #333;
+        /* Darker text color */
+    }
+
+    .bg-solitude-blue {
+        background-color: #F0F4FD;
+    }
+
+    .explore-button {
+        background-color: var(--primary-color);
+        /* Button background color */
+        color: white;
+        /* Button text color */
+        padding: 10px 20px;
+        /* Padding inside the button */
+        border: none;
+        border-radius: 20px;
+        /* Rounded corners for the button */
+        text-decoration: none;
+        /* Remove underline from link */
+        display: inline-block;
+        /* Allows margin and padding adjustments */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        /* Button shadow */
+    }
+
+    .btn-box-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Consistent shadow for buttons */
+    }
+
+    .btn-rounded {
+        border-radius: 20px;
+        /* Consistent border-radius */
+    }
+
+    .mt-10px {
+        margin-top: 10px;
+        /* Consistent top margin */
+    }
+
+    .fw-500 {
+        font-weight: 500 !important;
+    }
+
+    .mb-20px {
+        margin-bottom: 20px !important;
+    }
+
+    .ls-minus-1px {
+        letter-spacing: -1px !important;
+    }
+
+    .border-radius-6px {
+        border-radius: 6px !important;
+    }
+
+
+
+
+
+    .show-pricing {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+</style>
 <div class="container">
     <div class="row justify-content-center mb-4">
         <div class="col-xl-7 col-lg-9 col-md-10 text-center">
