@@ -1992,7 +1992,8 @@ section {
     .tab-style-05 .nav-tabs .nav-item .nav-link.active,
     .tab-style-05 .nav-tabs .nav-item .nav-link.show,
     .tab-style-05 .nav-tabs .nav-item .nav-link:hover i {
-        color: #0056b3;
+        /* color: #0056b3; */
+        color: var(--primary-color);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 
     }
@@ -2000,7 +2001,8 @@ section {
     .tab-style-05 .nav-tabs .nav-item .nav-link.active i,
     .tab-style-05 .nav-tabs .nav-item .nav-link.show,
     .tab-style-05 .nav-tabs .nav-item .nav-link:hover i {
-        color: #0056b3;
+        /* color: #0056b3; */
+        color: var(--primary-color);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 
     }
@@ -2017,14 +2019,16 @@ section {
 
     .nav-link:hover {
         background: #e9ecef;
-        color: #0056b3;
+        /* color: #0056b3; */
+        color: var(--primary-color);
     }
 
     .nav-link.active,
     .nav-link.active:hover {
         background: #ffffff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        color: #0056b3;
+        color: var(--primary-color);
+        /* color: #0056b3; */
     }
 
     .icon-extra-medium {
@@ -2051,7 +2055,8 @@ section {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
-        color: #5057ac;
+        color: var(--primary-color);
+        /* color: #5057ac; */
     }
 
     .icon-circle {
@@ -2068,7 +2073,8 @@ section {
 
     .icon-circle i {
         font-size: 22px;
-        color: #5057ac;
+        color: var(--primary-color);
+        /* color: #5057ac; */
     }
 
     .header-text {
@@ -2088,7 +2094,7 @@ section {
     }
 
     .explore-button {
-        background-color: #0056b3;
+        background-color:var(--primary-color);
         /* Button background color */
         color: white;
         /* Button text color */

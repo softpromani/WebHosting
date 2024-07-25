@@ -115,8 +115,23 @@
     }
 
     .btn-get {
-        background-color: #0056b3;
+        /* background-color: #0056b3; */
+        background-color: var(--primary-color);
         color: #fff;
+    }
+
+    .btn-get {
+        background-color: var(--primary-color);
+        color: #fff;
+        transition: color 0.3s ease;
+        /* Smooth transition for color change */
+    }
+
+    .btn-get:hover {
+        color: #000;
+        /* Change text color to black on hover */
+        background-color: var(--primary-color);
+        /* Keep the background color the same on hover */
     }
 </style>
 <div class="pricing-container">
@@ -157,7 +172,7 @@
                                 <h5 class="text-dark-gray mb-0"><span class="fs-16">$</span>19.99 <span
                                         class="fs-16 opacity-6 fw-300 ls-0px">/ Monthly</span></h5>
                                 <a href="#"
-                                    class="btn btn-transparent-white-light btn-rounded btn-small ms-auto fw-500 btn-box-shadow btn-get">Get
+                                    class="btn  btn-rounded btn-small ms-auto fw-500 btn-box-shadow btn-get">Get
                                     started</a>
                             </div>
                         </div>

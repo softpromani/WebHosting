@@ -1,4 +1,3 @@
-
 <div class="container">
     <div class="row justify-content-center mb-4">
         <div class="col-xl-7 col-lg-9 col-md-10 text-center">
@@ -66,8 +65,7 @@
                                 maintaining
                                 strong
                                 long-term good relationship.</p>
-                            <a href="demo-business-services-details.html"
-                                class="explore-button btn-box-shadow btn-rounded mt-10px">
+                            <a href="#" class="explore-button btn-box-shadow btn-rounded mt-10px">
                                 Explore now
                             </a>
                         </div>
