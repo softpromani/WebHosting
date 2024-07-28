@@ -1305,6 +1305,19 @@
 
     </section>
     <!-- /Service Details Section -->
+    <section class="bg-solitude-blue">
+            @include('home.businessService')
+        </section>
+
+        <!-- End About Section -->
+
+        <!-- ======= Pricing Section ======= -->
+
+        <section class="show-pricing">
+            @include('home.pricing')
+        </section>
+
+        <!-- End pricing Section -->
 
     <!-- Why Us Details Section -->
     <section id="whyus-services" class="counts">

@@ -37,10 +37,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('web-setting',[WebSettingController::class,'webSetting'])->name('webSetting');
     Route::post('web-setting/update',[WebSettingController::class,'updateWebSettings'])->name('updateWebSettings');
     Route::resource('menu',MenuController::class)->name('','menu');
-    Route::resource('product', AdminProductController::class);
+    Route::resource('product',AdminProductController::class)->name('','product');
+    
+    Route::get('product/show/{step}/{product_id?}',[AdminProductController::class, 'PageLayout'])->name('product.PageLayout');
+    Route::delete('product/delete/{step}/{resource_id?}',[AdminProductController::class, 'productDelete'])->name('product.productDelete');
 
-    Route::get('product/show/{step}/{product_id?}',[AdminProductController::class, 'show'])->name('show');
-    Route::delete('product/delete/{step}/{resource_id?}',[AdminProductController::class, 'destroy'])->name('destroy');
     Route::resource('contact-us',ContactUsController::class);
     Route::resource('newsletter',NewseletterController::class);
     Route::resource('testimonial',TestimonialController::class);

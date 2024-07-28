@@ -47,8 +47,8 @@
                     </ul> --}}
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.admin.product.index') }}"
-                        class="nav-link {{ Route::currentRouteName() == 'admin.admin.product.index' ? 'active' : '' }}">
+                    <a href="{{ route('admin.product.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.product.index' ? 'active' : '' }}">
                         <i class="nav-icon fa-brands fa-product-hunt"></i>
                         <p>
                             Product

@@ -84,12 +84,13 @@
                             <td>{{ $d->colour }}</td>
                             <td>{!! $d->detail !!}</td>
                             <td>
-                               <form action="{{ route('admin.product.destroy','whyus/'.$d->id) }}" method="POST"
-                                id="delete-form-{{ $d->id }}">
-                                @csrf
-                                @method('DELETE')
-                                <button type="button" onclick="deleteResource({{ $d->id }})">Delete</button>
-                            </form>
+                                <form action="{{ route('admin.product.productDelete', 'whyus/' . $d->id) }}"
+                                    method="POST" id="delete-form-{{ $d->id }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="button"
+                                        onclick="deleteResource({{ $d->id }})">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
@@ -104,6 +105,4 @@
         .catch(error => {
             console.error(error);
         });
-
-  
 </script>

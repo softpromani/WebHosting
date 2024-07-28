@@ -55,7 +55,7 @@
                             <td>{{ $d->question }}</td>
                             <td>{!! $d->answer !!}</td>
                             <td>
-                                <form action="{{ route('admin.product.destroy', 'pro_testimonial/' . $d->id) }}"
+                                <form action="{{ route('admin.product.productDelete', 'pro_testimonial/' . $d->id) }}"
                                     method="POST" id="delete-form-{{ $d->id }}">
                                     @csrf
                                     @method('DELETE')

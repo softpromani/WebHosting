@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Product List </h3>
-            <a class="btn btn-primary float-end" href="{{ route('admin.admin.product.create') }}">+ Add New</a>
+            <a class="btn btn-primary float-end" href="{{ route('admin.product.create') }}">+ Add New</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -54,7 +54,7 @@
                 "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
                 "processing": true,
                 "serverSide": true,
-                "ajax": "{{ route('admin.admin.product.index') }}",
+                "ajax": "{{ route('admin.product.index') }}",
                 "columns": [{
                         "data": "id"
                     },

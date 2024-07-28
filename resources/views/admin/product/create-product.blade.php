@@ -3,83 +3,96 @@
 @section('header-area')
     <style>
         .productdesc .ck-editor__editable {
-            min-height: 500px;
+            min-height: 200px;
             /* Set your desired height */
         }
 
         .ck-editor__editable {
-            min-height: 200px;
+            min-height: 100px;
             /* Set your desired height */
+        }
+
+        hr.custom-style {
+            border: 0;
+            height: 1px;
+            /* Thickness of the line */
+            background: #000;
+            /* Color of the line */
+            opacity: 0.4;
+            /* Optional: to make it a bit lighter or darker */
         }
     </style>
 @endsection
 @section('main-content')
 
-    <form action="{{ isset($edit) ? route('admin.admin.product.update', $product->id) : route('admin.admin.product.store') }}"
+    <form action="{{ isset($edit) ? route('admin.product.update', $product->id) : route('admin.product.store') }}"
         method="POST" enctype="multipart/form-data">
         @isset($edit)
             @method('PUT')
         @endisset
         @csrf
-        <div class="card">
-            <div class="card-header">
+        <div class="head">
+            <div class="card-header mb-0">
                 <nav>
                     <div class="nav nav-pills nav-fill pronav" id="nav-tab" role="tablist">
                         <a class="nav-link active" id="pro_detail" data-toggle="tab" href="#step1"
                             data-url="{{ route('admin.product.show', 1) }}">Product Detail</a>
                         <a class="nav-link" id="feature" data-toggle="tab" href="#step2"
-                            data-url="{{ route('admin.product.show', 2) }}">Features</a>
+                            data-url="{{ route('admin.product.PageLayout', 2) }}">Features</a>
                         <a class="nav-link" id="pro_counter" data-toggle="tab" href="#step3"
-                            data-url="{{ route('admin.product.show', 3) }}">Counter</a>
+                            data-url="{{ route('admin.product.PageLayout', 3) }}">Counter</a>
                         <a class="nav-link" id="pro_testimonal" data-toggle="tab" href="#step4"
-                            data-url="{{ route('admin.product.show', 4) }}">Testimonial</a>
+                            data-url="{{ route('admin.product.PageLayout', 4) }}">Testimonial</a>
                         <a class="nav-link" id="why-us" data-toggle="tab" href="#step5"
-                            data-url="{{ route('admin.product.show', 5) }}">Why-Us</a>
+                            data-url="{{ route('admin.product.PageLayout', 5) }}">Why-Us</a>
                         <a class="nav-link" id="faqs" data-toggle="tab" href="#step6"
-                            data-url="{{ route('admin.product.show', 6) }}">FAQs</a>
+                            data-url="{{ route('admin.product.PageLayout', 6) }}">FAQs</a>
                         <a class="nav-link" id="media" data-toggle="tab" href="#step7"
-                            data-url="{{ route('admin.product.show', 7) }}">Media</a>
+                            data-url="{{ route('admin.product.PageLayout', 7) }}">Media</a>
                     </div>
                 </nav>
             </div>
-            <div class="card-body">
-                <div class="tab-content py-4" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="step1">
-                        {{-- product detail --}}
-                    </div>
-                    <div class="tab-pane fade" id="step2">
-                        {{-- feature tab --}}
+        </div>
+        <div class="productTabPage">
 
-                    </div>
+            {{-- <div class="card-body"> --}}
+            <div class="tab-content py-4" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="step1">
+                    {{-- product detail --}}
+                </div>
+                <div class="tab-pane fade" id="step2">
+                    {{-- feature tab --}}
 
-                    {{-- Counter tab --}}
+                </div>
 
-                    <div class="tab-pane fade" id="step3">
+                {{-- Counter tab --}}
 
-                    </div>
-                    {{-- Testimonial tab --}}
-                    <div class="tab-pane fade" id="step4">
+                <div class="tab-pane fade" id="step3">
 
-                    </div>
-                    {{-- why-us tab --}}
-                    <div class="tab-pane fade" id="step5">
-                    </div>
+                </div>
+                {{-- Testimonial tab --}}
+                <div class="tab-pane fade" id="step4">
 
-                    {{-- FAQs --}}
+                </div>
+                {{-- why-us tab --}}
+                <div class="tab-pane fade" id="step5">
+                </div>
 
-                    <div class="tab-pane fade" id="step6">
+                {{-- FAQs --}}
 
-                    </div>
+                <div class="tab-pane fade" id="step6">
 
-                    {{-- Media --}}
+                </div>
 
-                    <div class="tab-pane fade" id="step7">
+                {{-- Media --}}
 
-                    </div>
+                <div class="tab-pane fade" id="step7">
+
                 </div>
             </div>
+            {{-- </div> --}}
             <div class="card-footer">
-                <button class="btn btn-primary float-end" type="submit">Submit</button>
+                <button class="btn btn-primary float-end" type="submit">Save</button>
             </div>
         </div>
     </form>
@@ -87,63 +100,6 @@
 @section('script-area')
     <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
     <script>
-        let featureIndex = 1;
-
-        function add_feature_div() {
-            var featureIndex = document.querySelectorAll('.feature-item').length;
-
-            var featdiv = `<div class="col-md-6 feature-item">
-            <div class="card">
-                <span class="text-danger p-2 btn feature-del">X</span>
-                <div class="card-body">
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label for="feature_icon_${featureIndex}">Icon <small class="text-danger">(icon class from <a
-                                        href="https://fontawesome.com/icons" target="_blank">here
-                                        ...</a>)</small></label>
-                            <input type="text" name="feature[${featureIndex}][icon]" id="feature_icon_${featureIndex}" class="form-control">
-                            <span class="alert text-danger" id="error_feature_${featureIndex}_icon"></span>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label for="feature_title_${featureIndex}">Title </label>
-                            <input type="text" name="feature[${featureIndex}][title]" id="feature_title_${featureIndex}" class="form-control">
-                            <span class="alert text-danger" id="error_feature_${featureIndex}_title"></span>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label for="feature_desc_${featureIndex}">Detail </label>
-                            <textarea name="feature[${featureIndex}][detail]" id="feature_desc_${featureIndex}" class="form-control feature_desc"></textarea>
-                            <span class="alert text-danger" id="error_feature_${featureIndex}_detail"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>`;
-
-            $('.feature-div').append(featdiv);
-
-            var newFeatureDescTextarea = document.getElementById(`feature_desc_${featureIndex}`);
-            if (newFeatureDescTextarea && !newFeatureDescTextarea.classList.contains('ck-editor-initialized')) {
-                ClassicEditor.create(newFeatureDescTextarea)
-                    .then(editor => {
-                        newFeatureDescTextarea.classList.add('ck-editor-initialized');
-                    })
-                    .catch(error => {
-                        console.error(error);
-                    });
-            }
-
-            featureIndex++; // Increment featureIndex for next added feature
-        }
-
-        $(document).on('click', '.feature-del', function() {
-            $(this).closest('.col-md-6').remove();
-        });
-
-
         let WhyIndex = 1;
 
         function add_whyus_div() {
@@ -200,47 +156,7 @@
             $(this).closest('.col-md-6').remove();
         });
 
-        let counterIndex = 1;
-
-        function add_counter_div() {
-            var counterIndex = document.querySelectorAll('.counter-item').length;
-
-            var counterdiv = `<div class="col-md-6 counter-item">
-                    <div class="card">
-                        <span class="text-danger p-2 btn  counter-del">x</span>
-                        <div class="card-body">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="counter_icon_${counterIndex}">Icon <small class="text-danger">(icon class from <a
-                                                href="https://fontawesome.com/icons" target="_blank">here
-                                                ...</a>)</small></label>
-                                    <input type="text" name="counter[${counterIndex}][icon]" id="counter_icon_${counterIndex}" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="counter_count_${counterIndex}">Count </label>
-                                    <input type="number" name="counter[${counterIndex}][count]" id="counter_count_${counterIndex}" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="counter_title_${counterIndex}">Title </label>
-                                    <input type="text" name="counter[${counterIndex}][title]" id="counter_title_${counterIndex}" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-
-            $('.counter-div').append(counterdiv);
-
-            counterIndex++; // Increment counterIndex for next added counter
-        }
-
-        $(document).on('click', '.counter-del', function() {
-            $(this).closest('.col-md-6').remove();
-        });
+        
 
 
         let testimonialIndex = 1;
@@ -359,7 +275,7 @@
                 if (product_id != 0) {
                     url = url + '/' + product_id;
                 }
-                $('.tab-pane').not(targetTab).empty();
+                // $('.tab-pane').not(targetTab).empty();
 
                 // Load content via AJAX
                 $.ajax({
