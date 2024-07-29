@@ -10,7 +10,7 @@
                  <select name="menu_id" id="menu_id" class="form-control" required>
                      <option value="" disabled>--select menu--</option>
                      @php
-                         $menu = \App\Models\Menu::get();
+                         $menu = \App\Models\Menu::whereNotNull('parent_id')->get();
                      @endphp
                      @foreach ($menu as $m)
                          <option value="{{ $m->id }}" @isset($data)@selected($data->menu_id==$m->id)@endisset>{{ $m->name }}</option>
