@@ -29,7 +29,7 @@ class ProductController extends Controller
                 ->addColumn('action', function ($product) {
                     return '<a href="' . route('admin.product.edit', $product->id) . '" class="btn btn-sm btn-primary">Edit</a>';
                 })
-                ->rawColumns(['product_description', 'action']) 
+                ->rawColumns(['product_description', 'action'])
                 ->make(true);
         }
 
@@ -39,8 +39,12 @@ class ProductController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $req)
     {
+        if(!isset($req->product_id))
+        {
+            session()->forget('product_id');
+        }
         return view('admin.product.create-product');
     }
 
@@ -50,7 +54,6 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         $validatedData = $request->validated();
-
         $step = $request->input('step');
 
         switch ($step) {
@@ -59,7 +62,7 @@ class ProductController extends Controller
                     $product = Product::find($request->product_id)->update($validatedData);
                     toast('Product Details Updated successfully', 'success');
                     session()->flash('activeTab', 'feature');
-                    return redirect()->route('admin.product.create')->with(['product_id' => $request->product_id]);
+                    return redirect()->route('admin.product.create', ['product_id' => $request->product_id]);
                 } else {
                     $product = Product::create($validatedData);
                     if ($request->hasFile('main_img')) {
@@ -68,7 +71,8 @@ class ProductController extends Controller
 
                     toast('Product Details Added successfully', 'success');
                     session()->flash('activeTab', 'feature');
-                    return redirect()->route('admin.product.create')->with(['product_id' => $product->id]);
+                    session()->put('product_id',$product->id);
+                    return redirect()->route('admin.product.create');
                 }
 
 
@@ -79,107 +83,91 @@ class ProductController extends Controller
                     toast('Please Add Product first', 'error');
 
                 }
-                $allFeaturesStored = true;
-
-                foreach ($validatedData['feature'] as $featureData) {
                     $proFeature = ProductFeature::create([
                         'product_id' => $product_id,
-                        'icon' => $featureData['icon'],
-                        'title' => $featureData['title'],
-                        'detail' => $featureData['detail'],
+                        'icon' => $validatedData['feature']['icon'],
+                        'title' => $validatedData['feature']['title'],
+                        'detail' => $validatedData['feature']['detail'],
                     ]);
-                    if (!$proFeature) {
-                        $allFeaturesStored = false;
-                    }
-                    if ($allFeaturesStored) {
+                    if ($proFeature) {
                         $product = Product::find($product_id);
                         if ($product->step < 2) {
                             $product->step = 2;
                             $product->save();
                         }
                     }
-
-                }
                 toast('Features Added successfully', 'success');
-                session()->flash('activeTab', 'pro_counter');
-                return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+                    break;
+            // case 'whyus':
+            //     $product_id = $request->product_id;
+            //     if (!$product_id) {
+            //         Alert::error('Warning', 'Please Add Product first');
+            //     }
+            //     $allwhyusStored = true;
 
+            //     foreach ($validatedData['whyus'] as $whyusData) {
+            //         $proWhyus = ProductWhyUs::create([
+            //             'product_id' => $product_id,
+            //             'icon' => $whyusData['icon'],
+            //             'title' => $whyusData['title'],
+            //             // 'colour' => $whyusData['colour'],
+            //             'detail' => $whyusData['detail'],
+            //         ]);
+            //         if (!$proWhyus) {
+            //             $allwhyusStored = false;
+            //         }
+            //         if ($allwhyusStored) {
+            //             $product = Product::find($product_id);
+            //             if ($product->step < 2) {
+            //                 $product->step = 2;
+            //                 $product->save();
+            //             }
+            //         }
 
-            case 'whyus':
-                $product_id = $request->product_id;
-                if (!$product_id) {
-                    Alert::error('Warning', 'Please Add Product first');
-                }
-                $allwhyusStored = true;
+            //     }
+            //     toast('Why-Us Added successfully', 'success');
+            //     session()->flash('activeTab', 'pro_counter');
+            //     return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
 
-                foreach ($validatedData['whyus'] as $whyusData) {
-                    $proWhyus = ProductWhyUs::create([
-                        'product_id' => $product_id,
-                        'icon' => $whyusData['icon'],
-                        'title' => $whyusData['title'],
-                        // 'colour' => $whyusData['colour'],
-                        'detail' => $whyusData['detail'],
-                    ]);
-                    if (!$proWhyus) {
-                        $allwhyusStored = false;
-                    }
-                    if ($allwhyusStored) {
-                        $product = Product::find($product_id);
-                        if ($product->step < 2) {
-                            $product->step = 2;
-                            $product->save();
-                        }
-                    }
+            // case 'pro_counter':
+            //     foreach ($validatedData['counter'] as $counterData) {
+            //         $product_id = $request->product_id;
 
-                }
-                toast('Why-Us Added successfully', 'success');
-                session()->flash('activeTab', 'pro_counter');
-                return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
-
-            case 'pro_counter':
-                foreach ($validatedData['counter'] as $counterData) {
-                    $product_id = $request->product_id;
-
-                    if (!$product_id) {
-                        Alert::error('Warning', 'Please Add Product first');
-                    }
-                    $proCount = ProductCounter::create([
-                        'product_id' => $product_id,
-                        'icon' => $counterData['icon'],
-                        'count' => $counterData['count'],
-                        'title' => $counterData['title'],
-                    ]);
-                }
-                $product = Product::find($product_id);
-                if ($product->step < 3) {
-                    $product->step = 3;
-                    $product->save();
-                }
-                toast('Counters Added successfully', 'success');
-                session()->flash('activeTab', 'pro_testimonal');
-                return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+            //         if (!$product_id) {
+            //             Alert::error('Warning', 'Please Add Product first');
+            //         }
+            //         $proCount = ProductCounter::create([
+            //             'product_id' => $product_id,
+            //             'icon' => $counterData['icon'],
+            //             'count' => $counterData['count'],
+            //             'title' => $counterData['title'],
+            //         ]);
+            //     }
+            //     $product = Product::find($product_id);
+            //     if ($product->step < 3) {
+            //         $product->step = 3;
+            //         $product->save();
+            //     }
+            //     toast('Counters Added successfully', 'success');
+            //     session()->flash('activeTab', 'pro_testimonal');
+            //     return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
 
             case 'pro_testimonial':
                 $product_id = $request->product_id;
-
                 if (!$product_id) {
                     Alert::error('Warning', 'Please Add Product first');
                 }
-                foreach ($validatedData['testi'] as $testiData) {
-                    $picPath = $testiData['pic']->store('testimonials', 'public');
                     $testimonial = ProductTestimonial::create([
                         'product_id' => $product_id,
-                        'testimonial_image' => $picPath,
-                        'name' => $testiData['name'],
-                        'designation' => $testiData['designation'],
-                        'comment' => $testiData['comment'],
+                        'testimonial_image' => 'image',
+                        'name' => $validatedData['testi']['name'],
+                        'designation' => $validatedData['testi']['designation'],
+                        'comment' => $validatedData['testi']['comment'],
                     ]);
 
-                    Media::uploadMedia($testiData['pic'], $testimonial);
-                }
+                    Media::uploadMedia($validatedData['testi']['pic'], $testimonial);
                 toast('Testimonials Added successfully', 'success');
-                session()->flash('activeTab', 'faqs');
-                return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+                break;
 
             case 'faqs':
                 $product_id = $request->product_id;
@@ -187,17 +175,13 @@ class ProductController extends Controller
                 if (!$product_id) {
                     Alert::error('Warning', 'Please Add Product first');
                 }
-                foreach ($validatedData['faq'] as $faqData) {
                     ProductFaq::create([
                         'product_id' => $product_id,
-                        'question' => $faqData['question'],
-                        'answer' => $faqData['answer'],
+                        'question' => $validatedData['faq']['question'],
+                        'answer' => $validatedData['faq']['answer'],
                     ]);
-                }
                 toast('FAQs Added successfully', 'success');
-                session()->flash('activeTab', 'media');
-
-                return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+                break;
 
             case 'media':
                 // dd($request->slider_img);
@@ -228,7 +212,7 @@ class ProductController extends Controller
 
                 toast('Media Added successfully', 'success');
                 session()->flash('activeTab', 'media');
-                return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+                return redirect()->route('admin.product.create',['product_id'=>$product_id]);
             default:
                 break;
         }
@@ -294,7 +278,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        
+        session()->put('product_id',$id);
         return redirect()->route('admin.product.create',['product_id'=>$id]);
     }
 

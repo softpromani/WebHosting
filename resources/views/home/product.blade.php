@@ -1304,23 +1304,25 @@
         </div>
 
     </section>
-    <!-- /Service Details Section -->
-    <section class="bg-solitude-blue">
+
+    @if ($products->layout == 'business_service')
+        <!-- /Service Details Section -->
+        <section class="bg-solitude-blue">
             @include('home.businessService')
         </section>
 
         <!-- End About Section -->
 
         <!-- ======= Pricing Section ======= -->
-
+    @elseif($products->layout == 'pricePlan')
         <section class="show-pricing">
             @include('home.pricing')
         </section>
 
         <!-- End pricing Section -->
-
+    @endif
     <!-- Why Us Details Section -->
-    <section id="whyus-services" class="counts">
+    {{-- <section id="whyus-services" class="counts">
         <div class="container" data-aos="fade-up">
 
 
@@ -1354,43 +1356,44 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
     <!-- /Why Us Details Section -->
 
-   <!-- Product banner Details Section -->
-<section id="whyus-services" class="counts" style="position: relative;">
-    <div class="container-fluid"
-        style="width: 100%; padding: 0; background-image: url('{{ asset('home/assets/img/product-demo-banner.png') }}'); background-size: cover; background-position: center;">
-        <img src="{{ asset('home/assets/img/product-demo-banner.png') }}" style="width: inherit;z-index:-100" />
-    </div>
+    <!-- Product banner Details Section -->
+    <section id="whyus-services" class="counts" style="position: relative;">
+        <div class="container-fluid"
+            style="width: 100%; padding: 0; background-image: url('{{ asset('storage/'.optional($products->product_banner)->media) }}'); background-size: cover; background-position: center;">
+            <img src="{{ asset('storage/'.optional($products->product_banner)->media) }}" style="width: inherit;z-index:-100" />
+        </div>
 
-    <!-- Contact Details Section -->
-    <section id="whyus-services-contact" class="container-fluid" style="position: absolute !important; top: 87%; left: 50%; transform: translate(-50%, -50%); z-index: 100;">
-        <div class="container" data-aos="fade-up">
-            <div class="cta-sec6 background-image bg-theme" data-bg-src="{{ asset('home/assets/img/cta_bg_6.jpg') }}">
-                <div class="cta-content">
-                    <div class="cta-wrapper">
-                        <div class="cta-icon"><a href="tel:+91{{ settingValue('phone') }}"><img
-                                    src="{{ asset('home/assets/img/call.svg') }}" alt=""></a>
+        <!-- Contact Details Section -->
+        <section id="whyus-services-contact" class="container-fluid"
+            style="position: absolute !important; top: 87%; left: 50%; transform: translate(-50%, -50%); z-index: 100;">
+            <div class="container" data-aos="fade-up">
+                <div class="cta-sec6 background-image bg-theme" data-bg-src="{{ asset('home/assets/img/cta_bg_6.jpg') }}">
+                    <div class="cta-content">
+                        <div class="cta-wrapper">
+                            <div class="cta-icon"><a href="tel:+91{{ settingValue('phone') }}"><img
+                                        src="{{ asset('home/assets/img/call.svg') }}" alt=""></a>
+                            </div>
+                            <div class="media-body"><span class="header-info_label text-white">Call For More Info</span>
+                                <p class="header-info_link"><a
+                                        href="tel:+91{{ settingValue('phone') }}">{{ settingValue('phone') }}</a></p>
+                            </div>
                         </div>
-                        <div class="media-body"><span class="header-info_label text-white">Call For More Info</span>
-                            <p class="header-info_link"><a
-                                    href="tel:+91{{ settingValue('phone') }}">{{ settingValue('phone') }}</a></p>
+                        <div class="title-area mb-0">
+                            <h4 class="sec-title text-white">Let’s Request a Schedule For Free Consultation</h4>
                         </div>
-                    </div>
-                    <div class="title-area mb-0">
-                        <h4 class="sec-title text-white">Let’s Request a Schedule For Free Consultation</h4>
-                    </div>
-                    <div class="cta-group"><a href="{{ route('contactUs') }}"
-                            class="th-btn th-border style-radius">Contact Us</a>
+                        <div class="cta-group"><a href="{{ route('contactUs') }}"
+                                class="th-btn th-border style-radius">Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- /Contact Details Section -->
+        </section>
+        <!-- /Contact Details Section -->
 
-</section>
+    </section>
 
 
     <!-- ======= Featured Services Section ======= -->

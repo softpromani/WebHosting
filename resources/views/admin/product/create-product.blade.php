@@ -26,7 +26,7 @@
 @section('main-content')
 
     <form action="{{ isset($edit) ? route('admin.product.update', $product->id) : route('admin.product.store') }}"
-        method="POST" enctype="multipart/form-data">
+        method="POST" enctype="multipart/form-data" id='product_form'>
         @isset($edit)
             @method('PUT')
         @endisset
@@ -36,15 +36,15 @@
                 <nav>
                     <div class="nav nav-pills nav-fill pronav" id="nav-tab" role="tablist">
                         <a class="nav-link active" id="pro_detail" data-toggle="tab" href="#step1"
-                            data-url="{{ route('admin.product.show', 1) }}">Product Detail</a>
+                            data-url="{{ route('admin.product.PageLayout', 1) }}">Product Detail</a>
                         <a class="nav-link" id="feature" data-toggle="tab" href="#step2"
                             data-url="{{ route('admin.product.PageLayout', 2) }}">Features</a>
-                        <a class="nav-link" id="pro_counter" data-toggle="tab" href="#step3"
-                            data-url="{{ route('admin.product.PageLayout', 3) }}">Counter</a>
+                        {{-- <a class="nav-link" id="pro_counter" data-toggle="tab" href="#step3"
+                            data-url="{{ route('admin.product.PageLayout', 3) }}">Counter</a> --}}
                         <a class="nav-link" id="pro_testimonal" data-toggle="tab" href="#step4"
                             data-url="{{ route('admin.product.PageLayout', 4) }}">Testimonial</a>
-                        <a class="nav-link" id="why-us" data-toggle="tab" href="#step5"
-                            data-url="{{ route('admin.product.PageLayout', 5) }}">Why-Us</a>
+                        {{-- <a class="nav-link" id="why-us" data-toggle="tab" href="#step5"
+                            data-url="{{ route('admin.product.PageLayout', 5) }}">Why-Us</a> --}}
                         <a class="nav-link" id="faqs" data-toggle="tab" href="#step6"
                             data-url="{{ route('admin.product.PageLayout', 6) }}">FAQs</a>
                         <a class="nav-link" id="media" data-toggle="tab" href="#step7"
@@ -54,8 +54,6 @@
             </div>
         </div>
         <div class="productTabPage">
-
-            {{-- <div class="card-body"> --}}
             <div class="tab-content py-4" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="step1">
                     {{-- product detail --}}
@@ -89,10 +87,6 @@
                 <div class="tab-pane fade" id="step7">
 
                 </div>
-            </div>
-            {{-- </div> --}}
-            <div class="card-footer">
-                <button class="btn btn-primary float-end" type="submit">Save</button>
             </div>
         </div>
     </form>
@@ -156,7 +150,7 @@
             $(this).closest('.col-md-6').remove();
         });
 
-        
+
 
 
         let testimonialIndex = 1;
@@ -259,7 +253,7 @@
             }
         }
 
-        // ajax call on tab chnage 
+        // ajax call on tab chnage
         $(document).ready(function() {
             // Handle tab click events
             $(document).on('click', '.pronav a.nav-link', function(e) {
@@ -275,7 +269,7 @@
                 if (product_id != 0) {
                     url = url + '/' + product_id;
                 }
-                // $('.tab-pane').not(targetTab).empty();
+                $('.tab-pane').not(targetTab).empty();
 
                 // Load content via AJAX
                 $.ajax({
@@ -303,7 +297,7 @@
         });
 
 
-        // delete 
+        // delete
         function deleteResource(resourceId) {
             if (confirm('Are you sure you want to delete this resource?')) {
                 document.getElementById('delete-form-' + resourceId).submit();

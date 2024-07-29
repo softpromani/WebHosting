@@ -13,7 +13,7 @@
                          $menu = \App\Models\Menu::get();
                      @endphp
                      @foreach ($menu as $m)
-                         <option value="{{ $m->id }}">{{ $m->name }}</option>
+                         <option value="{{ $m->id }}" @isset($data)@selected($data->menu_id==$m->id)@endisset>{{ $m->name }}</option>
                      @endforeach
                  </select>
              </div>
@@ -66,14 +66,14 @@
                              <div class="d-flex align-items-center">
                                  <div class="form-check me-5">
                                      <input class="form-check-input" type="radio" name="layout" id="business_service"
-                                         value="business_service">
+                                         value="business_service" @isset($data)@checked($data->layout=='business_service')@endisset>
                                      <label class="form-check-label" for="business_service">
                                          Business Service
                                      </label>
                                  </div>
                                  <div class="form-check ms-3">
                                      <input class="form-check-input" type="radio" name="layout" id="pricePlan"
-                                         value="pricePlan" checked>
+                                         value="pricePlan" @isset($data) @checked($data->layout=='pricePlan') @endisset>
                                      <label class="form-check-label" for="pricePlan">
                                          Price Plan
                                      </label>
@@ -93,7 +93,7 @@
                              </div>
                              @if (isset($data->content_img))
                                  <img src="{{ asset('storage/' . $data->content_img->media ?? '') }}" alt=""
-                                     class="img-responsive content-image" id="content-image">
+                                     class="img-responsive content-image" id="content-image"  style=" width: 150px; height: 150px; border-radius:5px;">
                              @endif
                          </div>
 
@@ -105,8 +105,15 @@
              @error('content_img')
                  <div class="alert mt-2" style=" color:rgb(255, 60, 0); ">{{ $message }}</div>
              @enderror
+
+
          </div>
 
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary">Save Detail</button>
+                </div>
+            </div>
          <script>
              $(document).ready(function() {
                  ClassicEditor
