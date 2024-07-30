@@ -111,6 +111,15 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.blogs.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.blosg.index' ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-quote-left"></i>
+                        <p>
+                            BLog
+                        </p>
+                    </a>
+                </li>
 
             </ul>
         </nav>
