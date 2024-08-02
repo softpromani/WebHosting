@@ -27,14 +27,25 @@
                         </ul>
                     </li>
                 @endforeach
-                <li class="nav-link">
+                {{-- <li class="nav-link">
                     <a href="#"><span>Cybersecurity Solutions</span> </a>
                 </li>
                 <li class="nav-link">
                     <a href="#"><span>Cloud Services</span></a>
-                </li>
+                </li> --}}
                 <li class="nav-link">
                     <a href="{{ route('pricing') }}"><span>Pricing</span></a>
+                </li>
+                <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li class="dropdown"><a href="#"><span>About Us</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Our Security</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Partner</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Testimonials</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Knowledgebase</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Why Us</span></a></li>
+                        <li class="dropdown"><a href="#"><span>FAQ</span></a></li>
+                    </ul>
                 </li>
                 <li class="nav-link">
                     <a href="#"><span>Company</span></a>
