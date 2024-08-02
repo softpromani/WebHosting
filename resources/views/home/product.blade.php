@@ -1332,7 +1332,7 @@
     @if ($products->layout == 'business_service')
         <!-- /Service Details Section -->
         <section class="bg-solitude-blue">
-            @include('home.businessService')
+            @include('home.product_business_service')
         </section>
 
         <!-- End About Section -->
@@ -1340,7 +1340,7 @@
         <!-- ======= Pricing Section ======= -->
     @elseif($products->layout == 'pricePlan')
         <section class="show-pricing">
-            @include('home.pricing')
+            @include('home.product_pricing')
         </section>
 
         <!-- End pricing Section -->

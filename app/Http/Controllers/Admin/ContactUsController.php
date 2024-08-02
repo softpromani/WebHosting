@@ -15,7 +15,7 @@ class ContactUsController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = ContactUs::select(['id','name', 'email', 'subject','message']);
+            $data = ContactUs::select(['id','fname','lname', 'email','phone', 'subject','message']);
             return DataTables::of($data)
                 ->make(true);
         }

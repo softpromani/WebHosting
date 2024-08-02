@@ -23,8 +23,9 @@ class HomeController extends Controller
     public function contactStore(ContactRequest $request)
     {
         $validatedData = $request->validated();
-
+        
         $contact = ContactUs::create($validatedData);
+       
 
         if ($contact) {
 
@@ -58,5 +59,10 @@ class HomeController extends Controller
             Alert::error('Subscription Failed', 'There was an issue subscribing to the newsletter. Please try again later.');
             return redirect()->back();
         }
+    }
+
+    public function pricing()
+    {
+        return view('home.pricing');
     }
 }

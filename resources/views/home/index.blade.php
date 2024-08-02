@@ -124,17 +124,7 @@
 
         <!-- ======= Bussiness Service Section ======= -->
 
-        <section class="bg-solitude-blue">
-            @include('home.businessService')
-        </section>
 
-        <!-- End About Section -->
-
-        <!-- ======= Pricing Section ======= -->
-
-        <section class="show-pricing">
-            @include('home.pricing')
-        </section>
 
         <!-- End pricing Section -->
 

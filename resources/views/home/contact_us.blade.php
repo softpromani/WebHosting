@@ -1,7 +1,95 @@
 @extends('home.includes.layout')
 @section('title', 'Contact Us')
 @section('content')
+    <style>
+        .contact-us-promo {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
 
+        .contact-us-promo:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-us-promo .fa-3x {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .contact-us-promo h5 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .contact-us-promo p {
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .mai {
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .contact-us-promo .btn-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-us-promo .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .contact-us-form {
+            /* background-color: #f8faff; */
+            padding-top: 60px;
+            padding-bottom: 120px;
+        }
+
+        .contact-us-form .section-heading {
+            margin-bottom: 30px;
+        }
+
+        .contact-us-form .register-form label {
+            font-weight: bold;
+        }
+
+        .contact-us-form .register-form .input-group {
+            margin-bottom: 15px;
+        }
+
+        .contact-us-form .register-form .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+
+        .contact-us-img {
+            text-align: center;
+        }
+
+        .contact-us-img img {
+            max-width: 100%;
+            width: 80%;
+            height: auto;
+        }
+
+        .bg-solitude-blue {
+            background-color: #F8FAFF;
+            /* background-color: #F0F4FD; */
+        }
+    </style>
     <main id="main">
 
         <!-- ======= Breadcrumbs Section ======= -->
@@ -23,14 +111,55 @@
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
 
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <h3><span>Contact Us</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.</p>
-                </div>
 
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <section class="contact-promo ptb-120">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                                <div
+                                    class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                                    <i class="fas fa-phone fa-3x"></i>
+                                    <div class="contact-promo-info mb-4">
+                                        <h5>Give us a call</h5>
+                                        <p>Give us a ring. Our Experts are standing by <strong>monday to friday</strong>
+                                            from <strong>9am to 5pm EST.</strong></p>
+                                    </div>
+                                    <a href="tel:00-976-561-008"
+                                        class="btn btn-link mt-auto">{{ settingValue('phone') }}</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                                <div
+                                    class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                                    <i class="fas fa-envelope fa-3x"></i>
+                                    <div class="contact-promo-info mb-4">
+                                        <h5>Email Us</h5>
+                                        <p>Simply drop us an email at <a href="#"><strong
+                                                    class="mai">{{ settingValue('email') }}</strong></a>
+                                            and you'll receive a reply within 24 hours.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-auto">Email Us</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                                <div
+                                    class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                                    <i class="fas fa-comments fa-3x"></i>
+                                    <div class="contact-promo-info mb-4">
+                                        <h5>Chat with us</h5>
+                                        <p>We've got live Social Experts waiting to help you <strong>monday to
+                                                friday</strong> from <strong>9am to 5pm EST.</strong></p>
+                                    </div>
+                                    <a href="#" class="btn btn-link mt-auto">Chat with us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                {{-- <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-6">
                         <div class="info-box mb-4">
                             <i class="bx bx-map"></i>
@@ -55,9 +184,9 @@
                         </div>
                     </div>
 
-                </div>
+                </div> --}}
 
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                {{-- <div class="row" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="col-lg-6 ">
                         <iframe class="mb-4 mb-lg-0"
@@ -95,8 +224,76 @@
                         </form>
                     </div>
 
-                </div>
+                </div> --}}
 
+            </div>
+        </section>
+        <section class="contact-us-form pt-60 pb-120 bg-solitude-blue contact" id="contact  ">
+            <div class="container">
+                <div class="row justify-content-lg-between align-items-center">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="contact-us-img">
+                            <img src="{{ asset('home/assets/img/contact-us-img-2.svg') }}" alt="contact us"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-8">
+                        <div class="section-heading">
+                            <h2>Talk to Our Sales & Marketing Department Team</h2>
+                            <p>Collaboratively promote client-focused convergence vis-a-vis customer directed
+                                alignments via standardized infrastructures.</p>
+                        </div>
+                        <form action="{{ route('contactStore') }}" method="post" role="form" class="php-email-form">
+                            @csrf
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="fname" class="mb-1">First name <span
+                                            class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="firstName" required
+                                            placeholder="First name" aria-label="First name" name="fname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="lname" class="mb-1">Last name</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="lastName" placeholder="Last name"
+                                            aria-label="Last name" name="lname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="email" class="mb-1">Email <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" id="email" required
+                                            placeholder="Email" name="email" aria-label="Email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="phone" class="mb-1">Phone <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="phone" name="phone" required
+                                            placeholder="Phone" aria-label="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="yourMessage" class="mb-1">Message <span
+                                            class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <textarea class="form-control" id="yourMessage" required placeholder="How can we help you?" style="height: 120px"
+                                            name="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class=" col-12 my-3">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-4">Get in Touch</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section><!-- End Contact Section -->
 

@@ -25,6 +25,8 @@ Route::get('product/{slug}',[ProductController::class,'index'])->name('product')
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');
 
+Route::get('pricing', [HomeController::class, 'pricing'])->name('pricing');
+
 // Contact Us
 
 Route::post('user-contact/store', [HomeController::class, 'contactStore'])->name('contactStore');
