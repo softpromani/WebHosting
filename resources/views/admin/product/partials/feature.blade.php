@@ -2,7 +2,8 @@
     <div class="card-body">
         <div class="row">
             <input type="hidden" name="step" value="feature">
-            <input type="hidden" name="product_id" value="{{ session()->has('product_id') ? session()->get('product_id') : '1' }}">
+            <input type="hidden" name="product_id"
+                value="{{ session()->has('product_id') ? session()->get('product_id') : '1' }}">
 
             <div class="col-md-12 feature-item" data-index="0">
                 <div class="row">
@@ -15,8 +16,8 @@
                                                 ...
                                             </a>)</small>
                                     </label>
-                                    <input type="text" name="feature[icon]" id="feature_icon_0"
-                                        class="form-control" value="" required>
+                                    <input type="text" name="feature[icon]" id="feature_icon_0" class="form-control"
+                                        value="" required>
                                 </div>
                             </div>
                             <div class="col-md-12 mt-3">
@@ -79,7 +80,8 @@
                                 method="POST" id="delete-form-{{ $d->id }}">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-danger" onclick="deleteResource({{ $d->id }})">Delete</button>
+                                <button class="btn btn-danger"
+                                    onclick="deleteResource({{ $d->id }})">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -120,17 +122,16 @@
             processData: false,
             contentType: false,
             success: function(response) {
-              $('#feature').click();
-                // Optionally handle the response from the server
+                $('#feature').click();
             },
             error: function(jqXHR, textStatus, errorThrown) {
-            if (jqXHR.status === 422) { // Laravel validation error status code
-                var errors = jqXHR.responseJSON.errors;
-                console.error('Server-side validation failed:', errors);
-            } else {
-                console.error('Failed to submit form:', textStatus, errorThrown);
+                if (jqXHR.status === 422) { // Laravel validation error status code
+                    var errors = jqXHR.responseJSON.errors;
+                    console.error('Server-side validation failed:', errors);
+                } else {
+                    console.error('Failed to submit form:', textStatus, errorThrown);
+                }
             }
-        }
         });
     });
 </script>

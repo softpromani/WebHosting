@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\Media;
 use App\Models\Product;
 use App\Models\ProductCounter;
@@ -19,10 +20,11 @@ class ProductController extends Controller
         $metaKeywords = explode(',', $products->meta_keyword);
         $features = ProductFeature::where('product_id',$products->id)->get();
         $counters = ProductCounter::where('product_id',$products->id)->get();
-        $testimonials = ProductTestimonial::where('product_id',$products->id)->get();
+        $testimonials = ProductTestimonial::where('product_id',$products->id)->with('media')->get();
         $faqs = ProductFaq::where('product_id',$products->id)->get();
         $medias = Media::where('type','slider')->get();
         $whyus = ProductWhyUs::where('product_id',$products->id)->get();
-        return view('home.product',compact('products','features','counters','testimonials','faqs','medias','whyus'));
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.product',compact('products','features','counters','testimonials','faqs','medias','whyus','blogs'));
     }
 }

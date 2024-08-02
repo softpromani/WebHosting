@@ -1,5 +1,5 @@
 <input type="hidden" name="step" value="faqs">
-<input type="hidden" name="product_id" value="{{ $product_id }}">
+<input type="hidden" name="product_id" value="{{ session()->has('product_id') ? session()->get('product_id') : '1'  }}">
 <div class="container">
     <div class="card">
         <div class="card-body">

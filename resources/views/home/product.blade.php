@@ -1212,6 +1212,31 @@
         .carousel-item img {
             height: 200px;
         }
+
+        .blogCard {
+            height: 202px;
+            width: 135px;
+            object-fit: cover;
+        }
+
+        .testimonials {
+            background-color: transparent;
+        }
+
+        .testimonials .container {
+            background-color: transparent;
+        }
+
+        .testimonials .testimonial-item {
+            background-color: transparent;
+            box-shadow: none;
+            /* Optional: Remove box shadow if there is any */
+        }
+
+        .testimonials .swiper-wrapper,
+        .testimonials .swiper-slide {
+            background-color: transparent;
+        }
     </style>
     <div class="page-title" data-aos="fade">
         <div class="container d-lg-flex justify-content-between align-items-center">
@@ -1289,11 +1314,10 @@
                 </div> --}}
 
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
-                                class="img-fluid services-img rounded">
-                        </div>
+                    <div class="card-img">
+                        <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
+                            class="img-fluid services-img rounded">
+
                     </div>
                 </div>
                 <div class="col-lg-8 product-content-description">
@@ -1362,8 +1386,9 @@
     <!-- Product banner Details Section -->
     <section id="whyus-services" class="counts" style="position: relative;">
         <div class="container-fluid"
-            style="width: 100%; padding: 0; background-image: url('{{ asset('storage/'.optional($products->product_banner)->media) }}'); background-size: cover; background-position: center;">
-            <img src="{{ asset('storage/'.optional($products->product_banner)->media) }}" style="width: inherit;z-index:-100" />
+            style="width: 100%; padding: 0; background-image: url('{{ asset('storage/' . optional($products->product_banner)->media) }}'); background-size: cover; background-position: center;">
+            <img src="{{ asset('storage/' . optional($products->product_banner)->media) }}"
+                style="width: inherit;z-index:-100" />
         </div>
 
         <!-- Contact Details Section -->
@@ -1504,12 +1529,11 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-xl-4">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="{{ asset('storage/' . optional($products->faqImg)->media) }}" alt="no available"
-                                class="img-fluid services-img rounded">
-                        </div>
+                <div class="col-xl-4 ">
+                    <div class="card-img mb-3">
+                        <img src="{{ asset('storage/' . optional($products->faqImg)->media) }}" alt="no available"
+                            class="img-fluid services-img rounded">
+
                     </div>
                 </div>
                 <div class="col-xl-8">
@@ -1545,79 +1569,50 @@
                 Blogs
             </div>
 
-            <div class="swiper blogSwiper">
+            <div class="swiper blogSwiper mb-5">
                 <div class="swiper-wrapper p-3">
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="{{ asset('home/assets/img/th.jpg') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Read more...</a>
+                    @foreach ($blogs as $blog)
+                        <div class="swiper-slide ">
+                            <div class="card">
+                                <img src="{{ asset('storage/' . $blog->blogImage->media) }}"
+                                    class="card-img-top blogCard" alt="{{ $blog->title }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $blog->title }}</h5>
+                                    <p class="card-text">{!! Str::limit(strip_tags($blog->description), 100) !!}</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#blogModal" data-title="{{ $blog->title }}"
+                                        data-description="{{ $blog->description }}">
+                                        Read more...
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="{{ asset('home/assets/img/th.jpg') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Read more...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Read more...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Read more...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Read more...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="{{ asset('home/assets/img/services.png') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Read more...</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
 
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+            </div>
+            <div class="modal fade" id="blogModal" tabindex="-1" role="dialog" aria-labelledby="blogModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="blogModalLabel">Blog Title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+
+                        </div>
+                        <div class="modal-body">
+                            <p id="blogDescription">Blog description will be shown here.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -1636,7 +1631,7 @@
                     @foreach ($testimonials as $tm)
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="{{ asset('storage/' . $tm->testimonial_image) }}" class="testimonial-img"
+                                <img src="{{ asset('storage/' . $tm->media->media) }}" class="testimonial-img"
                                     alt="">
                                 <h3>{{ $tm->name ?? '' }}</h3>
                                 <h4>{{ $tm->designation ?? '' }}</h4>
@@ -1716,6 +1711,17 @@
                     spaceBetween: 50,
                 },
             },
+        });
+        $(document).ready(function() {
+            $('#blogModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var title = button.data('title'); // Extract info from data-* attributes
+                var description = button.data('description');
+
+                var modal = $(this);
+                modal.find('.modal-title').text(title);
+                modal.find('.modal-body #blogDescription').html(description);
+            });
         });
     </script>
 @endsection

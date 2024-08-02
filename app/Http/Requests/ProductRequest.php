@@ -35,7 +35,7 @@ class ProductRequest extends FormRequest
                     'layout' => 'required',
                 ];
             case 'feature':
-
+                
                 return [
                     'feature.icon' => 'required',
                     'feature.title' => 'required',

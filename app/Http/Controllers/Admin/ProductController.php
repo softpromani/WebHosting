@@ -72,7 +72,7 @@ class ProductController extends Controller
                     toast('Product Details Added successfully', 'success');
                     session()->flash('activeTab', 'feature');
                     session()->put('product_id',$product->id);
-                    return redirect()->route('admin.product.create');
+                    return redirect()->route('admin.product.create', ['product_id' => $product->id]);
                 }
 
 
