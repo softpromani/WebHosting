@@ -47,9 +47,9 @@
                         <li class="dropdown"><a href="#"><span>FAQ</span></a></li>
                     </ul>
                 </li>
-                <li class="nav-link">
+                {{-- <li class="nav-link">
                     <a href="#"><span>Company</span></a>
-                </li>
+                </li> --}}
                 <li class="nav-link">
                     <a href="#"><span>Downloads</span></a>
                 </li>
