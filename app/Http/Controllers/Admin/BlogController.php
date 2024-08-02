@@ -13,7 +13,7 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request  $request)
     {
         if ($request->ajax()) {
             $data = Blog::with('blogImage')->select(['id', 'title', 'description'])->get();
@@ -38,7 +38,6 @@ class BlogController extends Controller
         return view('admin.blog.blogList');
     }
 
-
     /**
      * Show the form for creating a new resource.
      */
@@ -52,7 +51,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+         $request->validate([
             'title' => 'required',
             'description' => 'required',
             'blog_image' => 'required|image',
@@ -82,8 +81,6 @@ class BlogController extends Controller
             return redirect()->back();
         }
     }
-
-
 
     /**
      * Display the specified resource.
@@ -147,13 +144,12 @@ class BlogController extends Controller
         }
     }
 
-
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        $blog = Blog::find($id);
+         $blog = Blog::find($id);
 
         if (!$blog) {
             return response()->json(['error' => 'Blog not found.'], 404);
@@ -167,5 +163,4 @@ class BlogController extends Controller
             return response()->json(['error' => 'Failed to delete Blog.'], 500);
         }
     }
-
 }
