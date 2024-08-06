@@ -409,9 +409,30 @@
             /* Change the color to match your design */
         }
 
-        .partner-item {
-            width: 151.5px;
-            margin-right: 30px
+        .heading {
+            text-align: center;
+
+            color: #454343;
+            font-size: 30px;
+            font-weight: 700;
+            position: relative;
+            margin-bottom: 70px;
+            text-transform: uppercase;
+            z-index: 999;
+        }
+
+        .heading:after {
+            content: ' ';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            height: 40px;
+            width: 180px;
+            border-radius: 4px;
+            transform: translateX(-50%);
+            background: url(https://i.ibb.co/G32GT0L/heading-line.png);
+            background-repeat: no-repeat;
+            background-position: center;
         }
     </style>
 
@@ -705,58 +726,60 @@
             </div>
         </section><!-- End Testimonials Section -->
 
-        <div class="partner-area ptb-100">
-                <div class="swiper partSwiper mb-5">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="partner-item ">
-                                    <a href="#">
-                                        <img src="{{ asset('home/assets/img/partner-1.png') }}" alt="Shield Tech">
-                                    </a>
-                                </div>
 
+        <section class="partner-area " data-aos="fade-up" data-aos-delay="100">
+            <div class="container">
+                <div class="swiper partSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <a href="#">
+                                    <img src="{{ asset('home/assets/img/partner-1.png') }}" alt="Shield Tech"
+                                        class="partIma">
+                                </a>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <a href="#">
-                                        <img src="{{ asset('home/assets/img/partner-2.png') }}" alt="SECURITY">
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <a href="#">
-                                        <img src="{{ asset('home/assets/img/partner-3.png') }}" alt="Eagle Shield">
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <a href="#">
-                                        <img src="{{ asset('home/assets/img/partner-4.png') }}" alt="Techno Guard">
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <a href="#">
-                                        <img src="{{ asset('home/assets/img/partner-5.png') }}" alt="Fire Shield">
-                                    </a>
-                                </div>
-
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <a href="#">
+                                    <img src="{{ asset('home/assets/img/partner-2.png') }}" alt="SECURITY">
+                                </a>
                             </div>
 
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <a href="#">
+                                    <img src="{{ asset('home/assets/img/partner-3.png') }}" alt="Eagle Shield">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <a href="#">
+                                    <img src="{{ asset('home/assets/img/partner-4.png') }}" alt="Techno Guard">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <a href="#">
+                                    <img src="{{ asset('home/assets/img/partner-5.png') }}" alt="Fire Shield">
+                                </a>
+                            </div>
+
                         </div>
                     </div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-        </div>
+            </div>
+
+        </section>
 
 
         <section class="user-blog" class="footer-top">
@@ -791,6 +814,7 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
+            </div>
 
 
 
@@ -813,10 +837,6 @@
 
         });
     </script>
-
-
-@endsection
-@section('script-area')
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
@@ -824,6 +844,12 @@
             slidesPerView: 1,
             spaceBetween: 20,
             loop: true,
+            speed: 500,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
+            slidesPerView: 'auto',
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -849,8 +875,14 @@
         });
         var swiper = new Swiper(".partSwiper", {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 10,
             loop: true,
+            speed: 500,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false
+            },
+            slidesPerView: 'auto',
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
