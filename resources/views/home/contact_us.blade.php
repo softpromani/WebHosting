@@ -228,6 +228,7 @@
 
             </div>
         </section>
+        
         <section class="contact-us-form pt-60 pb-120 bg-solitude-blue contact" id="contact  ">
             <div class="container">
                 <div class="row justify-content-lg-between align-items-center">

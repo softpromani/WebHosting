@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\home;
 
+use App\Models\Faq;
+use App\Models\Blog;
 use App\Models\ContactUs;
 use App\Models\Newsletter;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
@@ -64,5 +67,12 @@ class HomeController extends Controller
     public function pricing()
     {
         return view('home.pricing');
+    }
+    public function security()
+    {
+        $faqs = Faq::get();
+        $testimonial=Testimonial::get();
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.company.security',compact('testimonial','faqs','blogs'));
     }
 }

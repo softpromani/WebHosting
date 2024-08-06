@@ -39,7 +39,7 @@
                 <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li class="dropdown"><a href="#"><span>About Us</span></a></li>
-                        <li class="dropdown"><a href="#"><span>Our Security</span></a></li>
+                        <li class="dropdown"><a href="{{ route('security') }}"><span>Our Security</span></a></li>
                         <li class="dropdown"><a href="#"><span>Partner</span></a></li>
                         <li class="dropdown"><a href="#"><span>Testimonials</span></a></li>
                         <li class="dropdown"><a href="#"><span>Knowledgebase</span></a></li>

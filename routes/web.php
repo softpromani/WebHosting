@@ -26,6 +26,7 @@ Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');
 
 Route::get('pricing', [HomeController::class, 'pricing'])->name('pricing');
+Route::get('security', [HomeController::class, 'security'])->name('security');
 
 // Contact Us
 Route::post('user-contact/store', [HomeController::class, 'contactStore'])->name('contactStore');
