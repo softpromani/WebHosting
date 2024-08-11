@@ -67,6 +67,7 @@
         </section><!-- End Featured Services Section -->
 
         <!-- ======= About Section ======= -->
+
         <section id="about" class="about section-bg">
             <div class="container" data-aos="fade-up">
 
@@ -117,7 +118,15 @@
                 </div>
 
             </div>
-        </section><!-- End About Section -->
+        </section>
+
+        <!-- End About Section -->
+
+        <!-- ======= Bussiness Service Section ======= -->
+
+
+
+        <!-- End pricing Section -->
 
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts">

@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">BLog </h3>
-            <a class="btn btn-primary float-end" href="{{ route('admin.blogs.create') }}">+ Add New</a>
+            <a class="btn btn-primary float-end" href="{{ route('admin.blog.create') }}">+ Add New</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -54,7 +54,7 @@
                 "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
                 "processing": true,
                 "serverSide": true,
-                "ajax": "{{ route('admin.blogs.index') }}",
+                "ajax": "{{ route('admin.blog.index') }}",
                 "columns": [{
                         "data": "id"
                     },
@@ -78,7 +78,7 @@
 
             $('#blogTable').on('click', '.delete-blog', function() {
                 var id = $(this).data('id');
-                var newurl = "{{ route('admin.blogs.destroy', '') }}/" + id;
+                var newurl = "{{ route('admin.blog.destroy', '') }}/" + id;
 
                 Swal.fire({
                     title: 'Are you sure?',

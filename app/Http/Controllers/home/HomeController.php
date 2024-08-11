@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\home;
 
+use App\Models\Faq;
+use App\Models\Blog;
 use App\Models\ContactUs;
 use App\Models\Newsletter;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
@@ -23,8 +26,9 @@ class HomeController extends Controller
     public function contactStore(ContactRequest $request)
     {
         $validatedData = $request->validated();
-
+        
         $contact = ContactUs::create($validatedData);
+       
 
         if ($contact) {
 
@@ -58,5 +62,24 @@ class HomeController extends Controller
             Alert::error('Subscription Failed', 'There was an issue subscribing to the newsletter. Please try again later.');
             return redirect()->back();
         }
+    }
+
+    public function pricing()
+    {
+        return view('home.pricing');
+    }
+    public function security()
+    {
+        $faqs = Faq::get();
+        $testimonial=Testimonial::get();
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.company.security',compact('testimonial','faqs','blogs'));
+    }
+    public function partner()
+    {
+        $faqs = Faq::get();
+        $testimonial=Testimonial::get();
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.company.partner',compact('testimonial','faqs','blogs'));
     }
 }

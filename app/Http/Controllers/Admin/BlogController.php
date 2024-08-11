@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Blog;
+use App\Models\Media;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
@@ -12,23 +13,26 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request  $request)
     {
         if ($request->ajax()) {
-            $data = Blog::select(['id','slug', 'title', 'blog_image', 'description'])->get();
+            $data = Blog::with('blogImage')->select(['id', 'title', 'description'])->get();
 
             return DataTables::of($data)
                 ->addColumn('blog_image', function ($data) {
-                    $url = asset($data->blog_image);
-                    return '<img src="' . $url . '" style="width:80px;height:80px;" alt="Image">';
+                    if ($data->blogImage) {
+                        $url = asset('storage/' . $data->blogImage->media);
+                        return '<img src="' . $url . '" style="width:80px;height:80px;" alt="Image">';
+                    }
+                    return 'No Image';
                 })
                 ->addColumn('action', function ($data) {
                     return '
-                    <a href="' . route('admin.blogs.edit', $data->id) . '" class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i></a>
-                    <button class="btn btn-sm btn-danger delete-blog" data-id="' . $data->id . '"><i class="nav-icon fa-solid fa-trash"></i></button>
-                ';
+                <a href="' . route('admin.blog.edit', $data->id) . '" class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i></a>
+                <button class="btn btn-sm btn-danger delete-blog" data-id="' . $data->id . '"><i class="nav-icon fa-solid fa-trash"></i></button>
+            ';
                 })
-                ->rawColumns(['blog_image','description', 'action'])
+                ->rawColumns(['blog_image', 'action'])
                 ->make(true);
         }
         return view('admin.blog.blogList');
@@ -47,28 +51,33 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'blog_image' => 'required',
+            'blog_image' => 'required|image',
+        ]);
+
+        $data = Blog::create([
+            'title' => $request->title,
+            'description' => $request->description,
         ]);
 
         if ($request->hasFile('blog_image')) {
-            $upic = 'blog-' . time() . '-' . rand(0, 99) . '.' . $request->blog_image->extension();
-            $request->blog_image->move(public_path('upload/blog/images/'), $upic);
-            $pic_name = 'upload/blog/images/' . $upic;
+            $file = $request->file('blog_image');
+
+            $media = Media::uploadMedia($file, $data, 'blog');
+
+            $data->blogImage()->save($media);
+            $data->update([
+                'blog_image' => $media->media
+            ]);
         }
-        
-        $data = Blog::create([
-            'title' => $request->title,
-            'blog_image' => $pic_name ?? null,
-            'description' => $request->description,
-        ]);
+
         if ($data) {
-            toast('BLog Created Successfully', 'success');
-            return redirect()->route('admin.blogs.index');
+            toast('Blog Created Successfully', 'success');
+            return redirect()->route('admin.blog.index');
         } else {
-            toast('BLogs Not Created', 'error');
+            toast('Blog Not Created', 'error');
             return redirect()->back();
         }
     }
@@ -86,7 +95,7 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        $editBlog = Blog::find($id);
+        $editBlog = Blog::with('blogImage')->find($id);
         return view('admin.blog.createBlog', compact('editBlog'));
     }
 
@@ -98,25 +107,39 @@ class BlogController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'blog_image' => 'nullable|image', 
+        ]);
+
+        $blog = Blog::find($id);
+
+        $blog->update([
+            'title' => $request->title,
+            'description' => $request->description,
         ]);
 
         if ($request->hasFile('blog_image')) {
-            $upic = 'blog-' . time() . '-' . rand(0, 99) . '.' . $request->blog_image->extension();
-            $request->blog_image->move(public_path('upload/blog/images/'), $upic);
-            $pic_name = 'upload/blog/images/' . $upic;
-            $data = Blog::find($id)->update(['blog_image' => $pic_name]);
+            $media = Media::uploadMedia($request->file('blog_image'), $blog, 'blog');
+            $blog->update([
+                'blog_image' => $media->media
+            ]);
+
+            if ($blog->blogImage) {
+                $blog->blogImage->update([
+                    'media' => $media->media,
+                    'size' => $media->size,
+                    'extension' => $media->extension,
+                    'type' => $media->type,
+                ]);
+            } else {
+                $blog->blogImage()->save($media);
+            }
         }
 
-        $data = Blog::find($id)->update([
-            'title' => $request->title,
-            'blog' => $pic_name ?? null,
-            'description' => $request->description,
-        ]);
-        if ($data) {
-            toast('BLog Updated Successfully', 'success');
-            return redirect()->route('admin.blogs.index');
+        if ($blog) {
+            toast('Blog Updated Successfully', 'success');
+            return redirect()->route('admin.blog.index');
         } else {
-            toast('BLogs not updated', 'error');
+            toast('Blog not updated', 'error');
             return redirect()->back();
         }
     }
@@ -126,10 +149,16 @@ class BlogController extends Controller
      */
     public function destroy(string $id)
     {
-        $t = Blog::find($id);
-        $blogs = $t->delete();
-        if ($blogs) {
-            return response()->json(['success' => 'BLog deleted successfully.'], 200);
+         $blog = Blog::find($id);
+
+        if (!$blog) {
+            return response()->json(['error' => 'Blog not found.'], 404);
+        }
+        if ($blog->blogImage) {
+            $blog->blogImage->delete();
+        }
+        if ($blog->delete()) {
+            return response()->json(['success' => 'Blog deleted successfully.'], 200);
         } else {
             return response()->json(['error' => 'Failed to delete Blog.'], 500);
         }

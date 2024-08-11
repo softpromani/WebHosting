@@ -7,7 +7,7 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                {{-- <li><a class="nav-link scrollto active" href="{{ route('home') }}">Home</a></li> --}}
+                <li><a class="nav-link  " href="{{ route('home') }}">Home</a></li>
                 @foreach ($menu as $m)
                     <li class="dropdown"><a href="#"><span>{{ $m->name }}</span> <i
                                 class="bi bi-chevron-down"></i></a>
@@ -27,29 +27,35 @@
                         </ul>
                     </li>
                 @endforeach
-                <li class="nav-link"><a href="#"><span>Cybersecurity Solutions</span> </a>
+                {{-- <li class="nav-link">
+                    <a href="#"><span>Cybersecurity Solutions</span> </a>
                 </li>
-                <li class="nav-link"><a href="#"><span>Cloud Services</span></a>
-                </li>
-                <li class="dropdown"><a href="#"><span>Pricing</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#">QuickBooks/Apps Hosting</a></li>
-                        <li><a href="#">Hosted VDI Pricing</a></li>
-                        <li><a href="#">Linux Virtual Desktop</a></li>
-                        <li><a href="#">Desktop as a Service</a></li>
-                        <li><a href="#">Public Cloud</a></li>
-                        <li><a href="#">Managed Security Pricing</a></li>
-                    </ul>
+                <li class="nav-link">
+                    <a href="#"><span>Cloud Services</span></a>
+                </li> --}}
+                <li class="nav-link">
+                    <a href="{{ route('pricing') }}"><span>Pricing</span></a>
                 </li>
                 <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Data Centers</a></li>
-                        <li><a href="#">Our Support</a></li>
-                        <li><a href="#">Why Us</a></li>
+                        <li class="dropdown"><a href="#"><span>About Us</span></a></li>
+                        <li class="dropdown"><a href="{{ route('security') }}"><span>Our Security</span></a></li>
+                        <li class="dropdown"><a href="{{ route('partner') }}"><span>Partner</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Testimonials</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Knowledgebase</span></a></li>
+                        <li class="dropdown"><a href="#"><span>Why Us</span></a></li>
+                        <li class="dropdown"><a href="#"><span>FAQ</span></a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="{{ route('contactUs') }}">Contact Us</a></li>
+                {{-- <li class="nav-link">
+                    <a href="#"><span>Company</span></a>
+                </li> --}}
+                <li class="nav-link">
+                    <a href="#"><span>Downloads</span></a>
+                </li>
+                <li>
+                    <a class="nav-link scrollto" href="{{ route('contactUs') }}">Contact Us</a>
+                </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

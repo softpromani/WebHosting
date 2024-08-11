@@ -1,97 +1,137 @@
- <div class="row feature-div">
-     <input type="hidden" name="step" value="feature">
-     <input type="hidden" name="product_id" value="{{ $product_id }}">
+<div class="card ">
+    <div class="card-body">
+        <div class="row">
+            <input type="hidden" name="step" value="feature">
+            <input type="hidden" name="product_id"
+                value="{{ session()->has('product_id') ? session()->get('product_id') : '1' }}">
+
+            <div class="col-md-12 feature-item" data-index="0">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="feature_icon_0">Icon <small class="text-danger">(icon class from
+                                            <a href="https://fontawesome.com/icons" target="_blank">here
+                                                ...
+                                            </a>)</small>
+                                    </label>
+                                    <input type="text" name="feature[icon]" id="feature_icon_0" class="form-control"
+                                        value="" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <div class="form-group">
+                                    <label for="feature_title_0">Title </label>
+                                    <input type="text" name="feature[title]" id="feature_title_0"
+                                        class="form-control" value="" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="feature_desc_0">Detail </label>
+                            <textarea name="feature[detail]" id="feature_desc_0" class="form-control feature_desc"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 float-end">
+            </div>
+            <div class="col-lg-12 float-end">
+                <button id="saveFeatureBtn" type="button" class="btn btn-primary mt-3 float-end saveFeatureData">Save
+                    Feature</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-     <div class="col-md-6 feature-item">
-         <div class="card">
-             <span class="text-white p-2 btn feature-del">x</span>
-             <div class="card-body">
-                 <div class="col-12">
 
-                     <div class="form-group">
-                         <label for="feature_icon_0">Icon <small class="text-danger">(icon class from
-                                 <a href="https://fontawesome.com/icons" target="_blank">here ...</a>)</small></label>
-                         <input type="text" name="feature[0][icon]" id="feature_icon_0" class="form-control"
-                             value="{{ isset($data->icon) ? $data->icon : '' }}">
-                     </div>
-                     @error('feature.0.icon')
-                         <div class="alert mt-2 text-danger">{{ $message }}</div>
-                     @enderror
-                 </div>
-                 <div class="col-12">
-                     <div class="form-group">
-                         <label for="feature_title_0">Title </label>
-                         <input type="text" name="feature[0][title]" id="feature_title_0" class="form-control"
-                             value="{{ isset($data->title) ? $data->title : '' }}">
-                     </div>
-                     @error('feature.0.title')
-                         <div class="alert mt-2 text-danger">{{ $message }}</div>
-                     @enderror
-                 </div>
-                 <div class="col-12">
-                     <div class="form-group">
-                         <label for="feature_desc_0">Detail </label>
-                         <textarea name="feature[0][detail]" id="feature_desc_0" class="form-control feature_desc"
-                             value="{{ isset($data->detail) ? $data->detail : '' }}"></textarea>
-                     </div>
-                     @error('feature.0.detail')
-                         <div class="alert mt-2 text-danger">{{ $message }}</div>
-                     @enderror
-                 </div>
-             </div>
-         </div>
-     </div>
 
- </div>
 
- <div class="row">
-     <div class="col-12 float-end">
-         <button type="button" class="btn btn-success mt-3 float-end" onclick="add_feature_div()"
-             type="button">+</button>
-     </div>
- </div>
- <div class="row mt-5">
-     <div class="col-12">
-         @if (isset($data))
-             <table class="table table-bordered">
-                 <thead>
-                     <tr>
-                         <th>Sr No</th>
-                         <th>Icon</th>
-                         <th>Title</th>
-                         <th>Detail</th>
-                         <th>Action</th>
-                     </tr>
-                 </thead>
-                 <tbody>
-                     @foreach ($data as $d)
-                         <tr>
-                             <td>{{ $loop->index + 1 }}</td>
-                             <td> <i class="{{ $d->icon }}"></i></td>
-                             <td>{{ $d->title }}</td>
-                             <td>{!! $d->detail !!}</td>
-                             <td>
-                                <form action="{{ route('admin.product.destroy','feature/'.$d->id) }}" method="POST"
-                                 id="delete-form-{{ $d->id }}">
-                                 @csrf
-                                 @method('DELETE')
-                                 <button type="button" onclick="deleteResource({{ $d->id }})">Delete</button>
-                             </form>
-                             </td>
-                         </tr>
-                     @endforeach
-                 </tbody>
-             </table>
-         @endif
-     </div>
- </div>
- <script>
-     ClassicEditor
-         .create(document.querySelector('.feature_desc'))
-         .catch(error => {
-             console.error(error);
-         });
 
-   
- </script>
+
+<div class="container-fluid">
+    <table class="table table-bordered">
+        <thead class="bg-primary text-light">
+            <tr>
+                <th>Sr No</th>
+                <th>Icon</th>
+                <th>Title</th>
+                <th>Detail</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="bg-light">
+            @if (isset($data))
+                @foreach ($data as $d)
+                    <tr>
+                        <td>{{ $loop->index + 1 }}</td>
+                        <td> <i class="{{ $d->icon }}"></i></td>
+                        <td>{{ $d->title }}</td>
+                        <td>{!! $d->detail !!}</td>
+                        <td>
+                            <form action="{{ route('admin.product.productDelete', 'feature/' . $d->id) }}"
+                                method="POST" id="delete-form-{{ $d->id }}">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger"
+                                    onclick="deleteResource({{ $d->id }})">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            @endif
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<script>
+    var editors = {};
+
+    ClassicEditor
+        .create(document.querySelector('.feature_desc'))
+        .then(editor => {
+            editors['feature_desc_0'] = editor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    $('#saveFeatureBtn').on('click', function() {
+        // Update CKEditor instances
+        for (var instance in editors) {
+            editors[instance].updateSourceElement();
+        }
+
+        var form = $('#product_form')[0];
+        var formData = new FormData(form);
+
+        $.ajax({
+            url: $('#product_form').attr('action'),
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                $('#feature').click();
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                if (jqXHR.status === 422) { // Laravel validation error status code
+                    var errors = jqXHR.responseJSON.errors;
+                    console.error('Server-side validation failed:', errors);
+                } else {
+                    console.error('Failed to submit form:', textStatus, errorThrown);
+                }
+            }
+        });
+    });
+</script>

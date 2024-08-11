@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable=['menu_id','slug','product_title','meta_keyword','meta_description','product_description','step'];
+    protected $fillable=['menu_id','slug','product_title','meta_keyword','meta_description','product_description','step','layout'];
 
     protected static function boot(){
         Parent::boot();
@@ -64,6 +64,10 @@ class Product extends Model
     public function slide_img()
     {
         return $this->morphMany(Media::class, 'mediable')->where('type', 'slider');
+    }
+    public function product_banner()
+    {
+        return $this->morphOne(Media::class, 'mediable')->where('type', 'product_banner');
     }
 
     public function media(){

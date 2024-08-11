@@ -10,4 +10,9 @@ class Testimonial extends Model
 {
     use HasFactory, SoftDeletes;
     protected $fillable =['name','position','pic','description','status'];
+    // public function media()
+    // {
+    //     return $this->morphOne(Media::class, 'mediable');
+    // }
 }
+

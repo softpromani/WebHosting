@@ -32,51 +32,53 @@ class ProductRequest extends FormRequest
                     'meta_keyword' => 'required',
                     'meta_description' => 'required',
                     'product_description' => 'required',
+                    'layout' => 'required',
                 ];
             case 'feature':
-
+                
                 return [
-                    'feature.*.icon' => 'required',
-                    'feature.*.title' => 'required',
-                    'feature.*.detail' => 'required',
+                    'feature.icon' => 'required',
+                    'feature.title' => 'required',
+                    'feature.detail' => 'required',
                     'product_id'=>'required|exists:products,id'
                 ];
-                case 'whyus':
+            //     case 'whyus':
 
-                    return [
-                        'whyus.*.icon' => 'required',
-                        // 'whyus.*.colour' => 'required',
-                        'whyus.*.title' => 'required',
-                        'whyus.*.detail' => 'required',
-                        'product_id'=>'required|exists:products,id'
-                    ];
-            case 'pro_counter':
-                return [
-                    'counter.*.icon' => 'required',
-                    'counter.*.count' => 'required',
-                    'counter.*.title' => 'required',
-                    'product_id'=>'required|exists:products,id'
-                ];
+            //         return [
+            //             'whyus.*.icon' => 'required',
+            //             // 'whyus.*.colour' => 'required',
+            //             'whyus.*.title' => 'required',
+            //             'whyus.*.detail' => 'required',
+            //             'product_id'=>'required|exists:products,id'
+            //         ];
+            // case 'pro_counter':
+                // return [
+                //     'counter.*.icon' => 'required',
+                //     'counter.*.count' => 'required',
+                //     'counter.*.title' => 'required',
+                //     'product_id'=>'required|exists:products,id'
+                // ];
 
             case 'pro_testimonial':
                 return [
-                    'testi.*.pic' => 'required|image|max:3072',
-                    'testi.*.name' => 'required',
-                    'testi.*.designation' => 'required',
-                    'testi.*.comment' => 'required',
+                    'testi.pic' => 'required|image|max:3072',
+                    'testi.name' => 'required',
+                    'testi.designation' => 'required',
+                    'testi.comment' => 'required',
                     'product_id'=>'required|exists:products,id'
                 ];
 
             case 'faqs':
                 return [
-                    'faq.*.question' => 'required|string',
-                    'faq.*.answer' => 'required|string',
+                    'faq.question' => 'required|string',
+                    'faq.answer' => 'required|string',
                     'product_id'=>'required|exists:products,id'
                 ];
             case 'media':
                 return [
-                    'main_img' => 'required|file|image|max:1024',
-                    'slider_img.*' => 'required|file|image|max:1024',
+                    'main_img' => 'nullable|file|image|max:1024',
+                    'slider_img.*' => 'nullable|file|image|max:1024',
+                    'product_banner'=>'nullable|file|image|max:1024',
                     'product_id'=>'required|exists:products,id'
                 ];
             default:

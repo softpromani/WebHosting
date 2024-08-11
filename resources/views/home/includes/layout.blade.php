@@ -3,6 +3,7 @@
 
 <head>
     @include('home.includes.head')
+    @yield('header-area')
 </head>
 
 <body>
@@ -27,6 +28,8 @@
             class="bi bi-arrow-up-short"></i></a>
 
     @include('home.includes.foot')
+
+    @yield('script-area')
 
 </body>
 

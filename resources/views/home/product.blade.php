@@ -1248,7 +1248,9 @@
                 </ol>
             </nav>
         </div>
-    </div><!-- End Page Title -->
+    </div>
+    <!-- End Page Title -->
+
     {{-- Silder  --}}
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -1265,7 +1267,7 @@
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                         <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Innovation Trove</h5>
+                            <h5>Demo Title</h5>
                             {{-- <p>Some representative placeholder content for the first slide.</p> --}}
                         </div>
                     </div>
@@ -1281,8 +1283,6 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
-
     {{-- Slider End --}}
 
     <!-- Service Details Section -->
@@ -1301,37 +1301,52 @@
                     @if ($counters)
                     <a href="#counts">Counts</a>
                     @endif
-                
+
                     @if ($testimonials)
                     <a href="#testimonials">Testimonials</a>
                     @endif
-                
+
                     @if ($faqs)
                     <a href="#faq">FAQ</a>
                     @endif
-                
+
                 </div>
                 </div> --}}
 
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="{{ asset('storage/' . $products->content_img->media) }}" alt="no available"
-                                class="img-fluid services-img rounded">
-                        </div>
+                    <div class="card-img">
+                        <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
+                            class="img-fluid services-img rounded">
+
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 product-content-description">
                     {!! $products->product_description !!}
                 </div>
             </div>
 
         </div>
 
-    </section><!-- /Service Details Section -->
+    </section>
 
-    <!-- Service Details Section -->
-    <section id="whyus-services" class="counts">
+    @if ($products->layout == 'business_service')
+        <!-- /Service Details Section -->
+        <section class="bg-solitude-blue">
+            @include('home.product_business_service')
+        </section>
+
+        <!-- End About Section -->
+
+        <!-- ======= Pricing Section ======= -->
+    @elseif($products->layout == 'pricePlan')
+        <section class="show-pricing">
+            @include('home.product_pricing')
+        </section>
+
+        <!-- End pricing Section -->
+    @endif
+    <!-- Why Us Details Section -->
+    {{-- <section id="whyus-services" class="counts">
         <div class="container" data-aos="fade-up">
 
 
@@ -1422,7 +1437,12 @@
                         </div>
                     @endforeach
                 </div>
+<<<<<<< HEAD
                 <div class="swiper-pagination "></div>
+=======
+
+                <div class="swiper-pagination"></div>
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
@@ -1430,8 +1450,9 @@
         </div>
     </section>
     <!-- End Featured Services Section -->
+
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+    {{-- <section id="counts" class="counts">
         <div class="container" data-aos="fade-up">
 
             <div class="row">
@@ -1449,7 +1470,8 @@
             </div>
 
         </div>
-    </section><!-- End Counts Section -->
+    </section> --}}
+    <!-- End Counts Section -->
 
 
     <!-- ======= Contact Us Section ======= -->
@@ -1511,12 +1533,20 @@
             </div>
 
             <div class="row justify-content-center">
+<<<<<<< HEAD
                 <div class="col-xl-4">
                     <div class="card">
                         <div class="card-img">
                             <img src="{{ asset('storage/' . optional($products->faqImg)->media) }}" alt="no available"
                                 class="img-fluid services-img rounded">
                         </div>
+=======
+                <div class="col-xl-4 ">
+                    <div class="card-img mb-3">
+                        <img src="{{ asset('storage/' . optional($products->faqImg)->media) }}" alt="no available"
+                            class="img-fluid services-img rounded">
+
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                     </div>
                 </div>
                 <div class="col-xl-8">
@@ -1557,7 +1587,12 @@
                     @foreach ($blogs as $blog)
                         <div class="swiper-slide ">
                             <div class="card">
+<<<<<<< HEAD
                                 <img src="{{ asset($blog->blog_image) }}" class="card-img-top blogCard" alt="...">
+=======
+                                <img src="{{ asset('storage/' . $blog->blogImage->media) }}"
+                                    class="card-img-top blogCard" alt="{{ $blog->title }}">
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $blog->title }}</h5>
                                     <p class="card-text">{!! Str::limit(strip_tags($blog->description), 100) !!}</p>
@@ -1583,9 +1618,15 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="blogModalLabel">Blog Title</h5>
+<<<<<<< HEAD
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
+=======
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                         </div>
                         <div class="modal-body">
                             <p id="blogDescription">Blog description will be shown here.</p>
@@ -1613,10 +1654,15 @@
                     @foreach ($testimonials as $tm)
                         <div class="swiper-slide">
                             <div class="testimonial-item">
+<<<<<<< HEAD
                                 @isset($tm->media)
                                     <img src="{{ asset('storage/' . $tm->media->media) }}" alt="" height="50px"
                                         width="50px" class="testimonial-img">
                                 @endisset
+=======
+                                <img src="{{ asset('storage/' . $tm->media->media) }}" class="testimonial-img"
+                                    alt="">
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                                 <h3>{{ $tm->name ?? '' }}</h3>
                                 <h4>{{ $tm->designation ?? '' }}</h4>
                                 <p>
@@ -1625,7 +1671,11 @@
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
+<<<<<<< HEAD
                         </div>
+=======
+                        </div><!-- End testimonial item -->
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                     @endforeach
 
                 </div>
@@ -1634,7 +1684,10 @@
 
         </div>
     </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
     <!-- End Testimonials Section -->
 @endsection
 
@@ -1697,7 +1750,10 @@
                 },
             },
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
         $(document).ready(function() {
             $('#blogModal').on('show.bs.modal', function(event) {
                 var button = $(event.relatedTarget); // Button that triggered the modal

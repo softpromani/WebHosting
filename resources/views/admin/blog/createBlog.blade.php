@@ -10,8 +10,13 @@
     </style>
 
     <form id="teamForm"
+<<<<<<< HEAD
         action="{{ isset($editBlog) ? route('admin.blogs.update', $editBlog->id) : route('admin.blogs.store') }}"
         method="post" enctype="multipart/form-data">
+=======
+        action="{{ isset($editBlog) ? route('admin.blog.update', $editBlog->id) : route('admin.blog.store') }}" method="post"
+        enctype="multipart/form-data">
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
         @csrf
         @if (isset($editBlog))
             @method('PUT')
@@ -19,7 +24,11 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Blog </h3>
+<<<<<<< HEAD
                 <a class="btn btn-primary float-end" href="{{ route('admin.blogs.index') }}">+ Add Blog</a>
+=======
+                <a class="btn btn-primary float-end" href="{{ route('admin.blog.index') }}">+ Add Blog</a>
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
             </div>
 
             <div class="card-body">
@@ -42,10 +51,22 @@
                                 <div class="form-group">
                                     <input type="file" name="blog_image" class="form-control" id="blogPic">
                                     <div class="conImage mt-3">
+<<<<<<< HEAD
                                         <img id="imagePreview"
                                             src="{{ isset($editBlog) ? asset($editBlog->blog_image) : '#' }}"
                                             alt="Image preview"
                                             style="display: none; width: 150px; height: 150px; border-radius:5px;">
+=======
+                                        @if (isset($editBlog->blogImage) && $editBlog->blogImage->media)
+                                            <img id="imagePreview"
+                                                src="{{ asset('storage/' . $editBlog->blogImage->media) }}"
+                                            alt="Image preview"
+                                            style="display: block; width: 150px; height: 150px; border-radius:5px;">
+                                        @else
+                                            <img id="imagePreview" src="#" alt="No image"
+                                                style="display: none; width: 150px; height: 150px; border-radius:5px;">
+                                        @endif
+>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                                     </div>
                                     @error('blog_image')
                                         <div class="alert mt-2 text-danger">{{ $message }}</div>

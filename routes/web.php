@@ -26,8 +26,11 @@ Route::get('product/{slug}',[ProductController::class,'index'])->name('product')
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');
 
-// Contact Us
+Route::get('pricing', [HomeController::class, 'pricing'])->name('pricing');
+Route::get('security', [HomeController::class, 'security'])->name('security');
+Route::get('partner', [HomeController::class, 'partner'])->name('partner');
 
+// Contact Us
 Route::post('user-contact/store', [HomeController::class, 'contactStore'])->name('contactStore');
 
 Route::post('user-newsletter/store', [HomeController::class, 'newsletterStore'])->name('newsletterStore');
@@ -49,7 +52,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::resource('testimonial',TestimonialController::class);
     Route::resource('team',TeamController::class);
     Route::resource('faqs',FaqController::class);
-    Route::resource('blogs',BlogController::class);
+Route::resource('blog',BlogController::class);
 
 
 
