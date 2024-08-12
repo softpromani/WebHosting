@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Security')
+@section('title', 'Partners')
 @section('header-area')
     <link href="{{ asset('home/assets/css/partner.css') }}" rel="stylesheet">
 @endsection
@@ -18,7 +18,7 @@
                     <h2>Security</h2>
                     <ol>
                         <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Parts</a></li>
                     </ol>
                 </div>
 
