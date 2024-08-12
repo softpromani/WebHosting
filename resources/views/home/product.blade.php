@@ -1650,84 +1650,78 @@
 
         </div>
     </section>
-    <<<<<<< HEAD=======>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
-        <!-- End Testimonials Section -->
-    @endsection
+    <!-- End Testimonials Section -->
+@endsection
 
-    @section('script-area')
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+@section('script-area')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <!-- Initialize Swiper -->
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
                 },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
                 },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                    },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
                 },
+            },
+        });
+        var swiper = new Swiper(".blogSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            },
+        });
+        $(document).ready(function() {
+            $('#blogModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var title = button.data('title'); // Extract info from data-* attributes
+                var description = button.data('description');
+
+                var modal = $(this);
+                modal.find('.modal-title').text(title);
+                modal.find('.modal-body #blogDescription').html(description);
             });
-            var swiper = new Swiper(".blogSwiper", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 50,
-                    },
-                },
-            }); <<
-            << << < HEAD
-
-                ===
-                === = >>>
-                >>> > 99 d4e18e977090e1521f20c7f3511055a4a7806d
-            $(document).ready(function() {
-                $('#blogModal').on('show.bs.modal', function(event) {
-                    var button = $(event.relatedTarget); // Button that triggered the modal
-                    var title = button.data('title'); // Extract info from data-* attributes
-                    var description = button.data('description');
-
-                    var modal = $(this);
-                    modal.find('.modal-title').text(title);
-                    modal.find('.modal-body #blogDescription').html(description);
-                });
-            });
-        </script>
-    @endsection
+        });
+    </script>
+@endsection
