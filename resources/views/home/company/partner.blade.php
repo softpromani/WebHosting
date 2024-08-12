@@ -18,7 +18,7 @@
                     <h2>Security</h2>
                     <ol>
                         <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="#">Parts</a></li>
+                        <li><a href="#">Partners</a></li>
                     </ol>
                 </div>
 
