@@ -1437,12 +1437,8 @@
                         </div>
                     @endforeach
                 </div>
-<<<<<<< HEAD
-                <div class="swiper-pagination "></div>
-=======
 
                 <div class="swiper-pagination"></div>
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
@@ -1533,20 +1529,11 @@
             </div>
 
             <div class="row justify-content-center">
-<<<<<<< HEAD
-                <div class="col-xl-4">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="{{ asset('storage/' . optional($products->faqImg)->media) }}" alt="no available"
-                                class="img-fluid services-img rounded">
-                        </div>
-=======
                 <div class="col-xl-4 ">
                     <div class="card-img mb-3">
                         <img src="{{ asset('storage/' . optional($products->faqImg)->media) }}" alt="no available"
                             class="img-fluid services-img rounded">
 
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                     </div>
                 </div>
                 <div class="col-xl-8">
@@ -1587,12 +1574,8 @@
                     @foreach ($blogs as $blog)
                         <div class="swiper-slide ">
                             <div class="card">
-<<<<<<< HEAD
-                                <img src="{{ asset($blog->blog_image) }}" class="card-img-top blogCard" alt="...">
-=======
                                 <img src="{{ asset('storage/' . $blog->blogImage->media) }}"
                                     class="card-img-top blogCard" alt="{{ $blog->title }}">
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $blog->title }}</h5>
                                     <p class="card-text">{!! Str::limit(strip_tags($blog->description), 100) !!}</p>
@@ -1618,15 +1601,9 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="blogModalLabel">Blog Title</h5>
-<<<<<<< HEAD
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-=======
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
 
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                         </div>
                         <div class="modal-body">
                             <p id="blogDescription">Blog description will be shown here.</p>
@@ -1654,15 +1631,8 @@
                     @foreach ($testimonials as $tm)
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-<<<<<<< HEAD
-                                @isset($tm->media)
-                                    <img src="{{ asset('storage/' . $tm->media->media) }}" alt="" height="50px"
-                                        width="50px" class="testimonial-img">
-                                @endisset
-=======
                                 <img src="{{ asset('storage/' . $tm->media->media) }}" class="testimonial-img"
                                     alt="">
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                                 <h3>{{ $tm->name ?? '' }}</h3>
                                 <h4>{{ $tm->designation ?? '' }}</h4>
                                 <p>
@@ -1671,11 +1641,7 @@
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
-<<<<<<< HEAD
-                        </div>
-=======
                         </div><!-- End testimonial item -->
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
                     @endforeach
 
                 </div>
@@ -1684,86 +1650,84 @@
 
         </div>
     </section>
-<<<<<<< HEAD
+    <<<<<<< HEAD=======>>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
+        <!-- End Testimonials Section -->
+    @endsection
 
-=======
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
-    <!-- End Testimonials Section -->
-@endsection
+    @section('script-area')
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-@section('script-area')
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
                 },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
                 },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
                 },
-            },
-        });
-        var swiper = new Swiper(".blogSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 50,
-                },
-            },
-        });
-<<<<<<< HEAD
-
-=======
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
-        $(document).ready(function() {
-            $('#blogModal').on('show.bs.modal', function(event) {
-                var button = $(event.relatedTarget); // Button that triggered the modal
-                var title = button.data('title'); // Extract info from data-* attributes
-                var description = button.data('description');
-
-                var modal = $(this);
-                modal.find('.modal-title').text(title);
-                modal.find('.modal-body #blogDescription').html(description);
             });
-        });
-    </script>
-@endsection
+            var swiper = new Swiper(".blogSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 50,
+                    },
+                },
+            }); <<
+            << << < HEAD
+
+                ===
+                === = >>>
+                >>> > 99 d4e18e977090e1521f20c7f3511055a4a7806d
+            $(document).ready(function() {
+                $('#blogModal').on('show.bs.modal', function(event) {
+                    var button = $(event.relatedTarget); // Button that triggered the modal
+                    var title = button.data('title'); // Extract info from data-* attributes
+                    var description = button.data('description');
+
+                    var modal = $(this);
+                    modal.find('.modal-title').text(title);
+                    modal.find('.modal-body #blogDescription').html(description);
+                });
+            });
+        </script>
+    @endsection
