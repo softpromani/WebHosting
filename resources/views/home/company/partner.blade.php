@@ -125,7 +125,7 @@
                                 Join our hosting affiliate program and enjoy high affiliate
                                 earnings, fast payouts, and top conversion rates.
                             </p>
-                            <a href="pricing.html" class="rts-btn btn__long primary__bg white__color">View Plan <i
+                            <a href="#" class="rts-btn btn__long primary__bg white__color">View Plan <i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>

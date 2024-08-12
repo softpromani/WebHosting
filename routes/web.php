@@ -29,6 +29,7 @@ Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginS
 Route::get('pricing', [HomeController::class, 'pricing'])->name('pricing');
 Route::get('security', [HomeController::class, 'security'])->name('security');
 Route::get('partner', [HomeController::class, 'partner'])->name('partner');
+Route::get('why-us', [HomeController::class, 'whyUsPage'])->name('whyUsPage');
 
 // Contact Us
 Route::post('user-contact/store', [HomeController::class, 'contactStore'])->name('contactStore');

@@ -82,4 +82,12 @@ class HomeController extends Controller
         $blogs = Blog::with('blogImage')->get();
         return view('home.company.partner',compact('testimonial','faqs','blogs'));
     }
+    public function whyUsPage()
+    {
+        $faqs = Faq::get();
+        $testimonial=Testimonial::get();
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.company.whyUs',compact('testimonial','faqs','blogs'));
+    }
+    
 }

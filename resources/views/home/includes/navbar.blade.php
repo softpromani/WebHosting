@@ -43,7 +43,7 @@
                         <li class="dropdown"><a href="{{ route('partner') }}"><span>Partner</span></a></li>
                         <li class="dropdown"><a href="#"><span>Testimonials</span></a></li>
                         <li class="dropdown"><a href="#"><span>Knowledgebase</span></a></li>
-                        <li class="dropdown"><a href="#"><span>Why Us</span></a></li>
+                        <li class="dropdown"><a href="{{ route('whyUsPage')}}"><span>Why Us</span></a></li>
                         <li class="dropdown"><a href="#"><span>FAQ</span></a></li>
                     </ul>
                 </li>
