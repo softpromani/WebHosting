@@ -16,7 +16,8 @@ class HomeController extends Controller
 {
     public function home()
     {
-        return view('home.index');
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.index', compact('blogs'));
     }
 
     public function test()

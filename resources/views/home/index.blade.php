@@ -1,5 +1,15 @@
 @extends('home.includes.layout')
 @section('title', 'Home')
+@section('header-area')
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons -->
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
+
+
+@endsection
 @section('content')
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
@@ -17,275 +27,486 @@
 
     <main id="main">
 
-        <!-- ======= Featured Services Section ======= -->
-        <section id="featured-services" class="featured-services">
-            <div class="container" data-aos="fade-up">
-
+        <!-- start section -->
+        <section class="pt-0 background-position-center-top sm-background-image-none"
+            style="background-image: url('{{ asset('home/assets/homepage/images / vertical - line - bg . svg') }}')">
+            <div class="container-fluid d-none d-md-block">
                 <div class="row">
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4 class="title"><a href="">99.99% Up Time</a></h4>
-                            <p class="description">Heavy-duty servers that promise ultra-high availability standard of
-                                server performance</p>
-                        </div>
+                    <div class="p-0 overlap-section" data-bottom-top="transform: translateY(-50px)"
+                        data-top-bottom="transform: translateY(50px)">
+                        <img src="{{ asset('home/assets/homepage/images/images-demo-startup-bg-01.png') }}" alt="">
                     </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4 class="title"><a href="">High-end Security</a></h4>
-                            <p class="description">Secure your data with IDS/IPS threat detection, multi-factor
-                                authentication, layered firewalls, Endpoint Detection and Response (EDR) readiness, and
-                                more.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4 class="title"><a href="">Free Trial for 7 Days</a></h4>
-                            <p class="description">Experience free-tier and get credits to deploy cloud instances with all
-                                critical features
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                            <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4 class="title"><a href="">Reduced Fixed Capital</a></h4>
-                            <p class="description">Lower capital investment for purchasing high end IT-infra and remove any
-                                associated vulnerability and risks
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
-        </section><!-- End Featured Services Section -->
-
-        <!-- ======= About Section ======= -->
-
-        <section id="about" class="about section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>About</h2>
-                    <h3>Find Out More <span>About Us</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                        <img src="{{ asset('home/assets/img/about.jpg') }}" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up"
-                        data-aos-delay="100">
-                        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                        <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
-                        </p>
-                        <ul>
-                            <li>
-                                <i class="bx bx-store-alt"></i>
-                                <div>
-                                    <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                                    <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="bx bx-images"></i>
-                                <div>
-                                    <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                                    <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata
-                                        redi</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                            in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum
-                        </p>
+            <div class="container">
+                <div class="row justify-content-center mb-3">
+                    <div class="col-lg-7 text-center"
+                        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">What we offers</span>
+                        <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px shadow-none" data-shadow-animation="true"
+                            data-animation-delay="1000">Explore the <span class="text-highlight fw-800">services<span
+                                    class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span></span>
+                        </h3>
                     </div>
                 </div>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center">
+                    <!-- start fancy text box item -->
+                    <div class="col md-mb-30px">
+                        <div
+                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
+                            <div class="position-relative box-image">
+                                <a href="#"><img
+                                        src="{{ asset('home/assets/homepage/images/images-demo-startup-01.jpg') }}"
+                                        alt=""></a>
+                                <a href="#"
+                                    class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Research
+                                </a>
+                            </div>
+                            <div class="bg-white">
+                                <div
+                                    class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
+                                    <a href="demo-startup-services-details.html"
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Research
+                                        planning</a>
+                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
+                                    <a href="#"
+                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                        <span>
+                                            <span class="btn-text">Explore services</span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end fancy text box item -->
+                    <!-- start fancy text box item -->
+                    <div class="col md-mb-30px">
+                        <div
+                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
+                            <div class="position-relative box-image">
+                                <a href="demo-startup-services-details.html"><img
+                                        src="{{ asset('home/assets/homepage/images/images-demo-startup-02.jpg') }}"
+                                        alt=""></a>
+                                <a href="#"
+                                    class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Business</a>
+                            </div>
+                            <div class="bg-white">
+                                <div
+                                    class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
+                                    <a href="#"
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Business
+                                        promotion</a>
+                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
+                                    <a href="demo-startup-services-details.html"
+                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                        <span>
+                                            <span class="btn-text">Explore services</span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end fancy text box item -->
+                    <!-- start fancy text box item -->
+                    <div class="col">
+                        <div
+                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
+                            <div class="position-relative box-image">
+                                <a href="demo-startup-services-details.html"><img
+                                        src="{{ asset('home/assets/homepage/images/images-demo-startup-03.jpg') }}"
+                                        alt=""></a>
+                                <a href="#"
+                                    class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Revenue</a>
+                            </div>
+                            <div class="bg-white">
+                                <div
+                                    class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
+                                    <a href="demo-startup-services-details.html"
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Revenue
+                                        generation</a>
+                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
+                                    <a href="demo-startup-services-details.html"
+                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                        <span>
+                                            <span class="btn-text">Explore services</span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end fancy text box item -->
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
 
+        <section class="bg-very-light-gray">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 text-center md-mb-50px">
+                        <figure class="position-relative m-0">
+                            <div class="position-relative d-inline-block"
+                                data-anime='{ "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <img class="w-90 border-radius-5px animation-float"
+                                    src="{{ asset('home/assets/homepage/images/images-demo-startup-06.jpg') }}"
+                                    alt="">
+                            </div>
+                            <figcaption
+                                class="position-absolute bg-white box-shadow-quadruple-large border-radius-5px bottom-50px xs-bottom-35px left-minus-30px md-left-minus-0px ps-50px pe-50px pt-35px pb-35px xs-p-20px w-320px xs-w-250px text-center last-paragraph-no-margin"
+                                data-anime='{ "translateY": [50, 0], "scale": [0.8,1], "opacity": [0,1], "duration": 800, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <div class="icon-with-text-style-06">
+                                    <div class="bg-white feature-box feature-box-left-icon-middle">
+                                        <div class="feature-box-icon me-15px">
+                                            <i
+                                                class="line-icon-Thumb icon-double-large text-gradient-emerald-blue-emerald-green"></i>
+                                        </div>
+                                        <div class="feature-box-content last-paragraph-no-margin">
+                                            <div class="alt-font fw-600 text-dark-gray lh-26">We provide quality services
+                                                to customers.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 col-md-8">
+                        <h3 class="fw-600 mb-60px md-mb-40px mt-20px text-dark-gray alt-font ls-minus-2px"
+                            data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            Understand and apply the <span class="fw-800">business process.</span></h3>
+                        <div class="row row-cols-1"
+                            data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <!-- start process step item -->
+                            <div class="col-12 process-step-style-05 position-relative hover-box">
+                                <div class="process-step-item d-flex">
+                                    <div class="process-step-icon-wrap position-relative">
+                                        <div
+                                            class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px fs-16 bg-gradient-emerald-blue-emerald-green fw-400 position-relative will-change-transform">
+                                            <span class="number position-relative z-index-1 text-white">01</span>
+                                            <div class="box-overlay bg-gradient-emerald-blue-emerald-green rounded-circle">
+                                            </div>
+                                        </div>
+                                        <span class="progress-step-separator bg-extra-medium-gray"></span>
+                                    </div>
+                                    <div class="process-content ps-35px last-paragraph-no-margin mb-30px">
+                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Research and
+                                            strategy</span>
+                                        <p class="w-80 lg-w-90 sm-w-100">We spend enough time to uncover business goals and
+                                            client needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end process step item -->
+                            <!-- start process step item -->
+                            <div class="col-12 process-step-style-05 position-relative hover-box">
+                                <div class="process-step-item d-flex">
+                                    <div class="process-step-icon-wrap position-relative">
+                                        <div
+                                            class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px fs-16 bg-gradient-emerald-blue-emerald-green fw-400 position-relative will-change-transform">
+                                            <span class="number position-relative z-index-1 text-white">02</span>
+                                            <div class="box-overlay bg-gradient-emerald-blue-emerald-green rounded-circle">
+                                            </div>
+                                        </div>
+                                        <span class="progress-step-separator bg-extra-medium-gray"></span>
+                                    </div>
+                                    <div class="process-content ps-35px last-paragraph-no-margin mb-30px">
+                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Development and
+                                            scale</span>
+                                        <p class="w-80 lg-w-90 sm-w-100">We utilize our best talents to design digital
+                                            products and services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end process step item -->
+                            <!-- start process step item -->
+                            <div class="col-12 process-step-style-05 position-relative hover-box">
+                                <div class="process-step-item d-flex">
+                                    <div class="process-step-icon-wrap position-relative">
+                                        <div
+                                            class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px fs-16 bg-gradient-emerald-blue-emerald-green fw-400 position-relative will-change-transform">
+                                            <span class="number position-relative z-index-1 text-white">03</span>
+                                            <div class="box-overlay bg-gradient-emerald-blue-emerald-green rounded-circle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="process-content ps-35px last-paragraph-no-margin">
+                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Testing and
+                                            evaluation</span>
+                                        <p class="w-80 lg-w-90 sm-w-100">Before the launch, our team test complete website
+                                            thoroughly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end process step item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+
+        <section class="pt-0 big-section sta">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 position-relative">
+                        <div class="img-container">
+                            <!-- Primary image -->
+                            <img src="{{ asset('home/assets/img/demo-consulting-01.jpg') }}" alt="Advisor"
+                                class="rounded-img img-back">
+                            <!-- Overlapping image -->
+                            <img src="{{ asset('home/assets/img/demo-consulting-02.jpg') }}" alt="Advisor"
+                                class="rounded-img img-front" data-aos="fade-up">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
+                        <h6>Company's vision</h6>
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Scalable business for startups</h3>
+                        <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">
+                            Lorem ipsum dolor sit amet consectetur elit adipiscing elit do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna ut enim.
+                        </p>
+
+                        <a href="#"
+                            class="btn btn-dark-gray abtcomp  btn-round-edge btn-medium me-25px  hover-bounce">About
+                            Company</a>
+                        <a href="#" class="btn btn-link text-dark-gray xs-mt-15px xs-mb-15px  ">How We Work</a>
+                        <div
+                            class="row align-items-center mt-5 mb-50px xs-mb-25px justify-content-center justify-content-lg-start">
+                            <div class="col-auto col-lg-4 border-end border-color-extra-medium-gray text-center">
+                                <h1 class=" fw-700  display-4 fw-bold mb-0">4.9</h1>
+                            </div>
+                            <!-- Rating -->
+                            <div class="col-lg-6 col-md-4 col-sm-5 text-start">
+                                <div class="d-flex align-items-center">
+
+                                    <div class="ms-3">
+                                        <div class="d-flex">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                        <span class="fw-500 text-dark-gray ls-minus-05px">2,488 Genuine rating</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- End About Section -->
-
-        <!-- ======= Bussiness Service Section ======= -->
-
-
-
-        <!-- End pricing Section -->
-
-        <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts">
-            <div class="container" data-aos="fade-up">
-
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-star-fill"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Years of Exp.</p>
-                        </div>
+        <section id="down-section">
+            <div id="particles-01" data-particle="true"
+                data-particle-options='{"particles": {"number": {"value": 6,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+                class="position-absolute h-100 top-0 left-0 z-index-minus-1"></div>
+            <div class="container">
+                <div class="row justify-content-center text-center text-lg-start">
+                    <div class="col-xl-5 col-lg-6 md-mb-30px xs-mb-25px">
+                        <h3 class="fw-600 text-dark-gray ls-minus-2px mb-0"
+                            data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            We develop and create consulting good future.</h3>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-                        <div class="count-box">
-                            <i class="bi bi-people"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Users</p>
-                        </div>
+                    <div class="col-lg-6 offset-xl-1">
+                        <p class="w-90 sm-w-100 mx-auto mx-lg-0"
+                            data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            Adipiscing elit, sed do eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                            minim veniam, quis nostrud exercitation ullamco. Adipiscing elitdo eiusmod tempor.</p>
+                        <a href="#" class="btn btn-link exp text-dark-gray xs-mt-15px xs-mb-15px  ">Explore
+                            services</a>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                        <div class="count-box">
-                            <i class="bi bi-building"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Data Centers</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                        <div class="count-box">
-                            <i class="bi bi-list-stars"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Awards</p>
-                        </div>
-                    </div>
-
                 </div>
-
+                <div class="row justify-content-center align-items-center mt-5 md-mt-10">
+                    <div class="col-xl-4 col-lg-3 col-md-4 sm-mb-35px"
+                        data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <!-- start counter item -->
+                        <div class="row align-items-center mb-50px sm-mb-35px">
+                            <div class="col-5 col-xl-5 col-md-12 text-end">
+                                <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter" data-speed="2000"
+                                    data-to="2010"></h2>
+                            </div>
+                            <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin text-md-end text-xl-start">
+                                <span class="fs-20 text-dark-gray fw-600 alt-font">Crafto founded</span>
+                                <p>Founded a company</p>
+                            </div>
+                        </div>
+                        <!-- end counter item -->
+                        <!-- start counter item -->
+                        <div class="row align-items-center">
+                            <div class="col-5 col-xl-5 col-md-12 text-end">
+                                <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter" data-speed="2000"
+                                    data-to="2014"></h2>
+                            </div>
+                            <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin text-md-end text-xl-start">
+                                <span class="fs-20 text-dark-gray fw-600 alt-font">Expand team</span>
+                                <p>Opportunity to expand</p>
+                            </div>
+                        </div>
+                        <!-- end counter item -->
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-4 text-center animation-float sm-mb-65px"
+                        data-anime='{ "el": "childs", "scale": [0, 1], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <img class="border-radius-100 w-350px"
+                            src="{{ asset('home/assets/homepage/images/images-demo-consulting-company-01.jpg') }}"
+                            alt="" />
+                    </div>
+                    <div class="col-xl-4 col-lg-3 col-md-4"
+                        data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <!-- start counter item -->
+                        <div class="row align-items-center mb-50px sm-mb-35px">
+                            <div class="col-5 col-xl-5 col-md-12 text-end text-xl-end text-md-start">
+                                <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter" data-speed="2000"
+                                    data-to="2019"></h2>
+                            </div>
+                            <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin">
+                                <span class="fs-20 text-dark-gray fw-600 alt-font">Build new office</span>
+                                <p>Building a new office</p>
+                            </div>
+                        </div>
+                        <!-- end counter item -->
+                        <!-- start counter item -->
+                        <div class="row align-items-center">
+                            <div class="col-5 col-xl-5 col-md-12 text-end text-xl-end text-md-start">
+                                <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter" data-speed="2000"
+                                    data-to="2021"></h2>
+                            </div>
+                            <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin">
+                                <span class="fs-20 text-dark-gray fw-600 alt-font">Winning award</span>
+                                <p>The power of winning</p>
+                            </div>
+                        </div>
+                        <!-- end counter item -->
+                    </div>
+                </div>
             </div>
-        </section><!-- End Counts Section -->
+        </section>
 
-        <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients section-bg">
-            <div class="container" data-aos="zoom-in">
-
-                <div class="row">
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('home/assets/img/clients/client-1.png') }}" class="img-fluid" alt="">
+        <!-- start section -->
+        <section class="bg-very-light-gray">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 md-mb-50px">
+                        <div class="row">
+                            <div class="col-sm-6 mt-30px xs-mt-0" data-bottom-top="transform: translateY(50px)"
+                                data-top-bottom="transform: translateY(-50px)"
+                                data-anime='{ "el": "childs", "translateY": [0, 0], "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,0.7], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <!-- start features box item -->
+                                <div
+                                    class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mb-30px">
+                                    <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
+                                        <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
+                                            <div class="feature-box-icon">
+                                                <i
+                                                    class="line-icon-Like icon-extra-large text-base-color mb-20px justify-content-center"></i>
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span
+                                                    class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Honorable</span>
+                                                <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
+                                                    Lorem ipsum is simply dummy text.</p>
+                                            </div>
+                                            <div class="feature-box-overlay bg-base-color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- start features box item -->
+                                <!-- end features box item -->
+                                <div
+                                    class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all xs-mb-30px">
+                                    <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
+                                        <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
+                                            <div class="feature-box-icon">
+                                                <i
+                                                    class="line-icon-Knight icon-extra-large text-base-color mb-20px justify-content-center"></i>
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span
+                                                    class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Analytics</span>
+                                                <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
+                                                    Lorem ipsum is simply dummy text.</p>
+                                            </div>
+                                            <div class="feature-box-overlay bg-base-color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end features box item -->
+                            </div>
+                            <div class="col-sm-6" data-bottom-top="transform: translateY(-50px)"
+                                data-top-bottom="transform: translateY(50px)"
+                                data-anime='{ "el": "childs", "translateY": [0, 0], "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,0.7], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <!-- start features box item -->
+                                <div
+                                    class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mb-30px">
+                                    <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
+                                        <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
+                                            <div class="feature-box-icon">
+                                                <i
+                                                    class="line-icon-MaleFemale icon-extra-large text-base-color mb-20px justify-content-center"></i>
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span
+                                                    class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Leadership</span>
+                                                <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
+                                                    Lorem ipsum is simply dummy text.</p>
+                                            </div>
+                                            <div class="feature-box-overlay bg-base-color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- start features box item -->
+                                <!-- end features box item -->
+                                <div
+                                    class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mt-30px">
+                                    <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
+                                        <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
+                                            <div class="feature-box-icon">
+                                                <i
+                                                    class="line-icon-Bar-Chart2 icon-extra-large text-base-color mb-20px justify-content-center"></i>
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span
+                                                    class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Production</span>
+                                                <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
+                                                    Lorem ipsum is simply dummy text.</p>
+                                            </div>
+                                            <div class="feature-box-overlay bg-base-color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end features box item -->
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('home/assets/img/clients/client-2.png') }}" class="img-fluid" alt="">
+                    <div class="col-lg-5 offset-lg-1 text-center text-lg-start"
+                        data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px">Why choose our company services?</h2>
+                        <p class="w-90 xs-w-100 mx-auto mx-lg-0">Lorem ipsum dolor amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam.</p>
+                        <a href="demo-consulting-contact.html"
+                            class="btn btn-large btn-dark-gray btn-box-shadow mt-10px btn-round-edge">Get started now!</a>
                     </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('home/assets/img/clients/client-3.png') }}" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('home/assets/img/clients/client-4.png') }}" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('home/assets/img/clients/client-5.png') }}" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('home/assets/img/clients/client-6.png') }}" class="img-fluid" alt="">
-                    </div>
-
                 </div>
-
             </div>
-        </section><!-- End Clients Section -->
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Services</h2>
-                    <h3>More Power. Faster. <span>Dedicated.</span></h3>
-                    <p>Our team of specialists will manage the cloud infrastructure while you focus on building your
-                        business.</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Reliable Uptime of 99.99%</a></h4>
-                            <p>Ensure consistent availability with our industry-leading Service Level Agreement (SLA),
-                                providing a remarkable 99.99% uptime for your hosted QuickBooks.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-                        data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Effortless Migration</a></h4>
-                            <p>Simplify your migration with our expert guidance, ensuring a smooth and hassle-free move from
-                                your on-premise or existing service provider to Ace Cloud’s platform.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
-                        data-aos-delay="300">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Always on Support</a></h4>
-                            <p>Our dedicated team is available around the clock on phone, chat, and email to provide
-                                immediate assistance and expert guidance whenever you have hosting-related issues.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
-                        data-aos-delay="100">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4><a href="">Security at Priority</a></h4>
-                            <p>Trust in our infrastructure's robust security to safeguard sensitive data with IDS/IPS,
-                                next-gen antivirus, authentication, encryption and more for unwavering data protection
-                                security measures.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
-                        data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-slideshow"></i></div>
-                            <h4><a href="">Automated Data Backup</a></h4>
-                            <p>Our automated 45-day rolling backup process ensures that accidental data deletion or natural
-                                disasters won't disrupt your operations, giving you peace of mind.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
-                        data-aos-delay="300">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-arch"></i></div>
-                            <h4><a href="">Custom Cloud Workspace</a></h4>
-                            <p>Get a fully customized accounting workspace with cloud-hosted QuickBooks and all other
-                                critical applications/add-ons in a single cloud per your business requirements.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Services Section -->
+        </section>
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
@@ -314,133 +535,8 @@
                 </div>
 
             </div>
-        </section><!-- End Testimonials Section -->
-
-
-        <!-- ======= Team Section ======= -->
-        <section id="team" class="team section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Team</h2>
-                    <h3>Our Hardworking <span>Team</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.</p>
-                </div>
-
-                <div class="row">
-                    @foreach ($teamMembers as $index => $member)
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                            data-aos-delay="{{ ($index + 1) * 100 }}">
-                            <div class="member">
-                                <div class="member-img">
-                                    <img src="{{ asset($member->pic) }}" class="img-fluid" alt="">
-                                    <div class="social">
-                                        <a href="{{ $member->twitter }}"><i class="bi bi-twitter"></i></a>
-                                        <a href="{{ $member->facebook }}"><i class="bi bi-facebook"></i></a>
-                                        <a href="{{ $member->instagram }}"><i class="bi bi-instagram"></i></a>
-                                        <a href="{{ $member->linkedin }}"><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h4>{{ $member->name }}</h4>
-                                    <span>{{ $member->position }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-
-                </div>
-
-            </div>
-        </section><!-- End Team Section -->
-
-        <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Pricing</h2>
-                    <h3>Check our <span>Pricing</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.</p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="box">
-                            <h3>Free</h3>
-                            <h4><sup>$</sup>0<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li class="na">Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box featured">
-                            <h3>Business</h3>
-                            <h4><sup>$</sup>19<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                        <div class="box">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-                        <div class="box">
-                            <span class="advanced">Advanced</span>
-                            <h3>Ultimate</h3>
-                            <h4><sup>$</sup>49<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Pricing Section -->
+        </section>
+        <!-- End Testimonials Section -->
 
         <!-- ======= Frequently Asked Questions Section ======= -->
         <section id="faq" class="faq section-bg">
@@ -477,8 +573,99 @@
                 </div>
 
             </div>
-        </section><!-- End Frequently Asked Questions Section -->
+        </section>
+        <!-- End Frequently Asked Questions Section -->
 
 
     </main><!-- End #main -->
+@endsection
+@section('script-area')
+    <!-- javascript libraries -->
+    <script data-cfasync="false" src="{{ asset('home/assets/homepage/js/cloudflare-static-email-decode.min.js') }}">
+    </script>
+    <script type="text/javascript" src="{{ asset('home/assets/homepage/js/6617-js-jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('home/assets/homepage/js/567-js-vendors.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('home/assets/homepage/js/7637-js-main.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.theme-demos').empty();
+
+            // Initialize Jarallax
+            $('.jarallax').jarallax({
+                speed: 0.3
+            });
+
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".blogSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            speed: 500,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
+            slidesPerView: 'auto',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            },
+        });
+        var swiper = new Swiper(".partSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            speed: 500,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false
+            },
+            slidesPerView: 'auto',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
 @endsection

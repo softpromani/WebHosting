@@ -987,7 +987,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(44, 44, 44, 0.7);
 }
 
 .testimonials .section-header {
@@ -1979,6 +1979,10 @@ section {
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
+
+
+
+
 
 
 
