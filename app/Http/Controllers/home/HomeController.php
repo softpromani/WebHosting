@@ -20,9 +20,9 @@ class HomeController extends Controller
         return view('home.index', compact('blogs'));
     }
 
-    public function test()
+    public function aboutUs()
     {
-        return view('home.test');
+        return view('home.about_us');
     }
 
     public function contactUs()
@@ -32,9 +32,9 @@ class HomeController extends Controller
     public function contactStore(ContactRequest $request)
     {
         $validatedData = $request->validated();
-        
+
         $contact = ContactUs::create($validatedData);
-       
+
 
         if ($contact) {
 
@@ -95,5 +95,5 @@ class HomeController extends Controller
         $blogs = Blog::with('blogImage')->get();
         return view('home.company.whyUs',compact('testimonial','faqs','blogs'));
     }
-    
+
 }

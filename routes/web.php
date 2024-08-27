@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/test', [HomeController::class, 'test'])->name('test');
+Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
 Route::get('product/{slug}',[ProductController::class,'index'])->name('product');
 Route::get('login', [LoginController::class, 'login'])->name('login');
@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::post('web-setting/update',[WebSettingController::class,'updateWebSettings'])->name('updateWebSettings');
     Route::resource('menu',MenuController::class)->name('','menu');
     Route::resource('product',AdminProductController::class)->name('','product');
-    
+
     Route::get('product/show/{step}/{product_id?}',[AdminProductController::class, 'PageLayout'])->name('product.PageLayout');
     Route::delete('product/delete/{step}/{resource_id?}',[AdminProductController::class, 'productDelete'])->name('product.productDelete');
 

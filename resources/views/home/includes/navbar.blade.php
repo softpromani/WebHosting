@@ -8,6 +8,7 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link  " href="{{ route('home') }}">Home</a></li>
+                <li><a class="nav-link  " href="{{ route('aboutUs') }}">About</a></li>
                 @foreach ($menu as $m)
                     <li class="dropdown"><a href="#"><span>{{ $m->name }}</span> <i
                                 class="bi bi-chevron-down"></i></a>
