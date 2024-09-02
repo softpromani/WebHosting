@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\ContactUs;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 
 class ContactUsController extends Controller
@@ -15,10 +16,18 @@ class ContactUsController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = ContactUs::select(['id','fname','lname', 'email','phone', 'subject','message']);
+            $data = ContactUs::select([
+                'id',
+                DB::raw("CONCAT(fname, ' ', lname) as name"), // Concatenate fname and lname
+                'email',
+                'subject',
+                'message',
+            ]);
+
             return DataTables::of($data)
                 ->make(true);
         }
+
         return view('admin.contactUs.contactUs');
     }
 

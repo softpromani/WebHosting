@@ -112,19 +112,20 @@
                     </a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                    <a href="{{ route('admin.blogs.index') }}"
-                        class="nav-link {{ Route::currentRouteName() == 'admin.blosg.index' ? 'active' : '' }}">
-                        <i class="nav-icon fa-solid fa-quote-left"></i>
-                        <p>
-                            BLog
-=======
                     <a href="{{ route('admin.blog.index') }}"
                         class="nav-link {{ Route::currentRouteName() == 'admin.blog.index' ? 'active' : '' }}">
                         <i class="nav-icon fa-solid fa-quote-left"></i>
                         <p>
                             BLogs
->>>>>>> 99d4e18e977090e1521f20c7f3511055a4a7806d
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.price-plan.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.price-plan.index' ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-quote-left"></i>
+                        <p>
+                            Price Plan
                         </p>
                     </a>
                 </li>

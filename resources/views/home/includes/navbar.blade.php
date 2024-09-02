@@ -41,10 +41,10 @@
                         <li class="dropdown"><a href="#"><span>About Us</span></a></li>
                         <li class="dropdown"><a href="{{ route('security') }}"><span>Our Security</span></a></li>
                         <li class="dropdown"><a href="{{ route('partner') }}"><span>Partner</span></a></li>
-                        <li class="dropdown"><a href="#"><span>Testimonials</span></a></li>
+                        <li class="dropdown"><a href="{{ route('testimonial') }}"><span>Testimonials</span></a></li>
                         <li class="dropdown"><a href="#"><span>Knowledgebase</span></a></li>
-                        <li class="dropdown"><a href="{{ route('whyUsPage')}}"><span>Why Us</span></a></li>
-                        <li class="dropdown"><a href="#"><span>FAQ</span></a></li>
+                        <li class="dropdown"><a href="{{ route('whyUsPage') }}"><span>Why Us</span></a></li>
+                        <li class="dropdown"><a href="{{ route('faq') }}"><span>FAQ</span></a></li>
                     </ul>
                 </li>
                 {{-- <li class="nav-link">

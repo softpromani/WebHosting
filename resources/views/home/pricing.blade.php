@@ -146,20 +146,28 @@
                 </div>
 
                 <div class="pricing-table-lists ">
-                    <div class="pricing-table-box ">
-                        <h1><sup>$10</sup>/year</h1>
-                        <h5>Entry Level package</h5>
-                        <p>Billed annually</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 30 Days Free Trial</li>
-                            <li><i class="fas fa-check"></i> Unlimited Features</li>
-                            <li><i class="fas fa-check"></i> Easy Data Backup</li>
-                            <li><i class="fas fa-check"></i> Cloud Database</li>
-                            <li><i class="fas fa-check"></i> Sync to All Devices</li>
-                        </ul>
-                        <a href="#" class="theme-btn">Get started</a>
-                    </div>
-                    <div class="pricing-table-box">
+                    @forelse ($PricePlan as $plan)
+                        <div class="pricing-table-box ">
+                            <h1><sup>${{ $plan->price }}</sup>/year</h1>
+                            <h5>{{ $plan->title }}</h5>
+                            {{-- <p>Billed annually</p> --}}
+                            <ul>
+                                <li><i class="fas fa-check"></i> {{ $plan->trial_days }} Days Free Trial</li>
+                                @if (!empty(json_decode($plan->features)))
+                                    @foreach (json_decode($plan->features) as $feature)
+                                        <li><i class="fas fa-check"></i> {{ $feature }}</li>
+                                    @endforeach
+                                @else
+                                    <li><i class="fas fa-check"></i> No features available</li>
+                                @endif
+                            </ul>
+                            <a href="#" class="theme-btn">Get started</a>
+                        </div>
+                    @empty
+                        <p>No Price is there !</p>
+                    @endforelse
+
+                    {{-- <div class="pricing-table-box">
                         <h1><sup>$20</sup>/year</h1>
                         <h5>Normal Package</h5>
                         <p>Billed annually</p>
@@ -184,7 +192,7 @@
                             <li><i class="fas fa-check"></i> Sync to All Devices</li>
                         </ul>
                         <a href="#" class="theme-btn">Get started</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </section><!-- End Contact Section -->

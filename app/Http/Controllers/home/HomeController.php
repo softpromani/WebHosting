@@ -6,6 +6,7 @@ use App\Models\Faq;
 use App\Models\Blog;
 use App\Models\ContactUs;
 use App\Models\Newsletter;
+use App\Models\PricePlan;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -20,9 +21,9 @@ class HomeController extends Controller
         return view('home.index', compact('blogs'));
     }
 
-    public function test()
+    public function aboutUs()
     {
-        return view('home.test');
+        return view('home.about_us');
     }
 
     public function contactUs()
@@ -32,9 +33,9 @@ class HomeController extends Controller
     public function contactStore(ContactRequest $request)
     {
         $validatedData = $request->validated();
-        
+
         $contact = ContactUs::create($validatedData);
-       
+
 
         if ($contact) {
 
@@ -72,28 +73,43 @@ class HomeController extends Controller
 
     public function pricing()
     {
-        return view('home.pricing');
+        $PricePlan = PricePlan::latest()->get();
+        return view('home.pricing',compact('PricePlan'));
     }
     public function security()
     {
-        $faqs = Faq::get();
+        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
         $testimonial=Testimonial::get();
         $blogs = Blog::with('blogImage')->get();
         return view('home.company.security',compact('testimonial','faqs','blogs'));
     }
     public function partner()
     {
-        $faqs = Faq::get();
+        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
         $testimonial=Testimonial::get();
         $blogs = Blog::with('blogImage')->get();
         return view('home.company.partner',compact('testimonial','faqs','blogs'));
     }
     public function whyUsPage()
     {
-        $faqs = Faq::get();
+        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
         $testimonial=Testimonial::get();
         $blogs = Blog::with('blogImage')->get();
         return view('home.company.whyUs',compact('testimonial','faqs','blogs'));
     }
-    
+    public function faq()
+    {
+        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $testimonial=Testimonial::get();
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.company.faq',compact('testimonial','faqs','blogs'));
+    }
+    public function testimonial()
+    {
+        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $testimonial=Testimonial::get();
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.company.testimonial',compact('testimonial','faqs','blogs'));
+    }
+
 }

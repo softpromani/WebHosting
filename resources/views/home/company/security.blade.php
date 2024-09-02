@@ -789,9 +789,10 @@
                     Blogs
                 </div>
 
+
                 <div class="swiper blogSwiper mb-5">
                     <div class="swiper-wrapper p-3">
-                        @foreach ($blogs as $blog)
+                        @forelse ($blogs as $blog)
                             <div class="swiper-slide ">
                                 <div class="card">
                                     <img src="{{ asset('storage/' . $blog->blogImage->media) }}"
@@ -807,7 +808,9 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @empty
+                            <p>No Blog Found!</p>
+                        @endforelse
                     </div>
 
                     <div class="swiper-pagination"></div>
