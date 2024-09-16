@@ -17,7 +17,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="{{ asset('admin/assets/auth/css/style.css') }}">
 
-    <title>Login #8</title>
+    <title>Admin Login</title>
 </head>
 
 <body>
