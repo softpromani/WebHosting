@@ -59,7 +59,12 @@ class ProductController extends Controller
         switch ($step) {
             case 'pro_detail':
                 if (isset($request->product_id)) {
-                    $product = Product::find($request->product_id)->update($validatedData);
+                    $product = Product::find($request->product_id);
+                    $product->update($validatedData);
+                     if ($request->hasFile('main_img')) {
+                        optional($product->content_img)->delete();
+                        Media::uploadMedia($request->main_img, $product, 'content');
+                    }
                     toast('Product Details Updated successfully', 'success');
                     session()->flash('activeTab', 'feature');
                     return redirect()->route('admin.product.create', ['product_id' => $request->product_id]);
@@ -189,18 +194,22 @@ class ProductController extends Controller
                 $product_id = $request->product_id;
                 $product = Product::find($product_id);
                 if ($request->hasFile('main_img')) {
+                    optional($product->content_img)->delete();
                     Media::uploadMedia($request->main_img, $product, 'content');
                 }
 
                 if ($request->hasFile('faq_img')) {
+                    optional($product->faqImg)->delete();
                     Media::uploadMedia($request->faq_img, $product, 'faq');
                 }
 
                 if ($request->hasFile('whyUs_img')) {
+                    optional($product->whyUsImg)->delete();
                     Media::uploadMedia($request->whyUs_img, $product, 'whyUs');
                 }
 
                 if ($request->hasFile('product_banner')) {
+                    optional($product->product_banner)->delete();
                     Media::uploadMedia($request->product_banner, $product, 'product_banner');
                 }
 
