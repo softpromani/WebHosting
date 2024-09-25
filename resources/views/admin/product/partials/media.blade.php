@@ -38,54 +38,79 @@
                 <input type="file" name="product_banner" id="product_banner" class="form-control" accept="image/*">
             </div>
         </div>
+        <input type="hidden" name="removed_images" id="removed_images">
+        @if (isset($data))
+            @if ($data && $data->media->count() > 0)
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="row">
+
+                            @if ($data->faqImg)
+                                <div class="col-md-5 mb-3">
+                                    <h5>Faqs Image</h5>
+                                    <img src="{{ asset('storage/' . $data->faqImg->media ?? '') }}" alt=""
+                                        class="img-responsive content-image me-4">
+                                </div>
+                            @endif
+
+                            @if ($data->product_banner)
+                                <div class="col-md-5 mb-3">
+                                    <h5>Product Banner</h5>
+                                    <img src="{{ asset('storage/' . $data->product_banner->media ?? '') }}"
+                                        alt="" class="img-responsive content-image me-4">
+                                </div>
+                            @endif
+                        </div>
+
+
+                    </div>
+                    @isset($data->slide_img)
+                        <div class="col-md-12 mt-5">
+                            <div class="row">
+                                <h4 class="mt-3">Slider Image</h4>
+                                @foreach ($data->slide_img as $d)
+                                    <div class="col-md-3">
+                                        <div class="mt-3 image-container" style="position: relative;">
+                                            <img src="{{ asset('storage/' . $d->media ?? '') }}" alt=""
+                                                class="img-responsive slide-image">
+
+                                            <!-- Cross Button to Remove Image -->
+                                            <button type="button" class="btn btn-danger btn-sm remove-image-btn me-3 mt-2"
+                                                data-media-id="{{ $d->id }}"
+                                                style="position: absolute; top: 5px; right: 5px;">
+                                                X
+                                            </button>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endisset
+
+                </div>
+            @endif
+        @endif
+
+
+    </div>
+    <div class="card-footer">
         <div class="row">
-            <div class="col-sm-12">
-                <button class="btn btn-primary">Submit</button>
+            <div class="col-sm-12 text-end">
+                <button class="btn btn-primary ">Submit</button>
             </div>
         </div>
     </div>
+
+
 </div>
 
-@if (isset($data))
-    @if ($data && $data->media->count() > 0)
-        <div class="row mt-5">
-            <div class="col-md-12">
-                <div class="row">
 
-                    @if ($data->faqImg)
-                        <div class="col-md-5 mb-3">
-                            <h5>Faqs Image</h5>
-                            <img src="{{ asset('storage/' . $data->faqImg->media ?? '') }}" alt=""
-                                class="img-responsive content-image me-4">
-                        </div>
-                    @endif
-
-                    @if ($data->product_banner)
-                        <div class="col-md-5 mb-3">
-                            <h5>Product Banner</h5>
-                            <img src="{{ asset('storage/' . $data->product_banner->media ?? '') }}" alt=""
-                                class="img-responsive content-image me-4">
-                        </div>
-                    @endif
-                </div>
-
-
-            </div>
-            @isset($data->slide_img)
-                <div class="col-md-12 mt-5">
-                    <div class="row">
-                        <h4 class="mt-3">Slider Image</h4>
-                        @foreach ($data->slide_img as $d)
-                            <div class="col-md-3">
-                                <div class="mt-3 image-container">
-                                    <img src="{{ asset('storage/' . $d->media ?? '') }}" alt=""
-                                        class="img-responsive slide-image">
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            @endisset
-        </div>
-    @endif
-@endif
+<script>
+    let removedImages = [];
+    $('.remove-image-btn').on('click', function() {
+        const mediaId = $(this).data('media-id');
+        $(this).closest('.image-container').fadeOut();
+        removedImages.push(mediaId); // Add media ID to the array
+        $('#removed_images').val(JSON.stringify(removedImages)); // Update hidden input field
+    });
+</script>

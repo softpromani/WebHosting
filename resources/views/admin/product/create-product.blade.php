@@ -25,9 +25,9 @@
 @endsection
 @section('main-content')
 
-    <form action="{{ isset($edit) ? route('admin.product.update', $product->id) : route('admin.product.store') }}"
+    <form action="{{ isset($product_id) ? route('admin.product.update', $product_id) : route('admin.product.store') }}"
         method="POST" enctype="multipart/form-data" id='product_form'>
-        @isset($edit)
+        @isset($product_id)
             @method('PUT')
         @endisset
         @csrf
@@ -94,7 +94,6 @@
 @section('script-area')
     <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
     <script>
-     
         let testimonialIndex = 1;
 
         function add_testimonial_div() {

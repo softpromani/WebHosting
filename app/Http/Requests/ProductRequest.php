@@ -35,7 +35,7 @@ class ProductRequest extends FormRequest
                     'layout' => 'required',
                 ];
             case 'feature':
-                
+
                 return [
                     'feature.icon' => 'required',
                     'feature.title' => 'required',
@@ -76,9 +76,9 @@ class ProductRequest extends FormRequest
                 ];
             case 'media':
                 return [
-                    'main_img' => 'nullable|file|image|max:1024',
-                    'slider_img.*' => 'nullable|file|image|max:1024',
-                    'product_banner'=>'nullable|file|image|max:1024',
+                    'main_img' => 'nullable',
+                    'slider_img.*' => 'nullable',
+                    'product_banner'=>'nullable',
                     'product_id'=>'required|exists:products,id'
                 ];
             default:
