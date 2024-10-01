@@ -32,6 +32,8 @@ class ProductRequest extends FormRequest
                     'meta_keyword' => 'required',
                     'meta_description' => 'required',
                     'product_description' => 'required',
+                    'service_description_1' => 'required',
+                    'service_description_2' => 'required',
                     'layout' => 'required',
                 ];
             case 'feature':
@@ -61,7 +63,7 @@ class ProductRequest extends FormRequest
 
             case 'pro_testimonial':
                 return [
-                    'testi.pic' => 'required|image|max:3072',
+                    'testi.pic' => 'nullable',
                     'testi.name' => 'required',
                     'testi.designation' => 'required',
                     'testi.comment' => 'required',

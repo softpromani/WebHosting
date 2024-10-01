@@ -58,6 +58,24 @@
                  @enderror
              </div>
              <div class="col-sm-6">
+                <div class="form-group productdesc">
+                    <label for="service_description_1">Service Description 1</label>
+                    <textarea name="service_description_1" id="service_description_1" class="product_description"> {!! isset($data->service_description_1) ? $data->service_description_1 : '' !!} </textarea>
+                </div>
+                @error('service_description_1')
+                    <div class="alert mt-2" style=" color:rgb(255, 60, 0); ">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group productdesc">
+                    <label for="service_description_2">Service Description 2</label>
+                    <textarea name="service_description_2" id="service_description_2" class="product_description"> {!! isset($data->service_description_2) ? $data->service_description_2 : '' !!} </textarea>
+                </div>
+                @error('service_description_2')
+                    <div class="alert mt-2" style=" color:rgb(255, 60, 0); ">{{ $message }}</div>
+                @enderror
+            </div>
+             <div class="col-sm-6">
                  <div class="row">
 
                      <div class="col-md-12">
@@ -118,6 +136,16 @@
              $(document).ready(function() {
                  ClassicEditor
                      .create(document.querySelector('#product_description'))
+                     .catch(error => {
+                         console.error(error);
+                     });
+                     ClassicEditor
+                     .create(document.querySelector('#service_description_1'))
+                     .catch(error => {
+                         console.error(error);
+                     });
+                     ClassicEditor
+                     .create(document.querySelector('#service_description_2'))
                      .catch(error => {
                          console.error(error);
                      });

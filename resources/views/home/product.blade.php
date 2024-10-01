@@ -1252,37 +1252,17 @@
     <!-- End Page Title -->
 
     {{-- Silder  --}}
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-inner">
-                @foreach ($medias as $md)
-                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                        <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Demo Title</h5>
-                            {{-- <p>Some representative placeholder content for the first slide.</p> --}}
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+            @foreach ($medias as $md)
+                <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
+                    <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
+                </div>
+            @endforeach
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+
+      </div>
     {{-- Slider End --}}
 
     <!-- Service Details Section -->
@@ -1383,6 +1363,17 @@
     </section> --}}
     <!-- /Why Us Details Section -->
 
+       <!-- ======= Service Description 4 Section ======= -->
+       <section id="featured-services" class="featured-services">
+        <div class="container" data-aos="fade-up">
+
+            {!! $products->service_description_1 !!}
+
+        </div>
+    </section>
+    <!-- End Service Description 4 Section -->
+
+
     <!-- Product banner Details Section -->
     <section id="whyus-services" class="counts" style="position: relative;">
         <div class="container-fluid"
@@ -1420,6 +1411,15 @@
 
     </section>
 
+    <!-- ======= Service Description 5 Section ======= -->
+    <section id="featured-services" class="featured-services">
+        <div class="container" data-aos="fade-up">
+
+            {!! $products->service_description_2 !!}
+
+        </div>
+    </section>
+    <!-- End Service Description 5 Section -->
 
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
@@ -1517,6 +1517,35 @@
     </section>
     <!-- End Counts Section -->
 
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    @foreach ($testimonials as $tm)
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="{{ asset('storage/' . $tm->media->media) }}" class="testimonial-img"
+                                    alt="">
+                                <h3>{{ $tm->name ?? '' }}</h3>
+                                <h4>{{ $tm->designation ?? '' }}</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    {{ $tm->comment ?? '' }}
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+                    @endforeach
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Testimonials Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
@@ -1617,40 +1646,9 @@
 
 
     </section>
-
-
-
     <!-- End Blog Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-        <div class="container" data-aos="zoom-in">
 
-            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-                    @foreach ($testimonials as $tm)
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('storage/' . $tm->media->media) }}" class="testimonial-img"
-                                    alt="">
-                                <h3>{{ $tm->name ?? '' }}</h3>
-                                <h4>{{ $tm->designation ?? '' }}</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    {{ $tm->comment ?? '' }}
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-                    @endforeach
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section>
-    <!-- End Testimonials Section -->
 @endsection
 
 @section('script-area')
