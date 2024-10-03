@@ -1255,7 +1255,7 @@
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            @foreach ($medias as $md)
+            @foreach ($products->slide_img as $md)
                 <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
                     <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
                 </div>
@@ -1269,29 +1269,6 @@
     <section id="service-details" class="service-details section">
         <div class="container">
             <div class="row gy-4">
-                {{-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="services-list">
-                    <a href="#service-details" class="active">Service Details</a>
-                    @if ($features)
-                    <a href="#featured-services">Featured Services</a>
-                    @endif
-                    @if ($whyus)
-                    <a href="#whyus-services">Why-Us Services</a>
-                    @endif
-                    @if ($counters)
-                    <a href="#counts">Counts</a>
-                    @endif
-
-                    @if ($testimonials)
-                    <a href="#testimonials">Testimonials</a>
-                    @endif
-
-                    @if ($faqs)
-                    <a href="#faq">FAQ</a>
-                    @endif
-
-                </div>
-                </div> --}}
 
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img">
