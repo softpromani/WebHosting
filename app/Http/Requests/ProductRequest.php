@@ -29,11 +29,12 @@ class ProductRequest extends FormRequest
                 return [
                     'menu_id'=>'required|exists:menus,id',
                     'product_title' => 'required',
+                    'service_title' => 'required',
                     'meta_keyword' => 'required',
                     'meta_description' => 'required',
                     'product_description' => 'required',
-                    'service_description_1' => 'required',
-                    'service_description_2' => 'required',
+                    'service_description_1' => 'nullable',
+                    'service_description_2' => 'nullable',
                     'layout' => 'required',
                 ];
             case 'feature':

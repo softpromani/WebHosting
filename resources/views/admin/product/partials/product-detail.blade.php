@@ -59,6 +59,15 @@
              </div>
              <div class="col-sm-6">
                 <div class="form-group productdesc">
+                    <label for="service_title">Service Title</label>
+                    <textarea name="service_title" id="service_title" class="service_title"> {!! isset($data->service_title) ? $data->service_title : '' !!} </textarea>
+                </div>
+                @error('service_title')
+                    <div class="alert mt-2" style=" color:rgb(255, 60, 0); ">{{ $message }}</div>
+                @enderror
+            </div>
+             <div class="col-sm-6">
+                <div class="form-group productdesc">
                     <label for="service_description_1">Service Description 1</label>
                     <textarea name="service_description_1" id="service_description_1" class="product_description"> {!! isset($data->service_description_1) ? $data->service_description_1 : '' !!} </textarea>
                 </div>
@@ -146,6 +155,11 @@
                      });
                      ClassicEditor
                      .create(document.querySelector('#service_description_2'))
+                     .catch(error => {
+                         console.error(error);
+                     });
+                     ClassicEditor
+                     .create(document.querySelector('#service_title'))
                      .catch(error => {
                          console.error(error);
                      });

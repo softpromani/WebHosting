@@ -1238,31 +1238,27 @@
             background-color: transparent;
         }
     </style>
-    <div class="page-title" data-aos="fade">
-        <div class="container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">Service Details</h1>
-            <nav class="breadcrumbs">
-                <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current">Service Details</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
     <!-- End Page Title -->
 
     {{-- Silder  --}}
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            @foreach ($products->slide_img as $md)
-                <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
-                    <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                {{  }}
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach ($products->slide_img as $md)
+                            <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
+                                <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            @endforeach
+            </div>
         </div>
-
-      </div>
+    </div>
     {{-- Slider End --}}
 
     <!-- Service Details Section -->
@@ -1270,14 +1266,14 @@
         <div class="container">
             <div class="row gy-4">
 
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img">
                         <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
                             class="img-fluid services-img rounded">
 
                     </div>
                 </div>
-                <div class="col-lg-8 product-content-description">
+                <div class="col-lg-6 product-content-description">
                     {!! $products->product_description !!}
                 </div>
             </div>
