@@ -1340,16 +1340,6 @@
     </section> --}}
     <!-- /Why Us Details Section -->
 
-       <!-- ======= Service Description 4 Section ======= -->
-       <section id="featured-services" class="featured-services">
-        <div class="container" data-aos="fade-up">
-
-            {!! $products->service_description_1 !!}
-
-        </div>
-    </section>
-    <!-- End Service Description 4 Section -->
-
 
     <!-- Product banner Details Section -->
     <section id="whyus-services" class="counts" style="position: relative;">
@@ -1388,15 +1378,17 @@
 
     </section>
 
-    <!-- ======= Service Description 5 Section ======= -->
-    <section id="featured-services" class="featured-services">
-        <div class="container" data-aos="fade-up">
+    <!-- ======= Service Description 4 Section ======= -->
+    @isset($products->service_description_1)
+        <section id="featured-services" class="featured-services">
+            <div class="container" data-aos="fade-up">
 
-            {!! $products->service_description_2 !!}
+                {!! $products->service_description_1 !!}
 
-        </div>
-    </section>
-    <!-- End Service Description 5 Section -->
+            </div>
+        </section>
+    @endisset
+    <!-- End Service Description 4 Section -->
 
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
@@ -1423,6 +1415,18 @@
         </div>
     </section>
     <!-- End Featured Services Section -->
+
+    <!-- ======= Service Description 5 Section ======= -->
+    @isset($products->service_description_2)
+        <section id="featured-services" class="featured-services">
+            <div class="container" data-aos="fade-up">
+
+                {!! $products->service_description_2 !!}
+
+            </div>
+        @endisset
+    </section>
+    <!-- End Service Description 5 Section -->
 
     <!-- ======= Counts Section ======= -->
     {{-- <section id="counts" class="counts">
