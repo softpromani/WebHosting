@@ -1210,7 +1210,7 @@
 @section('content')
     <style>
         .carousel-item img {
-            height: 200px;
+            height: 300px;
         }
 
         .blogCard {
