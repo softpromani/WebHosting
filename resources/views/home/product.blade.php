@@ -1244,7 +1244,7 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                {{  }}
+                {!! $products->service_title ?? '' !!}
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
