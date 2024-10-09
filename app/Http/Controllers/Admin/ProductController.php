@@ -12,7 +12,6 @@ use App\Models\ProductFeature;
 use App\Models\ProductTestimonial;
 use App\Models\ProductWhyUs;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -119,7 +118,7 @@ class ProductController extends Controller
                     'designation' => $validatedData['testi']['designation'],
                     'comment' => $validatedData['testi']['comment'],
                 ]);
-                if($validatedData['testi']['pic']){
+                if ($validatedData['testi']['pic']) {
                     Media::uploadMedia($validatedData['testi']['pic'], $testimonial);
                 }
                 toast('Testimonials Added successfully', 'success');
@@ -162,6 +161,10 @@ class ProductController extends Controller
                 if ($request->hasFile('product_banner')) {
                     optional($product->product_banner)->delete();
                     Media::uploadMedia($request->product_banner, $product, 'product_banner');
+                }
+                if ($request->hasFile('service_section2')) {
+                    optional($product->service_section2)->delete();
+                    Media::uploadMedia($request->service_section2, $product, 'service_section2');
                 }
 
                 if ($request->hasFile('slider_img')) {
@@ -367,6 +370,10 @@ class ProductController extends Controller
                 if ($request->hasFile('product_banner')) {
                     optional($product->product_banner)->delete();
                     Media::uploadMedia($request->product_banner, $product, 'product_banner');
+                }
+                if ($request->hasFile('service_section2')) {
+                    optional($product->service_section2)->delete();
+                    Media::uploadMedia($request->service_section2, $product, 'service_section2');
                 }
 
                 if ($request->hasFile('slider_img')) {

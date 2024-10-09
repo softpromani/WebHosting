@@ -37,6 +37,11 @@
                 <label for="product_banner">Product Banner <span class="text-danger"></span></label>
                 <input type="file" name="product_banner" id="product_banner" class="form-control" accept="image/*">
             </div>
+            <div class="col-md-6 mb-3">
+                <label for="service_section2">Service Description 2 <span class="text-danger"></span></label>
+                <input type="file" name="service_section2" id="service_section2" class="form-control"
+                    accept="image/*">
+            </div>
         </div>
         <input type="hidden" name="removed_images" id="removed_images">
         @if (isset($data))
@@ -46,7 +51,7 @@
                         <div class="row">
 
                             @if ($data->faqImg)
-                                <div class="col-md-5 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <h5>Faqs Image</h5>
                                     <img src="{{ asset('storage/' . $data->faqImg->media ?? '') }}" alt=""
                                         class="img-responsive content-image me-4">
@@ -54,9 +59,16 @@
                             @endif
 
                             @if ($data->product_banner)
-                                <div class="col-md-5 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <h5>Product Banner</h5>
                                     <img src="{{ asset('storage/' . $data->product_banner->media ?? '') }}"
+                                        alt="" class="img-responsive content-image me-4">
+                                </div>
+                            @endif
+                            @if ($data->serviceSection2)
+                                <div class="col-md-4 mb-3">
+                                    <h5>Service Section 2</h5>
+                                    <img src="{{ asset('storage/' . $data->serviceSection2->media ?? '') }}"
                                         alt="" class="img-responsive content-image me-4">
                                 </div>
                             @endif

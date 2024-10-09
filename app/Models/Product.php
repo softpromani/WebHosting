@@ -65,6 +65,9 @@ class Product extends Model
     public function whyUsImg(){
         return $this->morphOne(Media::class,'mediable')->where('type','whyUs');
     }
+    public function serviceSection2(){
+        return $this->morphOne(Media::class,'mediable')->where('type','service_section2');
+    }
 
     public function slide_img()
     {

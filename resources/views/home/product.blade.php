@@ -1237,10 +1237,52 @@
         .testimonials .swiper-slide {
             background-color: transparent;
         }
+
+        .icon-box {
+            height: 300px;
+            /* Set a fixed height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            padding: 20px;
+
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            /* Optional: Background color */
+        }
+
+        .icon-box .icon {
+            font-size: 50px;
+            /* Control the size of the icon */
+            margin-bottom: 20px;
+            /* Add space below the icon */
+        }
+
+        .icon-box .title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .icon-box .description {
+            font-size: 14px;
+            overflow: hidden;
+
+        }
+
+        .swiper-wrapper {
+            padding-bottom: 30px;
+            /* Add some space at the bottom of the cards */
+        }
+
+        .swiper-pagination {
+            margin-top: 20px;
+            /* Add some space between the cards and the pagination */
+        }
     </style>
     <!-- End Page Title -->
 
-    {{-- Silder  --}}
+    {{-- Silder --}}
     <div class="container mt-5">
         <div class="row gy-4">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
@@ -1300,40 +1342,40 @@
     @endif
     <!-- Why Us Details Section -->
     {{-- <section id="whyus-services" class="counts">
-        <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
 
 
-            <div class="section-title">
-                <h2>How it work</h2>
-            </div>
-            <div class="heading">
-                Standard Work Process
-            </div>
+        <div class="section-title">
+            <h2>How it work</h2>
+        </div>
+        <div class="heading">
+            Standard Work Process
+        </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main-timeline">
-                        @forelse ($products->whyus as $data)
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-icon"><i class="{{ $data->icon }}"></i></div>
-                                    <h3 class="title">{{ $data->title }}</h3>
-                                    <p class="description">
-                                        {!! $data->detail !!}
-                                    </p>
-                                </a>
-                            </div>
-                        @empty
-                            <p>No data uploaded</p>
-                        @endforelse
-
-
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    @forelse ($products->whyus as $data)
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="{{ $data->icon }}"></i></div>
+                            <h3 class="title">{{ $data->title }}</h3>
+                            <p class="description">
+                                {!! $data->detail !!}
+                            </p>
+                        </a>
                     </div>
+                    @empty
+                    <p>No data uploaded</p>
+                    @endforelse
+
+
                 </div>
             </div>
-
         </div>
-    </section> --}}
+
+    </div>
+</section> --}}
     <!-- /Why Us Details Section -->
 
 
@@ -1413,37 +1455,50 @@
     <!-- End Featured Services Section -->
 
     <!-- ======= Service Description 5 Section ======= -->
-    @isset($products->service_description_2)
-        <section id="featured-services" class="featured-services">
-            <div class="container" data-aos="fade-up">
+    <section id="service-details" class="service-details section">
+        @isset($products->service_description_2)
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6 product-content-description">
+                        {!! $products->service_description_2 !!}
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-img">
+                            <img src="{{ asset('storage/' . optional($products->serviceSection2)->media) }}"
+                                alt="no available" class="img-fluid services-img rounded">
 
-                {!! $products->service_description_2 !!}
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         @endisset
+
     </section>
+
     <!-- End Service Description 5 Section -->
 
     <!-- ======= Counts Section ======= -->
     {{-- <section id="counts" class="counts">
-        <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
 
-            <div class="row">
-                @foreach ($counters as $ct)
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="{{ $ct->icon ?? '' }}"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                class="purecounter">{{ $ct->count ?? '' }}</span>
-                            <p>{{ $ct->title ?? '' }}</p>
-                        </div>
-                    </div>
-                @endforeach
-
+        <div class="row">
+            @foreach ($counters as $ct)
+            <div class="col-lg-3 col-md-6">
+                <div class="count-box">
+                    <i class="{{ $ct->icon ?? '' }}"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                        class="purecounter">{{ $ct->count ?? '' }}</span>
+                    <p>{{ $ct->title ?? '' }}</p>
+                </div>
             </div>
+            @endforeach
 
         </div>
-    </section> --}}
+
+    </div>
+</section> --}}
     <!-- End Counts Section -->
 
 
