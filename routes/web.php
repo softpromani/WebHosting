@@ -22,7 +22,7 @@ Route::get('/test', [HomeController::class, 'test'])->name('test');
 Route::get('about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
 
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
-Route::get('product/{slug}', [ProductController::class, 'index'])->name('product');
+Route::get('product/{slug}',[ProductController::class,'index'])->name('product');
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');
 
@@ -56,6 +56,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::resource('team', TeamController::class);
     Route::resource('faqs', FaqController::class);
     Route::resource('blog', BlogController::class);
-    Route::resource('price-plan', PricePlanController::class);
 
 });

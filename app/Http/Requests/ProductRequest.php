@@ -29,13 +29,16 @@ class ProductRequest extends FormRequest
                 return [
                     'menu_id'=>'required|exists:menus,id',
                     'product_title' => 'required',
+                    'service_title' => 'required',
                     'meta_keyword' => 'required',
                     'meta_description' => 'required',
                     'product_description' => 'required',
+                    'service_description_1' => 'nullable',
+                    'service_description_2' => 'nullable',
                     'layout' => 'required',
                 ];
             case 'feature':
-                
+
                 return [
                     'feature.icon' => 'required',
                     'feature.title' => 'required',
@@ -61,7 +64,7 @@ class ProductRequest extends FormRequest
 
             case 'pro_testimonial':
                 return [
-                    'testi.pic' => 'required|image|max:3072',
+                    'testi.pic' => 'nullable',
                     'testi.name' => 'required',
                     'testi.designation' => 'required',
                     'testi.comment' => 'required',
@@ -76,9 +79,9 @@ class ProductRequest extends FormRequest
                 ];
             case 'media':
                 return [
-                    'main_img' => 'nullable|file|image|max:1024',
-                    'slider_img.*' => 'nullable|file|image|max:1024',
-                    'product_banner'=>'nullable|file|image|max:1024',
+                    'main_img' => 'nullable',
+                    'slider_img.*' => 'nullable',
+                    'product_banner'=>'nullable',
                     'product_id'=>'required|exists:products,id'
                 ];
             default:

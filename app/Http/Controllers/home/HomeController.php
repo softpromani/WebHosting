@@ -97,19 +97,5 @@ class HomeController extends Controller
         $blogs = Blog::with('blogImage')->get();
         return view('home.company.whyUs',compact('testimonial','faqs','blogs'));
     }
-    public function faq()
-    {
-        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
-        $testimonial=Testimonial::get();
-        $blogs = Blog::with('blogImage')->get();
-        return view('home.company.faq',compact('testimonial','faqs','blogs'));
-    }
-    public function testimonial()
-    {
-        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
-        $testimonial=Testimonial::get();
-        $blogs = Blog::with('blogImage')->get();
-        return view('home.company.testimonial',compact('testimonial','faqs','blogs'));
-    }
 
 }

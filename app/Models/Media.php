@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 class Media extends Model
 {
@@ -13,6 +14,18 @@ class Media extends Model
     /**
      * Get the owning mediable model.
      */
+     protected static function boot()
+    {
+        parent::boot();
+
+        // Listen for the deleting event
+        static::deleting(function ($media) {
+            // Delete the file from storage
+            if (Storage::disk('public')->exists($media->media)) {
+                Storage::disk('public')->delete($media->media);
+            }
+        });
+    }
     public function mediable()
     {
         return $this->morphTo();
@@ -27,7 +40,7 @@ class Media extends Model
     public static function uploadMedia(UploadedFile $file, Model $mediable,string $type=NULL)
     {
         $filePath = $file->store(class_basename($mediable), 'public');
-        
+
         return self::create([
             'media' => $filePath,
             'size' => $file->getSize()/1024,

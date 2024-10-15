@@ -8,13 +8,18 @@ use Illuminate\Support\Str;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable=['menu_id','slug','product_title','meta_keyword','meta_description','product_description','step','layout'];
+    protected $fillable=['menu_id','slug','product_title','meta_keyword','meta_description','product_description','service_title','service_description_1','service_description_2','step','layout'];
 
     protected static function boot(){
         Parent::boot();
         static::creating(function ($product) {
             $product->slug =$product->generateUniqueSlug($product->product_title);
         });
+
+        static::updating(function ($product) {
+            $product->slug =$product->generateUniqueSlug($product->product_title);
+        });
+
         static::created(function ($product) {
             $product->step = 1;
             $product->save();
@@ -59,6 +64,9 @@ class Product extends Model
     }
     public function whyUsImg(){
         return $this->morphOne(Media::class,'mediable')->where('type','whyUs');
+    }
+    public function serviceSection2(){
+        return $this->morphOne(Media::class,'mediable')->where('type','service_section2');
     }
 
     public function slide_img()

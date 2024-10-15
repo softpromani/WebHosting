@@ -1210,7 +1210,7 @@
 @section('content')
     <style>
         .carousel-item img {
-            height: 200px;
+            height: 300px;
         }
 
         .blogCard {
@@ -1237,51 +1237,69 @@
         .testimonials .swiper-slide {
             background-color: transparent;
         }
+
+        .icon-box {
+            height: 300px;
+            /* Set a fixed height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            padding: 20px;
+
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            /* Optional: Background color */
+        }
+
+        .icon-box .icon {
+            font-size: 50px;
+            /* Control the size of the icon */
+            margin-bottom: 20px;
+            /* Add space below the icon */
+        }
+
+        .icon-box .title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .icon-box .description {
+            font-size: 14px;
+            overflow: hidden;
+
+        }
+
+        .swiper-wrapper {
+            padding-bottom: 30px;
+            /* Add some space at the bottom of the cards */
+        }
+
+        .swiper-pagination {
+            margin-top: 20px;
+            /* Add some space between the cards and the pagination */
+        }
     </style>
-    <div class="page-title" data-aos="fade">
-        <div class="container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">Service Details</h1>
-            <nav class="breadcrumbs">
-                <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current">Service Details</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
     <!-- End Page Title -->
 
-    {{-- Silder  --}}
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-inner">
-                @foreach ($medias as $md)
-                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                        <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Demo Title</h5>
-                            {{-- <p>Some representative placeholder content for the first slide.</p> --}}
-                        </div>
+    {{-- Silder --}}
+    <div class="container mt-5">
+        <div class="row gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                {!! $products->service_title ?? '' !!}
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach ($products->slide_img as $md)
+                            <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
+                                <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
+                            </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
     {{-- Slider End --}}
 
@@ -1289,38 +1307,15 @@
     <section id="service-details" class="service-details section">
         <div class="container">
             <div class="row gy-4">
-                {{-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="services-list">
-                    <a href="#service-details" class="active">Service Details</a>
-                    @if ($features)
-                    <a href="#featured-services">Featured Services</a>
-                    @endif
-                    @if ($whyus)
-                    <a href="#whyus-services">Why-Us Services</a>
-                    @endif
-                    @if ($counters)
-                    <a href="#counts">Counts</a>
-                    @endif
 
-                    @if ($testimonials)
-                    <a href="#testimonials">Testimonials</a>
-                    @endif
-
-                    @if ($faqs)
-                    <a href="#faq">FAQ</a>
-                    @endif
-
-                </div>
-                </div> --}}
-
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img">
                         <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
                             class="img-fluid services-img rounded">
 
                     </div>
                 </div>
-                <div class="col-lg-8 product-content-description">
+                <div class="col-lg-6 product-content-description">
                     {!! $products->product_description !!}
                 </div>
             </div>
@@ -1347,41 +1342,42 @@
     @endif
     <!-- Why Us Details Section -->
     {{-- <section id="whyus-services" class="counts">
-        <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
 
 
-            <div class="section-title">
-                <h2>How it work</h2>
-            </div>
-            <div class="heading">
-                Standard Work Process
-            </div>
+        <div class="section-title">
+            <h2>How it work</h2>
+        </div>
+        <div class="heading">
+            Standard Work Process
+        </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main-timeline">
-                        @forelse ($products->whyus as $data)
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-icon"><i class="{{ $data->icon }}"></i></div>
-                                    <h3 class="title">{{ $data->title }}</h3>
-                                    <p class="description">
-                                        {!! $data->detail !!}
-                                    </p>
-                                </a>
-                            </div>
-                        @empty
-                            <p>No data uploaded</p>
-                        @endforelse
-
-
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    @forelse ($products->whyus as $data)
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="{{ $data->icon }}"></i></div>
+                            <h3 class="title">{{ $data->title }}</h3>
+                            <p class="description">
+                                {!! $data->detail !!}
+                            </p>
+                        </a>
                     </div>
+                    @empty
+                    <p>No data uploaded</p>
+                    @endforelse
+
+
                 </div>
             </div>
-
         </div>
-    </section> --}}
+
+    </div>
+</section> --}}
     <!-- /Why Us Details Section -->
+
 
     <!-- Product banner Details Section -->
     <section id="whyus-services" class="counts" style="position: relative;">
@@ -1420,6 +1416,17 @@
 
     </section>
 
+    <!-- ======= Service Description 4 Section ======= -->
+    @isset($products->service_description_1)
+        <section id="featured-services" class="featured-services">
+            <div class="container" data-aos="fade-up">
+
+                {!! $products->service_description_1 !!}
+
+            </div>
+        </section>
+    @endisset
+    <!-- End Service Description 4 Section -->
 
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
@@ -1447,26 +1454,51 @@
     </section>
     <!-- End Featured Services Section -->
 
-    <!-- ======= Counts Section ======= -->
-    {{-- <section id="counts" class="counts">
-        <div class="container" data-aos="fade-up">
+    <!-- ======= Service Description 5 Section ======= -->
+    <section id="service-details" class="service-details section">
+        @isset($products->service_description_2)
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6 product-content-description">
+                        {!! $products->service_description_2 !!}
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-img">
+                            <img src="{{ asset('storage/' . optional($products->serviceSection2)->media) }}"
+                                alt="no available" class="img-fluid services-img rounded">
 
-            <div class="row">
-                @foreach ($counters as $ct)
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="{{ $ct->icon ?? '' }}"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                class="purecounter">{{ $ct->count ?? '' }}</span>
-                            <p>{{ $ct->title ?? '' }}</p>
                         </div>
                     </div>
-                @endforeach
+
+                </div>
 
             </div>
+        @endisset
+
+    </section>
+
+    <!-- End Service Description 5 Section -->
+
+    <!-- ======= Counts Section ======= -->
+    {{-- <section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+            @foreach ($counters as $ct)
+            <div class="col-lg-3 col-md-6">
+                <div class="count-box">
+                    <i class="{{ $ct->icon ?? '' }}"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                        class="purecounter">{{ $ct->count ?? '' }}</span>
+                    <p>{{ $ct->title ?? '' }}</p>
+                </div>
+            </div>
+            @endforeach
 
         </div>
-    </section> --}}
+
+    </div>
+</section> --}}
     <!-- End Counts Section -->
 
 
@@ -1517,6 +1549,35 @@
     </section>
     <!-- End Counts Section -->
 
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    @foreach ($testimonials as $tm)
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="{{ asset('storage/' . $tm->media->media) }}" class="testimonial-img"
+                                    alt="">
+                                <h3>{{ $tm->name ?? '' }}</h3>
+                                <h4>{{ $tm->designation ?? '' }}</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    {{ $tm->comment ?? '' }}
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+                    @endforeach
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Testimonials Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
@@ -1617,40 +1678,9 @@
 
 
     </section>
-
-
-
     <!-- End Blog Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-        <div class="container" data-aos="zoom-in">
 
-            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-                    @foreach ($testimonials as $tm)
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('storage/' . $tm->media->media) }}" class="testimonial-img"
-                                    alt="">
-                                <h3>{{ $tm->name ?? '' }}</h3>
-                                <h4>{{ $tm->designation ?? '' }}</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    {{ $tm->comment ?? '' }}
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-                    @endforeach
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section>
-    <!-- End Testimonials Section -->
 @endsection
 
 @section('script-area')
