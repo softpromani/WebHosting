@@ -56,5 +56,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::resource('team', TeamController::class);
     Route::resource('faqs', FaqController::class);
     Route::resource('blog', BlogController::class);
+    Route::resource('price-plan', PricePlanController::class);
 
 });

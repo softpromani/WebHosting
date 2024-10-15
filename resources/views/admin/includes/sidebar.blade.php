@@ -116,7 +116,6 @@
                         class="nav-link {{ Route::currentRouteName() == 'admin.blog.index' ? 'active' : '' }}">
                         <i class="nav-icon fa-solid fa-quote-left"></i>
                         <p>
-<<<<<<< HEAD
                             BLogs
                         </p>
                     </a>
@@ -127,9 +126,6 @@
                         <i class="nav-icon fa-solid fa-quote-left"></i>
                         <p>
                             Price Plan
-=======
-                            Blogs
->>>>>>> 68d889493dcb00d3d4fd245b2ae7f11a81b58ba4
                         </p>
                     </a>
                 </li>
