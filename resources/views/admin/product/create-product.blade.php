@@ -37,10 +37,11 @@
                     <div class="nav nav-pills nav-fill pronav" id="nav-tab" role="tablist">
                         <a class="nav-link active" id="pro_detail" data-toggle="tab" href="#step1"
                             data-url="{{ route('admin.product.PageLayout', 1) }}">Product Detail</a>
-                        <a class="nav-link" id="feature" data-toggle="tab" href="#step2"
-                            data-url="{{ route('admin.product.PageLayout', 2) }}">Features</a>
-                        {{-- <a class="nav-link" id="pro_counter" data-toggle="tab" href="#step3"
-                            data-url="{{ route('admin.product.PageLayout', 3) }}">Counter</a> --}}
+                        <a class="nav-link" id="layout" data-toggle="tab" href="#step2"
+                            data-url="{{ route('admin.product.PageLayout', 2) }}">Layout</a>
+                        <a class="nav-link" id="feature" data-toggle="tab" href="#step3"
+                            data-url="{{ route('admin.product.PageLayout', 3) }}">Features</a>
+
                         <a class="nav-link" id="pro_testimonal" data-toggle="tab" href="#step4"
                             data-url="{{ route('admin.product.PageLayout', 4) }}">Testimonial</a>
                         {{-- <a class="nav-link" id="why-us" data-toggle="tab" href="#step5"
@@ -59,15 +60,16 @@
                     {{-- product detail --}}
                 </div>
                 <div class="tab-pane fade" id="step2">
+                    {{-- Counter tab --}}
+                </div>
+                <div class="tab-pane fade" id="step3">
                     {{-- feature tab --}}
 
                 </div>
 
-                {{-- Counter tab --}}
 
-                <div class="tab-pane fade" id="step3">
 
-                </div>
+
                 {{-- Testimonial tab --}}
                 <div class="tab-pane fade" id="step4">
 

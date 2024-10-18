@@ -181,6 +181,7 @@
     </div>
     <div class="row align-items-center"
         data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [0, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 1200, &quot;delay&quot;: 150, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
+
         <div class="col-xl-3 col-lg-4 col-md-12 tab-style-05 md-mb-30px sm-mb-20px">
             <ul class="nav nav-tabs flex-column justify-content-center border-0 text-left fw-500 fs-18 alt-font">
                 <li class="nav-item">
@@ -337,3 +338,8 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

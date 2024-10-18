@@ -55,6 +55,12 @@ class Product extends Model
      public function faqs(){
         return $this->hasMany(ProductFaq::class,'product_id');
     }
+     public function productBusinessServices(){
+        return $this->hasMany(ProductBusinessService::class,'product_id');
+    }
+     public function productPricePlans(){
+        return $this->hasOne(ProductPricePlan::class,'product_id');
+    }
 
     public function content_img(){
         return $this->morphOne(Media::class,'mediable')->where('type','content');

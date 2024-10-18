@@ -205,11 +205,14 @@ class ProductController extends Controller
                     $data = Product::find($pid);
                     return view('admin.product.partials.product-detail', ['data' => $data, 'product_id' => $pid]);
                 case 2:
+                    $data = Product::find($pid)->counters;
+                    return view('admin.product.partials.priceLayout', ['data' => $data, 'product_id' => $pid]);
+
+                case 3:
+
                     $data = Product::find($pid)->features;
                     return view('admin.product.partials.feature', ['data' => $data, 'product_id' => $pid]);
-                case 3:
-                    $data = Product::find($pid)->counters;
-                    return view('admin.product.partials.counter', ['data' => $data, 'product_id' => $pid]);
+
                 case 4:
                     $data = Product::find($pid)->testimonials;
                     return view('admin.product.partials.testimonial', ['data' => $data, 'product_id' => $pid]);
@@ -231,9 +234,11 @@ class ProductController extends Controller
                 case 1:
                     return view('admin.product.partials.product-detail');
                 case 2:
-                    return view('admin.product.partials.feature');
+                    return view('admin.product.partials.priceLayout');
                 case 3:
-                    return view('admin.product.partials.counter');
+
+                    return view('admin.product.partials.feature');
+
                 case 4:
                     return view('admin.product.partials.testimonial');
                 case 5:
@@ -486,11 +491,14 @@ class ProductController extends Controller
                     $data = Product::find($pid);
                     return view('admin.product.partials.product-detail', ['data' => $data, 'product_id' => $pid]);
                 case 2:
+                    $data = Product::find($pid);
+                    return view('admin.product.partials.priceLayout', ['data' => $data, 'product_id' => $pid]);
+
+                case 3:
+
                     $data = Product::find($pid)->features;
                     return view('admin.product.partials.feature', ['data' => $data, 'product_id' => $pid]);
-                case 3:
-                    $data = Product::find($pid)->counters;
-                    return view('admin.product.partials.counter', ['data' => $data, 'product_id' => $pid]);
+
                 case 4:
                     $data = Product::find($pid)->testimonials;
                     return view('admin.product.partials.testimonial', ['data' => $data, 'product_id' => $pid]);
@@ -512,9 +520,12 @@ class ProductController extends Controller
                 case 1:
                     return view('admin.product.partials.product-detail');
                 case 2:
-                    return view('admin.product.partials.feature');
-                case 3:
                     return view('admin.product.partials.counter');
+
+                case 3:
+
+                    return view('admin.product.partials.feature');
+
                 case 4:
                     return view('admin.product.partials.testimonial');
                 case 5:
