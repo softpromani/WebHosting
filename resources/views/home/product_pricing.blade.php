@@ -133,11 +133,10 @@
             <span
                 class="tagline  bg-solitude-blue text-uppercase fs-13 ps-25px  text-base-color lh-40 sm-lh-55 border-radius-100px d-inline-block mb-25px">Flexible
                 pricing</span>
-            <h1 class="alt-font text-dark-gray fw-600 ls-minus-1px">Tailored pricing plans for everyone.</h1>
-            <p style="font-weight: 300rem; font-size:18px; color:darkgray">We are excited for our work and how it
-                positively impacts clients. With over 12 years of experience
-                we
-                have been constantly providing excellent solutions.</p>
+            @foreach ($products->productPricePlans as $plan)
+                <h1 class="alt-font text-dark-gray fw-600 ls-minus-1px">{{ $plan->title ?? '' }}</h1>
+                <p style="font-weight: 300rem; font-size:18px; color:darkgray">{{ $plan->description ?? '' }}</p>
+            @endforeach
             <a href="#" class="btn btn-large btn-box-shadow btn-rounded btn-dark-gray mt-10px">View all
                 plans</a>
         </div>
