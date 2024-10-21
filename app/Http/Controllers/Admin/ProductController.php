@@ -6,13 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Models\Media;
 use App\Models\Product;
-use App\Models\ProductCounter;
+use App\Models\ProductBusinessService;
 use App\Models\ProductFaq;
 use App\Models\ProductFeature;
+use App\Models\ProductPricePlan;
 use App\Models\ProductTestimonial;
 use App\Models\ProductWhyUs;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\Facades\DataTables;
@@ -54,7 +54,6 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        // dd($request->all());
         $validatedData = $request->validated();
         $step = $request->input('step');
 
@@ -82,6 +81,47 @@ class ProductController extends Controller
                     return redirect()->route('admin.product.create', ['product_id' => $product->id]);
                 }
 
+            case 'layout':
+                $product_id = $request->product_id;
+
+                if (!$product_id) {
+                    toast('Please Add Product first', 'error');
+
+                }
+                $product = Product::find($product_id);
+                if ($product->layout == 'pricePlan') {
+                    $proLayout = ProductPricePlan::create([
+                        'product_id' => $product_id,
+                        'title' => $validatedData['title'],
+                        'description' => $validatedData['description'],
+                    ]);
+
+                } else {
+                    $proLayout = ProductBusinessService::create([
+                        'product_id' => $product_id,
+                        'tab_name' => $validatedData['tab_name'],
+                        'tab_icon' => $validatedData['tab_icon'],
+                        'header_icon' => $validatedData['header_icon'],
+                        'header_text' => $validatedData['header_text'],
+                        'title' => $validatedData['title'],
+                        'description' => $validatedData['description'],
+                    ]);
+
+                    if ($validatedData['service_image']) {
+                        Media::uploadMedia($validatedData['service_image'], $proLayout, 'business_service');
+                    }
+
+                }
+
+                if ($proLayout) {
+                    $product = Product::find($product_id);
+                    if ($product->step < 2) {
+                        $product->step = 2;
+                        $product->save();
+                    }
+                }
+                toast('Layout data added successfully', 'success');
+                break;
             case 'feature':
                 $product_id = $request->product_id;
 
@@ -205,11 +245,11 @@ class ProductController extends Controller
                     $data = Product::find($pid);
                     return view('admin.product.partials.product-detail', ['data' => $data, 'product_id' => $pid]);
                 case 2:
-                    $data = Product::find($pid)->counters;
+                    $data = Product::find($pid);
+                    dd($data);
                     return view('admin.product.partials.priceLayout', ['data' => $data, 'product_id' => $pid]);
 
                 case 3:
-
                     $data = Product::find($pid)->features;
                     return view('admin.product.partials.feature', ['data' => $data, 'product_id' => $pid]);
 
@@ -236,9 +276,7 @@ class ProductController extends Controller
                 case 2:
                     return view('admin.product.partials.priceLayout');
                 case 3:
-
                     return view('admin.product.partials.feature');
-
                 case 4:
                     return view('admin.product.partials.testimonial');
                 case 5:
@@ -265,9 +303,9 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, string $id)
     {
+        dd($request->all());
         $validatedData = $request->validated();
         $step = $request->input('step');
-
         $product = Product::find($id);
 
         switch ($step) {
@@ -282,6 +320,10 @@ class ProductController extends Controller
                 toast('Product Details Updated successfully', 'success');
                 session()->flash('activeTab', 'feature');
                 return redirect()->route('admin.product.create', ['product_id' => $id]);
+            case 'layout':
+                dd(123);
+                toast('FAQs Updated successfully', 'success');
+                break;
 
             case 'feature':
                 $product_id = $request->input('product_id'); // Get product_id from the request
@@ -429,6 +471,30 @@ class ProductController extends Controller
                     toast('Something went wrong', 'error');
                     return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
                 }
+            case 'priceLayout':
+                $data = ProductPricePlan::find($resource_id);
+                $product_id = $data->product_id;
+                if ($data->delete()) {
+                    session()->flash('activeTab', $step);
+                    toast('layout deleted successfully', 'success');
+                    return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+                } else {
+                    session()->flash('activeTab', $step);
+                    toast('Something went wrong', 'error');
+                    return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+                }
+            case 'businessLayout':
+                $data = ProductBusinessService::find($resource_id);
+                $product_id = $data->product_id;
+                if ($data->delete()) {
+                    session()->flash('activeTab', $step);
+                    toast('layout deleted successfully', 'success');
+                    return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+                } else {
+                    session()->flash('activeTab', $step);
+                    toast('Something went wrong', 'error');
+                    return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
+                }
             case 'whyus':
                 $data = ProductWhyUs::find($resource_id);
                 $product_id = $data->product_id;
@@ -441,19 +507,7 @@ class ProductController extends Controller
                     toast('Something went wrong', 'error');
                     return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
                 }
-            case 'pro_counter':
 
-                $data = ProductCounter::find($resource_id);
-                $product_id = $data->product_id;
-                if ($data->delete()) {
-                    session()->flash('activeTab', $step);
-                    toast('counter deleted successfully', 'success');
-                    return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
-                } else {
-                    session()->flash('activeTab', $step);
-                    toast('Something went wrong', 'error');
-                    return redirect()->route('admin.product.create')->with(['product_id' => $product_id]);
-                }
             case 'pro_testimonial':
 
                 $data = ProductTestimonial::find($resource_id);
@@ -520,7 +574,7 @@ class ProductController extends Controller
                 case 1:
                     return view('admin.product.partials.product-detail');
                 case 2:
-                    return view('admin.product.partials.counter');
+                    return view('admin.product.partials.priceLayout');
 
                 case 3:
 
@@ -554,6 +608,34 @@ class ProductController extends Controller
                     toast('Something went wrong', 'error');
                     return redirect()->route('admin.product.edit', $product_id);
                 }
+            case 'priceLayout':
+                $data = ProductPricePlan::find($resource_id);
+                $product_id = $data->product_id;
+                if ($data->delete()) {
+                    session()->flash('activeTab', $step);
+                    toast('layout deleted successfully', 'success');
+                    return redirect()->route('admin.product.edit', $product_id);
+
+                } else {
+                    session()->flash('activeTab', $step);
+                    toast('Something went wrong', 'error');
+                    return redirect()->route('admin.product.edit', $product_id);
+
+                }
+            case 'businessLayout':
+                $data = ProductBusinessService::find($resource_id);
+                $product_id = $data->product_id;
+                if ($data->delete()) {
+                    session()->flash('activeTab', $step);
+                    toast('layout deleted successfully', 'success');
+                    return redirect()->route('admin.product.edit', $product_id);
+
+                } else {
+                    session()->flash('activeTab', $step);
+                    toast('Something went wrong', 'error');
+                    return redirect()->route('admin.product.edit', $product_id);
+
+                }
             case 'whyus':
                 $data = ProductWhyUs::find($resource_id);
                 $product_id = $data->product_id;
@@ -566,19 +648,7 @@ class ProductController extends Controller
                     toast('Something went wrong', 'error');
                     return redirect()->route('admin.product.edit', $product_id);
                 }
-            case 'pro_counter':
 
-                $data = ProductCounter::find($resource_id);
-                $product_id = $data->product_id;
-                if ($data->delete()) {
-                    session()->flash('activeTab', $step);
-                    toast('counter deleted successfully', 'success');
-                    return redirect()->route('admin.product.edit', $product_id);
-                } else {
-                    session()->flash('activeTab', $step);
-                    toast('Something went wrong', 'error');
-                    return redirect()->route('admin.product.edit', $product_id);
-                }
             case 'pro_testimonial':
 
                 $data = ProductTestimonial::find($resource_id);

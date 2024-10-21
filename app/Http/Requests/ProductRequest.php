@@ -2,9 +2,10 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
+
 class ProductRequest extends FormRequest
 {
     /**
@@ -27,7 +28,7 @@ class ProductRequest extends FormRequest
             case 'pro_detail':
 
                 return [
-                    'menu_id'=>'required|exists:menus,id',
+                    'menu_id' => 'required|exists:menus,id',
                     'product_title' => 'required',
                     'service_title' => 'required',
                     'meta_keyword' => 'required',
@@ -37,13 +38,26 @@ class ProductRequest extends FormRequest
                     'service_description_2' => 'nullable',
                     'layout' => 'required',
                 ];
+            case 'layout':
+
+                return [
+                    'product_id' => 'required',
+                    'tab_name' => 'nullable',
+                    'tab_icon' => 'nullable',
+                    'header_icon' => 'nullable',
+                    'header_text' => 'nullable',
+                    'service_image' => 'nullable',
+                    'title' => 'required',
+                    'description' => 'required',
+                ];
+
             case 'feature':
 
                 return [
                     'feature.icon' => 'required',
                     'feature.title' => 'required',
                     'feature.detail' => 'required',
-                    'product_id'=>'required|exists:products,id'
+                    'product_id' => 'required|exists:products,id',
                 ];
             //     case 'whyus':
 
@@ -55,12 +69,12 @@ class ProductRequest extends FormRequest
             //             'product_id'=>'required|exists:products,id'
             //         ];
             // case 'pro_counter':
-                // return [
-                //     'counter.*.icon' => 'required',
-                //     'counter.*.count' => 'required',
-                //     'counter.*.title' => 'required',
-                //     'product_id'=>'required|exists:products,id'
-                // ];
+            // return [
+            //     'counter.*.icon' => 'required',
+            //     'counter.*.count' => 'required',
+            //     'counter.*.title' => 'required',
+            //     'product_id'=>'required|exists:products,id'
+            // ];
 
             case 'pro_testimonial':
                 return [
@@ -68,21 +82,21 @@ class ProductRequest extends FormRequest
                     'testi.name' => 'required',
                     'testi.designation' => 'required',
                     'testi.comment' => 'required',
-                    'product_id'=>'required|exists:products,id'
+                    'product_id' => 'required|exists:products,id',
                 ];
 
             case 'faqs':
                 return [
                     'faq.question' => 'required|string',
                     'faq.answer' => 'required|string',
-                    'product_id'=>'required|exists:products,id'
+                    'product_id' => 'required|exists:products,id',
                 ];
             case 'media':
                 return [
                     'main_img' => 'nullable',
                     'slider_img.*' => 'nullable',
-                    'product_banner'=>'nullable',
-                    'product_id'=>'required|exists:products,id'
+                    'product_banner' => 'nullable',
+                    'product_id' => 'required|exists:products,id',
                 ];
             default:
                 return [];

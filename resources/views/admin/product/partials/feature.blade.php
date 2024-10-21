@@ -115,6 +115,7 @@
         var form = $('#product_form')[0];
         var formData = new FormData(form);
 
+
         $.ajax({
             url: $('#product_form').attr('action'),
             type: 'POST',

@@ -137,10 +137,6 @@
             testimonialIndex++;
         }
 
-
-
-
-
         // faq div
         let faqIndex = 1;
 
@@ -171,9 +167,6 @@
 
             faqIndex++; // Increment faqIndex for next added FAQ
         }
-
-
-
 
         // preview of images
         function previewImages(input, previewContainerId) {
@@ -238,7 +231,6 @@
             @endif
 
         });
-
 
         // delete
         function deleteResource(resourceId) {
