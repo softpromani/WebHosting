@@ -8,7 +8,7 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link  " href="{{ route('home') }}">Home</a></li>
-                <li><a class="nav-link  " href="{{ route('aboutUs') }}">About</a></li>
+                {{-- <li><a class="nav-link  " href="{{ route('aboutUs') }}">About</a></li> --}}
                 @foreach ($menu as $m)
                     <li class="dropdown"><a href="#"><span>{{ $m->name }}</span> <i
                                 class="bi bi-chevron-down"></i></a>
@@ -39,7 +39,7 @@
                 </li>
                 <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li class="dropdown"><a href="#"><span>About Us</span></a></li>
+                        <li class="dropdown"><a href="{{ route('aboutUs') }}"><span>About Us</span></a></li>
                         <li class="dropdown"><a href="{{ route('security') }}"><span>Our Security</span></a></li>
                         <li class="dropdown"><a href="{{ route('partner') }}"><span>Partner</span></a></li>
                         <li class="dropdown"><a href="{{ route('testimonial') }}"><span>Testimonials</span></a></li>
