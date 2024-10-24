@@ -228,8 +228,11 @@
                         id="tab_four{{ $plan->id }}">
                         <div class="row ">
                             <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="{{ asset('storage/' . $plan->businessServiceImg->media ?? '') }}"
-                                    alt="Business Planning" class="border-radius-6px w-100" />
+                                @isset($plan->businessServiceImg->media)
+                                    <img src="{{ asset('storage/' . $plan->businessServiceImg->media ?? '') }}"
+                                        alt="Business Planning" class="border-radius-6px w-100" />
+                                @endisset
+
                             </div>
                             <div class="col-xl-4 col-md-6 offset-xl-1  text-md-start">
 

@@ -156,8 +156,10 @@
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td>
-                                        <img src="{{ asset('storage/' . $plan->businessServiceImg->media ?? '') }}"
-                                            height="50" width="50" />
+                                        @isset($plan->businessServiceImg->media)
+                                            <img src="{{ asset('storage/' . $plan->businessServiceImg->media ?? '') }}"
+                                                height="50" width="50" />
+                                        @endisset
                                     </td>
                                     <td>{{ $plan->tab_name ?? 'N/A' }}</td>
                                     <td>{{ $plan->tab_icon ?? 'N/A' }}</td>
