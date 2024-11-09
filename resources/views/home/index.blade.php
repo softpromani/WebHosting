@@ -480,7 +480,7 @@
                                     <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                             <img src="home/assets/homepage/images/99.99% Uptime.png" />
+                                             <img src="home/assets/homepage/images/99.99 Uptime.png" />
                                             </div>
                                             <div class="feature-box-content">
                                                 <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600"> 99.99%
