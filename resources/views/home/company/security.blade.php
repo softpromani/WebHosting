@@ -434,6 +434,20 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        .btn-get-started {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 10px 28px;
+            border-radius: 4px;
+            transition: 0.5s;
+            color: var(--text-color);
+            background: var(--primary-color);
+        }
     </style>
 
     <main id="main">
@@ -443,7 +457,7 @@
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>Security</h2>
+                    <h2>Our Security</h2>
                     <ol>
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><a href="#">Security</a></li>
@@ -461,10 +475,10 @@
                         <div class="single-feature">
                             <div class="title">
                                 <i class="fas fa-cogs"></i>
-                                <h3>Pen Testing</h3>
+                                <h3>Real-Time Monitoring</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore.</p>
+                            <p>Experience continuous threat detection and quick response, identifying risks in real time.
+                                Minimize cyber threats with prompt mitigation.</p>
                         </div>
                     </div>
 
@@ -472,10 +486,10 @@
                         <div class="single-feature">
                             <div class="title">
                                 <i class="fas fa-shield-alt"></i>
-                                <h3>Cyber Threat Hunting</h3>
+                                <h3>Scalability</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore.</p>
+                            <p>Our security services scale effortlessly with your business growth. Stay secure with seamless
+                                adjustments that evolve with the business.</p>
                         </div>
                     </div>
 
@@ -483,10 +497,10 @@
                         <div class="single-feature">
                             <div class="title">
                                 <i class="fas fa-lock"></i>
-                                <h3>Security Center</h3>
+                                <h3>Rapid Deployment</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore.</p>
+                            <p>Deploy security measures swiftly to protect your cloud environment. Strengthen your defenses
+                                quickly and focus on your business growth.</p>
                         </div>
                     </div>
                 </div>
@@ -502,7 +516,7 @@
                     <!-- Image Column -->
                     <div class="col-lg-6">
                         <div class="about-img">
-                            <img src="{{ asset('home/assets/img/about-img.jpg') }}"
+                            <img src="{{ asset('home/assets/img/Mounteko Security - Offering Unparalleled Data Protection.webp') }}"
                                 alt="Image showing login screen on a laptop">
                         </div>
                     </div>
@@ -510,14 +524,15 @@
                         <div class="about-content">
                             <div class="about-title">
                                 <span>About Us</span>
-                                <h2>Without stopping for a moment, we give you the best technology experience by discussing
-                                    our expertise to prevent theft or damage.</h2>
+                                <h2>Mounteko Security - Offering Unparalleled Data Protection</h2>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Take control of your business security with Mounteko's industry-leading protection for
+                                QuickBooks data. Our cutting-edge encryption, multi-layered firewalls, and 24*7 monitoring
+                                shields your sensitive financial information from cyber threats. With automatic backups and
+                                continuous defense, we guarantee the safety and reliability of your data, so you can focus
+                                on what matters most—growing your business with peace of mind.</p>
 
-                            <ul>
+                            {{-- <ul>
                                 <li>
                                     <i class="bx bx-check-circle bxCir"></i>
                                     Trusted Partner
@@ -534,7 +549,9 @@
                                     <i class="bx bx-check-circle bxCir"></i>
                                     Operational Security
                                 </li>
-                            </ul>
+                            </ul> --}}
+
+                            <a href="#" class="btn-get-started scrollto">Let`s Connect</a>
                         </div>
                     </div>
                 </div>
@@ -546,10 +563,10 @@
                 <div class="section-title sec">
                     <div class="row mb-3    ">
                         <div class="col-12">
-                            <span>Our Challenges</span>
+                            <span>Why Us ?</span>
                         </div>
                         <div class="col-12 col-sm-8 offset-sm-2 ">
-                            <h2>You Can Protect Your Organization’s Cybersecurity By Us</h2>
+                            <h2>Avail Professional Cloud Data Security Solutions From Us</h2>
                         </div>
                     </div>
 
@@ -559,10 +576,11 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-challenges custom-single-challenge overly-one">
                             <div class="overly-two">
-                                <i class="fas fa-user-secret "></i>
-                                <h3>Identifying Threats</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>
-                                <span class="mt-5 fas fa-user-secret background-icon"></span>
+                                <img src="home/assets/img/why us-Cloud Security Training.png" alt="">
+                                <h3>Cloud Security Training</h3>
+                                <p>Empower your team with cloud security training that builds awareness and resilience
+                                    against cyber threats. Ensure your staff is prepared to identify and mitigate risks.</p>
+                                {{-- <span class="mt-5 fas fa-user-secret background-icon"></span> --}}
 
                             </div>
                         </div>
@@ -571,10 +589,11 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-challenges custom-single-challenge overly-one">
                             <div class="overly-two">
-                                <i class="fas fa-shield-alt"></i>
-                                <h3>Cyber Risk Assessment</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>
-                                <span class=" mt-5 fas fa-shield-alt background-icon"></span>
+                                <img src="home/assets/img/why us-Threat Intelligence Integration.png" alt="">
+                                <h3>Threat Intelligence Integration</h3>
+                                <p>Stay ahead of cyber threats with real-time threat intelligence integration. Proactively
+                                    detect and defend against emerging risks with actionable insights.</p>
+                                {{-- <span class=" mt-5 fas fa-shield-alt background-icon"></span> --}}
 
                             </div>
                         </div>
@@ -583,10 +602,12 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-challenges custom-single-challenge overly-one">
                             <div class="overly-two">
-                                <i class="fas fa-tools"></i> <!-- FontAwesome icon -->
-                                <h3>Testing Cyber Security</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>
-                                <span class="  mt-5 fas fa-tools background-icon"></span>
+                                 <img src="home/assets/img/why us-Data Loss Prevention.png" alt=""> <!-- FontAwesome icon -->
+                                <h3>Data Loss Prevention</h3>
+                                <p>Safeguard your critical information with data loss prevention tools that monitor and
+                                    protect against accidental or malicious data leaks. Keep sensitive data secure and
+                                    compliant.</p>
+                                {{-- <span class="  mt-5 fas fa-tools background-icon"></span> --}}
                                 <!-- FontAwesome icon for background -->
                             </div>
                         </div>
@@ -595,10 +616,11 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-challenges custom-single-challenge overly-one">
                             <div class="overly-two">
-                                <i class="fas fa-cloud"></i> <!-- FontAwesome icon -->
-                                <h3>Managing Cloud Security</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>
-                                <span class="  mt-5 fas fa-cloud background-icon"></span>
+                                <img src="home/assets/img/why us-Backup and Disaster Recovery.png" alt=""></i> <!-- FontAwesome icon -->
+                                <h3>Backup and Disaster Recovery</h3>
+                                <p>Ensure business continuity with regular backups and a solid disaster recovery plan.
+                                    Quickly restore data and systems to minimize downtime in case of an emergency.</p>
+                                {{-- <span class="  mt-5 fas fa-cloud background-icon"></span> --}}
                                 <!-- FontAwesome icon for background -->
                             </div>
                         </div>
@@ -650,18 +672,20 @@
                     <div class="col-lg-6">
                         <div class="solution-content">
                             <div class="solution-title">
-                                <span>All-in Solution</span>
-                                <h4>Our experts are providing and planning 24/7 technical support services with product and
-                                    security consultation.</h4>
+                                <span>Mounteko’s Approach to Data Confidentiality & Security</span>
+                                <h4>Our QuickBooks cloud hosting services providers always follow a streamline approach to
+                                    ensure 100% data security and confidentiality. Here’s a step-by-step approach we follow
+                                    so far. </h4>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-md-6">
                                     <div class="single-solution overly-one">
                                         <span class="number">01</span>
                                         <div class="overly-two">
-                                            <h4><a href="#">Product Consultation</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                            <h4><a href="#">Risk Assessment and Prioritization</a></h4>
+                                            <p>We conduct thorough risk assessments to identify potential vulnerabilities
+                                                and prioritize them based on impact. This ensures proactive protection
+                                                against threats.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -669,9 +693,9 @@
                                     <div class="single-solution overly-one">
                                         <span class="number">02</span>
                                         <div class="overly-two">
-                                            <h4><a href="#">Security Consultation</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                            <h4><a href="#">Continuous Monitoring & Analysis</a></h4>
+                                            <p>Our systems provide 24/7 monitoring and real-time analysis, allowing us to
+                                                detect and mitigate threats before they affect your data or operations.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -679,9 +703,8 @@
                                     <div class="single-solution overly-one">
                                         <span class="number">03</span>
                                         <div class="overly-two">
-                                            <h4><a href="#">24/7 Technical Support</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                            <h4><a href="#">Incident Response & Disaster Recovery</a></h4>
+                                            <p>In case of a breach or disaster, our rapid response and recovery protocols ensure minimal downtime. We swiftly restore data and secure your cloud environment.</p>
                                         </div>
                                     </div>
                                 </div>

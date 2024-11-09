@@ -14,12 +14,14 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
-            <h1>Facilitate Remote Collaboration</h1>
-            <h2>Offering robust and secure cloud solutions specific for your business requirements</h2>
+            <h1>Streamline Your Business Operations with Secured Cloud Hosting Services</h1>
+            <h2>Power your business with premium cloud hosting solutions by Mounteko. With lightning-fast performance,
+                99.95% uptime, and expert support, we provide the perfect cloud hosting platform for your growing business.
+            </h2>
             <div class="d-flex">
-                <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
-                        class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                <a href="#about" class="btn-get-started scrollto">Book A Consultation</a>
+                {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
+                        class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
             </div>
         </div>
     </section>
@@ -42,9 +44,10 @@
                 <div class="row justify-content-center mb-3">
                     <div class="col-lg-7 text-center"
                         data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">What we offers</span>
+                        <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">Our Offerings</span>
                         <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px shadow-none" data-shadow-animation="true"
-                            data-animation-delay="1000">Explore the <span class="text-highlight fw-800">services<span
+                            data-animation-delay="1000">Top-Notch Cloud Hosting <span
+                                class="text-highlight fw-800">Services<span
                                     class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span></span>
                         </h3>
                     </div>
@@ -56,7 +59,7 @@
                             class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
                             <div class="position-relative box-image">
                                 <a href="#"><img
-                                        src="{{ asset('home/assets/homepage/images/images-demo-startup-01.jpg') }}"
+                                        src="{{ asset('home/assets/homepage/images/Homepage-QuickBooks Hosting (1).png') }}"
                                         alt=""></a>
                                 <a href="#"
                                     class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Research
@@ -66,9 +69,9 @@
                                 <div
                                     class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
                                     <a href="demo-startup-services-details.html"
-                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Research
-                                        planning</a>
-                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p>
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px"> QuickBooks
+                                        Hosting</a>
+                                    <p>Access QuickBooks securely in the cloud with fast performance and 24/7 support.</p>
                                 </div>
                                 <div
                                     class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
@@ -91,7 +94,7 @@
                             class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
                             <div class="position-relative box-image">
                                 <a href="demo-startup-services-details.html"><img
-                                        src="{{ asset('home/assets/homepage/images/images-demo-startup-02.jpg') }}"
+                                        src="{{ asset('home/assets/homepage/images/Homepage-Sage Application Hosting.png') }}"
                                         alt=""></a>
                                 <a href="#"
                                     class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Business</a>
@@ -99,10 +102,11 @@
                             <div class="bg-white">
                                 <div
                                     class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
-                                    <a href="#"
-                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Business
-                                        promotion</a>
-                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p>
+                                    <a href="#" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">
+                                        Sage Application Hosting</a>
+                                    <p>Run Sage in the cloud with secure access and guaranteed uptime.
+
+                                    </p>
                                 </div>
                                 <div
                                     class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
@@ -125,7 +129,7 @@
                             class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
                             <div class="position-relative box-image">
                                 <a href="demo-startup-services-details.html"><img
-                                        src="{{ asset('home/assets/homepage/images/images-demo-startup-03.jpg') }}"
+                                        src="{{ asset('home/assets/homepage/images/Homepage-Tax software Hosting (1).png') }}"
                                         alt=""></a>
                                 <a href="#"
                                     class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Revenue</a>
@@ -134,9 +138,10 @@
                                 <div
                                     class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
                                     <a href="demo-startup-services-details.html"
-                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Revenue
-                                        generation</a>
-                                    <p>Lorem ipsum simply dummy text of amet consectetur.</p>
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px"> Tax Software
+                                        Hosting</a>
+                                    <p>Host your tax software in the cloud for secure, remote access and seamless updates.
+                                    </p>
                                 </div>
                                 <div
                                     class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
@@ -166,7 +171,7 @@
                             <div class="position-relative d-inline-block"
                                 data-anime='{ "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                                 <img class="w-90 border-radius-5px animation-float"
-                                    src="{{ asset('home/assets/homepage/images/images-demo-startup-06.jpg') }}"
+                                    src="{{ asset('home/assets/homepage/images/Homepage-Understand and apply the business process.webp') }}"
                                     alt="">
                             </div>
                             <figcaption
@@ -190,7 +195,7 @@
                     <div class="col-xl-5 offset-xl-1 col-lg-6 col-md-8">
                         <h3 class="fw-600 mb-60px md-mb-40px mt-20px text-dark-gray alt-font ls-minus-2px"
                             data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            Understand and apply the <span class="fw-800">business process.</span></h3>
+                            Our Transparent Cloud <span class="fw-800">Hosting Process</span></h3>
                         <div class="row row-cols-1"
                             data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <!-- start process step item -->
@@ -206,10 +211,10 @@
                                         <span class="progress-step-separator bg-extra-medium-gray"></span>
                                     </div>
                                     <div class="process-content ps-35px last-paragraph-no-margin mb-30px">
-                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Research and
-                                            strategy</span>
-                                        <p class="w-80 lg-w-90 sm-w-100">We spend enough time to uncover business goals and
-                                            client needs.</p>
+                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Consultation &
+                                            Planning</span>
+                                        <p class="w-80 lg-w-90 sm-w-100">We begin with a detailed consultation to
+                                            understand your needs and plan the optimal cloud solution.</p>
                                     </div>
                                 </div>
                             </div>
@@ -227,10 +232,10 @@
                                         <span class="progress-step-separator bg-extra-medium-gray"></span>
                                     </div>
                                     <div class="process-content ps-35px last-paragraph-no-margin mb-30px">
-                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Development and
-                                            scale</span>
-                                        <p class="w-80 lg-w-90 sm-w-100">We utilize our best talents to design digital
-                                            products and services.</p>
+                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Setup &
+                                            Migration</span>
+                                        <p class="w-80 lg-w-90 sm-w-100">Our team configures your cloud environment and
+                                            securely migrates your data, ensuring a smooth transition.</p>
                                     </div>
                                 </div>
                             </div>
@@ -247,10 +252,10 @@
                                         </div>
                                     </div>
                                     <div class="process-content ps-35px last-paragraph-no-margin">
-                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Testing and
-                                            evaluation</span>
-                                        <p class="w-80 lg-w-90 sm-w-100">Before the launch, our team test complete website
-                                            thoroughly.</p>
+                                        <span class="d-block fw-700 text-dark-gray mb-5px fs-18 alt-font">Integration &
+                                            Support</span>
+                                        <p class="w-80 lg-w-90 sm-w-100">We customize your cloud setup, integrate it with
+                                            your existing systems, and provide ongoing training and support.</p>
                                     </div>
                                 </div>
                             </div>
@@ -277,12 +282,27 @@
                     </div>
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
                         <h6>Company's vision</h6>
-                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Scalable business for startups</h3>
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Cloud Solutions with Mounteko: Boost Your Business
+                            Efficiency</h3>
                         <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">
-                            Lorem ipsum dolor sit amet consectetur elit adipiscing elit do eiusmod tempor incididunt ut
-                            labore
-                            et dolore magna ut enim.
+                            Streamline your business operations with our all-encompassing cloud solutions. Our professional
+                            QuickBooks hosting providers ensure unmatched productivity through flawless QuickBooks
+                            Enterprise hosting with near-zero downtime. Experience unparalleled flexibility with our
+                            high-speed QuickBooks desktop hosting, offering seamless access to your applications from
+                            anywhere.
+
+                        <ul>
+                            <li><b>● QuickBooks Enterprise Hosting:</b> Seamless migration and 99.99% uptime.</li>
+                            <li><b>● Managed Security: </b> Advanced cybersecurity with 24/7 expert support.</li>
+                            <li><b>● Managed Backup: </b> Reliable data protection and elimination of on-premise backups.
+                            </li>
+                            <li><b>● Cloud Desktop: </b> High-performance access to your desktop and applications from
+                                anywhere.</li>
+                        </ul>
+
+
                         </p>
+
 
                         <a href="#"
                             class="btn btn-dark-gray abtcomp  btn-round-edge btn-medium me-25px  hover-bounce">About
@@ -324,15 +344,16 @@
                     <div class="col-xl-5 col-lg-6 md-mb-30px xs-mb-25px">
                         <h3 class="fw-600 text-dark-gray ls-minus-2px mb-0"
                             data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            We develop and create consulting good future.</h3>
+                            Looking for Future-Driven Cloud Hosting for QuickBooks?</h3>
                     </div>
                     <div class="col-lg-6 offset-xl-1">
                         <p class="w-90 sm-w-100 mx-auto mx-lg-0"
                             data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            Adipiscing elit, sed do eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco. Adipiscing elitdo eiusmod tempor.</p>
-                        <a href="#" class="btn btn-link exp text-dark-gray xs-mt-15px xs-mb-15px  ">Explore
-                            services</a>
+                            With years of industrial experience and technical expertise, Mounteko can be your one-stop
+                            destination for all your QuickBooks cloud hosting needs. Feel free to discuss your business
+                            requirements with our professionals. </p>
+                        <a href="#" class="btn btn-link exp text-dark-gray xs-mt-15px xs-mb-15px  ">Choose us Today
+                            for a Better Tomorrow</a>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center mt-5 md-mt-10">
@@ -345,8 +366,8 @@
                                     data-to="2010"></h2>
                             </div>
                             <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin text-md-end text-xl-start">
-                                <span class="fs-20 text-dark-gray fw-600 alt-font">Crafto founded</span>
-                                <p>Founded a company</p>
+                                <span class="fs-20 text-dark-gray fw-600 alt-font">24*7 </span>
+                                <p>Customer Support</p>
                             </div>
                         </div>
                         <!-- end counter item -->
@@ -357,8 +378,8 @@
                                     data-to="2014"></h2>
                             </div>
                             <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin text-md-end text-xl-start">
-                                <span class="fs-20 text-dark-gray fw-600 alt-font">Expand team</span>
-                                <p>Opportunity to expand</p>
+                                <span class="fs-20 text-dark-gray fw-600 alt-font">99.95% </span>
+                                <p>Uptime</p>
                             </div>
                         </div>
                         <!-- end counter item -->
@@ -378,8 +399,8 @@
                                     data-to="2019"></h2>
                             </div>
                             <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin">
-                                <span class="fs-20 text-dark-gray fw-600 alt-font">Build new office</span>
-                                <p>Building a new office</p>
+                                <span class="fs-20 text-dark-gray fw-600 alt-font">100+ </span>
+                                <p>Domain Experts</p>
                             </div>
                         </div>
                         <!-- end counter item -->
@@ -390,8 +411,8 @@
                                     data-to="2021"></h2>
                             </div>
                             <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin">
-                                <span class="fs-20 text-dark-gray fw-600 alt-font">Winning award</span>
-                                <p>The power of winning</p>
+                                <span class="fs-20 text-dark-gray fw-600 alt-font">90% </span>
+                                <p>Better Results</p>
                             </div>
                         </div>
                         <!-- end counter item -->
@@ -415,14 +436,14 @@
                                     <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                                <i
-                                                    class="line-icon-Like icon-extra-large text-base-color mb-20px justify-content-center"></i>
+                                                <img src="home/assets/homepage/images/Homepage- 247 Assistance.png" />
                                             </div>
                                             <div class="feature-box-content">
-                                                <span
-                                                    class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Honorable</span>
+                                                <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600"> 24*7
+                                                    Assistance</span>
                                                 <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
-                                                    Lorem ipsum is simply dummy text.</p>
+                                                    Our QuickBooks cloud hosting providers are there to assist you
+                                                    round-the-clock.</p>
                                             </div>
                                             <div class="feature-box-overlay bg-base-color"></div>
                                         </div>
@@ -435,14 +456,14 @@
                                     <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                                <i
-                                                    class="line-icon-Knight icon-extra-large text-base-color mb-20px justify-content-center"></i>
+                                                <img src="home/assets/homepage/images/High-end Security.png" />
                                             </div>
                                             <div class="feature-box-content">
-                                                <span
-                                                    class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Analytics</span>
+                                                <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600">High-end
+                                                    Security</span>
                                                 <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
-                                                    Lorem ipsum is simply dummy text.</p>
+                                                    Protect your data with our comprehensive and high-end security measures.
+                                                </p>
                                             </div>
                                             <div class="feature-box-overlay bg-base-color"></div>
                                         </div>
@@ -459,14 +480,14 @@
                                     <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                                <i
-                                                    class="line-icon-MaleFemale icon-extra-large text-base-color mb-20px justify-content-center"></i>
+                                             <img src="home/assets/homepage/images/99.99% Uptime.png" />
                                             </div>
                                             <div class="feature-box-content">
-                                                <span
-                                                    class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Leadership</span>
+                                                <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600"> 99.99%
+                                                    Uptime</span>
                                                 <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
-                                                    Lorem ipsum is simply dummy text.</p>
+                                                    We have robust servers delivering an industry-leading standard of
+                                                    ultra-reliable performance. </p>
                                             </div>
                                             <div class="feature-box-overlay bg-base-color"></div>
                                         </div>
@@ -479,14 +500,14 @@
                                     <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                                <i
-                                                    class="line-icon-Bar-Chart2 icon-extra-large text-base-color mb-20px justify-content-center"></i>
+                                              <img src="home/assets/homepage/images/Reliable Hosting Plans.png" />
                                             </div>
                                             <div class="feature-box-content">
-                                                <span
-                                                    class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Production</span>
+                                                <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Reliable
+                                                    Hosting Plans</span>
                                                 <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
-                                                    Lorem ipsum is simply dummy text.</p>
+                                                    Get customized and reliable QuickBooks hosting plans that work wonders
+                                                    for your business.</p>
                                             </div>
                                             <div class="feature-box-overlay bg-base-color"></div>
                                         </div>
@@ -498,11 +519,16 @@
                     </div>
                     <div class="col-lg-5 offset-lg-1 text-center text-lg-start"
                         data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                        <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px">Why choose our company services?</h2>
-                        <p class="w-90 xs-w-100 mx-auto mx-lg-0">Lorem ipsum dolor amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam.</p>
+                        <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px">How Mounteko QuickBooks Cloud Hosting Can
+                            Make A Difference?</h2>
+                        <p class="w-90 xs-w-100 mx-auto mx-lg-0">At Mounteko, we deliver more than QuickBooks cloud
+                            hosting—we craft scalable, future-proof solutions that drive your business forward. Enjoy
+                            ultra-fast deployment, top-notch security, and 24/7 expert support. Whether it's QuickBooks
+                            hosting or virtual desktops, our cutting-edge infrastructure ensures reliability and growth.
+                            Choose us for a seamless cloud experience that meets modern demands.</p>
                         <a href="demo-consulting-contact.html"
-                            class="btn btn-large btn-dark-gray btn-box-shadow mt-10px btn-round-edge">Get started now!</a>
+                            class="btn btn-large btn-dark-gray btn-box-shadow mt-10px btn-round-edge">Connect with
+                            Experts</a>
                     </div>
                 </div>
             </div>
@@ -545,8 +571,8 @@
                 <div class="section-title">
                     <h2>F.A.Q</h2>
                     <h3>Frequently Asked <span>Questions</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.</p>
+                    {{-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
+                        vitae autem.</p> --}}
                 </div>
 
                 <div class="row justify-content-center">
