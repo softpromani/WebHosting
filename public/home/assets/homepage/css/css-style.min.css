@@ -9252,7 +9252,7 @@ blockquote footer {
     transform: translateY(30px);
 }
 .feature-box .content-slide-up .text-visible {
-    opacity: 0;
+    /* opacity: 1; */
 }
 .feature-box .border-hover {
     left: 0;
@@ -16058,7 +16058,7 @@ footer .newsletter-style-05 .input-small {
         color: #6c757d;
     }
 
-    
+
 
     .btn-lg {
         font-size: 16px;
