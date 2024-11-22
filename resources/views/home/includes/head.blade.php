@@ -31,6 +31,18 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Include Jarallax -->
 <script src="https://cdn.jsdelivr.net/npm/jarallax/dist/jarallax.min.js"></script>
+<meta name="google-site-verification" content="TowyqeqANQPzTSTRfMIifyCC6_1dyStdpZq7GiGa4KE" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EQNV0FBQ99"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EQNV0FBQ99');
+</script>
+
 <style>
     :root {
         --primary-color: {{ $theme_setting->where('key', 'primary')->first()->value ?? '#65E82E' }};
@@ -38,3 +50,4 @@
         --text-color: #fff !important;
     }
 </style>
+
