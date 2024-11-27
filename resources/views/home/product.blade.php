@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Contact Us')
+@section('title', optional($products)->slug ?? 'product')
 @section('header-area')
     <meta name="keywords" content="{{ $products->meta_keyword ?? '' }}">
     <meta name="description" content="{{ $products->meta_description ?? '' }}">
