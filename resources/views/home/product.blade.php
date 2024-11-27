@@ -1,6 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'Contact Us')
 @section('header-area')
+    <meta name="keywords" content="{{ $products->meta_keyword ?? '' }}">
+    <meta name="description" content="{{ $products->meta_description ?? '' }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         :root {
