@@ -1,8 +1,8 @@
 @extends('home.includes.layout')
 @section('title', optional($products)->slug ?? 'product')
 @section('header-area')
-    <meta name="keywords" content="{{ $products->meta_keyword ?? '' }}">
-    <meta name="description" content="{{ $products->meta_description ?? '' }}">
+    <meta name="keywords" content="{{ $products->meta_keyword}}">
+    <meta name="description" content="{{ $products->meta_description}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         :root {
