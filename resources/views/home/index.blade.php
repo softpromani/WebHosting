@@ -61,9 +61,7 @@
                                 <a href="#"><img
                                         src="{{ asset('home/assets/homepage/images/Homepage-QuickBooks Hosting (1).png') }}"
                                         alt=""></a>
-                                <a href="#"
-                                    class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Research
-                                </a>
+
                             </div>
                             <div class="bg-white">
                                 <div
@@ -96,8 +94,7 @@
                                 <a href="demo-startup-services-details.html"><img
                                         src="{{ asset('home/assets/homepage/images/Homepage-Sage Application Hosting.png') }}"
                                         alt=""></a>
-                                <a href="#"
-                                    class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Business</a>
+
                             </div>
                             <div class="bg-white">
                                 <div
@@ -131,8 +128,7 @@
                                 <a href="demo-startup-services-details.html"><img
                                         src="{{ asset('home/assets/homepage/images/Homepage-Tax software Hosting (1).png') }}"
                                         alt=""></a>
-                                <a href="#"
-                                    class="btn btn-very-small btn-rounded btn-dark-gray text-white btn-box-shadow ps-15px pe-15px pt-5px pb-5px lh-16 position-absolute right-30px top-30px text-uppercase">Revenue</a>
+
                             </div>
                             <div class="bg-white">
                                 <div
@@ -174,7 +170,7 @@
                                     src="{{ asset('home/assets/homepage/images/Homepage-Understand and apply the business process.webp') }}"
                                     alt="">
                             </div>
-                            <figcaption
+                            {{-- <figcaption
                                 class="position-absolute bg-white box-shadow-quadruple-large border-radius-5px bottom-50px xs-bottom-35px left-minus-30px md-left-minus-0px ps-50px pe-50px pt-35px pb-35px xs-p-20px w-320px xs-w-250px text-center last-paragraph-no-margin"
                                 data-anime='{ "translateY": [50, 0], "scale": [0.8,1], "opacity": [0,1], "duration": 800, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
                                 <div class="icon-with-text-style-06">
@@ -189,7 +185,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </figcaption>
+                            </figcaption> --}}
                         </figure>
                     </div>
                     <div class="col-xl-5 offset-xl-1 col-lg-6 col-md-8">
@@ -304,7 +300,7 @@
                         </p>
 
 
-                        <a href="#"
+                        {{-- <a href="#"
                             class="btn btn-dark-gray abtcomp  btn-round-edge btn-medium me-25px  hover-bounce">About
                             Company</a>
                         <a href="#" class="btn btn-link text-dark-gray xs-mt-15px xs-mb-15px  ">How We Work</a>
@@ -329,7 +325,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -480,7 +476,7 @@
                                     <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                             <img src="home/assets/homepage/images/99.99 Uptime.png" />
+                                                <img src="home/assets/homepage/images/99.99 Uptime.png" />
                                             </div>
                                             <div class="feature-box-content">
                                                 <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600"> 99.99%
@@ -500,7 +496,7 @@
                                     <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                              <img src="home/assets/homepage/images/Reliable Hosting Plans.png" />
+                                                <img src="home/assets/homepage/images/Reliable Hosting Plans.png" />
                                             </div>
                                             <div class="feature-box-content">
                                                 <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Reliable
