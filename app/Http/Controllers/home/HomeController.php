@@ -109,7 +109,7 @@ class HomeController extends Controller
         $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
         $testimonial=Testimonial::get();
         $blogs = Blog::with('blogImage')->get();
-        return view('home.company.faq',compact('testimonial','faqs','blogs'));
+        return view('home.company.testimonial',compact('testimonial','faqs','blogs'));
     }
 
 }

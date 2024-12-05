@@ -1,8 +1,8 @@
 @extends('home.includes.layout')
 @section('title', optional($products)->slug ?? 'product')
 @section('header-area')
-    <meta name="keywords" content="{{ $products->meta_keyword}}">
-    <meta name="description" content="{{ $products->meta_description}}">
+    <meta name="keywords" content="{{ $products->meta_keyword }}">
+    <meta name="description" content="{{ $products->meta_description }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         :root {
@@ -1287,7 +1287,7 @@
     {{-- Silder --}}
     <div class="container mt-5">
         <div class="row gy-4">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
                 {!! $products->service_title ?? '' !!}
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
@@ -1317,11 +1317,10 @@
 
                     </div>
                 </div>
-                <div class="col-lg-6 product-content-description">
+                <div class="col-lg-6 d-flex align-items-center product-content-description">
                     {!! $products->product_description !!}
                 </div>
             </div>
-
         </div>
 
     </section>
