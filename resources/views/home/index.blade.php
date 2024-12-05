@@ -356,24 +356,18 @@
                     <div class="col-xl-4 col-lg-3 col-md-4 sm-mb-35px"
                         data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
                         <!-- start counter item -->
-                        <div class="row align-items-center mb-50px sm-mb-35px">
-                            <div class="col-5 col-xl-5 col-md-12 text-end">
-                                <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter" data-speed="2000"
-                                    data-to="2010"></h2>
-                            </div>
-                            <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin text-md-end text-xl-start">
+                        <div class="row align-items-center mb-50px sm-mb-35px text-end me-5">
+
+                            <div class="col-12 col-xl-12 col-md-12 last-paragraph-no-margin ">
                                 <span class="fs-20 text-dark-gray fw-600 alt-font">24*7 </span>
                                 <p>Customer Support</p>
                             </div>
                         </div>
                         <!-- end counter item -->
                         <!-- start counter item -->
-                        <div class="row align-items-center">
-                            <div class="col-5 col-xl-5 col-md-12 text-end">
-                                <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter" data-speed="2000"
-                                    data-to="2014"></h2>
-                            </div>
-                            <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin text-md-end text-xl-start">
+                        <div class="row text-end align-items-end me-5">
+
+                            <div class="col-12 col-xl-12 col-md-12 last-paragraph-no-margin ">
                                 <span class="fs-20 text-dark-gray fw-600 alt-font">99.95% </span>
                                 <p>Uptime</p>
                             </div>
@@ -389,24 +383,18 @@
                     <div class="col-xl-4 col-lg-3 col-md-4"
                         data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'>
                         <!-- start counter item -->
-                        <div class="row align-items-center mb-50px sm-mb-35px">
-                            <div class="col-5 col-xl-5 col-md-12 text-end text-xl-end text-md-start">
-                                <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter" data-speed="2000"
-                                    data-to="2019"></h2>
-                            </div>
-                            <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin">
+                        <div class="row align-items-center mb-50px sm-mb-35px ms-5">
+
+                            <div class="col-12 col-xl-12 col-md-12 last-paragraph-no-margin">
                                 <span class="fs-20 text-dark-gray fw-600 alt-font">100+ </span>
                                 <p>Domain Experts</p>
                             </div>
                         </div>
                         <!-- end counter item -->
                         <!-- start counter item -->
-                        <div class="row align-items-center">
-                            <div class="col-5 col-xl-5 col-md-12 text-end text-xl-end text-md-start">
-                                <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter" data-speed="2000"
-                                    data-to="2021"></h2>
-                            </div>
-                            <div class="col-7 col-xl-7 col-md-12 last-paragraph-no-margin">
+                        <div class="row align-items-center ms-5">
+
+                            <div class="col-12 col-xl-12 col-md-12 last-paragraph-no-margin">
                                 <span class="fs-20 text-dark-gray fw-600 alt-font">90% </span>
                                 <p>Better Results</p>
                             </div>
