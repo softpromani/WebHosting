@@ -55,11 +55,13 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         $validatedData = $request->validated();
+        // dd($request->all());
         $step = $request->input('step');
 
         switch ($step) {
             case 'pro_detail':
                 if (isset($request->product_id)) {
+
                     $product = Product::find($request->product_id);
                     $product->update($validatedData);
                     if ($request->hasFile('main_img')) {
@@ -303,7 +305,7 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, string $id)
     {
-        dd($request->all());
+        // dd($request->all());
         $validatedData = $request->validated();
         $step = $request->input('step');
         $product = Product::find($id);

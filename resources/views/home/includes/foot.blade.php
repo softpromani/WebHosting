@@ -10,3 +10,4 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('home/assets/js/main.js') }}"></script>
+  @yield('{!!  $products->meta_page !!}')

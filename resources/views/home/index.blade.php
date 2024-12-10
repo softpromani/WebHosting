@@ -555,12 +555,18 @@
                 <div class="section-title">
                     <h2>F.A.Q</h2>
                     <h3>Frequently Asked <span>Questions</span></h3>
-                    {{-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.</p> --}}
+
                 </div>
 
                 <div class="row justify-content-center">
-                    <div class="col-xl-10">
+                    <div class="col-xl-4 ">
+                        <div class="card-img mb-3">
+                            <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
+                                class="img-fluid services-img rounded">
+
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
                         <ul class="faq-list">
 
                             @foreach ($faqs as $index => $faq)

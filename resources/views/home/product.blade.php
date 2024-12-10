@@ -1755,4 +1755,5 @@
             });
         });
     </script>
+
 @endsection

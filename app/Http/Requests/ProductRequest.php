@@ -33,6 +33,7 @@ class ProductRequest extends FormRequest
                     'service_title' => 'required',
                     'meta_keyword' => 'required',
                     'meta_description' => 'required',
+                    'meta_page' => 'required',
                     'product_description' => 'required',
                     'service_description_1' => 'nullable',
                     'service_description_2' => 'nullable',
