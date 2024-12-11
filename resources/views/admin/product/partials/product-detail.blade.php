@@ -177,11 +177,7 @@
                     .catch(error => {
                         console.error(error);
                     });
-                ClassicEditor
-                    .create(document.querySelector('#meta_page'))
-                    .catch(error => {
-                        console.error(error);
-                    });
+                
                 $('#main_img').on('change', function() {
                     var input = this;
                     if (input.files && input.files[0] && input.files[0].type.startsWith('image/')) {
