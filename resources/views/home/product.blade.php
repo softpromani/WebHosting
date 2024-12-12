@@ -1286,8 +1286,8 @@
 
     {{-- Silder --}}
     <div class="container mt-5">
-        <div class="row gy-4">
-            <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-4 ">
+            <div class="col-lg-6 d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
                 {!! $products->service_title ?? '' !!}
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
@@ -1310,14 +1310,14 @@
         <div class="container">
             <div class="row gy-4">
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img">
                         <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
                             class="img-fluid services-img rounded">
 
                     </div>
                 </div>
-                <div class="col-lg-6 product-content-description">
+                <div class="col-lg-6 product-content-description d-flex justify-content-center align-items-center">
                     {!! $products->product_description !!}
                 </div>
             </div>
@@ -1756,6 +1756,6 @@
         });
     </script>
     @isset($products->meta_page)
-    {!! $products->meta_page !!}
-    @endif
-@endsection
+        {!! $products->meta_page !!}
+        @endif
+    @endsection
