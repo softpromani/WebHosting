@@ -1317,7 +1317,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-6 d-flex align-items-center product-content-description">
+                <div class="col-lg-6 product-content-description">
                     {!! $products->product_description !!}
                 </div>
             </div>
