@@ -1287,7 +1287,7 @@
     {{-- Silder --}}
     <div class="container mt-5">
         <div class="row gy-4 ">
-            <div class="col-lg-6 d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
                 {!! $products->service_title ?? '' !!}
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
@@ -1317,7 +1317,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-6 product-content-description d-flex justify-content-center align-items-center">
+                <div class="col-lg-6 product-content-description d-flex flex-column justify-content-center align-items-center">
                     {!! $products->product_description !!}
                 </div>
             </div>
