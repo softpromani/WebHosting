@@ -1,5 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Why us')
+@section('title', 'Mounteko Cloud Hosting Reviews | Customer Experience | Success Stories')
+@section('meta-description', 'Mounteko Cloud Hosting became the #1 QuickBooks Hosting provider due to its best-in-class IT infrastructures, lightning-fast services, and exceptional customer care.')
 @section('header-area')
     <link href="{{ asset('home/assets/css/whyUs.css') }}" rel="stylesheet">
 
@@ -36,7 +37,7 @@
 
 
 
-         <!-- ======= Testimonials Section ======= -->
+        <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
             <div class="container" data-aos="zoom-in">
 

@@ -1,7 +1,9 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>WebHosting - @yield('title') </title>
+<title>@yield('title') </title>
+<meta name="keywods" content="@yield('meta-keyword')">
+<meta name="description" content="@yield('meta-description')">
 
 <!-- Favicons -->
 <link href="{{ asset('home/assets/img/favicon.png') }}" rel="icon">
@@ -34,11 +36,14 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EQNV0FBQ99"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-EQNV0FBQ99');
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EQNV0FBQ99');
 </script>
 
 <style>
@@ -48,4 +53,3 @@
         --text-color: #fff !important;
     }
 </style>
-

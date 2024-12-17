@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Why us')
+@section('title', 'Frequently Asked Questions by Users ')
 @section('header-area')
     <link href="{{ asset('home/assets/css/whyUs.css') }}" rel="stylesheet">
 

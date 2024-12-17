@@ -1,5 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Security')
+@section('title', 'Mounteko Security - Offering Unparalleled Data Protection')
+@section('meta-description', 'Take control of your business security with Mounteko\'s industry-leading protection for QuickBooks data. With automatic backups and continuous defense, we guarantee the safety and reliability of your data,')
 @section('content')
     <style>
         .securityfeature-area {
@@ -602,7 +603,8 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-challenges custom-single-challenge overly-one">
                             <div class="overly-two">
-                                 <img src="home/assets/img/why us-Data Loss Prevention.png" alt=""> <!-- FontAwesome icon -->
+                                <img src="home/assets/img/why us-Data Loss Prevention.png" alt="">
+                                <!-- FontAwesome icon -->
                                 <h3>Data Loss Prevention</h3>
                                 <p>Safeguard your critical information with data loss prevention tools that monitor and
                                     protect against accidental or malicious data leaks. Keep sensitive data secure and
@@ -616,7 +618,8 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-challenges custom-single-challenge overly-one">
                             <div class="overly-two">
-                                <img src="home/assets/img/why us-Backup and Disaster Recovery.png" alt=""></i> <!-- FontAwesome icon -->
+                                <img src="home/assets/img/why us-Backup and Disaster Recovery.png" alt=""></i>
+                                <!-- FontAwesome icon -->
                                 <h3>Backup and Disaster Recovery</h3>
                                 <p>Ensure business continuity with regular backups and a solid disaster recovery plan.
                                     Quickly restore data and systems to minimize downtime in case of an emergency.</p>
@@ -704,7 +707,9 @@
                                         <span class="number">03</span>
                                         <div class="overly-two">
                                             <h4><a href="#">Incident Response & Disaster Recovery</a></h4>
-                                            <p>In case of a breach or disaster, our rapid response and recovery protocols ensure minimal downtime. We swiftly restore data and secure your cloud environment.</p>
+                                            <p>In case of a breach or disaster, our rapid response and recovery protocols
+                                                ensure minimal downtime. We swiftly restore data and secure your cloud
+                                                environment.</p>
                                         </div>
                                     </div>
                                 </div>

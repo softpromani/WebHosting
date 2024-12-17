@@ -1,5 +1,8 @@
 @extends('home.includes.layout')
-@section('title', 'About Us')
+@section('title', 'About Mounteko Cloud Hosting Providers')
+@section('meta-description', 'We are a trusted provider of cloud solutions, dedicated to making technology accessible
+    and secure. Our mission is to empower businesses with efficient, scalable, and adaptable tools that fit today’s dynamic
+    work environment.')
 @section('header-area')
     <!-- style sheets and font icons -->
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-vendors.min.css') }}">
@@ -90,7 +93,8 @@
                     <div
                         class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18 pb-18 ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
                         <div class="feature-box-icon">
-                           <img src="home/assets/homepage/images/About us-Why choose us-Unmatched Data Security.png" alt="">
+                            <img src="home/assets/homepage/images/About us-Why choose us-Unmatched Data Security.png"
+                                alt="">
                         </div>
                         <div class="feature-box-content">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">Unmatched Data
@@ -107,7 +111,8 @@
                     <div
                         class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18 pb-18 ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
                         <div class="feature-box-icon">
-                           <img src="home/assets/homepage/images/About us-Why choose us-247 Expert Support.png" alt="">
+                            <img src="home/assets/homepage/images/About us-Why choose us-247 Expert Support.png"
+                                alt="">
                         </div>
                         <div class="feature-box-content">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">24/7 Expert
@@ -124,7 +129,8 @@
                     <div
                         class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18 pb-18 ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
                         <div class="feature-box-icon">
-                            <img src="home/assets/homepage/images/About us-Why choose us-Powering Innovation Through Partnerships.png" alt="">
+                            <img src="home/assets/homepage/images/About us-Why choose us-Powering Innovation Through Partnerships.png"
+                                alt="">
                         </div>
                         <div class="feature-box-content">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">Powering Innovation
@@ -141,7 +147,8 @@
                     <div
                         class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18 pb-18 ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
                         <div class="feature-box-icon">
-                           <img src="home/assets/homepage/images/About us-Why choose us-Affordable & Customizable Plans.png" alt="">
+                            <img src="home/assets/homepage/images/About us-Why choose us-Affordable & Customizable Plans.png"
+                                alt="">
                         </div>
                         <div class="feature-box-content">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">Affordable &

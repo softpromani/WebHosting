@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Why us')
+@section('title', 'Why Mounteko Cloud Hosting for Your Business?')
+@section('meta-description', 'Mounteko Cloud Hosting is your reliable QuickBooks solution provider, offering cloud-based
+    access to QuickBooks Desktop, Drake Tax, and other tools.')
 @section('header-area')
     <link href="{{ asset('home/assets/css/whyUs.css') }}" rel="stylesheet">
 
@@ -259,8 +261,8 @@
                         <!-- single steps area start -->
                         <div class="single-steps-area-nine">
                             <div class="icon-area">
-                                <img src="home/assets/img/whyUs/Ongoing Support & Maintenance.webp" width="51" height="51" viewBox="0 0 51 51"
-                                    fill="none">
+                                <img src="home/assets/img/whyUs/Ongoing Support & Maintenance.webp" width="51"
+                                    height="51" viewBox="0 0 51 51" fill="none">
                                 <path
                                     d="M50.15 3.4H42.5C42.2746 3.4 42.0584 3.48955 41.899 3.64896C41.7396 3.80837 41.65 4.02457 41.65 4.25C41.65 4.47543 41.7396 4.69163 41.899 4.85104C42.0584 5.01045 42.2746 5.1 42.5 5.1H49.3V17H35.7C35.4746 17 35.2584 17.0896 35.099 17.249C34.9396 17.4084 34.85 17.6246 34.85 17.85C34.85 18.0754 34.9396 18.2916 35.099 18.451C35.2584 18.6104 35.4746 18.7 35.7 18.7H50.15C50.3754 18.7 50.5916 18.6104 50.751 18.451C50.9104 18.2916 51 18.0754 51 17.85V4.25C51 4.02457 50.9104 3.80837 50.751 3.64896C50.5916 3.48955 50.3754 3.4 50.15 3.4Z"
                                     fill="#E57D61" />
@@ -315,7 +317,7 @@
                                 <path
                                     d="M31.45 47.6H45.05C45.2754 47.6 45.4916 47.5104 45.651 47.351C45.8104 47.1916 45.9 46.9754 45.9 46.75C45.9 46.5246 45.8104 46.3084 45.651 46.149C45.4916 45.9896 45.2754 45.9 45.05 45.9H31.45C31.2246 45.9 31.0084 45.9896 30.849 46.149C30.6896 46.3084 30.6 46.5246 30.6 46.75C30.6 46.9754 30.6896 47.1916 30.849 47.351C31.0084 47.5104 31.2246 47.6 31.45 47.6Z"
                                     fill="#E57D61" />
-                               
+
                             </div>
                             <div class="body">
                                 <span>04</span>

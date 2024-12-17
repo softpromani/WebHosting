@@ -1,5 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Pricing')
+@section('title', 'Mounteko Cloud Hosting pricing & plans')
+@section('meta-description', '')
 @section('content')
     <style>
         .pricing-table-area {
