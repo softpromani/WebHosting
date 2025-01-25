@@ -1641,11 +1641,10 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $blog->title }}</h5>
                                     <p class="card-text">{!! Str::limit(strip_tags($blog->description), 100) !!}</p>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                        data-target="#blogModal" data-title="{{ $blog->title }}"
-                                        data-description="{{ $blog->description }}">
+
+                                    <a href="{{ route('single-blog', $blog->slug) }}" class="btn btn-primary text-white text-decoration-none">
                                         Read more...
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
