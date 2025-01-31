@@ -22,7 +22,7 @@
                     <img src="{{ asset('storage/'.$blog->blogImage->media) }}" class="img-fluid" alt="Blog Image">
                 </div>
                 <div class="col-sm-8">
-                    <h6 class="blog-title">Blog Title 2</h6>
+                    <h6 class="blog-title">{{ $blog->title }}</h6>
                 </div>
             </div>
             <div class="row">
