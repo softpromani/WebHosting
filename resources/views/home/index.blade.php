@@ -11,6 +11,153 @@
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
 
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Store",
+          "image": [
+            "https://mounteko.com/storage/uploads/setting/zJlaz0S0yW6i59GQU9NlFpZtAYikKzdX4M5xMS6D.png"
+           ],
+          "name": "Mounteko Cloud Hosting",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "A108 Adam Street",
+            "addressLocality": "New York",
+            "addressRegion": "NY",
+            "postalCode": "535022",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.698307,
+            "longitude": -73.988999
+          },
+          "url": "https://www.google.com/maps/place/Safanya/@40.6983031,-73.9914316,17z/data=!4m10!1m2!2m1!1sA108+Adam+Street,+New+York,+NY+535022!3m6!1s0x89c25a35d88147e3:0x7763e438c5e2e738!8m2!3d40.6983039!4d-73.9888597!15sCiVBMTA4IEFkYW0gU3RyZWV0LCBOZXcgWW9yaywgTlkgNTM1MDIykgEeYnVzaW5lc3NfbWFuYWdlbWVudF9jb25zdWx0YW504AEA!16s%2Fg%2F11qt37pnf3?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+          "priceRange": "$$$",
+          "telephone": "+18765786576",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "08:00",
+              "closes": "23:59"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Sunday",
+              "opens": "08:00",
+              "closes": "23:00"
+            }
+          ],
+          "department": [
+            {
+              "@type": "Cloud Hosting",
+              "image": [
+            "https://mounteko.com/storage/Product/5xeJcvsTVfZfgcV8UqQQz0oVaysEDjTJv1T8DwrY.webp",
+           ],
+              "name": "Dave's Pharmacy",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1600 Saratoga Ave",
+                "addressLocality": "San Jose",
+                "addressRegion": "CA",
+                "postalCode": "95129",
+                "addressCountry": "US"
+              },
+              "priceRange": "$",
+              "telephone": "+14088719385",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "19:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "09:00",
+                  "closes": "17:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Sunday",
+                  "opens": "11:00",
+                  "closes": "17:00"
+                }
+              ]
+            }
+          ]
+        }
+        </script>
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "QAPage",
+              "mainEntity": {
+                "@type": "Question",
+                "name": "What is QuickBooks Pro hosting?",
+                "text": "QuickBooks Pro hosting allows you to access your QuickBooks Pro software and data from anywhere via the cloud, ensuring flexibility and efficiency for your accounting needs.",
+                "answerCount": 5,
+                "upvoteCount": 26,
+                "datePublished": "2025-04-14T15:34-05:00",
+                "author": {
+                  "@type": "Person",
+                  "name": "Mary Stone",
+                  "url": "https://mounteko.com/product/quickbooks-pro-desktop-hosting-1"
+                },
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "QuickBooks Pro hosting allows you to access your QuickBooks Pro software and data from anywhere via the cloud, ensuring flexibility and efficiency for your accounting needs.",
+                  "image": "https://mounteko.com/storage/Product/5xeJcvsTVfZfgcV8UqQQz0oVaysEDjTJv1T8DwrY.webp",
+                  "upvoteCount": 1337,
+                  "url": "https://mounteko.com/product/quickbooks-pro-desktop-hosting-1",
+                  "datePublished": "2024-02-14T16:34-05:00",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Julius Fernandez",
+                             }
+                },
+                "suggestedAnswer": [
+                  {
+                    "@type": "Answer",
+                    "text": "How does QuickBooks Pro desktop hosting differ from cloud hosting?",
+                    "upvoteCount": 42,
+                    "url": "QuickBooks Pro desktop hosting involves installing the software on a dedicated server, while QuickBooks Pro cloud hosting allows for remote access through the cloud, offering greater flexibility and scalability.",
+                    "datePublished": "2024-02-14T15:39-05:00",
+                    "author": {
+                      "@type": "Person",
+                      "name": "Kara Weber",
+                    },
+                    "comment": {
+                      "@type": "Comment",
+                      "text": "QuickBooks Pro desktop hosting involves installing the software on a dedicated server, while QuickBooks Pro cloud hosting allows for remote access through the cloud, offering greater flexibility and scalability.",
+                      "datePublished": "2024-02-14T15:40-05:00",
+                      "author": {
+                        "@type": "Person",
+                        "name": "Mary Stone",
+                      }
+                    }
+                  },
+                  }
+                ]
+              }
+            }
+            </script>
+
 
 @endsection
 @section('content')
