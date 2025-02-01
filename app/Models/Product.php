@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,7 +8,7 @@ use Illuminate\Support\Str;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable = ['menu_id', 'slug', 'product_title', 'meta_keyword', 'meta_description', 'product_description', 'service_title', 'service_description_1', 'service_description_2', 'step', 'layout','meta_page'];
+    protected $fillable = ['menu_id', 'slug', 'product_title', 'meta_keyword', 'meta_description', 'product_description', 'service_title', 'service_description_1', 'service_description_2', 'step', 'layout', 'meta_page'];
 
     protected static function boot()
     {
@@ -18,9 +17,9 @@ class Product extends Model
             $product->slug = $product->generateUniqueSlug($product->product_title);
         });
 
-        static::updating(function ($product) {
-            $product->slug = $product->generateUniqueSlug($product->product_title);
-        });
+        // static::updating(function ($product) {
+        //     $product->slug = $product->generateUniqueSlug($product->product_title);
+        // });
 
         static::created(function ($product) {
             $product->step = 1;
@@ -30,9 +29,9 @@ class Product extends Model
     }
     private function generateUniqueSlug($title)
     {
-        $slug = Str::slug($title);
+        $slug         = Str::slug($title);
         $originalSlug = $slug;
-        $counter = 1;
+        $counter      = 1;
 
         while (self::where('slug', $slug)->exists()) {
             $slug = $originalSlug . '-' . $counter;
