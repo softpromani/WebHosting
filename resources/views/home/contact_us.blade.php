@@ -94,16 +94,21 @@
 
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
-            <div class="container">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>Contact Us</h2>
-                    <ol>
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ol>
+            @php
+            $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
+            $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+            $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+            @endphp
+            <div class="optech-breadcrumb" style="background:linear-gradient(to right, {{ $lightColor }}, {{ $baseColor }}); display: flex; align-items: center; justify-content: center; text-align: center; height: 450px;">
+                <div class="container">
+                    <h1 class="post__title" style="color: white;">Contact us</h1>
+                    <nav class="breadcrumbs">
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                            <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
+                            <li aria-current="page" style="color: white;">Contact us</li>
+                        </ul>
+                    </nav>
                 </div>
-
             </div>
         </section><!-- Breadcrumbs Section -->
 
@@ -228,7 +233,7 @@
 
             </div>
         </section>
-        
+
         <section class="contact-us-form pt-60 pb-120 bg-solitude-blue contact" id="contact  ">
             <div class="container">
                 <div class="row justify-content-lg-between align-items-center">

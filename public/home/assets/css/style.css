@@ -5,7 +5,7 @@
 
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #444444;
 }
 
@@ -25,9 +25,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora", serif !important;
 }
-
+P {
+ font-family: "Roboto", sans-serif !important;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1700,7 +1702,7 @@ section {
 }
 
 #footer .footer-top .footer-contact h3 {
-  font-size: 24px;
+  font-size: 24px ;
   margin: 0 0 15px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
@@ -1725,6 +1727,7 @@ section {
   color: #444444;
   position: relative;
   padding-bottom: 12px;
+  margin-bottom: 0px;
 }
 
 #footer .footer-top .footer-links {
@@ -1995,9 +1998,9 @@ section {
 
         /* contact */
 
-        
 
- 
+
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/

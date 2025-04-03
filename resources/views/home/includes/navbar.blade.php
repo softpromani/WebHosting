@@ -52,7 +52,7 @@
                     <a href="#"><span>Company</span></a>
                 </li> --}}
                 <li class="nav-link">
-                    <a href="#"><span>Downloads</span></a>
+                    <a href="{{ route('download') }}">Downloads</a>
                 </li>
                 <li>
                     <a class="nav-link scrollto" href="{{ route('contactUs') }}">Contact Us</a>

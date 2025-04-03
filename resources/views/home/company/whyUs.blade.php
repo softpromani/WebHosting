@@ -17,20 +17,25 @@
 
     <main id="main">
 
-        <!-- ======= Breadcrumbs Section ======= -->
-        <section class="breadcrumbs">
+       <!-- ======= Breadcrumbs Section ======= -->
+       <section class="breadcrumbs">
+        @php
+        $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
+        $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+        $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+        @endphp
+        <div class="optech-breadcrumb" style="background:linear-gradient(to right, {{ $lightColor }}, {{ $baseColor }}); display: flex; align-items: center; justify-content: center; text-align: center; height: 450px;">
             <div class="container">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>Why Us</h2>
-                    <ol>
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="#">Why-us</a></li>
-                    </ol>
-                </div>
-
+                <h1 class="post__title" style="color: white;">Why Us</h1>
+                <nav class="breadcrumbs">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                        <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
+                        <li aria-current="page" style="color: white;">Why Us</li>
+                    </ul>
+                </nav>
             </div>
-        </section><!-- Breadcrumbs Section -->
+        </div>
+    </section><!-- Breadcrumbs Section -->
 
         <section>
             <div class="container">
@@ -79,16 +84,6 @@
         <section class="pt-0 big-section">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 position-relative">
-                        <div class="img-container">
-                            <!-- Primary image -->
-                            <img src="{{ asset('home/assets/img/whyUs/advisor2.jpg') }}" alt="Advisor"
-                                class="rounded-img img-back">
-                            <!-- Overlapping image -->
-                            <img src="{{ asset('home/assets/img/whyUs/advisor1.jpg') }}" alt="Advisor"
-                                class="rounded-img img-front" data-aos="fade-up">
-                        </div>
-                    </div>
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
                         <h3 class="fw-700 text-dark-gray ls-minus-2px">Mounteko: Your QuickBooks Premier Hosting Partner
                         </h3>
@@ -139,6 +134,18 @@
                                     class="fa fa-arrow-right  rounded"></i></span> --}}
                         </a>
                     </div>
+
+                    <div class="col-lg-6 position-relative">
+                        <div class="img-container">
+                            <!-- Primary image -->
+                            <img src="{{ asset('home/assets/img/whyUs/advisor2.jpg') }}" alt="Advisor"
+                                class="rounded-img img-back">
+                            <!-- Overlapping image -->
+                            <img src="{{ asset('home/assets/img/whyUs/advisor1.jpg') }}" alt="Advisor"
+                                class="rounded-img img-front" data-aos="fade-up">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

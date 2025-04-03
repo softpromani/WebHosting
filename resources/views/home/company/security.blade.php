@@ -455,16 +455,21 @@
 
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
-            <div class="container">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>Our Security</h2>
-                    <ol>
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="#">Security</a></li>
-                    </ol>
+            @php
+            $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
+            $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+            $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+            @endphp
+            <div class="optech-breadcrumb" style="background:linear-gradient(to right, {{ $lightColor }}, {{ $baseColor }}); display: flex; align-items: center; justify-content: center; text-align: center; height: 450px;">
+                <div class="container">
+                    <h1 class="post__title" style="color: white;">Our Security</h1>
+                    <nav class="breadcrumbs">
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                            <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
+                            <li aria-current="page" style="color: white;">Our Security</li>
+                        </ul>
+                    </nav>
                 </div>
-
             </div>
         </section><!-- Breadcrumbs Section -->
 
@@ -514,13 +519,6 @@
         <section class="about-us-area ">
             <div class="container">
                 <div class="row ">
-                    <!-- Image Column -->
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="{{ asset('home/assets/img/Mounteko Security - Offering Unparalleled Data Protection.webp') }}"
-                                alt="Image showing login screen on a laptop">
-                        </div>
-                    </div>
                     <div class="col-lg-6">
                         <div class="about-content">
                             <div class="about-title">
@@ -555,6 +553,15 @@
                             <a href="#" class="btn-get-started scrollto">Let`s Connect</a>
                         </div>
                     </div>
+
+                    <!-- Image Column -->
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="{{ asset('home/assets/img/Mounteko Security - Offering Unparalleled Data Protection.webp') }}"
+                                alt="Image showing login screen on a laptop">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

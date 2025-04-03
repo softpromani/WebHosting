@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap);
 body,
 html {
@@ -28,7 +28,7 @@ a:hover {
     -webkit-text-stroke-width: 1px;
 }
 :root {
-    --alt-font: "Plus Jakarta Sans", sans-serif;
+    --alt-font: "Roboto", serif;
     --primary-font: "Inter", sans-serif;
     --base-color: #2946f3;
     --white: #ffffff;

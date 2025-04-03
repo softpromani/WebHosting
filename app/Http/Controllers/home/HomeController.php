@@ -30,6 +30,12 @@ class HomeController extends Controller
     {
         return view('home.contact_us');
     }
+
+    public function downloads()
+    {
+        return view('home.download');
+    }
+
     public function contactStore(ContactRequest $request)
     {
         $validatedData = $request->validated();

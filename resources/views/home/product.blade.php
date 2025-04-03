@@ -1290,12 +1290,12 @@
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
                 {!! $products->service_title ?? '' !!}
             </div>
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200" >
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" style="margin-left: 150px">
                         @foreach ($products->slide_img as $md)
                             <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
-                                <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100" alt="...">
+                                <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-80" alt="...">
                             </div>
                         @endforeach
                     </div>
@@ -1310,15 +1310,17 @@
         <div class="container">
             <div class="row gy-4">
 
-                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-img">
+
+                <div class="col-lg-6 product-content-description d-flex flex-column justify-content-center align-items-center">
+                    {!! $products->product_description !!}
+                </div>
+
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200" >
+                    <div class="card-img" style="margin-left: 70px">
                         <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
                             class="img-fluid services-img rounded">
 
                     </div>
-                </div>
-                <div class="col-lg-6 product-content-description d-flex flex-column justify-content-center align-items-center">
-                    {!! $products->product_description !!}
                 </div>
             </div>
         </div>
@@ -1460,15 +1462,17 @@
         @isset($products->service_description_2)
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-lg-6 product-content-description">
-                        {!! $products->service_description_2 !!}
-                    </div>
+        {{-- content-2 --}}
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-img">
                             <img src="{{ asset('storage/' . optional($products->serviceSection2)->media) }}"
                                 alt="no available" class="img-fluid services-img rounded">
 
                         </div>
+                    </div>
+        {{-- image-2 --}}
+                    <div class="col-lg-6 product-content-description">
+                        {!! $products->service_description_2 !!}
                     </div>
 
                 </div>

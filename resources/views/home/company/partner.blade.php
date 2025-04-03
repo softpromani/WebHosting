@@ -11,20 +11,25 @@
 
     <main id="main">
 
-        <!-- ======= Breadcrumbs Section ======= -->
-        <section class="breadcrumbs">
+       <!-- ======= Breadcrumbs Section ======= -->
+       <section class="breadcrumbs">
+        @php
+        $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
+        $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+        $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+        @endphp
+        <div class="optech-breadcrumb" style="background:linear-gradient(to right, {{ $lightColor }}, {{ $baseColor }}); display: flex; align-items: center; justify-content: center; text-align: center; height: 450px;">
             <div class="container">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>Partners</h2>
-                    <ol>
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="#">Partners</a></li>
-                    </ol>
-                </div>
-
+                <h1 class="post__title" style="color: white;">Partners</h1>
+                <nav class="breadcrumbs">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                        <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
+                        <li aria-current="page" style="color: white;">Partners</li>
+                    </ul>
+                </nav>
             </div>
-        </section><!-- Breadcrumbs Section -->
+        </div>
+    </section><!-- Breadcrumbs Section -->
 
         <section class="rts-pricing-five inner">
             <div class="container">

@@ -22,6 +22,7 @@
     Route::get('about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
 
     Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
+    Route::get('download', [HomeController::class, 'downloads'])->name('download');
     Route::get('product/{slug}', [ProductController::class, 'index'])->name('product');
     Route::get('login', [LoginController::class, 'login'])->name('login');
     Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');
@@ -37,6 +38,8 @@
     Route::post('user-contact/store', [HomeController::class, 'contactStore'])->name('contactStore');
 
     Route::post('user-newsletter/store', [HomeController::class, 'newsletterStore'])->name('newsletterStore');
+
+
 
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');

@@ -118,19 +118,23 @@
 
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
-            <div class="container">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>Pricing</h2>
-                    <ol>
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="#">Pricing</a></li>
-                    </ol>
+            @php
+            $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
+            $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+            $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+            @endphp
+            <div class="optech-breadcrumb" style="background:linear-gradient(to right, {{ $lightColor }}, {{ $baseColor }}); display: flex; align-items: center; justify-content: center; text-align: center; height: 450px;">
+                <div class="container">
+                    <h1 class="post__title" style="color: white;">Pricing</h1>
+                    <nav class="breadcrumbs">
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                            <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
+                            <li aria-current="page" style="color: white;">Pricing</li>
+                        </ul>
+                    </nav>
                 </div>
-
             </div>
         </section><!-- Breadcrumbs Section -->
-
         <!-- ======= Contact Section ======= -->
         <section class="pricing-table-area">
             <div class="custom-container">
@@ -147,26 +151,37 @@
                 </div>
 
                 <div class="pricing-table-lists ">
-                    @forelse ($PricePlan as $plan)
-                        <div class="pricing-table-box ">
-                            <h1><sup>${{ $plan->price }}</sup>/year</h1>
-                            <h5>{{ $plan->title }}</h5>
-                            {{-- <p>Billed annually</p> --}}
-                            <ul>
-                                <li><i class="fas fa-check"></i> {{ $plan->trial_days }} Days Free Trial</li>
-                                @if (!empty(json_decode($plan->features)))
-                                    @foreach (json_decode($plan->features) as $feature)
-                                        <li><i class="fas fa-check"></i> {{ $feature }}</li>
-                                    @endforeach
-                                @else
-                                    <li><i class="fas fa-check"></i> No features available</li>
-                                @endif
-                            </ul>
-                            <a href="#" class="theme-btn">Get started</a>
+                    <div class="container">
+                        <div class="row justify-content-center g-4">
+                            @forelse ($PricePlan as $plan)
+                                <div class="col-md-4">
+                                    <div class="card h-100 shadow text-center p-4">
+                                        <div class="card-body d-flex flex-column">
+                                            <h1><sup>${{ $plan->price }}</sup>/{{ $plan->billing_cycle }}</h1>
+                                            <h5 class="mb-3">{{ $plan->title }}</h5>
+
+                                            <ul class="list-unstyled flex-grow-1">
+                                                <li><i class="fas fa-check"></i> {{ $plan->trial_days }} Days Free Trial</li>
+                                                @if (!empty(json_decode($plan->features)))
+                                                    @foreach (json_decode($plan->features) as $feature)
+                                                        <li><i class="fas fa-check"></i> {{ $feature }}</li>
+                                                    @endforeach
+                                                @else
+                                                    <li><i class="fas fa-check"></i> No features available</li>
+                                                @endif
+                                            </ul>
+
+                                            <!-- Button Always at Bottom -->
+                                            <a href="#" class="btn btn-primary rounded-pill mt-auto">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @empty
+                                <p class="text-center">No Price is there!</p>
+                            @endforelse
                         </div>
-                    @empty
-                        <p>No Price is there !</p>
-                    @endforelse
+                    </div>
+
 
                     {{-- <div class="pricing-table-box">
                         <h1><sup>$20</sup>/year</h1>
