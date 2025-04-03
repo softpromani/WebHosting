@@ -49,6 +49,7 @@
         Route::post('web-setting/update', [WebSettingController::class, 'updateWebSettings'])->name('updateWebSettings');
         Route::resource('menu', MenuController::class)->name('', 'menu');
         Route::resource('product', AdminProductController::class)->name('', 'product');
+        Route::get('product/destroys/{id}', [AdminProductController::class, 'destroys'])->name('destroys');
 
         Route::get('product/show/{step}/{product_id?}', [AdminProductController::class, 'PageLayout'])->name('product.PageLayout');
         Route::delete('product/delete/{step}/{resource_id?}', [AdminProductController::class, 'productDelete'])->name('product.productDelete');

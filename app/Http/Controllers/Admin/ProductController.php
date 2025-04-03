@@ -29,7 +29,8 @@ class ProductController extends Controller
 
             return DataTables::of($products)
                 ->addColumn('action', function ($product) {
-                    return '<a href="' . route('admin.product.edit', $product->id) . '" class="btn btn-sm btn-primary">Edit</a>';
+                    return '<a href="' . route('admin.product.edit', $product->id) . '" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="' . route('admin.destroys', $product->id) . '" class="btn btn-sm btn-danger mt-2">Delete</a>';
                 })
                 ->rawColumns(['product_description', 'action'])
                 ->make(true);
@@ -88,7 +89,6 @@ class ProductController extends Controller
 
                 if (!$product_id) {
                     toast('Please Add Product first', 'error');
-
                 }
                 $product = Product::find($product_id);
                 if ($product->layout == 'pricePlan') {
@@ -97,7 +97,6 @@ class ProductController extends Controller
                         'title' => $validatedData['title'],
                         'description' => $validatedData['description'],
                     ]);
-
                 } else {
                     $proLayout = ProductBusinessService::create([
                         'product_id' => $product_id,
@@ -112,7 +111,6 @@ class ProductController extends Controller
                     if ($validatedData['service_image']) {
                         Media::uploadMedia($validatedData['service_image'], $proLayout, 'business_service');
                     }
-
                 }
 
                 if ($proLayout) {
@@ -129,7 +127,6 @@ class ProductController extends Controller
 
                 if (!$product_id) {
                     toast('Please Add Product first', 'error');
-
                 }
                 $proFeature = ProductFeature::create([
                     'product_id' => $product_id,
@@ -299,7 +296,13 @@ class ProductController extends Controller
         session()->put('product_id', $id);
         return redirect()->route('admin.product.create', ['product_id' => $id]);
     }
-
+    public function destroys(string $id)
+    {
+        session()->put('product_id', $id);
+        $delete=Product::findOrFail($id);
+        $delete->delete();
+        return redirect()->route('admin.product.index');
+    }
     /**
      * Update the specified resource in storage.
      */
@@ -617,12 +620,10 @@ class ProductController extends Controller
                     session()->flash('activeTab', $step);
                     toast('layout deleted successfully', 'success');
                     return redirect()->route('admin.product.edit', $product_id);
-
                 } else {
                     session()->flash('activeTab', $step);
                     toast('Something went wrong', 'error');
                     return redirect()->route('admin.product.edit', $product_id);
-
                 }
             case 'businessLayout':
                 $data = ProductBusinessService::find($resource_id);
@@ -631,12 +632,10 @@ class ProductController extends Controller
                     session()->flash('activeTab', $step);
                     toast('layout deleted successfully', 'success');
                     return redirect()->route('admin.product.edit', $product_id);
-
                 } else {
                     session()->flash('activeTab', $step);
                     toast('Something went wrong', 'error');
                     return redirect()->route('admin.product.edit', $product_id);
-
                 }
             case 'whyus':
                 $data = ProductWhyUs::find($resource_id);
