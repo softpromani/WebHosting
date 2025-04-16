@@ -99,8 +99,17 @@
             $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
             $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
             @endphp
-            <div class="optech-breadcrumb" style="background:linear-gradient(to right, {{ $lightColor }}, {{ $baseColor }}); display: flex; align-items: center; justify-content: center; text-align: center; height: 450px;">
-                <div class="container">
+            <div class="optech-breadcrumb"
+            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+                   background-size: cover;
+                   background-position: center;
+                   background-repeat: no-repeat;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   text-align: center;
+                   height: 450px;">
+               <div class="container">
                     <h1 class="post__title" style="color: white;">Contact us</h1>
                     <nav class="breadcrumbs">
                         <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">

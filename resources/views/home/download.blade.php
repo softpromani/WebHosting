@@ -25,10 +25,17 @@
         $darkColor = adjustBrightness($baseColor, -50); // Darker shade
     @endphp
 
-    <div class="optech-breadcrumb"
-        style="background: linear-gradient(to right, {{ $lightColor }}, {{ $baseColor }});
-            display: flex; align-items: center; justify-content: center; text-align: center; height: 450px;">
-        <div class="container">
+<div class="optech-breadcrumb"
+style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       height: 450px;">
+   <div class="container">
             <h1 class="post__title text-white" style="font-size: 2.5rem; margin-bottom: 0px;">Download</h1>
             <nav class="breadcrumbs">
                 <ul class="list-unstyled d-flex justify-content-center gap-2 m-0">

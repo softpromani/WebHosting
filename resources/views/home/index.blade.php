@@ -181,132 +181,134 @@
 
         <!-- start section -->
         <section class="pt-0 background-position-center-top sm-background-image-none"
-            style="background-image: url('{{ asset('home/assets/homepage/images / vertical - line - bg . svg') }}')">
-            <div class="container-fluid d-none d-md-block">
-                <div class="row">
-                    <div class="p-0 overlap-section" data-bottom-top="transform: translateY(-50px)"
-                        data-top-bottom="transform: translateY(50px)">
-                        <img src="{{ asset('home/assets/homepage/images/images-demo-startup-bg-01.png') }}" alt="">
+    style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
+    <div class="container-fluid d-none d-md-block">
+        <div class="row">
+            <div class="p-0 overlap-section" data-bottom-top="transform: translateY(-50px)"
+                data-top-bottom="transform: translateY(50px)">
+                <img src="{{ asset('home/assets/homepage/images/images-demo-startup-bg-01.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-lg-7 text-center"
+                data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">Our Offerings</span>
+                <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px shadow-none" data-shadow-animation="true"
+                    data-animation-delay="1000">Top-Notch Cloud Hosting
+                    <span class="text-highlight fw-800">
+                        Services
+                        <span class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span>
+                    </span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center">
+            <!-- START CARD -->
+            <div class="col md-mb-30px d-flex">
+                <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
+                    <div class="position-relative box-image">
+                        <a href="#">
+                            <img src="{{ asset('home/assets/homepage/images/Homepage-QuickBooks Hosting (1).png') }}" alt="" class="hover-animate w-100" style="position: relative;">
+                        </a>
+                    </div>
+                    <div class="bg-white d-flex flex-column h-100">
+                        <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
+                            <a href="demo-startup-services-details.html" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">QuickBooks Hosting</a>
+                            <p>Access QuickBooks securely in the cloud with fast performance and 24/7 support.</p>
+                        </div>
+                        <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
+                            <a href="#" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                <span>
+                                    <span class="btn-text">Explore services</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row justify-content-center mb-3">
-                    <div class="col-lg-7 text-center"
-                        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">Our Offerings</span>
-                        <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px shadow-none" data-shadow-animation="true"
-                            data-animation-delay="1000">Top-Notch Cloud Hosting <span
-                                class="text-highlight fw-800">Services<span
-                                    class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span></span>
-                        </h3>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center">
-                    <!-- start fancy text box item -->
-                    <div class="col md-mb-30px">
-                        <div
-                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
-                            <div class="position-relative box-image">
-                                <a href="#"><img
-                                        src="{{ asset('home/assets/homepage/images/Homepage-QuickBooks Hosting (1).png') }}"
-                                        alt=""></a>
 
-                            </div>
-                            <div class="bg-white">
-                                <div
-                                    class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
-                                    <a href="demo-startup-services-details.html"
-                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px"> QuickBooks
-                                        Hosting</a>
-                                    <p>Access QuickBooks securely in the cloud with fast performance and 24/7 support.</p>
-                                </div>
-                                <div
-                                    class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
-                                    <a href="#"
-                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                        <span>
-                                            <span class="btn-text">Explore services</span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
+            <!-- SECOND CARD -->
+            <div class="col md-mb-30px d-flex">
+                <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
+                    <div class="position-relative box-image">
+                        <a href="demo-startup-services-details.html">
+                            <img src="{{ asset('home/assets/homepage/images/Homepage-Sage Application Hosting.png') }}" alt="" class="hover-animate w-100" style="position: relative;">
+                        </a>
+                    </div>
+                    <div class="bg-white d-flex flex-column h-100">
+                        <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
+                            <a href="#" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Sage Application Hosting</a>
+                            <p>Run Sage in the cloud with secure access and guaranteed uptime.</p>
+                        </div>
+                        <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
+                            <a href="demo-startup-services-details.html" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                <span>
+                                    <span class="btn-text">Explore services</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </span>
+                            </a>
                         </div>
                     </div>
-                    <!-- end fancy text box item -->
-                    <!-- start fancy text box item -->
-                    <div class="col md-mb-30px">
-                        <div
-                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
-                            <div class="position-relative box-image">
-                                <a href="demo-startup-services-details.html"><img
-                                        src="{{ asset('home/assets/homepage/images/Homepage-Sage Application Hosting.png') }}"
-                                        alt=""></a>
-
-                            </div>
-                            <div class="bg-white">
-                                <div
-                                    class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
-                                    <a href="#" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">
-                                        Sage Application Hosting</a>
-                                    <p>Run Sage in the cloud with secure access and guaranteed uptime.
-
-                                    </p>
-                                </div>
-                                <div
-                                    class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
-                                    <a href="demo-startup-services-details.html"
-                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                        <span>
-                                            <span class="btn-text">Explore services</span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end fancy text box item -->
-                    <!-- start fancy text box item -->
-                    <div class="col">
-                        <div
-                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
-                            <div class="position-relative box-image">
-                                <a href="demo-startup-services-details.html"><img
-                                        src="{{ asset('home/assets/homepage/images/Homepage-Tax software Hosting (1).png') }}"
-                                        alt=""></a>
-
-                            </div>
-                            <div class="bg-white">
-                                <div
-                                    class="ps-65px pe-65px xl-ps-50px xl-pe-50px lg-ps-30px lg-pe-30px pt-30px pb-30px text-center">
-                                    <a href="demo-startup-services-details.html"
-                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px"> Tax Software
-                                        Hosting</a>
-                                    <p>Host your tax software in the cloud for secure, remote access and seamless updates.
-                                    </p>
-                                </div>
-                                <div
-                                    class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
-                                    <a href="demo-startup-services-details.html"
-                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                        <span>
-                                            <span class="btn-text">Explore services</span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end fancy text box item -->
                 </div>
             </div>
-        </section>
+
+            <!-- THIRD CARD -->
+            <div class="col d-flex">
+                <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
+                    <div class="position-relative box-image">
+                        <a href="demo-startup-services-details.html">
+                            <img src="{{ asset('home/assets/homepage/images/Homepage-Tax software Hosting (1).png') }}" alt="" class="hover-animate w-100" style="position: relative;">
+                        </a>
+                    </div>
+                    <div class="bg-white d-flex flex-column h-100">
+                        <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
+                            <a href="demo-startup-services-details.html" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Tax Software Hosting</a>
+                            <p>Host your tax software in the cloud for secure, remote access and seamless updates.</p>
+                        </div>
+                        <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
+                            <a href="demo-startup-services-details.html" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                <span>
+                                    <span class="btn-text">Explore services</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CARD -->
+        </div>
+    </div>
+</section>
+
+<!-- Floating Animation Style -->
+<style>
+.hover-animate {
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.hover-animate:hover {
+    animation: moveAround 3s infinite alternate ease-in-out;
+}
+
+@keyframes moveAround {
+    0% { top: 0px; left: 0px; }
+    25% { top: -15px; left: 15px; }
+    50% { top: 15px; left: -15px; }
+    75% { top: -15px; left: -15px; }
+    100% { top: 0px; left: 0px; }
+}
+</style>
+
         <!-- end section -->
 
         <section class="bg-very-light-gray">
@@ -315,11 +317,13 @@
                     <div class="col-lg-6 text-center md-mb-50px">
                         <figure class="position-relative m-0">
                             <div class="position-relative d-inline-block"
-                                data-anime='{ "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <img class="w-90 border-radius-5px animation-float"
-                                    src="{{ asset('home/assets/homepage/images/Homepage-Understand and apply the business process.webp') }}"
-                                    alt="">
+                            data-anime='{ "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <img class="w-90 border-radius-5px animation-float hover-animate"
+                                src="{{ asset('home/assets/homepage/images/Homepage-Understand and apply the business process.webp') }}"
+                                alt=""
+                                style="position: relative;">
                             </div>
+
                             {{-- <figcaption
                                 class="position-absolute bg-white box-shadow-quadruple-large border-radius-5px bottom-50px xs-bottom-35px left-minus-30px md-left-minus-0px ps-50px pe-50px pt-35px pb-35px xs-p-20px w-320px xs-w-250px text-center last-paragraph-no-margin"
                                 data-anime='{ "translateY": [50, 0], "scale": [0.8,1], "opacity": [0,1], "duration": 800, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -420,11 +424,29 @@
                         <div class="img-container">
                             <!-- Primary image -->
                             <img src="{{ asset('home/assets/img/demo-consulting-01.jpg') }}" alt="Advisor"
-                                class="rounded-img img-back">
+                                class="rounded-img img-back hover-animate"
+                                style="position: relative;">
+
                             <!-- Overlapping image -->
                             <img src="{{ asset('home/assets/img/demo-consulting-02.jpg') }}" alt="Advisor"
-                                class="rounded-img img-front" data-aos="fade-up">
+                                class="rounded-img img-front hover-animate"
+                                style="position: relative;" data-aos="fade-up">
                         </div>
+
+                        <style>
+                        .hover-animate:hover {
+                            animation: moveAround 3s infinite alternate ease-in-out;
+                        }
+
+                        @keyframes moveAround {
+                            0% { top: 0px; left: 0px; }
+                            25% { top: -15px; left: 15px; }
+                            50% { top: 15px; left: -15px; }
+                            75% { top: -15px; left: -15px; }
+                            100% { top: 0px; left: 0px; }
+                        }
+                        </style>
+
                     </div>
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
                         <h6>Company's vision</h6>
@@ -525,11 +547,28 @@
                         <!-- end counter item -->
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-4 text-center animation-float sm-mb-65px"
-                        data-anime='{ "el": "childs", "scale": [0, 1], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                        <img class="border-radius-100 w-350px"
-                            src="{{ asset('home/assets/homepage/images/images-demo-consulting-company-01.jpg') }}"
-                            alt="" />
-                    </div>
+                    data-anime='{ "el": "childs", "scale": [0, 1], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
+
+                    <img class="border-radius-100 w-350px hover-animate"
+                        src="{{ asset('home/assets/homepage/images/images-demo-consulting-company-01.jpg') }}"
+                        alt=""
+                        style="position: relative;">
+                </div>
+
+                <style>
+                .hover-animate:hover {
+                    animation: moveAround 3s infinite alternate ease-in-out;
+                }
+
+                @keyframes moveAround {
+                    0% { top: 0px; left: 0px; }
+                    25% { top: -15px; left: 15px; }
+                    50% { top: 15px; left: -15px; }
+                    75% { top: -15px; left: -15px; }
+                    100% { top: 0px; left: 0px; }
+                }
+                </style>
+
                     <div class="col-xl-4 col-lg-3 col-md-4"
                         data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'>
                         <!-- start counter item -->
@@ -712,9 +751,24 @@
                     <div class="col-xl-4 ">
                         <div class="card-img mb-3">
                             <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
-                                class="img-fluid services-img rounded">
-
+                                class="img-fluid services-img rounded hover-animate"
+                                style="position: relative;">
                         </div>
+
+                        <style>
+                        .hover-animate:hover {
+                            animation: moveAround 3s infinite alternate ease-in-out;
+                        }
+
+                        @keyframes moveAround {
+                            0% { top: 0px; left: 0px; }
+                            25% { top: -15px; left: 15px; }
+                            50% { top: 15px; left: -15px; }
+                            75% { top: -15px; left: -15px; }
+                            100% { top: 0px; left: 0px; }
+                        }
+                        </style>
+
                     </div>
                     <div class="col-xl-8">
                         <ul class="faq-list">

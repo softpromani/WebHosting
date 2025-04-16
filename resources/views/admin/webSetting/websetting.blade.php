@@ -45,6 +45,13 @@
                                                 <img src="{{ asset('storage/' . settingValue($i->key)) }}" alt="no image"
                                                     id="existingPhoto_{{ $i->key }}"
                                                     style="height: 100px; width:100px;">
+                                            @elseif ($i->type === 'file' && $i->key === 'breadcrumb_image')
+                                                <input type="file" class="form-control mb-3"
+                                                    name="settings[{{ $i->key }}]" id="pic_{{ $i->key }}">
+
+                                                <img src="{{ asset('storage/' . settingValue($i->key)) }}" alt="no image"
+                                                    id="existingPhoto_{{ $i->key }}"
+                                                    style="height: 100px; width:100px;">
                                             @elseif ($i->key === 'address')
                                                 <textarea name="settings[{{ $i->key }}]" rows="3" class="form-control">{{ settingValue($i->key) }}</textarea>
                                             @else
