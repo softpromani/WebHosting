@@ -1281,21 +1281,37 @@
             margin-top: 20px;
             /* Add some space between the cards and the pagination */
         }
+
     </style>
     <!-- End Page Title -->
 
     {{-- Silder --}}
-    <div class="container mt-5">
-        <div class="row gy-4 ">
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+    <div
+    style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           padding: 80px 0;">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                style="color: white; text-align: center;">
                 {!! $products->service_title ?? '' !!}
             </div>
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200" >
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" style="margin-left: 150px">
+            <div class="col-lg-6"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                style="display: flex; justify-content: center; align-items: center;">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
+                    <div class="carousel-inner" style="width: 80%; margin-left: 150px;">
                         @foreach ($products->slide_img as $md)
                             <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
-                                <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-80" alt="...">
+                                <img src="{{ asset('storage/' . $md->media) }}"
+                                     class="d-block w-100 hover-animate"
+                                     alt="..."
+                                     style="border-radius: 10px; position: relative;">
                             </div>
                         @endforeach
                     </div>
@@ -1303,6 +1319,25 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- 🔥 Inline CSS for Hover Animation -->
+<style>
+    .hover-animate:hover {
+        animation: moveAround 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveAround {
+        0%   { top: 0px; left: 0px; }
+        25%  { top: -15px; left: 15px; }
+        50%  { top: 15px; left: -15px; }
+        75%  { top: -15px; left: -15px; }
+        100% { top: 0px; left: 0px; }
+    }
+</style>
+
+
+
     {{-- Slider End --}}
 
     <!-- Service Details Section -->
@@ -1311,11 +1346,12 @@
             <div class="row gy-4">
 
 
-                <div class="col-lg-6 product-content-description d-flex flex-column justify-content-center align-items-center">
+                <div
+                    class="col-lg-6 product-content-description d-flex flex-column justify-content-center align-items-center">
                     {!! $products->product_description !!}
                 </div>
 
-                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200" >
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img" style="margin-left: 70px">
                         <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
                             class="img-fluid services-img rounded">
@@ -1324,6 +1360,7 @@
                 </div>
             </div>
         </div>
+
 
     </section>
 
@@ -1462,7 +1499,7 @@
         @isset($products->service_description_2)
             <div class="container">
                 <div class="row gy-4">
-        {{-- content-2 --}}
+                    {{-- content-2 --}}
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-img">
                             <img src="{{ asset('storage/' . optional($products->serviceSection2)->media) }}"
@@ -1470,7 +1507,7 @@
 
                         </div>
                     </div>
-        {{-- image-2 --}}
+                    {{-- image-2 --}}
                     <div class="col-lg-6 product-content-description">
                         {!! $products->service_description_2 !!}
                     </div>
@@ -1646,7 +1683,8 @@
                                     <h5 class="card-title">{{ $blog->title }}</h5>
                                     <p class="card-text">{!! Str::limit(strip_tags($blog->description), 100) !!}</p>
 
-                                    <a href="{{ route('single-blog', $blog->slug) }}" class="btn btn-primary text-white text-decoration-none">
+                                    <a href="{{ route('single-blog', $blog->slug) }}"
+                                        class="btn btn-primary text-white text-decoration-none">
                                         Read more...
                                     </a>
                                 </div>
