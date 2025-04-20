@@ -88,7 +88,7 @@ section.extra-big-section {
     padding-bottom: 160px;
 }
 img {
-    max-width: 75%;
+    max-width: 100%;
     height: auto;
 }
 ul li {
