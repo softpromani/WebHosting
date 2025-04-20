@@ -16,6 +16,7 @@
                         <th>Sr. no</th>
                         <th>Question</th>
                         <th>Answer</th>
+                        <th>Page</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -62,6 +63,9 @@
                     },
                     {
                         "data": "answer"
+                    },
+                    {
+                        "data": "type"
                     },
                     {
                         "data": "action",
