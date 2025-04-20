@@ -1451,11 +1451,10 @@ section {
 }
 
 .faq .faq-list li {
-  border-top: 1px solid #d4e5fc;
+  border: 1px solid #d4e5fc;
   background: white;
-  padding: 20px 10px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding: 10px 10px;
+  margin-bottom: 10px;
 }
 
 .faq .faq-list .question {
