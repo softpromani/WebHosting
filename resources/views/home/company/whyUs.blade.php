@@ -91,11 +91,11 @@
             </div>
         </section>
 
-        {{-- <section class="pt-0 big-section">
+        <section class="pt-0 big-section">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
-                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Mounteko: Your QuickBooks Premier Hosting Partner
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Mounteko: Your QuickBooks  Hosting Partner
                         </h3>
                         <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">
                             Unlock seamless cloud solutions tailored to your business needs with expert support, top-tier
@@ -109,7 +109,7 @@
                         <div
                             class="row align-items-center mt-5 mb-50px xs-mb-25px justify-content-center justify-content-lg-start">
                             <!-- Counter items -->
-                            <div class="col-lg-5 col-md-4 col-sm-5 last-paragraph-no-margin counter-style-04 xs-mb-25px ">
+                            {{-- <div class="col-lg-5 col-md-4 col-sm-5 last-paragraph-no-margin counter-style-04 xs-mb-25px ">
                                 <div class="counter-container">
                                     <h3 class="vertical-counter d-inline-flex fw-700 text-dark-gray mb-0 ls-minus-2px xl-ls-minus-1px"
                                         data-text="+" data-to="280">
@@ -133,15 +133,15 @@
                                 </div>
                                 <span class="fw-500 text-dark-gray mb-10px d-block ls-minus-05px">Projects
                                     completed</span>
-                            </div>
+                            </div> --}}
                         </div>
                         <a href="#"
                             class="rts-btn btn__long primary__bg  btn-rounded with-rounded btn-base-color btn-round-edge ">Connect
                             With Us <i class="fa-solid fa-arrow-right"></i></a>
-                         <a href="#"
+                        {{-- <a href="#"
                             class=" btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
                             Let's discuss<span class="bg-orient-blue text-white "><i
-                                    class="fa fa-arrow-right  rounded"></i></span>
+                                    class="fa fa-arrow-right  rounded"></i></span> --}}
                         </a>
                     </div>
 
@@ -158,7 +158,7 @@
 
                 </div>
             </div>
-        </section> --}}
+        </section>
 
 
         <section class="easy-steps-area rts-section-gap bg-working-steps bg_image">
