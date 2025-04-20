@@ -17,8 +17,9 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $blogs = Blog::with('blogImage')->where('type','home-page')->get();
-        return view('home.index', compact('blogs'));
+        $blogs = Blog::with('blogImage')->get();
+        $faqs = Faq::where('type','home-page')->get();
+        return view('home.index', compact('blogs','faqs'));
     }
 
     public function aboutUs()
