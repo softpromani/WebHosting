@@ -91,7 +91,7 @@
             </div>
         </section>
 
-        <section class="pt-0 big-section">
+        {{-- <section class="pt-0 big-section">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
@@ -138,10 +138,10 @@
                         <a href="#"
                             class="rts-btn btn__long primary__bg  btn-rounded with-rounded btn-base-color btn-round-edge ">Connect
                             With Us <i class="fa-solid fa-arrow-right"></i></a>
-                        {{-- <a href="#"
+                         <a href="#"
                             class=" btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
                             Let's discuss<span class="bg-orient-blue text-white "><i
-                                    class="fa fa-arrow-right  rounded"></i></span> --}}
+                                    class="fa fa-arrow-right  rounded"></i></span>
                         </a>
                     </div>
 
@@ -158,7 +158,7 @@
 
                 </div>
             </div>
-        </section>
+        </section> --}}
 
 
         <section class="easy-steps-area rts-section-gap bg-working-steps bg_image">
