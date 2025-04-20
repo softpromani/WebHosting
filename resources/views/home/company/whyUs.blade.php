@@ -421,7 +421,7 @@
         </section><!-- End Testimonials Section -->
 
 
-        <section class="user-blog" class="footer-top">
+        {{-- <section class="user-blog" class="footer-top">
             <div class="container">
 
                 <div class="heading">
@@ -457,8 +457,12 @@
 
 
 
+        </section> --}}
+        <section class="user-blog" class="footer-top">
+            <div class="container">
+                <x-blog-grid :blogs="$blogs" page="Why Us"/>
+            </div>
         </section>
-
 
 
 

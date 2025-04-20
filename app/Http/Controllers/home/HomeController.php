@@ -17,7 +17,7 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $blogs = Blog::with('blogImage')->get();
+        $blogs = Blog::with('blogImage')->where('type','home-page')->get();
         return view('home.index', compact('blogs'));
     }
 
