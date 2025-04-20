@@ -429,21 +429,21 @@
 
                             <!-- Overlapping image -->
                             <img src="{{ asset('home/assets/img/demo-consulting-02.jpg') }}" alt="Advisor"
-                                class="rounded-img img-front hover-animate"
+                                class="rounded-img img-front hover-animate-2"
                                 style="position: relative;" data-aos="fade-up">
                         </div>
 
                         <style>
-                        .hover-animate:hover {
-                            animation: moveAround 3s infinite alternate ease-in-out;
+                        .hover-animate-2:hover {
+                            animation: moveAround2 3s infinite alternate ease-in-out;
                         }
 
-                        @keyframes moveAround {
-                            0% { top: 0px; left: 0px; }
-                            25% { top: -15px; left: 15px; }
-                            50% { top: 15px; left: -15px; }
-                            75% { top: -15px; left: -15px; }
-                            100% { top: 0px; left: 0px; }
+                        @keyframes moveAround2 {
+                            0% { bottom: -225px; right: 150px; }
+                            25% { bottom: -240px; right: 165px; }
+                            50% { bottom: -225px; right: 150px; }
+                            75% { bottom: -240px; right: 165px; }
+                            100% { bottom: -225px; right: 150px; }
                         }
                         </style>
 
@@ -796,6 +796,20 @@
         </section>
         <!-- End Frequently Asked Questions Section -->
 
+         <!-- ======= Blog Section ======= -->
+         @if($blogs && count($blogs) > 0)
+         <section id="blog" class="blog section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h3>Our <span>Blogs</span></h3>
+
+                </div>
+                    <x-blog-slider :blogs="$blogs" />
+            </div>
+         </section>
+         @endif
+         <!-- ======= END Blog Section ======= -->
 
     </main><!-- End #main -->
 @endsection

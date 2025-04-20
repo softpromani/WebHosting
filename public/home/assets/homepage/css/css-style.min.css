@@ -15924,11 +15924,11 @@ footer .newsletter-style-05 .input-small {
 }
 
 .img-front {
-    width: 55%; /* Size of the front image */
+    width: 55%;
     border-radius: 8px;
     position: absolute;
-    right: 15px;
-    bottom: -20px;
+    right: 150px;
+    bottom: -224px;
     z-index: 2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
