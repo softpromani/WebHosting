@@ -23,7 +23,9 @@ class HomeController extends Controller
 
     public function aboutUs()
     {
-        return view('home.about_us');
+        $faqs=Faq::where('type','about-us-page')->get();
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.about_us',compact('faqs','blogs'));
     }
 
     public function contactUs()

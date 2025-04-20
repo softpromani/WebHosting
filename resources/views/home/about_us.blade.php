@@ -1,6 +1,7 @@
 @extends('home.includes.layout')
 @section('title', 'About Mounteko Cloud Hosting Providers')
-@section('meta-description', 'We are a trusted provider of cloud solutions, dedicated to making technology accessible
+@section('meta-description',
+    'We are a trusted provider of cloud solutions, dedicated to making technology accessible
     and secure. Our mission is to empower businesses with efficient, scalable, and adaptable tools that fit today’s dynamic
     work environment.')
 @section('header-area')
@@ -15,14 +16,14 @@
 @endsection
 @section('content')
 
-<section class="breadcrumbs">
-    @php
-    $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
-    $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
-    $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
-    @endphp
-     <div class="optech-breadcrumb"
-     style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+    <section class="breadcrumbs">
+        @php
+            $baseColor = settingValue('primary') ?? '#65E82E'; // Change this dynamically
+            $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+            $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+        @endphp
+        <div class="optech-breadcrumb"
+            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -31,17 +32,17 @@
             justify-content: center;
             text-align: center;
             height: 450px;">
-        <div class="container">
-            <h1 class="post__title text-white" style="font-size: 2.5rem; margin-bottom: 0px;">About Us</h1>
-            <nav class="breadcrumbs">
-                <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
-                    <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
-                    <li aria-current="page" style="color: white;">About Us</li>
-                </ul>
-            </nav>
+            <div class="container">
+                <h1 class="post__title text-white" style="font-size: 2.5rem; margin-bottom: 0px;">About Us</h1>
+                <nav class="breadcrumbs">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                        <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
+                        <li aria-current="page" style="color: white;">About Us</li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-</section><!-- Breadcrumbs Section -->
+    </section><!-- Breadcrumbs Section -->
 
 
     <!-- start section -->
@@ -50,26 +51,26 @@
         <div class="container">
             <div class="row align-items-center justify-content-center mb-8 xs-mb-50px">
                 <div class="col-xl-4 offset-lg-1 col-lg-5 col-md-10 text-center text-lg-start"
-                data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <span class="alt-font text-uppercase fw-600 mb-15px d-inline-block ls-1px">About Mounteko Cloud
-                    Hosting</span>
-                <h3 class="alt-font fw-600 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true"
-                    data-animation-delay="1500">Powering the Future with Cloud Solutions <span
-                        class="text-highlight fw-800"><span
-                            class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span></span>
-                </h3>
-                <p class="mb-35px sm-mb-25px">We are a trusted provider of cloud solutions, dedicated to making
-                    technology accessible and secure. Our mission is to empower businesses with efficient, scalable, and
-                    adaptable tools that fit today’s dynamic work environment.</p>
-                <a href="demo-startup-services.html"
-                    class="btn btn-large btn-gradient-emerald-blue-emerald-green btn-hover-animation-switch btn-round-edge btn-box-shadow">
-                    <span>
-                        <span class="btn-text">Check out our Services </span>
-                        <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                        <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                    </span>
-                </a>
-            </div>
+                    data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <span class="alt-font text-uppercase fw-600 mb-15px d-inline-block ls-1px">About Mounteko Cloud
+                        Hosting</span>
+                    <h3 class="alt-font fw-600 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true"
+                        data-animation-delay="1500">Powering the Future with Cloud Solutions <span
+                            class="text-highlight fw-800"><span
+                                class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span></span>
+                    </h3>
+                    <p class="mb-35px sm-mb-25px">We are a trusted provider of cloud solutions, dedicated to making
+                        technology accessible and secure. Our mission is to empower businesses with efficient, scalable, and
+                        adaptable tools that fit today’s dynamic work environment.</p>
+                    <a href="demo-startup-services.html"
+                        class="btn btn-large btn-gradient-emerald-blue-emerald-green btn-hover-animation-switch btn-round-edge btn-box-shadow">
+                        <span>
+                            <span class="btn-text">Check out our Services </span>
+                            <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
+                            <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
+                        </span>
+                    </a>
+                </div>
 
                 <div class="col-lg-6 col-md-10 position-relative md-mb-50px sm-mb-30px"
                     data-anime='{ "effect": "slide", "direction": "tb", "color": "#252840", "duration": 1000, "delay": 0 }'>
@@ -281,8 +282,8 @@
         </div>
     </section>
     <!-- end section -->
-    <!-- start section -->
-    <section class="background-position-center-top pt-0 sm-background-image-none"
+    <!-- start Advertisment section -->
+    {{-- <section class="background-position-center-top pt-0 sm-background-image-none"
         style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
         <div class="container">
             <div class="row position-relative clients-style-08 pt-35px md-pt-10px">
@@ -349,10 +350,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- end section -->
-    <!-- start section -->
-    <section class="background-position-center-top pt-0 sm-background-image-none"
+    <!-- start Our Team section -->
+    {{-- <section class="background-position-center-top pt-0 sm-background-image-none"
         style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
         <div class="container">
             <div class="row justify-content-center mb-3">
@@ -469,11 +470,50 @@
                 <!-- end team member item -->
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- end section -->
 
+    {{-- Start Section Faq--}}
+
+    <section class="background-position-center-top sm-background-image-none"
+        style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>F.A.Q</h2>
+                <h3>Frequently Asked <span>Questions</span></h3>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <ul class="faq-list">
+
+                        @foreach ($faqs as $index => $faq)
+                            <li>
+                                <div data-bs-toggle="collapse" class="collapsed question"
+                                    href="#faq{{ $index }}">
+                                    {{ $faq->question }} <i class="bi bi-chevron-down icon-show"></i><i
+                                        class="bi bi-chevron-up icon-close"></i>
+                                </div>
+                                <div id="faq{{ $index }}" class="collapse" data-bs-parent=".faq-list">
+                                    <p>{!! $faq->answer !!}</p>
+                                </div>
+                            </li>
+                        @endforeach
 
 
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    {{-- End Section Faq--}}
+
+    {{-- start Blog section --}}
+    <x-blog-grid :blogs="$blogs" :page="About Us"/>
+    {{-- end Blog section --}}
 
 @endsection
 @section('script-area')
