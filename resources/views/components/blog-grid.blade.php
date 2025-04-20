@@ -14,8 +14,13 @@
 
         .blog-post img {
             width: 100%;
-            height: auto;
+            height: 250px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-post:hover img {
+            transform: scale(1.05);
         }
 
         .post-content {
@@ -55,57 +60,12 @@
             padding: 40px 0;
         }
 
-        .blog-post:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-post img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .blog-post:hover img {
-            transform: scale(1.05);
-        }
-
-        .post-content {
-            padding: 15px 20px;
-        }
-
-        .post-content .category {
-            color: #ff5722;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 12px;
-            display: inline-block;
-            margin-bottom: 5px;
-        }
-
-        .post-content h3 {
-            font-size: 20px;
-            margin: 0 0 5px;
-        }
-
-        .post-content .meta {
-            font-size: 13px;
-            color: #888;
-            margin-bottom: 10px;
-        }
-
-        .post-content p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.5;
-        }
-
         .custom-nav {
             position: absolute;
             top: 45%;
             transform: translateY(-50%);
             z-index: 10;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -133,9 +93,11 @@
 
         .arrow {
             font-weight: bold;
+            user-select: none;
         }
     </style>
-    <!-- Include Owl Carousel CSS/JS -->
+
+    <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
@@ -157,70 +119,56 @@
                     </div>
                 </div>
             @endforeach
-            <!-- Add more .blog-post items here -->
         </section>
 
         <!-- Right Arrow -->
         <div class="custom-nav right"><i class="arrow">&#10095;</i></div>
     </div>
 
-
+    <!-- Owl Carousel Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
-        function setEqualHeight() {
-            let maxHeight = 0;
+        $(document).ready(function () {
+            const $owl = $('.blog-carousel');
 
-            // Reset heights first
-            $('.blog-post').css('height', 'auto');
-
-            // Find max height
-            $('.blog-post').each(function() {
-                const h = $(this).outerHeight();
-                if (h > maxHeight) maxHeight = h;
+            $owl.owlCarousel({
+                loop: {{ count($blogs) > 3 ? 'true' : 'false' }},
+                margin: 20,
+                nav: false,
+                dots: false,
+                slideBy: 1,
+                responsive: {
+                    0: { items: 1, slideBy: 1 },
+                    768: { items: 2, slideBy: 1 },
+                    1024: { items: 3, slideBy: 1 }
+                },
+                onInitialized: setEqualHeight,
+                onResized: setEqualHeight,
+                onTranslated: setEqualHeight
             });
 
-            // Apply max height to all
-            $('.blog-post').css('height', maxHeight + 'px');
-        }
+            // Custom nav buttons
+            $('.custom-nav.left').click(function () {
+                $owl.trigger('prev.owl.carousel');
+            });
+            $('.custom-nav.right').click(function () {
+                $owl.trigger('next.owl.carousel');
+            });
 
-        const owl = $('.blog-carousel');
+            function setEqualHeight() {
+                let maxHeight = 0;
+                $('.blog-post').css('height', 'auto');
+                $('.blog-post').each(function () {
+                    maxHeight = Math.max(maxHeight, $(this).outerHeight());
+                });
+                $('.blog-post').css('height', maxHeight + 'px');
+            }
 
-        owl.owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: true,
-            dots: false,
-            navText: [
-                '<i class="arrow left">‹</i>',
-                '<i class="arrow right">›</i>'
-            ],
-            responsive: {
-                0: {
-                    items: 1,
-                    slideBy: 1
-                },
-                768: {
-                    items: 2,
-                    slideBy: 1
-                },
-                1024: {
-                    items: 3,
-                    slideBy: 1
-                }
-            },
-            onInitialized: setEqualHeight,
-            onResized: setEqualHeight,
-            onTranslated: setEqualHeight
-        });
-
-        // Also reset height on window resize
-        $(window).on('resize', function() {
-            setTimeout(setEqualHeight, 200);
+            $(window).on('resize', function () {
+                setTimeout(setEqualHeight, 300);
+            });
         });
     </script>
-
-
-
 </div>
