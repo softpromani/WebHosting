@@ -15,7 +15,7 @@ class FaqController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Faq::select(['id', 'question', 'answer'])->get();
+            $data = Faq::select(['id', 'question', 'answer','type'])->get();
 
             return DataTables::of($data)
                 ->addColumn('action', function ($data) {
