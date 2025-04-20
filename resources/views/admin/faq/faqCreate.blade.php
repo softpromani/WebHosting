@@ -23,9 +23,11 @@
 
             <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-2">
+                        <label for="faq_type">Type : </label>
+                    </div>
+                    <div class="col-lg-10">
                         <div class="form-group">
-                            <label for="faq_type">Type : </label>
                                 <select class="form-control" name="type" id="faq_type" required>
                                     <option value="" selected disabled>Select Type</option>
                                     <option value="home-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'home-page' ? 'selected' : '' }}>Home Page</option>

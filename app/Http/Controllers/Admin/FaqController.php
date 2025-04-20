@@ -46,7 +46,7 @@ class FaqController extends Controller
         $request->validate([
             'question' => 'required',
             'answer' => 'required',
-            'type' => 'required|in:home-page,why-us-page,security-page',
+            'type' => 'required',
         ]);
         $data = Faq::create([
             'type' => $request->type,
