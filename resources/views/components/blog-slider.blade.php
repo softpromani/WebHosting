@@ -12,7 +12,7 @@
                 <div class="image" style="background-image: url({{ asset('storage/'.$blog?->blog_image) }});"></div>
                 <div class="text">
                   <blockquote class="text-light">
-                    {{ \Illuminate\Support\Str::words(strip_tags($blog->description), 70, '...') }}
+                    {{ \Illuminate\Support\Str::words(strip_tags($blog->description), 75, '...') }}
                     <div class="author">&mdash; {{ $blog->title }}</div>
                   </blockquote>
                 </div>
