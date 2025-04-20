@@ -98,7 +98,7 @@ class HomeController extends Controller
     }
     public function whyUsPage()
     {
-        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $faqs = Faq::where('type','why-us-page')->get();
         $testimonial=Testimonial::get();
         $blogs = Blog::with('blogImage')->get();
         return view('home.company.whyUs',compact('testimonial','faqs','blogs'));
