@@ -789,10 +789,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 offset-lg-1 text-center text-lg-start"
-                        data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                        <h2 class="fw-600 text-dark-gray ls-minus-2px mb-0 appear words lines splitting anime-child anime-complete">How Mounteko QuickBooks Cloud Hosting Can
-                            Make A Difference?</h2>
+                    <div class="col-lg-5 offset-lg-1 text-center text-lg-start">
+                        <h3 class="fw-600 text-dark-gray ls-minus-2px mb-0"
+                            data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        How Mounteko QuickBooks Cloud Hosting Can
+                            Make A Difference?</h3>
                         <p class="w-90 xs-w-100 mx-auto mx-lg-0">At Mounteko, we deliver more than QuickBooks cloud
                             hosting—we craft scalable, future-proof solutions that drive your business forward. Enjoy
                             ultra-fast deployment, top-notch security, and 24/7 expert support. Whether it's QuickBooks
