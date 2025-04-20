@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Faq extends Model
 {
     use HasFactory , SoftDeletes;
-    protected $fillable = ['question','answer','status'];
+    protected $fillable = ['question','answer','status','type'];
 }

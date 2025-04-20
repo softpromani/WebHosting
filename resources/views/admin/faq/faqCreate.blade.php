@@ -22,7 +22,19 @@
             </div>
 
             <div class="card-body">
-
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label for="faq_type">Type : </label>
+                                <select class="form-control" name="type" id="faq_type" required>
+                                    <option value="" selected disabled>Select Type</option>
+                                    <option value="home-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'home-page' ? 'selected' : '' }}>Home Page</option>
+                                    <option value="why-us-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'why-us-page' ? 'selected' : '' }}>Why-Us Page</option>
+                                    <option value="security-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'security-page"' ? 'selected' : '' }}>Security Page</option>
+                                </select>
+                                @error('type')<div class="alert mt-2 text-danger">{{ $message }}</div> @enderror
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-2">
                         <label for="question">Question : </label>
