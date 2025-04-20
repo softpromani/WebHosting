@@ -460,6 +460,9 @@
         </section> --}}
         <section class="user-blog" class="footer-top">
             <div class="container">
+                <div class="section-title">
+                    <h3>Our <span>Blogs</span></h3>
+                </div>
                 <x-blog-grid :blogs="$blogs" page="Why Us"/>
             </div>
         </section>
