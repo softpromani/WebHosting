@@ -42,7 +42,7 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('teamMembers',$teamMembers);
         });
         View::composer('home.index',function($view){
-            $faqs=Faq::where('type','home-page')->latest()->get();
+            $faqs=Faq::where('type','home-page')->get();
             $view->with('faqs',$faqs);
         });
 
