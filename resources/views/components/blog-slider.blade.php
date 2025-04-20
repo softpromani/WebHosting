@@ -9,7 +9,7 @@
             <div class="owl-carousel slide-one-item">
             @foreach($blogs as $blog)   
               <div class="d-md-flex testimony-29101 align-items-stretch">
-                <div class="image" style="background-image: url({{ asset('storage/'.$blog?->blogImage?->media) }});"></div>
+                <div class="image" style="background-image: url({{ asset('storage/'.$blog?->blog_image) }});"></div>
                 <div class="text">
                   <blockquote>
                     {!! $blog->description !!}
@@ -25,7 +25,7 @@
               <ul class="thumbnail">
                 @foreach($blogs as $blog)
                     @if($loop->first)  
-                        <li class="active"><a href="#"><img src="{{ asset('storage/'.$blog?->blogImage?->media) }}" alt="Image" class="img-fluid"></a></li>
+                        <li class="active"><a href="#"><img src="{{ asset('storage/'.$blog?->blog_image) }}" alt="Image" class="img-fluid"></a></li>
                     @else
                         <li><a href="#"><img src="{{ asset('storage/'.$blog->blogImage->media) }}" alt="Image" class="img-fluid"></a></li>
                     @endif
