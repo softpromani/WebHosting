@@ -147,17 +147,15 @@
         <!-- Owl Carousel -->
         <section class="blog-carousel owl-carousel owl-theme">
             @foreach ($blogs as $blog)
-                
-           
-            <div class="blog-post">
-                <img src="{{ asset('storage/'.$blog?->blog_image) }}" alt="{{ $blog->title }}">
-                <div class="post-content">
-                    <span class="category">{{$page}}</span>
-                    <h3>{{ $blog->title }}</h3>
-                    <div class="meta">{{$blog->created_at?->format('d M Y')}}</div>
+                <div class="blog-post">
+                    <img src="{{ asset('storage/' . $blog?->blog_image) }}" alt="{{ $blog->title }}">
+                    <div class="post-content">
+                        <span class="category">{{ $page }}</span>
+                        <h3>{{ $blog->title }}</h3>
+                        <div class="meta">{{ $blog->created_at?->format('d M Y') }}</div>
                         {{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}
+                    </div>
                 </div>
-            </div>
             @endforeach
             <!-- Add more .blog-post items here -->
         </section>
@@ -171,21 +169,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
-         function setEqualHeight() {
-    let maxHeight = 0;
+        function setEqualHeight() {
+            let maxHeight = 0;
 
-    // Reset heights first
-    $('.blog-post').css('height', 'auto');
+            // Reset heights first
+            $('.blog-post').css('height', 'auto');
 
-    // Find max height
-    $('.blog-post').each(function () {
-      const h = $(this).outerHeight();
-      if (h > maxHeight) maxHeight = h;
-    });
+            // Find max height
+            $('.blog-post').each(function() {
+                const h = $(this).outerHeight();
+                if (h > maxHeight) maxHeight = h;
+            });
 
-    // Apply max height to all
-    $('.blog-post').css('height', maxHeight + 'px');
-  }
+            // Apply max height to all
+            $('.blog-post').css('height', maxHeight + 'px');
+        }
+
         const owl = $('.blog-carousel');
 
         owl.owlCarousel({
@@ -193,7 +192,6 @@
             margin: 20,
             nav: false,
             dots: false,
-            autoHeight: true, 
             responsive: {
                 0: {
                     items: 1
@@ -204,17 +202,18 @@
                 1024: {
                     items: 3
                 }
-            }
+            },
+            onInitialized: setEqualHeight,
+            onResized: setEqualHeight,
+            onTranslated: setEqualHeight
         });
 
-        $('.custom-nav.left').click(function() {
-            owl.trigger('prev.owl.carousel');
-        });
-
-        $('.custom-nav.right').click(function() {
-            owl.trigger('next.owl.carousel');
+        // Also reset height on window resize
+        $(window).on('resize', function() {
+            setTimeout(setEqualHeight, 200);
         });
     </script>
+
 
 
 </div>
