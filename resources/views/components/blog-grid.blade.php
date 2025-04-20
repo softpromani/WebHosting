@@ -186,6 +186,7 @@
             margin: 20,
             nav: false,
             dots: false,
+            autoHeight: true, 
             responsive: {
                 0: {
                     items: 1
