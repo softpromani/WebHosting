@@ -512,7 +512,7 @@
     {{-- End Section Faq--}}
 
     {{-- start Blog section --}}
-    <x-blog-grid :blogs="$blogs" :page="About Us" />
+    <x-blog-grid :blogs="$blogs" page="About Us" />
     {{-- end Blog section --}}
 
 @endsection
