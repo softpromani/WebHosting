@@ -179,6 +179,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
+         function setEqualHeight() {
+    let maxHeight = 0;
+
+    // Reset heights first
+    $('.blog-post').css('height', 'auto');
+
+    // Find max height
+    $('.blog-post').each(function () {
+      const h = $(this).outerHeight();
+      if (h > maxHeight) maxHeight = h;
+    });
+
+    // Apply max height to all
+    $('.blog-post').css('height', maxHeight + 'px');
+  }
         const owl = $('.blog-carousel');
 
         owl.owlCarousel({
