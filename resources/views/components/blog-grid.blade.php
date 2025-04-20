@@ -55,14 +55,6 @@
             padding: 40px 0;
         }
 
-        .blog-post {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
         .blog-post:hover {
             transform: translateY(-5px);
         }
