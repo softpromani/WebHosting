@@ -11,8 +11,8 @@
               <div class="d-md-flex testimony-29101 align-items-stretch">
                 <div class="image" style="background-image: url({{ asset('storage/'.$blog?->blog_image) }});"></div>
                 <div class="text">
-                  <blockquote>
-                    {{ \Illuminate\Support\Str::words(strip_tags($blog->description), 100, '...') }}
+                  <blockquote class="text-light">
+                    {{ \Illuminate\Support\Str::words(strip_tags($blog->description), 70, '...') }}
                     <div class="author">&mdash; {{ $blog->title }}</div>
                   </blockquote>
                 </div>
