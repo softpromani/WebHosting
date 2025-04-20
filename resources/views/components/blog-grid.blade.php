@@ -190,8 +190,12 @@
         owl.owlCarousel({
             loop: true,
             margin: 20,
-            nav: false,
+            nav: true,
             dots: false,
+            navText: [
+                '<i class="arrow left">‹</i>',
+                '<i class="arrow right">›</i>'
+            ],
             responsive: {
                 0: {
                     items: 1,
