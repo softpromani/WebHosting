@@ -6,6 +6,7 @@
             overflow: hidden;
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            position: relative;
         }
 
         .blog-post:hover {
@@ -14,9 +15,10 @@
 
         .blog-post img {
             width: 100%;
-            height: 250px;
+            height: auto;
             object-fit: cover;
             transition: transform 0.5s ease;
+            display: block;
         }
 
         .blog-post:hover img {
@@ -65,7 +67,7 @@
             top: 45%;
             transform: translateY(-50%);
             z-index: 10;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -93,14 +95,40 @@
 
         .arrow {
             font-weight: bold;
-            user-select: none;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .image-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #ff5722;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            z-index: 2;
+        }
+
+        .image-loaded .image-loader {
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
     </style>
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
     <div class="blog-slider-wrapper">
         <!-- Left Arrow -->
@@ -110,7 +138,11 @@
         <section class="blog-carousel owl-carousel owl-theme">
             @foreach ($blogs as $blog)
                 <div class="blog-post">
-                    <img src="{{ asset('storage/' . $blog?->blog_image) }}" alt="{{ $blog->title }}">
+                    <div class="image-wrapper">
+                        <div class="image-loader"></div>
+                        <img loading="lazy" src="{{ asset('storage/' . $blog?->blog_image) }}"
+                             alt="{{ $blog->title }}" onload="this.closest('.image-wrapper').classList.add('image-loaded')">
+                    </div>
                     <div class="post-content">
                         <span class="category">{{ $page }}</span>
                         <h3>{{ $blog->title }}</h3>
@@ -125,50 +157,54 @@
         <div class="custom-nav right"><i class="arrow">&#10095;</i></div>
     </div>
 
-    <!-- Owl Carousel Scripts -->
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            const $owl = $('.blog-carousel');
+        function setEqualHeight() {
+            let maxHeight = 0;
+            $('.blog-post').css('height', 'auto');
+            $('.blog-post').each(function () {
+                const h = $(this).outerHeight();
+                if (h > maxHeight) maxHeight = h;
+            });
+            $('.blog-post').css('height', maxHeight + 'px');
+        }
 
-            $owl.owlCarousel({
-                loop: {{ count($blogs) > 3 ? 'true' : 'false' }},
-                margin: 20,
-                nav: false,
-                dots: false,
-                slideBy: 1,
-                responsive: {
-                    0: { items: 1, slideBy: 1 },
-                    768: { items: 2, slideBy: 1 },
-                    1024: { items: 3, slideBy: 1 }
+        const owl = $('.blog-carousel');
+
+        owl.owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            navText: [
+                '<i class="arrow left">‹</i>',
+                '<i class="arrow right">›</i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1
                 },
-                onInitialized: setEqualHeight,
-                onResized: setEqualHeight,
-                onTranslated: setEqualHeight
-            });
-
-            // Custom nav buttons
-            $('.custom-nav.left').click(function () {
-                $owl.trigger('prev.owl.carousel');
-            });
-            $('.custom-nav.right').click(function () {
-                $owl.trigger('next.owl.carousel');
-            });
-
-            function setEqualHeight() {
-                let maxHeight = 0;
-                $('.blog-post').css('height', 'auto');
-                $('.blog-post').each(function () {
-                    maxHeight = Math.max(maxHeight, $(this).outerHeight());
-                });
-                $('.blog-post').css('height', maxHeight + 'px');
-            }
-
-            $(window).on('resize', function () {
-                setTimeout(setEqualHeight, 300);
-            });
+                768: {
+                    items: 2
+                },
+                1024: {
+                    items: 3
+                }
+            },
+            onInitialized: setEqualHeight,
+            onResized: setEqualHeight,
+            onTranslated: setEqualHeight
         });
+
+        $(window).on('resize', function () {
+            setTimeout(setEqualHeight, 200);
+        });
+
+        // Custom nav actions
+        $('.custom-nav.left').click(() => owl.trigger('prev.owl.carousel'));
+        $('.custom-nav.right').click(() => owl.trigger('next.owl.carousel'));
     </script>
 </div>
