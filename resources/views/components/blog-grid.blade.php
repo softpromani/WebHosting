@@ -194,13 +194,16 @@
             dots: false,
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    slideBy: 1
                 },
                 768: {
-                    items: 2
+                    items: 2,
+                    slideBy: 1
                 },
                 1024: {
-                    items: 3
+                    items: 3,
+                    slideBy: 1
                 }
             },
             onInitialized: setEqualHeight,
