@@ -318,7 +318,7 @@
                         <figure class="position-relative m-0">
                             <div class="position-relative d-inline-block"
                             data-anime='{ "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <img class="w-90 border-radius-5px animation-float hover-animate"
+                            <img class="w-75 border-radius-5px animation-float hover-animate"
                                 src="{{ asset('home/assets/homepage/images/Homepage-Understand and apply the business process.webp') }}"
                                 alt=""
                                 style="position: relative;">
