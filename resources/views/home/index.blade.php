@@ -103,7 +103,7 @@
           ]
         }
         </script>
-        <script type="application/ld+json">
+    <script type="application/ld+json">
             {
               "@context": "https://schema.org",
               "@type": "QAPage",
@@ -158,7 +158,35 @@
             }
             </script>
 
+<style>
+   /* Always show the icon */
+.feature-box-icon {
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
 
+/* Hide title + description initially */
+.feature-box-content {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: opacity 0.4s ease, transform 0.4s ease !important;
+    pointer-events: none !important;
+}
+
+/* Show title + description on hover */
+.feature-box:hover .feature-box-content {
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
+    pointer-events: auto !important;
+}
+
+
+
+
+</style>
 @endsection
 @section('content')
     <!-- ======= Hero Section ======= -->
@@ -181,133 +209,169 @@
 
         <!-- start section -->
         <section class="pt-0 background-position-center-top sm-background-image-none"
-    style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
-    <div class="container-fluid d-none d-md-block">
-        <div class="row">
-            <div class="p-0 overlap-section" data-bottom-top="transform: translateY(-50px)"
-                data-top-bottom="transform: translateY(50px)">
-                <img src="{{ asset('home/assets/homepage/images/images-demo-startup-bg-01.png') }}" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row justify-content-center mb-3">
-            <div class="col-lg-7 text-center"
-                data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">Our Offerings</span>
-                <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px shadow-none" data-shadow-animation="true"
-                    data-animation-delay="1000">Top-Notch Cloud Hosting
-                    <span class="text-highlight fw-800">
-                        Services
-                        <span class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span>
-                    </span>
-                </h3>
-            </div>
-        </div>
-
-        <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center">
-            <!-- START CARD -->
-            <div class="col md-mb-30px d-flex">
-                <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
-                    <div class="position-relative box-image">
-                        <a href="#">
-                            <img src="{{ asset('home/assets/homepage/images/Homepage-QuickBooks Hosting (1).png') }}" alt="" class="hover-animate w-100" style="position: relative;">
-                        </a>
-                    </div>
-                    <div class="bg-white d-flex flex-column h-100">
-                        <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
-                            <a href="demo-startup-services-details.html" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">QuickBooks Hosting</a>
-                            <p>Access QuickBooks securely in the cloud with fast performance and 24/7 support.</p>
-                        </div>
-                        <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
-                            <a href="#" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                <span>
-                                    <span class="btn-text">Explore services</span>
-                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                </span>
-                            </a>
-                        </div>
+            style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
+            <div class="container-fluid d-none d-md-block">
+                <div class="row">
+                    <div class="p-0 overlap-section" data-bottom-top="transform: translateY(-50px)"
+                        data-top-bottom="transform: translateY(50px)">
+                        <img src="{{ asset('home/assets/homepage/images/images-demo-startup-bg-01.png') }}" alt="">
                     </div>
                 </div>
             </div>
 
-            <!-- SECOND CARD -->
-            <div class="col md-mb-30px d-flex">
-                <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
-                    <div class="position-relative box-image">
-                        <a href="demo-startup-services-details.html">
-                            <img src="{{ asset('home/assets/homepage/images/Homepage-Sage Application Hosting.png') }}" alt="" class="hover-animate w-100" style="position: relative;">
-                        </a>
-                    </div>
-                    <div class="bg-white d-flex flex-column h-100">
-                        <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
-                            <a href="#" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Sage Application Hosting</a>
-                            <p>Run Sage in the cloud with secure access and guaranteed uptime.</p>
-                        </div>
-                        <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
-                            <a href="demo-startup-services-details.html" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                <span>
-                                    <span class="btn-text">Explore services</span>
-                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                </span>
-                            </a>
-                        </div>
+            <div class="container">
+                <div class="row justify-content-center mb-3">
+                    <div class="col-lg-7 text-center"
+                        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="alt-font text-uppercase fw-600 d-inline-block ls-1px">Our Offerings</span>
+                        <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px shadow-none" data-shadow-animation="true"
+                            data-animation-delay="1000">Top-Notch Cloud Hosting
+                            <span class="text-highlight fw-800">
+                                Services
+                                <span
+                                    class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6 separator-animation"></span>
+                            </span>
+                        </h3>
                     </div>
                 </div>
-            </div>
 
-            <!-- THIRD CARD -->
-            <div class="col d-flex">
-                <div class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
-                    <div class="position-relative box-image">
-                        <a href="demo-startup-services-details.html">
-                            <img src="{{ asset('home/assets/homepage/images/Homepage-Tax software Hosting (1).png') }}" alt="" class="hover-animate w-100" style="position: relative;">
-                        </a>
-                    </div>
-                    <div class="bg-white d-flex flex-column h-100">
-                        <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
-                            <a href="demo-startup-services-details.html" class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Tax Software Hosting</a>
-                            <p>Host your tax software in the cloud for secure, remote access and seamless updates.</p>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center">
+                    <!-- START CARD -->
+                    <div class="col md-mb-30px d-flex">
+                        <div
+                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
+                            <div class="position-relative box-image">
+                                <a href="#">
+                                    <img src="{{ asset('home/assets/homepage/images/Homepage-QuickBooks Hosting (1).png') }}"
+                                        alt="" class="hover-animate w-100" style="position: relative;">
+                                </a>
+                            </div>
+                            <div class="bg-white d-flex flex-column h-100">
+                                <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
+                                    <a href="demo-startup-services-details.html"
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">QuickBooks
+                                        Hosting</a>
+                                    <p>Access QuickBooks securely in the cloud with fast performance and 24/7 support.</p>
+                                </div>
+                                <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
+                                    <a href="#"
+                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                        <span>
+                                            <span class="btn-text">Explore services</span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
-                            <a href="demo-startup-services-details.html" class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                <span>
-                                    <span class="btn-text">Explore services</span>
-                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                    <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                </span>
-                            </a>
+                    </div>
+
+                    <!-- SECOND CARD -->
+                    <div class="col md-mb-30px d-flex">
+                        <div
+                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
+                            <div class="position-relative box-image">
+                                <a href="demo-startup-services-details.html">
+                                    <img src="{{ asset('home/assets/homepage/images/Homepage-Sage Application Hosting.png') }}"
+                                        alt="" class="hover-animate w-100" style="position: relative;">
+                                </a>
+                            </div>
+                            <div class="bg-white d-flex flex-column h-100">
+                                <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
+                                    <a href="#"
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Sage Application
+                                        Hosting</a>
+                                    <p>Run Sage in the cloud with secure access and guaranteed uptime.</p>
+                                </div>
+                                <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
+                                    <a href="demo-startup-services-details.html"
+                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                        <span>
+                                            <span class="btn-text">Explore services</span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- THIRD CARD -->
+                    <div class="col d-flex">
+                        <div
+                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
+                            <div class="position-relative box-image">
+                                <a href="demo-startup-services-details.html">
+                                    <img src="{{ asset('home/assets/homepage/images/Homepage-Tax software Hosting (1).png') }}"
+                                        alt="" class="hover-animate w-100" style="position: relative;">
+                                </a>
+                            </div>
+                            <div class="bg-white d-flex flex-column h-100">
+                                <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
+                                    <a href="demo-startup-services-details.html"
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Tax Software
+                                        Hosting</a>
+                                    <p>Host your tax software in the cloud for secure, remote access and seamless updates.
+                                    </p>
+                                </div>
+                                <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
+                                    <a href="demo-startup-services-details.html"
+                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
+                                        <span>
+                                            <span class="btn-text">Explore services</span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END CARD -->
                 </div>
             </div>
-            <!-- END CARD -->
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Floating Animation Style -->
-<style>
-.hover-animate {
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-}
+        <!-- Floating Animation Style -->
+        <style>
+            .hover-animate {
+                transition: transform 0.3s ease-in-out;
+                position: relative;
+            }
 
-.hover-animate:hover {
-    animation: moveAround 3s infinite alternate ease-in-out;
-}
+            .hover-animate:hover {
+                animation: moveAround 3s infinite alternate ease-in-out;
+            }
 
-@keyframes moveAround {
-    0% { top: 0px; left: 0px; }
-    25% { top: -15px; left: 15px; }
-    50% { top: 15px; left: -15px; }
-    75% { top: -15px; left: -15px; }
-    100% { top: 0px; left: 0px; }
-}
-</style>
+            @keyframes moveAround {
+                0% {
+                    top: 0px;
+                    left: 0px;
+                }
+
+                25% {
+                    top: -15px;
+                    left: 15px;
+                }
+
+                50% {
+                    top: 15px;
+                    left: -15px;
+                }
+
+                75% {
+                    top: -15px;
+                    left: -15px;
+                }
+
+                100% {
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+        </style>
 
         <!-- end section -->
 
@@ -317,11 +381,10 @@
                     <div class="col-lg-6 text-center md-mb-50px">
                         <figure class="position-relative m-0">
                             <div class="position-relative d-inline-block"
-                            data-anime='{ "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <img class="w-75 border-radius-5px animation-float hover-animate"
-                                src="{{ asset('home/assets/homepage/images/Homepage-Understand and apply the business process.webp') }}"
-                                alt=""
-                                style="position: relative;">
+                                data-anime='{ "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <img class="w-75 border-radius-5px animation-float hover-animate"
+                                    src="{{ asset('home/assets/homepage/images/Homepage-Understand and apply the business process.webp') }}"
+                                    alt="" style="position: relative;">
                             </div>
 
                             {{-- <figcaption
@@ -424,27 +487,45 @@
                         <div class="img-container">
                             <!-- Primary image -->
                             <img src="{{ asset('home/assets/img/demo-consulting-01.jpg') }}" alt="Advisor"
-                                class="rounded-img img-back hover-animate"
-                                style="position: relative;">
+                                class="rounded-img img-back hover-animate" style="position: relative;">
 
                             <!-- Overlapping image -->
                             <img src="{{ asset('home/assets/img/demo-consulting-02.jpg') }}" alt="Advisor"
-                                class="rounded-img img-front hover-animate-2"
-                                style="position: relative;" data-aos="fade-up">
+                                class="rounded-img img-front hover-animate-2" style="position: relative;"
+                                data-aos="fade-up">
                         </div>
 
                         <style>
-                        .hover-animate-2:hover {
-                            animation: moveAround2 3s infinite alternate ease-in-out;
-                        }
+                            .hover-animate-2:hover {
+                                animation: moveAround2 3s infinite alternate ease-in-out;
+                            }
 
-                        @keyframes moveAround2 {
-                            0% { bottom: -225px; right: 150px; }
-                            25% { bottom: -240px; right: 165px; }
-                            50% { bottom: -225px; right: 150px; }
-                            75% { bottom: -240px; right: 165px; }
-                            100% { bottom: -225px; right: 150px; }
-                        }
+                            @keyframes moveAround2 {
+                                0% {
+                                    bottom: -225px;
+                                    right: 150px;
+                                }
+
+                                25% {
+                                    bottom: -240px;
+                                    right: 165px;
+                                }
+
+                                50% {
+                                    bottom: -225px;
+                                    right: 150px;
+                                }
+
+                                75% {
+                                    bottom: -240px;
+                                    right: 165px;
+                                }
+
+                                100% {
+                                    bottom: -225px;
+                                    right: 150px;
+                                }
+                            }
                         </style>
 
                     </div>
@@ -547,27 +628,45 @@
                         <!-- end counter item -->
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-4 text-center animation-float sm-mb-65px"
-                    data-anime='{ "el": "childs", "scale": [0, 1], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        data-anime='{ "el": "childs", "scale": [0, 1], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
 
-                    <img class="border-radius-100 w-350px hover-animate"
-                        src="{{ asset('home/assets/homepage/images/images-demo-consulting-company-01.jpg') }}"
-                        alt=""
-                        style="position: relative;">
-                </div>
+                        <img class="border-radius-100 w-350px hover-animate"
+                            src="{{ asset('home/assets/homepage/images/images-demo-consulting-company-01.jpg') }}"
+                            alt="" style="position: relative;">
+                    </div>
 
-                <style>
-                .hover-animate:hover {
-                    animation: moveAround 3s infinite alternate ease-in-out;
-                }
+                    <style>
+                        .hover-animate:hover {
+                            animation: moveAround 3s infinite alternate ease-in-out;
+                        }
 
-                @keyframes moveAround {
-                    0% { top: 0px; left: 0px; }
-                    25% { top: -15px; left: 15px; }
-                    50% { top: 15px; left: -15px; }
-                    75% { top: -15px; left: -15px; }
-                    100% { top: 0px; left: 0px; }
-                }
-                </style>
+                        @keyframes moveAround {
+                            0% {
+                                top: 0px;
+                                left: 0px;
+                            }
+
+                            25% {
+                                top: -15px;
+                                left: 15px;
+                            }
+
+                            50% {
+                                top: 15px;
+                                left: -15px;
+                            }
+
+                            75% {
+                                top: -15px;
+                                left: -15px;
+                            }
+
+                            100% {
+                                top: 0px;
+                                left: 0px;
+                            }
+                        }
+                    </style>
 
                     <div class="col-xl-4 col-lg-3 col-md-4"
                         data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'>
@@ -606,7 +705,7 @@
                                 <!-- start features box item -->
                                 <div
                                     class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mb-30px">
-                                    <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
+                                    <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
                                                 <img src="home/assets/homepage/images/Homepage- 247 Assistance.png" />
@@ -626,7 +725,7 @@
                                 <!-- end features box item -->
                                 <div
                                     class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all xs-mb-30px">
-                                    <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
+                                    <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
                                                 <img src="home/assets/homepage/images/High-end Security.png" />
@@ -650,7 +749,7 @@
                                 <!-- start features box item -->
                                 <div
                                     class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mb-30px">
-                                    <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
+                                    <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
                                                 <img src="home/assets/homepage/images/99.99 Uptime.png" />
@@ -670,7 +769,7 @@
                                 <!-- end features box item -->
                                 <div
                                     class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mt-30px">
-                                    <div class="feature-box hover-box dark-hover last-paragraph-no-margin">
+                                    <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
                                                 <img src="home/assets/homepage/images/reliable hosting plan.png" />
@@ -751,22 +850,40 @@
                     <div class="col-xl-4 ">
                         <div class="card-img mb-3">
                             <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
-                                class="img-fluid services-img rounded hover-animate"
-                                style="position: relative;">
+                                class="img-fluid services-img rounded hover-animate" style="position: relative;">
                         </div>
 
                         <style>
-                        .hover-animate:hover {
-                            animation: moveAround 3s infinite alternate ease-in-out;
-                        }
+                            .hover-animate:hover {
+                                animation: moveAround 3s infinite alternate ease-in-out;
+                            }
 
-                        @keyframes moveAround {
-                            0% { top: 0px; left: 0px; }
-                            25% { top: -15px; left: 15px; }
-                            50% { top: 15px; left: -15px; }
-                            75% { top: -15px; left: -15px; }
-                            100% { top: 0px; left: 0px; }
-                        }
+                            @keyframes moveAround {
+                                0% {
+                                    top: 0px;
+                                    left: 0px;
+                                }
+
+                                25% {
+                                    top: -15px;
+                                    left: 15px;
+                                }
+
+                                50% {
+                                    top: 15px;
+                                    left: -15px;
+                                }
+
+                                75% {
+                                    top: -15px;
+                                    left: -15px;
+                                }
+
+                                100% {
+                                    top: 0px;
+                                    left: 0px;
+                                }
+                            }
                         </style>
 
                     </div>
@@ -796,20 +913,20 @@
         </section>
         <!-- End Frequently Asked Questions Section -->
 
-         <!-- ======= Blog Section ======= -->
-         @if($blogs && count($blogs) > 0)
-         <section id="blog" class="blog section-bg">
-            <div class="container" data-aos="fade-up">
+        <!-- ======= Blog Section ======= -->
+        @if ($blogs && count($blogs) > 0)
+            <section id="blog" class="blog section-bg">
+                <div class="container" data-aos="fade-up">
 
-                <div class="section-title">
-                    <h3>Our <span>Blogs</span></h3>
+                    <div class="section-title">
+                        <h3>Our <span>Blogs</span></h3>
 
-                </div>
+                    </div>
                     <x-blog-slider :blogs="$blogs" />
-            </div>
-         </section>
-         @endif
-         <!-- ======= END Blog Section ======= -->
+                </div>
+            </section>
+        @endif
+        <!-- ======= END Blog Section ======= -->
 
     </main><!-- End #main -->
 @endsection
