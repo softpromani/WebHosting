@@ -1297,7 +1297,7 @@
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-up"
                 data-aos-delay="200"
-                style="color: white; text-align: center;">
+                style="color: white;">
                 {!! $products->service_title ?? '' !!}
             </div>
             <div class="col-lg-6"
