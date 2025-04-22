@@ -1208,6 +1208,10 @@
             color: #000;
             /* Change the color to match your design */
         }
+        .services-img-2{
+            height: 400px;
+            width: 400px;
+        }
     </style>
 @endsection
 @section('content')
@@ -1504,7 +1508,7 @@
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-img">
                             <img src="{{ asset('storage/' . optional($products->serviceSection2)->media) }}"
-                                alt="no available" class="img-fluid services-img rounded">
+                                alt="no available" class="img-fluid services-img-2 rounded">
 
                         </div>
                     </div>
