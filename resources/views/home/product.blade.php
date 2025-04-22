@@ -1551,7 +1551,7 @@
 
     <!-- ======= Contact Us Section ======= -->
     <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
+        {{-- <div class="container" data-aos="fade-up">
             <div class="row" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="col-lg-6 ">
@@ -1592,7 +1592,57 @@
 
             </div>
 
-        </div>
+        </div> --}}
+
+        <div class="container py-5">
+            <div class="row bg-primary rounded-4 shadow-lg p-4">
+              <!-- Left Section -->
+              <div class="col-lg-6 mb-4">
+                <h6 class="text-uppercase fw-semibold">Work With Us</h6>
+                <h2 class="fw-bold mb-3">We Are Ready To Work For Your Projects</h2>
+                <p class="mb-4">
+                  Phasellus parturient est cum dictum habitant eros fames, enim curabitur convallis arcu dictumst fermentum cubilia leo maecenas in pellentesque.
+                </p>
+                <div class="d-flex align-items-center">
+                  <div class="me-3 fs-3">
+                    📞
+                  </div>
+                  <div>
+                    <div class="fw-bold">Call Us: 258-3258 235</div>
+                    <small class="text-white-50">For any question</small>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Right Section (Form) -->
+              <div class="col-lg-6">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <input type="text" class="form-control rounded-pill" placeholder="Your Name">
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email" class="form-control rounded-pill" placeholder="Email Address">
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control rounded-pill" placeholder="Phone Number">
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control rounded-pill" placeholder="What is your budget?">
+                    </div>
+                    <div class="col-12">
+                      <textarea class="form-control rounded-4" rows="4" placeholder="Write your message here"></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn btn-light fw-semibold px-4 py-2 rounded-pill">
+                        Submit Message
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
     </section>
     <!-- End Counts Section -->
 
