@@ -1594,7 +1594,7 @@
 
         </div> --}}
 
-        <div class="container text-light">
+        <div class="container text-white">
             <div class="row bg-primary rounded-4 shadow-lg p-4">
               <!-- Left Section -->
               <div class="col-lg-6 mb-4">
