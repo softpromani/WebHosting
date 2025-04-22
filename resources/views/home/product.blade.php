@@ -1605,7 +1605,7 @@
                 </p>
                 <div class="d-flex align-items-center">
                   <div class="me-3 fs-3">
-                    <i class="fa-solid fa-circle-phone bg-white"></i>
+                    <i class="bi bi-telephone-fill text-white fs-3 me-3"></i>
                   </div>
                   <div>
                     <div class="fw-bold">Call Us: 258-3258 235</div>
