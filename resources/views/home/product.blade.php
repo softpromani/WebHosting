@@ -1550,7 +1550,7 @@
 
 
     <!-- ======= Contact Us Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact py-5">
         {{-- <div class="container" data-aos="fade-up">
             <div class="row" data-aos="fade-up" data-aos-delay="100">
 
@@ -1594,7 +1594,7 @@
 
         </div> --}}
 
-        <div class="container py-5">
+        <div class="container text-light">
             <div class="row bg-primary rounded-4 shadow-lg p-4">
               <!-- Left Section -->
               <div class="col-lg-6 mb-4">
