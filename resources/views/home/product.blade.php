@@ -1616,22 +1616,23 @@
         
               <!-- Right Section (Form) -->
               <div class="col-lg-6">
-                <form>
+                <form action="{{ route('contactStore') }}" method="post" role="form">
+                    @csrf
                   <div class="row g-3">
                     <div class="col-md-6">
-                      <input type="text" class="form-control rounded-pill px-4 py-3" placeholder="Your Name">
+                      <input type="text" name="fname" class="form-control rounded-pill px-4 py-3" placeholder="Your First Name">
                     </div>
                     <div class="col-md-6">
-                      <input type="email" class="form-control rounded-pill px-4 py-3" placeholder="Email Address">
+                      <input type="text" name="lname" class="form-control rounded-pill px-4 py-3" placeholder="Your Last Name">
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control rounded-pill px-4 py-3" placeholder="Phone Number">
+                      <input type="email" name="email" class="form-control rounded-pill px-4 py-3" placeholder="Email Address">
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control rounded-pill px-4 py-3" placeholder="What is your budget?">
+                      <input type="tel" name="phone" class="form-control rounded-pill px-4 py-3" placeholder="+91 123 456 7890">
                     </div>
                     <div class="col-12">
-                      <textarea class="form-control rounded-4" rows="4" placeholder="Write your message here"></textarea>
+                      <textarea name="message" class="form-control rounded-4" rows="4" placeholder="Write your message here"></textarea>
                     </div>
                     <div class="col-12">
                       <button type="submit" class="btn btn-light fw-semibold px-4 py-2 rounded-pill">
