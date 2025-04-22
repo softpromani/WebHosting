@@ -1619,16 +1619,16 @@
                 <form>
                   <div class="row g-3">
                     <div class="col-md-6">
-                      <input type="text" class="form-control rounded-pill" placeholder="Your Name">
+                      <input type="text" class="form-control rounded-pill px-4 py-3" placeholder="Your Name">
                     </div>
                     <div class="col-md-6">
-                      <input type="email" class="form-control rounded-pill" placeholder="Email Address">
+                      <input type="email" class="form-control rounded-pill px-4 py-3" placeholder="Email Address">
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control rounded-pill" placeholder="Phone Number">
+                      <input type="text" class="form-control rounded-pill px-4 py-3" placeholder="Phone Number">
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control rounded-pill" placeholder="What is your budget?">
+                      <input type="text" class="form-control rounded-pill px-4 py-3" placeholder="What is your budget?">
                     </div>
                     <div class="col-12">
                       <textarea class="form-control rounded-4" rows="4" placeholder="Write your message here"></textarea>
