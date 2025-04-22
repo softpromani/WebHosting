@@ -1633,7 +1633,7 @@
                     <div class="col-12">
                       <textarea class="form-control rounded-4" rows="4" placeholder="Write your message here"></textarea>
                     </div>
-                    <div class="col-12 text-center">
+                    <div class="col-12">
                       <button type="submit" class="btn btn-light fw-semibold px-4 py-2 rounded-pill">
                         Submit Message
                       </button>
