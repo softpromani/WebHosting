@@ -1550,7 +1550,7 @@
 
 
     <!-- ======= Contact Us Section ======= -->
-    <section id="contact" class="contact py-5">
+    <section id="contact" class="contact">
         {{-- <div class="container" data-aos="fade-up">
             <div class="row" data-aos="fade-up" data-aos-delay="100">
 
