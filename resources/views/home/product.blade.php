@@ -1595,7 +1595,7 @@
         </div> --}}
 
         <div class="container text-white">
-            <div class="row bg-primary rounded-4 shadow-lg py-5 px-4">
+            <div class="row bg-primary rounded-4 shadow-lg p-5">
               <!-- Left Section -->
               <div class="col-lg-6 mb-4">
                 <h6 class="text-uppercase fw-semibold">Work With Us</h6>
