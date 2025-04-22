@@ -1597,7 +1597,7 @@
         <div class="container text-white">
             <div class="row bg-primary rounded-4 shadow-lg p-5">
               <!-- Left Section -->
-              <div class="col-lg-5 mb-4">
+              <div class="col-lg-6 mb-4 pe-5">
                 <h6 class="text-uppercase fw-semibold">Work With Us</h6>
                 <h2 class="fw-bold mb-3">We Are Ready To Work For Your Projects</h2>
                 <p class="mb-4">
@@ -1615,7 +1615,7 @@
               </div>
         
               <!-- Right Section (Form) -->
-              <div class="col-lg-7">
+              <div class="col-lg-6">
                 <form>
                   <div class="row g-3">
                     <div class="col-md-6">
