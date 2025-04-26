@@ -120,7 +120,7 @@
             display: none;
         }
         h3{
-            line-height: 0;
+            line-height: 1.4rem;
         }
         @keyframes spin {
             0% { transform: translate(-50%, -50%) rotate(0deg); }
