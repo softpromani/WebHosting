@@ -182,7 +182,7 @@
         owl.owlCarousel({
             loop: true,
             margin: 20,
-            nav: true,
+            nav: false,
             dots: false,
             navText: [
                 '<i class="arrow left">‹</i>',
