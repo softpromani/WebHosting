@@ -132,12 +132,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-    <div class="blog-slider-wrapper py-3">
+    <div class="blog-slider-wrapper">
         <!-- Left Arrow -->
         <div class="custom-nav left"><i class="arrow">&#10094;</i></div>
 
         <!-- Owl Carousel -->
-        <section class="blog-carousel owl-carousel owl-theme">
+        <section class="blog-carousel owl-carousel owl-theme py-3">
             @foreach ($blogs as $blog)
                 <div class="blog-post">
                     <div class="image-wrapper">
