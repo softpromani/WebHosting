@@ -46,7 +46,7 @@
 
 
     <!-- start section -->
-    <section id="down-section" class="background-position-center-top sm-background-image-none"
+    <section id="down-section" class="background-position-center-top sm-background-image-none pt-0 pb-0"
         style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
         <div class="container">
             <div class="row align-items-center justify-content-center mb-8 xs-mb-50px">
@@ -103,7 +103,7 @@
     </section>
     <!-- end section -->
     <!-- start section -->
-    <section class="cover-background"
+    <section class="cover-background pt-0 pb-0"
         style="background-image: url({{ asset('home/assets/homepage/images/demo-startup-who-we-are-bg.jpg') }})">
         <div class="container">
             <div class="row justify-content-center mb-3">
