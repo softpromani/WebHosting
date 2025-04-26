@@ -132,7 +132,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-    <div class="blog-slider-wrapper">
+    <div class="blog-slider-wrapper py-3">
         <!-- Left Arrow -->
         <div class="custom-nav left"><i class="arrow">&#10094;</i></div>
 
