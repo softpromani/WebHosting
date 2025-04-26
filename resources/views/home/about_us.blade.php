@@ -17,9 +17,6 @@
         .fontSize85 {
             font-size: .825rem !important;
         }
-        .owl-stage-outer{
-            margin-bottom: 10px !important;
-        }
     </style>
 
 @endsection
