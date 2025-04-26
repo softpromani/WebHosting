@@ -190,6 +190,7 @@
                                     Research and choose a reputable Hosting Services provider that meets your business
                                     needs, budget, and requirements.
                                     <br/>
+                                    <br/>
                                 </p>
                             </div>
                         </div>
@@ -233,6 +234,7 @@
                                 <p class="disc">
                                     The Hosting Services provider will set up and configure the software in the cloud
                                     environment, including installation and security settings configuration.
+                                    <br/>
                                     <br/>
                                 </p>
                             </div>
