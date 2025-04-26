@@ -192,7 +192,7 @@
                 </div>
                 <!-- end features box item -->
             </div>
-            <div class="row mt-5 sm-mt-30px"
+            {{-- <div class="row mt-5 sm-mt-30px"
                 data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 600, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="col-12 text-center">
                     <div
@@ -202,7 +202,7 @@
                             class="fs-24 alt-font text-dark-gray d-block fw-600 ls-minus-1px mb-0">Join the 10000+
                             companies trusting Mounteko.</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <!-- end section -->
