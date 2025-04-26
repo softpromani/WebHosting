@@ -6,12 +6,18 @@
     work environment.')
 @section('header-area')
     <!-- style sheets and font icons -->
-    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-vendors.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-vendors.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}"> --}}
 
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-responsive.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/startup-startup.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-responsive.min.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/startup-startup.css') }}"> --}}
+
+    <style>
+        .fontSize85 {
+            font-size: .825rem !important;
+        }
+    </style>
 
 @endsection
 @section('content')
@@ -119,17 +125,17 @@
             <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center"
                 data-anime='{ "el": "childs", "rotateZ": [5, 0], "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <!-- start features box item -->
-                <div class="col icon-with-text-style-04 transition-inner-all md-mb-30px">
+                <div class="col icon-with-text-style-04 mb-2 transition-inner-all ">
                     <div
-                        class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18 pb-18 ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
-                        <div class="feature-box-icon">
+                        class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18  ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
+                        <div class="feature-box-icon mb-5">
                             <img src="home/assets/homepage/images/About us-Why choose us-Unmatched Data Security.png"
                                 alt="">
                         </div>
-                        <div class="feature-box-content">
-                            <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">Unmatched Data
+                        <div class="feature-box-content py-3">
+                            <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5 fs-18">Unmatched Data
                                 Security</span>
-                            <p>At Mounteko Cloud Hosting, we prioritize your data with bank-level security, multi-factor
+                            <p class="fontSize85">At Mounteko Cloud Hosting, we prioritize your data with bank-level security, multi-factor
                                 authentication, and robust DDoS protection.</p>
                         </div>
                         <div class="feature-box-overlay bg-white"></div>
@@ -137,17 +143,17 @@
                 </div>
                 <!-- end features box item -->
                 <!-- start features box item -->
-                <div class="col icon-with-text-style-04 transition-inner-all md-mb-30px">
+                <div class="col icon-with-text-style-04 mb-2 transition-inner-all ">
                     <div
-                        class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18 pb-18 ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
-                        <div class="feature-box-icon">
+                        class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18  ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
+                        <div class="feature-box-icon mb-5">
                             <img src="home/assets/homepage/images/About us-Why choose us-247 Expert Support.png"
                                 alt="">
                         </div>
-                        <div class="feature-box-content">
+                        <div class="feature-box-content py-3">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">24/7 Expert
                                 Support</span>
-                            <p>At Mounteko Cloud Hosting, our dedicated support team is available around the clock to ensure
+                            <p class="fontSize85">At Mounteko Cloud Hosting, our dedicated support team is available around the clock to ensure
                                 your business runs smoothly.</p>
                         </div>
                         <div class="feature-box-overlay bg-white"></div>
@@ -155,17 +161,17 @@
                 </div>
                 <!-- end features box item -->
                 <!-- start features box item -->
-                <div class="col icon-with-text-style-04 transition-inner-all xs-mb-30px">
+                <div class="col icon-with-text-style-04 mb-2 transition-inner-all ">
                     <div
-                        class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18 pb-18 ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
-                        <div class="feature-box-icon">
+                        class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18  ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
+                        <div class="feature-box-icon mb-5">
                             <img src="home/assets/homepage/images/About us-Why choose us-Powering Innovation Through Partnerships.png"
                                 alt="">
                         </div>
-                        <div class="feature-box-content">
+                        <div class="feature-box-content py-3">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">Powering Innovation
                                 Through Partnerships</span>
-                            <p>Our strategic partnerships drive innovation, delivering cutting-edge cloud solutions with
+                            <p class="fontSize85">Our strategic partnerships drive innovation, delivering cutting-edge cloud solutions with
                                 unmatched performance, security, and reliability for our clients.</p>
                         </div>
                         <div class="feature-box-overlay bg-white"></div>
@@ -173,17 +179,16 @@
                 </div>
                 <!-- end features box item -->
                 <!-- start features box item -->
-                <div class="col icon-with-text-style-04 transition-inner-all">
-                    <div
-                        class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18 pb-18 ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
-                        <div class="feature-box-icon">
+                <div class="col icon-with-text-style-04 mb-2 transition-inner-all">            
+                    <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18  ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
+                        <div class="feature-box-icon mb-5">
                             <img src="home/assets/homepage/images/About us-Why choose us-Affordable & Customizable Plans.png"
                                 alt="">
                         </div>
-                        <div class="feature-box-content">
+                        <div class="feature-box-content py-3">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">Affordable &
                                 Customizable Plans</span>
-                            <p>Mounteko offers flexible pricing options tailored to fit your specific needs, ensuring you
+                            <p class="fontSize85">Mounteko offers flexible pricing options tailored to fit your specific needs, ensuring you
                                 get the most value from our cloud solutions without compromising on quality or scalability.
                             </p>
                         </div>
@@ -473,9 +478,9 @@
     </section> --}}
     <!-- end section -->
 
-    {{-- Start Section Faq--}}
+    {{-- Start Section Faq --}}
 
-    @if(isset($faqs) && $faqs->count()>0)
+    @if (isset($faqs) && $faqs->count() > 0)
         <section class="background-position-center-top sm-background-image-none"
             style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
             <div class="container" data-aos="fade-up">
@@ -510,7 +515,7 @@
             </div>
         </section>
     @endif
-    {{-- End Section Faq--}}
+    {{-- End Section Faq --}}
 
     {{-- start Blog section --}}
     <x-blog-grid :blogs="$blogs" page="About Us" />
