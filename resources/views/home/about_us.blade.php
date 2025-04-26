@@ -80,7 +80,7 @@
                 </div>
 
             </div>
-            <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 justify-content-center text-center"
+            {{-- <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 justify-content-center text-center"
                 data-anime='{"el": "childs", "opacity": [0,1], "translateX": [50, 0], "duration": 800, "delay":300, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="col last-paragraph-no-margin sm-mb-40px">
                     <h2 class="alt-font fw-900 text-dark-gray m-0">8M+</h2>
@@ -98,7 +98,7 @@
                     <h2 class="alt-font fw-900 text-dark-gray m-0">250</h2>
                     <p>Award winning</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <!-- end section -->
