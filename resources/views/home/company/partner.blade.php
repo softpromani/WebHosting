@@ -477,7 +477,7 @@
         </section>
         {{-- Blog section --}}
         <section class="user-blog" class="footer-top">
-            <x-blog :blogs="$blogs" />
+            <x-blog-grid :blogs="$blogs" />
         </section>
         {{-- End Blog --}}
 
