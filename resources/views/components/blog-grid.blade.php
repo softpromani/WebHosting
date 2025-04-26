@@ -122,6 +122,9 @@
        .post-content h3{
             line-height: 1.4rem;
         }
+        .owl-stage-outer{
+            padding-bottom:15px;
+        }
         @keyframes spin {
             0% { transform: translate(-50%, -50%) rotate(0deg); }
             100% { transform: translate(-50%, -50%) rotate(360deg); }
@@ -137,7 +140,7 @@
         <div class="custom-nav left"><i class="arrow">&#10094;</i></div>
 
         <!-- Owl Carousel -->
-        <section class="blog-carousel owl-carousel owl-theme py-3">
+        <section class="blog-carousel owl-carousel owl-theme">
             @foreach ($blogs as $blog)
                 <div class="blog-post">
                     <div class="image-wrapper">
