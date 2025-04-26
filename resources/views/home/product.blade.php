@@ -1722,59 +1722,7 @@
 
     <!-- ======= Blog Section ======= -->
     <section class="user-blog" class="footer-top">
-        <div class="container">
-
-            <div class="heading">
-                Blogs
-            </div>
-
-            <div class="swiper blogSwiper mb-5">
-                <div class="swiper-wrapper p-3">
-                    @foreach ($blogs as $blog)
-                        <div class="swiper-slide ">
-                            <div class="card">
-                                <img src="{{ asset('storage/' . $blog->blogImage->media) }}"
-                                    class="card-img-top blogCard" alt="{{ $blog->title }}">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $blog->title }}</h5>
-                                    <p class="card-text">{!! Str::limit(strip_tags($blog->description), 100) !!}</p>
-
-                                    <a href="{{ route('single-blog', $blog->slug) }}"
-                                        class="btn btn-primary text-white text-decoration-none">
-                                        Read more...
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-
-                </div>
-
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-            <div class="modal fade" id="blogModal" tabindex="-1" role="dialog" aria-labelledby="blogModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="blogModalLabel">Blog Title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-
-                        </div>
-                        <div class="modal-body">
-                            <p id="blogDescription">Blog description will be shown here.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+        <x-blog-grid :blogs="$blogs" />
     </section>
     <!-- End Blog Section -->
 
