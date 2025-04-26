@@ -119,7 +119,7 @@
         .image-loaded .image-loader {
             display: none;
         }
-        h3{
+       .post-content h3{
             line-height: 1.4rem;
         }
         @keyframes spin {
