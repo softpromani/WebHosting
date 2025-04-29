@@ -1213,7 +1213,6 @@
             width: 400px;
         }
     </style>
-    
 @endsection
 @section('content')
     <style>
@@ -1806,8 +1805,7 @@
             });
         });
     </script>
-    
     @isset($products->meta_page)
         {!! $products->meta_page !!}
-    @endisset
+        @endif
     @endsection
