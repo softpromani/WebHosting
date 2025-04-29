@@ -1305,7 +1305,7 @@
                 style="color: white;">
                 {!! $products->service_title ?? '' !!}
                 <br>
-                <x-cta-button :links="[
+                <x-cta-btn :links="[
                     'google_link' => 'https://www.google.com',
                     'facebook_link' => 'https://www.facebook.com'
                 ]">
