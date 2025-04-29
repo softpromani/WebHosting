@@ -1805,7 +1805,4 @@
             });
         });
     </script>
-    @isset($products->meta_page)
-        {!! $products->meta_page !!}
-        @endif
     @endsection
