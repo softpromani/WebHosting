@@ -1208,7 +1208,8 @@
             color: #000;
             /* Change the color to match your design */
         }
-        .services-img-2{
+
+        .services-img-2 {
             height: 400px;
             width: 400px;
         }
@@ -1286,62 +1287,74 @@
             margin-top: 20px;
             /* Add some space between the cards and the pagination */
         }
-
     </style>
     <!-- End Page Title -->
 
     {{-- Silder --}}
     <div
-    style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+        style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
            background-size: cover;
            background-position: center;
            background-repeat: no-repeat;
            padding: 80px 0;">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                style="color: white;">
-                {!! $products->service_title ?? '' !!}
-                <br>
-               
-            </div>
-            <div class="col-lg-6"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                style="display: flex; justify-content: center; align-items: center;">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
-                    <div class="carousel-inner" style="width: 80%; margin-left: 150px;">
-                        @foreach ($products->slide_img as $md)
-                            <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
-                                <img src="{{ asset('storage/' . $md->media) }}"
-                                     class="d-block w-100 hover-animate"
-                                     alt="..."
-                                     style="border-radius: 10px; position: relative;">
-                            </div>
-                        @endforeach
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+                    data-aos-delay="200" style="color: white;">
+                    {!! $products->service_title ?? '' !!}
+                    <br>
+
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"
+                    style="display: flex; justify-content: center; align-items: center;">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
+                        <div class="carousel-inner" style="width: 80%; margin-left: 150px;">
+                            @foreach ($products->slide_img as $md)
+                                <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
+                                    <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100 hover-animate"
+                                        alt="..." style="border-radius: 10px; position: relative;">
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- 🔥 Inline CSS for Hover Animation -->
-<style>
-    .hover-animate:hover {
-        animation: moveAround 3s infinite alternate ease-in-out;
-    }
+    <!-- 🔥 Inline CSS for Hover Animation -->
+    <style>
+        .hover-animate:hover {
+            animation: moveAround 3s infinite alternate ease-in-out;
+        }
 
-    @keyframes moveAround {
-        0%   { top: 0px; left: 0px; }
-        25%  { top: -15px; left: 15px; }
-        50%  { top: 15px; left: -15px; }
-        75%  { top: -15px; left: -15px; }
-        100% { top: 0px; left: 0px; }
-    }
-</style>
+        @keyframes moveAround {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                top: -15px;
+                left: 15px;
+            }
+
+            50% {
+                top: 15px;
+                left: -15px;
+            }
+
+            75% {
+                top: -15px;
+                left: -15px;
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
 
 
 
@@ -1598,54 +1611,59 @@
 
         <div class="container text-white">
             <div class="row  rounded-4 shadow-lg p-5" style="background-color: var(--primary-color);">
-              <!-- Left Section -->
-              <div class="col-lg-6 mb-4 pe-5">
-                <h6 class="text-uppercase fw-semibold">Work With Us</h6>
-                <h2 class="fw-bold mb-3">We Are Ready To Work For Your Projects</h2>
-                <p class="mb-4">
-                  Phasellus parturient est cum dictum habitant eros fames, enim curabitur convallis arcu dictumst fermentum cubilia leo maecenas in pellentesque.
-                </p>
-                <div class="d-flex align-items-center">
-                  <div class="me-3 fs-3">
-                    <i class="bi bi-telephone-fill text-white fs-3 me-3"></i>
-                  </div>
-                  <div>
-                    <div class="fw-bold">Call Us: 258-3258 235</div>
-                    <small class="text-white-50">For any question</small>
-                  </div>
+                <!-- Left Section -->
+                <div class="col-lg-6 mb-4 pe-5">
+                    <h6 class="text-uppercase fw-semibold">Work With Us</h6>
+                    <h2 class="fw-bold mb-3">We Are Ready To Work For Your Projects</h2>
+                    <p class="mb-4">
+                        Phasellus parturient est cum dictum habitant eros fames, enim curabitur convallis arcu dictumst
+                        fermentum cubilia leo maecenas in pellentesque.
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <div class="me-3 fs-3">
+                            <i class="bi bi-telephone-fill text-white fs-3 me-3"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold">Call Us: 258-3258 235</div>
+                            <small class="text-white-50">For any question</small>
+                        </div>
+                    </div>
                 </div>
-              </div>
-        
-              <!-- Right Section (Form) -->
-              <div class="col-lg-6">
-                <form action="{{ route('contactStore') }}" method="post" role="form">
-                    @csrf
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <input type="text" name="fname" class="form-control rounded-pill px-4 py-3" placeholder="Your First Name">
-                    </div>
-                    <div class="col-md-6">
-                      <input type="text" name="lname" class="form-control rounded-pill px-4 py-3" placeholder="Your Last Name">
-                    </div>
-                    <div class="col-md-6">
-                      <input type="email" name="email" class="form-control rounded-pill px-4 py-3" placeholder="Email Address">
-                    </div>
-                    <div class="col-md-6">
-                      <input type="tel" name="phone" class="form-control rounded-pill px-4 py-3" placeholder="+91 123 456 7890">
-                    </div>
-                    <div class="col-12">
-                      <textarea name="message" class="form-control rounded-4" rows="4" placeholder="Write your message here"></textarea>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-light fw-semibold px-4 py-2 rounded-pill">
-                        Submit Message
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
+
+                <!-- Right Section (Form) -->
+                <div class="col-lg-6">
+                    <form action="{{ route('contactStore') }}" method="post" role="form">
+                        @csrf
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="fname" class="form-control rounded-pill px-4 py-3"
+                                    placeholder="Your First Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="lname" class="form-control rounded-pill px-4 py-3"
+                                    placeholder="Your Last Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control rounded-pill px-4 py-3"
+                                    placeholder="Email Address">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" name="phone" class="form-control rounded-pill px-4 py-3"
+                                    placeholder="+91 123 456 7890">
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" class="form-control rounded-4" rows="4" placeholder="Write your message here"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-light fw-semibold px-4 py-2 rounded-pill">
+                                    Submit Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-          </div>
+        </div>
     </section>
     <!-- End Counts Section -->
 
@@ -1804,5 +1822,5 @@
     </script>
     @isset($products->meta_page)
         {!! $products->meta_page !!}
-        @endif
-    @endsection
+    @endisset
+@endsection
