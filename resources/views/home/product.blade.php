@@ -1352,7 +1352,7 @@
 
 
                 <div
-                    class="col-lg-6 product-content-description d-flex flex-column justify-content-center align-items-center">
+                    class="col-lg-6 product-content-description d-flex flex-column justify-content-left  align-items-center">
                     {!! $products->product_description !!}
                 </div>
 
