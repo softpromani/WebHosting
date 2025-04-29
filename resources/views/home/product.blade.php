@@ -1303,7 +1303,10 @@
                     data-aos-delay="200" style="color: white;">
                     {!! $products->service_title ?? '' !!}
                     <br>
-
+                    <x-cta-btn :links="[
+                        'google_link' => 'https://www.google.com',
+                        'facebook_link' => 'https://www.facebook.com'
+                    ]" />
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"
                     style="display: flex; justify-content: center; align-items: center;">
