@@ -1,4 +1,4 @@
-<div>
+<div class="w-100">
     <div class="row d-flex justify-content-evenly">
         @foreach ($links as $key=>$link)  
             <div class="col-lg-6">
