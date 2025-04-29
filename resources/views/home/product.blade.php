@@ -1359,7 +1359,7 @@
                 <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img" style="margin-left: 70px">
                         <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
-                            class="img-fluid services-img rounded">
+                            class="img-fluid services-img rounded" style="height:400px; width:400px">
 
                     </div>
                 </div>
