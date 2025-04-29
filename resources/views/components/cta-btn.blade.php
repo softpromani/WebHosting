@@ -3,7 +3,7 @@
         @foreach ($links as $key=>$link)  
             <div class="col-lg-3 col-md-4 col-6">
                 <div class="cta-btn">
-                    <a href="{{ url($link) }}" class="btn btn-parimary">{{ucfirst(str_replace('_',' ',$key))}}</a>
+                    <a href="{{ url($link) }}" class="btn btn-primary">{{ucfirst(str_replace('_',' ',$key))}}</a>
                 </div>
             </div>
         @endforeach
