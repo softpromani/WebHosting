@@ -1,397 +1,205 @@
 <style>
-    .nav-tabs {
-        border-bottom: none;
-    }
+    .background-image, [data-bg-src] {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.choose-tabs-wrapper {
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #1E2127;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    box-shadow: 0px 16px 48px 0px rgba(18, 20, 26, 0.64);
+}
+.choose-tabs-tabs.nav-tabs {
+    border-bottom: none;
+    padding: 60px;
+    display: block;
+}
+.choose-tabs-tabs.nav-tabs .nav-item.show .nav-link, .choose-tabs-tabs.nav-tabs .nav-link.active {
+    color: var(--white-color);
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+.choose-tabs-tabs .nav-link:not(:last-child) {
+    margin-bottom: 20px;
+}
 
-    .nav-item {
-        margin-bottom: 28px;
-    }
+.choose-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.title-area {
+    margin-bottom: calc(var(--section-title-space) - 10px);
+    position: relative;
+    z-index: 2;
+}
+.choose-wrapper .choose-image {
+    min-width: 276px;
+    height: 300px;
+    border-radius: 30px;
+}
+.choose-image {
+    min-width: 632px;
+    margin-left: 65px;
+}
+.th-anim {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    visibility: hidden;
+    overflow: hidden;
+}
+.choose-wrapper .choose-image img {
+    width: 100%;
+    border-radius: 30px;
+}
+.th-anim img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+}
+img:not([draggable]), embed, object, video {
+    max-width: 100%;
+    height: auto;
+}
 
-    .tab-style-05 .nav-tabs .nav-item .nav-link.active,
-    .tab-style-05 .nav-tabs .nav-item .nav-link.show,
-    .tab-style-05 .nav-tabs .nav-item .nav-link:hover i {
-        /* color: #0056b3; */
-        color: var(--primary-color);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-
-    }
-
-    .tab-style-05 .nav-tabs .nav-item .nav-link.active i,
-    .tab-style-05 .nav-tabs .nav-item .nav-link.show,
-    .tab-style-05 .nav-tabs .nav-item .nav-link:hover i {
-        /* color: #0056b3; */
-        color: var(--primary-color);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-
-    }
-
-    .nav-link {
-        border-radius: 5px;
-        padding: 20px 25px;
-        color: #333;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .nav-link:hover {
-        background: #e9ecef;
-        /* color: #0056b3; */
-        color: var(--primary-color);
-    }
-
-    .nav-link.active,
-    .nav-link.active:hover {
-        background: #ffffff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        color: var(--primary-color);
-        /* color: #0056b3; */
-    }
-
-    .icon-extra-medium {
-        font-size: 1.2rem;
-    }
-
-    .fs-18 {
-        font-size: 18px;
-    }
-
-    .fw-500 {
-        font-weight: 500;
-    }
-
-    .fw-600 {
-        font-weight: 600 !important;
-    }
-
-    .mb-25px {
-        margin-bottom: 30px !important;
-    }
-
-    .icon-text-wrapper {
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-        color: var(--primary-color);
-        /* color: #5057ac; */
-    }
-
-    .icon-circle {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-right: 15px;
-    }
-
-    .icon-circle i {
-        font-size: 22px;
-        color: var(--primary-color);
-        /* color: #5057ac; */
-    }
-
-    .header-text {
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .alt-font {
-        font-family: 'Arial', sans-serif;
-        /* Custom font family */
-        color: #333;
-        /* Darker text color */
-    }
-
-    .bg-solitude-blue {
-        background-color: #F0F4FD;
-    }
-
-    .explore-button {
-        background-color: var(--primary-color);
-        /* Button background color */
-        color: white;
-        /* Button text color */
-        padding: 10px 20px;
-        /* Padding inside the button */
-        border: none;
-        border-radius: 20px;
-        /* Rounded corners for the button */
-        text-decoration: none;
-        /* Remove underline from link */
-        display: inline-block;
-        /* Allows margin and padding adjustments */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        /* Button shadow */
-    }
-
-    .btn-box-shadow {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Consistent shadow for buttons */
-    }
-
-    .btn-rounded {
-        border-radius: 20px;
-        /* Consistent border-radius */
-    }
-
-    .mt-10px {
-        margin-top: 10px;
-        /* Consistent top margin */
-    }
-
-    .fw-500 {
-        font-weight: 500 !important;
-    }
-
-    .mb-20px {
-        margin-bottom: 20px !important;
-    }
-
-    .ls-minus-1px {
-        letter-spacing: -1px !important;
-    }
-
-    .border-radius-6px {
-        border-radius: 6px !important;
-    }
-
-
-
-
-
-    .show-pricing {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #333;
-    }
 </style>
-<div class="container">
-    <div class="row justify-content-center mb-4">
-        <div class="col-xl-7 col-lg-9 col-md-10 text-center">
-            <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px"
-                data-anime="{ &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
-                Professional and highly dedicated business services</h3>
+<div class="overflow-hidden space background-image"
+    style="background-image: url(&quot;assets/img/bg/choose_bg_2.jpg&quot;);">
+    <div class="container th-container5">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="title-area text-center"><span class="sub-title">
+                        <div class="icon-masking me-2"><span class="mask-icon bg-mask"
+                                style="mask-image: url(&quot;assets/img/theme-img/title_shape_1.svg&quot;);"></span> <img
+                                src="assets/img/theme-img/title_shape_1.svg" alt="shape"></div>Why Work With Us
+                    </span>
+                    <h2 class="sec-title text-white">Why people are very loved to working with us?</h2>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row align-items-center"
-        data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [0, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 1200, &quot;delay&quot;: 150, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
-
-        <div class="col-xl-3 col-lg-4 col-md-12 tab-style-05 md-mb-30px sm-mb-20px">
-            <ul class="nav nav-tabs flex-column justify-content-center border-0 text-left fw-500 fs-18 alt-font">
-                @forelse ($products->productBusinessServices as $plan)
-                    <li class="nav-item">
-                        <a class="nav-link @if ($loop->first) active @endif" data-bs-toggle="tab"
-                            href="#tab_four{{ $plan->id }}">
-                            <i
-                                class="{{ $plan->tab_icon }} icon-extra-medium text-dark-gray"></i><span>{{ $plan->tab_name }}</span>
-                        </a>
-                    </li>
-                @empty
-                    <li class="nav-item">
-                        <a data-bs-toggle="tab" href="#tab_four1" class="nav-link d-flex align-items-center active">
-                            <i class="fas fa-briefcase icon-extra-medium text-dark-gray"></i><span>Business
-                                planning</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab_four2">
-                            <i class="fas fa-search icon-extra-medium text-dark-gray"></i><span>Business research</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab_four3">
-                            <i class="fas fa-compass icon-extra-medium text-dark-gray"></i><span>Tracking
-                                operations</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab_four4">
-                            <i class="fas fa-bullhorn icon-extra-medium text-dark-gray"></i><span>Business
-                                campaign</span>
-                        </a>
-                    </li>
-                @endforelse
-
-            </ul>
-        </div>
-
-        <div class="col-xl-9 col-lg-8 col-md-12">
-            <div class="tab-content">
-                @forelse ($products->productBusinessServices as $plan)
-                    <div class="tab-pane fade @if ($loop->first) show active @endif"
-                        id="tab_four{{ $plan->id }}">
-                        <div class="row ">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                @isset($plan->businessServiceImg->media)
-                                    <img src="{{ asset('storage/' . $plan->businessServiceImg->media ?? '') }}"
-                                        alt="Business Planning" class="border-radius-6px w-100" />
-                                @endisset
-
+        <div class="choose-tabs-wrapper">
+            <div class="nav nav-tabs choose-tabs-tabs" id="nav-tab" role="tablist"><button class="nav-link active"
+                    id="nav-step1-tab" data-bs-toggle="tab" data-bs-target="#nav-step1" type="button">Expertise and
+                    Experience</button> <button class="nav-link" id="nav-step2-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-step2" type="button">Quality Workmanship</button> <button class="nav-link"
+                    id="nav-step3-tab" data-bs-toggle="tab" data-bs-target="#nav-step3" type="button">Commitment to
+                    Safety</button> <button class="nav-link" id="nav-step4-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-step4" type="button">Reliability and Consistency</button></div>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-step1" role="tabpanel">
+                    <div class="choose-wrapper">
+                        <div class="choose-content">
+                            <div class="title-area mb-30">
+                                <h5 class="sec-title mb-3 text-white">Expertise and Experience</h5>
+                                <p class="box-text">While Google Ads is undoubtedly a powerful advertising platform,
+                                    it’s important to recognize that there are various other avenues to effectively
+                                    display ads...</p>
                             </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1  text-md-start">
-
-                                <div class="icon-text-wrapper mb-25px ">
-                                    <div class="icon-circle bg-white box-shadow-medium">
-                                        <i class="{{ $plan->header_icon }} fs-22"></i>
-                                    </div>
-                                    <span class="header-text ">{{ $plan->header_text ?? '' }}</span>
-                                </div>
-                                <h2 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                        class="fw-600">{{ $plan->title ?? '' }}</h2>
-                                <p class="justify" style="font-weight: 400rem; font-size:20px; color:darkgray">
-                                    {{ $plan->description }}</p>
-                                <a href="#" class="explore-button btn-box-shadow btn-rounded mt-10px">
-                                    Explore now
-                                </a>
-                            </div>
+                            <div class="checklist">
+                                <ul>
+                                    <li><i class="far fa-check-circle text-body"></i>Best Service for You</li>
+                                    <li><i class="far fa-check-circle text-body"></i>Keeping Your Team Productive</li>
+                                    <li><i class="far fa-check-circle text-body"></i>Predictable Costs 24/</li>
+                                </ul>
+                            </div><a href="contact.html" class="th-btn style6 style-radius">Get Started</a>
                         </div>
+                        <div class="choose-image th-anim"
+                            style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;"><img
+                                src="assets/img/normal/choose_img_1.jpg" alt=""
+                                style="transform: translate(0px, 0px); pointer-events: all !important;"></div>
                     </div>
-                @empty
-                    <!-- Tab 1: Business Planning -->
-                    <div class="tab-pane fade show active" id="tab_four1">
-                        <div class="row ">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="{{ asset('home/assets/img/demo-business-tab-01.jpg') }}"
-                                    alt="Business Planning" class="border-radius-6px w-100" />
+                </div>
+                <div class="tab-pane fade" id="nav-step2" role="tabpanel">
+                    <div class="choose-wrapper">
+                        <div class="choose-content">
+                            <div class="title-area mb-30">
+                                <h5 class="sec-title mb-3 text-white">Quality Workmanship</h5>
+                                <p class="box-text">While Google Ads is undoubtedly a powerful advertising platform,
+                                    it’s important to recognize that there are various other avenues to effectively
+                                    display ads...</p>
                             </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1  text-md-start">
-
-                                <div class="icon-text-wrapper mb-25px ">
-                                    <div class="icon-circle bg-white box-shadow-medium">
-                                        <i class="fas fa-briefcase fs-22"></i>
-                                    </div>
-                                    <span class="header-text ">Grow and succeed</span>
-                                </div>
-                                <h2 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                        class="fw-600">Work
-                                        together</span> to make experience</h2>
-                                <p class="justify" style="font-weight: 400rem; font-size:20px; color:darkgray">We always
-                                    want
-                                    our
-                                    client
-                                    grow
-                                    with the
-                                    product
-                                    we
-                                    have
-                                    delivered and
-                                    maintaining
-                                    strong
-                                    long-term good relationship.</p>
-                                <a href="#" class="explore-button btn-box-shadow btn-rounded mt-10px">
-                                    Explore now
-                                </a>
-                            </div>
+                            <div class="checklist">
+                                <ul>
+                                    <li><i class="far fa-check-circle text-body"></i>Best Service for You</li>
+                                    <li><i class="far fa-check-circle text-body"></i>Keeping Your Team Productive</li>
+                                    <li><i class="far fa-check-circle text-body"></i>Predictable Costs 24/</li>
+                                </ul>
+                            </div><a href="contact.html" class="th-btn style6 style-radius">Get Started</a>
                         </div>
+                        <div class="choose-image th-anim"
+                            style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;"><img
+                                src="assets/img/normal/choose_img_2.jpg" alt=""
+                                style="transform: translate(0px, 0px);"></div>
                     </div>
-
-                    <!-- Tab 2: Business Research -->
-                    <div class="tab-pane fade" id="tab_four2">
-                        <div class="row ">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="{{ asset('home/assets/img/demo-business-tab-02.jpg') }}"
-                                    alt="Business Planning" class="border-radius-6px w-100" />
+                </div>
+                <div class="tab-pane fade" id="nav-step3" role="tabpanel">
+                    <div class="choose-wrapper">
+                        <div class="choose-content">
+                            <div class="title-area mb-30">
+                                <h5 class="sec-title mb-3 text-white">Commitment to Safety</h5>
+                                <p class="box-text">While Google Ads is undoubtedly a powerful advertising platform,
+                                    it’s important to recognize that there are various other avenues to effectively
+                                    display ads...</p>
                             </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1  text-md-start">
-
-                                <div class="icon-text-wrapper mb-25px ">
-                                    <div class="icon-circle bg-white box-shadow-medium">
-                                        <i class="fas fa-edit fs-22"></i>
-                                    </div>
-                                    <span class="header-text ">Identity strategy</span>
-                                </div>
-                                <h2 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                        class="fw-600">Help
-                                        our clients </span>succeed by brand</h2>
-                                <p class="justify" style="font-weight: 400rem; font-size:20px; color:darkgray">We always
-                                    want our client grow with the product we have delivered and maintaining strong
-                                    long-term
-                                    good relationship.</p>
-                                <a href="demo-business-services-details.html"
-                                    class="explore-button btn-box-shadow btn-rounded mt-10px">
-                                    Explore now
-                                </a>
-                            </div>
+                            <div class="checklist">
+                                <ul>
+                                    <li><i class="far fa-check-circle text-body"></i>Best Service for You</li>
+                                    <li><i class="far fa-check-circle text-body"></i>Keeping Your Team Productive</li>
+                                    <li><i class="far fa-check-circle text-body"></i>Predictable Costs 24/</li>
+                                </ul>
+                            </div><a href="contact.html" class="th-btn style6 style-radius">Get Started</a>
                         </div>
+                        <div class="choose-image th-anim"
+                            style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;"><img
+                                src="assets/img/normal/choose_img_3.jpg" alt=""
+                                style="transform: translate(0px, 0px);"></div>
                     </div>
-
-                    <!-- Tab 3: Tracking Operations -->
-                    <div class="tab-pane fade" id="tab_four3">
-                        <div class="row ">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="{{ asset('home/assets/img/demo-business-tab-03.jpg') }}"
-                                    alt="Business Planning" class="border-radius-6px w-100" />
+                </div>
+                <div class="tab-pane fade" id="nav-step4" role="tabpanel">
+                    <div class="choose-wrapper">
+                        <div class="choose-content">
+                            <div class="title-area mb-30">
+                                <h5 class="sec-title mb-3 text-white">Reliability and Consistency</h5>
+                                <p class="box-text">While Google Ads is undoubtedly a powerful advertising platform,
+                                    it’s important to recognize that there are various other avenues to effectively
+                                    display ads...</p>
                             </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1  text-md-start">
-
-                                <div class="icon-text-wrapper mb-25px ">
-                                    <div class="icon-circle bg-white box-shadow-medium">
-                                        <i class="fas fa-compass icon-extra-medium fs-22"></i>
-                                    </div>
-                                    <span class="header-text ">Grow and succeed</span>
-                                </div>
-                                <h2 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                        class="fw-600">Work
-                                        together</span> to make experience</h2>
-                                <p class="justify" style="font-weight: 400rem; font-size:20px; color:darkgray">We
-                                    always
-                                    want
-                                    our
-                                    client
-                                    grow
-                                    with the
-                                    product
-                                    we
-                                    have
-                                    delivered and
-                                    maintaining
-                                    strong
-                                    long-term good relationship.</p>
-                                <a href="demo-business-services-details.html"
-                                    class="explore-button btn-box-shadow btn-rounded mt-10px">
-                                    Explore now
-                                </a>
-                            </div>
+                            <div class="checklist">
+                                <ul>
+                                    <li><i class="far fa-check-circle text-body"></i>Best Service for You</li>
+                                    <li><i class="far fa-check-circle text-body"></i>Keeping Your Team Productive</li>
+                                    <li><i class="far fa-check-circle text-body"></i>Predictable Costs 24/</li>
+                                </ul>
+                            </div><a href="contact.html" class="th-btn style6 style-radius">Get Started</a>
                         </div>
+                        <div class="choose-image th-anim"
+                            style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;"><img
+                                src="assets/img/normal/choose_img_4.jpg" alt=""
+                                style="transform: translate(0px, 0px);"></div>
                     </div>
-
-                    <!-- Tab 4: Business Campaign -->
-                    <div class="tab-pane fade" id="tab_four4">
-                        <div class="row ">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="{{ asset('home/assets/img/demo-business-tab-04.jpg') }}"
-                                    alt="Business Planning" class="border-radius-6px w-100" />
-                            </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1  text-md-start">
-
-                                <div class="icon-text-wrapper mb-25px ">
-                                    <div class="icon-circle bg-white box-shadow-medium">
-                                        <i class="fas fa-bullhorn icon-extra-medium fs-22"></i>
-                                    </div>
-                                    <span class="header-text ">Experience strategy</span>
-                                </div>
-                                <h2 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                        class="fw-600">Help
-                                        our clients </span> succeed by brand</h2>
-                                <p class="justify" style="font-weight: 400rem; font-size:20px; color:darkgray">We
-                                    always
-                                    want our client grow with the product we have delivered and maintaining strong
-                                    long-term
-                                    good relationship.</p>
-                                <a href="demo-business-services-details.html"
-                                    class="explore-button btn-box-shadow btn-rounded mt-10px">
-                                    Explore now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                @endforelse
+                </div>
             </div>
         </div>
     </div>
