@@ -101,7 +101,7 @@ img:not([draggable]), embed, object, video {
 }
 
 </style>
-<div class="overflow-hidden space background-image"
+<div class="overflow-hidden my-5 background-image"
     style="background-image: url({{ asset('home/assets/img/pdp-t-2-bg.jpg') }});">
     <div class="container th-container5">
         <div class="row">
