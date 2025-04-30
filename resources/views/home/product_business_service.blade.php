@@ -117,6 +117,9 @@
         max-width: 100%;
         height: auto;
     }
+    .text-white{
+        color:smokeywhite !important;
+    }
 </style>
 <div class="overflow-hidden py-5 background-image"
     style="background-image: url({{ asset('home/assets/img/pdp-t-2-bg.jpg') }});">
@@ -149,7 +152,7 @@
                         <div class="choose-wrapper">
                             <div class="choose-content">
                                 <div class="title-area mb-30">
-                                    <h5 class="sec-title mb-3 text-white">{{ $plan->header_text ?? '' }}</h5>
+                                    <h5 class="sec-title text-white">{{ $plan->header_text ?? '' }}</h5>
                                     <h6 class="box-text">
                                         {{ $plan->title ?? '' }}
                                     </h6>
