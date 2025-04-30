@@ -64,13 +64,13 @@
         <div class="ws_images"><ul>
             <li><img src="{{asset('home/banner-slider/img-slider/images/slider(1).webp')}}" alt="2nd slider" title="2nd slider" id="wows1_0"/></li>
             <li><img src="{{asset('home/banner-slider/img-slider/images/slider(2).jpg')}}" alt="Screenshot 2024-07-15 154006" title="Screenshot 2024-07-15 154006" id="wows1_1"/></li>
-            <li><a href="http://wowslider.net"><img src="{{asset('home/banner-slider/img-slider/images/slider(3).jpg')}}" alt="jquery carousel" title="Background.pptx" id="wows1_2"/></a></li>
+            <li><a href="#"><img src="{{asset('home/banner-slider/img-slider/images/slider(3).jpg')}}" alt="jquery carousel" title="Background.pptx" id="wows1_2"/></a></li>
         </ul></div>
         <div class="ws_bullets"><div>
             <a href="#" title="2nd slider"><span><img src="{{asset('home/banner-slider/img-slider/tooltips/2nd_slider.png')}}" alt="2nd slider"/>1</span></a>
             <a href="#" title="Screenshot 2024-07-15 154006"><span><img src="{{asset('home/banner-slider/img-slider/tooltips/screenshot_20240715_154006.png')}}" alt="Screenshot 2024-07-15 154006"/>2</span></a>
             <a href="#" title="Background.pptx"><span><img src="{{asset('home/banner-slider/img-slider/tooltips/background.pptx.png')}}" alt="Background.pptx"/>3</span></a>
-        </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">html slider</a> by WOWSlider.com v9.0</div>
+        </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="#">html slider</a> by WOWSlider.com v9.0</div>
         <div class="ws_shadow"></div>
     </div>
     
