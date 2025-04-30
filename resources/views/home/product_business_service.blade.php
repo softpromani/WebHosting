@@ -117,7 +117,7 @@
         max-width: 100%;
         height: auto;
     }
-    .text-white{
+    .text-smoke{
         color:rgb(229, 229, 229) !important;
     }
 </style>
@@ -153,11 +153,11 @@
                             <div class="choose-content">
                                 <div class="title-area mb-30">
                                     <h5 class="sec-title text-white">{{ $plan->header_text ?? '' }}</h5>
-                                    <h6 class="box-text">
+                                    <h6 class="box-text text-smoke">
                                         {{ $plan->title ?? '' }}
                                     </h6>
                                 </div>
-                                <div class="checklist mb-2">
+                                <div class="checklist mb-2 text-smoke">
                                     {{ $plan->description }}
                                 </div><a href="#" class="th-btn style6 style-radius">Get Started</a>
                             </div>
