@@ -106,10 +106,8 @@ img:not([draggable]), embed, object, video {
     <div class="container th-container5">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
-                <div class="title-area text-center"><span class="sub-title">
-                        <div class="icon-masking me-2"><span class="mask-icon bg-mask"
-                                style="mask-image: url(&quot;assets/img/theme-img/title_shape_1.svg&quot;);"></span> <img
-                                src="assets/img/theme-img/title_shape_1.svg" alt="shape"></div>Why Work With Us
+                <div class="title-area text-center"><span class="sub-title text-primary">
+                    Why Work With Us
                     </span>
                     <h2 class="sec-title text-white">Why people are very loved to working with us?</h2>
                 </div>
