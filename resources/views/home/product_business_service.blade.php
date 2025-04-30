@@ -118,7 +118,7 @@
         height: auto;
     }
     .text-white{
-        color:smokeywhite !important;
+        color:rgb(229, 229, 229) !important;
     }
 </style>
 <div class="overflow-hidden py-5 background-image"
@@ -157,7 +157,7 @@
                                         {{ $plan->title ?? '' }}
                                     </h6>
                                 </div>
-                                <div class="checklist">
+                                <div class="checklist mb-2">
                                     {{ $plan->description }}
                                 </div><a href="#" class="th-btn style6 style-radius">Get Started</a>
                             </div>
