@@ -25,8 +25,8 @@
 }
 .choose-tabs-tabs.nav-tabs .nav-item.show .nav-link, .choose-tabs-tabs.nav-tabs .nav-link.active {
     color: var(--white-color);
-    background-color: var(--theme-color);
-    border-color: var(--theme-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 .choose-tabs-tabs .nav-link:not(:last-child) {
     margin-bottom: 20px;
