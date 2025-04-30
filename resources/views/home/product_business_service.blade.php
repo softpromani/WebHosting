@@ -31,6 +31,22 @@
 .choose-tabs-tabs .nav-link:not(:last-child) {
     margin-bottom: 20px;
 }
+.choose-tabs-tabs .nav-link {
+    position: relative;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #1D2128;
+    padding: 18px 40px;
+    font-family: var(--title-font);
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+    min-width: 330px;
+    color: var(--white-color);
+    text-align: left;
+    display: block;
+    box-shadow: none;
+}
 
 .choose-wrapper {
     display: -webkit-box;
