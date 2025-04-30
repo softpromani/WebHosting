@@ -78,8 +78,8 @@ P {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 15px;
+  left: 15px;
+  bottom: 8px;
   z-index: 996;
   background: var(--primary-color);
   width: 40px;
