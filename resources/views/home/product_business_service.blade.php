@@ -119,6 +119,7 @@
     }
     .text-smoke{
         color:rgb(229, 229, 229) !important;
+        font-size: 0.7rem;
     }
 </style>
 <div class="overflow-hidden py-5 background-image"
