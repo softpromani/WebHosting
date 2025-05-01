@@ -38,7 +38,7 @@
     Route::post('user-contact/store', [HomeController::class, 'contactStore'])->name('contactStore');
 
     Route::post('user-newsletter/store', [HomeController::class, 'newsletterStore'])->name('newsletterStore');
-
+    Route::get('apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
 
 
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {

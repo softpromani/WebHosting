@@ -119,5 +119,7 @@ class HomeController extends Controller
         $blogs = Blog::with('blogImage')->get();
         return view('home.company.testimonial',compact('testimonial','faqs','blogs'));
     }
-
+    public function applyNow(){
+        return view('home.apply_now');
+    }
 }
