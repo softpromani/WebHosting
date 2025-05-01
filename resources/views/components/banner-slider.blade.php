@@ -63,7 +63,7 @@
 	<div id="wowslider-container1">
         <div class="ws_images"><ul>
             <li><img src="{{asset('home/banner-slider/img-slider/images/slider(1).webp')}}" alt="2nd slider" title="2nd slider" id="wows1_0"/></li>
-            <li><img src="{{asset('home/banner-slider/img-slider/images/slider(2).jpg')}}" alt="Screenshot 2024-07-15 154006" title="Screenshot 2024-07-15 154006" id="wows1_1"/></li>
+            <li><img src="{{asset('home/banner-slider/img-slider/images/slider(2).webp')}}" alt="Screenshot 2024-07-15 154006" title="Screenshot 2024-07-15 154006" id="wows1_1"/></li>
             <li><a href="#"><img src="{{asset('home/banner-slider/img-slider/images/slider(3).jpg')}}" alt="jquery carousel" title="Background.pptx" id="wows1_2"/></a></li>
         </ul></div>
         <div class="ws_bullets"><div>
