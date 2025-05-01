@@ -24,7 +24,7 @@
         text-align: center;
         height: 450px;">
         <div class="container">
-            <h1 class="post__title text-white" style="font-size: 2.5rem; margin-bottom: 0px;">About Us</h1>
+            <h1 class="post__title text-white" style="font-size: 2.5rem; margin-bottom: 0px;">Apply Now</h1>
             <nav class="breadcrumbs">
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
                     <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
