@@ -39,6 +39,7 @@
 
     Route::post('user-newsletter/store', [HomeController::class, 'newsletterStore'])->name('newsletterStore');
     Route::get('apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
+    Route::Post('apply-now', [HomeController::class, 'applyNowStore'])->name('applyNow-store');
 
 
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {

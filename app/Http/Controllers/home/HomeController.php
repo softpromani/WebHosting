@@ -11,6 +11,7 @@ use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
+use App\Models\FreeTrailApply;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
@@ -121,5 +122,23 @@ class HomeController extends Controller
     }
     public function applyNow(){
         return view('home.apply_now');
+    }
+    public function applyNowStore(Request $request)
+    {
+        $validatedData=$request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|string|max:20',
+            'business_name' => 'required|string|max:255',
+            'application_detail' => 'required|string|max:5000',
+            'license_key' => 'required|string|max:5000',
+            'number_users' => 'required|integer|min:1',
+            'username' => 'required|string|max:255',
+            'aditional_comment' => 'sometimes|string|max:1000',
+            'agreement' => 'required|accepted',
+        ]);
+        $freeTrailApply = FreeTrailApply::create($validatedData);
+        Alert::success('Success', 'Your application has been submitted successfully.');
+        return redirect()->back();
     }
 }
