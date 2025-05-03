@@ -46,63 +46,63 @@
                         <div class="col-md-6 px-4 mb-3">
                             <div class="form-group">
                                 <label for="full-name">Full Name</label>
-                                <input type="text" class="form-control" name="name" id="full-name">
+                                <input type="text" class="form-control" name="name" id="full-name" value="{{ old('name') }}">
                             </div>
                             @error('name')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-6 px-4 mb-3">
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" class="form-control" id="email" name="email">
+                                <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}">
                             </div>
                             @error('email')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-6 px-4 mb-3">
                             <div class="form-group">
                                 <label for="phone_number">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone_number" name="phone_number">
+                                <input type="tel" class="form-control" id="phone_number" name="phone_number" value="{{ old('phone_number') }}">
                             </div>
                             @error('phone_number')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-6 px-4 mb-3">
                             <div class="form-group">
                                 <label for="business_name">Business Name</label>
-                                <input type="text" class="form-control" id="business_name" name="business_name">
+                                <input type="text" class="form-control" id="business_name" name="business_name" value="{{ old('business_name') }}">
                             </div>
                             @error('business_name')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-12 px-4 mb-3">
                             <div class="form-group">
                                 <label for="application_detail">Application Detail</label>
-                                <textarea class="form-control" id="application_detail" name="application_detail"></textarea>
+                                <textarea class="form-control" id="application_detail" name="application_detail">{{old('application_detail')}}</textarea>
                             </div>
                             @error('application_detail')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-6 px-4 mb-3">
                             <div class="form-group">
                                 <label for="license_key">License Key</label>
-                                <input type="text" class="form-control" id="license_key" name="license_key">
+                                <input type="text" class="form-control" id="license_key" name="license_key" value="{{ old('license_key') }}">
                             </div>
                             @error('license_key')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-6 px-4 mb-3">
                             <div class="form-group">
                                 <label for="number_users">Number of Users</label>
-                                <input type="number" class="form-control" id="number_users" name="number_users">
+                                <input type="number" class="form-control" id="number_users" name="number_users" value="{{ old('number_users') }}">
                             </div>
                             @error('number_users')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-12 px-4 mb-3">
                             <div class="form-group">
                                 <label for="username">Usernames (comma-separated)</label>
-                                <input type="text" class="form-control" id="username" name="username">
+                                <input type="text" class="form-control" id="username" name="username" value="{{ old('username') }}">
                             </div>
                             @error('username')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-12 px-4 mb-3">
                             <div class="form-group">
                                 <label for="aditional_comment">Aditional Comments </label>
-                                <input type="text" class="form-control" id="aditional_comment" name="aditional_comment">
+                                <input type="text" class="form-control" id="aditional_comment" name="aditional_comment" value="{{ old('aditional_comment') }}">
                             </div>
                         </div>
                         <div class="col-md-12 px-4 mb-3">
