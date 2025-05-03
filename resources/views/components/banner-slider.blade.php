@@ -1,5 +1,8 @@
 <div>
     <style>
+        .carousel-inner{
+            max-height: 82vh;
+        }
         .carousel-caption{
             left: 0px;
         }

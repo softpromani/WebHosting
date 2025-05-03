@@ -16,6 +16,7 @@
     use App\Http\Controllers\home\HomeController;
     use App\Http\Controllers\home\ProductController;
     use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
     Route::get('/', [HomeController::class, 'home'])->name('home');
     Route::get('/test', [HomeController::class, 'test'])->name('test');
@@ -62,5 +63,6 @@
         Route::resource('faqs', FaqController::class);
         Route::resource('blog', BlogController::class);
         Route::resource('price-plan', PricePlanController::class);
+        Route::get('free-trial-applies', [DashboardController::class, 'free_trial_applies'])->name('free-trial-applies.list');
 
 });
