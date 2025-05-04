@@ -13,8 +13,8 @@
     <div class="row d-flex justify-content-center">
         <div class="col-md-8 mb-5">
             <div class="card shadow rounded-4">
-                <div class="card-body">
-                    <img src="{{ $productimg }}" alt="" class="img-fluid">
+                <div class="card-body p-0">
+                    <img src="{{ $productimg }}" alt="" class="img-fluid" height="250px">
                 </div>
             </div>
         </div>
