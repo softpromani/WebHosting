@@ -1451,8 +1451,7 @@
         </div> --}}
         <x-cta-design />
         <!-- Contact Details Section -->
-        <section id="whyus-services-contact" class="container-fluid"
-            style="position: absolute !important; top: 87%; left: 50%; transform: translate(-50%, -50%); z-index: 100;">
+        <section id="whyus-services-contact" class="container-fluid">
             <div class="container" data-aos="fade-up">
                 <div class="cta-sec6 background-image bg-theme" data-bg-src="{{ asset('home/assets/img/cta_bg_6.jpg') }}">
                     <div class="cta-content">
