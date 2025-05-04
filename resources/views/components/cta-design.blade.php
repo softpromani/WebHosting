@@ -37,7 +37,7 @@
         </div>
         <div class="col-md-4 mb-5 ">
             <div class="card shadow bg-light rounded-4">
-                <div class="card-body">
+                <div class="card-body text-dark">
                     <h5>Scalable Solutions</h5>
                     <p>
                         Trailored hosting plans that grow with your business.
