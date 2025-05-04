@@ -14,7 +14,7 @@
         <div class="col-md-8 mb-5">
             <div class="card shadow rounded-4">
                 <div class="card-body">
-                    <img src="{{ asset('storage/' . optional($products->product_banner)->media) }}" alt="">
+                    <img src="{{ $img }}" alt="">
                 </div>
             </div>
         </div>
