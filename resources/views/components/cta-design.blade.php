@@ -7,15 +7,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4" style="background: linear-gradient(to right,var(--primary-color), #e9ecef);" >
-            <div class="card">
+        <div class="col-md-4">
+            <div class="card" style="background: linear-gradient(to right,var(--primary-color), #e9ecef);" >
                 <div class="card-body">
                     
                 </div>
             </div>
         </div>
-        <div class="col-md-4" style="background: linear-gradient(to right,var(--primary-color), #e9ecef);" >
-            <div class="card">
+        <div class="col-md-4">
+            <div class="card" style="background: linear-gradient(to right,var(--primary-color), #e9ecef);" >
                 <div class="card-body">
                     
                 </div>
