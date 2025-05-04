@@ -1,4 +1,9 @@
 <div class="container">
+    <style>
+        .card{
+            min-height: 200px;
+        }
+    </style>
     <div class="row">
         <div class="col-md-8 mb-5">
             <div class="card shadow">
