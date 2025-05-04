@@ -15,8 +15,8 @@
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <div class="card" style="background: linear-gradient(to right,var(--primary-color), #e9ecef);" >
-                <div class="card-body">
+            <div class="card" >
+                <div class="card-body" style="background: linear-gradient(to right,var(--primary-color), #e9ecef);" >
                     
                 </div>
             </div>
@@ -28,9 +28,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3" style="background: var(--secondary-color)" >
+        <div class="col-md-4 mb-3" >
             <div class="card">
-                <div class="card-body">
+                <div class="card-body" style="background: var(--secondary-color)" >
                     
                 </div>
             </div>
