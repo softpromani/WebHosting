@@ -21,8 +21,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3 bg-light">
-            <div class="card">
+        <div class="col-md-4 mb-3 ">
+            <div class="card bg-light">
                 <div class="card-body rounded">
                     
                 </div>
