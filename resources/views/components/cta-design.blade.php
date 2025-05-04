@@ -3,7 +3,7 @@
         .card{
             min-height: 250px;
         }
-        .cta-design> .card-body{
+        .cta-design .card-body *{
             color:white;
         }
     </style>
