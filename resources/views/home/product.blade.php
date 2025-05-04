@@ -1444,11 +1444,11 @@
 
     <!-- Product banner Details Section -->
     <section id="whyus-services" class="counts" style="position: relative;">
-        {{-- <div class="container-fluid"
+        <div class="container-fluid"
             style="width: 100%; padding: 0; background-image: url('{{ asset('storage/' . optional($products->product_banner)->media) }}'); background-size: cover; background-position: center;">
             <img src="{{ asset('storage/' . optional($products->product_banner)->media) }}"
                 style="width: inherit;z-index:-100" />
-        </div> --}}
+        </div>
         <x-cta-design />
         <!-- Contact Details Section -->
         <section id="whyus-services-contact" class="container-fluid">
