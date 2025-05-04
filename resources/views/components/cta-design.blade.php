@@ -54,7 +54,7 @@
                         Trailored hosting plans that grow with your business.
                     </p>
                     <div class="row mt-5">
-                        <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
+                        <div class="col-6"><i class="fa-regular fa-circle-right fa-2x" style="color:black !important;"></i></div>
                         <div class="col-6"></div>
                     </div>
                 </div>
