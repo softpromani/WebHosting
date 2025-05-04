@@ -11,7 +11,7 @@ class CtaDesign extends Component
     /**
      * Create a new component instance.
      */
-    public $productimg;
+    public string $productimg;
     public function __construct($productimg)
     {
         $this->productimg = $productimg;
