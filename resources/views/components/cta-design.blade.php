@@ -1,4 +1,4 @@
-<div class="container cta-design">
+<div class="container-fluid cta-design">
     <style>
         .card{
             min-height: 250px;
