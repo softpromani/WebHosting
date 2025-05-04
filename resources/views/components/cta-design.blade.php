@@ -7,7 +7,7 @@
             color:white;
         }
     </style>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
         <div class="col-md-8 mb-5">
             <div class="card shadow rounded-4">
                 <div class="card-body">
