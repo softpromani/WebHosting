@@ -132,14 +132,14 @@ style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_ima
                           onmouseover="this.style.backgroundColor='#0056b3'"
                           onmouseout="this.style.backgroundColor='#007bff'">
                           Link
-                      </a> <br>
+                      </a> &nbsp;&nbsp;&nbsp;&nbsp;
                         {{-- button-2 --}}
                       <a href="https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx" download
                           class="btn btn-primary btn-sm mt-2"
                           style="padding: 10px 25px; font-size: 14px; border-radius: 50px; transition: 0.3s; text-decoration: none; display: inline-block; text-align: center; background-color: #007bff; color: white; border: none; cursor: pointer;"
                           onmouseover="this.style.backgroundColor='#0056b3'"
                           onmouseout="this.style.backgroundColor='#007bff'">
-                          Dowmload
+                          Download
                       </a>
 
                   </div>
