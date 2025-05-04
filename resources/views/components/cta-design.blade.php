@@ -18,7 +18,7 @@
         <div class="col-md-4 mb-5">
             <div class="card shadow rounded-4" style="background: linear-gradient(to right,var(--primary-color), #e9ecef);" >
                 <div class="card-body">
-                    <h2>Fast & Secure Access</h2>
+                    <h4>Fast & Secure Access</h4>
                     <p>
                         Enjoy seamless access to your QuickBooks Pro anytime,anywhere.
                     </p>
@@ -28,7 +28,7 @@
         <div class="col-md-4 mb-5">
             <div class="card shadow rounded-4" >
                 <div class="card-body rounded-4" style="background: linear-gradient(to right,var(--primary-color), #e9ecef);" >
-                    <h2>Reliable Support</h2>
+                    <h4>Reliable Support</h4>
                     <p>
                         Count on our expert team for assistance when you need it.
                     </p>
@@ -38,7 +38,7 @@
         <div class="col-md-4 mb-5 ">
             <div class="card shadow bg-light rounded-4">
                 <div class="card-body">
-                    <h2>Scalable Solutions</h2>
+                    <h4>Scalable Solutions</h4>
                     <p>
                         Trailored hosting plans that grow with your business.
                     </p>
@@ -48,7 +48,7 @@
         <div class="col-md-4 mb-5" >
             <div class="card shadow rounded-4">
                 <div class="card-body rounded-4" style="background: var(--secondary-color)" >
-                    <h2>Enhanced Collaboration</h2>
+                    <h4>Enhanced Collaboration</h4>
                     <p>
                         Work effortlessly with your team in real-time.
                             
