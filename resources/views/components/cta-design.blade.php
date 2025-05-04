@@ -1,7 +1,7 @@
 <div class="container cta-design">
     <style>
         .card{
-            min-height: 250px;
+            height: 250px;
         }
         .cta-design .card-body *{
             color:white;
