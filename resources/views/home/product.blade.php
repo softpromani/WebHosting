@@ -1446,7 +1446,7 @@
         <x-cta-design  product-img="{{ asset('storage/' . optional($products->product_banner)->media) }}"/>
     </section>
     <!-- Product banner Details Section -->
-    <section id="whyus-services" class="counts" style="position: relative;">
+    {{-- <section id="whyus-services" class="counts" style="position: relative;"> --}}
         {{-- <div class="container-fluid"
             style="width: 100%; padding: 0; background-image: url('{{ asset('storage/' . optional($products->product_banner)->media) }}'); background-size: cover; background-position: center;">
             <img src="{{ asset('storage/' . optional($products->product_banner)->media) }}"
@@ -1478,7 +1478,7 @@
         </section>
         <!-- /Contact Details Section -->
 
-    </section>
+    {{-- </section> --}}
 
     <!-- ======= Service Description 4 Section ======= -->
     @isset($products->service_description_1)
