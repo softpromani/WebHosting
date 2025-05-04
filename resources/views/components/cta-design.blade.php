@@ -14,7 +14,7 @@
         <div class="col-md-8 mb-5">
             <div class="card shadow rounded-4">
                 <div class="card-body">
-                    <img src="{{ $productimg }}" alt="">
+                    <img src="{{ $productimg }}" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
