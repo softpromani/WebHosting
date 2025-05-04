@@ -1449,7 +1449,7 @@
             <img src="{{ asset('storage/' . optional($products->product_banner)->media) }}"
                 style="width: inherit;z-index:-100" />
         </div> --}}
-        <x-cta-design  product_img="{{ asset('storage/' . optional($products->product_banner)->media) }}"/>
+        <x-cta-design  product-img="{{ asset('storage/' . optional($products->product_banner)->media) }}"/>
         <!-- Contact Details Section -->
         <section id="whyus-services-contact" class="container-fluid">
             <div class="container" data-aos="fade-up">
