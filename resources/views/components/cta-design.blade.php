@@ -6,6 +6,9 @@
         .cta-design .card-body *{
             color:white;
         }
+        .fa-regular{
+            transform: rotate(315deg);
+        }
     </style>
     <div class="row d-flex justify-content-center">
         <div class="col-md-8 mb-5">
@@ -22,7 +25,7 @@
                     <p>
                         Enjoy seamless access to your QuickBooks Pro anytime,anywhere.
                     </p>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
                         <div class="col-6"></div>
                     </div>
@@ -36,7 +39,7 @@
                     <p>
                         Count on our expert team for assistance when you need it.
                     </p>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
                         <div class="col-6"></div>
                     </div>
@@ -50,7 +53,7 @@
                     <p style="color:black !important;">
                         Trailored hosting plans that grow with your business.
                     </p>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
                         <div class="col-6"></div>
                     </div>
@@ -65,7 +68,7 @@
                         Work effortlessly with your team in real-time.
                             
                     </p>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
                         <div class="col-6"></div>
                     </div>
