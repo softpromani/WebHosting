@@ -1,4 +1,4 @@
-<div class="container-fluid cta-design">
+<div class="container cta-design">
     <style>
         .card{
             min-height: 250px;
@@ -22,6 +22,10 @@
                     <p>
                         Enjoy seamless access to your QuickBooks Pro anytime,anywhere.
                     </p>
+                    <div class="row">
+                        <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
+                        <div class="col-6"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,6 +36,10 @@
                     <p>
                         Count on our expert team for assistance when you need it.
                     </p>
+                    <div class="row">
+                        <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
+                        <div class="col-6"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,6 +50,10 @@
                     <p style="color:black !important;">
                         Trailored hosting plans that grow with your business.
                     </p>
+                    <div class="row">
+                        <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
+                        <div class="col-6"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,6 +65,10 @@
                         Work effortlessly with your team in real-time.
                             
                     </p>
+                    <div class="row">
+                        <div class="col-6"><i class="fa-regular fa-circle-right fa-2x"></i></div>
+                        <div class="col-6"></div>
+                    </div>
                 </div>
             </div>
         </div>
