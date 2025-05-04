@@ -1442,6 +1442,9 @@
     <!-- /Why Us Details Section -->
 
 
+    <section id="cta-product" style="background-color: whitesmoke;">
+        <x-cta-design  product-img="{{ asset('storage/' . optional($products->product_banner)->media) }}"/>
+    </section>
     <!-- Product banner Details Section -->
     <section id="whyus-services" class="counts" style="position: relative;">
         {{-- <div class="container-fluid"
@@ -1449,8 +1452,7 @@
             <img src="{{ asset('storage/' . optional($products->product_banner)->media) }}"
                 style="width: inherit;z-index:-100" />
         </div> --}}
-        <x-cta-design  product-img="{{ asset('storage/' . optional($products->product_banner)->media) }}"/>
-        <!-- Contact Details Section -->
+      <!-- Contact Details Section -->
         <section id="whyus-services-contact" class="container-fluid">
             <div class="container" data-aos="fade-up">
                 <div class="cta-sec6 background-image bg-theme" data-bg-src="{{ asset('home/assets/img/cta_bg_6.jpg') }}">
