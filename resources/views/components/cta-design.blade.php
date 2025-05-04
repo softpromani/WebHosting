@@ -1,4 +1,4 @@
-<div class="container cta-design">
+<div class="container cta-design bg-secondary">
     <style>
         .card{
             min-height: 250px;
