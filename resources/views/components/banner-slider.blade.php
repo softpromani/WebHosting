@@ -10,7 +10,6 @@
 
         .carousel-caption h5,
         .carousel-caption p {
-            background: white;
             text-align: left;
             padding: 15px;
             max-width: 50%;
@@ -19,8 +18,7 @@
         .carousel-caption {
     bottom: 0;
     top: 0;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.4); /* optional for readability */
+    padding: 2rem; /* optional for readability */
 }
 
 .caption-title {
