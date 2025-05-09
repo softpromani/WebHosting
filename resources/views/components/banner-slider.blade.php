@@ -23,8 +23,8 @@
           <div class="carousel-item active">
             <img src="{{ asset('home/banner-slider/Home header-slider1.webp') }}" class="d-block w-100" alt="Slider-1">
             <div class="carousel-caption">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+              <h5>Streamline Your Business Operations with Secured Cloud Hosting Services</h5>
+              <p>Power your business with premium cloud hosting solutions by Mounteko. With lightning-fast performance, 99.95% uptime, and expert support, we provide the perfect cloud hosting platform for your growing business.</p>
             </div>
           </div>
           <div class="carousel-item">
