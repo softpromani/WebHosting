@@ -67,7 +67,7 @@
                   </div>
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('home/banner-slider/img-slider/images/slider(2).webp') }}" class="d-block w-100"
+                <img src="{{ asset('home/banner-slider/slider-1.webp') }}" class="d-block w-100"
                     alt="slider-2">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
