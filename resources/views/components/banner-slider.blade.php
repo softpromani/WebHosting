@@ -21,14 +21,14 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="{{ asset('home/banner-slider/Home header-slider1.webp') }}" class="d-block w-100" alt="{{ asset('home/banner-slider/img-slider/images/slider(1).webp') }}">
-            <div class="carousel-caption d-none d-md-block">
+            <img src="{{ asset('home/banner-slider/Home header-slider1.webp') }}" class="d-block w-100" alt="Slider-1">
+            <div class="carousel-caption">
               <h5>First slide label</h5>
               <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{{ asset('home/banner-slider/img-slider/images/slider(2).webp') }}" class="d-block w-100" alt="{{ asset('home/banner-slider/img-slider/images/slider(1).webp') }}">
+            <img src="{{ asset('home/banner-slider/img-slider/images/slider(2).webp') }}" class="d-block w-100" alt="slider-2">
             <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
               <p>Some representative placeholder content for the second slide.</p>
