@@ -16,6 +16,39 @@
             max-width: 50%;
             border-radius: 0px 30px 30px 0px;
         }
+        .carousel-caption {
+    bottom: 0;
+    top: 0;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4); /* optional for readability */
+}
+
+.caption-title {
+    font-size: 1.25rem;
+}
+
+.caption-text {
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .caption-title {
+        font-size: 2rem;
+    }
+    .caption-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .caption-title {
+        font-size: 2.5rem;
+    }
+    .caption-text {
+        font-size: 1.4rem;
+    }
+}
+
     </style>
     <div id="carouselExampleCaptions" class="carousel slide carousel-dark" data-bs-ride="carousel">
         <div class="carousel-indicators">
