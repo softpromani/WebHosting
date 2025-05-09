@@ -1,47 +1,58 @@
 <div>
     <style>
-        .carousel-inner{
+        .carousel-inner {
             max-height: 82vh;
         }
-        .carousel-caption{
+
+        .carousel-caption {
             left: 0px;
         }
-        .carousel-caption h5,.carousel-caption p{
+
+        .carousel-caption h5,
+        .carousel-caption p {
             background: white;
             text-align: left;
             padding: 15px;
-           max-width: 50%;
-           border-radius: 0px 30px 30px 0px;
+            max-width: 50%;
+            border-radius: 0px 30px 30px 0px;
         }
     </style>
     <div id="carouselExampleCaptions" class="carousel slide carousel-dark" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{{ asset('home/banner-slider/Home header-slider1.webp') }}" class="d-block w-100" alt="Slider-1">
-            <div class="carousel-caption" style="top:1.2rem; !important;">
-              <h5>Streamline Your Business Operations with Secured Cloud Hosting Services</h5>
-              <p>Power your business with premium cloud hosting solutions by Mounteko. With lightning-fast performance, 99.95% uptime, and expert support, we provide the perfect cloud hosting platform for your growing business.</p>
+            <div class="carousel-item active">
+                <img src="{{ asset('home/banner-slider/Home header-slider1.webp') }}" class="d-block w-100"
+                    alt="Slider-1">
+                  <div class="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 text-start">
+                      <h5 class="caption-title">Streamline Your Business Operations with Secured Cloud Hosting Services</h5>
+                      <p class="caption-text">Power your business with premium cloud hosting solutions by Mounteko. With lightning-fast
+                          performance, 99.95% uptime, and expert support, we provide the perfect cloud hosting platform
+                          for your growing business.</p>
+                  </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="{{ asset('home/banner-slider/img-slider/images/slider(2).webp') }}" class="d-block w-100" alt="slider-2">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+            <div class="carousel-item">
+                <img src="{{ asset('home/banner-slider/img-slider/images/slider(2).webp') }}" class="d-block w-100"
+                    alt="slider-2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
             </div>
-          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
 </div>
