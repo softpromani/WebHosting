@@ -1305,7 +1305,7 @@
                     <br>
                     <x-cta-btn :links="[
                         'contact_us' => '{{ url("contact-us") }}',
-                        'start_7_days_free_trial' => '{{ url("apply-now") }}'
+                        // 'start_7_days_free_trial' => '{{ url("apply-now") }}'
                     ]" />
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"
