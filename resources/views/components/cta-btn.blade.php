@@ -1,7 +1,7 @@
 <div class="w-100">
     <div class="row d-flex justify-content-evenly">
         @php
-            $colors = ['primary', 'warning', 'info', 'success', 'secondary', 'danger', 'dark', 'light'];
+            $colors = ['success', 'warning', 'info', 'primary', 'secondary', 'danger', 'dark', 'light'];
         @endphp
         <div class="col-md-12 d-flex gap-2">
             @foreach ($links as $key=>$link)

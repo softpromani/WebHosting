@@ -1304,8 +1304,8 @@
                     {!! $products->service_title ?? '' !!}
                     <br>
                     <x-cta-btn :links="[
-                        'google_link' => 'https://www.google.com',
-                        'facebook_link' => 'https://www.facebook.com'
+                        'contact_us' => {{ url('contact-us') }},
+                        'start_7_days_free_trial' => {{ url('apply-now') }}
                     ]" />
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"
