@@ -139,8 +139,8 @@
                     </p>
 
                     <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center gap-3">
-                        <a href="#" class="btn btn-sm custom-outline-btn2  w-md-auto">Book A Consultation</a>
-                        <a href="#" class="btn btn-sm custom-outline-btn w-md-auto">Start Free Trial</a>
+                        <a href="{{ url('contact-us') }}" target="blank" class="btn btn-sm custom-outline-btn2  w-md-auto">Book A Consultation</a>
+                        <a href="{{ url('apply-now') }}" target="blank" class="btn btn-sm custom-outline-btn w-md-auto">Start Free Trial</a>
                     </div>
                 </div>
             </div>
