@@ -8,7 +8,7 @@
                 @php
                     $colorClass = $colors[$loop->index % count($colors)];
                 @endphp 
-                <a href="{{ url($link) }}" class="btn btn-{{ $colorClass }}">{{ucfirst(str_replace('_',' ',$key))}}</a>
+                <a href="{{ url($link) }}" class="btn btn-bordered-{{ $colorClass }}">{{ucfirst(str_replace('_',' ',$key))}}</a>
             @endforeach
         </div>
     </div>
