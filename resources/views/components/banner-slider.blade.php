@@ -47,39 +47,104 @@
     }
 }
 
+.custom-outline-btn {
+    border: 2px solid #a26303; /* Bootstrap primary color */
+    color: #a26303;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
+}
+
+.custom-outline-btn2 {
+    border: 2px solid #000080; /* Bootstrap primary color */
+    color: #000080;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
+}
+
+.custom-outline-btn:hover {
+    background-color: #a26303;
+    color: #fff;
+}
+
+.custom-outline-btn2:hover {
+    background-color: #000080;
+    color: #fff;
+}
+
+.left_margin {
+    left: 30%;
+}
+.responsive-heading {
+    font-size: 2rem;
+}
+
+.responsive-paragraph {
+    font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+    .responsive-heading {
+        display: none;
+    }
+
+    .responsive-paragraph {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .responsive-heading {
+        display: none;
+    }
+
+    .responsive-paragraph {
+        display: none;
+    }
+}
+
+
+
+
     </style>
-    <div id="carouselExampleCaptions" class="carousel slide carousel-dark" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            {{-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button> --}}
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('home/banner-slider/slider-1.webp') }}" class="d-block w-100"
-                    alt="Slider-1">
-                  <div class="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 text-start">
-                  </div>
-            </div>
-            {{-- <div class="carousel-item">
-                <img src="{{ asset('home/banner-slider/slider-1.webp') }}" class="d-block w-100"
-                    alt="slider-2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+   <div id="carouselExampleCaptions" class="carousel slide carousel-dark" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active position-relative">
+            <!-- Banner Image -->
+            <img src="{{ asset('home/banner-slider/Home header-Background.webp') }}" 
+                 class="d-block w-100 img-fluid banner_image" 
+                 alt="Cloud Hosting Banner"
+                 style="max-height: 82vh; object-fit: cover;">
+
+            <!-- Caption Overlay -->
+            <div class="position-absolute top-50  translate-middle px-3 text-white w-100 left_margin"
+                 style="max-width: 900px;" >
+
+                <div class="text-center text-md-start mx-auto" style="max-width: 700px;">
+                    <h3 class="fw-bold mb-3 responsive-heading text-black">
+                        Streamline Your Business Operations with Secured Cloud Hosting Services
+                    </h3>
+
+                    <p class="lead mb-4 responsive-paragraph" style="color: #4e4e4e;">
+                        Power your business with premium cloud hosting solutions by Mounteko. With lightning-fast 
+                        performance, 99.95% uptime, and expert support, we provide the perfect cloud hosting platform 
+                        for your growing business.
+                    </p>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center gap-3">
+                        <a href="#" class="btn btn-sm custom-outline-btn2  w-md-auto">Book A Consultation</a>
+                        <a href="#" class="btn btn-sm custom-outline-btn w-md-auto">Start Free Trial</a>
+                    </div>
                 </div>
-            </div> --}}
+            </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </div>
+
