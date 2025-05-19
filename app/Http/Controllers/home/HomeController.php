@@ -142,7 +142,7 @@ class HomeController extends Controller
         ]);
         $freeTrailApply = FreeTrailApply::create($validatedData);
          FreeTrialApply::dispatch($freeTrailApply); 
-         Mail::send(new FreeTrialEmail($formData));
+         Mail::send(new FreeTrialEmail($freeTrailApply));
         Alert::success('Success', 'Your application has been submitted successfully.');
         return redirect()->back();
     }
