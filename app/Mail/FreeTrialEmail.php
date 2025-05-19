@@ -25,7 +25,7 @@ class FreeTrialEmail extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Free Trial Mail | ' . now()->format('d-m-Y h:i a'),
+            subject: 'Free Trial Mail | ' . now()->setTimezone('Asia/Kolkata')->format('d-m-Y h:i a'),
             to: [
                 new Address('ayushi15srivastava@gmail.com', 'Sales Team'),
                 // new Address('support@mounteko.com', 'support'),

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Free Trial Request</title>
 </head>
+
 <body style="font-family: Arial, sans-serif; color: #333; background-color: #f7f7f7; padding: 20px;">
     {{-- Company Logo --}}
     <div style="text-align: center; margin-bottom: 30px;">
@@ -62,9 +64,13 @@
             </tr>
             <tr>
                 <td style="padding: 10px; border: 1px solid #ccc;">Submitted At</td>
-                <td style="padding: 10px; border: 1px solid #ccc;">{{ $formData->created_at->format('d M Y, h:i A') }}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">
+                    {{ $formData->created_at->setTimezone('Asia/Kolkata')->format('d M Y, h:i A') }}
+                </td>
+
             </tr>
         </tbody>
     </table>
 </body>
+
 </html>
