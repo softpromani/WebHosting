@@ -610,20 +610,19 @@
                     <div class="col-xl-4 col-lg-3 col-md-4 sm-mb-35px"
                         data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
                         <!-- start counter item -->
-                        <div class="row align-items-center mb-50px sm-mb-35px text-end me-5">
+                        <div class="row align-items-center mb-70px sm-mb-35px text-end me-5">
 
                             <div class="col-12 col-xl-12 col-md-12 last-paragraph-no-margin ">
-                                <span class="fs-20 text-dark-gray fw-600 alt-font">24*7 </span>
-                                <p>Customer Support</p>
+                              <b>Expert-Level Support</b>
                             </div>
                         </div>
                         <!-- end counter item -->
                         <!-- start counter item -->
-                        <div class="row text-end align-items-end me-5">
+                        <div class="row text-end align-items-end me-5 mt-2">
 
                             <div class="col-12 col-xl-12 col-md-12 last-paragraph-no-margin ">
-                                <span class="fs-20 text-dark-gray fw-600 alt-font">99.95% </span>
-                                <p>Uptime</p>
+                               <b>Rock-Solid Uptime</b>
+
                             </div>
                         </div>
                         <!-- end counter item -->
@@ -672,11 +671,11 @@
                     <div class="col-xl-4 col-lg-3 col-md-4"
                         data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'>
                         <!-- start counter item -->
-                        <div class="row align-items-center mb-50px sm-mb-35px ms-5">
+                        <div class="row align-items-center mb-70px sm-mb-35px ms-5">
 
                             <div class="col-12 col-xl-12 col-md-12 last-paragraph-no-margin">
-                                <span class="fs-20 text-dark-gray fw-600 alt-font">100+ </span>
-                                <p>Domain Experts</p>
+                                <b>Client Efficiency Boost</b>
+
                             </div>
                         </div>
                         <!-- end counter item -->
@@ -684,8 +683,7 @@
                         <div class="row align-items-center ms-5">
 
                             <div class="col-12 col-xl-12 col-md-12 last-paragraph-no-margin">
-                                <span class="fs-20 text-dark-gray fw-600 alt-font">90% </span>
-                                <p>Better Results</p>
+                                <b>Custom-Built Solutions </b>
                             </div>
                         </div>
                         <!-- end counter item -->

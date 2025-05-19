@@ -16,7 +16,6 @@
     use App\Http\Controllers\home\HomeController;
     use App\Http\Controllers\home\ProductController;
     use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
     Route::get('/', [HomeController::class, 'home'])->name('home');
     Route::get('/test', [HomeController::class, 'test'])->name('test');
@@ -40,8 +39,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
     Route::post('user-newsletter/store', [HomeController::class, 'newsletterStore'])->name('newsletterStore');
     Route::get('apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
-    Route::Post('apply-now', [HomeController::class, 'applyNowStore'])->name('applyNow-store');
-
+    Route::Post('apply-nowapplyNowStore', [HomeController::class, 'applyNowStore'])->name('applyNow-store');
 
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
