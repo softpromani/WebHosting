@@ -29,7 +29,7 @@ class FreeTrialEmail extends Mailable implements ShouldQueue
             to: [
                 new Address('ayushi15srivastava@gmil.com', 'Sales Team'),
                 // new Address('support@mounteko.com', 'support'),
-                // new Address($this->formData->email, $this->formData->name),
+                new Address($this->formData->email, $this->formData->name),
             ],
             cc: [
                 new Address('support@mounteko.com', 'support'),
