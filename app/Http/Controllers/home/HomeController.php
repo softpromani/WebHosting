@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\home;
 
+use App\Events\FreeTrialApply;
 use App\Models\Faq;
 use App\Models\Blog;
 use App\Models\ContactUs;
@@ -11,7 +12,9 @@ use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
+use App\Mail\FreeTrialEmail;
 use App\Models\FreeTrailApply;
+use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
@@ -138,6 +141,8 @@ class HomeController extends Controller
             'agreement' => 'required|accepted',
         ]);
         $freeTrailApply = FreeTrailApply::create($validatedData);
+         FreeTrialApply::dispatch($freeTrailApply); 
+         Mail::send(new FreeTrialEmail($formData));
         Alert::success('Success', 'Your application has been submitted successfully.');
         return redirect()->back();
     }
