@@ -27,7 +27,7 @@ class FreeTrialEmail extends Mailable implements ShouldQueue
         return new Envelope(
             subject: 'Free Trial Mail | ' . now()->format('d-m-Y h:i a'),
             to: [
-                new Address('ayushi15srivastava@gmil.com', 'Sales Team'),
+                new Address('ayushi15srivastava@gmail.com', 'Sales Team'),
                 // new Address('support@mounteko.com', 'support'),
                 // new Address($this->formData->email, $this->formData->name),
             ],

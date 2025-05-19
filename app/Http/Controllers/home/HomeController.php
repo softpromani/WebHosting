@@ -1,20 +1,17 @@
 <?php
-
 namespace App\Http\Controllers\home;
 
-use App\Events\FreeTrialApply;
-use App\Models\Faq;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactRequest;
+use App\Mail\FreeTrialEmail;
 use App\Models\Blog;
 use App\Models\ContactUs;
+use App\Models\Faq;
+use App\Models\FreeTrailApply;
 use App\Models\Newsletter;
 use App\Models\PricePlan;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\ContactRequest;
-use App\Mail\FreeTrialEmail;
-use App\Models\FreeTrailApply;
-use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
@@ -27,9 +24,9 @@ class HomeController extends Controller
 
     public function aboutUs()
     {
-        $faqs=Faq::where('type','about-us-page')->get();
+        $faqs  = Faq::where('type', 'about-us-page')->get();
         $blogs = Blog::with('blogImage')->get();
-        return view('home.about_us',compact('faqs','blogs'));
+        return view('home.about_us', compact('faqs', 'blogs'));
     }
 
     public function contactUs()
@@ -48,7 +45,6 @@ class HomeController extends Controller
 
         $contact = ContactUs::create($validatedData);
 
-
         if ($contact) {
 
             return response('OK', 200);
@@ -64,13 +60,13 @@ class HomeController extends Controller
         ]);
         $existingNewsletter = Newsletter::where('email', $request->email)->first();
 
-    if ($existingNewsletter) {
-        Alert::info('Already Subscribed', 'You have already subscribed to our newsletter.');
-        return redirect()->back();
-    }
+        if ($existingNewsletter) {
+            Alert::info('Already Subscribed', 'You have already subscribed to our newsletter.');
+            return redirect()->back();
+        }
         $newsletter = Newsletter::create([
 
-            'email' => $request->email,
+            'email'     => $request->email,
             'is_active' => 1,
         ]);
 
@@ -86,63 +82,63 @@ class HomeController extends Controller
     public function pricing()
     {
         $PricePlan = PricePlan::latest()->get();
-        return view('home.pricing',compact('PricePlan'));
+        return view('home.pricing', compact('PricePlan'));
     }
     public function security()
     {
-        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
-        $testimonial=Testimonial::get();
-        $blogs = Blog::with('blogImage')->get();
-        return view('home.company.security',compact('testimonial','faqs','blogs'));
+        $faqs        = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $testimonial = Testimonial::get();
+        $blogs       = Blog::with('blogImage')->get();
+        return view('home.company.security', compact('testimonial', 'faqs', 'blogs'));
     }
     public function partner()
     {
-        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
-        $testimonial=Testimonial::get();
-        $blogs = Blog::with('blogImage')->get();
-        return view('home.company.partner',compact('testimonial','faqs','blogs'));
+        $faqs        = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $testimonial = Testimonial::get();
+        $blogs       = Blog::with('blogImage')->get();
+        return view('home.company.partner', compact('testimonial', 'faqs', 'blogs'));
     }
     public function whyUsPage()
     {
-        $faqs = Faq::where('type','why-us-page')->get();
-        $testimonial=Testimonial::get();
-        $blogs = Blog::with('blogImage')->get();
-        return view('home.company.whyUs',compact('testimonial','faqs','blogs'));
+        $faqs        = Faq::where('type', 'why-us-page')->get();
+        $testimonial = Testimonial::get();
+        $blogs       = Blog::with('blogImage')->get();
+        return view('home.company.whyUs', compact('testimonial', 'faqs', 'blogs'));
     }
     public function faq()
     {
-        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
-        $testimonial=Testimonial::get();
-        $blogs = Blog::with('blogImage')->get();
-        return view('home.company.faq',compact('testimonial','faqs','blogs'));
+        $faqs        = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $testimonial = Testimonial::get();
+        $blogs       = Blog::with('blogImage')->get();
+        return view('home.company.faq', compact('testimonial', 'faqs', 'blogs'));
     }
     public function testimonial()
     {
-        $faqs = Faq::orderBy('created_at', 'desc')->take(3)->get();
-        $testimonial=Testimonial::get();
-        $blogs = Blog::with('blogImage')->get();
-        return view('home.company.testimonial',compact('testimonial','faqs','blogs'));
+        $faqs        = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $testimonial = Testimonial::get();
+        $blogs       = Blog::with('blogImage')->get();
+        return view('home.company.testimonial', compact('testimonial', 'faqs', 'blogs'));
     }
-    public function applyNow(){
+    public function applyNow()
+    {
         return view('home.apply_now');
     }
     public function applyNowStore(Request $request)
     {
-        $validatedData=$request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'phone_number' => 'required|string|max:20',
-            'business_name' => 'required|string|max:255',
+        $validatedData = $request->validate([
+            'name'               => 'required|string|max:255',
+            'email'              => 'required|email|max:255',
+            'phone_number'       => 'required|string|max:20',
+            'business_name'      => 'required|string|max:255',
             'application_detail' => 'required|string|max:5000',
-            'license_key' => 'required|string|max:5000',
-            'number_users' => 'required|integer|min:1',
-            'username' => 'required|string|max:255',
-            'aditional_comment' => 'sometimes|string|max:1000',
-            'agreement' => 'required|accepted',
+            'license_key'        => 'required|string|max:5000',
+            'number_users'       => 'required|integer|min:1',
+            'username'           => 'required|string|max:255',
+            'aditional_comment'  => 'sometimes|string|max:1000',
+            'agreement'          => 'required|accepted',
         ]);
         $freeTrailApply = FreeTrailApply::create($validatedData);
-         FreeTrialApply::dispatch($freeTrailApply); 
-         Mail::send(new FreeTrialEmail($freeTrailApply));
+        \Mail::to('ayushi15srivastava@gmail.com')->send(new FreeTrialEmail($freeTrailApply));
         Alert::success('Success', 'Your application has been submitted successfully.');
         return redirect()->back();
     }
