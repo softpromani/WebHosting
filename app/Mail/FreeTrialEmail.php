@@ -33,7 +33,7 @@ class FreeTrialEmail extends Mailable implements ShouldQueue
             cc: [
                 new Address('sales@mounteko.com', 'Sales Team'),
                 new Address('support@mounteko.com', 'support'),
-                new Address('softpromani@gmail.com', 'Developer'),
+                // new Address('softpromani@gmail.com', 'Developer'),
             ],
         );
     }
