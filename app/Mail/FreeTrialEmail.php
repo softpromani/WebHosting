@@ -28,7 +28,7 @@ class FreeTrialEmail extends Mailable implements ShouldQueue
             subject: 'Free Trial Mail | ' . now()->setTimezone('Asia/Kolkata')->format('d-m-Y h:i a'),
             to: [
                
-                new Address('sales@@mounteko.com', 'Sales Team'),
+                new Address('sales@mounteko.com', 'Sales Team'),
                 // new Address($this->formData->email, $this->formData->name),
             ],
             cc: [
