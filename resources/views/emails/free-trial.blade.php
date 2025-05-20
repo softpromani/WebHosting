@@ -18,6 +18,7 @@
             <img src="{{ $logoUrl }}" alt="Mounteko" style="max-width: 200px;">
         </div>
     @endif
+
     <h2 style="text-align: center;">New Free Trial Application</h2>
 
     <table style="width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #fff;">
