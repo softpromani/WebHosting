@@ -8,10 +8,16 @@
 
 <body style="font-family: Arial, sans-serif; color: #333; background-color: #f7f7f7; padding: 20px;">
     {{-- Company Logo --}}
-    <div style="text-align: center; margin-bottom: 30px;">
-        <img src="{{ asset('storage/' . settingValue('logo')) }}" alt="Mounteko" style="max-width: 200px;">
-    </div>
+    @php
+        $logoPath = settingValue('logo'); // e.g., "uploads/setting/logo.png"
+        $logoUrl = env('APP_URL') . '/storage/' . $logoPath;
+    @endphp
 
+    @if ($logoUrl)
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="{{ $logoUrl }}" alt="Mounteko" style="max-width: 200px;">
+        </div>
+    @endif
     <h2 style="text-align: center;">New Free Trial Application</h2>
 
     <table style="width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #fff;">
