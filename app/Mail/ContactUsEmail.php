@@ -32,8 +32,7 @@ class ContactUsEmail extends Mailable
         return new Envelope(
             subject: 'Contact Us Email | ' . now()->setTimezone('Asia/Kolkata')->format('d-m-Y h:i a'),
             to: [
-                new Address('samyaduvanshi26@gmail.com', 'Samyad Uduvanshi'),
-                //  new Address('sales@mounteko.com', 'Sales Team'),
+                 new Address('sales@mounteko.com', 'Sales Team'),
                 // new Address($this->formData->email, $this->formData->name),
             ],
             cc: [
