@@ -3,7 +3,7 @@
 
     use App\Http\Controllers\Admin\Auth\LoginController;
     use App\Http\Controllers\Admin\BlogController;
-use App\Http\Controllers\admin\CategoryDescriptionController;
+use App\Http\Controllers\Admin\CategoryDescriptionController;
 use App\Http\Controllers\Admin\ContactUsController;
     use App\Http\Controllers\Admin\DashboardController;
     use App\Http\Controllers\Admin\FaqController;
