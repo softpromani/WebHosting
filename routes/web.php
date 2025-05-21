@@ -43,6 +43,8 @@ use App\Http\Controllers\Admin\ContactUsController;
     Route::get('apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
     Route::Post('apply-nowapplyNowStore', [HomeController::class, 'applyNowStore'])->name('applyNow-store');
 
+    Route::post('/schedule-submit', [HomeController::class, 'scheduleBook'])->name('schedule.submit');
+
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

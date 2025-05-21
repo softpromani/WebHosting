@@ -181,8 +181,12 @@
                                                 @endif
                                             </ul>
 
-                                            <!-- Button Always at Bottom -->
-                                            <a href="#" class="btn btn-primary rounded-pill mt-auto">Get Started</a>
+                                            <!-- Centered Button at Bottom -->
+                                            <div class="mt-auto d-flex justify-content-center">
+                                                <a href="#" class="btn btn-sm btn-primary rounded-pill px-4"
+                                                data-bs-toggle="modal" data-bs-target="#scheduleModal">Book Now</a>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

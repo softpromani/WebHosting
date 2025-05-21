@@ -18,6 +18,7 @@ use App\Models\Product;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
@@ -165,5 +166,48 @@ class HomeController extends Controller
         Mail::send(new FreeTrialEmail($freeTrailApply));
         Alert::success('Success', 'Your application has been submitted successfully.');
         return redirect()->back();
+    }
+
+    public function scheduleBook(Request $request)
+    {
+        $validatedData = Validator::make($request->all(),[
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|string|max:20',
+            'schedule_date' => 'required|date',
+            'schedule_time' => 'required|string|max:20',
+            'user_message' => 'sometimes|string|max:1000',
+        ]);
+
+          if($validatedData->fails()){                
+                Alert::success('Validation Error', $validatedData->errors()->first());
+                return redirect()->back();
+                // return response($validatedData->errors()->first(), 200);
+            }
+
+        $formData = $request->all();
+
+        $content = ['name'=>$request->name];
+        $admin_mail = ['sales@mounteko.com', 'support@mounteko.com'];
+        $to_email = $request->email;
+
+        Mail::send('emails.booking-admin', $formData, function ($m) use ($admin_mail) {                
+            $m->to($admin_mail);
+            $m->subject('Schedule Booking');
+        }); 
+
+        // Mail::send('emails.booking-admin', $formData, function ($m) use ($to_email) {                
+        //     $m->to($to_email);
+        //     $m->subject('Schedule Booking');
+        // }); 
+
+        Alert::success('Success', 'Your schedule has been submitted successfully.');
+        return redirect()->back();
+
+        // if ($schedule) {
+        //     return response('OK', 200);
+        // } else {
+        //     return response('Error', 500);
+        // }
     }
 }

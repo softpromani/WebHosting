@@ -21,6 +21,7 @@
     <!-- ======= Footer ======= -->
     @include('home.includes.footer')
     @include('sweetalert::alert')
+    @include('components.schedule-form')
     <!-- End Footer -->
 
     <div id="preloader"></div>

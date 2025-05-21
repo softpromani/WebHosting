@@ -1299,13 +1299,13 @@
            padding: 80px 0;">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+               <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start text-start" data-aos="fade-up"
                     data-aos-delay="200" style="color: white;">
                     {!! $products->service_title ?? '' !!}
                     <br>
                     <x-cta-btn :links="[
-                        'contact_us' => '/contact-us',
-                        'start_7_days_free_trial' => '/apply-now',
+                        'google_link' => 'https://www.google.com',
+                        'facebook_link' => 'https://www.facebook.com'
                     ]" />
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"
