@@ -159,14 +159,7 @@
             </script>
 
 <style>
-   /* Always show the icon */
-.feature-box-icon {
-    display: block !important;
-    text-align: center !important;
-    margin-bottom: 15px !important;
-    opacity: 1 !important;
-    transform: none !important;
-}
+
 
 /* Hide title + description initially */
 .feature-box-content {
@@ -238,24 +231,24 @@
 
                 <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center">
                     <!-- START CARD -->
+                    @foreach ($category_desc as $desc)
                     <div class="col md-mb-30px d-flex">
                         <div
                             class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
                             <div class="position-relative box-image">
-                                <a href="#">
-                                    <img src="{{ asset('home/assets/homepage/images/Homepage-QuickBooks Hosting (1).png') }}"
+                                <a href="{{route('category-description', $desc->id)}}">
+                                    <img src="{{ asset('storage/' . $desc->image??'') }}"
                                         alt="" class="hover-animate w-100" style="position: relative;">
                                 </a>
                             </div>
                             <div class="bg-white d-flex flex-column h-100">
                                 <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
                                     <a href="demo-startup-services-details.html"
-                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">QuickBooks
-                                        Hosting</a>
-                                    <p>Access QuickBooks securely in the cloud with fast performance and 24/7 support.</p>
+                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">{{ optional($desc->category)->name }}</a>
+                                    <p>{{ $desc->description?strip_tags($desc->description):'' }}</p>
                                 </div>
                                 <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
-                                    <a href="#"
+                                    <a href="{{route('category-description', $desc->id)}}"
                                         class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
                                         <span>
                                             <span class="btn-text">Explore services</span>
@@ -267,8 +260,9 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
-                    <!-- SECOND CARD -->
+                    {{-- <!-- SECOND CARD -->
                     <div class="col md-mb-30px d-flex">
                         <div
                             class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
@@ -330,7 +324,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- END CARD -->
+                    <!-- END CARD --> --}}
                 </div>
             </div>
         </section>
@@ -707,11 +701,12 @@
                                     <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                                <img src="home/assets/homepage/images/Homepage- 247 Assistance.png" />
-                                            </div>
-                                            <div class="feature-box-content">
+                                                <img src="home/assets/homepage/images/Homepage- 247 Assistance.webp" />
                                                 <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600"> 24*7
                                                     Assistance</span>
+                                            </div>
+                                            <div class="feature-box-content">
+
                                                 <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
                                                     Our QuickBooks cloud hosting providers are there to assist you
                                                     round-the-clock.</p>
@@ -727,11 +722,12 @@
                                     <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                                <img src="home/assets/homepage/images/High-end Security.png" />
-                                            </div>
-                                            <div class="feature-box-content">
+                                                <img src="home/assets/homepage/images/High-end Security.webp" />
                                                 <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600">High-end
                                                     Security</span>
+                                            </div>
+                                            <div class="feature-box-content">
+
                                                 <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
                                                     Protect your data with our comprehensive and high-end security measures.
                                                 </p>
@@ -751,11 +747,12 @@
                                     <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                                <img src="home/assets/homepage/images/99.99 Uptime.png" />
+                                                <img src="home/assets/homepage/images/99.99  Uptime.webp" />
+                                                 <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600"> 99.99%
+                                                    Uptime</span>
                                             </div>
                                             <div class="feature-box-content">
-                                                <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600"> 99.99%
-                                                    Uptime</span>
+
                                                 <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
                                                     We have robust servers delivering an industry-leading standard of
                                                     ultra-reliable performance. </p>
@@ -771,11 +768,12 @@
                                     <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
                                             <div class="feature-box-icon">
-                                                <img src="home/assets/homepage/images/reliable hosting plan.png" />
-                                            </div>
-                                            <div class="feature-box-content">
+                                                <img src="home/assets/homepage/images/reliable hosting plan.webp"/>
                                                 <span class="d-inline-block alt-font text-dark-gray fs-20 fw-600">Reliable
                                                     Hosting Plans</span>
+                                            </div>
+                                            <div class="feature-box-content">
+
                                                 <p class="lh-28 text-visible text-light-opacity w-80 mx-auto sm-w-100">
                                                     Get customized and reliable QuickBooks hosting plans that work wonders
                                                     for your business.</p>
@@ -850,7 +848,7 @@
                     <div class="col-xl-4 ">
                         <div class="card-img mb-3">
                             <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
-                                class="img-fluid services-img rounded hover-animate" style="position: relative;">
+                                class="img-fluid services-img rounded hover-animate" style="position: relative;width: 400px;height: 400px;">
                         </div>
 
                         <style>

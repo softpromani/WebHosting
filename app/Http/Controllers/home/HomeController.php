@@ -6,11 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Mail\FreeTrialEmail;
 use App\Models\Blog;
+use App\Models\CategoryDescription;
 use App\Models\ContactUs;
 use App\Models\Faq;
 use App\Models\FreeTrailApply;
+use App\Models\Menu;
 use App\Models\Newsletter;
 use App\Models\PricePlan;
+use App\Models\Product;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -20,8 +23,9 @@ class HomeController extends Controller
 {
     public function home()
     {
+        $category_desc = CategoryDescription::with('category')->take(3)->get();
         $blogs = Blog::with('blogImage')->get();
-        return view('home.index', compact('blogs'));
+        return view('home.index', compact('blogs', 'category_desc'));
     }
 
     public function aboutUs()
@@ -34,6 +38,20 @@ class HomeController extends Controller
     public function contactUs()
     {
         return view('home.contact_us');
+    }
+
+    public function categoryDescription($id)
+    {
+        $category_desc = CategoryDescription::where('id', $id)->first();
+        if (!$category_desc) {
+            return redirect()->route('home')->with('error', 'Category not found.');
+        }
+        $menu_cat = Menu::where('id',$category_desc->category_id)->first();
+        $cat_products = Product::where('menu_id',$category_desc->category_id)->get();
+        $faqs        = Faq::orderBy('created_at', 'desc')->take(7)->get();
+        $testimonial = Testimonial::get();
+        $blogs       = Blog::with('blogImage')->get();
+        return view('home.category_description', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs', 'faqs'));
     }
 
     public function downloads()

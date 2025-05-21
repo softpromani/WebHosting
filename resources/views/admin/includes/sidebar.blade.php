@@ -55,6 +55,15 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.category-description.index') }}"
+                        class="nav-link {{ Route::currentRouteName() == 'admin.category-description.index' ? 'active' : '' }}">
+                        <i class="nav-icon fa-brands fa-product-hunt"></i>
+                        <p>
+                            Category Description
+                        </p>
+                    </a>
+                </li>
 
 
                 <li class="nav-item">

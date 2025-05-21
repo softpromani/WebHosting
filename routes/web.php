@@ -3,7 +3,8 @@
 
     use App\Http\Controllers\Admin\Auth\LoginController;
     use App\Http\Controllers\Admin\BlogController;
-    use App\Http\Controllers\Admin\ContactUsController;
+use App\Http\Controllers\admin\CategoryDescriptionController;
+use App\Http\Controllers\Admin\ContactUsController;
     use App\Http\Controllers\Admin\DashboardController;
     use App\Http\Controllers\Admin\FaqController;
     use App\Http\Controllers\Admin\MenuController;
@@ -20,6 +21,7 @@
     Route::get('/', [HomeController::class, 'home'])->name('home');
     Route::get('/test', [HomeController::class, 'test'])->name('test');
     Route::get('about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
+    Route::get('category-description/{slug}', [HomeController::class, 'categoryDescription'])->name('category-description');
 
     Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
     Route::get('download', [HomeController::class, 'downloads'])->name('download');
@@ -62,5 +64,12 @@
         Route::resource('blog', BlogController::class);
         Route::resource('price-plan', PricePlanController::class);
         Route::get('free-trial-applies', [DashboardController::class, 'free_trial_applies'])->name('free-trial-applies.list');
+
+        Route::get('category-description', [CategoryDescriptionController::class, 'index'])->name('category-description.index');
+        Route::get('category-description/edit/{id}', [CategoryDescriptionController::class, 'edit'])->name('category-description.edit');
+        Route::put('category-description/update/{id}', [CategoryDescriptionController::class, 'update'])->name('category-description.update');
+
+
+
 
 });
