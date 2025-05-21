@@ -4,6 +4,7 @@ namespace App\Http\Controllers\home;
 use App\Events\FreeTrialApply;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
+use App\Mail\ContactUsEmail;
 use App\Mail\FreeTrialEmail;
 use App\Models\Blog;
 use App\Models\CategoryDescription;
@@ -64,6 +65,8 @@ class HomeController extends Controller
         $validatedData = $request->validated();
 
         $contact = ContactUs::create($validatedData);
+
+        Mail::send(new ContactUsEmail($contact));
 
         if ($contact) {
 

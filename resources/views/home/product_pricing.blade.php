@@ -137,19 +137,19 @@
                 <h1 class="alt-font text-dark-gray fw-600 ls-minus-1px">{{ $plan->title ?? '' }}</h1>
                 <p style="font-weight: 300rem; font-size:18px; color:darkgray">{{ $plan->description ?? '' }}</p>
             @endforeach
-            <a href="#" class="btn btn-large btn-box-shadow btn-rounded btn-dark-gray mt-10px">View all
-                plans</a>
+            <a href="#" class="btn btn-large btn-box-shadow btn-rounded btn-dark-gray mt-10px">Pricing page link</a>
         </div>
         <div class="col-xl-5 col-lg-6 offset-xl-2 position-relative">
             <div class="accordion pricing-table-style-04" id="accordion-style-01">
-                <!-- Accordion item for Basic Plan -->
+
+                <!-- Accordion item for Standard Plan -->
                 <div class="accordion-item bg-white box-shadow-large mb-20px">
                     <div class="accordion-header" id="headingOne">
                         <a class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                             aria-expanded="true" aria-controls="collapseOne">
                             <div
                                 class="accordion-title d-flex align-items-center justify-content-between text-dark-gray fw-500 alt-font">
-                                Basic plan
+                                Standard Server plan
                                 <span class="icon-round bg-dark-gray text-white w-25px h-25px"><i
                                         class="fa-solid fa-angle-up"></i></span>
                             </div>
@@ -158,10 +158,9 @@
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordion-style-01">
                         <div class="accordion-body">
-                            <p class="opacity-6 w-90 fw-300">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                                do eiusmod.</p>
+                            <p class="opacity-6 w-90 fw-300">Shared infrastructure, ideal for variable or bursty workloads.</p>
                             <div class="d-flex align-items-end mt-20px">
-                                <h5 class="text-dark-gray mb-0"><span class="fs-16">$</span>19.99 <span
+                                <h5 class="text-dark-gray mb-0"><span class="fs-16">$</span>27 <span
                                         class="fs-16 opacity-6 fw-300 ls-0px">/ Monthly</span></h5>
                                 <a href="#"
                                     class="btn btn-transparent-white-light btn-rounded btn-small ms-auto fw-500 btn-box-shadow btn-get">Get
@@ -170,16 +169,13 @@
                         </div>
                     </div>
                 </div>
-
-
-
-                <!-- Accordion item for Standard Plan -->
+                <!-- Accordion item for Dedicated Plan -->
                 <div class="accordion-item bg-white box-shadow-large mb-20px">
                     <div class="accordion-header" id="headingTwo">
                         <a class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                             aria-expanded="false" aria-controls="collapseTwo">
                             <div class="accordion-title d-flex align-items-center text-dark-gray fw-500 alt-font">
-                                Standard plan<span class="icon-round bg-dark-gray text-white w-25px h-25px ml-10px"><i
+                                Dedicated Server Plan<span class="icon-round bg-dark-gray text-white w-25px h-25px ml-10px"><i
                                         class="fa-solid fa-angle-down"></i></span>
                             </div>
                         </a>
@@ -187,10 +183,9 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordion-style-01">
                         <div class="accordion-body">
-                            <p class="opacity-6 w-90 fw-300">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                                do eiusmod.</p>
+                            <p class="opacity-6 w-90 fw-300"> Exclusive infrastructure offering consistent performance and enhanced control, suitable for high-volume, latency-sensitive applications.</p>
                             <div class="d-flex align-items-end mt-20px">
-                                <h5 class="text-dark-gray mb-0"><span class="fs-16">$</span>29.99 <span
+                                <h5 class="text-dark-gray mb-0"><span class="fs-16">$</span>40 <span
                                         class="fs-16 opacity-6 fw-300 ls-0px">/ Monthly</span></h5>
                                 <a href="#"
                                     class="btn btn-transparent-white-light btn-rounded btn-small ms-auto fw-500 btn-box-shadow btn-get">Get
@@ -206,7 +201,7 @@
                         <a class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree"
                             aria-expanded="false" aria-controls="collapseThree">
                             <div class="accordion-title d-flex align-items-center text-dark-gray fw-500 alt-font">
-                                Premium plan<span class="icon-round bg-dark-gray text-white w-25px h-25px ml-10px"><i
+                                Custom plan<span class="icon-round bg-dark-gray text-white w-25px h-25px ml-10px"><i
                                         class="fa-solid fa-angle-down"></i></span>
                             </div>
                         </a>
@@ -214,10 +209,9 @@
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordion-style-01">
                         <div class="accordion-body">
-                            <p class="opacity-6 w-90 fw-300">Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                                do eiusmod.</p>
+                            <p class="opacity-6 w-90 fw-300">Tailored solutions providing maximum flexibility, designed for organizations with specific requirements.</p>
                             <div class="d-flex align-items-end mt-20px">
-                                <h5 class="text-dark-gray mb-0"><span class="fs-16">$</span>39.99 <span
+                                <h5 class="text-dark-gray mb-0"><span class="fs-16">$</span>150 <span
                                         class="fs-16 opacity-6 fw-300 ls-0px">/ Monthly</span></h5>
                                 <a href="#"
                                     class="btn btn-transparent-white-light btn-rounded btn-small ms-auto fw-500 btn-box-shadow btn-get">Get
