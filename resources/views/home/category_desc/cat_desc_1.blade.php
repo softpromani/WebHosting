@@ -1,8 +1,8 @@
 @extends('home.includes.layout')
-@section('title', optional($products)->slug ?? 'product')
+@section('title', $menu_cat->name ?? 'product')
 @section('header-area')
-    <meta name="keywords" content="{{ $products->meta_keyword }}">
-    <meta name="description" content="{{ $products->meta_description }}">
+    <meta name="keywords" content="{{ $menu_cat->name }}">
+    <meta name="description" content="{{ $menu_cat->name }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         :root {
@@ -1213,120 +1213,63 @@
             height: 400px;
             width: 400px;
         }
-    </style>
-@endsection
-@section('content')
-    <style>
-        .carousel-item img {
-            height: 300px;
+
+        /* Product slide */
+        .card {
+            border: none;
+            border-radius: 0;
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
         }
 
-        .blogCard {
-            height: 202px;
-            width: 135px;
-            object-fit: cover;
+        .carousel-inner {
+            padding: 1em;
         }
 
-        .testimonials {
-            background-color: transparent;
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: #110e0e;
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
-        .testimonials .container {
-            background-color: transparent;
+        .carousel-control-prev span,
+        .carousel-control-next span {
+            width: 1.5rem;
+            height: 1.5rem;
         }
 
-        .testimonials .testimonial-item {
-            background-color: transparent;
-            box-shadow: none;
-            /* Optional: Remove box shadow if there is any */
+        @media screen and (min-width: 577px) {
+            .cards-wrapper {
+                display: flex;
+            }
+
+            .card {
+                margin: 0 0.5em;
+                width: calc(100% / 2);
+            }
+
+            .image-wrapper {
+                height: 20vw;
+                margin: 0 auto;
+            }
         }
 
-        .testimonials .swiper-wrapper,
-        .testimonials .swiper-slide {
-            background-color: transparent;
+        @media screen and (max-width: 576px) {
+            .card:not(:first-child) {
+                display: none;
+            }
         }
 
-        .icon-box {
-            height: 300px;
-            /* Set a fixed height */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center;
-            padding: 20px;
-
-            overflow-y: auto;
-            background-color: #f9f9f9;
-            /* Optional: Background color */
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
         }
 
-        .icon-box .icon {
-            font-size: 50px;
-            /* Control the size of the icon */
-            margin-bottom: 20px;
-            /* Add space below the icon */
-        }
 
-        .icon-box .title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .icon-box .description {
-            font-size: 14px;
-            overflow: hidden;
-
-        }
-
-        .swiper-wrapper {
-            padding-bottom: 30px;
-            /* Add some space at the bottom of the cards */
-        }
-
-        .swiper-pagination {
-            margin-top: 20px;
-            /* Add some space between the cards and the pagination */
-        }
-    </style>
-    <!-- End Page Title -->
-
-    {{-- Silder --}}
-    <div
-        style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
-           background-size: cover;
-           background-position: center;
-           background-repeat: no-repeat;
-           padding: 80px 0;">
-        <div class="container">
-            <div class="row gy-4">
-               <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start text-start" data-aos="fade-up"
-                    data-aos-delay="200" style="color: white;">
-                    {!! $products->service_title ?? '' !!}
-                    <br>
-                    <x-cta-btn :links="[
-                        'contact_us' => '/contact-us',
-                        'start_7_days_free_trial' => '/apply-now',
-                    ]" />
-                </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"
-                    style="display: flex; justify-content: center; align-items: center;">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
-                        <div class="carousel-inner" style="width: 80%; margin-left: 150px;">
-                            @foreach ($products->slide_img as $md)
-                                <div class="carousel-item {{ $loop->index == 0 ? 'active' : '' }}">
-                                    <img src="{{ asset('storage/' . $md->media) }}" class="d-block w-100 hover-animate"
-                                        alt="..." style="border-radius: 10px; position: relative;">
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 🔥 Inline CSS for Hover Animation -->
-    <style>
+        /* animate images */
         .hover-animate:hover {
             animation: moveAround 3s infinite alternate ease-in-out;
         }
@@ -1357,318 +1300,168 @@
                 left: 0px;
             }
         }
+
+        .text blockquote {
+            color: white !important;
+        }
     </style>
+@endsection
+@section('content')
 
 
+    {{-- Silder --}}
+    <div
+        style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           padding: 80px 0;">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start text-start"
+                    data-aos="fade-up" data-aos-delay="200" style="color: white;">
+                    <h2>{!! $menu_cat->name ?? '' !!}</h2>
+                    <p>{!! $category_desc->title ?? '' !!}</p>
+                    <br>
+                    <x-cta-btn :links="[
+                        'contact_us' => '/contact-us',
+                        'start_7_days_free_trial' => '/apply-now',
+                    ]" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"
+                    style="display: flex; justify-content: center; align-items: center;">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
+                        <div class="carousel-inner" style="width: 80%; margin-left: 150px;">
+                            {{-- @foreach ($products->slide_img as $md) --}}
+                            <div class="carousel-item active">
+                                <img src="{{ asset('storage/' . $category_desc->image) }}"
+                                    class="d-block w-100 hover-animate" alt="..."
+                                    style="border-radius: 10px; position: relative;">
+                            </div>
+                            {{-- @endforeach --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <!-- Left side image -->
+            <div class="col-md-5 mb-4 mb-md-0">
+                <img src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+                    alt="Dummy Live Image" class="img-fluid rounded shadow">
+            </div>
 
-    {{-- Slider End --}}
+            <!-- Right side content -->
+            <div class="col-md-7">
+                <h5 class="fw-bold">Product Development for Better Business</h5>
+                <p>We are privileged to work with hundreds of future-thinking businesses, including many of the world’s top
+                    hardware, software, and brands.</p>
 
-    <!-- Service Details Section -->
+                <h6 class="fw-bold mt-4">DevOps Development</h6>
+                <p>We provide DevOps consulting services to help our customers adapt to an environment.</p>
+
+                <h6 class="fw-bold mt-4">Automated Software</h6>
+                <p>We use the latest technologies, toolkits, and modern software development practices. 123</p>
+            </div>
+        </div>
+    </div>
     <section id="service-details" class="service-details section">
         <div class="container">
             <div class="row gy-4">
 
                 <div
-                    class="col-lg-6 product-content-description d-flex flex-column  justify-content-center align-items-start">
-                    {!! $products->product_description !!}
+                    class="col-sm-12 product-content-description d-flex flex-column  justify-content-center align-items-start">
+                    <h2>{{ $category_desc->title ?? '' }}</h2>
+                    {!! $category_desc->description ?? '' !!}
                 </div>
 
-                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+                {{-- <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img" style="margin-left: 70px">
                         <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
                             class="img-fluid services-img rounded" style="height:400px; width:400px">
 
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
-
-
     </section>
-
-    @if ($products->layout == 'business_service')
-        <!-- /Service Details Section -->
-        <section class="bg-solitude-blue">
+        {{-- <section class="bg-solitude-blue">
             @include('home.product_business_service')
-        </section>
+        </section> --}}
 
-        <!-- End About Section -->
-
-        <!-- ======= Pricing Section ======= -->
-    @elseif($products->layout == 'pricePlan')
-        <section class="show-pricing">
-            @include('home.product_pricing')
-        </section>
-
-        <!-- End pricing Section -->
-    @endif
-    <!-- Why Us Details Section -->
-    {{-- <section id="whyus-services" class="counts">
-    <div class="container" data-aos="fade-up">
-
-
-        <div class="section-title">
-            <h2>How it work</h2>
-        </div>
-        <div class="heading">
-            Standard Work Process
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="main-timeline">
-                    @forelse ($products->whyus as $data)
-                    <div class="timeline">
-                        <a href="#" class="timeline-content">
-                            <div class="timeline-icon"><i class="{{ $data->icon }}"></i></div>
-                            <h3 class="title">{{ $data->title }}</h3>
-                            <p class="description">
-                                {!! $data->detail !!}
-                            </p>
-                        </a>
-                    </div>
-                    @empty
-                    <p>No data uploaded</p>
-                    @endforelse
-
-
-                </div>
-            </div>
-        </div>
-
+    <div class="container py-5">
+        <h4 class="fw-bold mb-4">Why Our QuickBooks Cloud Hosting Solutions Stand Out?</h4>
+        <ol class="ps-3">
+            <li class="mb-3">
+                <span class="fw-bold">Global Accessibility</span><br>
+                <span>Stay connected to your accounting data from any internet-enabled device, ensuring smooth operations no
+                    matter where you are.</span>
+            </li>
+            <li class="mb-3">
+                <span class="fw-bold">Robust Security Features</span><br>
+                <span>Safeguard sensitive information with top-tier encryption, multi-factor authentication, and proactive
+                    monitoring.</span>
+            </li>
+            <li class="mb-3">
+                <span class="fw-bold">Effortless Team Collaboration</span><br>
+                <span>Enable team members to work simultaneously within QuickBooks, enhancing efficiency and
+                    decision-making.</span>
+            </li>
+            <li class="mb-3">
+                <span class="fw-bold">Flexible Hosting Plans</span><br>
+                <span>Adapt hosting resources to your current and future needs, providing unmatched scalability and
+                    value.</span>
+            </li>
+        </ol>
     </div>
-</section> --}}
-    <!-- /Why Us Details Section -->
 
 
-    <section id="cta-product" style="background-color: whitesmoke;">
-        <x-cta-design  product-img="{{ asset('storage/' . optional($products->product_banner)->media) }}" :proimgcontent="$products->pro_img_content??''" />
-    </section>
-    <!-- Product banner Details Section -->
-    {{-- <section id="whyus-services" class="counts" style="position: relative;"> --}}
-        {{-- <div class="container-fluid"
-            style="width: 100%; padding: 0; background-image: url('{{ asset('storage/' . optional($products->product_banner)->media) }}'); background-size: cover; background-position: center;">
-            <img src="{{ asset('storage/' . optional($products->product_banner)->media) }}"
-                style="width: inherit;z-index:-100" />
-        </div> --}}
-      <!-- Contact Details Section -->
-        <section id="whyus-services-contact" class="container-fluid">
-            <div class="container" data-aos="fade-up">
-                <div class="cta-sec6 background-image bg-theme" data-bg-src="{{ asset('home/assets/img/cta_bg_6.jpg') }}">
-                    <div class="cta-content">
-                        <div class="cta-wrapper">
-                            <div class="cta-icon"><a href="tel:+91{{ settingValue('phone') }}"><img
-                                        src="{{ asset('home/assets/img/call.svg') }}" alt=""></a>
+    @php
+        $chunks = $cat_products->chunk(3);
+    @endphp
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @foreach ($chunks as $chunkIndex => $productChunk)
+                <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
+                    <div class="row gx-5 m-5">
+                        @foreach ($productChunk as $pro_item)
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100 w-100">
+                                    <div class="image-wrapper h-100">
+                                        <img src="{{ asset('storage/' . optional($pro_item->product_banner)->media) }}"
+                                            class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{ $pro_item->product_title ?? '' }}</h3>
+                                        <p class="card-text">
+                                            {{ $pro_item->product_description ? substr(strip_tags($pro_item->product_description), 0, 100) : '' }}.....
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-info" href="{{ route('product', $pro_item->slug) }}">Read More</a>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="media-body"><span class="header-info_label text-white">Call For More Info</span>
-                                <p class="header-info_link"><a
-                                        href="tel:+91{{ settingValue('phone') }}">{{ settingValue('phone') }}</a></p>
-                            </div>
-                        </div>
-                        <div class="title-area mb-0">
-                            <h4 class="sec-title text-white">Let’s Request a Schedule For Free Consultation</h4>
-                        </div>
-                        <div class="cta-group"><a href="{{ route('contactUs') }}"
-                                class="th-btn th-border style-radius">Contact Us</a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- /Contact Details Section -->
-
-    {{-- </section> --}}
-
-    <!-- ======= Service Description 4 Section ======= -->
-    @isset($products->service_description_1)
-        <section id="featured-services" class="featured-services">
-            <div class="container" data-aos="fade-up">
-
-                {!! $products->service_description_1 !!}
-
-            </div>
-        </section>
-    @endisset
-    <!-- End Service Description 4 Section -->
-
-    <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
-        <div class="container" data-aos="fade-up">
-
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper p-3">
-                    @foreach ($features as $fs)
-                        <div class="swiper-slide">
-                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                                <div class="icon"><i class="{{ $fs->icon ?? '' }}"></i></div>
-                                <h4 class="title"><a href="">{{ $fs->title ?? '' }}</a></h4>
-                                <div class="description">{!! $fs->detail ?? '' !!}</div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-
-        </div>
-    </section>
-    <!-- End Featured Services Section -->
-
-    <!-- ======= Service Description 5 Section ======= -->
-    <section id="service-details" class="service-details section">
-        @isset($products->service_description_2)
-            <div class="container">
-                <div class="row gy-4">
-                    {{-- content-2 --}}
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-img">
-                            <img src="{{ asset('storage/' . optional($products->serviceSection2)->media) }}"
-                                alt="no available" class="img-fluid services-img-2 rounded">
-
-                        </div>
-                    </div>
-                    {{-- image-2 --}}
-                    <div class="col-lg-6 product-content-description">
-                        {!! $products->service_description_2 !!}
-                    </div>
-
-                </div>
-
-            </div>
-        @endisset
-
-    </section>
-
-    <!-- End Service Description 5 Section -->
-
-    <!-- ======= Counts Section ======= -->
-    {{-- <section id="counts" class="counts">
-    <div class="container" data-aos="fade-up">
-
-        <div class="row">
-            @foreach ($counters as $ct)
-            <div class="col-lg-3 col-md-6">
-                <div class="count-box">
-                    <i class="{{ $ct->icon ?? '' }}"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                        class="purecounter">{{ $ct->count ?? '' }}</span>
-                    <p>{{ $ct->title ?? '' }}</p>
-                </div>
-            </div>
             @endforeach
-
         </div>
 
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-</section> --}}
-    <!-- End Counts Section -->
-
-
-    <!-- ======= Contact Us Section ======= -->
-    <section id="contact" class="contact">
-        {{-- <div class="container" data-aos="fade-up">
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="col-lg-6 ">
-                    <img class="mb-4 mb-lg-0" src="{{ asset('home/assets/img/contact-us-media.png') }}"
-                        style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-                </div>
-
-                <div class="col-lg-6 php-email-form">
-                    <div class="section-title">
-                        <h2>GET IN TOUCH</h2>
-                        <h3>Don't Be Shy <span><br />Send Us a Message</span></h3>
-
-                    </div>
-                    <form action="{{ route('contactStore') }}" method="post" role="form">
-                        @csrf
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <div class="row">
-                            <div class="col form-group">
-                                <input type="text" name="name" class="form-control" id="name"
-                                    placeholder="Your Name" required>
-                            </div>
-                            <div class="col form-group">
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
-                    </form>
-                </div>
-
-            </div>
-
-        </div> --}}
-
-        <div class="container text-white">
-            <div class="row  rounded-4 shadow-lg p-3" style="background-color: var(--primary-color);">
-                <!-- Left Section -->
-                <div class="col-lg-6 mb-4 pe-5">
-                    <h6 class="text-uppercase fw-semibold">Work With Us</h6>
-                    <h2 class="fw-bold mb-3">We Are Ready To Work For Your Projects</h2>
-                    <p class="mb-4">
-                        Phasellus parturient est cum dictum habitant eros fames, enim curabitur convallis arcu dictumst
-                        fermentum cubilia leo maecenas in pellentesque.
-                    </p>
-                    <div class="d-flex align-items-center">
-                        <div class="me-3 fs-3">
-                            <i class="bi bi-telephone-fill text-white fs-3 me-3"></i>
-                        </div>
-                        <div>
-                            <div class="fw-bold">Call Us: 258-3258 235</div>
-                            <small class="text-white-50">For any question</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Section (Form) -->
-                <div class="col-lg-6">
-                    <form action="{{ route('contactStore') }}" method="post" role="form">
-                        @csrf
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" name="fname" class="form-control rounded-pill px-4 py-3"
-                                    placeholder="Your First Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="lname" class="form-control rounded-pill px-4 py-3"
-                                    placeholder="Your Last Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" name="email" class="form-control rounded-pill px-4 py-3"
-                                    placeholder="Email Address">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="tel" name="phone" class="form-control rounded-pill px-4 py-3"
-                                    placeholder="+91 123 456 7890">
-                            </div>
-                            <div class="col-12">
-                                <textarea name="message" class="form-control rounded-4" rows="4" placeholder="Write your message here"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-light fw-semibold px-4 py-2 rounded-pill">
-                                    Submit Message
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Counts Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
@@ -1676,21 +1469,21 @@
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper">
-                    @foreach ($testimonials as $tm)
+                    @foreach ($testimonial as $t)
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="{{ asset('storage/' . $tm->media->media) }}" class="testimonial-img"
-                                    alt="">
-                                <h3>{{ $tm->name ?? '' }}</h3>
-                                <h4>{{ $tm->designation ?? '' }}</h4>
+                                <img src="{{ asset($t->pic) }}" class="testimonial-img" alt="">
+                                <h3>{{ $t->name }}</h3>
+                                <h4>{{ $t->position }}</h4>
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    {{ $tm->comment ?? '' }}
+                                    {{ $t->description }}
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
                         </div><!-- End testimonial item -->
                     @endforeach
+
 
                 </div>
                 <div class="swiper-pagination"></div>
@@ -1711,28 +1504,31 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-xl-4">
+                <div class="col-xl-4 ">
                     <div class="card-img mb-3">
-                        <img src="{{ asset('storage/' . optional($products->faqImg)->media) }}" alt="no available"
-                            class="img-fluid services-img rounded" height="300px" width="300px">
-
+                        <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
+                            class="img-fluid services-img rounded hover-animate"
+                            style="position: relative;width: 400px;height: 400px;">
                     </div>
+
                 </div>
                 <div class="col-xl-8">
                     <ul class="faq-list">
-                        @foreach ($faqs as $faq)
+
+                        @foreach ($faqs as $index => $faq)
                             <li>
                                 <div data-bs-toggle="collapse" class="collapsed question"
-                                    href="#faq{{ $faq->id ?? '' }}">
-                                    {{ $faq->question ?? '' }}<i class="bi bi-chevron-down icon-show"></i><i
-                                        class="bi bi-chevron-up icon-close"></i></div>
-                                <div id="faq{{ $faq->id ?? '' }}" class="collapse" data-bs-parent=".faq-list">
-                                    <p>
-                                        {{ $faq->answer ?? '' }}
-                                    </p>
+                                    href="#faq{{ $index }}">
+                                    {{ $faq->question }} <i class="bi bi-chevron-down icon-show"></i><i
+                                        class="bi bi-chevron-up icon-close"></i>
+                                </div>
+                                <div id="faq{{ $index }}" class="collapse" data-bs-parent=".faq-list">
+                                    <p>{!! $faq->answer !!}</p>
                                 </div>
                             </li>
                         @endforeach
+
+
 
                     </ul>
                 </div>
@@ -1742,88 +1538,19 @@
     </section>
     <!-- End Frequently Asked Questions Section -->
 
-
     <!-- ======= Blog Section ======= -->
-    <section class="user-blog" class="footer-top">
-        <x-blog-grid :blogs="$blogs" />
-    </section>
-    <!-- End Blog Section -->
+    @if ($blogs && count($blogs) > 0)
+        <section id="blog" class="blog section-bg">
+            <div class="container" data-aos="fade-up">
 
+                <div class="section-title">
+                    <h3>Our <span>Blogs</span></h3>
 
-@endsection
+                </div>
+                <x-blog-slider :blogs="$blogs" />
+            </div>
+        </section>
+    @endif
+    <!-- ======= END Blog Section ======= -->
 
-@section('script-area')
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
-                },
-            },
-        });
-        var swiper = new Swiper(".blogSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 50,
-                },
-            },
-        });
-        $(document).ready(function() {
-            $('#blogModal').on('show.bs.modal', function(event) {
-                var button = $(event.relatedTarget); // Button that triggered the modal
-                var title = button.data('title'); // Extract info from data-* attributes
-                var description = button.data('description');
-
-                var modal = $(this);
-                modal.find('.modal-title').text(title);
-                modal.find('.modal-body #blogDescription').html(description);
-            });
-        });
-    </script>
-    @isset($products->meta_page)
-        {!! $products->meta_page !!}
-    @endisset
 @endsection

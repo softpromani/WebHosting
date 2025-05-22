@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable = ['menu_id', 'slug', 'product_title', 'meta_keyword', 'meta_description', 'product_description', 'service_title', 'service_description_1', 'service_description_2', 'step', 'layout', 'meta_page'];
+    protected $fillable = ['menu_id', 'slug', 'product_title', 'meta_keyword', 'meta_description', 'product_description', 'service_title', 'service_description_1', 'service_description_2', 'step', 'layout', 'meta_page','pro_img_content'];
 
     protected static function boot()
     {

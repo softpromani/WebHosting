@@ -38,6 +38,7 @@ class ProductRequest extends FormRequest
                     'service_description_1' => 'nullable',
                     'service_description_2' => 'nullable',
                     'layout' => 'required',
+                    'pro_img_content' => 'nullable',
                 ];
             case 'layout':
 

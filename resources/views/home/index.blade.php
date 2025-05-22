@@ -236,7 +236,7 @@
                         <div
                             class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
                             <div class="position-relative box-image">
-                                <a href="{{route('category-description', $desc->id)}}">
+                                <a href="{{route('category-description', $desc->title)}}">
                                     <img src="{{ asset('storage/' . $desc->image??'') }}"
                                         alt="" class="hover-animate w-100" style="position: relative;">
                                 </a>
@@ -248,7 +248,7 @@
                                     <p>{{ $desc->description?strip_tags($desc->description):'' }}</p>
                                 </div>
                                 <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
-                                    <a href="{{route('category-description', $desc->id)}}"
+                                    <a href="{{route('category-description', $desc->title)}}"
                                         class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
                                         <span>
                                             <span class="btn-text">Explore services</span>

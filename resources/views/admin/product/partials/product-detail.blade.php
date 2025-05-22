@@ -146,6 +146,15 @@
                     <div class="alert mt-2" style=" color:rgb(255, 60, 0); ">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="pro_img_content">Product image Content</label>
+                    <textarea name="pro_img_content" id="pro_img_content" class="pro_img_content"> {!! isset($data->pro_img_content) ? $data->pro_img_content : '' !!} </textarea>
+                </div>
+                @error('pro_img_content')
+                    <div class="alert mt-2" style=" color:rgb(255, 60, 0); ">{{ $message }}</div>
+                @enderror
+            </div>
 
 
         </div>
@@ -177,7 +186,12 @@
                     .catch(error => {
                         console.error(error);
                     });
-                
+                ClassicEditor
+                .create(document.querySelector('#pro_img_content'))
+                .catch(error => {
+                    console.error(error);
+                });
+
                 $('#main_img').on('change', function() {
                     var input = this;
                     if (input.files && input.files[0] && input.files[0].type.startsWith('image/')) {

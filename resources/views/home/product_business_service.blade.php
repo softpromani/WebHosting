@@ -139,9 +139,9 @@
                 @forelse ($products->productBusinessServices as $plan)
                     <button class="nav-link @if ($loop->first) active @endif" id="nav-step{{$plan->id}}-tab" data-bs-toggle="tab" data-bs-target="#nav-step{{$plan->id}}" type="button">
                         <i class="{{ $plan->tab_icon }} icon-extra-medium text-dark-gray"></i> {{ $plan->tab_name }}
-                    </button> 
+                    </button>
                 @empty
-                    <button class="nav-link active" id="nav-step1-tab" data-bs-toggle="tab" data-bs-target="#nav-step1" type="button">Expertise and Experience</button> 
+                    <button class="nav-link active" id="nav-step1-tab" data-bs-toggle="tab" data-bs-target="#nav-step1" type="button">Expertise and Experience</button>
                     <button class="nav-link" id="nav-step2-tab" data-bs-toggle="tab" data-bs-target="#nav-step2" type="button">Quality Workmanship</button>
                     <button class="nav-link" id="nav-step3-tab" data-bs-toggle="tab" data-bs-target="#nav-step3" type="button">Commitment to Safety</button>
                     <button class="nav-link" id="nav-step4-tab" data-bs-toggle="tab" data-bs-target="#nav-step4" type="button">Reliability and Consistency</button>

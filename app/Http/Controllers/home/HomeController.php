@@ -42,9 +42,9 @@ class HomeController extends Controller
         return view('home.contact_us');
     }
 
-    public function categoryDescription($id)
+    public function categoryDescription($title)
     {
-        $category_desc = CategoryDescription::where('id', $id)->first();
+        $category_desc = CategoryDescription::where('title', $title)->first();
         if (!$category_desc) {
             return redirect()->route('home')->with('error', 'Category not found.');
         }
@@ -53,7 +53,22 @@ class HomeController extends Controller
         $faqs        = Faq::orderBy('created_at', 'desc')->take(7)->get();
         $testimonial = Testimonial::get();
         $blogs       = Blog::with('blogImage')->get();
-        return view('home.category_description', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs', 'faqs'));
+        // $products = Product::with('slide_img')->where('menu_id', $category_desc->category_id)->first();
+
+        // if (!$products) {
+        //     return abort(404, 'Product not found');
+        // }
+        if($category_desc->id == 1){
+            return view('home.category_desc.cat_desc_1', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs', 'faqs',));
+        }elseif($category_desc->id == 2){
+            return view('home.category_desc.cat_desc_2', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs', 'faqs'));
+        }elseif($category_desc->id == 3){
+            return view('home.category_desc.cat_desc_3', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs', 'faqs'));
+        }else{
+            abort(404);
+        }
+
+
     }
 
     public function downloads()
@@ -179,7 +194,7 @@ class HomeController extends Controller
             'user_message' => 'sometimes|string|max:1000',
         ]);
 
-          if($validatedData->fails()){                
+          if($validatedData->fails()){
                 Alert::success('Validation Error', $validatedData->errors()->first());
                 return redirect()->back();
                 // return response($validatedData->errors()->first(), 200);
@@ -191,15 +206,15 @@ class HomeController extends Controller
         $admin_mail = ['sales@mounteko.com', 'support@mounteko.com'];
         $to_email = $request->email;
 
-        Mail::send('emails.booking-admin', $formData, function ($m) use ($admin_mail) {                
+        Mail::send('emails.booking-admin', $formData, function ($m) use ($admin_mail) {
             $m->to($admin_mail);
             $m->subject('Schedule Booking');
-        }); 
+        });
 
-        // Mail::send('emails.booking-admin', $formData, function ($m) use ($to_email) {                
+        // Mail::send('emails.booking-admin', $formData, function ($m) use ($to_email) {
         //     $m->to($to_email);
         //     $m->subject('Schedule Booking');
-        // }); 
+        // });
 
         Alert::success('Success', 'Your schedule has been submitted successfully.');
         return redirect()->back();
