@@ -70,8 +70,12 @@ use App\Http\Controllers\Admin\ContactUsController;
         Route::get('category-description', [CategoryDescriptionController::class, 'index'])->name('category-description.index');
         Route::get('category-description/edit/{id}', [CategoryDescriptionController::class, 'edit'])->name('category-description.edit');
         Route::put('category-description/update/{id}', [CategoryDescriptionController::class, 'update'])->name('category-description.update');
-
-
+        Route::get('cat-desc_service.cat_desc_service', [CategoryDescriptionController::class, 'catDescService'])->name('cat-desc_service.cat_desc_service');
+        Route::post('cat_desc_service_save', [CategoryDescriptionController::class, 'catDescServiceSave'])->name('cat_desc_service_save');
+        Route::get('category-desc-service/edit/{id}', [CategoryDescriptionController::class, 'catDesServiceEdit'])->name('cat_desc_service_edit');
+        Route::delete('category-desc-service/delete/{id}', [CategoryDescriptionController::class, 'catDesServiceDelete'])->name('cat_desc_service_delete');
+        // For updating an existing service
+        Route::put('cat-desc-service/update/{id}', [CategoryDescriptionController::class, 'catDesServiceUpdate'])->name('cat_desc_service_update');
 
 
 });

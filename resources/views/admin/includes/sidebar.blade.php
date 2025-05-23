@@ -55,15 +55,33 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('admin.category-description.index') }}"
-                        class="nav-link {{ Route::currentRouteName() == 'admin.category-description.index' ? 'active' : '' }}">
+                <li class="nav-item has-treeview {{ in_array(Route::currentRouteName(), ['admin.category-description.index', 'admin.cat-desc_service.cat_desc_service']) ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['admin.category-description.index', 'admin.cat-desc_service.cat_desc_service']) ? 'active' : '' }}">
                         <i class="nav-icon fa-brands fa-product-hunt"></i>
                         <p>
                             Category Description
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin.category-description.index') }}"
+                            class="nav-link {{ Route::currentRouteName() == 'admin.category-description.index' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Main Description</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.cat-desc_service.cat_desc_service') }}"
+                            class="nav-link {{ Route::currentRouteName() == 'admin.cat-desc_service.cat_desc_service' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Service Description</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
+
 
 
                 <li class="nav-item">

@@ -1270,116 +1270,68 @@
 
 
         /* animate images */
-        .hover-animate:hover
-        {
+        .hover-animate:hover {
             animation: moveAround 3s infinite alternate ease-in-out;
         }
 
-            @keyframes moveAround {
-                0% {
-                    top: 0px;
-                    left: 0px;
-                }
-
-                25% {
-                    top: -15px;
-                    left: 15px;
-                }
-
-                50% {
-                    top: 15px;
-                    left: -15px;
-                }
-
-                75% {
-                    top: -15px;
-                    left: -15px;
-                }
-
-                100% {
-                    top: 0px;
-                    left: 0px;
-                }
+        @keyframes moveAround {
+            0% {
+                top: 0px;
+                left: 0px;
             }
-            .text blockquote{
-                color:white !important;
+
+            25% {
+                top: -15px;
+                left: 15px;
+            }
+
+            50% {
+                top: 15px;
+                left: -15px;
+            }
+
+            75% {
+                top: -15px;
+                left: -15px;
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+        .text blockquote {
+            color: white !important;
+        }
+
+        /* ul li checkbox */
+        .feature-list {
+                list-style: none; /* Removes default bullets */
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .feature-list li {
+                flex: 0 0 50%; /* Two items per row */
+                font-weight: normal; /* Not bold */
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 25px; /* Space for the checkmark */
+            }
+
+            .feature-list li::before {
+                content: '✅'; /* Custom checkmark icon */
+                position: absolute;
+                left: 0;
+                top: 0;
             }
     </style>
 @endsection
 @section('content')
-    {{-- <style>
-        .carousel-item img {
-            height: 300px;
-        }
 
-        .blogCard {
-            height: 202px;
-            width: 135px;
-            object-fit: cover;
-        }
-
-        .testimonials {
-            background-color: transparent;
-        }
-
-        .testimonials .container {
-            background-color: transparent;
-        }
-
-        .testimonials .testimonial-item {
-            background-color: transparent;
-            box-shadow: none;
-            /* Optional: Remove box shadow if there is any */
-        }
-
-        .testimonials .swiper-wrapper,
-        .testimonials .swiper-slide {
-            background-color: transparent;
-        }
-
-        .icon-box {
-            height: 300px;
-            /* Set a fixed height */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center;
-            padding: 20px;
-
-            overflow-y: auto;
-            background-color: #f9f9f9;
-            /* Optional: Background color */
-        }
-
-        .icon-box .icon {
-            font-size: 50px;
-            /* Control the size of the icon */
-            margin-bottom: 20px;
-            /* Add space below the icon */
-        }
-
-        .icon-box .title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .icon-box .description {
-            font-size: 14px;
-            overflow: hidden;
-
-        }
-
-        .swiper-wrapper {
-            padding-bottom: 30px;
-            /* Add some space at the bottom of the cards */
-        }
-
-        .swiper-pagination {
-            margin-top: 20px;
-            /* Add some space between the cards and the pagination */
-        }
-    </style> --}}
-    <!-- End Page Title -->
 
     {{-- Silder --}}
     <div
@@ -1417,6 +1369,28 @@
             </div>
         </div>
     </div>
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <!-- Left side image -->
+            <div class="col-md-5 mb-4 mb-md-0">
+                <img src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+                    alt="Dummy Live Image" class="img-fluid rounded shadow">
+            </div>
+
+            <!-- Right side content -->
+            <div class="col-md-7">
+                <h5 class="fw-bold">Product Development for Better Business</h5>
+                <p>We are privileged to work with hundreds of future-thinking businesses, including many of the world’s top
+                    hardware, software, and brands.</p>
+
+                <h6 class="fw-bold mt-4">DevOps Development</h6>
+                <p>We provide DevOps consulting services to help our customers adapt to an environment.</p>
+
+                <h6 class="fw-bold mt-4">Automated Software</h6>
+                <p>We use the latest technologies, toolkits, and modern software development practices. 123</p>
+            </div>
+        </div>
+    </div>
     <section id="service-details" class="service-details section">
         <div class="container">
             <div class="row gy-4">
@@ -1437,6 +1411,244 @@
             </div>
         </div>
     </section>
+    <section class="bg-solitude-blue">
+        @include('home.category_desc.category_business_service')
+    </section>
+
+    <div class="container py-5">
+        <h4 class="fw-bold mb-4">Why Our QuickBooks Cloud Hosting Solutions Stand Out?</h4>
+        <ol class="ps-3">
+            <li class="mb-3">
+                <span class="fw-bold">Global Accessibility</span><br>
+                <span>Stay connected to your accounting data from any internet-enabled device, ensuring smooth operations no
+                    matter where you are.</span>
+            </li>
+            <li class="mb-3">
+                <span class="fw-bold">Robust Security Features</span><br>
+                <span>Safeguard sensitive information with top-tier encryption, multi-factor authentication, and proactive
+                    monitoring.</span>
+            </li>
+            <li class="mb-3">
+                <span class="fw-bold">Effortless Team Collaboration</span><br>
+                <span>Enable team members to work simultaneously within QuickBooks, enhancing efficiency and
+                    decision-making.</span>
+            </li>
+            <li class="mb-3">
+                <span class="fw-bold">Flexible Hosting Plans</span><br>
+                <span>Adapt hosting resources to your current and future needs, providing unmatched scalability and
+                    value.</span>
+            </li>
+        </ol>
+    </div>
+    <div class="container my-5">
+        <div class="row align-items-center text-white p-5"
+            style="background: linear-gradient(90deg, #031e3b 0%, #167792 100%); border-radius: 10px;">
+            <div class="col-md-8">
+                <h2 class="mb-3">Take Control of Your Financial Management with Us!</h2>
+                <p class="lead">
+                    Experience the difference with our tailored hosting for QuickBooks. Simplify workflows, enhance security, and boost productivity with a trusted partner.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="https://dummyimage.com/600x400/000/fff" alt="Dummy Image" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        @for ($i = 0; $i < 2; $i++)
+            <div class="carousel-item {{ $i === 0 ? 'active' : '' }}">
+                <div class="d-flex justify-content-center gap-3">
+
+                        <div class="card text-center p-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <i class="bi bi-cloud fs-1" style="color: #09687E"></i>
+                                <h4 class="card-title mt-2">Always-On Access </h4>
+                                <p class="card-text">Manage your QuickBooks files round the clock with secure, real-time access.</p>
+                            </div>
+                        </div>
+
+                        <div class="card text-center p-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <i class="bi bi-cloud fs-1" style="color: #09687E"></i>
+                                <h4 class="card-title mt-2">Enterprise-Grade Security</h4>
+                                <p class="card-text">Ensure data safety with rigorous security protocols and routine monitoring.</p>
+                            </div>
+                        </div>
+
+                        <div class="card text-center p-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <i class="bi bi-cloud fs-1" style="color: #09687E"></i>
+                                <h4 class="card-title mt-2">Collaborative Tools</h4>
+                                <p class="card-text">Empower your team with shared access and synchronized updates in QuickBooks.</p>
+                            </div>
+                        </div>
+
+                        <div class="card text-center p-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <i class="bi bi-cloud fs-1" style="color: #09687E"></i>
+                                <h4 class="card-title mt-2">Customizable Hosting Options</h4>
+                                <p class="card-text">Choose plans that fit your budget and expand resources as your business grows.</p>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        @endfor
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+    <!-- Indicators -->
+    <div class="carousel-indicators mt-3">
+        @for ($k = 0; $k < 2; $k++)
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="{{ $k }}" class="{{ $k === 0 ? 'active' : '' }}"></button>
+        @endfor
+    </div>
+</div>
+
+
+
+<section id="service-details" class="service-details section">
+            <div class="container">
+                <div class="row gy-4">
+                    {{-- content-2 --}}
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-img">
+                            <img src="https://dummyimage.com/600x400/000/fff"
+                                alt="no available" class="img-fluid services-img-2 rounded">
+
+                        </div>
+                    </div>
+                    {{-- image-2 --}}
+                    <div class="col-lg-6">
+                        <h3>Why Partner with Mounteko for QuickBooks Cloud Hosting Services?</h3>
+                        <p>Mounteko delivers cutting-edge QuickBooks Cloud Hosting solutions crafted to meet your unique business demands. From unparalleled performance to steadfast security, we ensure a hosted QuickBooks experience that lets you focus on your core operations.</p>
+                        <ul class="feature-list">
+                            <li>Guaranteed Uptime</li>
+                            <li>Proactive Data Protection</li>
+                            <li>Round-the-Clock Support</li>
+                            <li>Scalable Hosting Solutions</li>
+                            <li>Affordable Pricing Models</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+
+     <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>F.A.Q</h2>
+                <h3>Frequently Asked <span>Questions</span></h3>
+
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xl-4 ">
+                    <div class="card-img mb-3">
+                        <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
+                            class="img-fluid services-img rounded hover-animate"
+                            style="position: relative;width: 400px;height: 400px;">
+                    </div>
+
+                </div>
+                <div class="col-xl-8">
+                    <ul class="faq-list">
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question"
+                                href="#faq1">
+                               What does QuickBooks hosting mean?
+                                <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                <p>QuickBooks hosting involves securely storing your QuickBooks software and data on cloud servers, providing remote access and improved collaboration.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question"
+                                href="#faq2">
+                               How does Mounteko secure my financial data?
+                                <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                <p>We implement advanced encryption, routine monitoring, and strict access controls to protect your sensitive information.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question"
+                                href="#faq3">
+                               Can I use QuickBooks on multiple devices?
+                                <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                <p>Yes, our hosting allows you to access QuickBooks from multiple devices with internet connectivity.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question"
+                                href="#faq4">
+                              Is QuickBooks hosting adaptable to business changes?
+                                <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                <p>Absolutely. Our scalable solutions ensure you’re always equipped for growth or seasonal demands.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question"
+                                href="#faq5">
+                               What type of support does Mounteko provide?
+                                <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                <p>We offer 24/7 expert assistance to resolve any issues promptly.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question"
+                                href="#faq6">
+                               Will my QuickBooks performance be affected?
+                                <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                <p>No, our high-performance servers guarantee smooth and reliable operation at all times.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question"
+                                href="#faq7">
+                               How can I transition my existing QuickBooks setup to the cloud?
+                                <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+                                <p>We provide end-to-end migration support, ensuring a seamless and secure transition with no data loss or downtime.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+
+
 
     @php
         $chunks = $cat_products->chunk(3);
@@ -1452,16 +1664,17 @@
                                 <div class="card h-100 w-100">
                                     <div class="image-wrapper h-100">
                                         <img src="{{ asset('storage/' . optional($pro_item->product_banner)->media) }}"
-                                            class="card-img-top" alt="..." >
+                                            class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="card-title">{{ $pro_item->product_title ?? '' }}</h3>
                                         <p class="card-text">
-                                            {{ $pro_item->product_description ? substr(strip_tags($pro_item->product_description),0,100) : '' }}.....
+                                            {{ $pro_item->product_description ? substr(strip_tags($pro_item->product_description), 0, 100) : '' }}.....
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a class="btn btn-info" href="{{ route('product', $pro_item->slug) }}">Read More</a>
+                                        <a class="btn btn-info" href="{{ route('product', $pro_item->slug) }}">Read
+                                            More</a>
                                     </div>
 
                                 </div>
@@ -1473,103 +1686,65 @@
         </div>
 
         <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 
+
+
     <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
-            <div class="container" data-aos="zoom-in">
+    <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
 
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-                        @foreach ($testimonial as $t)
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <img src="{{ asset($t->pic) }}" class="testimonial-img" alt="">
-                                    <h3>{{ $t->name }}</h3>
-                                    <h4>{{ $t->position }}</h4>
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        {{ $t->description }}
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div><!-- End testimonial item -->
-                        @endforeach
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    @foreach ($testimonial as $t)
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="{{ asset($t->pic) }}" class="testimonial-img" alt="">
+                                <h3>{{ $t->name }}</h3>
+                                <h4>{{ $t->position }}</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    {{ $t->description }}
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+                    @endforeach
 
 
-                    </div>
-                    <div class="swiper-pagination"></div>
                 </div>
-
+                <div class="swiper-pagination"></div>
             </div>
-        </section>
-        <!-- End Testimonials Section -->
 
-        <!-- ======= Frequently Asked Questions Section ======= -->
-        <section id="faq" class="faq section-bg">
+        </div>
+    </section>
+    <!-- End Testimonials Section -->
+
+
+
+    <!-- ======= Blog Section ======= -->
+    @if ($blogs && count($blogs) > 0)
+        <section id="blog" class="blog section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>F.A.Q</h2>
-                    <h3>Frequently Asked <span>Questions</span></h3>
+                    <h3>Our <span>Blogs</span></h3>
 
                 </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-xl-4 ">
-                        <div class="card-img mb-3">
-                            <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
-                                class="img-fluid services-img rounded hover-animate" style="position: relative;width: 400px;height: 400px;">
-                        </div>
-
-                    </div>
-                    <div class="col-xl-8">
-                        <ul class="faq-list">
-
-                            @foreach ($faqs as $index => $faq)
-                                <li>
-                                    <div data-bs-toggle="collapse" class="collapsed question"
-                                        href="#faq{{ $index }}">
-                                        {{ $faq->question }} <i class="bi bi-chevron-down icon-show"></i><i
-                                            class="bi bi-chevron-up icon-close"></i>
-                                    </div>
-                                    <div id="faq{{ $index }}" class="collapse" data-bs-parent=".faq-list">
-                                        <p>{!! $faq->answer !!}</p>
-                                    </div>
-                                </li>
-                            @endforeach
-
-
-
-                        </ul>
-                    </div>
-                </div>
-
+                <x-blog-slider :blogs="$blogs" />
             </div>
         </section>
-        <!-- End Frequently Asked Questions Section -->
-
-        <!-- ======= Blog Section ======= -->
-        @if ($blogs && count($blogs) > 0)
-            <section id="blog" class="blog section-bg">
-                <div class="container" data-aos="fade-up">
-
-                    <div class="section-title">
-                        <h3>Our <span>Blogs</span></h3>
-
-                    </div>
-                    <x-blog-slider :blogs="$blogs" />
-                </div>
-            </section>
-        @endif
-        <!-- ======= END Blog Section ======= -->
+    @endif
+    <!-- ======= END Blog Section ======= -->
 
 @endsection

@@ -14,4 +14,8 @@ class CategoryDescription extends Model
     {
         return $this->belongsTo(Menu::class, 'category_id');
     }
+    public function categoryDescriptionService()
+    {
+        return $this->hasMany(CategoryDescriptionService::class, 'category_id');
+    }
 }

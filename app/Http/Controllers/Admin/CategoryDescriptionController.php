@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryDescriptionServiceRequest;
 use App\Models\CategoryDescription;
+use App\Models\CategoryDescriptionService;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -79,4 +81,89 @@ class CategoryDescriptionController extends Controller
         toast('Category description updated successfully', 'success');
         return redirect()->back();
     }
+
+    public function catDescService()
+    {
+        $categories = CategoryDescription::get();
+        $services = CategoryDescriptionService::with('category')->get();
+        return view('admin.category-description.cat_desc_service', compact('categories','services'));
+    }
+   public function catDescServiceSave(CategoryDescriptionServiceRequest $request)
+    {
+        $menu = Menu::findOrFail($request->category_id);
+
+        $catDescService = new CategoryDescriptionService();
+        $catDescService->category_id = $menu->id;
+
+        if ($request->hasFile('service_image')) {
+            $imageName = time() . '_' . $request->file('service_image')->getClientOriginalName();
+            $request->file('service_image')->storeAs('public/cat_desc_services', $imageName);
+            $catDescService->service_image = 'cat_desc_services/' . $imageName;
+        }
+
+        $catDescService->tab_name = $request->tab_name;
+        $catDescService->tab_icon = $request->tab_icon;
+        $catDescService->header_icon = $request->header_icon;
+        $catDescService->header_text = $request->header_text;
+        $catDescService->title = $request->title;
+        $catDescService->description = $request->description ?? '';
+
+        $catDescService->save();
+
+        toast('Category description service saved successfully', 'success');
+        return redirect()->back();
+    }
+
+    public function catDesServiceEdit($id)
+    {
+
+        $service = CategoryDescriptionService::findOrFail($id);
+        $categories = CategoryDescription::all();
+        $services = CategoryDescriptionService::with('category')->get();
+        return view('admin.category-description.cat_desc_service', compact('service', 'categories', 'services'));
+    }
+
+    public function catDesServiceDelete($id)
+    {
+        $service = CategoryDescriptionService::findOrFail($id);
+        if ($service->service_image && file_exists(public_path('uploads/service_images/' . $service->service_image))) {
+            unlink(public_path('uploads/service_images/' . $service->service_image));
+        }
+        $service->delete();
+        return redirect()->back()->with('success', 'Service deleted successfully');
+    }
+
+    public function catDesServiceUpdate(CategoryDescriptionServiceRequest $request, $id)
+    {
+        $menu = Menu::findOrFail($request->category_id);
+
+        $catDescService = CategoryDescriptionService::findOrFail($id);
+        $catDescService->category_id = $menu->id;
+
+        if ($request->hasFile('service_image')) {
+            // Optional: delete old image if exists
+            if ($catDescService->service_image && Storage::exists('public/' . $catDescService->service_image)) {
+                Storage::delete('public/' . $catDescService->service_image);
+            }
+
+            $imageName = time() . '_' . $request->file('service_image')->getClientOriginalName();
+            $request->file('service_image')->storeAs('public/cat_desc_services', $imageName);
+            $catDescService->service_image = 'cat_desc_services/' . $imageName;
+        }
+
+        $catDescService->tab_name = $request->tab_name;
+        $catDescService->tab_icon = $request->tab_icon;
+        $catDescService->header_icon = $request->header_icon;
+        $catDescService->header_text = $request->header_text;
+        $catDescService->title = $request->title;
+        $catDescService->description = $request->description ?? '';
+
+        $catDescService->save();
+
+        toast('Category description service updated successfully', 'success');
+        return redirect()->back();
+    }
+
+
+
 }

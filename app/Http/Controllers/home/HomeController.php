@@ -50,20 +50,17 @@ class HomeController extends Controller
         }
         $menu_cat = Menu::where('id',$category_desc->category_id)->first();
         $cat_products = Product::where('menu_id',$category_desc->category_id)->get();
-        $faqs        = Faq::orderBy('created_at', 'desc')->take(7)->get();
+        $products = Product::where('menu_id',$category_desc->category_id)->limit(3)->get();
+        // $faqs        = Faq::orderBy('created_at', 'desc')->take(7)->get();
         $testimonial = Testimonial::get();
         $blogs       = Blog::with('blogImage')->get();
-        // $products = Product::with('slide_img')->where('menu_id', $category_desc->category_id)->first();
-
-        // if (!$products) {
-        //     return abort(404, 'Product not found');
-        // }
+        // dd($category_desc);
         if($category_desc->id == 1){
-            return view('home.category_desc.cat_desc_1', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs', 'faqs',));
+            return view('home.category_desc.cat_desc_1', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
         }elseif($category_desc->id == 2){
-            return view('home.category_desc.cat_desc_2', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs', 'faqs'));
+            return view('home.category_desc.cat_desc_2', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
         }elseif($category_desc->id == 3){
-            return view('home.category_desc.cat_desc_3', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs', 'faqs'));
+            return view('home.category_desc.cat_desc_3', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
         }else{
             abort(404);
         }
