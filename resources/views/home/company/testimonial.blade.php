@@ -1,6 +1,7 @@
 @extends('home.includes.layout')
 @section('title', 'Mounteko Cloud Hosting Reviews | Customer Experience | Success Stories')
-@section('meta-description', 'Mounteko Cloud Hosting became the #1 QuickBooks Hosting provider due to its best-in-class IT infrastructures, lightning-fast services, and exceptional customer care.')
+@section('meta-description', 'Mounteko Cloud Hosting became the #1 QuickBooks Hosting provider due to its best-in-class
+    IT infrastructures, lightning-fast services, and exceptional customer care.')
 @section('header-area')
     <link href="{{ asset('home/assets/css/whyUs.css') }}" rel="stylesheet">
 
@@ -16,14 +17,14 @@
 
     <main id="main">
 
-      <!-- ======= BreadCrumb ======= -->
- @php
- $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
- $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
- $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
- @endphp
-  <div class="optech-breadcrumb"
-  style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+        <!-- ======= BreadCrumb ======= -->
+        @php
+            $baseColor = settingValue('primary') ?? '#65E82E'; // Change this dynamically
+            $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+            $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+        @endphp
+        <div class="optech-breadcrumb"
+            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
          background-size: cover;
          background-position: center;
          background-repeat: no-repeat;
@@ -32,17 +33,17 @@
          justify-content: center;
          text-align: center;
          height: 450px;">
-     <div class="container">
-         <h1 class="post__title" style="color: white;">Testimonials</h1>
-         <nav class="breadcrumbs">
-             <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
-                 <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
-                 <li aria-current="page" style="color: white;">Testimonials</li>
-             </ul>
-         </nav>
-     </div>
- </div>
- <!-- ======= BreadCrumb End ======= -->
+            <div class="container">
+                <h1 class="post__title" style="color: white;">Testimonials</h1>
+                <nav class="breadcrumbs">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                        <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
+                        <li aria-current="page" style="color: white;">Testimonials</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- ======= BreadCrumb End ======= -->
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
@@ -72,9 +73,42 @@
 
             </div>
         </section>
+        <section id="faq" class="faq section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>F.A.Q</h2>
+                    <h3>Frequently Asked <span>Questions</span></h3>
+                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
+                        atque
+                        vitae autem.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <ul class="faq-list">
+
+                            @foreach ($faqs as $index => $faq)
+                                <li>
+                                    <div data-bs-toggle="collapse" class="collapsed question"
+                                        href="#faq{{ $index }}">
+                                        {{ $faq->question }} <i class="bi bi-chevron-down icon-show"></i><i
+                                            class="bi bi-chevron-up icon-close"></i>
+                                    </div>
+                                    <div id="faq{{ $index }}" class="collapse" data-bs-parent=".faq-list">
+                                        <p>{!! $faq->answer !!}</p>
+                                    </div>
+                                </li>
+                            @endforeach
 
 
 
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         {{-- <section class="user-blog" class="footer-top">
             <div class="container">
@@ -83,10 +117,9 @@
                     Blogs
                 </div>
 
-
                 <div class="swiper blogSwiper mb-5">
                     <div class="swiper-wrapper p-3">
-                        @forelse ($blogs as $blog)
+                        @foreach ($blogs as $blog)
                             <div class="swiper-slide ">
                                 <div class="card">
                                     <img src="{{ asset('storage/' . $blog->blogImage->media) }}"
@@ -102,9 +135,7 @@
                                     </div>
                                 </div>
                             </div>
-                        @empty
-                            <p>No Blog Found!</p>
-                        @endforelse
+                        @endforeach
                     </div>
 
                     <div class="swiper-pagination"></div>
@@ -116,8 +147,14 @@
 
 
         </section> --}}
-
-
+        <section class="user-blog" class="footer-top">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Our <span>Blogs</span></h3>
+                </div>
+                <x-blog-grid :blogs="$blogs" page="testimonial" />
+            </div>
+        </section>
 
 
 

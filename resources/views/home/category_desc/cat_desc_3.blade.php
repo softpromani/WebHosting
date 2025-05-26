@@ -1307,27 +1307,32 @@
 
         /* ul li checkbox */
         .feature-list {
-                list-style: none; /* Removes default bullets */
-                padding: 0;
-                margin: 0;
-                display: flex;
-                flex-wrap: wrap;
-            }
+            list-style: none;
+            /* Removes default bullets */
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-            .feature-list li {
-                flex: 0 0 50%; /* Two items per row */
-                font-weight: normal; /* Not bold */
-                margin-bottom: 8px;
-                position: relative;
-                padding-left: 25px; /* Space for the checkmark */
-            }
+        .feature-list li {
+            flex: 0 0 50%;
+            /* Two items per row */
+            font-weight: normal;
+            /* Not bold */
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+            /* Space for the checkmark */
+        }
 
-            .feature-list li::before {
-                content: '✅'; /* Custom checkmark icon */
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
+        .feature-list li::before {
+            content: '✅';
+            /* Custom checkmark icon */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     </style>
 @endsection
 @section('content')
@@ -1379,15 +1384,21 @@
 
             <!-- Right side content -->
             <div class="col-md-7">
-                <h5 class="fw-bold">Product Development for Better Business</h5>
-                <p>We are privileged to work with hundreds of future-thinking businesses, including many of the world’s top
-                    hardware, software, and brands.</p>
+                <h5 class="fw-bold">Streamline Your Workflow with Seamless Tax Software Cloud Hosting</h5>
+                <h5 class="fw-bold">● Improved accessibility:</h5>
+                <p> With secure cloud hosting, you can access your tax software from any device, at any time, and from any
+                    location, giving you the flexibility you need for your business.</p>
 
-                <h6 class="fw-bold mt-4">DevOps Development</h6>
-                <p>We provide DevOps consulting services to help our customers adapt to an environment.</p>
+                <h6 class="fw-bold mt-4">● Strong Data Security: </h6>
+                <p>Take use of enterprise-grade encryption and cutting-edge security measures to shield private financial
+                    information from online attacks.</p>
 
-                <h6 class="fw-bold mt-4">Automated Software</h6>
-                <p>We use the latest technologies, toolkits, and modern software development practices. 123</p>
+                <h6 class="fw-bold mt-4">● Simplified Collaboration: </h6>
+                <p>Work together in real time with your team to increase accuracy and efficiency when preparing and
+                    submitting taxes.</p>
+                <h6 class="fw-bold mt-4">● Economical Scalability: </h6>
+                <p>With tax hosting on cloud tailored to your specific needs without breaking the budget, you can easily
+                    scale resources as your business expands.</p>
             </div>
         </div>
     </div>
@@ -1416,27 +1427,27 @@
     </section>
 
     <div class="container py-5">
-        <h4 class="fw-bold mb-4">Why Our QuickBooks Cloud Hosting Solutions Stand Out?</h4>
+        <h4 class="fw-bold mb-4">Reliable Tax Software Hosting Solutions</h4>
         <ol class="ps-3">
             <li class="mb-3">
-                <span class="fw-bold">Global Accessibility</span><br>
-                <span>Stay connected to your accounting data from any internet-enabled device, ensuring smooth operations no
-                    matter where you are.</span>
+                <span class="fw-bold">Access Anywhere, Anytime</span><br>
+                <span>With constant access to your tax software, you can work from any device and anywhere, guaranteeing
+                    efficiency even on the move.</span>
             </li>
             <li class="mb-3">
-                <span class="fw-bold">Robust Security Features</span><br>
-                <span>Safeguard sensitive information with top-tier encryption, multi-factor authentication, and proactive
-                    monitoring.</span>
+                <span class="fw-bold">Top-notch Data Security </span><br>
+                <span>Use cutting-edge encryption and security procedures to safeguard your private tax information,
+                    ensuring data integrity.</span>
             </li>
             <li class="mb-3">
-                <span class="fw-bold">Effortless Team Collaboration</span><br>
-                <span>Enable team members to work simultaneously within QuickBooks, enhancing efficiency and
-                    decision-making.</span>
+                <span class="fw-bold">Streamlined Team Collaboration</span><br>
+                <span>Access shared files and applications to facilitate real-time collaborating, streamline communication,
+                    and increase productivity.</span>
             </li>
             <li class="mb-3">
-                <span class="fw-bold">Flexible Hosting Plans</span><br>
-                <span>Adapt hosting resources to your current and future needs, providing unmatched scalability and
-                    value.</span>
+                <span class="fw-bold">Scalable Solutions for Growing Needs</span><br>
+                <span>Scale hosting resources with ease to accommodate seasonal needs or corporate expansion, guaranteeing
+                    cost-effective flexibility.</span>
             </li>
         </ol>
     </div>
@@ -1444,9 +1455,10 @@
         <div class="row align-items-center text-white p-5"
             style="background: linear-gradient(90deg, #031e3b 0%, #167792 100%); border-radius: 10px;">
             <div class="col-md-8">
-                <h2 class="mb-3">Take Control of Your Financial Management with Us!</h2>
+                <h2 class="mb-3">Optimize Your Tax Operations Today!</h2>
                 <p class="lead">
-                    Experience the difference with our tailored hosting for QuickBooks. Simplify workflows, enhance security, and boost productivity with a trusted partner.
+                    Discover how our cloud hosting solutions can simplify your tax workflows and boost efficiency. Book a
+                    free consultation with our experts now!
                 </p>
             </div>
             <div class="col-md-4 text-center">
@@ -1458,97 +1470,104 @@
 
 
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        @for ($i = 0; $i < 2; $i++)
-            <div class="carousel-item {{ $i === 0 ? 'active' : '' }}">
-                <div class="d-flex justify-content-center gap-3">
+        <div class="carousel-inner">
+            <h3 class="text-center fw-bold mb-3">Key Features of Our Tax Software Hosting</h3>
+            @for ($i = 0; $i < 2; $i++)
+                <div class="carousel-item {{ $i === 0 ? 'active' : '' }}">
+                    <div class="d-flex justify-content-center gap-3">
 
                         <div class="card text-center p-3" style="width: 18rem;">
                             <div class="card-body">
                                 <i class="bi bi-cloud fs-1" style="color: #09687E"></i>
-                                <h4 class="card-title mt-2">Always-On Access </h4>
-                                <p class="card-text">Manage your QuickBooks files round the clock with secure, real-time access.</p>
+                                <h4 class="card-title mt-2">24/7 Accessibility </h4>
+                                <p class="card-text">Access your tax software from any device, anytime, anywhere.</p>
                             </div>
                         </div>
 
                         <div class="card text-center p-3" style="width: 18rem;">
                             <div class="card-body">
                                 <i class="bi bi-cloud fs-1" style="color: #09687E"></i>
-                                <h4 class="card-title mt-2">Enterprise-Grade Security</h4>
-                                <p class="card-text">Ensure data safety with rigorous security protocols and routine monitoring.</p>
+                                <h4 class="card-title mt-2">Enhanced Data Security</h4>
+                                <p class="card-text">Protect sensitive financial data with advanced encryption and
+                                    firewalls.</p>
                             </div>
                         </div>
 
                         <div class="card text-center p-3" style="width: 18rem;">
                             <div class="card-body">
                                 <i class="bi bi-cloud fs-1" style="color: #09687E"></i>
-                                <h4 class="card-title mt-2">Collaborative Tools</h4>
-                                <p class="card-text">Empower your team with shared access and synchronized updates in QuickBooks.</p>
+                                <h4 class="card-title mt-2">Real-Time Collaboration</h4>
+                                <p class="card-text">Work seamlessly with your team for efficient tax preparation.</p>
                             </div>
                         </div>
 
                         <div class="card text-center p-3" style="width: 18rem;">
                             <div class="card-body">
                                 <i class="bi bi-cloud fs-1" style="color: #09687E"></i>
-                                <h4 class="card-title mt-2">Customizable Hosting Options</h4>
-                                <p class="card-text">Choose plans that fit your budget and expand resources as your business grows.</p>
+                                <h4 class="card-title mt-2">Scalable Resources</h4>
+                                <p class="card-text">Adjust hosting resources to match your business needs effortlessly.
+                                </p>
                             </div>
                         </div>
 
+                    </div>
                 </div>
-            </div>
-        @endfor
+            @endfor
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators mt-3">
+            @for ($k = 0; $k < 2; $k++)
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="{{ $k }}"
+                    class="{{ $k === 0 ? 'active' : '' }}"></button>
+            @endfor
+        </div>
     </div>
 
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-
-    <!-- Indicators -->
-    <div class="carousel-indicators mt-3">
-        @for ($k = 0; $k < 2; $k++)
-            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="{{ $k }}" class="{{ $k === 0 ? 'active' : '' }}"></button>
-        @endfor
-    </div>
-</div>
 
 
+    <section id="service-details" class="service-details section">
+        <div class="container">
+            <div class="row gy-4">
+                {{-- content-2 --}}
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="https://dummyimage.com/600x400/000/fff" alt="no available"
+                            class="img-fluid services-img-2 rounded">
 
-<section id="service-details" class="service-details section">
-            <div class="container">
-                <div class="row gy-4">
-                    {{-- content-2 --}}
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-img">
-                            <img src="https://dummyimage.com/600x400/000/fff"
-                                alt="no available" class="img-fluid services-img-2 rounded">
-
-                        </div>
                     </div>
-                    {{-- image-2 --}}
-                    <div class="col-lg-6">
-                        <h3>Why Partner with Mounteko for QuickBooks Cloud Hosting Services?</h3>
-                        <p>Mounteko delivers cutting-edge QuickBooks Cloud Hosting solutions crafted to meet your unique business demands. From unparalleled performance to steadfast security, we ensure a hosted QuickBooks experience that lets you focus on your core operations.</p>
-                        <ul class="feature-list">
-                            <li>Guaranteed Uptime</li>
-                            <li>Proactive Data Protection</li>
-                            <li>Round-the-Clock Support</li>
-                            <li>Scalable Hosting Solutions</li>
-                            <li>Affordable Pricing Models</li>
-                        </ul>
-                    </div>
-
+                </div>
+                {{-- image-2 --}}
+                <div class="col-lg-6">
+                    <h3>Why Choose Mounteko for Tax Software Cloud Hosting Services?</h3>
+                    <p>Mounteko provides scalable, safe, and easy-to-use tax software hosting solutions that are customized
+                        to meet your company's requirements. Our cutting-edge infrastructure guarantees dependable
+                        accessibility and excellent performance, freeing you up to concentrate on what really matters. Count
+                        on Mounteko to increase your productivity while safeguarding your private information.</p>
+                    <ul class="feature-list">
+                        <li>Guaranteed Uptime</li>
+                        <li>Top-notch data security</li>
+                        <li>24/7 customer support </li>
+                        <li>Scalable solutions</li>
+                        <li>Competitive pricing </li>
+                    </ul>
                 </div>
 
             </div>
+
+        </div>
 
     </section>
 
-     <!-- ======= Frequently Asked Questions Section ======= -->
+    <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
         <div class="container" data-aos="fade-up">
 
@@ -1570,73 +1589,72 @@
                 <div class="col-xl-8">
                     <ul class="faq-list">
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question"
-                                href="#faq1">
-                               What does QuickBooks hosting mean?
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">
+                                What is tax software hosting?
                                 <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
                             </div>
                             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                <p>QuickBooks hosting involves securely storing your QuickBooks software and data on cloud servers, providing remote access and improved collaboration.</p>
+                                <p>Tax software hosting involves storing your tax software and data on secure cloud servers,
+                                    allowing remote access and enhanced collaboration.</p>
                             </div>
                         </li>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question"
-                                href="#faq2">
-                               How does Mounteko secure my financial data?
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq2">
+                                How does Mounteko ensure the security of my data?
                                 <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
                             </div>
                             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                <p>We implement advanced encryption, routine monitoring, and strict access controls to protect your sensitive information.</p>
+                                <p>We use advanced encryption, firewalls, and multi-factor authentication to protect your
+                                    sensitive tax information.</p>
                             </div>
                         </li>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question"
-                                href="#faq3">
-                               Can I use QuickBooks on multiple devices?
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq3">
+                                Can I access my tax software from any device?
                                 <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
                             </div>
                             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                <p>Yes, our hosting allows you to access QuickBooks from multiple devices with internet connectivity.</p>
+                                <p>Yes, our hosting solutions allow you to access your tax software from any
+                                    internet-enabled device, anytime, anywhere.</p>
                             </div>
                         </li>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question"
-                                href="#faq4">
-                              Is QuickBooks hosting adaptable to business changes?
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq4">
+                                Is Mounteko’s tax software hosting scalable?
                                 <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
                             </div>
                             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                <p>Absolutely. Our scalable solutions ensure you’re always equipped for growth or seasonal demands.</p>
+                                <p>Absolutely! Our solutions can be scaled up or down to match your business’s evolving
+                                    needs.</p>
                             </div>
                         </li>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question"
-                                href="#faq5">
-                               What type of support does Mounteko provide?
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq5">
+                                What kind of support does Mounteko offer?
                                 <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
                             </div>
                             <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                                <p>We offer 24/7 expert assistance to resolve any issues promptly.</p>
+                                <p>We provide 24/7 customer support to address any issues or queries you may have.</p>
                             </div>
                         </li>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question"
-                                href="#faq6">
-                               Will my QuickBooks performance be affected?
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq6">
+                                Will hosting my tax software impact its performance?
                                 <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
                             </div>
                             <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                                <p>No, our high-performance servers guarantee smooth and reliable operation at all times.</p>
+                                <p>No, our high-performance servers ensure smooth and reliable operation of your tax
+                                    software at all times.</p>
                             </div>
                         </li>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question"
-                                href="#faq7">
-                               How can I transition my existing QuickBooks setup to the cloud?
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq7">
+                                Can I migrate my existing tax software to Mounteko’s hosting platform?
                                 <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
                             </div>
                             <div id="faq7" class="collapse" data-bs-parent=".faq-list">
-                                <p>We provide end-to-end migration support, ensuring a seamless and secure transition with no data loss or downtime.</p>
+                                <p>Yes, we offer migration assistance to ensure a seamless transition without data loss or
+                                    downtime.</p>
                             </div>
                         </li>
                     </ul>

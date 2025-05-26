@@ -382,9 +382,8 @@
                 </div>
 
             </div>
-        </section><!-- End Testimonials Section -->
-
-
+        </section>
+        <!-- End Testimonials Section -->
         <section id="faq" class="faq section-bg">
             <div class="container" data-aos="fade-up">
 

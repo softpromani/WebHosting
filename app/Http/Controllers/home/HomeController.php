@@ -34,7 +34,8 @@ class HomeController extends Controller
     {
         $faqs  = Faq::where('type', 'about-us-page')->get();
         $blogs = Blog::with('blogImage')->get();
-        return view('home.about_us', compact('faqs', 'blogs'));
+        $testimonial = Testimonial::get();
+        return view('home.about_us', compact('faqs', 'blogs','testimonial'));
     }
 
     public function contactUs()
@@ -122,14 +123,15 @@ class HomeController extends Controller
     }
     public function security()
     {
-        $faqs        = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $faqs  = Faq::where('type', 'security-page')->orderBy('created_at', 'desc')->take(6)->get();
+        $faqs        = Faq::orderBy('created_at', 'desc')->take(6)->get();
         $testimonial = Testimonial::get();
         $blogs       = Blog::with('blogImage')->get();
         return view('home.company.security', compact('testimonial', 'faqs', 'blogs'));
     }
     public function partner()
     {
-        $faqs        = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $faqs        = Faq::where('type', 'partner-page')->orderBy('created_at', 'desc')->take(6)->get();
         $testimonial = Testimonial::get();
         $blogs       = Blog::with('blogImage')->get();
         return view('home.company.partner', compact('testimonial', 'faqs', 'blogs'));
@@ -143,14 +145,14 @@ class HomeController extends Controller
     }
     public function faq()
     {
-        $faqs        = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $faqs        = Faq::where('type', 'faq-page')->orderBy('created_at', 'desc')->take(6)->get();
         $testimonial = Testimonial::get();
         $blogs       = Blog::with('blogImage')->get();
         return view('home.company.faq', compact('testimonial', 'faqs', 'blogs'));
     }
     public function testimonial()
     {
-        $faqs        = Faq::orderBy('created_at', 'desc')->take(3)->get();
+        $faqs        = Faq::where('type', 'testimonial-page')->orderBy('created_at', 'desc')->take(6)->get();
         $testimonial = Testimonial::get();
         $blogs       = Blog::with('blogImage')->get();
         return view('home.company.testimonial', compact('testimonial', 'faqs', 'blogs'));

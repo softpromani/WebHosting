@@ -135,7 +135,8 @@
                         <div class="feature-box-content py-3">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5 fs-18">Unmatched Data
                                 Security</span>
-                            <p class="fontSize85">At Mounteko Cloud Hosting, we prioritize your data with bank-level security, multi-factor
+                            <p class="fontSize85">At Mounteko Cloud Hosting, we prioritize your data with bank-level
+                                security, multi-factor
                                 authentication, and robust DDoS protection.</p>
                         </div>
                         <div class="feature-box-overlay bg-white"></div>
@@ -153,7 +154,8 @@
                         <div class="feature-box-content py-3">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">24/7 Expert
                                 Support</span>
-                            <p class="fontSize85">At Mounteko Cloud Hosting, our dedicated support team is available around the clock to ensure
+                            <p class="fontSize85">At Mounteko Cloud Hosting, our dedicated support team is available around
+                                the clock to ensure
                                 your business runs smoothly.</p>
                         </div>
                         <div class="feature-box-overlay bg-white"></div>
@@ -171,7 +173,8 @@
                         <div class="feature-box-content py-3">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">Powering Innovation
                                 Through Partnerships</span>
-                            <p class="fontSize85">Our strategic partnerships drive innovation, delivering cutting-edge cloud solutions with
+                            <p class="fontSize85">Our strategic partnerships drive innovation, delivering cutting-edge cloud
+                                solutions with
                                 unmatched performance, security, and reliability for our clients.</p>
                         </div>
                         <div class="feature-box-overlay bg-white"></div>
@@ -179,8 +182,9 @@
                 </div>
                 <!-- end features box item -->
                 <!-- start features box item -->
-                <div class="col icon-with-text-style-04 mb-2 transition-inner-all">            
-                    <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18  ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
+                <div class="col icon-with-text-style-04 mb-2 transition-inner-all">
+                    <div
+                        class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover justify-content-start border-radius-5px overflow-hidden pt-18  ps-14 pe-14 lg-p-12 h-100 last-paragraph-no-margin">
                         <div class="feature-box-icon mb-5">
                             <img src="home/assets/homepage/images/About us-Why choose us-Affordable & Customizable Plans.png"
                                 alt="">
@@ -188,7 +192,8 @@
                         <div class="feature-box-content py-3">
                             <span class="d-inline-block alt-font text-dark-gray fw-700 mb-5px fs-18">Affordable &
                                 Customizable Plans</span>
-                            <p class="fontSize85">Mounteko offers flexible pricing options tailored to fit your specific needs, ensuring you
+                            <p class="fontSize85">Mounteko offers flexible pricing options tailored to fit your specific
+                                needs, ensuring you
                                 get the most value from our cloud solutions without compromising on quality or scalability.
                             </p>
                         </div>
@@ -478,8 +483,36 @@
     </section> --}}
     <!-- end section -->
 
-    {{-- Start Section Faq --}}
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
 
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    @foreach ($testimonial as $t)
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="{{ asset($t->pic) }}" class="testimonial-img" alt="">
+                                <h3>{{ $t->name }}</h3>
+                                <h4>{{ $t->position }}</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    {{ $t->description }}
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+                    @endforeach
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Testimonials Section -->
+    {{-- Start Section Faq --}}
     @if (isset($faqs) && $faqs->count() > 0)
         <section class="background-position-center-top sm-background-image-none"
             style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
@@ -505,9 +538,6 @@
                                     </div>
                                 </li>
                             @endforeach
-
-
-
                         </ul>
                     </div>
                 </div>
@@ -520,6 +550,8 @@
     {{-- start Blog section --}}
     <x-blog-grid :blogs="$blogs" page="About Us" />
     {{-- end Blog section --}}
+
+
 
 @endsection
 @section('script-area')

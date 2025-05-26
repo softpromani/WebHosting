@@ -33,7 +33,10 @@
                                     <option value="home-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'home-page' ? 'selected' : '' }}>Home Page</option>
                                     <option value="why-us-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'why-us-page' ? 'selected' : '' }}>Why-Us Page</option>
                                     <option value="security-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'security-page"' ? 'selected' : '' }}>Security Page</option>
-                                    <option value="about-us-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'security-page"' ? 'selected' : '' }}>About us Page</option>
+                                    <option value="about-us-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'about-us-page"' ? 'selected' : '' }}>About us Page</option>
+                                    <option value="testimonial-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'testimonial-page"' ? 'selected' : '' }}>Testimonial Page</option>
+                                    <option value="partner-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'partner-page"' ? 'selected' : '' }}>Partner Page</option>
+                                    <option value="faq-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'faq-page"' ? 'selected' : '' }}>FAQ Page</option>
                                 </select>
                                 @error('type')<div class="alert mt-2 text-danger">{{ $message }}</div> @enderror
                     </div>
