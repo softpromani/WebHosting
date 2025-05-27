@@ -57,11 +57,14 @@ class HomeController extends Controller
         $blogs       = Blog::with('blogImage')->get();
         // dd($category_desc);
         if($category_desc->id == 1){
-            return view('home.category_desc.cat_desc_1', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
+            return redirect()->route('product', 'quickbooks-pro-desktop-hosting');
+            // return view('home.category_desc.cat_desc_1', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
         }elseif($category_desc->id == 2){
-            return view('home.category_desc.cat_desc_2', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
+            return redirect()->route('product', 'sage-50-cloud-hosting');
+            // return view('home.category_desc.cat_desc_2', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
         }elseif($category_desc->id == 3){
-            return view('home.category_desc.cat_desc_3', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
+            return redirect()->route('product', 'drake-tax-software-cloud-hosting');
+            // return view('home.category_desc.cat_desc_3', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
         }else{
             abort(404);
         }
