@@ -160,8 +160,8 @@
                     <a href="#" class="theme-btn">Buy a best plan that match your budget</a>
                 </div>
 
-                <div class="pricing-table-lists ">
-                    <div class="container">
+                <div class="pricing-table-lists">
+                    <div class="container-fluid">
                         <div class="row justify-content-center g-4">
                             @forelse ($PricePlan as $plan)
                                 <div class="col-md-4">

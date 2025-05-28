@@ -176,7 +176,137 @@
     pointer-events: auto !important;
 }
 
+.user-blog {
+            background: #f6f9fe;
+            padding: 50px 0 50px;
+        }
 
+        .user-blog:before {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            content: " ";
+            background: url(img/user-blog.png);
+            background-size: 100% 100px;
+            width: 100%;
+            height: 100px;
+            float: left;
+            z-index: 99;
+        }
+
+        div#owl-demo1 .item {
+            padding: 0 15px;
+        }
+
+        .blog-grid {
+            background: #fff;
+            box-shadow: 0px 0px 20px #c3c3c3;
+            margin: 10px 0;
+            border: 1px solid #d6d6d6;
+            border-radius: 1px;
+        }
+
+        .discretion-blog {
+            padding: 15px;
+        }
+
+        .discretion-blog p {
+            font-size: 15px;
+            color: #454343;
+        }
+
+        .discretion-blog h4 {
+            color: #454343;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .discretion-blog .btn {
+            color: #fefeff;
+            background: #454343;
+            width: 100%;
+            text-transform: uppercase;
+            border-radius: 0px;
+            margin-top: 10px;
+            -webkit-transform: perspective(1px) translateZ(0);
+            -moz-transform: perspective(1px) translateZ(0);
+            -o-transform: perspective(1px) translateZ(0);
+            transform: perspective(122px) translateZ(0);
+        }
+
+
+        .discretion-blog .btn:hover {
+            color: #ffffff;
+        }
+
+        .discretion-blog .btn:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #79b82d;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            border: 2px solid #79b82d;
+        }
+
+        .discretion-blog .btn:hover:before {
+            -webkit-transform: scaleX(1);
+            -moz-transform: scaleX(1);
+            -o-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        .date-blog {
+            background: #82b53f;
+            width: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        .date-blog:after {
+            width: 0;
+            height: 0;
+            content: "";
+            border-left: 0 solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 12px solid #82b53f;
+            top: -11px;
+            position: absolute;
+            left: 0;
+        }
+
+        .img-date {
+            position: relative;
+        }
+
+        .user-blog .owl-theme .owl-controls .owl-page span {
+            width: 17px;
+            height: 17px;
+            background: #454343;
+            opacity: 1;
+        }
+
+        .user-blog .owl-theme .owl-controls .owl-page.active span,
+        .user-blog .owl-theme .owl-controls.clickable .owl-page:hover span {
+            background: #82b53f;
+        }
 
 
 </style>
@@ -245,7 +375,9 @@
                                 <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
                                     <a href="demo-startup-services-details.html"
                                         class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">{{ optional($desc->category)->name }}</a>
-                                    <p>{{ $desc->description?strip_tags($desc->description):'' }}</p>
+                                    <p>
+                                        {{ Str::limit(strip_tags($desc->description), 40, '...') }}
+                                    </p>
                                 </div>
                                 <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
                                     <a href="{{route('category-description', $desc->title)}}"
@@ -912,7 +1044,7 @@
         <!-- End Frequently Asked Questions Section -->
 
         <!-- ======= Blog Section ======= -->
-        @if ($blogs && count($blogs) > 0)
+        {{-- @if ($blogs && count($blogs) > 0)
             <section id="blog" class="blog section-bg">
                 <div class="container" data-aos="fade-up">
 
@@ -923,8 +1055,17 @@
                     <x-blog-slider :blogs="$blogs" />
                 </div>
             </section>
-        @endif
-        <!-- ======= END Blog Section ======= -->
+        @endif --}}
+        <!-- ======= Blog Section ======= -->
+        <section class="user-blog" class="footer-top">
+            <div class="section-title">
+                <h3>Our <span>Blogs</span></h3>
+            </div>
+            <x-blog-grid :blogs="$blogs" />
+        </section>
+        <!-- End Blog Section -->
+
+
 
     </main><!-- End #main -->
 @endsection

@@ -54,7 +54,7 @@
     <!-- start section -->
     <section id="down-section" class="background-position-center-top sm-background-image-none pt-0 pb-0"
         style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center justify-content-center mb-8 xs-mb-50px">
                 <div class="col-xl-4 offset-lg-1 col-lg-5 col-md-10 text-center text-lg-start"
                     data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>

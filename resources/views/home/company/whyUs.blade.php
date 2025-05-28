@@ -48,43 +48,43 @@
     </section><!-- Breadcrumbs Section -->
 
         <section>
-            <div class="container">
-                <div class="row justify-content-center mb-3 text-center ">
+            <div class="container-fluid">
+                <div class="row justify-content-center mb-3 text-center" >
                     <div class="col-lg-7 col-md-8 col-sm-9  ">
                         <h2 class="title">Why Us?</h2>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mb-5" data-aos="fade-up">
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mb-5" data-aos="fade-up" style="background: linear-gradient(90deg, #031e3b 0%, #167792 100%); border-radius: 10px;">
                     <!-- Business Process Card -->
                     <div class="col feature-col">
                         <div class="feature-box">
-
+                            <img src="{{ asset('home/assets/img/whyUs/Unmatched Data Security.webp') }}"
+                                alt="Business Process">
                             <h3>Unmatched Data Security</h3>
                             <p>At Ace Cloud Hosting, we prioritize your data with bank-level security, multi-factor
                                 authentication, and robust DDoS protection.</p>
-                            <img src="{{ asset('home/assets/img/whyUs/Unmatched Data Security.webp') }}"
-                                alt="Business Process">
+
                         </div>
                     </div>
                     <!-- Corporate Finance Card -->
                     <div class="col feature-col">
                         <div class="feature-box new">
-
+                            <img src="{{ asset('home/assets/img/whyUs/247 Expert Support.webp') }}" alt="Corporate Finance">
                             <h3>24/7 Expert Support</h3>
                             <p>At Ace Cloud Hosting, our dedicated support team is available around the clock to ensure your
                                 business runs smoothly.</p>
-                            <img src="{{ asset('home/assets/img/whyUs/247 Expert Support.webp') }}" alt="Corporate Finance">
+
                         </div>
                     </div>
                     <!-- Financial Services Card -->
                     <div class="col feature-col">
                         <div class="feature-box">
-
+                            <img src="{{ asset('home/assets/img/whyUs/Powering Innovation Through Partnerships.webp') }}"
+                                alt="Financial Services">
                             <h3>Powering Innovation Through Partnerships</h3>
                             <p>Our strategic partnerships drive innovation, delivering cutting-edge cloud solutions with
                                 unmatched performance, security, and reliability for our clients.</p>
-                            <img src="{{ asset('home/assets/img/whyUs/Powering Innovation Through Partnerships.webp') }}"
-                                alt="Financial Services">
+
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
         </section>
 
         <section class="pt-0 big-section">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
                         <h3 class="fw-700 text-dark-gray ls-minus-2px">Mounteko: Your QuickBooks  Hosting Partner
@@ -171,7 +171,7 @@
                         <h2 class="title">Our Streamlined Cloud Hosting Process</h2>
                     </div>
                 </div>
-                <div class="row mt--50 g-5">
+                <div class="row mt-3 g-5">
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <!-- single steps area start -->
                         <div class="single-steps-area-nine">

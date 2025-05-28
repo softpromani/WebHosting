@@ -26,7 +26,7 @@
         }
 
         .post-content {
-            padding: 15px 20px;
+            padding: 2px 20px;
         }
 
         .post-content .category {
@@ -41,6 +41,7 @@
         .post-content h3 {
             font-size: 20px;
             margin: 0 0 5px;
+            line-height: 1.4rem;
         }
 
         .post-content .meta {
@@ -59,7 +60,7 @@
             position: relative;
             max-width: 1200px;
             margin: auto;
-            padding: 40px 0;
+            /* padding: 40px 0; */
         }
 
         .custom-nav {
@@ -119,15 +120,19 @@
         .image-loaded .image-loader {
             display: none;
         }
-       .post-content h3{
-            line-height: 1.4rem;
+
+        .owl-stage-outer {
+            padding-bottom: 15px;
         }
-        .owl-stage-outer{
-            padding-bottom:15px;
-        }
+
         @keyframes spin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
         }
     </style>
 
@@ -141,18 +146,20 @@
 
         <!-- Owl Carousel -->
         <section class="blog-carousel owl-carousel owl-theme">
+
             @foreach ($blogs as $blog)
                 <div class="blog-post">
                     <div class="image-wrapper">
                         <div class="image-loader"></div>
                         <img loading="lazy" src="{{ asset('storage/' . $blog?->blog_image) }}"
-                             alt="{{ $blog->title }}" onload="this.closest('.image-wrapper').classList.add('image-loaded')">
+                             alt="{{ $blog->title }}"
+                             onload="this.closest('.image-wrapper').classList.add('image-loaded'); setTimeout(setEqualHeight, 50);">
                     </div>
                     <div class="post-content">
                         <span class="category">{{ $page }}</span>
                         <h3>{{ $blog->title }}</h3>
                         <div class="meta">{{ $blog->created_at?->format('d M Y') }}</div>
-                        {{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}
+                        <p>{{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}</p>
                     </div>
                 </div>
             @endforeach
@@ -184,31 +191,21 @@
             margin: 20,
             nav: false,
             dots: false,
-            navText: [
-                '<i class="arrow left">‹</i>',
-                '<i class="arrow right">›</i>'
-            ],
             responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                },
-                1024: {
-                    items: 3
-                }
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 3 }
             },
-            onInitialized: setEqualHeight,
-            onResized: setEqualHeight,
-            onTranslated: setEqualHeight
+            onInitialized: () => setTimeout(setEqualHeight, 100),
+            onResized: () => setTimeout(setEqualHeight, 100),
+            onTranslated: () => setTimeout(setEqualHeight, 100)
         });
 
         $(window).on('resize', function () {
             setTimeout(setEqualHeight, 200);
         });
 
-        // Custom nav actions
+        // Custom nav buttons
         $('.custom-nav.left').click(() => owl.trigger('prev.owl.carousel'));
         $('.custom-nav.right').click(() => owl.trigger('next.owl.carousel'));
     </script>

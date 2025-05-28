@@ -1349,8 +1349,8 @@
             <div class="row gy-4">
                 <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start text-start"
                     data-aos="fade-up" data-aos-delay="200" style="color: white;">
-                    <h2>{!! $menu_cat->name ?? '' !!}</h2>
-                    <p>{!! $category_desc->title ?? '' !!}</p>
+                    <h2>{{ $category_desc->title ?? '' }}</h2>
+                    <p>{!! $category_desc->description ?? '' !!}</p>
                     <br>
                     <x-cta-btn :links="[
                         'contact_us' => '/contact-us',
@@ -1374,7 +1374,7 @@
             </div>
         </div>
     </div>
-    <div class="container py-5">
+    <div class="container-fluid py-5">
         <div class="row align-items-center">
             <!-- Left side image -->
             <div class="col-md-5 mb-4 mb-md-0">
@@ -1401,7 +1401,7 @@
             </div>
         </div>
     </div>
-    <section id="service-details" class="service-details section">
+    {{-- <section id="service-details" class="service-details section">
         <div class="container">
             <div class="row gy-4">
 
@@ -1411,21 +1411,21 @@
                     {!! $category_desc->description ?? '' !!}
                 </div>
 
-                {{-- <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img" style="margin-left: 70px">
                         <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
                             class="img-fluid services-img rounded" style="height:400px; width:400px">
 
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="bg-solitude-blue">
         @include('home.category_desc.category_business_service')
     </section>
 
-    <div class="container py-5">
+    {{-- <div class="container py-5">
         <h4 class="fw-bold mb-4">Why Our QuickBooks Cloud Hosting Solutions Stand Out?</h4>
         <ol class="ps-3">
             <li class="mb-3">
@@ -1449,8 +1449,8 @@
                     value.</span>
             </li>
         </ol>
-    </div>
-    <div class="container my-5">
+    </div> --}}
+    <div class="container-fluid my-5">
         <div class="row align-items-center text-white p-5"
             style="background: linear-gradient(90deg, #031e3b 0%, #167792 100%); border-radius: 10px;">
             <div class="col-md-8">
@@ -1470,6 +1470,7 @@
 
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
+            <h3 class="text-center fw-bold mb-3">Exclusive Features of Our QuickBooks Hosting Services</h3>
             @for ($i = 0; $i < 2; $i++)
                 <div class="carousel-item {{ $i === 0 ? 'active' : '' }}">
                     <div class="d-flex justify-content-center gap-3">
@@ -1750,7 +1751,7 @@
 
 
     <!-- ======= Blog Section ======= -->
-    @if ($blogs && count($blogs) > 0)
+    {{-- @if ($blogs && count($blogs) > 0)
         <section id="blog" class="blog section-bg">
             <div class="container" data-aos="fade-up">
 
@@ -1761,7 +1762,7 @@
                 <x-blog-slider :blogs="$blogs" />
             </div>
         </section>
-    @endif
+    @endif --}}
     <!-- ======= END Blog Section ======= -->
 
 @endsection
