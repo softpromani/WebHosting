@@ -1378,7 +1378,7 @@
         <div class="row align-items-center">
             <!-- Left side image -->
             <div class="col-md-5 mb-4 mb-md-0">
-                <img src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+                <img src="{{ asset('home/assets/img/Tax-Streamline Your Workflow.webp')}}"
                     alt="Dummy Live Image" class="img-fluid rounded shadow">
             </div>
 
@@ -1462,7 +1462,7 @@
                 </p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="https://dummyimage.com/600x400/000/fff" alt="Dummy Image" class="img-fluid rounded shadow">
+                <img src="{{ asset('home/assets/img/Tax-  Optimize Your Tax.webp')}}" alt="Dummy Image" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
@@ -1540,7 +1540,7 @@
                 {{-- content-2 --}}
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img">
-                        <img src="https://dummyimage.com/600x400/000/fff" alt="no available"
+                        <img src="{{ asset('home/assets/img/Tax-  Why choose.webp')}}" alt="no available"
                             class="img-fluid services-img-2 rounded">
 
                     </div>
@@ -1579,8 +1579,8 @@
 
             <div class="row justify-content-center">
                 <div class="col-xl-4 ">
-                    <div class="card-img mb-3">
-                        <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
+                    <div class="card-img mb-3" style="background-color:#167792; border-radius: 10px;">
+                        <img src="{{ asset('home/assets/img/Faqs-Common.png') }}" alt="no available"
                             class="img-fluid services-img rounded hover-animate"
                             style="position: relative;width: 400px;height: 400px;">
                     </div>
