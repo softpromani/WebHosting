@@ -32,7 +32,7 @@ class CategoryDescriptionServiceRequest extends FormRequest
         ];
 
         if ($this->isMethod('post')) {
-            $rules['service_image'] = 'required|image|mimes:jpeg,png,jpg,webp|max:2048';
+            $rules['service_image'] = 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048';
         } elseif ($this->isMethod('put') || $this->isMethod('patch')) {
             $rules['service_image'] = 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048';
         }

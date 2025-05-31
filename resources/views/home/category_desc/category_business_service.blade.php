@@ -130,7 +130,16 @@
                 <div class="title-area text-center"><span class="sub-title text-primary">
                         Why Work With Us
                     </span>
-                    <h2 class="sec-title text-white">Why people are very loved to working with us?</h2>
+                    <h2 class="sec-title text-white">
+                        @if($category_desc->id == 1)
+                            Why Our QuickBooks Cloud Hosting Solutions Stand Out?
+                        @elseif($category_desc->id == 2)
+                            What Makes Our Sage Hosting Unique?
+                        @elseif($category_desc->id == 3)
+                            Reliable Tax Software Hosting Solutions
+                        @endif
+                        {{-- Why people are very loved to working with us? --}}
+                    </h2>
                 </div>
             </div>
         </div>
