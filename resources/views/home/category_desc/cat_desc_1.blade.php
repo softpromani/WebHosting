@@ -1379,7 +1379,7 @@
             <!-- Left side image -->
             <div class="col-md-5 mb-4 mb-md-0">
                 <img src="{{ url('home/assets/img/QB-Enhance Business Productivity.webp')}}"
-                    alt="Dummy Live Image" class="img-fluid rounded shadow">
+                    alt="Dummy Live Image" class="img-fluid rounded">
             </div>
 
             <!-- Right side content -->
@@ -1461,7 +1461,7 @@
                 </p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="{{asset('home/assets/img/QB-Take Control of.webp')}}" alt="Dummy Image" class="img-fluid rounded shadow">
+                <img src="{{asset('home/assets/img/QB-Take Control of.webp')}}" alt="Dummy Image" class="img-fluid rounded">
             </div>
         </div>
     </div>
