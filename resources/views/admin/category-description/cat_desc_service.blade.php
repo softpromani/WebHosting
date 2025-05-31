@@ -41,7 +41,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="row counter-div">
                         <div class="col-md-12 counter-item">
                             <div class="row">
@@ -75,8 +74,7 @@
                                 <div class="col-md-4">
                                      <div class="form-group">
                                         <label for="service_image">Service Image</label>
-                                        <input type="file" name="service_image" id="service_image" class="form-control"
-                                            {{ isset($service) ? '' : 'required' }}>
+                                        <input type="file" name="service_image" id="service_image" class="form-control">
                                         @if(isset($service) && $service->service_image)
                                             <img src="{{ asset('storage/' . $service->service_image) }}" alt="Service Image" width="100" class="mt-2">
                                         @endif
