@@ -1494,7 +1494,7 @@
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
-
+ {!! $products->service_description_1 !!}
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper p-3">
                     @foreach ($features as $fs)
