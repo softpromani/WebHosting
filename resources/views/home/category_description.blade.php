@@ -1423,7 +1423,7 @@
 
                 <div
                     class="col-sm-12 product-content-description d-flex flex-column  justify-content-center align-items-start">
-                    <h2>{{ $category_desc->title ?? '' }}</h2>
+                    <h1>{{ $category_desc->title ?? '' }}</h1>
                     {!! $category_desc->description ?? '' !!}
                 </div>
 
