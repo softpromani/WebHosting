@@ -1523,7 +1523,7 @@
             <div class="container">
                 <div class="row gy-4">
                     {{-- content-2 --}}
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-img">
                             <img src="{{ asset('storage/' . optional($products->serviceSection2)->media) }}"
                                 alt="no available" class="img-fluid services-img-2 rounded">
@@ -1531,7 +1531,7 @@
                         </div>
                     </div>
                     {{-- image-2 --}}
-                    <div class="col-lg-6 product-content-description">
+                    <div class="col-lg-7 product-content-description">
                         {!! $products->service_description_2 !!}
                     </div>
 
