@@ -1493,8 +1493,10 @@
 
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
-        <div class="container" data-aos="fade-up">
- {!! $products->service_description_1 !!}
+        <div class="container text-center" data-aos="fade-up">
+             @isset($products->service_description_1)
+                {!! $products->service_description_1 !!}
+                @endisset
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper p-3">
                     @foreach ($features as $fs)
