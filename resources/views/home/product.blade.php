@@ -1480,7 +1480,7 @@
     {{-- </section> --}}
 
     <!-- ======= Service Description 4 Section ======= -->
-    @isset($products->service_description_1)
+    {{-- @isset($products->service_description_1)
         <section id="featured-services" class="featured-services">
             <div class="container text-center" data-aos="fade-up">
 
@@ -1488,7 +1488,7 @@
 
             </div>
         </section>
-    @endisset
+    @endisset --}}
     <!-- End Service Description 4 Section -->
 
     <!-- ======= Featured Services Section ======= -->
