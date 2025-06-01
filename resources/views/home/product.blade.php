@@ -1482,7 +1482,7 @@
     <!-- ======= Service Description 4 Section ======= -->
     @isset($products->service_description_1)
         <section id="featured-services" class="featured-services">
-            <div class="container" data-aos="fade-up">
+            <div class="container text-center" data-aos="fade-up">
 
                 {!! $products->service_description_1 !!}
 
