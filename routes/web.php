@@ -45,6 +45,9 @@ use App\Http\Controllers\Admin\ContactUsController;
 
     Route::post('/schedule-submit', [HomeController::class, 'scheduleBook'])->name('schedule.submit');
 
+    Route::get('/blog/{slug}', [HomeController::class, 'showBlogDetail'])->name('blog.show');
+
+
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

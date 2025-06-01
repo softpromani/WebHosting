@@ -146,24 +146,26 @@
 
         <!-- Owl Carousel -->
         <section class="blog-carousel owl-carousel owl-theme">
-
-            @foreach ($blogs as $blog)
-                <div class="blog-post">
-                    <div class="image-wrapper">
-                        <div class="image-loader"></div>
-                        <img loading="lazy" src="{{ asset('storage/' . $blog?->blog_image) }}"
-                             alt="{{ $blog->title }}"
-                             onload="this.closest('.image-wrapper').classList.add('image-loaded'); setTimeout(setEqualHeight, 50);">
-                    </div>
-                    <div class="post-content">
-                        <span class="category">{{ $page }}</span>
-                        <h3>{{ $blog->title }}</h3>
-                        <div class="meta">{{ $blog->created_at?->format('d M Y') }}</div>
-                        <p>{{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}</p>
-                    </div>
+    @foreach ($blogs as $blog)
+        <a href="{{ route('blog.show', $blog->slug) }}" target="_blank" class="blog-post-link">
+            <div class="blog-post">
+                <div class="image-wrapper">
+                    <div class="image-loader"></div>
+                    <img loading="lazy" src="{{ asset('storage/' . $blog?->blog_image) }}"
+                         alt="{{ $blog->title }}"
+                         onload="this.closest('.image-wrapper').classList.add('image-loaded'); setTimeout(setEqualHeight, 50);">
                 </div>
-            @endforeach
-        </section>
+                <div class="post-content">
+                    <span class="category">{{ $page }}</span>
+                    <h3>{{ $blog->title }}</h3>
+                    <div class="meta">{{ $blog->created_at?->format('d M Y') }}</div>
+                    <p>{{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}</p>
+                </div>
+            </div>
+        </a>
+    @endforeach
+</section>
+
 
         <!-- Right Arrow -->
         <div class="custom-nav right"><i class="arrow">&#10095;</i></div>

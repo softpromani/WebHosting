@@ -227,4 +227,14 @@ class HomeController extends Controller
         //     return response('Error', 500);
         // }
     }
+
+    public function showBlogDetail($slug)
+    {
+
+        $faqs        = Faq::where('type', 'testimonial-page')->orderBy('created_at', 'desc')->take(6)->get();
+        $testimonials = Testimonial::get();
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+        return view('home.blog_details', compact('blog', 'testimonials', 'faqs'));
+    }
+
 }
