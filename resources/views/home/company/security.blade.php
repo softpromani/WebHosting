@@ -574,7 +574,61 @@
                 </div>
             </div>
         </section>
-
+ <section class="solution-area  pb-70">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="solution-content">
+                            <div class="solution-title">
+                                <span>Mounteko’s Approach to Data Confidentiality & Security</span>
+                                <h4>Our QuickBooks cloud hosting services providers always follow a streamline approach to
+                                    ensure 100% data security and confidentiality. Here’s a step-by-step approach we follow
+                                    so far. </h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="single-solution overly-one">
+                                        <span class="number">01</span>
+                                        <div class="overly-two">
+                                            <h4><a href="#">Risk Assessment and Prioritization</a></h4>
+                                            <p>We conduct thorough risk assessments to identify potential vulnerabilities
+                                                and prioritize them based on impact. This ensures proactive protection
+                                                against threats.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="single-solution overly-one">
+                                        <span class="number">02</span>
+                                        <div class="overly-two">
+                                            <h4><a href="#">Continuous Monitoring & Analysis</a></h4>
+                                            <p>Our systems provide 24/7 monitoring and real-time analysis, allowing us to
+                                                detect and mitigate threats before they affect your data or operations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 offset-md-3 offset-lg-0">
+                                    <div class="single-solution overly-one">
+                                        <span class="number">03</span>
+                                        <div class="overly-two">
+                                            <h4><a href="#">Incident Response & Disaster Recovery</a></h4>
+                                            <p>In case of a breach or disaster, our rapid response and recovery protocols
+                                                ensure minimal downtime. We swiftly restore data and secure your cloud
+                                                environment.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pr-0">
+                        <div class="solution-img">
+                            <img src="{{ asset('home/assets/img/solution-img.png') }}" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="challenges-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}'>
             <div class="container cont">
                 <div class="section-title sec">
@@ -648,61 +702,7 @@
 
         </section>
 
-        <section class="solution-area  pb-70">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="solution-content">
-                            <div class="solution-title">
-                                <span>Mounteko’s Approach to Data Confidentiality & Security</span>
-                                <h4>Our QuickBooks cloud hosting services providers always follow a streamline approach to
-                                    ensure 100% data security and confidentiality. Here’s a step-by-step approach we follow
-                                    so far. </h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="single-solution overly-one">
-                                        <span class="number">01</span>
-                                        <div class="overly-two">
-                                            <h4><a href="#">Risk Assessment and Prioritization</a></h4>
-                                            <p>We conduct thorough risk assessments to identify potential vulnerabilities
-                                                and prioritize them based on impact. This ensures proactive protection
-                                                against threats.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="single-solution overly-one">
-                                        <span class="number">02</span>
-                                        <div class="overly-two">
-                                            <h4><a href="#">Continuous Monitoring & Analysis</a></h4>
-                                            <p>Our systems provide 24/7 monitoring and real-time analysis, allowing us to
-                                                detect and mitigate threats before they affect your data or operations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6 offset-md-3 offset-lg-0">
-                                    <div class="single-solution overly-one">
-                                        <span class="number">03</span>
-                                        <div class="overly-two">
-                                            <h4><a href="#">Incident Response & Disaster Recovery</a></h4>
-                                            <p>In case of a breach or disaster, our rapid response and recovery protocols
-                                                ensure minimal downtime. We swiftly restore data and secure your cloud
-                                                environment.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 pr-0">
-                        <div class="solution-img">
-                            <img src="{{ asset('home/assets/img/solution-img.png') }}" alt="Image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
