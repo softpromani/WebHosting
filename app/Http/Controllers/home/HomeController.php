@@ -26,16 +26,16 @@ class HomeController extends Controller
     public function home()
     {
         $category_desc = CategoryDescription::with('category')->take(3)->get();
-        $blogs = Blog::with('blogImage')->get();
+        $blogs         = Blog::with('blogImage')->get();
         return view('home.index', compact('blogs', 'category_desc'));
     }
 
     public function aboutUs()
     {
-        $faqs  = Faq::where('type', 'about-us-page')->get();
-        $blogs = Blog::with('blogImage')->get();
+        $faqs        = Faq::where('type', 'about-us-page')->get();
+        $blogs       = Blog::with('blogImage')->get();
         $testimonial = Testimonial::get();
-        return view('home.about_us', compact('faqs', 'blogs','testimonial'));
+        return view('home.about_us', compact('faqs', 'blogs', 'testimonial'));
     }
 
     public function contactUs()
@@ -46,29 +46,28 @@ class HomeController extends Controller
     public function categoryDescription($title)
     {
         $category_desc = CategoryDescription::where('title', $title)->first();
-        if (!$category_desc) {
+        if (! $category_desc) {
             return redirect()->route('home')->with('error', 'Category not found.');
         }
-        $menu_cat = Menu::where('id',$category_desc->category_id)->first();
-        $cat_products = Product::where('menu_id',$category_desc->category_id)->get();
-        $products = Product::where('menu_id',$category_desc->category_id)->limit(3)->get();
+        $menu_cat     = Menu::where('id', $category_desc->category_id)->first();
+        $cat_products = Product::where('menu_id', $category_desc->category_id)->get();
+        $products     = Product::where('menu_id', $category_desc->category_id)->limit(3)->get();
         // $faqs        = Faq::orderBy('created_at', 'desc')->take(7)->get();
         $testimonial = Testimonial::get();
         $blogs       = Blog::with('blogImage')->get();
         // dd($category_desc);
-        if($category_desc->id == 1){
+        if ($category_desc->id == 1) {
             // return redirect()->route('product', 'quickbooks-pro-desktop-hosting');
-            return view('home.category_desc.cat_desc_1', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
-        }elseif($category_desc->id == 2){
+            return view('home.category_desc.cat_desc_1', compact('category_desc', 'menu_cat', 'cat_products', 'testimonial', 'blogs'));
+        } elseif ($category_desc->id == 2) {
             // return redirect()->route('product', 'sage-50-cloud-hosting');
-            return view('home.category_desc.cat_desc_2', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
-        }elseif($category_desc->id == 3){
+            return view('home.category_desc.cat_desc_2', compact('category_desc', 'menu_cat', 'cat_products', 'testimonial', 'blogs'));
+        } elseif ($category_desc->id == 3) {
             // return redirect()->route('product', 'drake-tax-software-cloud-hosting');
-            return view('home.category_desc.cat_desc_3', compact('category_desc', 'menu_cat', 'cat_products','testimonial', 'blogs'));
-        }else{
+            return view('home.category_desc.cat_desc_3', compact('category_desc', 'menu_cat', 'cat_products', 'testimonial', 'blogs'));
+        } else {
             abort(404);
         }
-
 
     }
 
@@ -126,7 +125,7 @@ class HomeController extends Controller
     }
     public function security()
     {
-        $faqs  = Faq::where('type', 'security-page')->orderBy('created_at', 'desc')->take(6)->get();
+        $faqs        = Faq::where('type', 'security-page')->orderBy('created_at', 'desc')->take(6)->get();
         $faqs        = Faq::orderBy('created_at', 'desc')->take(6)->get();
         $testimonial = Testimonial::get();
         $blogs       = Blog::with('blogImage')->get();
@@ -187,26 +186,26 @@ class HomeController extends Controller
 
     public function scheduleBook(Request $request)
     {
-        $validatedData = Validator::make($request->all(),[
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'phone_number' => 'required|string|max:20',
+        $validatedData = Validator::make($request->all(), [
+            'name'          => 'required|string|max:255',
+            'email'         => 'required|email|max:255',
+            'phone_number'  => 'required|string|max:20',
             'schedule_date' => 'required|date',
             'schedule_time' => 'required|string|max:20',
-            'user_message' => 'sometimes|string|max:1000',
+            'user_message'  => 'sometimes|string|max:1000',
         ]);
 
-          if($validatedData->fails()){
-                Alert::success('Validation Error', $validatedData->errors()->first());
-                return redirect()->back();
-                // return response($validatedData->errors()->first(), 200);
-            }
+        if ($validatedData->fails()) {
+            Alert::success('Validation Error', $validatedData->errors()->first());
+            return redirect()->back();
+            // return response($validatedData->errors()->first(), 200);
+        }
 
         $formData = $request->all();
 
-        $content = ['name'=>$request->name];
+        $content    = ['name' => $request->name];
         $admin_mail = ['sales@mounteko.com', 'support@mounteko.com'];
-        $to_email = $request->email;
+        $to_email   = $request->email;
 
         Mail::send('emails.booking-admin', $formData, function ($m) use ($admin_mail) {
             $m->to($admin_mail);
@@ -227,4 +226,5 @@ class HomeController extends Controller
         //     return response('Error', 500);
         // }
     }
+
 }

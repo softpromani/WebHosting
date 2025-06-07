@@ -37,6 +37,7 @@
                                     <option value="testimonial-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'testimonial-page"' ? 'selected' : '' }}>Testimonial Page</option>
                                     <option value="partner-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'partner-page"' ? 'selected' : '' }}>Partner Page</option>
                                     <option value="faq-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'faq-page"' ? 'selected' : '' }}>FAQ Page</option>
+                                    <option value="blog-page" {{ old('type', isset($editFaq) ? $editFaq->type : '') == 'blog-page"' ? 'selected' : '' }}>FAQ Page</option>
                                 </select>
                                 @error('type')<div class="alert mt-2 text-danger">{{ $message }}</div> @enderror
                     </div>

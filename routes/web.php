@@ -3,8 +3,8 @@
 
     use App\Http\Controllers\Admin\Auth\LoginController;
     use App\Http\Controllers\Admin\BlogController;
-use App\Http\Controllers\Admin\CategoryDescriptionController;
-use App\Http\Controllers\Admin\ContactUsController;
+    use App\Http\Controllers\Admin\CategoryDescriptionController;
+    use App\Http\Controllers\Admin\ContactUsController;
     use App\Http\Controllers\Admin\DashboardController;
     use App\Http\Controllers\Admin\FaqController;
     use App\Http\Controllers\Admin\MenuController;
@@ -76,6 +76,4 @@ use App\Http\Controllers\Admin\ContactUsController;
         Route::delete('category-desc-service/delete/{id}', [CategoryDescriptionController::class, 'catDesServiceDelete'])->name('cat_desc_service_delete');
         // For updating an existing service
         Route::put('cat-desc-service/update/{id}', [CategoryDescriptionController::class, 'catDesServiceUpdate'])->name('cat_desc_service_update');
-
-
 });

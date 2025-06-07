@@ -849,7 +849,7 @@
                                 </div>
                                 <!-- start features box item -->
                                 <!-- end features box item -->
-                                <div
+                                 <div
                                     class="bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all xs-mb-30px">
                                     <div class="feature-box dark-hover last-paragraph-no-margin">
                                         <div class="content-slide-up content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15">
@@ -968,21 +968,7 @@
 
         <!-- ======= Frequently Asked Questions Section ======= -->
        <x-faq :faqs="$faqs" />
-        <!-- End Frequently Asked Questions Section -->
 
-        <!-- ======= Blog Section ======= -->
-        {{-- @if ($blogs && count($blogs) > 0)
-            <section id="blog" class="blog section-bg">
-                <div class="container" data-aos="fade-up">
-
-                    <div class="section-title">
-                        <h3>Our <span>Blogs</span></h3>
-
-                    </div>
-                    <x-blog-slider :blogs="$blogs" />
-                </div>
-            </section>
-        @endif --}}
         <!-- ======= Blog Section ======= -->
         <section class="user-blog" class="footer-top">
             <div class="section-title">

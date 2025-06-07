@@ -1,6 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'Mounteko Security - Offering Unparalleled Data Protection')
-@section('meta-description', 'Take control of your business security with Mounteko\'s industry-leading protection for QuickBooks data. With automatic backups and continuous defense, we guarantee the safety and reliability of your data,')
+@section('meta-description',
+    'Take control of your business security with Mounteko\'s industry-leading protection for
+    QuickBooks data. With automatic backups and continuous defense, we guarantee the safety and reliability of your data,')
 @section('content')
     <style>
         .securityfeature-area {
@@ -456,12 +458,12 @@
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
             @php
-            $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
-            $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
-            $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+                $baseColor = settingValue('primary') ?? '#65E82E'; // Change this dynamically
+                $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+                $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
             @endphp
             <div class="optech-breadcrumb"
-            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+                style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
                    background-size: cover;
                    background-position: center;
                    background-repeat: no-repeat;
@@ -470,10 +472,11 @@
                    justify-content: center;
                    text-align: center;
                    height: 450px;">
-               <div class="container">
+                <div class="container">
                     <h1 class="post__title" style="color: white;">Our Security</h1>
                     <nav class="breadcrumbs">
-                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
                             <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
                             <li aria-current="page" style="color: white;">Our Security</li>
                         </ul>
@@ -574,7 +577,7 @@
                 </div>
             </div>
         </section>
- <section class="solution-area  pb-70">
+        <section class="solution-area  pb-70">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
@@ -792,7 +795,7 @@
         <x-faq :faqs="$faqs" />
 
         <section class="user-blog" class="footer-top">
-            <x-blog-grid :blogs="$blogs" page="Our Security" />
+            <x-blog-grid :blogs="$blogs"  />
         </section>
 
 
