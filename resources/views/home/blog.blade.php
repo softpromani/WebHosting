@@ -11,7 +11,7 @@
 
         <div class="col-12 col-md-8 col-lg-10">
             <img src="{{ asset('storage/' . $blog->blogImage->media) }}" class="img-fluid rounded" alt="..."
-                style="width: 100%; height: 65%;">
+                style="width: 100%; height: 65%;!important">
             <h1 class="mt-4">{{ $blog->title }}</h1>
             {!! $blog->description !!}
         </div>
