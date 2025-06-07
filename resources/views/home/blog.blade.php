@@ -5,13 +5,18 @@
         .text-muted {
             font-size: 12px;
         }
+
+        .blogIm {
+            height: 65% !important;
+            width: 100%;
+        }
     </style>
 
     <div class="row mt-3 p-3">
 
         <div class="col-12 col-md-8 col-lg-10">
-            <img src="{{ asset('storage/' . $blog->blogImage->media) }}" class="img-fluid rounded" alt="..."
-                style="width: 100%; height: 65%;!important">
+            <img src="{{ asset('storage/' . $blog->blogImage->media) }}" class="img-fluid rounded  blogIm" alt="..."
+               >
             <h1 class="mt-4">{{ $blog->title }}</h1>
             {!! $blog->description !!}
         </div>
@@ -41,5 +46,4 @@
         </div>
 
     </div>
-
 @endsection
