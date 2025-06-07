@@ -1383,7 +1383,7 @@
             </div>
 
             <!-- Right side content -->
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <h2 class="fw-bold">Enhance Business Productivity with QuickBooks Hosting services</h2>
                 <h6 class="fw-bold">● Remote Access Simplified:</h6>
                 <p> Enjoy hassle-free access to your QuickBooks software from any location, ensuring continuity in your

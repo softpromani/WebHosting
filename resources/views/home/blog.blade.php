@@ -1,13 +1,41 @@
 @extends('home.includes.layout')
 
 @section('content')
+{{--header  --}}
+ <div
+        style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           padding: 80px 0;
+           height: 450px;">
+        <div class="container">
+            <div class="row gy-4 mt-33">
+               <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start text-start pt-5" data-aos="fade-up"
+                    data-aos-delay="200" style="color: white;">
+                    <p class="mt-5">{{ $blog->title }}</p>
+                    <br>
+                    <x-cta-btn :links="[
+                        'contact_us' => '/contact-us',
+                        'start_7_days_free_trial' => '/apply-now',
+                    ]" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"
+                    style="display: flex; justify-content: center; align-items: center;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{{-- header --}}
+
     <style>
         .text-muted {
             font-size: 12px;
         }
 
         .blogIm {
-          
+
             width: 100%;
         }
     </style>

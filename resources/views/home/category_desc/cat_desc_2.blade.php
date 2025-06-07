@@ -1383,7 +1383,7 @@
             </div>
 
             <!-- Right side content -->
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <h2 class="fw-bold">Transform Business Efficiency with Sage Cloud Hosting</h2>
                 <h6 class="fw-bold">● Anywhere Access to Sage Applications:</h6>
                 <p> Work without boundaries by accessing your Sage software from any device, anytime, ensuring uninterrupted
