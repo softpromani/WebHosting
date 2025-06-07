@@ -7,7 +7,7 @@
         }
 
         .blogIm {
-            height: 65% !important;
+            height: 45% !important;
             width: 100%;
         }
     </style>
