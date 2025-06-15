@@ -162,10 +162,12 @@
                         <div class="choose-wrapper">
                             <div class="choose-content">
                                 <div class="title-area mb-30">
-                                    <h5 class="sec-title text-white">{{ $plan->header_text ?? '' }}</h5>
-                                    <h6 class="box-text text-smoke">
+                                    <h5 class="sec-title text-white">{{ $plan->title ?? '' }}
+                                        {{-- {{ $plan->header_text ?? '' }} --}}
+                                    </h5>
+                                    {{-- <h6 class="box-text text-smoke">
                                         {{ $plan->title ?? '' }}
-                                    </h6>
+                                    </h6> --}}
                                 </div>
                                 <div class="checklist mb-2 text-smoke">
                                     {!! $plan->description??'' !!}

@@ -1327,11 +1327,19 @@
         }
 
         .feature-list li::before {
-            content: '✅';
-            /* Custom checkmark icon */
+            content: '✔';
             position: absolute;
             left: 0;
-            top: 0;
+            top: 2px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            border-radius: 50%;
+            background-color: #ffffff; /* optional background */
+            border: 2px solid #28a745; /* green circle border */
         }
     </style>
 @endsection
