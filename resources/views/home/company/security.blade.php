@@ -1,6 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'Mounteko Security - Offering Unparalleled Data Protection')
-@section('meta-description', 'Take control of your business security with Mounteko\'s industry-leading protection for QuickBooks data. With automatic backups and continuous defense, we guarantee the safety and reliability of your data,')
+@section('meta-description',
+    'Take control of your business security with Mounteko\'s industry-leading protection for
+    QuickBooks data. With automatic backups and continuous defense, we guarantee the safety and reliability of your data,')
 @section('content')
     <style>
         .securityfeature-area {
@@ -456,12 +458,12 @@
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
             @php
-            $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
-            $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
-            $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+                $baseColor = settingValue('primary') ?? '#65E82E'; // Change this dynamically
+                $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+                $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
             @endphp
             <div class="optech-breadcrumb"
-            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
+                style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
                    background-size: cover;
                    background-position: center;
                    background-repeat: no-repeat;
@@ -470,10 +472,11 @@
                    justify-content: center;
                    text-align: center;
                    height: 450px;">
-               <div class="container">
+                <div class="container">
                     <h1 class="post__title" style="color: white;">Our Security</h1>
                     <nav class="breadcrumbs">
-                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
                             <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
                             <li aria-current="page" style="color: white;">Our Security</li>
                         </ul>
@@ -574,7 +577,61 @@
                 </div>
             </div>
         </section>
-
+        <section class="solution-area  pb-70">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="solution-content">
+                            <div class="solution-title">
+                                <span>Mounteko’s Approach to Data Confidentiality & Security</span>
+                                <h4>Our QuickBooks cloud hosting services providers always follow a streamline approach to
+                                    ensure 100% data security and confidentiality. Here’s a step-by-step approach we follow
+                                    so far. </h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="single-solution overly-one">
+                                        <span class="number">01</span>
+                                        <div class="overly-two">
+                                            <h4><a href="#">Risk Assessment and Prioritization</a></h4>
+                                            <p>We conduct thorough risk assessments to identify potential vulnerabilities
+                                                and prioritize them based on impact. This ensures proactive protection
+                                                against threats.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="single-solution overly-one">
+                                        <span class="number">02</span>
+                                        <div class="overly-two">
+                                            <h4><a href="#">Continuous Monitoring & Analysis</a></h4>
+                                            <p>Our systems provide 24/7 monitoring and real-time analysis, allowing us to
+                                                detect and mitigate threats before they affect your data or operations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 offset-md-3 offset-lg-0">
+                                    <div class="single-solution overly-one">
+                                        <span class="number">03</span>
+                                        <div class="overly-two">
+                                            <h4><a href="#">Incident Response & Disaster Recovery</a></h4>
+                                            <p>In case of a breach or disaster, our rapid response and recovery protocols
+                                                ensure minimal downtime. We swiftly restore data and secure your cloud
+                                                environment.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pr-0">
+                        <div class="solution-img">
+                            <img src="{{ asset('home/assets/img/solution-img.png') }}" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="challenges-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}'>
             <div class="container cont">
                 <div class="section-title sec">
@@ -648,61 +705,7 @@
 
         </section>
 
-        <section class="solution-area  pb-70">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="solution-content">
-                            <div class="solution-title">
-                                <span>Mounteko’s Approach to Data Confidentiality & Security</span>
-                                <h4>Our QuickBooks cloud hosting services providers always follow a streamline approach to
-                                    ensure 100% data security and confidentiality. Here’s a step-by-step approach we follow
-                                    so far. </h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="single-solution overly-one">
-                                        <span class="number">01</span>
-                                        <div class="overly-two">
-                                            <h4><a href="#">Risk Assessment and Prioritization</a></h4>
-                                            <p>We conduct thorough risk assessments to identify potential vulnerabilities
-                                                and prioritize them based on impact. This ensures proactive protection
-                                                against threats.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="single-solution overly-one">
-                                        <span class="number">02</span>
-                                        <div class="overly-two">
-                                            <h4><a href="#">Continuous Monitoring & Analysis</a></h4>
-                                            <p>Our systems provide 24/7 monitoring and real-time analysis, allowing us to
-                                                detect and mitigate threats before they affect your data or operations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6 offset-md-3 offset-lg-0">
-                                    <div class="single-solution overly-one">
-                                        <span class="number">03</span>
-                                        <div class="overly-two">
-                                            <h4><a href="#">Incident Response & Disaster Recovery</a></h4>
-                                            <p>In case of a breach or disaster, our rapid response and recovery protocols
-                                                ensure minimal downtime. We swiftly restore data and secure your cloud
-                                                environment.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 pr-0">
-                        <div class="solution-img">
-                            <img src="{{ asset('home/assets/img/solution-img.png') }}" alt="Image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
@@ -788,44 +791,11 @@
 
         </section> --}}
 
-        <section id="faq" class="faq section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>F.A.Q</h2>
-                    <h3>Frequently Asked <span>Questions</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.</p>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-xl-10">
-                        <ul class="faq-list">
-
-                            @foreach ($faqs as $index => $faq)
-                                <li>
-                                    <div data-bs-toggle="collapse" class="collapsed question"
-                                        href="#faq{{ $index }}">
-                                        {{ $faq->question }} <i class="bi bi-chevron-down icon-show"></i><i
-                                            class="bi bi-chevron-up icon-close"></i>
-                                    </div>
-                                    <div id="faq{{ $index }}" class="collapse" data-bs-parent=".faq-list">
-                                        <p>{!! $faq->answer !!}</p>
-                                    </div>
-                                </li>
-                            @endforeach
-
-
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        {{-- faq section --}}
+        <x-faq :faqs="$faqs" />
 
         <section class="user-blog" class="footer-top">
-            <x-blog-grid :blogs="$blogs" page="Our Security" />
+            <x-blog-grid :blogs="$blogs"  />
         </section>
 
 

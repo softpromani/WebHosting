@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Testimonial;
 
 class BlogController extends Controller
 {
@@ -9,6 +10,7 @@ class BlogController extends Controller
     {
         $blog         = Blog::where('slug', $slug)->first();
         $relatedblogs = Blog::latest()->take(5)->get();
-        return view('home.blog', compact('blog', 'relatedblogs'));
+        $testimonial  = Testimonial::get();
+        return view('home.blog', compact('blog', 'relatedblogs', 'testimonial'));
     }
 }

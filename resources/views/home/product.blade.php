@@ -1480,21 +1480,23 @@
     {{-- </section> --}}
 
     <!-- ======= Service Description 4 Section ======= -->
-    @isset($products->service_description_1)
+    {{-- @isset($products->service_description_1)
         <section id="featured-services" class="featured-services">
-            <div class="container" data-aos="fade-up">
+            <div class="container text-center" data-aos="fade-up">
 
                 {!! $products->service_description_1 !!}
 
             </div>
         </section>
-    @endisset
+    @endisset --}}
     <!-- End Service Description 4 Section -->
 
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
-        <div class="container" data-aos="fade-up">
-
+        <div class="container text-center" data-aos="fade-up">
+             @isset($products->service_description_1)
+                {!! $products->service_description_1 !!}
+                @endisset
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper p-3">
                     @foreach ($features as $fs)
@@ -1523,7 +1525,7 @@
             <div class="container">
                 <div class="row gy-4">
                     {{-- content-2 --}}
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-img">
                             <img src="{{ asset('storage/' . optional($products->serviceSection2)->media) }}"
                                 alt="no available" class="img-fluid services-img-2 rounded">
@@ -1531,7 +1533,7 @@
                         </div>
                     </div>
                     {{-- image-2 --}}
-                    <div class="col-lg-6 product-content-description">
+                    <div class="col-lg-7 product-content-description">
                         {!! $products->service_description_2 !!}
                     </div>
 

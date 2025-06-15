@@ -1383,9 +1383,9 @@
             </div>
 
             <!-- Right side content -->
-            <div class="col-md-7">
-                <h5 class="fw-bold">Streamline Your Workflow with Seamless Tax Software Cloud Hosting</h5>
-                <h5 class="fw-bold">● Improved accessibility:</h5>
+            <div class="col-md-6">
+                <h2 class="fw-bold">Streamline Your Workflow with Seamless Tax Software Cloud Hosting</h2>
+                <h6 class="fw-bold">● Improved accessibility:</h6>
                 <p> With secure cloud hosting, you can access your tax software from any device, at any time, and from any
                     location, giving you the flexibility you need for your business.</p>
 
