@@ -45,7 +45,7 @@
 
     Route::post('/schedule-submit', [HomeController::class, 'scheduleBook'])->name('schedule.submit');
 
-    Route::get('/blog/{slug}', [HomeController::class, 'showBlogDetail'])->name('blog.show');
+    // Route::get('/blog/{slug}', [HomeController::class, 'showBlogDetail'])->name('blog.show');
 
 
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {

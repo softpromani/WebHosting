@@ -162,14 +162,6 @@
                         <p>{{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}</p>
                     </div>
                 </div>
-                <div class="post-content">
-                    <span class="category">{{ $page }}</span>
-                    <h3>{{ $blog->title }}</h3>
-                    <div class="meta">{{ $blog->created_at?->format('d M Y') }}</div>
-                    <p>{{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}</p>
-                </div>
-            </div>
-        </a>
     @endforeach
 </section>
 
