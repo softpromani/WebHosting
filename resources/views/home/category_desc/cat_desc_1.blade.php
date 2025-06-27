@@ -1467,6 +1467,7 @@
                     Experience the difference with our tailored hosting for QuickBooks. Simplify workflows, enhance
                     security, and boost productivity with a trusted partner.
                 </p>
+                <a href="{{ url('contact-us') }}" class="btn btn-light text-dark">Book your free consultation now!</a>
             </div>
             <div class="col-md-4 text-center">
                 <img src="{{asset('home/assets/img/QB-Take Control of.webp')}}" alt="Dummy Image" class="img-fluid rounded">
@@ -1547,7 +1548,7 @@
         <div class="container">
             <div class="row gy-4">
                 {{-- content-2 --}}
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 text-end" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img">
                         <img src="{{ asset('home/assets/img/QB-Why Partner with Mounteko.webp')}}" alt="no available"
                             class="img-fluid services-img-2 rounded">
