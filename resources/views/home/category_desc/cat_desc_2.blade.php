@@ -1548,7 +1548,7 @@
         <div class="container">
             <div class="row gy-4">
                 {{-- content-2 --}}
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 text-end" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img">
                         <img src="{{ asset('home/assets/img/sage- Why Choose Mounteko.webp')}}" alt="no available"
                             class="img-fluid services-img-2 rounded">

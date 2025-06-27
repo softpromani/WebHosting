@@ -1468,6 +1468,7 @@
                     Discover how our cloud hosting solutions can simplify your tax workflows and boost efficiency. Book a
                     free consultation with our experts now!
                 </p>
+                 <a href="{{ url('contact-us') }}" class="btn btn-light text-dark">Book a consultation </a>
             </div>
             <div class="col-md-4 text-center">
                 <img src="{{ asset('home/assets/img/Tax-  Optimize Your Tax.webp')}}" alt="Dummy Image" class="img-fluid rounded">
@@ -1546,7 +1547,7 @@
         <div class="container">
             <div class="row gy-4">
                 {{-- content-2 --}}
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 text-end" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img">
                         <img src="{{ asset('home/assets/img/Tax-  Why choose.webp')}}" alt="no available"
                             class="img-fluid services-img-2 rounded">
