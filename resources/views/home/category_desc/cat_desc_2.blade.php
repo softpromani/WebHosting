@@ -1468,6 +1468,7 @@
                     Being the best sage cloud hosting service provider, we empower your business with secure, scalable, and
                     seamless access to your essential applications.
                 </p>
+                 <a href="{{ url('contact-us') }}" class="btn btn-light text-dark">Get in Touch with Us</a>
             </div>
             <div class="col-md-4 text-center">
                 <img src="{{ asset('home/assets/img/sage-Simplify Your Business Processes.webp')}}" alt="Dummy Image" class="img-fluid rounded">
