@@ -53,6 +53,7 @@
                         <input type="text" class="form-control" name="captcha">
                     </div>
                     <div class="col-sm-6">
+                        <label for="">CLick over image for refresh</label>
                         <img src="{{ captcha_src() }}" onclick="this.src='{{ captcha_src() }}?'+Math.random()" style="cursor:pointer;">
                     </div>
                 </div>
