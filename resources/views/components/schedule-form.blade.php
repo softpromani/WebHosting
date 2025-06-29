@@ -45,15 +45,16 @@
             <textarea class="form-control" name="user_message" rows="3" required></textarea>
           </div>
 
-        </div>
-        <div class="mb-3">
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="captcha">Captcha</label>
-                    <input type="text" class="form-control" name="captcha">
-                </div>
-                <div class="col-sm-6">
-                    <img src="{{ captcha_src() }}" onclick="this.src='{{ captcha_src() }}?'+Math.random()" style="cursor:pointer;">
+
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="captcha">Captcha</label>
+                        <input type="text" class="form-control" name="captcha">
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="{{ captcha_src() }}" onclick="this.src='{{ captcha_src() }}?'+Math.random()" style="cursor:pointer;">
+                    </div>
                 </div>
             </div>
         </div>
