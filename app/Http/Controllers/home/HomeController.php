@@ -195,11 +195,11 @@ class HomeController extends Controller
             'user_message'  => 'sometimes|string|max:1000',
             'captcha'       => 'required|captcha',
         ]);
-            if ($validatedData->fails()) {
-                Alert::success('Validation Error', $validatedData->errors()->first());
-                return redirect()->back();
-                // return response($validatedData->errors()->first(), 200);
-            }
+        if ($validatedData->fails()) {
+            Alert::error('Validation Error', $validatedData->errors()->first());
+            return redirect()->back();
+            // return response($validatedData->errors()->first(), 200);
+        }
 
         $formData = $request->all();
 
