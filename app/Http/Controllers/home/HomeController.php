@@ -194,7 +194,7 @@ class HomeController extends Controller
             'schedule_time' => 'required|string|max:20',
             'user_message'  => 'sometimes|string|max:1000',
         ]);
-        if ($request->website != null) {{
+        if ($request->website) {{
             Alert::error('Sorry your schedule not booked, System ditected you as robot');
             return redirect()->back();
         }
