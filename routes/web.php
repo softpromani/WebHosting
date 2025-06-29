@@ -43,7 +43,7 @@
     Route::get('apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
     Route::Post('apply-nowapplyNowStore', [HomeController::class, 'applyNowStore'])->name('applyNow-store');
 
-    Route::post('/schedule-submit', [HomeController::class, 'scheduleBook'])->name('schedule.submit')->throttle(2, 1);
+    Route::post('/schedule-submit', [HomeController::class, 'scheduleBook'])->name('schedule.submit')->middleware('throttle:2,1');
 
     // Route::get('/blog/{slug}', [HomeController::class, 'showBlogDetail'])->name('blog.show');
 
