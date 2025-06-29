@@ -46,6 +46,11 @@
           </div>
 
         </div>
+        <div class="mb-3">
+            <img src="{{ captcha_img() }}" alt="captcha">
+            <input type="text" class="form-control" name="captcha">
+            <img src="{{ captcha_src() }}" onclick="this.src='{{ captcha_src() }}?'+Math.random()" style="cursor:pointer;">
+        </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-success">Submit</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>

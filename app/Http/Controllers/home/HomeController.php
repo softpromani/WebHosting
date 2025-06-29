@@ -193,6 +193,7 @@ class HomeController extends Controller
             'schedule_date' => 'required|date',
             'schedule_time' => 'required|string|max:20',
             'user_message'  => 'sometimes|string|max:1000',
+            'captcha'       => 'required|captcha',
         ]);
         if ($request->website) {{
             Alert::error('Sorry your schedule not booked, System ditected you as robot');
