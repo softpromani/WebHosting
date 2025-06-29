@@ -47,8 +47,15 @@
 
         </div>
         <div class="mb-3">
-            <input type="text" class="form-control" name="captcha">
-            <img src="{{ captcha_src() }}" onclick="this.src='{{ captcha_src() }}?'+Math.random()" style="cursor:pointer;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="captcha">Captcha</label>
+                    <input type="text" class="form-control" name="captcha">
+                </div>
+                <div class="col-sm-6">
+                    <img src="{{ captcha_src() }}" onclick="this.src='{{ captcha_src() }}?'+Math.random()" style="cursor:pointer;">
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-success">Submit</button>
