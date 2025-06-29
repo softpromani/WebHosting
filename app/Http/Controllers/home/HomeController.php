@@ -194,12 +194,15 @@ class HomeController extends Controller
             'schedule_time' => 'required|string|max:20',
             'user_message'  => 'sometimes|string|max:1000',
         ]);
-
-        if ($validatedData->fails()) {
-            Alert::success('Validation Error', $validatedData->errors()->first());
+        if ($request->website != null) {{
+            Alert::error('Sorry your schedule not booked, System ditected you as robot');
             return redirect()->back();
-            // return response($validatedData->errors()->first(), 200);
         }
+            if ($validatedData->fails()) {
+                Alert::success('Validation Error', $validatedData->errors()->first());
+                return redirect()->back();
+                // return response($validatedData->errors()->first(), 200);
+            }}
 
         $formData = $request->all();
 

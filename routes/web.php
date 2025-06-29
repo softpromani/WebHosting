@@ -43,10 +43,9 @@
     Route::get('apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
     Route::Post('apply-nowapplyNowStore', [HomeController::class, 'applyNowStore'])->name('applyNow-store');
 
-    Route::post('/schedule-submit', [HomeController::class, 'scheduleBook'])->name('schedule.submit');
+    Route::post('/schedule-submit', [HomeController::class, 'scheduleBook'])->name('schedule.submit')->throttling(2, 1);
 
     // Route::get('/blog/{slug}', [HomeController::class, 'showBlogDetail'])->name('blog.show');
-
 
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
