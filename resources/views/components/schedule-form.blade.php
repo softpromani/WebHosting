@@ -7,7 +7,7 @@
   <div class="modal-dialog">
     <form action="{{route('schedule.submit')}}" method="POST">
       @csrf
-      <input type="test" name="website" style="display: none">
+      <input type="text" name="website" style="display: none">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="scheduleModalLabel">Submit Schedule</h5>
