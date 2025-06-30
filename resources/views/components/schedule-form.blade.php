@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-sm-6">
                         <label for="">Click on image for refresh</label>
-                        <img src="{{ captcha_src() }}" onclick="this.src='{{ captcha_src() }}?'+Math.random()" style="cursor:pointer; height:50px !important;widht:150px !important" height="50px" width="150px">
+                        <img src="{{ captcha_src() }}" onclick="this.src='{{ captcha_src() }}?'+Math.random()" style="cursor:pointer; height:50px !important;width:150px !important" height="50px" width="150px">
                     </div>
                 </div>
             </div>
