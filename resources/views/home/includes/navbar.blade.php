@@ -9,7 +9,7 @@
             <ul>
                 <li><a class="nav-link  " href="{{ route('home') }}">Home</a></li>
                 {{-- <li><a class="nav-link  " href="{{ route('aboutUs') }}">About</a></li> --}}
-                @foreach ($menu as $m)
+                {{-- @foreach ($menu as $m)
                     <li class="dropdown"><a href="#"><span>{{ $m->name }}</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
@@ -27,7 +27,57 @@
                             @endforeach
                         </ul>
                     </li>
-                @endforeach
+                @endforeach --}}
+                <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li class="dropdown"><a href="#"><span>Network Solutions</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">Network architecture design (LAN, WAN, SD-WAN)</a></li>
+                                <li><a href="#">Enterprise wireless solutions and implementation</a></li>
+                                <li><a href="#">VPN setup and remote access solutions</a></li>
+                                <li><a href="#">Network monitoring and performance optimization</a></li>
+                                <li><a href="#">Firewall & router configuration</a></li>
+                                <li><a href="#">Disaster recovery & network redundancy planning</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#"><span>Cybersecurity Services</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">Security audits & vulnerability assessments</a></li>
+                                <li><a href="#">Penetration testing (internal/external/web/mobile)</a></li>
+                                <li><a href="#">Endpoint protection & antivirus solutions</a></li>
+                                <li><a href="#">Network intrusion detection and prevention systems (IDS/IPS)</a></li>
+                                <li><a href="#">Email & phishing protection</a></li>
+                                <li><a href="#">Security Operations Center (SOC) setup & monitoring</a></li>
+                                <li><a href="#">Incident response & recovery</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#"><span>Software & Web Development</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">Custom software/application development</a></li>
+                                <li><a href="#">Web application design and development</a></li>
+                                <li><a href="#">Enterprise workflow automation solutions</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#"><span>Cloud & IT Infrastructure</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">Cloud architecture consulting (AWS, Azure, GCP)</a></li>
+                                <li><a href="#">Hybrid or multi-cloud deployments</a></li>
+                                <li><a href="#">Cloud application migration</a></li>
+                                <li><a href="#">Virtualization & containerization (VMware, Docker)</a></li>
+                                <li><a href="#">SaaS, IaaS, PaaS solutions</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#"><span>Managed IT Services</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">End-to-end IT support & helpdesk</a></li>
+                                <li><a href="#">Proactive system monitoring and maintenance</a></li>
+                                <li><a href="#">Patch management and updates</a></li>
+                                <li><a href="#">Hardware and software procurement</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span>Consulting & Compliance</span></a></li>
+                    </ul>
+                </li>
                 {{-- <li class="nav-link">
                     <a href="#"><span>Cybersecurity Solutions</span> </a>
                 </li>

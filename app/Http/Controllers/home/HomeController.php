@@ -30,6 +30,11 @@ class HomeController extends Controller
         return view('home.index', compact('blogs', 'category_desc'));
     }
 
+    public function ticketSubmission()
+    {
+        return view('home.ticketsubmission');
+    }
+
     public function aboutUs()
     {
         $faqs        = Faq::where('type', 'about-us-page')->get();
