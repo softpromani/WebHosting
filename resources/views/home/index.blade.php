@@ -394,69 +394,7 @@
                     </div>
                     @endforeach
 
-                    {{-- <!-- SECOND CARD -->
-                    <div class="col md-mb-30px d-flex">
-                        <div
-                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
-                            <div class="position-relative box-image">
-                                <a href="demo-startup-services-details.html">
-                                    <img src="{{ asset('home/assets/homepage/images/Homepage-Sage Application Hosting.png') }}"
-                                        alt="" class="hover-animate w-100" style="position: relative;">
-                                </a>
-                            </div>
-                            <div class="bg-white d-flex flex-column h-100">
-                                <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
-                                    <a href="#"
-                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Sage Application
-                                        Hosting</a>
-                                    <p>Run Sage in the cloud with secure access and guaranteed uptime.</p>
-                                </div>
-                                <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
-                                    <a href="demo-startup-services-details.html"
-                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                        <span>
-                                            <span class="btn-text">Explore services</span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- THIRD CARD -->
-                    <div class="col d-flex">
-                        <div
-                            class="border-radius-8px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin w-100 d-flex flex-column">
-                            <div class="position-relative box-image">
-                                <a href="demo-startup-services-details.html">
-                                    <img src="{{ asset('home/assets/homepage/images/Homepage-Tax software Hosting (1).png') }}"
-                                        alt="" class="hover-animate w-100" style="position: relative;">
-                                </a>
-                            </div>
-                            <div class="bg-white d-flex flex-column h-100">
-                                <div class="ps-4 pe-4 pt-3 pb-3 text-center flex-grow-1">
-                                    <a href="demo-startup-services-details.html"
-                                        class="d-inline-block fs-18 alt-font fw-700 text-dark-gray mb-5px">Tax Software
-                                        Hosting</a>
-                                    <p>Host your tax software in the cloud for secure, remote access and seamless updates.
-                                    </p>
-                                </div>
-                                <div class="card-footer text-center border-top border-color-extra-medium-gray pt-3 pb-3">
-                                    <a href="demo-startup-services-details.html"
-                                        class="btn btn-link btn-hover-animation-switch btn-very-small fw-700 text-dark-gray text-uppercase">
-                                        <span>
-                                            <span class="btn-text">Explore services</span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END CARD --> --}}
+                   
                 </div>
             </div>
         </section>

@@ -24,6 +24,8 @@ Route::get('/ticketsubmission', [HomeController::class, 'ticketsubmission'])->na
 Route::get('/test', [HomeController::class, 'test'])->name('test');
 Route::get('about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
 Route::get('category-description/{slug}', [HomeController::class, 'categoryDescription'])->name('category-description');
+Route::get('new-home', [HomeController::class, 'newHome'])->name('new-home');
+
 
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
 Route::get('download', [HomeController::class, 'downloads'])->name('download');

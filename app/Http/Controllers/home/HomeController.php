@@ -30,6 +30,13 @@ class HomeController extends Controller
         return view('home.index', compact('blogs', 'category_desc'));
     }
 
+    public function newHome()
+    {
+        $category_desc = CategoryDescription::with('category')->take(3)->get();
+        $blogs         = Blog::with('blogImage')->get();
+        return view('home.new_home', compact('blogs', 'category_desc'));
+    }
+
     public function ticketSubmission()
     {
         return view('home.ticketsubmission');
