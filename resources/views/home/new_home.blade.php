@@ -49,7 +49,7 @@
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12">
-                        <h2 class="what-we-do-heading">What We Do</h2>
+                        <h2 class="what-we-do-heading common-section-heading">What We Do</h2>
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-center">
@@ -165,8 +165,7 @@
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12 text-center">
-                        <span class="alt-font text-uppercase fw-600 mb-15px d-inline-block ls-1px text-base-color">Core
-                            Services</span>
+                        <h2 class="common-section-heading text-center">Core Services</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -237,7 +236,7 @@
                 <div class="row align-items-start mb-5">
                     <div class="col-lg-3 col-md-12">
                         <div class="industries-sidebar">
-                            <h2>Industries</h2>
+                            <h2 class="common-section-heading">Industries</h2>
                             <div class="industry-nav-arrows">
                                 <i class="fas fa-chevron-left"></i>
                                 <i class="fas fa-chevron-right"></i>
@@ -355,7 +354,7 @@
                 <!-- Top Header Row -->
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-6">
-                        <h3 class="mb-3 fw-bold">Why Choose Us</h3>
+                        <h2 class="mb-3 common-section-heading">Why Choose Us</h2>
                         <p class="why-subtitle-small">Looking for Future-Driven Cloud Hosting for QuickBooks?</p>
                     </div>
                     <div class="col-lg-6">
@@ -404,7 +403,7 @@
         <!-- Featured Case Studies Section -->
         <section class="case-studies py-5">
             <div class="container text-center mb-5">
-                <h3 class="fw-bold mb-3 section-heading">Featured Case Studies</h3>
+                <h2 class="common-section-heading section-heading mb-3">Featured Case Studies</h2>
                 <p class="section-subtitle mb-4">Let's work together to digitally transform your business and build the
                     solutions of tomorrow.</p>
                 <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i

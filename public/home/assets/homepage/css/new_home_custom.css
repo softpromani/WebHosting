@@ -12,7 +12,7 @@
 }
 
 .responsive-paragraph {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #4e4e4e;
 }
 
@@ -47,139 +47,192 @@
     background-color: #f8f9fa;
 }
 
-.what-we-do-heading {
-    text-align: center;
-    margin-bottom: 40px;
+.common-section-heading {
     font-size: 2.5rem;
     font-weight: 700;
     color: #252840;
+    margin-bottom: 30px;
+    line-height: 1.2;
 }
 
-/* Core Services Cards */
+.what-we-do-heading {
+    text-align: center;
+    /* font-size: 2.5rem; */
+    /* Handled by common-section-heading */
+    /* font-weight: 700; */
+    /* color: #252840; */
+}
+
+/* Core Services Cards - Premium 3D Design */
 .service-card {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
+    height: 480px;
+    /* Increased height to preventing text touching bottom */
     margin: 20px auto;
-    border-radius: 24px;
-    line-height: 1.6;
-    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    perspective: 1000px;
+    /* Essential for 3D effect */
 }
 
 .service-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #00838d, #004d55);
+    border-radius: 20px;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-    padding: 30px;
-    border-radius: 22px;
-    color: #ffffff;
+    gap: 15px;
     overflow: hidden;
-    background: #008080;
-    /* Teal/Blue theme matching the logo/brand */
-    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-    width: 100%;
-    min-height: 380px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 15px 35px rgba(0, 131, 141, 0.2);
+    transform-style: preserve-3d;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Glassy Shine Effect - Enhanced */
 .service-card-content::before {
+    content: '';
     position: absolute;
-    content: "";
-    top: 5%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    transform: translate(-50%);
-    background: rgba(121, 184, 45, 0.45);
-    z-index: -1;
-    transform-origin: bottom;
-    border-radius: inherit;
-    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.service-card-content::after {
-    position: absolute;
-    content: "";
-    top: 10%;
-    left: 50%;
-    width: 70%;
-    height: 70%;
-    transform: translate(-50%);
-    background: rgba(206, 216, 255, 0.45);
-    z-index: -2;
-    transform-origin: bottom;
-    border-radius: inherit;
-    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.service-card-content i {
-    font-size: 30px;
-    /* Smaller icon */
-    margin-bottom: 8px;
-}
-
-.service-card-content h4 {
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.1rem;
-    /* Smaller heading */
-    margin-bottom: 0px;
-    z-index: 1;
-}
-
-.service-card-content p {
-    z-index: 1;
-    opacity: 1;
-    font-size: 13px;
-    /* Smaller text */
-    color: #fff;
-    margin-bottom: 0px;
-    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.service-card-content ul {
-    padding-left: 0;
-    list-style: none;
-    z-index: 1;
-    margin-bottom: 0;
-}
-
-.service-card-content ul li {
-    font-size: 13px;
-    /* Smaller list items */
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-}
-
-.service-card-content ul li::before {
-    content: "•";
-    margin-right: 6px;
-    color: #79b82d;
-}
-
-.service-card:hover {
-    transform: translate(0px, -10px);
-    /* Less dramatic lift to avoid overlap */
+    top: 0;
+    left: -100%;
+    /* Start off-screen left */
+    width: 60%;
+    /* Beam width */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    /* Slanted beam */
+    transition: left 0.75s;
+    pointer-events: none;
+    z-index: 2;
 }
 
 .service-card:hover .service-card-content::before {
-    rotate: -4deg;
-    /* Much less rotation to stay within bounds */
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left: 150%;
+    /* Move continuously to off-screen right */
+    transition: left 0.75s ease-in-out;
 }
 
-.service-card:hover .service-card-content::after {
-    rotate: 4deg;
-    /* Much less rotation to stay within bounds */
+/* Background Pattern - Subtle Lining */
+.service-card-content::after {
+    content: '';
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background: repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.03) 0px,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px,
+            transparent 10px);
+    pointer-events: none;
+    z-index: 0;
+    /* Behind text but above main background */
+}
+
+/* Hover State - 3D Lift & Tilt */
+.service-card:hover .service-card-content {
+    transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Icon Styling */
+.service-card-content i {
+    font-size: 3rem;
+    /* Larger icon for impact */
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+    transform: translateZ(30px);
+    /* Pushes icon forward in 3D space */
+}
+
+.service-card:hover .service-card-content i {
+    transform: translateZ(50px) scale(1.1);
+    background: #fff;
+    color: #00838d;
+}
+
+/* Heading Styling */
+.service-card-content h4 {
+    font-size: 1.5rem;
+    /* Slightly larger for hierarchy */
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    transform: translateZ(20px);
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-card-content h4 {
+    transform: translateZ(30px);
+}
+
+/* Paragraph Styling */
+.service-card-content p,
+.service-card-content ul {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    transform: translateZ(10px);
+    transition: transform 0.4s ease;
+    margin: 0;
+}
+
+.service-card:hover .service-card-content p,
+.service-card:hover .service-card-content ul {
+    transform: translateZ(20px);
+    color: #fff;
+}
+
+/* List Item Styling */
+.service-card-content ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.service-card-content ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.service-card-content ul li:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.service-card-content ul li::before {
+    content: "➔";
+    margin-right: 10px;
+    color: #79b82d;
+    /* Accent green */
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-card-content ul li::before {
+    transform: translateX(3px);
 }
 
 @media (max-width: 768px) {
@@ -201,13 +254,8 @@
     padding-right: 30px;
 }
 
-.industries-sidebar h2 {
-    font-size: 2.2rem;
-    /* Slightly smaller */
-    font-weight: 700;
-    color: #252840;
-    margin-bottom: 20px;
-}
+/* .industries-sidebar h2 handled by common-section-heading */
+
 
 .industry-nav-arrows {
     display: flex;
@@ -266,7 +314,7 @@
     padding: 8px 18px;
     border: 1px solid #dee2e6;
     border-radius: 50px;
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #6c757d;
     background: #fff;
     cursor: pointer;
@@ -326,8 +374,8 @@
     color: #fff;
     margin-bottom: 15px;
     font-weight: 700;
-    font-size: 1.1rem;
-    /* Reduced size */
+    font-size: 1.25rem;
+    /* Standardized sub-heading */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -340,7 +388,7 @@
     border-radius: 8px;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 1rem;
     /* Smaller text */
     letter-spacing: 1px;
     transition: all 0.3s ease;
@@ -394,16 +442,12 @@ body {
     padding: 80px 0;
 }
 
-.why-choose-us h3 {
-    font-size: 2.8rem;
-    /* Increased size to match/exceed Industries */
-    font-weight: 700;
-    color: #1a1a1a;
-}
+/* .why-choose-us h3 handled by common-section-heading */
+
 
 .why-subtitle-small {
-    font-size: 1.1rem;
-    /* Reduced size as requested */
+    font-size: 1rem;
+    /* Standardized text */
     font-weight: 400;
     line-height: 1.6;
     color: #555;
@@ -411,7 +455,7 @@ body {
 }
 
 .why-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     color: #008080;
     /* Theme Teal */
@@ -439,7 +483,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding-bottom: 5px;
     border-bottom: 2px solid #008080;
     transition: all 0.3s ease;
@@ -479,7 +523,7 @@ body {
 
 .feature-text {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #333;
     line-height: 1.4;
 }
@@ -528,13 +572,11 @@ body {
     /* Light background for contrast */
 }
 
-.section-heading {
-    font-size: 2.2rem;
-    color: #1a1a1a;
-}
+/* .section-heading handled by common-section-heading */
+
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #666;
     max-width: 600px;
     margin: 0 auto;
@@ -544,7 +586,7 @@ body {
 .btn-case-study {
     padding: 0.6em 1.5em;
     /* Further reduced size as requested */
-    font-size: 0.95rem;
+    font-size: 1rem;
     /* Slightly smaller font */
     background-color: rgb(14, 14, 26);
     /* Dark background */
@@ -651,7 +693,7 @@ body {
 }
 
 .case-tag {
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -700,14 +742,14 @@ body {
 }
 
 .company-name {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #fff;
     margin-bottom: 4px;
 }
 
 .industry-name {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -758,7 +800,7 @@ body {
     padding: 12px 35px;
     background: #00838d;
     /* Theme Teal */
-    font-size: 17px;
+    font-size: 1rem;
     font-weight: 500;
     color: #fff;
     /* White text on teal background */
@@ -891,7 +933,7 @@ body {
 }
 
 .cta-subheading {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
     opacity: 1;
     color: #ffffff;
@@ -899,7 +941,7 @@ body {
 }
 
 .cta-heading {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.1;
     color: #fff;
