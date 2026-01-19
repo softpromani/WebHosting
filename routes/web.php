@@ -19,12 +19,12 @@ use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\home\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('old-home', [HomeController::class, 'home'])->name('old-home');
 Route::get('/ticketsubmission', [HomeController::class, 'ticketsubmission'])->name('ticketsubmission');
 Route::get('/test', [HomeController::class, 'test'])->name('test');
 Route::get('about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
 Route::get('category-description/{slug}', [HomeController::class, 'categoryDescription'])->name('category-description');
-Route::get('new-home', [HomeController::class, 'newHome'])->name('new-home');
+Route::get('/', [HomeController::class, 'newHome'])->name('home');
 
 
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
