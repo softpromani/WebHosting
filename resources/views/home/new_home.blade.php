@@ -1,4 +1,4 @@
-@extends('home.includes.layout')
+﻿@extends('home.includes.layout')
 @section('title', 'Secure. Scalable. Smart IT Solutions | Mounteko')
 @section('meta-description', 'End-to-end Network, Cybersecurity, Cloud & Managed IT Services to keep your business running 24x7.')
 @section('header-area')
@@ -22,19 +22,19 @@
                 <div class="position-absolute top-50 translate-middle px-3 text-white w-100 left_margin"
                     style="max-width: 900px;">
                     <div class="text-center text-md-start mx-auto" style="max-width: 700px;">
-                        <h3 class="fw-bold mb-3 responsive-heading text-black">
-                            Secure. Scalable. Smart IT Solutions for Modern Businesses
-                        </h3>
+                        <h1 class="fw-bold mb-3 responsive-heading text-black">
+                            Enterprise-Grade Cloud & IT Solutions Engineered for Scale and Security
+                        </h1>
                         <p class="lead mb-4 responsive-paragraph">
-                            End-to-end Network, Cybersecurity, Cloud & Managed IT Services to keep your business running
-                            24x7.
+                            Delivering secure, high-performance cloud infrastructure, managed IT services, and advanced
+                            cybersecurity solutions to help businesses scale with confidence worldwide.
                         </p>
                         <div
                             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center gap-3">
                             <a href="#" class="btn btn-sm custom-outline-btn2 w-md-auto" data-bs-toggle="modal"
-                                data-bs-target="#scheduleModal">Book A Consultation</a>
+                                data-bs-target="#scheduleModal">Get Free Consultation</a>
                             <a href="{{ url('apply-now') }}" target="_blank"
-                                class="btn btn-sm custom-outline-btn w-md-auto">Start Free Trial</a>
+                                class="btn btn-sm custom-outline-btn w-md-auto">Explore Our Services</a>
                         </div>
                     </div>
                 </div>
@@ -54,21 +54,21 @@
                 </div>
                 <div class="row align-items-center justify-content-center">
                     <div class="col-xl-5 col-lg-6 col-md-10 text-center text-lg-start">
-                        <span class="alt-font text-uppercase fw-600 mb-15px d-inline-block ls-1px">ABOUT MOUNTEKO CLOUD
-                            HOSTING</span>
+                        <span class="alt-font text-uppercase fw-600 mb-15px d-inline-block ls-1px">What we do</span>
                         <h3 class="alt-font fw-600 text-dark-gray ls-minus-1px">
-                            Powering the Future with Cloud Solutions
+                            Smart, Secure & Managed IT Solutions
                             <span class="text-highlight fw-800">
                                 <span class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6"></span>
                             </span>
                         </h3>
                         <p class="mb-35px sm-mb-25px">
-                            We are a trusted provider of cloud solutions, dedicated to making technology accessible and
-                            secure. Our mission is to empower businesses with efficient, scalable, and adaptable tools that
-                            fit today’s dynamic work environment.
+                            Mounteko Global Solutions delivers enterprise-grade managed IT services, network architecture,
+                            cloud and IT infrastructure, and cybersecurity solutions for US businesses. We design, deploy,
+                            and manage secure networks, scalable cloud environments, and proactive security systems to
+                            ensure high availability, compliance, and data protection across all IT operations.
                         </p>
                         <a href="#" class="btn-shiny-lizard">
-                            <span>CHECK OUT OUR SERVICES</span>
+                            <span>Check out our services.</span>
                             <div class="container-stars">
                                 <div id="star-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
@@ -161,7 +161,7 @@
         </section>
 
         <!-- Core Services Section -->
-        <section id="core-services" class="pt-5 pb-5 bg-white">
+        <section id="core-services" class="pt-5 pb-5">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12 text-center">
@@ -172,57 +172,61 @@
                     <!-- Network Solutions -->
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="service-card">
-                            <div class="service-card-content">
+                            <div class="service-icon-wrapper">
                                 <i class="fas fa-network-wired"></i>
-                                <h4>Network Solutions</h4>
-                                <ul>
-                                    <li>LAN / WAN / Wi-Fi</li>
-                                    <li>SD-WAN</li>
-                                    <li>Network Design & Optimization</li>
-                                </ul>
                             </div>
+                            <h4>Network Solutions</h4>
+                            <ul>
+                                <li>LAN / WAN / Wi-Fi</li>
+                                <li>SD-WAN</li>
+                                <li>Network Design & Optimization</li>
+                            </ul>
+                            <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Cybersecurity -->
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="service-card">
-                            <div class="service-card-content">
+                            <div class="service-icon-wrapper">
                                 <i class="fas fa-shield-alt"></i>
-                                <h4>Cybersecurity</h4>
-                                <ul>
-                                    <li>Firewall & Endpoint Security</li>
-                                    <li>SOC Monitoring</li>
-                                    <li>VAPT & Compliance</li>
-                                </ul>
                             </div>
+                            <h4>Cybersecurity</h4>
+                            <ul>
+                                <li>Firewall & Endpoint Security</li>
+                                <li>SOC Monitoring</li>
+                                <li>VAPT & Compliance</li>
+                            </ul>
+                            <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Cloud & IT Infrastructure -->
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="service-card">
-                            <div class="service-card-content">
+                            <div class="service-icon-wrapper">
                                 <i class="fas fa-cloud"></i>
-                                <h4>Cloud & IT Infrastructure</h4>
-                                <ul>
-                                    <li>Cloud Migration (AWS/Azure/GCP)</li>
-                                    <li>Servers & Storage</li>
-                                    <li>Virtualization & Backup</li>
-                                </ul>
                             </div>
+                            <h4>Cloud & IT Infrastructure</h4>
+                            <ul>
+                                <li>Cloud Migration (AWS/Azure)</li>
+                                <li>Servers & Storage</li>
+                                <li>Virtualization & Backup</li>
+                            </ul>
+                            <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Managed IT Services -->
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="service-card">
-                            <div class="service-card-content">
+                            <div class="service-icon-wrapper">
                                 <i class="fas fa-tools"></i>
-                                <h4>Managed IT Services</h4>
-                                <ul>
-                                    <li>24×7 IT Support</li>
-                                    <li>Remote & On-Site Management</li>
-                                    <li>AMC & SLA-based Services</li>
-                                </ul>
                             </div>
+                            <h4>Managed IT Services</h4>
+                            <ul>
+                                <li>24Ã—7 IT Support</li>
+                                <li>Remote & On-Site Management</li>
+                                <li>AMC & SLA-based Services</li>
+                            </ul>
+                            <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -233,35 +237,11 @@
         <!-- Industries Section -->
         <section id="industries" class="pt-5 pb-5 bg-light-gray-custom">
             <div class="container">
-                <div class="row align-items-start mb-5">
-                    <div class="col-lg-3 col-md-12">
-                        <div class="industries-sidebar">
-                            <h2 class="common-section-heading">Industries</h2>
-                            <div class="industry-nav-arrows">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                            <ul class="industry-list">
-                                <li class="active">Manufacturing</li>
-                                <li>Retail</li>
-                                <li>Automotive</li>
-                                <li>Consumer Goods</li>
-                                <li>Healthcare & Life Sciences</li>
-                            </ul>
-                        </div>
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="common-section-heading mb-5">Industries</h2>
                     </div>
-                    <div class="col-lg-9 col-md-12">
-                        <div class="industry-pills mb-5">
-                            <div class="industry-pill active">Retail</div>
-                            <div class="industry-pill">Automotive</div>
-                            <div class="industry-pill">Consumer Goods</div>
-                            <div class="industry-pill">Health and Life Science</div>
-                            <div class="industry-pill">Digital Banking And Finance</div>
-                            <div class="industry-pill">Natural Resources</div>
-                            <div class="industry-pill">Public & Social Sector</div>
-                            <div class="industry-pill">Telecom</div>
-                        </div>
-
+                    <div class="col-12">
                         <div class="industries-slider swiper">
                             <div class="swiper-wrapper">
                                 <!-- Manufacturing -->
@@ -271,6 +251,8 @@
                                             alt="Manufacturing">
                                         <div class="industry-card-overlay">
                                             <h4>Manufacturing</h4>
+                                            <p class="industry-desc">Optimizing production lines with smart IoT & minimal
+                                                downtime.</p>
                                             <a href="#" class="btn btn-see-more">See More</a>
                                         </div>
                                     </div>
@@ -282,6 +264,8 @@
                                             alt="Retail">
                                         <div class="industry-card-overlay">
                                             <h4>Retail</h4>
+                                            <p class="industry-desc">Seamless omnichannel experiences with secure POS
+                                                systems.</p>
                                             <a href="#" class="btn btn-see-more">See More</a>
                                         </div>
                                     </div>
@@ -293,6 +277,7 @@
                                             alt="Automotive">
                                         <div class="industry-card-overlay">
                                             <h4>Automotive</h4>
+                                            <p class="industry-desc">Connected supply chains for next-gen mobility.</p>
                                             <a href="#" class="btn btn-see-more">See More</a>
                                         </div>
                                     </div>
@@ -304,6 +289,7 @@
                                             alt="Consumer Goods">
                                         <div class="industry-card-overlay">
                                             <h4>Consumer Goods</h4>
+                                            <p class="industry-desc">Data-driven insights for faster market response.</p>
                                             <a href="#" class="btn btn-see-more">See More</a>
                                         </div>
                                     </div>
@@ -315,6 +301,8 @@
                                             alt="Healthcare">
                                         <div class="industry-card-overlay">
                                             <h4>Healthcare</h4>
+                                            <p class="industry-desc">HIPAA-compliant data security & telemedicine
+                                                infrastructure.</p>
                                             <a href="#" class="btn btn-see-more">See More</a>
                                         </div>
                                     </div>
@@ -326,6 +314,7 @@
                                             alt="Banking & Finance">
                                         <div class="industry-card-overlay">
                                             <h4>Banking & Finance</h4>
+                                            <p class="industry-desc">Fraud-proof transactions with zero-trust security.</p>
                                             <a href="#" class="btn btn-see-more">See More</a>
                                         </div>
                                     </div>
@@ -337,6 +326,7 @@
                                             alt="Telecom">
                                         <div class="industry-card-overlay">
                                             <h4>Telecom</h4>
+                                            <p class="industry-desc">High-bandwidth framing for 5G & next-gen networks.</p>
                                             <a href="#" class="btn btn-see-more">See More</a>
                                         </div>
                                     </div>
@@ -355,15 +345,17 @@
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-6">
                         <h2 class="mb-3 common-section-heading">Why Choose Us</h2>
-                        <p class="why-subtitle-small">Looking for Future-Driven Cloud Hosting for QuickBooks?</p>
+                        <p class="why-subtitle-small">Need a Powerful, Future-Ready IT Partner for Your Business?</p>
                     </div>
                     <div class="col-lg-6">
                         <p class="why-desc">
-                            With years of industrial experience and technical expertise, Mounteko can be your one-stop
-                            destination for all your QuickBooks cloud hosting needs. Feel free to discuss your business
-                            requirements with our professionals.
+                            Stop worrying about IT failures, security risks, and downtime. Mounteko Global Solutions
+                            delivers enterprise-grade managed IT services, secure cloud & IT infrastructure, reliable
+                            network solutions, and advanced cybersecurity to keep your business running without
+                            interruption. We donâ€™t just manage ITâ€”we protect, optimize, and scale your business
+                            technology.
                         </p>
-                        <a href="#" class="why-cta">CHOOSE US TODAY FOR A BETTER TOMORROW</a>
+                        <a href="#" class="why-cta">CHOOSE MOUNTEKO TODAY â€” STAY SECURE, STAY AHEAD</a>
                     </div>
                 </div>
 
@@ -372,7 +364,10 @@
                     <!-- Left Features -->
                     <div class="col-md-3 text-end feature-col">
                         <div class="feature-item mb-5">
-                            <span class="feature-text">Expert-Level Support</span>
+                            <span class="feature-text">Security-First Solutions</span>
+                        </div>
+                        <div class="feature-item mb-5">
+                            <span class="feature-text">Scalable Cloud Infrastructure</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-text">Rock-Solid Uptime</span>
@@ -392,8 +387,11 @@
                         <div class="feature-item mb-5">
                             <span class="feature-text">Client Efficiency Boost</span>
                         </div>
+                        <div class="feature-item mb-5">
+                            <span class="feature-text">Expert-Level Support</span>
+                        </div>
                         <div class="feature-item">
-                            <span class="feature-text">Custom-Built Solutions</span>
+                            <span class="feature-text">Proactive Managed IT</span>
                         </div>
                     </div>
                 </div>
@@ -404,8 +402,14 @@
         <section class="case-studies py-5">
             <div class="container text-center mb-5">
                 <h2 class="common-section-heading section-heading mb-3">Featured Case Studies</h2>
-                <p class="section-subtitle mb-4">Let's work together to digitally transform your business and build the
-                    solutions of tomorrow.</p>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem;">Real Results. Real Business Transformation.</h3>
+                <p class="section-subtitle mb-4">
+                    Discover how Mounteko Global Solutions enables businesses to modernize their IT infrastructure, enhance
+                    cybersecurity, and scale with confidence. Our case studies highlight real-world success through managed
+                    IT services, cloud solutions, and network optimization.
+                </p>
+                <p class="mb-4">Letâ€™s work together to digitally transform your business and build the solutions of
+                    tomorrow.</p>
                 <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i
                         class="fas fa-chevron-right ms-2"></i></a>
             </div>
@@ -419,7 +423,7 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Retail</span>
-                                    <p class="case-quote">“Their managed IT services reduced our downtime by 60%.”</p>
+                                    <p class="case-quote">â€œTheir managed IT services reduced our downtime by 60%.â€</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">Retail Solutions Inc.</h5>
                                         <span class="industry-name">Retail Industry</span>
@@ -427,7 +431,7 @@
                                 </div>
                                 <div class="go-corner" href="#">
                                     <div class="go-arrow">
-                                        →
+                                        â†’
                                     </div>
                                 </div>
                             </div>
@@ -439,7 +443,7 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1558486012-818148f97521?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Automotive</span>
-                                    <p class="case-quote">“Optimized our cloud infrastructure for peak performance.”</p>
+                                    <p class="case-quote">â€œOptimized our cloud infrastructure for peak performance.â€</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">AutoDrive Tech</h5>
                                         <span class="industry-name">Automotive</span>
@@ -447,7 +451,7 @@
                                 </div>
                                 <div class="go-corner" href="#">
                                     <div class="go-arrow">
-                                        →
+                                        â†’
                                     </div>
                                 </div>
                             </div>
@@ -459,7 +463,8 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Manufacturing</span>
-                                    <p class="case-quote">“Scalable solutions that grew with our manufacturing needs.”</p>
+                                    <p class="case-quote">â€œScalable solutions that grew with our manufacturing needs.â€
+                                    </p>
                                     <div class="case-footer">
                                         <h5 class="company-name">Stefanini Group</h5>
                                         <span class="industry-name">Manufacturing</span>
@@ -467,7 +472,7 @@
                                 </div>
                                 <div class="go-corner" href="#">
                                     <div class="go-arrow">
-                                        →
+                                        â†’
                                     </div>
                                 </div>
                             </div>
@@ -479,7 +484,7 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Banking</span>
-                                    <p class="case-quote">“Enhanced security compliance for our financial data.”</p>
+                                    <p class="case-quote">â€œEnhanced security compliance for our financial data.â€</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">FinSecure Bank</h5>
                                         <span class="industry-name">Banking & Finance</span>
@@ -487,7 +492,7 @@
                                 </div>
                                 <div class="go-corner" href="#">
                                     <div class="go-arrow">
-                                        →
+                                        â†’
                                     </div>
                                 </div>
                             </div>
@@ -499,7 +504,7 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Tech</span>
-                                    <p class="case-quote">“Seamless migration with zero data loss.”</p>
+                                    <p class="case-quote">â€œSeamless migration with zero data loss.â€</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">Nordzucker</h5>
                                         <span class="industry-name">Technology</span>
@@ -507,7 +512,7 @@
                                 </div>
                                 <div class="go-corner" href="#">
                                     <div class="go-arrow">
-                                        →
+                                        â†’
                                     </div>
                                 </div>
                             </div>
@@ -525,10 +530,16 @@
                     <!-- Left Content Area -->
                     <div class="col-lg-6 cta-content-area d-flex flex-column justify-content-center align-items-start">
                         <p class="cta-subheading mb-3">Every great partnership starts with a conversation.</p>
-                        <h2 class="cta-heading mb-4">Ready to Secure & Simplify Your IT?</h2>
+                        <h2 class="cta-heading mb-4">Ready to Secure & Simplify Your IT Operations?</h2>
+                        <p class="mb-4">
+                            Partner with Mounteko Global Solutions for reliable managed IT services, secure cloud and IT
+                            infrastructure, advanced network solutions, and robust cybersecurity services. Our experts help
+                            businesses improve performance, strengthen security, and reduce IT complexity with scalable,
+                            future-ready solutions.
+                        </p>
                         <div class="d-flex flex-wrap gap-3">
                             <a href="#" class="btn btn-cta-primary">Talk to an IT Expert</a>
-                            <a href="#" class="btn btn-cta-outline">Schedule Free IT Assessment</a>
+                            <a href="#" class="btn btn-cta-outline">Schedule a Free IT Assessment</a>
                         </div>
                     </div>
                     <!-- Right Image Area -->
