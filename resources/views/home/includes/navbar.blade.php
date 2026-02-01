@@ -48,7 +48,8 @@
                                     <div id="mega-tab-network" class="mega-cat-content active">
                                         <h4>Network Solutions</h4>
                                         <div class="content-grid">
-                                            <a href="#">Network architecture design (LAN, WAN, SD-WAN)</a>
+                                            <a href="{{ route('services.network-architecture') }}">Network architecture
+                                                design (LAN, WAN, SD-WAN)</a>
                                             <a href="#">Enterprise wireless solutions and implementation</a>
                                             <a href="#">VPN setup and remote access solutions</a>
                                             <a href="#">Network monitoring and performance optimization</a>
@@ -153,7 +154,7 @@
     /* Use direct child selector '>' for ul to avoid breaking nested dropdowns */
     #header .container,
     #navbar,
-    #navbar > ul, 
+    #navbar>ul,
     #navbar li.mega-menu-item {
         position: static !important;
     }
@@ -164,17 +165,18 @@
         top: 100%;
         left: 0;
         right: 0;
-        width: auto; 
+        width: auto;
         z-index: 9999;
-        display: none; 
-        background: #fff; 
+        display: none;
+        background: #fff;
     }
 
     /* HOVER BRIDGE FIX: Adds an invisible touch area to connect the Link and the Menu */
     .mega-menu-wrapper::before {
         content: "";
         position: absolute;
-        top: -40px; /* Extends 40px upwards into the header */
+        top: -40px;
+        /* Extends 40px upwards into the header */
         left: 0;
         width: 100%;
         height: 40px;
@@ -303,13 +305,27 @@
 
     /* Animations */
     @keyframes menuDrop {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     @keyframes contentFadeUp {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     /* Mobile Responsive */

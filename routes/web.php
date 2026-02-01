@@ -22,9 +22,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('old-home', [HomeController::class, 'home'])->name('old-home');
 Route::get('/ticketsubmission', [HomeController::class, 'ticketsubmission'])->name('ticketsubmission');
 Route::get('/test', [HomeController::class, 'test'])->name('test');
-Route::get('about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
+Route::get('old-about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
+Route::get('previous-about-us', [HomeController::class, 'aboutUs'])->name('old.aboutUs'); // Alias if needed, but keeping name 'aboutUs' for old to likely avoid breaking route('aboutUs') calls initially? 
+// Wait, if I change the URI but keep the name, links will point to the OLD page at the NEW url. 
+// The user said "old about us krdo or new about us bnao". 
+// Usually users mean the main 'about-us' link should go to the NEW page. 
+// So I should rename the old route's name too, or at least update the URI.
+// If I change the name of the old route to 'old-about-us', I need to find where 'aboutUs' is used and decide if it should point to new or old.
+// Usually 'about us' link in header/footer should point to NEW page.
+// So:
+// 1. Old route: URI 'old-about-us', Name 'old-about-us' (or similar)
+// 2. New route: URI 'about-us', Name 'about-us' (reuse the original name so links work automatically)
+
+Route::get('old-about-us', [HomeController::class, 'aboutUs'])->name('old-about-us');
+Route::get('about-us', [HomeController::class, 'newAboutUs'])->name('aboutUs');
 Route::get('category-description/{slug}', [HomeController::class, 'categoryDescription'])->name('category-description');
 Route::get('/', [HomeController::class, 'newHome'])->name('home');
+Route::get('/services/network-architecture', [HomeController::class, 'networkArchitecture'])->name('services.network-architecture');
 
 
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');

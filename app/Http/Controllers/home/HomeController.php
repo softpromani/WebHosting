@@ -50,6 +50,21 @@ class HomeController extends Controller
         return view('home.about_us', compact('faqs', 'blogs', 'testimonial'));
     }
 
+    public function newAboutUs()
+    {
+        // Assuming we need common data like layout typically requires (e.g. for footer blogs/descriptions usually)
+        // Looking at newHome(), it fetches blogs and category_desc. 
+        // I should probably pass similar data if the layout needs it.
+        // Let's check new_home.blade.php to see if it extends a layout that needs variable
+        // But specifically for the content, I just need to return the view.
+        return view('home.new_about_us');
+    }
+
+    public function networkArchitecture()
+    {
+        return view('home.services.network_solution.network_architecture');
+    }
+
     public function contactUs()
     {
         return view('home.contact_us');

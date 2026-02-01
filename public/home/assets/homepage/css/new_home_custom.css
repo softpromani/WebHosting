@@ -1193,3 +1193,733 @@ body {
     box-shadow: 0 4px 10px rgba(32, 201, 151, 0.3);
     gap: 0.75rem;
 }
+
+
+/* About Us Page Custom Styles */
+.btn-custom-small {
+    padding: 0.25rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-small:hover {
+    background-color: #fff !important;
+    color: var(--primary-color) !important;
+    /* Ensure contrast */
+    border: 1px solid var(--primary-color) !important;
+}
+
+/* Founder's Message Section */
+.founder-image-wrapper {
+    position: relative;
+    padding: 10px;
+    /* Space for potential decorative border or shape */
+}
+
+.founder-bg-shape {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #008080;
+    /* Theme Teal */
+    z-index: -1;
+    border-radius: 8px;
+    opacity: 0.1;
+    transition: all 0.3s ease;
+}
+
+.founder-image-wrapper:hover .founder-bg-shape {
+    transform: translate(5px, 5px);
+    opacity: 0.2;
+}
+
+.founder-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0d233e;
+    /* Dark Navy */
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.founder-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #00838d, #004d55);
+    border-radius: 2px;
+}
+
+.founder-content p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.founder-content blockquote {
+    background-color: #f9fbfb;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.founder-content .text-muted {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* New Services Section Styles */
+/* New Services Section Styles */
+.services-section-new {
+    background-color: #f8f9fa;
+    /* Light background */
+}
+
+/* Hover Animation - Neon Gradient Border */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.service-card-new {
+    background: #fff;
+    /* Fallback */
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    /* Flex layout for button alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* The Animated Gradient Layer */
+.service-card-new::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, transparent, transparent, #00838d, #0d233e, #00838d);
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -2;
+}
+
+.service-card-new:hover::before {
+    opacity: 1;
+}
+
+/* The Inner Background (covers the center of gradient) */
+.service-card-new::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #fff;
+    border-radius: 17px;
+    /* slightly less than card radius */
+    z-index: -1;
+}
+
+.service-card-new:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 131, 141, 0.15);
+    border-color: transparent;
+    /* Hide static border */
+}
+
+/* Enhancing Content on Hover */
+.service-icon-new-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: rgba(0, 131, 141, 0.1);
+    /* Light Teal tint */
+    border-radius: 50% 50% 50% 10%;
+    /* Blobby shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00838d;
+    /* Theme Teal */
+    font-size: 2rem;
+    position: relative;
+    z-index: 2;
+    /* Above inner bg */
+    transition: all 0.4s ease;
+}
+
+.service-card-new:hover .service-icon-new-wrapper {
+    background: #00838d;
+    color: #fff;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 5px 15px rgba(0, 131, 141, 0.3);
+}
+
+.service-title-new {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #252840;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.service-card-new:hover .service-title-new {
+    color: #00838d;
+    /* Teal highlight */
+}
+
+.service-desc-new {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card-new:hover .service-desc-new {
+    /* No change specified, keep original color or adjust if needed */
+    color: #6c757d;
+    /* Keep original or adjust */
+}
+
+.btn-read-more-new {
+    background: #00838d;
+    /* Theme Teal */
+    color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    /* Align to bottom */
+    margin-top: auto;
+    border: 2px solid transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-read-more-new:hover {
+    background: #0d233e;
+    /* Navy on hover */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 35, 62, 0.3);
+}
+
+.service-card-new:hover .btn-read-more-new {
+    /* Keep button styling consistent or enhance slightly */
+    background: #fff;
+    color: #00838d;
+}
+
+.service-card-new:hover .btn-read-more-new:hover {
+    background: #0d233e;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* =========================================
+   New 'Why Choose Us' Section (Dark Navy)
+   ========================================= */
+.why-choose-dark {
+    background: linear-gradient(to right, #0d233e, #162a47);
+    /* Dark Navy Gradient */
+    padding: 30px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Pattern (subtle dots/waves if needed, optional) */
+.why-choose-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.why-header-small {
+    color: #3b82f6;
+    /* Blue-ish accent for small tag */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.why-header-small::before,
+.why-header-small::after {
+    content: '—';
+    color: #3b82f6;
+    margin: 0 10px;
+}
+
+.why-header-large {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.text-gold {
+    color: #fcc109;
+    /* Gold/Yellow Accent */
+}
+
+/* Feature Item Styles */
+.feature-box-dark {
+    margin-bottom: 20px;
+}
+
+.feature-icon-gold {
+    font-size: 1.5rem;
+    color: #fcc109;
+    /* Gold Icon */
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.feature-title-dark {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.feature-desc-dark {
+    color: rgba(255, 255, 255, 0.7);
+    /* Muted white */
+    font-size: 0.85rem;
+    line-height: 1.4;
+    max-width: 350px;
+    /* Control text width for readability */
+}
+
+/* Central Image Styling */
+.central-image-wrapper {
+    position: relative;
+    border-radius: 80px 80px 0 0;
+    /* Arch shape or rounded rect */
+    overflow: hidden;
+    height: 100%;
+    min-height: 280px;
+    max-height: 350px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.central-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Alignment Helpers */
+.align-right-desktop {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.align-left-desktop {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (max-width: 991px) {
+
+    .align-right-desktop,
+    .align-left-desktop {
+        text-align: center;
+        align-items: center;
+    }
+
+    .feature-desc-dark {
+        max-width: 100%;
+    }
+
+    .central-image-wrapper {
+        min-height: 250px;
+        width: 100%;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+}
+
+/* =========================================
+   Global Typography / Section Standards (Unified)
+   ========================================= */
+.section-subtitle {
+    color: #3b82f6;
+    /* Blue Accent */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.section-title {
+    font-size: 2rem;
+    /* Reduced from 2.5rem */
+    font-weight: 700;
+    color: #252840;
+    /* Dark Text */
+    line-height: 1.25;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+.section-desc {
+    font-size: 1rem;
+    color: #6c757d;
+    /* Muted Text */
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================
+   Network Solutions Page Styles
+   ========================================= */
+
+/* Updated Compact Service Card Design */
+/* Light & Shadow-Glow Animation Card (Round 6) */
+.network-service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 40px rgba(13, 35, 62, 0.05);
+    /* Clean initial shadow */
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Hover Effect: Light Tint & Strong Shadow */
+.network-service-card:hover {
+    transform: translateY(-8px);
+    background: #f0fbff;
+    /* Very Light Teal Tint */
+    box-shadow: 0 20px 60px rgba(0, 131, 141, 0.2);
+    /* "Shadow Color" - Teal Glow */
+    border-color: rgba(0, 131, 141, 0.2);
+}
+
+/* Remove the dark slide-up background */
+.network-service-card::before {
+    display: none;
+}
+
+/* Content Transitions */
+.network-service-card h4,
+.network-service-card .service-list,
+.network-service-card .icon-wrapper,
+.network-service-card .service-list i {
+    transition: all 0.4s ease;
+    z-index: 5;
+    /* Ensure text is always on top */
+    position: relative;
+}
+
+/* Icon Design - Always Visible */
+.network-service-card .icon-wrapper {
+    width: 75px;
+    height: 75px;
+    background: rgba(0, 131, 141, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: #00838d;
+    font-size: 1.3rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.network-service-card:hover .icon-wrapper {
+    background: #00838d;
+    /* Teal Icon on Hover */
+    color: #ffffff;
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 10px 25px rgba(0, 131, 141, 0.3);
+}
+
+/* Title Styling - Keep Dark */
+.network-service-card h4 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #0d233e;
+    /* Always Dark */
+}
+
+/* List Styling - Keep Dark */
+.network-service-card .service-list {
+    color: #666;
+    /* Always Readable */
+    padding: 0 5px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.network-service-card .service-list i {
+    color: #00838d;
+    margin-right: 12px !important;
+    font-size: 0.9rem;
+    background: rgba(0, 131, 141, 0.1);
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.network-service-card:hover .service-list i {
+    background: #00838d;
+    color: #ffffff;
+}
+
+/* Decorative Bottom Line */
+.network-service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #00838d, #0d233e);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+/* ... previous styles ... */
+
+/* =========================================
+   Process / How We Work Section
+   ========================================= */
+/* =========================================
+   Process / How We Work Section (Premium)
+   ========================================= */
+
+/* Main Container for Steps */
+.process-steps-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Dashed Connection Line (Desktop Only) */
+.process-steps-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    /* Start after first card center */
+    right: 10%;
+    /* End before last card center */
+    height: 2px;
+    background-image: linear-gradient(to right, #00838d 50%, transparent 50%);
+    background-size: 20px 2px;
+    background-repeat: repeat-x;
+    transform: translateY(-50%);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* The Individual Card */
+.process-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    /* Above the line */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 131, 141, 0.15);
+    border-color: rgba(0, 131, 141, 0.3);
+}
+
+/* Step Number Badge */
+.process-step-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00838d;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 131, 141, 0.3);
+    border: 2px solid #fff;
+}
+
+/* Icon Container */
+.process-icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: #f0fbff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00838d;
+    font-size: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+.process-card:hover .process-icon-box {
+    background: #00838d;
+    color: #fff;
+    transform: rotate(360deg);
+}
+
+/* Text Styling */
+.process-card h5 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0d233e;
+    margin-bottom: 5px;
+}
+
+.process-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+    .process-steps-container::before {
+        display: none;
+        /* Hide line on mobile */
+    }
+
+    .process-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Network Page CTA Button - Premium Gradient Style */
+.btn-network-cta {
+    background: linear-gradient(135deg, #00838d 0%, #0056b3 100%);
+    /* Teal to Blue Gradient */
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    /* Full pill shape */
+    padding: 14px 40px;
+    /* Premium sizing */
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(0, 131, 141, 0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-network-cta:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #00838d 100%);
+    /* Reverse Gradient */
+    color: #ffffff !important;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 131, 141, 0.4);
+    /* Enhanced Glow */
+}
+
+.btn-network-cta:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 131, 141, 0.3);
+}
+
+/* Network Service Card List Icons */
+.network-service-card .service-list i {
+    color: #00838d;
+    margin-right: 15px !important;
+    background: transparent;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.network-service-card:hover .service-list i {
+    color: #ffffff;
+}
+
+/* Specific List spacing */
+.network-service-card .service-list .d-flex {
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.image-composition {
+    position: relative;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
