@@ -20,15 +20,8 @@
             $lightColor = adjustBrightness($baseColor, 100);
             $darkColor = adjustBrightness($baseColor, -50);
         @endphp
-        <div class="optech-breadcrumb" style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
-                                                                                                        background-size: cover;
-                                                                                                        background-position: center;
-                                                                                                        background-repeat: no-repeat;
-                                                                                                        display: flex;
-                                                                                                        align-items: center;
-                                                                                                        justify-content: center;
-                                                                                                        text-align: center;
-                                                                                                        height: 450px;">
+        <div class="optech-breadcrumb"
+            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}'); background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; height: 450px;">
             <div class="container">
                 <h1 class="post__title text-white" style="font-size: 2.5rem; margin-bottom: 0px;">About Us</h1>
                 <nav class="breadcrumbs">
@@ -115,21 +108,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <style>
-                                .btn-custom-small {
-                                    padding: 0.25rem 1rem;
-                                    font-size: 0.75rem;
-                                    letter-spacing: 0.5px;
-                                    transition: all 0.3s ease;
-                                }
 
-                                .btn-custom-small:hover {
-                                    background-color: #fff !important;
-                                    color: var(--primary-color) !important;
-                                    /* Ensure contrast */
-                                    border: 1px solid var(--primary-color) !important;
-                                }
-                            </style>
                             <a href="{{ route('contactUs') }}"
                                 class="btn btn-primary btn-sm rounded-pill shadow-sm btn-custom-small">
                                 Learn More <i class="fas fa-arrow-right ms-1" style="font-size: 0.7rem;"></i>
@@ -187,21 +166,7 @@
                             </div>
 
                             <div class="mt-4">
-                                <style>
-                                    .btn-custom-small {
-                                        padding: 0.25rem 1rem;
-                                        font-size: 0.75rem;
-                                        letter-spacing: 0.5px;
-                                        transition: all 0.3s ease;
-                                    }
 
-                                    .btn-custom-small:hover {
-                                        background-color: #fff !important;
-                                        color: var(--primary-color) !important;
-                                        /* Ensure contrast */
-                                        border: 1px solid var(--primary-color) !important;
-                                    }
-                                </style>
                                 <a href="{{ route('contactUs') }}"
                                     class="btn btn-primary btn-sm rounded-pill shadow-sm btn-custom-small">
                                     Learn More <i class="fas fa-arrow-right ms-1" style="font-size: 0.7rem;"></i>
@@ -389,9 +354,9 @@
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <div class="central-image-wrapper">
                             <!-- Using a generic placeholder or an existing image since user didn't specify exact file path
-                                                     I will use a placeholder or one of the existing asset paths if known, or a generic URL for now.
-                                                     Looking at previous file views, there might be assets in assets/homepage/images/
-                                                     I'll use a placeholder that user can swap easily. -->
+                                                                                         I will use a placeholder or one of the existing asset paths if known, or a generic URL for now.
+                                                                                         Looking at previous file views, there might be assets in assets/homepage/images/
+                                                                                         I'll use a placeholder that user can swap easily. -->
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=800"
                                 alt="IT Professional">
                         </div>
