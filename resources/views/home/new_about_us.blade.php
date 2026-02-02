@@ -21,14 +21,14 @@
             $darkColor = adjustBrightness($baseColor, -50);
         @endphp
         <div class="optech-breadcrumb" style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
-                                                                                                    background-size: cover;
-                                                                                                    background-position: center;
-                                                                                                    background-repeat: no-repeat;
-                                                                                                    display: flex;
-                                                                                                    align-items: center;
-                                                                                                    justify-content: center;
-                                                                                                    text-align: center;
-                                                                                                    height: 450px;">
+                                                                                                        background-size: cover;
+                                                                                                        background-position: center;
+                                                                                                        background-repeat: no-repeat;
+                                                                                                        display: flex;
+                                                                                                        align-items: center;
+                                                                                                        justify-content: center;
+                                                                                                        text-align: center;
+                                                                                                        height: 450px;">
             <div class="container">
                 <h1 class="post__title text-white" style="font-size: 2.5rem; margin-bottom: 0px;">About Us</h1>
                 <nav class="breadcrumbs">
@@ -343,86 +343,7 @@
                 </div>
             </div>
         </section>
-        <section class="background-position-center-top sm-background-image-none"
-            style="background-image: url('{{ asset('home/assets/homepage/images/vertical-line-bg.svg') }}')">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-10 text-center text-lg-start"
-                        data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="swiper slider-one-slide md-mb-50px sm-mb-40px text-slider-style-01"
-                            data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".slider-one-slide-pagination", "clickable": true }, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
-                            <div class="swiper-wrapper mb-30px">
-                                <!-- start text slider item -->
-                                <div class="swiper-slide">
-                                    <div
-                                        class="alt-font text-uppercase text-base-color fw-600 mb-15px d-inline-block ls-1px">
-                                        Our mission</div>
-                                    <h3 class="alt-font text-dark-gray mb-30px md-mb-25px fw-600 ls-minus-1px">We protect
-                                        and supports your business.</h3>
-                                    <span class="d-inline-block w-95 md-w-100">We aim to equip businesses with powerful,
-                                        scalable, and flexible solutions that seamlessly adapt to the fast-changing demands
-                                        of
-                                        today’s work environment, enabling greater efficiency and scalability.</span>
-                                </div>
-                                <!-- end text slider item -->
-                                <!-- start text slider item -->
-                                <div class="swiper-slide">
-                                    <div
-                                        class="alt-font text-uppercase text-base-color fw-600 mb-15px d-inline-block ls-1px">
-                                        Our Vision</div>
-                                    <h3 class="alt-font text-dark-gray mb-30px md-mb-25px fw-600 ls-minus-1px">A business
-                                        plan and performance ideas.</h3>
-                                    <span class="d-inline-block w-95 md-w-100">To lead cloud innovation, creating a future
-                                        where technology seamlessly connects people and businesses, ensuring secure,
-                                        adaptable,
-                                        and accessible solutions.</span>
-                                </div>
-                                <!-- end text slider item -->
-                                <!-- start text slider item -->
-                                <div class="swiper-slide">
-                                    <div
-                                        class="alt-font text-uppercase text-base-color fw-600 mb-15px d-inline-block ls-1px">
-                                        Core value</div>
-                                    <h3 class="alt-font text-dark-gray mb-30px md-mb-25px fw-600 ls-minus-1px">The best
-                                        solutions for your startup business.</h3>
-                                    <span class="d-inline-block w-95 md-w-100">Mounteko is driven by innovation, customer
-                                        focus, and integrity. We deliver reliable, secure cloud services and adaptable
-                                        solutions
-                                        to meet the evolving needs of businesses, ensuring transparency and trust in what we
-                                        do.</span>
-                                </div>
-                                <!-- end text slider item -->
-                            </div>
-                            <div class="d-flex justify-content-center justify-content-lg-start">
-                                <!-- start slider navigation -->
-                                <div
-                                    class="slider-one-slide-prev-1 text-dark-gray swiper-button-prev slider-navigation-style-04 border border-1 border-color-extra-medium-gray bg-white">
-                                    <i class="fa-solid fa-arrow-left"></i>
-                                </div>
-                                <div
-                                    class="slider-one-slide-next-1 text-dark-gray swiper-button-next slider-navigation-style-04 border border-1 border-color-extra-medium-gray bg-white">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <!-- end slider navigation -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 offset-xl-1 position-relative text-end md-mb-6 sm-mb-10 xs-mb-12">
-                        <div class="text-end w-80 md-w-75 ms-auto" data-animation-delay="100" data-shadow-animation="true"
-                            data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
-                            <img src="{{ asset('home/assets/homepage/images/images-demo-startup-who-we-are-02.jpg') }}"
-                                alt="" class="border-radius-5px">
-                        </div>
-                        <div class="w-60 md-w-50 xs-w-55 overflow-hidden position-absolute left-15px bottom-minus-50px"
-                            data-shadow-animation="true" data-animation-delay="200"
-                            data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
-                            <img src="{{ asset('home/assets/homepage/images/images-demo-startup-who-we-are-03.jpg') }}"
-                                alt="" class="border-radius-5px">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- New 'Why Choose Us' Section (Dark Navy) -->
         <section class="why-choose-dark">
@@ -468,9 +389,9 @@
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <div class="central-image-wrapper">
                             <!-- Using a generic placeholder or an existing image since user didn't specify exact file path
-                                                 I will use a placeholder or one of the existing asset paths if known, or a generic URL for now.
-                                                 Looking at previous file views, there might be assets in assets/homepage/images/
-                                                 I'll use a placeholder that user can swap easily. -->
+                                                     I will use a placeholder or one of the existing asset paths if known, or a generic URL for now.
+                                                     Looking at previous file views, there might be assets in assets/homepage/images/
+                                                     I'll use a placeholder that user can swap easily. -->
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=800"
                                 alt="IT Professional">
                         </div>
