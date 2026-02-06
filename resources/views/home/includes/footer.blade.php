@@ -1,72 +1,79 @@
-<footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-3 col-md-6 footer-contact">
-                    <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}" alt=""></a><br><br>
-                    <h3>{{ settingValue('company Name') }}<span></span></h3>
-                    <p>
-                        <strong>📧</strong> {{ settingValue('email') }}<br>
-                        <strong>📞</strong> {{ settingValue('phone') }}<br>
-                        <strong>🌍</strong> {{ settingValue('address') }}<br>
-                    </p>
-                    <div class="social-links mt-3">
-                        <a href="{{ settingValue('twitter') }}" class="twitter"><i class="bx bxl-twitter"></i></a>
-                        <a href="{{ settingValue('facebook') }}" class="facebook"><i class="bx bxl-facebook"></i></a>
-                        <a href="{{ settingValue('instagram') }}" class="instagram"><i class="bx bxl-instagram"></i></a>
-                        <a href="{{ settingValue('skype') }}" class="google-plus"><i class="bx bxl-skype"></i></a>
-                        <a href="{{ settingValue('linkdin') }}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    </div>
+<footer class="premium-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Brand Column -->
+            <div class="col-lg-4 col-md-6 footer-brand-col">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('storage/' . settingValue('logo')) }}" alt="{{ settingValue('company Name') }}"
+                        class="footer-logo">
+                </a>
+                <div class="footer-tagline">{{ settingValue('company Name') }}</div>
+                <p class="footer-description">
+                    Empowering businesses with reliable technology, innovation, and global reach. We provide scalable IT
+                    solutions tailored to your business needs.
+                </p>
+                <div class="social-links d-flex gap-3">
+                    <a href="{{ settingValue('facebook') }}" class="text-white opacity-75 hover-opacity-100"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="{{ settingValue('twitter') }}" class="text-white opacity-75 hover-opacity-100"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="{{ settingValue('linkdin') }}" class="text-white opacity-75 hover-opacity-100"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="{{ settingValue('instagram') }}" class="text-white opacity-75 hover-opacity-100"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
+            </div>
 
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Quick Book Hosting</h4>
-                    <a href="#">QuickBooks Enterprise Hosting</a><br>
-                    <a href="#">QuickBooks Accountant Hosting</a><br>
-                    <a href="#">QuickBooks Premier Hosting</a><br>
-                    <a href="#">QuickBooks Add-ons</a><br><br>
+            <!-- Services Column -->
+            <div class="col-lg-2 col-md-6">
+                <h4 class="footer-heading">Services</h4>
+                <ul class="footer-links-list">
+                    <li><a href="{{ route('services.network-architecture') }}">Network Solutions</a></li>
+                    <li><a href="{{ route('security') }}">Cybersecurity</a></li>
+                    <li><a href="{{ route('pricing') }}">Cloud Hosting</a></li>
+                    <li><a href="{{ route('home') }}#core-services">Managed IT</a></li>
+                    <li><a href="{{ route('partner') }}">Partner Program</a></li>
+                </ul>
+            </div>
 
-                    <h4>Sage Hosting</h4>
-                    <a href="#">Sage 50</a><br>
-                    <a href="#">Sage 100</a><br>
-                    <a href="#">Sage 300</a><br>
-                    <a href="#">Sage 500</a><br>
-                    <a href="#">Sage CRM</a><br>
-                    <a href="#">Sage X3</a><br>
-                 </div>
+            <!-- Company Column -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-heading">Company</h4>
+                <ul class="footer-links-list">
+                    <li><a href="{{ route('aboutUs') }}">About Us</a></li>
+                    <li><a href="{{ route('whyUsPage') }}">Why Mounteko</a></li>
+                    <li><a href="{{ route('testimonial') }}">Testimonials</a></li>
+                    <li><a href="{{ route('contactUs') }}">Contact Us</a></li>
+                    <li><a href="{{ route('faq') }}">Privacy Policy</a></li>
+                </ul>
+            </div>
 
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Tax Software Hosting</h4>
-                    <a href="#">Drake Tax Hosting</a><br>
-                    <a href="#">Proseries Tax Hosting</a><br>
-                    <a href="#">UltraTax Software Hosting</a><br>
-                    <a href="#">Lacerte Tax Hosting</a><br>
-                    <a href="#">ATX Hosting</a><br>
-                    <a href="#">TaxWise Hosting</a><br>
-                    <a href="#">TaxAct</a><br>
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-heading">Contact</h4>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>{{ settingValue('address') }}</span>
                 </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Resource</h4>
-                    <a href="#">FAQ</a><br>
-                    <a href="#">Downloads</a><br>
-                    <a href="#">Uploads</a><br>
-                    <a href="#">Join Remote Support</a><br>
-                    <a href="#">Terms & Conditions</a><br>
-                    <a href="#">Privacy Policy</a><br>
-                    <a href="#">Service Agreement</a><br>
-                    <a href="#">User Acceptance</a><br>
-                    <a href="#">Cookie Policy</a><br>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:{{ settingValue('email') }}">{{ settingValue('email') }}</a>
                 </div>
-
+                <div class="footer-contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="{{ url('/') }}">www.mounteko.com</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>{{ settingValue('phone') }}</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container py-4">
-        <div class="copyright">
-            &copy; Copyright <strong><span>{{ settingValue('company Name') }}</span></strong>. All Rights Reserved
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>&copy; {{ date('Y') }} {{ settingValue('company Name') }}. All rights reserved. Developed by
+                {{ settingValue('developed by') }}</p>
         </div>
     </div>
 </footer>
