@@ -54,7 +54,6 @@
                 </div>
                 <div class="row align-items-center justify-content-center">
                     <div class="col-xl-5 col-lg-6 col-md-10 text-center text-lg-start">
-                        <span class="alt-font text-uppercase fw-600 mb-15px d-inline-block ls-1px">What we do</span>
                         <h3 class="alt-font fw-600 text-dark-gray ls-minus-1px">
                             Smart, Secure & Managed IT Solutions
                             <span class="text-highlight fw-800">
@@ -222,7 +221,7 @@
                             </div>
                             <h4>Managed IT Services</h4>
                             <ul>
-                                <li>24Ã—7 IT Support</li>
+                                <li>24X7 IT Support</li>
                                 <li>Remote & On-Site Management</li>
                                 <li>AMC & SLA-based Services</li>
                             </ul>
@@ -341,21 +340,22 @@
         <!-- Why Choose Us Section -->
         <section class="why-choose-us py-5">
             <div class="container">
-                <!-- Top Header Row -->
-                <div class="row align-items-center mb-5">
-                    <div class="col-lg-6">
-                        <h2 class="mb-3 common-section-heading">Why Choose Us</h2>
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="common-section-heading text-center">Why Choose Us</h2>
                         <p class="why-subtitle-small">Need a Powerful, Future-Ready IT Partner for Your Business?</p>
                     </div>
-                    <div class="col-lg-6">
+                </div>
+                <!-- Top Header Row -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-12 text-center">
                         <p class="why-desc">
                             Stop worrying about IT failures, security risks, and downtime. Mounteko Global Solutions
                             delivers enterprise-grade managed IT services, secure cloud & IT infrastructure, reliable
                             network solutions, and advanced cybersecurity to keep your business running without
-                            interruption. We donâ€™t just manage ITâ€”we protect, optimize, and scale your business
-                            technology.
+                            interruption. We don’t just manage IT—we protect, optimize, and scale your business technology.
                         </p>
-                        <a href="#" class="why-cta">CHOOSE MOUNTEKO TODAY â€” STAY SECURE, STAY AHEAD</a>
+                        <a href="#" class="why-cta">CHOOSE MOUNTEKO TODAY — STAY SECURE, STAY AHEAD</a>
                     </div>
                 </div>
 
