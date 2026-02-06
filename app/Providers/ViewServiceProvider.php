@@ -24,26 +24,26 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer('home.includes.navbar',function($view){
-            $menu=Menu::with('products')->ParentMenus()->get();
-            $view->with('menu',$menu);
+        View::composer('home.includes.navbar', function ($view) {
+            $menu = Menu::with('products')->ParentMenus()->get();
+            $view->with('menu', $menu);
         });
-        
-        View::composer('home.includes.head',function($view){
-            $theme_setting=WebSetting::select('key','value')->where('group', 'Theme')->get();
-            $view->with('theme_setting',$theme_setting);
+
+        View::composer(['home.includes.head', 'home.new_home'], function ($view) {
+            $theme_setting = WebSetting::select('key', 'value')->where('group', 'Theme')->get();
+            $view->with('theme_setting', $theme_setting);
         });
-        View::composer('home.index',function($view){
-            $testimonial=Testimonial::get();
-            $view->with('testimonial',$testimonial);
+        View::composer('home.index', function ($view) {
+            $testimonial = Testimonial::get();
+            $view->with('testimonial', $testimonial);
         });
-        View::composer('home.index',function($view){
-            $teamMembers=Team::get();
-            $view->with('teamMembers',$teamMembers);
+        View::composer('home.index', function ($view) {
+            $teamMembers = Team::get();
+            $view->with('teamMembers', $teamMembers);
         });
-        View::composer('home.index',function($view){
-            $faqs=Faq::where('type','home-page')->get();
-            $view->with('faqs',$faqs);
+        View::composer('home.index', function ($view) {
+            $faqs = Faq::where('type', 'home-page')->get();
+            $view->with('faqs', $faqs);
         });
 
     }

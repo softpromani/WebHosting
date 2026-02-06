@@ -57,7 +57,7 @@
                         <h3 class="alt-font fw-600 text-dark-gray ls-minus-1px">
                             Smart, Secure & Managed IT Solutions
                             <span class="text-highlight fw-800">
-                                <span class="bg-gradient-emerald-blue-emerald-green h-8px bottom-10px opacity-6"></span>
+                                <span class="h-8px bottom-10px opacity-6" style="background: var(--primary-color);"></span>
                             </span>
                         </h3>
                         <p class="mb-35px sm-mb-25px">
@@ -77,7 +77,8 @@
                                         <g id="Layer_x0020_1">
                                             <metadata id="CorelCorpID_0Corel-Layer"></metadata>
                                             <path class="fil0"
-                                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.75 20.93,-210.07 184.09,-378.37 392.05,-407.75 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.75 20.93,-210.07 184.09,-378.37 392.05,-407.75 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                                style="fill: var(--primary-color);">
                                             </path>
                                         </g>
                                     </svg>
@@ -402,7 +403,8 @@
         <section class="case-studies py-5">
             <div class="container text-center mb-5">
                 <h2 class="common-section-heading section-heading mb-3">Featured Case Studies</h2>
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem;">Real Results. Real Business Transformation.</h3>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; color: var(--primary-color);">Real Results. Real Business
+                    Transformation.</h3>
                 <p class="section-subtitle mb-4">
                     Discover how Mounteko Global Solutions enables businesses to modernize their IT infrastructure, enhance
                     cybersecurity, and scale with confidence. Our case studies highlight real-world success through managed

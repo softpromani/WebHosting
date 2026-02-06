@@ -21,7 +21,8 @@
 <link href="{{ asset('home/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
 <!-- Template Main CSS File -->
 <link href="{{ asset('home/assets/css/style.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -49,10 +50,38 @@
     gtag('config', 'G-EQNV0FBQ99');
 </script>
 
+@php
+    function hex2rgb($hex)
+    {
+        $hex = str_replace("#", "", $hex);
+        if (strlen($hex) == 3) {
+            $r = hexdec(substr($hex, 0, 1) . substr($hex, 0, 1));
+            $g = hexdec(substr($hex, 1, 1) . substr($hex, 1, 1));
+            $b = hexdec(substr($hex, 2, 1) . substr($hex, 2, 1));
+        } else {
+            $r = hexdec(substr($hex, 0, 2));
+            $g = hexdec(substr($hex, 2, 2));
+            $b = hexdec(substr($hex, 4, 2));
+        }
+        return "$r, $g, $b";
+    }
+    $primary_color = $theme_setting->where('key', 'primary')->first()->value ?? '#00838d';
+    $secondary_color = $theme_setting->where('key', 'secondary')->first()->value ?? '#004d55';
+@endphp
 <style>
     :root {
-        --primary-color: {{ $theme_setting->where('key', 'primary')->first()->value ?? '#65E82E' }};
-        --secondary-color: {{ $theme_setting->where('key', 'secondary')->first()->value ?? '#3b8af2' }};
+        --primary-color:
+            {{ $primary_color }}
+        ;
+        --primary-color-rgb:
+            {{ hex2rgb($primary_color) }}
+        ;
+        --secondary-color:
+            {{ $secondary_color }}
+        ;
+        --secondary-color-rgb:
+            {{ hex2rgb($secondary_color) }}
+        ;
         --text-color: #fff !important;
     }
 </style>

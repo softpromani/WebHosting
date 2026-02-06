@@ -119,7 +119,7 @@
     width: 100%;
     height: 100%;
     padding: 40px 30px;
-    background: linear-gradient(135deg, #00838d, #004d55);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 20px;
     color: #fff;
     display: flex;
@@ -204,7 +204,7 @@
 .service-card:hover .service-card-content i {
     transform: translateZ(50px) scale(1.1);
     background: #fff;
-    color: #00838d;
+    color: var(--primary-color);
 }
 
 /* Heading Styling */
@@ -429,7 +429,7 @@
 }
 
 .btn-see-more {
-    background-color: #008080;
+    background-color: var(--primary-color);
     /* Theme Teal */
     color: #fff;
     border: 2px solid transparent;
@@ -540,7 +540,7 @@ body {
     text-decoration: none;
     font-size: 1rem;
     padding-bottom: 5px;
-    border-bottom: 2px solid #008080;
+    border-bottom: 2px solid var(--primary-color);
     transition: all 0.3s ease;
 }
 
@@ -739,7 +739,7 @@ body {
 .case-card:hover:before {
     opacity: 0.9;
     /* Darker on hover to make text readable */
-    background: linear-gradient(to top, #00838d 0%, rgba(0, 131, 141, 0.4) 100%);
+    background: linear-gradient(to top, var(--primary-color) 0%, rgba(var(--primary-color-rgb), 0.4) 100%);
     /* Teal tint on hover */
 }
 
@@ -861,13 +861,13 @@ body {
 .btn-shiny-lizard {
     position: relative;
     padding: 12px 35px;
-    background: #00838d;
+    background: var(--primary-color);
     /* Theme Teal */
     font-size: 1rem;
     font-weight: 500;
     color: #fff;
     /* White text on teal background */
-    border: 3px solid #00838d;
+    border: 3px solid var(--primary-color);
     border-radius: 12px;
     /* 12px radius */
     box-shadow: 0 4px 10px rgba(0, 131, 141, 0.2);
@@ -1131,7 +1131,7 @@ body {
     width: 50px;
     /* Reduced from 60px */
     height: 50px;
-    background-color: rgba(32, 201, 151, 0.1);
+    background-color: rgba(var(--primary-color-rgb), 0.1);
     /* Soft Teal circular bg */
     border-radius: 50%;
     display: flex;
@@ -1145,7 +1145,7 @@ body {
 .service-card i {
     font-size: 1.2rem;
     /* Reduced icon size 20% */
-    color: #20c997;
+    color: var(--primary-color);
     /* Teal accent */
 }
 
@@ -1178,7 +1178,7 @@ body {
     margin-top: auto;
     /* Button Styling */
     padding: 10px 24px;
-    border: 2px solid #20c997;
+    border: 2px solid var(--primary-color);
     border-radius: 50px;
     background: transparent;
     width: fit-content;
@@ -1187,7 +1187,7 @@ body {
 }
 
 .service-cta:hover {
-    background: #20c997;
+    background: var(--primary-color);
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(32, 201, 151, 0.3);
