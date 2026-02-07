@@ -30,9 +30,9 @@
                 <ul class="footer-links-list">
                     <li><a href="{{ route('services.network-architecture') }}">Network Solutions</a></li>
                     <li><a href="{{ route('security') }}">Cybersecurity</a></li>
-                    <li><a href="{{ route('pricing') }}">Cloud Hosting</a></li>
-                    <li><a href="{{ route('home') }}#core-services">Managed IT</a></li>
-                    <li><a href="{{ route('partner') }}">Partner Program</a></li>
+                    <li><a href="#">Cloud & Infrastructure</a></li>
+                    <li><a href="{{ route('home') }}#core-services">Managed Services</a></li>
+                    <li><a href="#"> Business workflow & automation</a></li>
                 </ul>
             </div>
 
@@ -73,7 +73,8 @@
         <!-- Bottom Footer -->
         <div class="footer-bottom">
             <p>&copy; {{ date('Y') }} {{ settingValue('company Name') }}. All rights reserved. Developed by
-                {{ settingValue('developed by') }}</p>
+                {{ settingValue('developed by') }}
+            </p>
         </div>
     </div>
 </footer>

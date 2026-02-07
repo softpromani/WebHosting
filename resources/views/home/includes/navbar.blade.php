@@ -110,9 +110,9 @@
                     </div>
                 </li>
 
-                <li class="nav-link">
+                <!-- <li class="nav-link">
                     <a href="{{ route('pricing') }}"><span>Pricing</span></a>
-                </li>
+                </li> -->
                 <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li class="dropdown"><a href="{{ route('aboutUs') }}"><span>About Us</span></a></li>
