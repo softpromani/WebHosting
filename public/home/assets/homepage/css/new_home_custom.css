@@ -1319,7 +1319,7 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(transparent, transparent, transparent, #00838d, #0d233e, #00838d);
+    background: conic-gradient(transparent, transparent, transparent, var(--primary-color), #0d233e, var(--primary-color));
     animation: rotate 4s linear infinite;
     opacity: 0;
     transition: opacity 0.3s;
@@ -1343,7 +1343,7 @@ body {
 
 .service-card-new:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 131, 141, 0.15);
+    box-shadow: 0 20px 40px rgba(var(--primary-color-rgb), 0.15);
     border-color: transparent;
     /* Hide static border */
 }
@@ -1353,14 +1353,14 @@ body {
     width: 80px;
     height: 80px;
     margin: 0 auto 20px;
-    background: rgba(0, 131, 141, 0.1);
+    background: rgba(var(--primary-color-rgb), 0.1);
     /* Light Teal tint */
     border-radius: 50% 50% 50% 10%;
     /* Blobby shape */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00838d;
+    color: var(--primary-color);
     /* Theme Teal */
     font-size: 2rem;
     position: relative;
@@ -1370,10 +1370,10 @@ body {
 }
 
 .service-card-new:hover .service-icon-new-wrapper {
-    background: #00838d;
+    background: var(--primary-color);
     color: #fff;
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 5px 15px rgba(0, 131, 141, 0.3);
+    box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.3);
 }
 
 .service-title-new {
@@ -1387,7 +1387,7 @@ body {
 }
 
 .service-card-new:hover .service-title-new {
-    color: #00838d;
+    color: var(--primary-color);
     /* Teal highlight */
 }
 
@@ -1648,11 +1648,11 @@ body {
 /* Hover Effect: Light Tint & Strong Shadow */
 .network-service-card:hover {
     transform: translateY(-8px);
-    background: #f0fbff;
-    /* Very Light Teal Tint */
-    box-shadow: 0 20px 60px rgba(0, 131, 141, 0.2);
-    /* "Shadow Color" - Teal Glow */
-    border-color: rgba(0, 131, 141, 0.2);
+    background: rgba(var(--primary-color-rgb), 0.05);
+    /* Very Light Primary Color Tint */
+    box-shadow: 0 20px 60px rgba(var(--primary-color-rgb), 0.2);
+    /* Shadow Color - Primary Glow */
+    border-color: rgba(var(--primary-color-rgb), 0.2);
 }
 
 /* Remove the dark slide-up background */
@@ -1675,23 +1675,23 @@ body {
 .network-service-card .icon-wrapper {
     width: 75px;
     height: 75px;
-    background: rgba(0, 131, 141, 0.08);
+    background: rgba(var(--primary-color-rgb), 0.08);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 25px;
-    color: #00838d;
+    color: var(--primary-color);
     font-size: 1.3rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .network-service-card:hover .icon-wrapper {
-    background: #00838d;
-    /* Teal Icon on Hover */
-    color: #ffffff;
+    background: var(--primary-color);
+    /* Primary Color Icon on Hover */
+    color: #ffffff !important;
     transform: scale(1.15) rotate(10deg);
-    box-shadow: 0 10px 25px rgba(0, 131, 141, 0.3);
+    box-shadow: 0 10px 25px rgba(var(--primary-color-rgb), 0.3);
 }
 
 /* Title Styling - Keep Dark */
@@ -1713,17 +1713,17 @@ body {
 }
 
 .network-service-card .service-list i {
-    color: #00838d;
+    color: var(--primary-color);
     margin-right: 12px !important;
     font-size: 0.9rem;
-    background: rgba(0, 131, 141, 0.1);
+    background: rgba(var(--primary-color-rgb), 0.1);
     padding: 5px;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 .network-service-card:hover .service-list i {
-    background: #00838d;
+    background: var(--primary-color);
     color: #ffffff;
 }
 
@@ -1791,8 +1791,8 @@ body {
 
 .process-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 131, 141, 0.15);
-    border-color: rgba(0, 131, 141, 0.3);
+    box-shadow: 0 20px 40px rgba(var(--primary-color-rgb), 0.15);
+    border-color: rgba(var(--primary-color-rgb), 0.3);
 }
 
 /* Step Number Badge */
@@ -1801,7 +1801,7 @@ body {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: #00838d;
+    background: var(--primary-color);
     color: #fff;
     width: 30px;
     height: 30px;
@@ -1811,7 +1811,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 10px rgba(0, 131, 141, 0.3);
+    box-shadow: 0 5px 10px rgba(var(--primary-color-rgb), 0.3);
     border: 2px solid #fff;
 }
 
@@ -1820,18 +1820,18 @@ body {
     width: 70px;
     height: 70px;
     margin: 0 auto 20px;
-    background: #f0fbff;
+    background: rgba(var(--primary-color-rgb), 0.05);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00838d;
+    color: var(--primary-color);
     font-size: 1.5rem;
     transition: all 0.4s ease;
 }
 
 .process-card:hover .process-icon-box {
-    background: #00838d;
+    background: var(--primary-color);
     color: #fff;
     transform: rotate(360deg);
 }
@@ -1923,6 +1923,7 @@ body {
 .object-fit-cover {
     object-fit: cover;
 }
+
 /* =========================================
    Premium Modern Footer
    ========================================= */
@@ -2022,7 +2023,8 @@ body {
     margin-top: 4px;
 }
 
-.footer-contact-item span, .footer-contact-item a {
+.footer-contact-item span,
+.footer-contact-item a {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
@@ -2045,14 +2047,14 @@ body {
     .premium-footer {
         padding: 60px 0 30px;
     }
+
     .footer-brand-col {
         padding-right: 0;
         margin-bottom: 40px;
     }
+
     .footer-heading {
         margin-top: 30px;
         margin-bottom: 20px;
     }
 }
-
-

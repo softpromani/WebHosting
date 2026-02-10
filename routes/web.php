@@ -39,6 +39,11 @@ Route::get('about-us', [HomeController::class, 'newAboutUs'])->name('aboutUs');
 Route::get('category-description/{slug}', [HomeController::class, 'categoryDescription'])->name('category-description');
 Route::get('/', [HomeController::class, 'newHome'])->name('home');
 Route::get('/services/network-architecture', [HomeController::class, 'networkArchitecture'])->name('services.network-architecture');
+Route::get('/services/enterprise-wireless-solutions', [HomeController::class, 'enterpriseWirelessSolutions'])->name('services.enterprise-wireless-solutions');
+Route::get('/services/vpn-remote-access', [HomeController::class, 'vpnRemoteAccess'])->name('services.vpn-remote-access');
+Route::get('/services/network-monitoring', [HomeController::class, 'networkMonitoring'])->name('services.network-monitoring');
+Route::get('/services/firewall-router-configuration', [HomeController::class, 'firewallRouterConfiguration'])->name('services.firewall-router-configuration');
+Route::get('/services/disaster-recovery-redundancy', [HomeController::class, 'disasterRecoveryRedundancy'])->name('services.disaster-recovery-redundancy');
 
 
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');

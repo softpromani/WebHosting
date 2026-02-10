@@ -50,11 +50,16 @@
                                         <div class="content-grid">
                                             <a href="{{ route('services.network-architecture') }}">Network architecture
                                                 design (LAN, WAN, SD-WAN)</a>
-                                            <a href="#">Enterprise wireless solutions and implementation</a>
-                                            <a href="#">VPN setup and remote access solutions</a>
-                                            <a href="#">Network monitoring and performance optimization</a>
-                                            <a href="#">Firewall & router configuration</a>
-                                            <a href="#">Disaster recovery & network redundancy planning</a>
+                                            <a href="{{ route('services.enterprise-wireless-solutions') }}">Enterprise
+                                                wireless solutions and implementation</a>
+                                            <a href="{{ route('services.vpn-remote-access') }}">VPN setup and remote
+                                                access solutions</a>
+                                            <a href="{{ route('services.network-monitoring') }}">Network monitoring and
+                                                performance optimization</a>
+                                            <a href="{{ route('services.firewall-router-configuration') }}">Firewall &
+                                                router configuration</a>
+                                            <a href="{{ route('services.disaster-recovery-redundancy') }}">Disaster
+                                                recovery & network redundancy planning</a>
                                         </div>
                                     </div>
                                     <div id="mega-tab-cybersecurity" class="mega-cat-content">
