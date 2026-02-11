@@ -44,6 +44,7 @@ Route::get('/services/vpn-remote-access', [HomeController::class, 'vpnRemoteAcce
 Route::get('/services/network-monitoring', [HomeController::class, 'networkMonitoring'])->name('services.network-monitoring');
 Route::get('/services/firewall-router-configuration', [HomeController::class, 'firewallRouterConfiguration'])->name('services.firewall-router-configuration');
 Route::get('/services/disaster-recovery-redundancy', [HomeController::class, 'disasterRecoveryRedundancy'])->name('services.disaster-recovery-redundancy');
+Route::get('/services/security-audits-vulnerability-assessments', [HomeController::class, 'securityAudits'])->name('services.security-audits');
 
 
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
@@ -53,7 +54,7 @@ Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');
 
 Route::get('pricing', [HomeController::class, 'pricing'])->name('pricing');
-Route::get('security', [HomeController::class, 'security'])->name('security');
+Route::get('security', [HomeController::class, 'securityAudits'])->name('security');
 Route::get('partner', [HomeController::class, 'partner'])->name('partner');
 Route::get('why-us', [HomeController::class, 'whyUsPage'])->name('whyUsPage');
 Route::get('faq', [HomeController::class, 'faq'])->name('faq');

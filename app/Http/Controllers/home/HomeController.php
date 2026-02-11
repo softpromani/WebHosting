@@ -90,6 +90,11 @@ class HomeController extends Controller
         return view('home.services.network_solution.disaster_recovery_redundancy');
     }
 
+    public function securityAudits()
+    {
+        return view('home.services.cybersecurity.security_audits');
+    }
+
     public function contactUs()
     {
         return view('home.contact_us');
@@ -174,14 +179,6 @@ class HomeController extends Controller
     {
         $PricePlan = PricePlan::latest()->get();
         return view('home.pricing', compact('PricePlan'));
-    }
-    public function security()
-    {
-        $faqs = Faq::where('type', 'security-page')->orderBy('created_at', 'desc')->take(6)->get();
-        $faqs = Faq::orderBy('created_at', 'desc')->take(6)->get();
-        $testimonial = Testimonial::get();
-        $blogs = Blog::with('blogImage')->get();
-        return view('home.company.security', compact('testimonial', 'faqs', 'blogs'));
     }
     public function partner()
     {

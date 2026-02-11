@@ -65,7 +65,8 @@
                                     <div id="mega-tab-cybersecurity" class="mega-cat-content">
                                         <h4>Cybersecurity Services</h4>
                                         <div class="content-grid">
-                                            <a href="#">Security audits & vulnerability assessments</a>
+                                            <a href="{{ route('services.security-audits') }}">Security audits &
+                                                vulnerability assessments</a>
                                             <a href="#">Penetration testing (internal/external/web/mobile)</a>
                                             <a href="#">Endpoint protection & antivirus solutions</a>
                                             <a href="#">Network intrusion detection and prevention systems (IDS/IPS)</a>
@@ -131,7 +132,7 @@
                 </li>
 
                 <li class="nav-link">
-                    <a href="{{ route('download') }}">Downloads</a>
+                    <a href="#">Downloads</a>
                 </li>
                 <li>
                     <a class="nav-link scrollto" href="{{ route('contactUs') }}">Contact Us</a>
