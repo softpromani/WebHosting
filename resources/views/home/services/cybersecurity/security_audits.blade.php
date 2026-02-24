@@ -11,7 +11,7 @@
 @section('content')
     <main id="main">
         <!-- HEADER 1 (TOP) -->
-        <section class="header1-section">
+        {{-- <section class="header1-section">
             <div class="h1-hero-main">
                 <div class="h1-left">
                     <h1>Our Services</h1>
@@ -49,7 +49,7 @@
                     <div class="trust-point"><i class="bi bi-check-lg"></i> Data Security & Compliance</div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!-- HEADER 2 (SECTION 2) -->
         <section class="header2-section">
