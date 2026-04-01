@@ -45,8 +45,22 @@ Route::get('/services/network-monitoring', [HomeController::class, 'networkMonit
 Route::get('/services/firewall-router-configuration', [HomeController::class, 'firewallRouterConfiguration'])->name('services.firewall-router-configuration');
 Route::get('/services/disaster-recovery-redundancy', [HomeController::class, 'disasterRecoveryRedundancy'])->name('services.disaster-recovery-redundancy');
 Route::get('/services/security-audits-vulnerability-assessments', [HomeController::class, 'securityAudits'])->name('services.security-audits');
+Route::get('/services/penetration-testing', [HomeController::class, 'penetrationTesting'])->name('services.penetration-testing');
+Route::get('/services/endpoint-protection', [HomeController::class, 'endpointProtection'])->name('services.endpoint-protection');
+Route::get('/services/network-intrusion-detection', [HomeController::class, 'networkIntrusionDetection'])->name('services.network-intrusion-detection');
+Route::get('/services/email-phishing-protection', [HomeController::class, 'emailPhishingProtection'])->name('services.email-phishing-protection');
+Route::get('/services/security-operations-center-setup-monitoring', [HomeController::class, 'socSetupMonitoring'])->name('services.soc_setup_monitoring');
+Route::get('/services/incident-response-recovery', [HomeController::class, 'incidentResponseRecovery'])->name('services.incident_response_recovery');
 
+// Development Services
+Route::get('/services/custom-software-development', [HomeController::class, 'customSoftwareDevelopment'])->name('services.custom_software');
 
+// Cloud & IT Infrastructure Services
+Route::get('/services/cloud-architecture-consulting', [HomeController::class, 'cloudArchitectureConsulting'])->name('services.cloud_architecture');
+Route::get('/services/managed-it-services', [HomeController::class, 'managedItServices'])->name('services.managed_it');
+Route::get('/services/managed-it/it-support-helpdesk', [HomeController::class, 'itSupportHelpdesk'])->name('services.it_support_helpdesk');
+
+// Miscellaneous
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
 Route::get('download', [HomeController::class, 'downloads'])->name('download');
 Route::get('product/{slug}', [ProductController::class, 'index'])->name('product');

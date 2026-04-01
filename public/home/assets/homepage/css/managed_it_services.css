@@ -1,0 +1,229 @@
+/* --- MANAGED IT SERVICES PAGE STYLES --- */
+.mit-main {
+    font-family: 'Inter', sans-serif;
+    color: #2b3b51;
+    overflow-x: hidden;
+}
+
+/* 1. HERO SECTION */
+.mit-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #f8fbff 0%, #edf2f7 100%);
+    position: relative;
+}
+
+.mit-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.mit-hero-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mit-hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #0b1c3d;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mit-hero-desc {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* 2. FEATURE SECTION (Left Content - Right Image) */
+.mit-feature {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.mit-feature-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.mit-feature-content {
+    flex: 1;
+    min-width: 400px;
+}
+
+.mit-feature-tag {
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.mit-feature-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0b1c3d;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.mit-feature-text {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.mit-feature-image {
+    flex: 1;
+    min-width: 400px;
+    position: relative;
+}
+
+.mit-feature-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* 3. SERVICE TYPES GRID (6 Cards) */
+.mit-services {
+    padding: 100px 0;
+    background: #f7f9fc;
+}
+
+.mit-services-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mit-services-title {
+    font-size: 2.22rem;
+    font-weight: 800;
+    color: #0b1c3d;
+}
+
+.mit-services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mit-service-card {
+    background: #ffffff;
+    padding: 45px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mit-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.1);
+    border-color: #2563eb;
+}
+
+.mit-card-icon {
+    width: 65px;
+    height: 65px;
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563eb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.mit-service-card:hover .mit-card-icon {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.mit-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b1c3d;
+    margin-bottom: 18px;
+}
+
+.mit-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mit-card-list li {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.mit-card-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .mit-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mit-hero-title {
+        font-size: 2.5rem;
+    }
+    .mit-feature {
+        padding: 60px 0;
+    }
+    .mit-feature-container {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mit-services-grid {
+        grid-template-columns: 1fr;
+    }
+    .mit-feature-content, .mit-feature-image {
+        min-width: 100%;
+    }
+    .mit-hero-title {
+        font-size: 2rem;
+    }
+}

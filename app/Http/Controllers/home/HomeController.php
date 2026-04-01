@@ -95,6 +95,56 @@ class HomeController extends Controller
         return view('home.services.cybersecurity.security_audits');
     }
 
+    public function penetrationTesting()
+    {
+        return view('home.services.cybersecurity.penetration_testing');
+    }
+
+    public function endpointProtection()
+    {
+        return view('home.services.cybersecurity.endpoint_protection');
+    }
+
+    public function networkIntrusionDetection()
+    {
+        return view('home.services.cybersecurity.network_intrusion_detection');
+    }
+
+    public function emailPhishingProtection()
+    {
+        return view('home.services.cybersecurity.email_phishing');
+    }
+
+    public function socSetupMonitoring()
+    {
+        return view('home.services.cybersecurity.soc_setup_monitoring');
+    }
+
+    public function incidentResponseRecovery()
+    {
+        return view('home.services.cybersecurity.incident_response_recovery');
+    }
+
+    public function customSoftwareDevelopment()
+    {
+        return view('home.services.development.custom_software');
+    }
+
+    public function cloudArchitectureConsulting()
+    {
+        return view('home.services.cloud.cloud_architecture');
+    }
+
+    public function managedItServices()
+    {
+        return view('home.services.managed_it.managed_it');
+    }
+
+    public function itSupportHelpdesk()
+    {
+        return view('home.services.managed_it.it_support_helpdesk');
+    }
+
     public function contactUs()
     {
         return view('home.contact_us');

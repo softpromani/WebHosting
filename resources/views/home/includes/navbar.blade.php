@@ -17,23 +17,23 @@
                             <div class="mega-menu-inner">
                                 <!-- Sidebar -->
                                 <div class="mega-menu-sidebar">
-                                    <div class="mega-cat-link active" data-target="mega-tab-network">
+                                    <div class="mega-cat-link active" data-target="mega-tab-network" onclick="window.location.href='{{ route('services.network-architecture') }}'">
                                         <span>Network Solutions</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
-                                    <div class="mega-cat-link" data-target="mega-tab-cybersecurity">
+                                    <div class="mega-cat-link" data-target="mega-tab-cybersecurity" onclick="window.location.href='{{ route('security') }}'">
                                         <span>Cybersecurity Services</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
-                                    <div class="mega-cat-link" data-target="mega-tab-software">
+                                    <div class="mega-cat-link" data-target="mega-tab-software" onclick="window.location.href='{{ route('services.custom_software') }}'">
                                         <span>Software & Web Development</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
-                                    <div class="mega-cat-link" data-target="mega-tab-cloud">
+                                    <div class="mega-cat-link" data-target="mega-tab-cloud" onclick="window.location.href='{{ route('services.cloud_architecture') }}'">
                                         <span>Cloud & IT Infrastructure</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
-                                    <div class="mega-cat-link" data-target="mega-tab-managed">
+                                    <div class="mega-cat-link" data-target="mega-tab-managed" onclick="window.location.href='{{ route('services.managed_it') }}'">
                                         <span>Managed IT Services</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
@@ -46,7 +46,7 @@
                                 <!-- Content Area -->
                                 <div class="mega-menu-details">
                                     <div id="mega-tab-network" class="mega-cat-content active">
-                                        <h4>Network Solutions</h4>
+                                        <h4 style="cursor: pointer;" onclick="window.location.href='{{ route('services.network-architecture') }}'">Network Solutions</h4>
                                         <div class="content-grid">
                                             <a href="{{ route('services.network-architecture') }}">Network architecture
                                                 design (LAN, WAN, SD-WAN)</a>
@@ -63,30 +63,30 @@
                                         </div>
                                     </div>
                                     <div id="mega-tab-cybersecurity" class="mega-cat-content">
-                                        <h4>Cybersecurity Services</h4>
+                                        <h4 style="cursor: pointer;" onclick="window.location.href='{{ route('security') }}'">Cybersecurity Services</h4>
                                         <div class="content-grid">
                                             <a href="{{ route('services.security-audits') }}">Security audits &
                                                 vulnerability assessments</a>
-                                            <a href="#">Penetration testing (internal/external/web/mobile)</a>
-                                            <a href="#">Endpoint protection & antivirus solutions</a>
-                                            <a href="#">Network intrusion detection and prevention systems (IDS/IPS)</a>
-                                            <a href="#">Email & phishing protection</a>
-                                            <a href="#">Security Operations Center (SOC) setup & monitoring</a>
-                                            <a href="#">Incident response & recovery</a>
+                                            <a href="{{ route('services.penetration-testing') }}">Penetration testing (internal/external/web/mobile)</a>
+                                            <a href="{{ route('services.endpoint-protection') }}">Endpoint protection & antivirus solutions</a>
+                                            <a href="{{ route('services.network-intrusion-detection') }}">Network intrusion detection and prevention systems (IDS/IPS)</a>
+                                            <a href="{{ route('services.email-phishing-protection') }}">Email & phishing protection</a>
+                                            <a href="{{ route('services.soc_setup_monitoring') }}">Security Operations Center (SOC) setup & monitoring</a>
+                                            <a href="{{ route('services.incident_response_recovery') }}">Incident response & recovery</a>
                                         </div>
                                     </div>
                                     <div id="mega-tab-software" class="mega-cat-content">
-                                        <h4>Software & Web Development</h4>
+                                        <h4 style="cursor: pointer;" onclick="window.location.href='{{ route('services.custom_software') }}'">Software & Web Development</h4>
                                         <div class="content-grid">
-                                            <a href="#">Custom software/application development</a>
+                                            <a href="{{ route('services.custom_software') }}">Custom software/application development</a>
                                             <a href="#">Web application design and development</a>
                                             <a href="#">Enterprise workflow automation solutions</a>
                                         </div>
                                     </div>
                                     <div id="mega-tab-cloud" class="mega-cat-content">
-                                        <h4>Cloud & IT Infrastructure</h4>
+                                        <h4 style="cursor: pointer;" onclick="window.location.href='{{ route('services.cloud_architecture') }}'">Cloud & IT Infrastructure</h4>
                                         <div class="content-grid">
-                                            <a href="#">Cloud architecture consulting (AWS, Azure, GCP)</a>
+                                            <a href="{{ route('services.cloud_architecture') }}">Cloud architecture consulting (AWS, Azure, GCP)</a>
                                             <a href="#">Hybrid or multi-cloud deployments</a>
                                             <a href="#">Cloud application migration</a>
                                             <a href="#">Virtualization & containerization (VMware, Docker)</a>
@@ -94,9 +94,9 @@
                                         </div>
                                     </div>
                                     <div id="mega-tab-managed" class="mega-cat-content">
-                                        <h4>Managed IT Services</h4>
+                                        <h4><a href="{{ route('services.managed_it') }}" style="color: inherit; text-decoration: none;">Managed IT Services</a></h4>
                                         <div class="content-grid">
-                                            <a href="#">End-to-end IT support & helpdesk</a>
+                                            <a href="{{ route('services.it_support_helpdesk') }}">End-to-end IT support & helpdesk</a>
                                             <a href="#">Proactive system monitoring and maintenance</a>
                                             <a href="#">Patch management and updates</a>
                                             <a href="#">Hardware and software procurement</a>
