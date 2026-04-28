@@ -1,8 +1,10 @@
 @extends('home.includes.layout')
 @section('title', 'Frequently Asked Questions by Users ')
 @section('header-area')
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}">
     <link href="{{ asset('home/assets/css/whyUs.css') }}" rel="stylesheet">
-
 @endsection
 @section('content')
 

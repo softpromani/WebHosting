@@ -2,6 +2,9 @@
 @section('title', 'Become an Official Affiliate Partner with Mounteko Hosting')
 @section('meta-description', 'Join our hosting affiliate program and enjoy high affiliate earnings, fast payouts, and top conversion rates. We are uniquely positioned to offer the best web hosting affiliate program.')
 @section('header-area')
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}">
     <link href="{{ asset('home/assets/css/partner.css') }}" rel="stylesheet">
 @endsection
 @section('content')

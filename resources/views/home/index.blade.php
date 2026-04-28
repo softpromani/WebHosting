@@ -158,158 +158,7 @@
             }
             </script>
 
-<style>
 
-
-/* Hide title + description initially */
-.feature-box-content {
-    opacity: 0 !important;
-    transform: translateY(20px) !important;
-    transition: opacity 0.4s ease, transform 0.4s ease !important;
-    pointer-events: none !important;
-}
-
-/* Show title + description on hover */
-.feature-box:hover .feature-box-content {
-    opacity: 1 !important;
-    transform: translateY(0px) !important;
-    pointer-events: auto !important;
-}
-
-.user-blog {
-            background: #f6f9fe;
-            padding: 50px 0 50px;
-        }
-
-        .user-blog:before {
-            position: absolute;
-            top: -100px;
-            left: 0;
-            content: " ";
-            background: url(img/user-blog.png);
-            background-size: 100% 100px;
-            width: 100%;
-            height: 100px;
-            float: left;
-            z-index: 99;
-        }
-
-        div#owl-demo1 .item {
-            padding: 0 15px;
-        }
-
-        .blog-grid {
-            background: #fff;
-            box-shadow: 0px 0px 20px #c3c3c3;
-            margin: 10px 0;
-            border: 1px solid #d6d6d6;
-            border-radius: 1px;
-        }
-
-        .discretion-blog {
-            padding: 15px;
-        }
-
-        .discretion-blog p {
-            font-size: 15px;
-            color: #454343;
-        }
-
-        .discretion-blog h4 {
-            color: #454343;
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .discretion-blog .btn {
-            color: #fefeff;
-            background: #454343;
-            width: 100%;
-            text-transform: uppercase;
-            border-radius: 0px;
-            margin-top: 10px;
-            -webkit-transform: perspective(1px) translateZ(0);
-            -moz-transform: perspective(1px) translateZ(0);
-            -o-transform: perspective(1px) translateZ(0);
-            transform: perspective(122px) translateZ(0);
-        }
-
-
-        .discretion-blog .btn:hover {
-            color: #ffffff;
-        }
-
-        .discretion-blog .btn:before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #79b82d;
-            -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-            -webkit-transform-origin: 0 50%;
-            transform-origin: 0 50%;
-            -webkit-transition-property: transform;
-            transition-property: transform;
-            -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-            -webkit-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
-            border: 2px solid #79b82d;
-        }
-
-        .discretion-blog .btn:hover:before {
-            -webkit-transform: scaleX(1);
-            -moz-transform: scaleX(1);
-            -o-transform: scaleX(1);
-            transform: scaleX(1);
-        }
-
-        .date-blog {
-            background: #82b53f;
-            width: 70px;
-            position: absolute;
-            bottom: 0;
-            left: 15px;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0px;
-        }
-
-        .date-blog:after {
-            width: 0;
-            height: 0;
-            content: "";
-            border-left: 0 solid transparent;
-            border-right: 70px solid transparent;
-            border-bottom: 12px solid #82b53f;
-            top: -11px;
-            position: absolute;
-            left: 0;
-        }
-
-        .img-date {
-            position: relative;
-        }
-
-        .user-blog .owl-theme .owl-controls .owl-page span {
-            width: 17px;
-            height: 17px;
-            background: #454343;
-            opacity: 1;
-        }
-
-        .user-blog .owl-theme .owl-controls .owl-page.active span,
-        .user-blog .owl-theme .owl-controls.clickable .owl-page:hover span {
-            background: #82b53f;
-        }
-
-
-</style>
 @endsection
 @section('content')
     <!-- ======= Hero Section ======= -->
@@ -399,44 +248,7 @@
             </div>
         </section>
 
-        <!-- Floating Animation Style -->
-        <style>
-            .hover-animate {
-                transition: transform 0.3s ease-in-out;
-                position: relative;
-            }
 
-            .hover-animate:hover {
-                animation: moveAround 3s infinite alternate ease-in-out;
-            }
-
-            @keyframes moveAround {
-                0% {
-                    top: 0px;
-                    left: 0px;
-                }
-
-                25% {
-                    top: -15px;
-                    left: 15px;
-                }
-
-                50% {
-                    top: 15px;
-                    left: -15px;
-                }
-
-                75% {
-                    top: -15px;
-                    left: -15px;
-                }
-
-                100% {
-                    top: 0px;
-                    left: 0px;
-                }
-            }
-        </style>
 
         <!-- end section -->
 
@@ -560,38 +372,7 @@
                                 data-aos="fade-up">
                         </div>
 
-                        <style>
-                            .hover-animate-2:hover {
-                                animation: moveAround2 3s infinite alternate ease-in-out;
-                            }
 
-                            @keyframes moveAround2 {
-                                0% {
-                                    bottom: -225px;
-                                    right: 150px;
-                                }
-
-                                25% {
-                                    bottom: -240px;
-                                    right: 165px;
-                                }
-
-                                50% {
-                                    bottom: -225px;
-                                    right: 150px;
-                                }
-
-                                75% {
-                                    bottom: -240px;
-                                    right: 165px;
-                                }
-
-                                100% {
-                                    bottom: -225px;
-                                    right: 150px;
-                                }
-                            }
-                        </style>
 
                     </div>
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
@@ -699,38 +480,7 @@
                             alt="" style="position: relative;">
                     </div>
 
-                    <style>
-                        .hover-animate:hover {
-                            animation: moveAround 3s infinite alternate ease-in-out;
-                        }
 
-                        @keyframes moveAround {
-                            0% {
-                                top: 0px;
-                                left: 0px;
-                            }
-
-                            25% {
-                                top: -15px;
-                                left: 15px;
-                            }
-
-                            50% {
-                                top: 15px;
-                                left: -15px;
-                            }
-
-                            75% {
-                                top: -15px;
-                                left: -15px;
-                            }
-
-                            100% {
-                                top: 0px;
-                                left: 0px;
-                            }
-                        }
-                    </style>
 
                     <div class="col-xl-4 col-lg-3 col-md-4"
                         data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'>

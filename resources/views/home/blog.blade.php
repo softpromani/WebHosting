@@ -2,13 +2,8 @@
 
 @section('content')
 {{--header  --}}
- <div
-        style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
-           background-size: cover;
-           background-position: center;
-           background-repeat: no-repeat;
-           padding: 80px 0;
-           height: 450px;">
+ <div class="optech-breadcrumb"
+        style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');">
         <div class="container">
             <div class="row gy-4 mt-33">
                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start text-start pt-5" data-aos="fade-up"
@@ -29,16 +24,7 @@
     </div>
 {{-- header --}}
 
-    <style>
-        .text-muted {
-            font-size: 12px;
-        }
 
-        .blogIm {
-
-            width: 100%;
-        }
-    </style>
 
     <div class="row mt-3 p-3">
 
@@ -64,7 +50,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <span class="text-muted">{{ $blog->created_at->format('d-M-y') }}</span>
+                                 <span class="blog-text-muted">{{ $blog->created_at->format('d-M-y') }}</span>
                                 <a href="{{ route('single-blog', $blog->slug) }}" class="text-primary">Read More ...</a>
                             </div>
                         </div>

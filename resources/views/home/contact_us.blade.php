@@ -1,95 +1,13 @@
 @extends('home.includes.layout')
 @section('title', 'Contact Us')
+
+@section('header-area')
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}">
+@endsection
 @section('content')
-    <style>
-        .contact-us-promo {
-            background-color: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
 
-        .contact-us-promo:hover {
-            transform: translateY(-10px);
-        }
-
-        .contact-us-promo .fa-3x {
-            color: var(--primary-color);
-            margin-bottom: 30px;
-        }
-
-        .contact-us-promo h5 {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .contact-us-promo p {
-            font-size: 18px;
-            color: #6c757d;
-        }
-
-        .mai {
-            font-size: 18px;
-            color: #6c757d;
-        }
-
-        .contact-us-promo .btn-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact-us-promo .btn-primary {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .contact-us-form {
-            /* background-color: #f8faff; */
-            padding-top: 60px;
-            padding-bottom: 120px;
-        }
-
-        .contact-us-form .section-heading {
-            margin-bottom: 30px;
-        }
-
-        .contact-us-form .register-form label {
-            font-weight: bold;
-        }
-
-        .contact-us-form .register-form .input-group {
-            margin-bottom: 15px;
-        }
-
-        .contact-us-form .register-form .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            border-radius: 25px;
-            padding: 10px 20px;
-        }
-
-        .contact-us-img {
-            text-align: center;
-        }
-
-        .contact-us-img img {
-            max-width: 100%;
-            width: 80%;
-            height: auto;
-        }
-
-        .bg-solitude-blue {
-            background-color: #F8FAFF;
-            /* background-color: #F0F4FD; */
-        }
-    </style>
     <main id="main">
 
         <!-- ======= Breadcrumbs Section ======= -->
@@ -100,21 +18,13 @@
             $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
             @endphp
             <div class="optech-breadcrumb"
-            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
-                   background-size: cover;
-                   background-position: center;
-                   background-repeat: no-repeat;
-                   display: flex;
-                   align-items: center;
-                   justify-content: center;
-                   text-align: center;
-                   height: 450px;">
+            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');">
                <div class="container">
                     <h1 class="post__title" style="color: white;">Contact us</h1>
                     <nav class="breadcrumbs">
-                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
-                            <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
-                            <li aria-current="page" style="color: white;">Contact us</li>
+                        <ul class="breadcrumb-nav-list">
+                            <li><a href="{{ route('home') }}" class="breadcrumb-link">Home</a></li>
+                            <li aria-current="page" class="breadcrumb-current">Contact us</li>
                         </ul>
                     </nav>
                 </div>

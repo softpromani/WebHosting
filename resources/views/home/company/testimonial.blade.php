@@ -3,17 +3,14 @@
 @section('meta-description', 'Mounteko Cloud Hosting became the #1 QuickBooks Hosting provider due to its best-in-class
     IT infrastructures, lightning-fast services, and exceptional customer care.')
 @section('header-area')
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
     <link href="{{ asset('home/assets/css/whyUs.css') }}" rel="stylesheet">
-
 @endsection
 @section('content')
 
 
-    <style>
-        .bg-working-steps {
-            background: url("home/assets/img/whyUs/bg-03.jpg");
-        }
-    </style>
+
 
     <main id="main">
 
@@ -24,21 +21,13 @@
             $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
         @endphp
         <div class="optech-breadcrumb"
-            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
-         background-size: cover;
-         background-position: center;
-         background-repeat: no-repeat;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         text-align: center;
-         height: 450px;">
+            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');">
             <div class="container">
                 <h1 class="post__title" style="color: white;">Testimonials</h1>
                 <nav class="breadcrumbs">
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
-                        <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
-                        <li aria-current="page" style="color: white;">Testimonials</li>
+                    <ul class="breadcrumb-nav-list">
+                        <li><a href="{{ route('home') }}" class="breadcrumb-link">Home</a></li>
+                        <li aria-current="page" class="breadcrumb-current">Testimonials</li>
                     </ul>
                 </nav>
             </div>

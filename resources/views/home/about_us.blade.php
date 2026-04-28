@@ -13,11 +13,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-responsive.min.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/startup-startup.css') }}"> --}}
 
-    <style>
-        .fontSize85 {
-            font-size: .825rem !important;
-        }
-    </style>
+
 
 @endsection
 @section('content')
@@ -29,21 +25,13 @@
             $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
         @endphp
         <div class="optech-breadcrumb"
-            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 450px;">
+            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');">
             <div class="container">
                 <h1 class="post__title text-white" style="font-size: 2.5rem; margin-bottom: 0px;">About Us</h1>
                 <nav class="breadcrumbs">
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
-                        <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
-                        <li aria-current="page" style="color: white;">About Us</li>
+                    <ul class="breadcrumb-nav-list">
+                        <li><a href="{{ route('home') }}" class="breadcrumb-link">Home</a></li>
+                        <li aria-current="page" class="breadcrumb-current">About Us</li>
                     </ul>
                 </nav>
             </div>

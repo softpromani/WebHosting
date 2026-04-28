@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/cybersecurity_services.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/development_services.css') }}">
-    <style>
-        /* Override global heading sizes for this page */
-        .dev-hero-content h1 { font-size: 28px !important; }
-        .company-title, .dev-services-title, .process-title, .projects-title, .faq-v2-title { font-size: 1.8rem !important; }
-        @media (max-width: 767px) { .dev-services-title { font-size: 1.5rem !important; } }
-    </style>
+
 @endsection
 
 @section('content')

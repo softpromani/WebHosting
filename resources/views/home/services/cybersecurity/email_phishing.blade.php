@@ -42,46 +42,7 @@
         </section>
 
         <!-- PREMIUM SERVICES MENU PILLS -->
-        <style>
-            .service-pill-menu {
-                background: #f8fbff;
-                padding: 30px 0;
-                border-bottom: 2px solid #e1ecf8;
-            }
-            .pill-track {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-            .service-pill {
-                background: #ffffff;
-                color: #4b5d73;
-                padding: 10px 22px;
-                border-radius: 50px;
-                font-size: 14px;
-                font-weight: 600;
-                text-decoration: none !important;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-                transition: all 0.3s ease;
-                border: 1px solid #e1ecf8;
-                display: inline-flex;
-                align-items: center;
-            }
-            .service-pill:hover {
-                background: #4facfe;
-                color: white;
-                transform: translateY(-2px);
-                box-shadow: 0 6px 15px rgba(79,172,254,0.3);
-                border-color: #4facfe;
-            }
-            .service-pill.active {
-                background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
-                color: white;
-                border-color: #1a237e;
-                box-shadow: 0 6px 15px rgba(26,35,126,0.3);
-            }
-        </style>
+
         <div class="service-pill-menu">
             <div class="container">
                 <div class="pill-track">
