@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'End-to-End IT Support & Helpdesk | Mounteko')
+@section('title', 'System Monitoring & Preventive Maintenance | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -18,17 +18,17 @@
                     <!-- Left Column -->
                     <div class="hd-hero-left">
                         <div class="hd-hero-tag">
-                            <i class="bi bi-shield-check"></i> 24/7 TECHNICAL EXCELLENCE
+                            <i class="bi bi-shield-check"></i> 24/7 PROACTIVE SURVEILLANCE & RELIABILITY
                         </div>
-                        <h1 class="hd-hero-title">Complete End-to-End IT Support & Managed Helpdesk Services</h1>
-                        <p class="hd-hero-desc">Equip your organization with reliable, full-spectrum technical assistance. Our dedicated support specialists and proactive monitoring systems work continuously to preserve productivity, secure digital assets, and maintain seamless business continuity.</p>
+                        <h1 class="hd-hero-title">Enterprise-Grade System Monitoring & Preventive Maintenance</h1>
+                        <p class="hd-hero-desc">Ensure continuous business operations with real-time infrastructure oversight. Our automated monitoring and scheduled maintenance eliminate performance degradation before it impacts your bottom line.</p>
 
                         <!-- Quick Features Badges -->
                         <div class="hd-hero-badges">
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Always-On Availability</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Sub-15 Minute Response</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Seasoned IT Professionals</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Secure Issue Handling</div>
+                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> 99.99% Uptime SLA</div>
+                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Predictive Failure Analysis</div>
+                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Patch Compliance Automation</div>
+                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Resource Optimization</div>
                         </div>
 
                         <div class="hd-hero-btns">
@@ -41,23 +41,23 @@
                     <div class="hd-hero-right">
                         <div class="hd-hero-img-wrap">
                             <img src="{{ asset('home/assets/homepage/images/it-support-specialist.png') }}"
-                                alt="IT Support Specialist" class="hd-hero-img">
+                                alt="System Monitoring Specialist" class="hd-hero-img">
 
                             <!-- Floating Card 1 -->
                             <div class="hd-float-card hd-float-1">
-                                <div class="hd-float-icon"><i class="bi bi-lightning-fill"></i></div>
+                                <div class="hd-float-icon"><i class="bi bi-activity"></i></div>
                                 <div class="hd-float-content">
-                                    <strong>15 Minutes</strong>
-                                    <span>Avg. Response Time</span>
+                                    <strong>Real-time</strong>
+                                    <span>Telemetry Monitoring</span>
                                 </div>
                             </div>
 
                             <!-- Floating Card 2 -->
                             <div class="hd-float-card hd-float-2">
-                                <div class="hd-float-icon"><i class="bi bi-headset"></i></div>
+                                <div class="hd-float-icon"><i class="bi bi-tools"></i></div>
                                 <div class="hd-float-content">
-                                    <strong>Active Support</strong>
-                                    <span>24/7 Live Assistance</span>
+                                    <strong>Proactive</strong>
+                                    <span>Scheduled Maintenance</span>
                                 </div>
                             </div>
                         </div>
@@ -72,14 +72,14 @@
                 <!-- Left Content -->
                 <div class="hd-feature-left">
                     <span class="hd-feature-tag">IT SOLUTIONS</span>
-                    <h2 class="hd-feature-title">Integrated Helpdesk Solutions for Uninterrupted Business Flow</h2>
-                    <p class="hd-feature-desc">We deliver a complete suite of IT support capabilities engineered to sustain operational momentum. Functioning as a seamless extension of your internal staff, our model bridges the distance between immediate remote fixes and essential on-location hardware intervention.</p>
+                    <h2 class="hd-feature-title">Holistic Infrastructure Monitoring & Automated System Maintenance</h2>
+                    <p class="hd-feature-desc">We deliver a rigorous maintenance framework that extends the lifecycle of your hardware and software assets. Our approach combines remote telemetry with scheduled on-site servicing to prevent configuration drift, reduce security vulnerabilities, and eliminate unexpected outages.</p>
 
                     <ul class="hd-feature-list">
-                        <li><i class="bi bi-check-circle-fill"></i> Continuous proactive infrastructure oversight</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Accelerated incident identification & remediation</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Seamless extension of your internal team</li>
-                        <li><i class="bi bi-check-circle-fill"></i> End‑to‑end hardware & application lifecycle management</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Continuous performance baseline analysis and anomaly detection</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Automated patch orchestration and vulnerability remediation</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Proactive capacity planning and disk space management</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Server health diagnostics and firmware lifecycle management</li>
                     </ul>
 
                     <div class="hd-feature-actions">
@@ -118,98 +118,98 @@
             <div class="hd-services-container">
                 <div class="hd-section-header">
                     <span class="hd-feature-tag" style="background:#eff6ff;">WHAT WE PROVIDE</span>
-                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Full-Spectrum Technical Support Capabilities</h2>
-                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">We deliver tailored technical solutions that integrate seamlessly with your existing environment, ensuring sustained accessibility and fortified resilience.
+                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Comprehensive System Care for Mission-Critical Environments</h2>
+                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">Technical maintenance protocols designed to stabilize your digital ecosystem, enhance throughput, and fortify operational resilience.
                     </p>
                 </div>
 
                 <div class="hd-services-grid">
-                    <!-- Card 1: Comprehensive IT Helpdesk -->
+                    <!-- Card 1: Performance Monitoring & Telemetry -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-support-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-display"></i></div>
-                        <h3 class="hd-service-title">Comprehensive IT Helpdesk</h3>
+                        <div class="hd-service-icon"><i class="bi bi-speedometer2"></i></div>
+                        <h3 class="hd-service-title">Performance Monitoring & Telemetry</h3>
                         <p class="hd-service-text">
-                            • Hybrid support: remote and on-premise remediation<br>
-                            • Centralized case management and tracking portal<br>
-                            • Direct assistance for workforce productivity tools
+                            • Real-time SNMP & Syslog analysis<br>
+                            • CPU, memory, and I/O bottleneck identification<br>
+                            • Custom threshold alerting and escalation
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 2: Network Connectivity & Stability -->
+                    <!-- Card 2: Proactive Patch Management -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-network-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-broadcast"></i></div>
-                        <h3 class="hd-service-title">Network Connectivity & Stability</h3>
+                        <div class="hd-service-icon"><i class="bi bi-patch-check"></i></div>
+                        <h3 class="hd-service-title">Proactive Patch Management</h3>
                         <p class="hd-service-text">
-                            • Real-time traffic analysis and monitoring<br>
-                            • Bottleneck identification and throughput enhancement<br>
-                            • Rapid resolution of connectivity interruptions
+                            • Operating system security patching<br>
+                            • Third-party application updates<br>
+                            • Automated compliance auditing
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 3: Cybersecurity & Threat Safeguards -->
+                    <!-- Card 3: Hardware Health & Lifecycle -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-security-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-shield-lock"></i></div>
-                        <h3 class="hd-service-title">Cybersecurity & Threat Safeguards</h3>
+                        <div class="hd-service-icon"><i class="bi bi-hdd-network"></i></div>
+                        <h3 class="hd-service-title">Hardware Health & Lifecycle</h3>
                         <p class="hd-service-text">
-                            • Device-level defense and antivirus enforcement<br>
-                            • Perimeter gateway configuration and rule management<br>
-                            • Continuous vulnerability scanning and real‑time alerting
+                            • Predictive SMART disk failure monitoring<br>
+                            • Server temperature & RAID array checks<br>
+                            • End-of-Life (EOL) hardware refresh planning
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 4: Cloud Environment Support -->
+                    <!-- Card 4: Log Management & Analytics -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-cloud-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-cloud-check"></i></div>
-                        <h3 class="hd-service-title">Cloud Environment Support</h3>
+                        <div class="hd-service-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                        <h3 class="hd-service-title">Log Management & Analytics</h3>
                         <p class="hd-service-text">
-                            • Administration of virtual resource pools<br>
-                            • Systematic data replication and restoration<br>
-                            • Resource allocation and cost‑efficiency optimization
+                            • Centralized event log correlation<br>
+                            • SIEM integration for security monitoring<br>
+                            • Root cause analysis for incidents
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 5: Operational Continuity & Data Restoration -->
+                    <!-- Card 5: System Optimization & Tuning -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-backup-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-sd-card"></i></div>
-                        <h3 class="hd-service-title">Operational Continuity & Data Restoration</h3>
+                        <div class="hd-service-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                        <h3 class="hd-service-title">System Optimization & Tuning</h3>
                         <p class="hd-service-text">
-                            • Scheduled, verified data duplication routines<br>
-                            • Rapid file and system state recovery processes<br>
-                            • Disruption planning for sustained operations
+                            • Database index defragmentation<br>
+                            • Startup script validation and cleanup<br>
+                            • VM resource right-sizing optimization
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 6: Proactive System Stewardship -->
+                    <!-- Card 6: Backup Validation & Integrity -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-maint-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-gear-wide-connected"></i></div>
-                        <h3 class="hd-service-title">Proactive System Stewardship</h3>
+                        <div class="hd-service-icon"><i class="bi bi-shield-check"></i></div>
+                        <h3 class="hd-service-title">Backup Validation & Integrity</h3>
                         <p class="hd-service-text">
-                            • Routine patch management and version upgrades<br>
-                            • Backend infrastructure health checks<br>
-                            • Performance tuning for optimal responsiveness
+                            • Automated recovery testing of system state<br>
+                            • Replication monitoring for DR sites<br>
+                            • Immutable backup verification
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
@@ -222,11 +222,11 @@
             <div class="hd-workflow-container">
                 <div class="hd-workflow-header">
                     <span class="hd-workflow-tag">How it Works</span>
-                    <h2 class="hd-workflow-title">Our Methodology for Seamless Technology Management</h2>
+                    <h2 class="hd-workflow-title">Our Maintenance & Monitoring Methodology</h2>
                 </div>
 
                 <div class="hd-steps-row">
-                    <!-- Step 1: Discovery & Evaluation -->
+                    <!-- Step 1: Discovery & Baseline Audit -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
                             <img src="{{ asset('home/assets/homepage/images/it-workflow-audit.png') }}" alt="IT Audit">
@@ -234,12 +234,12 @@
                         <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
                             alt="arrow">
                         <div class="hd-step-info">
-                            <h3 class="hd-step-title">Discovery & Evaluation</h3>
-                            <p class="hd-step-desc">We begin with a thorough review of the current technology landscape to map dependencies and pinpoint areas for improvement or risk.</p>
+                            <h3 class="hd-step-title">Discovery & Baseline Audit</h3>
+                            <p class="hd-step-desc">Deep scan of network topology, installed software versions, and current hardware health metrics to establish a performance baseline.</p>
                         </div>
                     </div>
 
-                    <!-- Step 2: Strategic Alignment & Design -->
+                    <!-- Step 2: Policy Configuration & Automation -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
                             <img src="{{ asset('home/assets/homepage/images/it-workflow-plan.png') }}" alt="IT Plan">
@@ -247,12 +247,12 @@
                         <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
                             alt="arrow">
                         <div class="hd-step-info">
-                            <h3 class="hd-step-title">Strategic Alignment & Design</h3>
-                            <p class="hd-step-desc">We draft a tailored support and management roadmap that corresponds directly with your long-term operational targets and budget.</p>
+                            <h3 class="hd-step-title">Policy Configuration & Automation</h3>
+                            <p class="hd-step-desc">Deploy monitoring agents and configure automated maintenance windows aligned with your operational schedule to minimize end-user disruption.</p>
                         </div>
                     </div>
 
-                    <!-- Step 3: Seamless Integration & Deployment -->
+                    <!-- Step 3: Continuous Remediation & Patching -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
                             <img src="{{ asset('home/assets/homepage/images/it-workflow-implement.png') }}"
@@ -261,19 +261,19 @@
                         <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
                             alt="arrow">
                         <div class="hd-step-info">
-                            <h3 class="hd-step-title">Seamless Integration & Deployment</h3>
-                            <p class="hd-step-desc">We activate robust management toolsets and support protocols without disrupting your daily business activities.</p>
+                            <h3 class="hd-step-title">Continuous Remediation & Patching</h3>
+                            <p class="hd-step-desc">Routine deployment of critical updates and configuration changes during defined change windows, tracked through a dedicated ticketing audit trail.</p>
                         </div>
                     </div>
 
-                    <!-- Step 4: Sustained Oversight & Continuous Improvement -->
+                    <!-- Step 4: Reporting & Strategic Roadmap -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
                             <img src="{{ asset('home/assets/homepage/images/it-workflow-manage.png') }}" alt="IT Manage">
                         </div>
                         <div class="hd-step-info">
-                            <h3 class="hd-step-title">Sustained Oversight & Continuous Improvement</h3>
-                            <p class="hd-step-desc">We provide round-the-clock surveillance, rapid-response remediation, and regular reporting on the health of your technology ecosystem.</p>
+                            <h3 class="hd-step-title">Reporting & Strategic Roadmap</h3>
+                            <p class="hd-step-desc">Monthly executive summaries detailing system health trends, uptime statistics, and predictive capacity forecasts for future budgeting.</p>
                         </div>
                     </div>
                 </div>
@@ -293,9 +293,9 @@
                 <!-- Right: Content -->
                 <div class="hd-why-us-right">
                     <span class="hd-why-us-tag">Why Choose Us</span>
-                    <h2 class="hd-why-us-title">Why Organizations Rely on Our Established Expertise</h2>
+                    <h2 class="hd-why-us-title">We are working with 10+ years experience</h2>
                     <p class="hd-why-us-text">
-                        We provide superior technical stewardship that allows companies to pursue growth initiatives without technological friction. Our forward-looking maintenance model ensures infrastructure serves as a foundation for success, not a recurring obstacle.
+                        We deliver comprehensive system monitoring and preventive maintenance programs that empower businesses to operate with absolute reliability. Our proactive approach ensures your infrastructure identifies and resolves issues before they disrupt your workflow.
                     </p>
 
                     <div class="hd-feature-row">
@@ -310,21 +310,17 @@
                     </div>
 
                     <div class="hd-check-grid">
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Adherence to Industry-Standard Protocols</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Scalable Virtual Infrastructure Management</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Nonstop Remote System Oversight</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Routine Security Posture Assessments</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Structured Data Safeguarding Procedures</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Connection Speed and Reliability Tuning</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Performance Baseline Analytics</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> 24/7 Infrastructure Telemetry</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Automated Patch Compliance</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> System State Backup Validation</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Resource Utilization Tuning</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Hardware Lifecycle Management</div>
                     </div>
 
-                    <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More →</a>
                 </div>
             </div>
-        </section>
-
-
-
         </section>
 
         <!-- SECTION 6: LATEST FROM OUR BLOG -->

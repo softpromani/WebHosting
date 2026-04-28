@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Custom Software & Application Development Solutions | Mounteko')
+@section('title', 'API Development & System Integration Solutions | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -22,8 +22,8 @@
         <section class="dev-hero-section">
             <div class="dev-hero-container">
                 <div class="dev-hero-content">
-                    <h1>Professional Website Design & Development Services</h1>
-                    <p>We engineer custom digital platforms that drive engagement and convert visitors. As a leading web design and development company, we bridge the gap between visual artistry and technical performance.</p>
+                    <h1>API Development & System Integration Solutions</h1>
+                    <p>We architect, connect, and optimize secure, high-performance digital ecosystems tailored to unify your business operations.</p>
                     <div class="dev-hero-btns">
                         <a href="{{ route('contactUs') }}" class="btn-dev-primary">Get a Free Project Consultation</a>
                         <a href="{{ route('contactUs') }}" class="btn-dev-secondary">Request a Development Quote</a>
@@ -37,20 +37,20 @@
         <div class="dev-feature-bar">
             <div class="dev-feature-box">
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-laptop"></i></div>
-                    <span>Responsive Design</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-hdd-network"></i></div>
+                    <span>REST API Development</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-code-slash"></i></div>
-                    <span>Custom Development</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-boxes"></i></div>
+                    <span>System Integration</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-cart3"></i></div>
-                    <span>E-Commerce</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-cloud-check"></i></div>
+                    <span>SaaS Integration</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-building"></i></div>
-                    <span>Business Sites</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-building-gear"></i></div>
+                    <span>Enterprise Integration</span>
                 </div>
             </div>
         </div>
@@ -65,15 +65,13 @@
                 <div class="dev-company-grid">
                     <!-- LEFT CONTENT -->
                     <div class="dev-company-left">
-                        <span class="company-tag">Our Company</span>
-                        <h3 class="company-title alt-font">Building digital authority one pixel at a time.</h3>
+                        <span class="company-tag">Where Code Meets Connectivity.</span>
+                        <h3 class="company-title alt-font">Bespoke API Development & Enterprise System Integration.</h3>
                         <p class="company-desc">
-                            <strong>What we believe:</strong> Clarity over clutter. Results over rhetoric.<br><br>
-                            <strong>What we do:</strong> We are a dedicated website development company that rejects one-size-fits-all templates. We focus on custom website development that mirrors the exact operational rhythm of your business.<br><br>
-                            <strong>How we work:</strong> For over a decade, our team has refined a methodology that balances aesthetic precision with backend stability. We prioritize clean code and user-centric navigation.<br><br>
-                            <strong>Why it matters:</strong> When you hire web designer talent from our team, you're investing in a platform that strengthens your market position — without unnecessary complexity.
+                            In a digital ecosystem defined by silos, we build bridges. Mounteko doesn't just write code; we architect the invisible infrastructure that powers modern business. We specialise in high-performance API development and frictionless system integration, transforming disjointed software suites into a single, intelligent operating system. <br><br>
+                            From intricate microservice architectures to legacy modernisation, we dismantle data bottlenecks and unlock the full velocity of your organisation. We believe your technology should be a silent, perfectly synchronised partner—not a noisy, fragmented distraction. Let’s connect what matters.
                         </p>
-                        <a href="{{ route('contactUs') }}" class="btn-company-more">View Our Work</a>
+                        <a href="{{ route('contactUs') }}" class="btn-company-more">Find out more</a>
                     </div>
 
                     <!-- RIGHT IMAGES -->
@@ -107,63 +105,63 @@
             <div class="dev-services-grid-container">
                 <div class="dev-services-header text-center">
                     <span class="dev-services-tag">OUR SERVICES</span>
-                    <h2 class="dev-services-title alt-font">Services Built Around Your Business,<br><span>Not Templates</span></h2>
+                    <h2 class="dev-services-title alt-font">For your very specific connectivity challenges,<br><span>we have highly-tailored integration solutions.</span></h2>
                 </div>
 
                 <div class="dev-services-grid">
                     <!-- Service 1 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Custom Website Development">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Custom API Development">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Custom Website Development</h4>
+                            <h4>Custom API Development</h4>
                         </div>
                     </div>
                     <!-- Service 2 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="User-Centric UI/UX Design">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="System Integration Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>User-Centric UI/UX Design</h4>
+                            <h4>System Integration Services</h4>
                         </div>
                     </div>
                     <!-- Service 3 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/security.png') }}" alt="Clean Code">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/security.png') }}" alt="Enterprise Integration Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Clean Code & Backend Stability</h4>
+                            <h4>Enterprise Integration Services</h4>
                         </div>
                     </div>
                     <!-- Service 4 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Performance Optimization">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Third Party API Integration">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Performance Optimization</h4>
+                            <h4>Third Party API Integration</h4>
                         </div>
                     </div>
                     <!-- Service 5 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/managed.png') }}" alt="Maintenance">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/managed.png') }}" alt="SaaS Integration Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Ongoing Maintenance & Support</h4>
+                            <h4>SaaS Integration Services</h4>
                         </div>
                     </div>
                     <!-- Service 6 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
                             <img src="{{ asset('home/assets/homepage/images/services_v2/consultancy.png') }}"
-                                alt="Web Designer Talent">
+                                alt="API Security & Management">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Web Designer Talent on Demand</h4>
+                            <h4>API Security & Management</h4>
                         </div>
                     </div>
                 </div>
@@ -175,8 +173,8 @@
             <div class="dev-process-v2-container">
                 <div class="dev-process-header text-center">
                     <span class="process-tag">PROCESS</span>
-                    <h2 class="process-title">Our Development <span>Process</span></h2>
-                    <p class="process-subtitle">Our work as a web design and development company is methodical. We don't just code; we solve business problems.</p>
+                    <h2 class="process-title">Our API & Integration Blueprint</h2>
+                    <p class="process-subtitle">We follow a structured 5-step approach to ensure reliable data exchange and scalable architecture.</p>
                 </div>
 
                 <div class="process-flow-wrapper">
@@ -187,8 +185,8 @@
                             <i class="bi bi-search"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Discover & Strategize</h4>
-                            <p>Map user journeys before writing code.</p>
+                            <h4>Assess</h4>
+                            <p>Ecosystem audit & data flow mapping</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -199,8 +197,8 @@
                             <i class="bi bi-bezier2"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Wireframe & Blueprint</h4>
-                            <p>Define UX hierarchy that guides the eye.</p>
+                            <h4>Architect</h4>
+                            <p>RESTful design & microservices planning</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -211,8 +209,8 @@
                             <i class="bi bi-code-slash"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Develop & Engineer</h4>
-                            <p>Fast, secure, maintainable custom code.</p>
+                            <h4>Connect</h4>
+                            <p>Agile development & rigorous endpoint testing</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -223,8 +221,8 @@
                             <i class="bi bi-rocket-takeoff"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Quality Assurance & Deploy</h4>
-                            <p>Cross-browser tested. Zero-downtime launch.</p>
+                            <h4>Orchestrate</h4>
+                            <p>Deployment & system synchronization</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -235,8 +233,8 @@
                             <i class="bi bi-headset"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Iterate & Evolve</h4>
-                            <p>Review analytics. Enhance continuously.</p>
+                            <h4>Optimize</h4>
+                            <p>Monitoring, latency tuning & enhancements</p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +294,7 @@
                     <div class="faq-v2-tag">
                         <i class="bi bi-record-circle"></i> FAQ
                     </div>
-                    <h4 class="faq-v2-title">Direct answers from a seasoned <span>website development company.</span></h4>
+                    <h4 class="faq-v2-title">Common questions about custom software and web application engagements</h4>
                     <div class="faq-v2-img-wrap">
                         <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=800"
                             alt="Specialist working">
@@ -308,68 +306,70 @@
                     <!-- FAQ Item 1 -->
                     <div class="faq-v2-item active">
                         <button class="faq-v2-header">
-                            <h4>What defines quality web development services versus just a template?</h4>
+                            <h4>What does an API development company actually do?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>It's the difference between leasing a generic billboard and owning a piece of real estate. We build with custom code that allows for unlimited scalability and specific functionality integration that template platforms simply cannot accommodate.</p>
+                            <p>We create custom communication protocols that connect distinct software systems, delivering precise data exposure and optimized performance beyond the limitations of generic, off-the-shelf connectors.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 2 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>How involved do I need to be if I hire web designer and developer talent from you?</h4>
+                            <h4>How is system integration different from simple API integration?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>As involved as you wish to be. We handle the heavy lifting, but we require your unique business insight during the discovery and content-gathering phases. We present, you approve, we build.</p>
+                            <p>API integration connects specific endpoints; system integration orchestrates your entire enterprise into a single, cohesive operational unit.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 3 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>Are responsive web design services really that critical for business website design?</h4>
+                            <h4>What is involved in third party API integration?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>It is non-negotiable. Over half of web traffic is mobile. If the site doesn't adjust intuitively, you are actively turning away revenue. Every site we build meets stringent mobile-first standards.</p>
+                            <p>Our third-party API integration services connect your internal systems to essential external providers, including Salesforce, Stripe, and Twilio. We manage the critical nuances of authentication, rate limiting, and data transformation, safeguarding your operations against disruption from external API updates.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 4 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>Can you handle complex ecommerce website development with high SKU counts?</h4>
+                            <h4>Can you help modernize our legacy system without rewriting everything?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>Absolutely. We have extensive experience structuring large catalogs with advanced filtering logic, ensuring customers find what they need without friction.</p>
+                            <p>We leverage REST API development to encapsulate legacy systems within modern wrappers, enabling secure data exposure to mobile and cloud applications—eliminating the risk and capital expenditure of full system replacement.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> <!-- SECTION: PREMIUM CTA -->
+        </section> 
+        
+        <!-- SECTION: PREMIUM CTA -->
         <section class="section8-cta">
             <div class="s8-container">
                 <div class="s8-box-custom">
                     <div class="s8-left">
-                        <h2 class="s8-title-custom">Protect business, custom software solution today!</h2>
+                        <h2 class="s8-title-custom">Ready to unify your digital ecosystem? Let's build a connected architecture together.</h2>
                         <div class="s8-contacts">
                             <div class="s8-contact-item">
                                 <i class="bi bi-telephone-outbound"></i>
                                 <div class="s8-contact-info">
-                                    <span>Get contact now</span>
-                                    <strong>{{ settingValue('phone') }}</strong>
+                                    <span>Phone</span>
+                                    <strong>(855) 526-7890</strong>
                                 </div>
                             </div>
                             <div class="s8-sep"></div>
                             <div class="s8-contact-item">
                                 <i class="bi bi-envelope-at"></i>
                                 <div class="s8-contact-info">
-                                    <span>Sent e-mail</span>
-                                    <strong>{{ settingValue('email') }}</strong>
+                                    <span>Email</span>
+                                    <strong>info@mounteko.com</strong>
                                 </div>
                             </div>
                         </div>
@@ -390,7 +390,6 @@
                 </div>
             </div>
         </section>
-        >
 
     </main>
 
@@ -413,5 +412,4 @@
             });
         });
     </script>
-    >
 @endsection

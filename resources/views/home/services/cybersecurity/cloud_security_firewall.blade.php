@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Advanced Firewall Setup & Configuration | Mounteko')
+@section('title', 'Advanced Cloud Security & Firewall Solutions | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -24,18 +24,18 @@
         <section class="header2-section">
             <div class="h2-container">
                 <div class="h2-content">
-                    <h2>Advanced Firewall Setup & Configuration to Protect Your <span>Business</span></h2>
-                    <p>Proactive network perimeter defense, zero-trust configuration, and compliance-driven firewall management to safeguard your data, internal networks, and remote users.</p>
+                    <h2>Advanced Cloud Security & Firewall Solutions to Protect Your <span>Business</span></h2>
+                    <p>Proactive cloud threat detection, next-gen firewall protection, and compliance-driven security services to safeguard your data, cloud networks, and user access—wherever your infrastructure lives.</p>
                     <div class="h2-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <a href="{{ route('contactUs') }}" class="btn-blue-grad">Get a Free Security Assessment</a>
-                        <a href="{{ route('contactUs') }}" class="btn-blue-grad" style="background: transparent; border: 2px solid white;">Talk to a Firewall Expert</a>
+                        <a href="{{ route('contactUs') }}" class="btn-blue-grad">Get a Free Cloud Security Assessment</a>
+                        <a href="{{ route('contactUs') }}" class="btn-blue-grad" style="background: transparent; border: 2px solid white;">Talk to a Cloud Security Expert</a>
                     </div>
                 </div>
                 <div class="h2-visual">
                     <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600"
-                        class="dashboard-img" alt="Firewall Security Dashboard">
+                        class="dashboard-img" alt="Cloud Security Interface">
                     <div class="shield-overlay" style="display: flex; justify-content: center; align-items: center;">
-                        <i class="bi bi-shield-fill-check"
+                        <i class="bi bi-cloud-check-fill"
                             style="font-size: 150px; color: white; filter: drop-shadow(0 0 30px rgba(77, 163, 255, 0.9));"></i>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
             <div class="h2-bottom-bar">
                 <div class="h2-bottom-text">
                     <div class="h2-line"></div>
-                    Without a properly configured network security firewall setup, businesses remain vulnerable to unauthorized access and lateral movement 24x7.
+                    Without proactive cloud firewall configuration, businesses remain vulnerable to DDoS and data breaches 24x7.
                     <div class="h2-line"></div>
                 </div>
             </div>
@@ -94,12 +94,12 @@
         <div class="service-pill-menu">
             <div class="container">
                 <div class="pill-track">
-                    <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> Firewall Setup</span>
-                    <a href="{{ route('services.vpn-setup-remote-access') }}" class="service-pill">VPN Setup & Remote Access</a>
-                    <a href="{{ route('services.cloud-security-firewall') }}" class="service-pill">Cloud Security</a>
+                    <a href="{{ route('services.firewall-router-configuration') }}" class="service-pill">Firewall Setup</a>
+                    <a href="#" class="service-pill">VPN Setup & Remote Access</a>
+                    <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> Cloud Security</span>
                     <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
                     <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
-                    <a href="#" class="service-pill">Security Audit</a>
+                    <a href="{{ route('services.security-audits') }}" class="service-pill">Security Audit</a>
                     <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall Monitoring</a>
                     <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application Security</a>
                 </div>
@@ -112,13 +112,13 @@
                 <div class="s3-visual">
                     <div class="img-tall-wrap">
                         <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=600"
-                            class="s3-img" style="height: 380px;" alt="Firewall Control Center">
+                            class="s3-img" style="height: 380px;" alt="Cloud Infrastructure Center">
                     </div>
                     <div class="img-stack-wrap">
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400"
-                            class="s3-img" style="height: 180px;" alt="Secure Server Room">
+                            class="s3-img" style="height: 180px;" alt="Cloud Servers">
                         <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400"
-                            class="s3-img" style="height: 180px;" alt="Cyber Defense Data">
+                            class="s3-img" style="height: 180px;" alt="Security Monitoring">
                     </div>
                     <div class="badge-circular">
                         <div class="badge-inner">
@@ -132,24 +132,24 @@
                     <div class="s3-tag">
                         <i class="bi bi-eye-fill"></i> ABOUT US
                     </div>
-                    <h2>Your trusted partner in <span>enterprise firewall solutions</span></h2>
-                    <p>We provide reliable, cutting-edge firewall configuration services to protect your digital perimeter. From initial firewall installation services to ongoing managed firewall services, we ensure your network traffic is filtered, secured, and compliant.</p>
+                    <h2>Your trusted partner in <span>enterprise cloud security solutions</span></h2>
+                    <p>We provide reliable, cutting-edge cloud network security and managed firewall services to protect your digital assets in AWS, Azure, and hybrid environments, ensuring compliance and operational peace of mind.</p>
 
                     <div class="s3-feature-box">
                         <div class="s3-feature-img">
                             <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=300"
-                                alt="Firewall Security Expert">
+                                alt="Cloud Security Expert">
                         </div>
                         <div class="s3-feature-text">
-                            <h5>24/7 firewall security assistance</h5>
-                            <p>Ensuring optimal uptime and continuous defense against emerging threats with expert assistance.</p>
+                            <h5>24/7 Cloud Infrastructure Security Assistance</h5>
+                            <p>Ensuring optimal uptime and continuous defense against emerging cloud threats with expert assistance.</p>
                         </div>
                     </div>
 
                     <ul class="s3-checklist">
-                        <li><i class="bi bi-check-circle-fill"></i> Real-Time Threat Detection and Monitoring</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Granular Access Control Management (ACL & Zero Trust)</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Continuous Security Policy Auditing & Tuning</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Cloud Firewall Configuration & Threat Monitoring</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Identity & Access Management (IAM) Control</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Cloud Security Posture Management (CSPM)</li>
                     </ul>
 
                     <div class="s3-footer">
@@ -160,7 +160,7 @@
                             <strong>(855) 526-7890</strong>
                         </div>
                         <a href="{{ route('contactUs') }}" class="btn-s3-grad">
-                            More About Our Firewall Service Provider Team <i class="bi bi-arrow-right-short"></i>
+                            More About Our Cloud Services <i class="bi bi-arrow-right-short"></i>
                         </a>
                     </div>
                 </div>
@@ -171,44 +171,44 @@
         <section class="section4-services">
             <div class="container">
                 <span class="s4-tagline">WHAT WE PROVIDE</span>
-                <h2 class="s4-title">Firewall Setup Services for <span>Today's Network Threats</span></h2>
-                <p class="s4-desc">Protect your business from ever-evolving cyber risks with our end-to-end firewall configuration and network security firewall setup.</p>
+                <h2 class="s4-title">Cloud Security & Firewall Services for <span>Today's Threats</span></h2>
+                <p class="s4-desc">Protect your business from ever-evolving cloud risks with our end-to-end managed cloud security solutions.</p>
 
                 <div class="s4-grid">
                     <div class="s4-card card-network">
-                        <div class="s4-icon-box"><i class="bi bi-router-fill"></i></div>
-                        <h4>Network Firewall Setup</h4>
-                        <p>Deploying next-gen firewalls and intrusion prevention systems to safeguard your entire network perimeter.</p>
+                        <div class="s4-icon-box"><i class="bi bi-cloud-slash-fill"></i></div>
+                        <h4>Cloud Network Security</h4>
+                        <p>Deploying virtual firewalls and intrusion detection systems to safeguard cloud VPCs and subnets.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-data">
                         <div class="s4-icon-box"><i class="bi bi-shield-lock-fill"></i></div>
-                        <h4>Secure Configuration</h4>
-                        <p>Hardening firewall policies and applying strict rule sets using industry best practices (CIS Benchmarks).</p>
+                        <h4>Data & Storage Encryption</h4>
+                        <p>Encrypting sensitive data at rest in cloud buckets and in transit using advanced AES-256 protocols.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-identity">
-                        <div class="s4-icon-box"><i class="bi bi-person-badge-fill"></i></div>
-                        <h4>Identity & Access Control</h4>
-                        <p>Integrating VPN and Multi-Factor Authentication (MFA) to manage user access with detailed granular control.</p>
+                        <div class="s4-icon-box"><i class="bi bi-fire"></i></div>
+                        <h4>Cloud Firewall Services</h4>
+                        <p>Managing next-gen firewall rules and policies with granular control and automated scaling.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-monitor">
                         <div class="s4-icon-box"><i class="bi bi-eye-fill"></i></div>
-                        <h4>Managed Firewall Services</h4>
-                        <p>24/7 monitoring and management of firewall logs with advanced SIEM integration for real-time incident response.</p>
+                        <h4>Security Monitoring & SIEM</h4>
+                        <p>24/7 monitoring with advanced cloud-native SIEM systems for real-time anomaly detection.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-backup">
-                        <div class="s4-icon-box"><i class="bi bi-arrow-repeat"></i></div>
-                        <h4>Backup & Recovery</h4>
-                        <p>Protecting critical firewall configuration backups and ensuring rapid disaster recovery plans for network continuity.</p>
+                        <div class="s4-icon-box"><i class="bi bi-cloud-arrow-down-fill"></i></div>
+                        <h4>Cloud Backup & Recovery</h4>
+                        <p>Protecting critical cloud data with immutable, secure backups and rapid cross-region recovery plans.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-config">
-                        <div class="s4-icon-box"><i class="bi bi-building"></i></div>
-                        <h4>Business Firewall Setup</h4>
-                        <p>Customized enterprise firewall solutions designed specifically for SMBs and large corporate infrastructure needs.</p>
+                        <div class="s4-icon-box"><i class="bi bi-sliders"></i></div>
+                        <h4>Cloud Security Configuration</h4>
+                        <p>Hardening cloud instances and applying secure configurations across multi-cloud infrastructure.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                 </div>
@@ -218,31 +218,31 @@
         <!-- SECTION 5 (WHY CHOOSE US) -->
         <section class="section5-why-us">
             <div class="container">
-                <h2 class="s5-title">Why Choose Our Firewall Setup Services?</h2>
+                <h2 class="s5-title">Why Choose Our Cloud Security & Firewall Services?</h2>
                 <div class="s5-row" style="flex-wrap: wrap; justify-content: center;">
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
-                        <div class="s5-icon-circle"><i class="bi bi-activity"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Proactive Monitoring</h5>
+                        <div class="s5-icon-circle"><i class="bi bi-cloud-check"></i></div>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Proactive Cloud Security</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
-                        <div class="s5-icon-circle"><i class="bi bi-shield-lock"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Zero-Trust Architecture</h5>
+                        <div class="s5-icon-circle"><i class="bi bi-wallet2"></i></div>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Cost-Effective Firewall Plans</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-arrows-angle-expand"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Scalable Solutions</h5>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Scalable Cloud Solutions</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-lightning-charge-fill"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Fast Response Time</h5>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Fast Incident Response</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-person-check-fill"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Single IT Partner</h5>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Single Security Partner</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center; border-right: none;">
-                        <div class="s5-icon-circle"><i class="bi bi-wallet2"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Cost-Effective Plans</h5>
+                        <div class="s5-icon-circle"><i class="bi bi-clock-history"></i></div>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">24/7 Cloud Monitoring</h5>
                     </div>
                 </div>
             </div>
@@ -256,28 +256,28 @@
                         <div class="s7-tag">
                             <i class="bi bi-shield-check"></i> OUR SECURITY
                         </div>
-                        <h2 class="s7-title">Securing your digital world <span class="together">together</span></h2>
+                        <h2 class="s7-title">Securing your cloud world <span class="together">together</span></h2>
 
                         <div class="s7-service-block">
-                            <h5>Real-Time Threat Monitoring & Filtering</h5>
-                            <p>Our firewall configuration services continuously analyze network traffic, user behavior, and system activity to detect and respond to potential intrusions and malware threats as they occur. This blocks malicious IPs before they breach the internal network.</p>
+                            <h5>Real-Time Cloud Firewall Protection</h5>
+                            <p>Cloud firewall protection continuously analyzes VPC traffic, user behavior, and system activity to detect and respond to potential cloud security threats and misconfigurations as they occur.</p>
                         </div>
 
                         <div class="s7-service-block">
                             <h5>Compliance And Risk Management</h5>
-                            <p>Our firewall installation services ensure compliance with PCI-DSS, HIPAA, and GDPR standards. We continuously analyze egress traffic and system activity to prevent data exfiltration and detect potential security vulnerabilities in your rule set.</p>
+                            <p>Managed cloud security services continuously monitor compliance baselines (PCI DSS, HIPAA), network traffic, and system activity to detect and respond to potential security threats and policy violations.</p>
                         </div>
                     </div>
 
                     <div class="s7-right">
                         <div class="s7-image-wrap">
                             <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&q=80&w=800"
-                                alt="Network Security Operations">
+                                alt="Cloud Operations Security Center">
                         </div>
 
                         <div class="s7-service-block">
-                            <h5>Identity And Access Management (IAM) Integration</h5>
-                            <p>Identity and access management integrated with your network firewall setup continuously verifies user credentials against policy. It analyzes user behavior and system activity to detect and respond to potential unauthorized access attempts and insider threats.</p>
+                            <h5>Identity And Access Management</h5>
+                            <p>Cloud identity and access management continuously analyzes user behavior and system activity to detect and respond to potential privilege escalations and unauthorized access threats.</p>
                         </div>
                     </div>
                 </div>
@@ -290,23 +290,23 @@
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 text-center">
                         <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-pc-display" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">COMPUTER SECURITY</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting endpoint systems and data from unauthorized access and network-based cyber threats.</p>
+                            <i class="bi bi-cloud-check-fill" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">CLOUD INFRASTRUCTURE SECURITY</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting cloud systems and data from unauthorized access, cyber threats, and digital vulnerabilities.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
                         <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-files" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">FILE DUPLICATION & ACCESS</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Restricting lateral movement and controlling access to sensitive file shares and databases via VLAN segmentation.</p>
+                            <i class="bi bi-file-earmark-lock-fill" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">FILE INTEGRITY & ACCESS</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Monitoring critical cloud files and configurations against unauthorized changes and access attempts.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
                         <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                             <i class="bi bi-shield-shaded" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">NETWORK PROTECTIONS</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Safeguarding the entire perimeter against DDoS attacks, port scanning, and external digital vulnerabilities.</p>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">CLOUD NETWORK PROTECTIONS</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting cloud-native networks from lateral movement, malware, and advanced persistent threats.</p>
                         </div>
                     </div>
                 </div>

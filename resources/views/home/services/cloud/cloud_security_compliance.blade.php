@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Cloud Architecture Consulting (AWS, Azure, GCP) | Mounteko')
+@section('title', 'Cloud Security & Compliance | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -14,6 +14,9 @@
         @media (max-width: 767px) { 
             .scale-title, .dev-why-title, .dev-it-title, .dev-process-title, .dev-faq-title, .dev-blog-title { font-size: 1.5rem !important; } 
         }
+        @media (min-width: 992px) {
+            .dev-process-step h4 { font-size: 1rem !important; white-space: nowrap; letter-spacing: -0.3px; }
+        }
     </style>
 @endsection
 
@@ -26,7 +29,7 @@
 
                 <!-- LEFT: Heading + Buttons -->
                 <div class="cloud-hero-left">
-                    <h3 class="cloud-hero-heading">Future‑proof your business with end‑to‑end cloud transformation services.</h3>
+                    <h3 class="cloud-hero-heading">Enforce Cloud Security & Compliance</h3>
                     <div class="cloud-hero-btns">
                         <a href="{{ route('contactUs') }}" class="cloud-btn-primary">
                             <i class="bi bi-download"></i> Request proposal
@@ -44,46 +47,47 @@
 
                     <!-- Floating Cards -->
                     <div class="cloud-float-card cloud-card-top-left">
-                        <div class="cloud-float-icon aws"><i class="bi bi-cloud-fill"></i></div>
+                        <div class="cloud-float-icon aws"><i class="bi bi-shield-check"></i></div>
                         <div class="cloud-float-text">
-                            <strong>Multi-Cloud Vendor Management</strong>
-                            <span>AWS / Azure / GCP / Hybrid</span>
+                            <strong>Compliance Frameworks</strong>
+                            <span>SOC 2, ISO 27001, PCI DSS, HIPAA</span>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-top-right">
                         <div class="cloud-float-chart">
-                            <div class="cloud-chart-label">avg. cost optimization</div>
+                            <div class="cloud-chart-label">Security Posture Score</div>
                             <div class="cloud-chart-bar-wrap">
                                 <div class="cloud-chart-bar" style="height:60%"></div>
                                 <div class="cloud-chart-bar" style="height:75%"></div>
                                 <div class="cloud-chart-bar" style="height:50%"></div>
-                                <div class="cloud-chart-bar highlight" style="height:90%"></div>
+                                <div class="cloud-chart-bar highlight" style="height:94%"></div>
                             </div>
-                            <div class="cloud-chart-value">$42k/yr</div>
+                            <div class="cloud-chart-value">94% avg improvement</div>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-mid-left">
-                        <div class="cloud-float-stat">
-                            <span class="cloud-stat-num">99.99%</span>
+                        <div class="cloud-float-icon secure"><i class="bi bi-shield-lock"></i></div>
+                        <div class="cloud-float-text">
+                            <strong>Threat Detection</strong>
+                            <span>& Real-Time Response</span>
                         </div>
-                        <div class="cloud-float-desc">targeted uptime SLA</div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-mid-right">
-                        <div class="cloud-float-icon azure"><i class="bi bi-diagram-3-fill"></i></div>
+                        <div class="cloud-float-icon azure"><i class="bi bi-check2-all"></i></div>
                         <div class="cloud-float-text">
-                            <strong>24/7 managed</strong>
-                            <span>cloud services</span>
+                            <strong>Automated Compliance Checks</strong>
+                            <span>Continuous Audit Readiness</span>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-bottom-right">
-                        <div class="cloud-float-icon secure"><i class="bi bi-shield-check"></i></div>
+                        <div class="cloud-float-icon secure"><i class="bi bi-clouds"></i></div>
                         <div class="cloud-float-text">
-                            <strong>15+ years</strong>
-                            <span>cloud infrastructure experience</span>
+                            <strong>Multi-Cloud Security</strong>
+                            <span>AWS, Azure, GCP Native</span>
                         </div>
                     </div>
 
@@ -110,8 +114,8 @@
                 </div>
 
                 <div class="dev-scale-content">
-                    <h4 class="scale-title">We Help IT Companies<br>Scale Cloud Engineering</h4>
-                    <p class="scale-desc">Your business shouldn’t slow down because your cloud doesn’t fit. We provide cloud implementation services that grow with you — from startup environments to enterprise‑grade multi‑region deployments. Our team handles the heavy lifting so your engineers focus on what matters: your product.</p>
+                    <h4 class="scale-title">Security misconfigurations and compliance gaps are the leading causes of data breaches.</h4>
+                    <p class="scale-desc">We help you implement enterprise-grade cloud security services that protect workloads across AWS, Azure, and GCP. Our managed cloud security services provide 24/7 threat detection, while our cloud compliance services ensure you stay audit-ready at all times.</p>
 
                     <div class="scale-feature-list">
                         <div class="scale-feature-item">
@@ -119,8 +123,8 @@
                                 <i class="bi bi-patch-check-fill"></i>
                             </div>
                             <div class="scale-feature-text">
-                                <h5>Certified Cloud Partner</h5>
-                                <p>ISO 27001, SOC 2, and AWS Advanced Tier partner with audited security and compliance frameworks.</p>
+                                <h5>Certified Security Architects</h5>
+                                <p>Former enterprise security leaders with AWS, Azure, and GCP certifications. We don't just recommend tools—we build secure-by-design architectures.</p>
                             </div>
                         </div>
                         <div class="scale-feature-item">
@@ -128,8 +132,8 @@
                                 <i class="bi bi-award-fill"></i>
                             </div>
                             <div class="scale-feature-text">
-                                <h5>Award‑Winning Deployment</h5>
-                                <p>Recognized for excellence in cloud deployment services with zero‑downtime migrations and automated CI/CD pipelines.</p>
+                                <h5>Award-Winning Compliance</h5>
+                                <p>Recognized for excellence in regulatory compliance automation. We've helped SaaS, fintech, and healthcare companies pass SOC 2, ISO 27001, PCI DSS, and HIPAA audits.</p>
                             </div>
                         </div>
                     </div>
@@ -142,34 +146,34 @@
             <div class="dev-why-container">
                 <!-- TAB NAVIGATION -->
                 <div class="dev-tabs-nav">
-                    <button class="dev-tab-btn" data-tab="analytics">Analytic Solutions</button>
-                    <button class="dev-tab-btn active" data-tab="risk">Risk Management</button>
-                    <button class="dev-tab-btn" data-tab="it-manage">IT Management</button>
+                    <button class="dev-tab-btn active" data-tab="analytics">CLOUD SECURITY & COMPLIANCE</button>
+                    <button class="dev-tab-btn" data-tab="risk">Compliance Without Chaos</button>
+                    <button class="dev-tab-btn" data-tab="it-manage">IT SECURITY & COMPLIANCE</button>
                 </div>
 
                 <div class="dev-tab-content">
                     <!-- ANALYTIC SOLUTIONS TAB -->
-                    <div class="dev-tab-pane" id="analytics">
+                    <div class="dev-tab-pane active" id="analytics">
                         <div class="dev-why-image">
                             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=700"
                                 alt="Analytic Solutions">
                         </div>
                         <div class="dev-why-content">
-                            <span class="dev-why-tag">CLOUD ANALYTICS</span>
-                            <h2 class="dev-why-title">Transform raw cloud data into predictive intelligence</h2>
-                            <p class="dev-why-desc">Stop guessing. Start knowing. Our analytic solutions turn logs, metrics, and traces into real‑time dashboards and long‑term trend analysis. We help you answer: Where are we spending too much? Which workloads underperform? What fails next?</p>
+                            <span class="dev-why-tag">CLOUD SECURITY</span>
+                            <h2 class="dev-why-title">Transforming cloud security into a business enabler</h2>
+                            <p class="dev-why-desc">Move beyond reactive security. We build proactive cloud security solutions that detect threats in real time, enforce least-privilege access, and automate compliance evidence collection—turning security from a bottleneck into a competitive advantage.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Cost intelligence dashboards – Visualize spend by service, team, or project with anomaly alerts
+                                    Real-time threat detection and automated response
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Usage forecasting – ML‑driven predictions to right‑size resources and avoid over‑provisioning
+                                    Infrastructure-as-Code security scanning (Terraform, CloudFormation)
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Custom reports – Scheduled exports for finance, engineering, or compliance teams
+                                    Unified security posture management across AWS, Azure, GCP
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -178,27 +182,28 @@
                         </div>
                     </div>
 
-                    <!-- RISK MANAGEMENT TAB (ACTIVE) -->
-                    <div class="dev-tab-pane active" id="risk">
+                    <!-- RISK MANAGEMENT TAB -->
+                    <div class="dev-tab-pane" id="risk">
                         <div class="dev-why-image">
                             <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=700"
                                 alt="Risk Management">
                         </div>
                         <div class="dev-why-content">
-                            <h2 class="dev-why-title">Proactive risk detection across your entire cloud footprint</h2>
-                            <p class="dev-why-desc">Security and compliance aren't "set and forget." Our risk management framework continuously scans, prioritizes, and remediates threats across identities, networks, data, and configurations.</p>
+                            <span class="dev-why-tag">COMPLIANCE</span>
+                            <h2 class="dev-why-title">Real-time security telemetry & automated compliance validation</h2>
+                            <p class="dev-why-desc">Traditional log monitoring creates noise, not action. We help you transform raw security telemetry into automated compliance evidence and proactive threat intelligence. Our platform correlates events across AWS, Azure, and GCP so you always know exactly where you stand before an auditor asks.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Compliance mapping – HIPAA, SOC2, ISO 27001, PCI‑DSS, GDPR
+                                    Centralized security log aggregation and SIEM integration
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Incident response runbooks – Pre‑tested workflows for breach scenarios
+                                    Automated compliance evidence collection
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Audit‑ready logging – Centralized with 12‑month retention
+                                    Continuous configuration drift detection
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -214,21 +219,21 @@
                                 alt="IT Management">
                         </div>
                         <div class="dev-why-content">
-                            <span class="dev-why-tag">IT MANAGEMENT</span>
-                            <h2 class="dev-why-title">Unified control plane for multi‑cloud and hybrid environments</h2>
-                            <p class="dev-why-desc">Juggling AWS, Azure, GCP, and on‑prem? Stop toggling between consoles. Our IT management layer gives you a single pane of glass for governance, operations, and automation.</p>
+                            <span class="dev-why-tag">IT SECURITY</span>
+                            <h2 class="dev-why-title">Strengthening infrastructure with unified cloud governance</h2>
+                            <p class="dev-why-desc">Simplify security operations with centralized control. Our IT security and compliance services provide the governance, policy enforcement, and audit automation needed to run a lean, secure cloud ecosystem.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Automated patch & version management
+                                    Unified policy-as-code across multi-cloud environments
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Centralized security & access oversight
+                                    Automated patch and vulnerability management
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Continuous compliance & audit readiness
+                                    Continuous compliance and audit trail reporting
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -249,9 +254,8 @@
                     <!-- Left Column -->
                     <div class="dev-it-left">
                         <span class="dev-it-tag">WHY CHOOSE US</span>
-                        <h2 class="dev-it-title">Custom IT Solutions for Your Business</h2>
-                        <h4 style="font-size: 1.05rem; font-weight: 500; color: #4b5563; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Your trusted cloud solutions provider for the entire lifecycle</h4>
-                        <p class="dev-it-desc">Not every cloud fits every workload. We design enterprise cloud solutions tailored to your data, compliance needs, and growth roadmap. Whether lift‑and‑shift or full refactoring, we deliver.</p>
+                        <h2 class="dev-it-title">Enterprise-Grade Cloud Security & Compliance</h2>
+                        <p class="dev-it-desc">You don't need another checklist. You need a partner who understands how to balance security agility with regulatory rigor. We've spent 20+ years helping SaaS, fintech, healthcare, and enterprise companies secure multi-cloud environments — without slowing down innovation. From architecture design to managed detection and response, every solution is tailored to your risk profile and business goals.</p>
 
                         <a href="javascript:void(0)" class="video-showcase-btn">
                             <div class="video-play-icon">
@@ -266,30 +270,30 @@
                         <div class="dev-it-grid">
                             <!-- Card 1: Active -->
                             <div class="dev-it-card active">
-                                <i class="bi bi-gear-wide-connected it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Setup Service</h4>
-                                <p class="it-card-desc">Greenfield environment provisioning with IAC (Terraform, CDK)</p>
+                                <i class="bi bi-shield-lock it-card-icon"></i>
+                                <h4 class="it-card-title">Cloud Security Services & Solutions</h4>
+                                <p class="it-card-desc">Comprehensive threat protection across AWS, Azure, and GCP</p>
                             </div>
 
                             <!-- Card 2 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-cloud-check it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Migration Services</h4>
-                                <p class="it-card-desc">Minimal-downtime migration plans with rollback strategies</p>
+                                <i class="bi bi-file-earmark-check it-card-icon"></i>
+                                <h4 class="it-card-title">Cloud Compliance & Audit Services</h4>
+                                <p class="it-card-desc">Automated compliance evidence collection for 50+ frameworks</p>
                             </div>
 
                             <!-- Card 3 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-shield-lock it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Deployment Services</h4>
-                                <p class="it-card-desc">Blue/green, canary, or rolling deployments automated</p>
+                                <i class="bi bi-eye it-card-icon"></i>
+                                <h4 class="it-card-title">Managed Cloud Security & IT Security Services</h4>
+                                <p class="it-card-desc">24/7 monitoring, threat hunting, and incident response</p>
                             </div>
 
                             <!-- Card 4 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-folder-check it-card-icon"></i>
-                                <h4 class="it-card-title">Managed Cloud Services</h4>
-                                <p class="it-card-desc">24/7 monitoring, patching, backup, and disaster recovery</p>
+                                <i class="bi bi-person-badge it-card-icon"></i>
+                                <h4 class="it-card-title">Cloud Security Consulting & AWS Cloud Security</h4>
+                                <p class="it-card-desc">Strategic guidance and native AWS security tools</p>
                             </div>
                         </div>
                     </div>
@@ -302,42 +306,41 @@
         <section class="dev-process-section">
             <div class="dev-process-container">
                 <span class="dev-process-tag">PROCESS</span>
-                <h2 class="dev-process-title">How We Work</h2>
-                <p style="text-align: center; color: #6b7280; font-size: 16px; margin-bottom: 40px;">Your roadmap to successful cloud transformation</p>
+                <h2 class="dev-process-title">How We Works</h2>
                 <div class="dev-process-divider"></div>
 
                 <div class="dev-process-steps">
 
                     <div class="dev-process-step" data-step="01">
                         <div class="dev-process-icon">
-                            <i class="bi bi-grid-1x2"></i>
+                            <i class="bi bi-search"></i>
                         </div>
-                        <h4>Choose a Service</h4>
-                        <p>Select from cloud migration services, cloud setup, or ongoing managed cloud operations.</p>
+                        <h4>Assess & Gap Analysis</h4>
+                        <p>Review your current cloud security posture, compliance gaps, and risk exposure.</p>
                     </div>
 
                     <div class="dev-process-step" data-step="02">
                         <div class="dev-process-icon">
-                            <i class="bi bi-calendar-check"></i>
+                            <i class="bi bi-bezier2"></i>
                         </div>
-                        <h4>Request a Meeting</h4>
-                        <p>Meet with certified architects to define scope, timeline, and compliance needs.</p>
+                        <h4>Design & Architecture</h4>
+                        <p>Create a secure-by-design cloud architecture with policy-as-code and zero-trust controls.</p>
                     </div>
 
                     <div class="dev-process-step" data-step="03">
                         <div class="dev-process-icon">
-                            <i class="bi bi-file-earmark-text"></i>
+                            <i class="bi bi-gear-wide-connected"></i>
                         </div>
-                        <h4>Receive Custom Plan</h4>
-                        <p>Get a detailed runbook: architecture diagrams, cost estimates, and migration phases.</p>
+                        <h4>Deploy & Integrate</h4>
+                        <p>Deploy CSPM, SIEM, and compliance automation tools across AWS, Azure, or GCP.</p>
                     </div>
 
                     <div class="dev-process-step last" data-step="04">
                         <div class="dev-process-icon">
-                            <i class="bi bi-rocket-takeoff"></i>
+                            <i class="bi bi-shield-check"></i>
                         </div>
-                        <h4>Let’s Make it Happen</h4>
-                        <p>We execute using AWS cloud migration services (or Azure/GCP) with post‑deployment support included.</p>
+                        <h4>Monitor & Continuously Improve</h4>
+                        <p>24/7 managed security monitoring, monthly compliance audits, and ongoing optimization.</p>
                     </div>
 
                 </div>
@@ -350,7 +353,7 @@
 
                 <div class="dev-faq-left">
                     <span class="dev-faq-tag">— FAQ</span>
-                    <h2 class="dev-faq-title">Most common questions about backup and disaster recovery services</h2>
+                    <h2 class="dev-faq-title">Most common questions about our cloud security services</h2>
                     <a href="{{ route('contactUs') }}" class="dev-faq-btn">View All</a>
                 </div>
 
@@ -359,33 +362,33 @@
                     <div class="dev-faq-item active">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            What cloud platforms do you support?
+                            What cloud security services do you offer?
                             <i class="bi bi-chevron-up dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer">
-                            <p>We are a multi‑cloud cloud solutions provider supporting AWS, Microsoft Azure, and Google Cloud Platform (GCP). We also deliver enterprise cloud solutions for hybrid and on‑prem integrations.</p>
+                            <p>We offer complete cloud security services including threat detection, IAM, encryption, CSPM, CWPP, and SIEM integration across AWS, Azure, and GCP.</p>
                         </div>
                     </div>
 
                     <div class="dev-faq-item">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            Do you offer ongoing managed cloud services after deployment?
+                            How do your cloud compliance services work?
                             <i class="bi bi-chevron-down dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer" style="display:none;">
-                            <p>Yes. Our managed cloud services include 24/7 monitoring, automated backups, security patching, and cost optimization reviews.</p>
+                            <p>Our cloud compliance services automate evidence collection, policy enforcement, and audit reporting for frameworks like SOC 2, ISO 27001, PCI DSS, HIPAA, and GDPR.</p>
                         </div>
                     </div>
 
                     <div class="dev-faq-item">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            Can you help with a multi‑cloud strategy?
+                            Do you provide managed cloud security services?
                             <i class="bi bi-chevron-down dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer" style="display:none;">
-                            <p>Absolutely. We design cloud infrastructure services that work across AWS, Azure, and GCP with consistent policy and identity management.</p>
+                            <p>Yes. Our managed cloud security services include 24/7 monitoring, threat hunting, incident response, and monthly security briefings—fully hands-off for your team.</p>
                         </div>
                     </div>
 

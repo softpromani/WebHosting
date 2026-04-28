@@ -2055,7 +2055,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
     font-size: 30px;
     color: #086ad8;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -2072,10 +2072,16 @@
 }
 
 .process-step-content h4 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     color: #1a1a2e;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    height: 44px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
 }
 
 .process-step-content p {
@@ -2135,6 +2141,11 @@
         text-align: left;
     }
 
+    .process-step-content h4 {
+        min-height: auto;
+        display: block;
+    }
+
     .process-title {
         font-size: 2.2rem;
     }
@@ -2185,7 +2196,7 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-    height: 450px;
+    height: 350px;
 }
 
 .project-card {

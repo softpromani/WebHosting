@@ -726,14 +726,20 @@
 }
 
 .hd-step-info {
-    max-width: 200px;
+    max-width: 250px;
 }
 
 .hd-step-title {
-    font-size: 16px; /* Reduced from 18px */
+    font-size: 16px;
     font-weight: 800;
     color: #0b1c3d;
-    margin-bottom: 8px; /* Reduced from 12px */
+    margin-bottom: 8px;
+    line-height: 1.3;
+    min-height: 42px; /* Ensures all titles take up equal space (2 lines) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .hd-step-desc {

@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Custom Software & Application Development Solutions | Mounteko')
+@section('title', 'E-commerce Website Development & Digital Storefront Solutions | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -22,8 +22,8 @@
         <section class="dev-hero-section">
             <div class="dev-hero-container">
                 <div class="dev-hero-content">
-                    <h1>Professional Website Design & Development Services</h1>
-                    <p>We engineer custom digital platforms that drive engagement and convert visitors. As a leading web design and development company, we bridge the gap between visual artistry and technical performance.</p>
+                    <h1>E-commerce Website Development & Digital Storefront Solutions</h1>
+                    <p>We architect, build, and scale high-converting online stores that deliver seamless shopping experiences and measurable revenue growth.</p>
                     <div class="dev-hero-btns">
                         <a href="{{ route('contactUs') }}" class="btn-dev-primary">Get a Free Project Consultation</a>
                         <a href="{{ route('contactUs') }}" class="btn-dev-secondary">Request a Development Quote</a>
@@ -37,20 +37,20 @@
         <div class="dev-feature-bar">
             <div class="dev-feature-box">
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-laptop"></i></div>
-                    <span>Responsive Design</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-cart"></i></div>
+                    <span>WooCommerce Development</span>
                 </div>
                 <div class="dev-feature-item">
                     <div class="dev-feature-icon-wrap"><i class="bi bi-code-slash"></i></div>
-                    <span>Custom Development</span>
+                    <span>Custom E-commerce</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-cart3"></i></div>
-                    <span>E-Commerce</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-diagram-3"></i></div>
+                    <span>Headless Commerce</span>
                 </div>
                 <div class="dev-feature-item">
                     <div class="dev-feature-icon-wrap"><i class="bi bi-building"></i></div>
-                    <span>Business Sites</span>
+                    <span>B2B & DTC Solutions</span>
                 </div>
             </div>
         </div>
@@ -65,15 +65,12 @@
                 <div class="dev-company-grid">
                     <!-- LEFT CONTENT -->
                     <div class="dev-company-left">
-                        <span class="company-tag">Our Company</span>
-                        <h3 class="company-title alt-font">Building digital authority one pixel at a time.</h3>
+                        <span class="company-tag">Ecommerce Development</span>
+                        <h3 class="company-title alt-font">Ecommerce Development That Converts Browsers Into Buyers</h3>
                         <p class="company-desc">
-                            <strong>What we believe:</strong> Clarity over clutter. Results over rhetoric.<br><br>
-                            <strong>What we do:</strong> We are a dedicated website development company that rejects one-size-fits-all templates. We focus on custom website development that mirrors the exact operational rhythm of your business.<br><br>
-                            <strong>How we work:</strong> For over a decade, our team has refined a methodology that balances aesthetic precision with backend stability. We prioritize clean code and user-centric navigation.<br><br>
-                            <strong>Why it matters:</strong> When you hire web designer talent from our team, you're investing in a platform that strengthens your market position — without unnecessary complexity.
+                            We build ecommerce stores that sell, not just showcase. With four decades of retail experience, we know that precision removes friction and friction destroys revenue. Every store we develop combines speed optimization, intuitive navigation, secure architecture, and consumer psychology. The result? Lower cart abandonment, faster load times, and ROI from launch day. You get a development partner, not just a vendor.
                         </p>
-                        <a href="{{ route('contactUs') }}" class="btn-company-more">View Our Work</a>
+                        <a href="{{ route('contactUs') }}" class="btn-company-more">Discover Our Approach</a>
                     </div>
 
                     <!-- RIGHT IMAGES -->
@@ -107,63 +104,63 @@
             <div class="dev-services-grid-container">
                 <div class="dev-services-header text-center">
                     <span class="dev-services-tag">OUR SERVICES</span>
-                    <h2 class="dev-services-title alt-font">Services Built Around Your Business,<br><span>Not Templates</span></h2>
+                    <h2 class="dev-services-title alt-font">For your specific business model and industry vertical,<br><span>we deliver highly-tailored ecommerce solutions.</span></h2>
                 </div>
 
                 <div class="dev-services-grid">
                     <!-- Service 1 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Custom Website Development">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Custom Ecommerce Development">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Custom Website Development</h4>
+                            <h4>Custom Ecommerce Development</h4>
                         </div>
                     </div>
                     <!-- Service 2 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="User-Centric UI/UX Design">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="Shopify Development Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>User-Centric UI/UX Design</h4>
+                            <h4>Shopify Development Services</h4>
                         </div>
                     </div>
                     <!-- Service 3 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/security.png') }}" alt="Clean Code">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/security.png') }}" alt="WooCommerce Development Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Clean Code & Backend Stability</h4>
+                            <h4>WooCommerce Development Services</h4>
                         </div>
                     </div>
                     <!-- Service 4 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Performance Optimization">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Ecommerce Website Design and Development">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Performance Optimization</h4>
+                            <h4>Ecommerce Website Design and Development</h4>
                         </div>
                     </div>
                     <!-- Service 5 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/managed.png') }}" alt="Maintenance">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/managed.png') }}" alt="Headless Commerce Architecture">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Ongoing Maintenance & Support</h4>
+                            <h4>Headless Commerce Architecture</h4>
                         </div>
                     </div>
                     <!-- Service 6 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
                             <img src="{{ asset('home/assets/homepage/images/services_v2/consultancy.png') }}"
-                                alt="Web Designer Talent">
+                                alt="Migration and Platform Replatforming">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Web Designer Talent on Demand</h4>
+                            <h4>Migration and Platform Replatforming</h4>
                         </div>
                     </div>
                 </div>
@@ -175,8 +172,8 @@
             <div class="dev-process-v2-container">
                 <div class="dev-process-header text-center">
                     <span class="process-tag">PROCESS</span>
-                    <h2 class="process-title">Our Development <span>Process</span></h2>
-                    <p class="process-subtitle">Our work as a web design and development company is methodical. We don't just code; we solve business problems.</p>
+                    <h2 class="process-title">Our E-commerce Development Methodology</h2>
+                    <p class="process-subtitle">A disciplined, transparent five-phase framework that transforms your ecommerce vision into a fully operational and profitable online store.</p>
                 </div>
 
                 <div class="process-flow-wrapper">
@@ -187,8 +184,8 @@
                             <i class="bi bi-search"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Discover & Strategize</h4>
-                            <p>Map user journeys before writing code.</p>
+                            <h4>Strategic Discovery</h4>
+                            <p>Consultation to map products, audience, goals, competitors, specs, and roadmap</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -199,8 +196,8 @@
                             <i class="bi bi-bezier2"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Wireframe & Blueprint</h4>
-                            <p>Define UX hierarchy that guides the eye.</p>
+                            <h4>UX Architecture & Visual Design</h4>
+                            <p>User flows, wireframes, mockups, mobile-first design, and clickable prototype</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -211,8 +208,8 @@
                             <i class="bi bi-code-slash"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Develop & Engineer</h4>
-                            <p>Fast, secure, maintainable custom code.</p>
+                            <h4>Agile Development & Integration</h4>
+                            <p>Shopify, WooCommerce, or custom builds with integrated payments and shipping</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -223,8 +220,8 @@
                             <i class="bi bi-rocket-takeoff"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Quality Assurance & Deploy</h4>
-                            <p>Cross-browser tested. Zero-downtime launch.</p>
+                            <h4>Quality Assurance & Launch Deployment</h4>
+                            <p>Cross-device testing, security audits, zero-downtime launch — store live</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -235,8 +232,8 @@
                             <i class="bi bi-headset"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Iterate & Evolve</h4>
-                            <p>Review analytics. Enhance continuously.</p>
+                            <h4>Continuous Optimization & Support</h4>
+                            <p>Post-launch monitoring, maintenance, security, enhancements, monthly reports, dedicated support</p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +293,7 @@
                     <div class="faq-v2-tag">
                         <i class="bi bi-record-circle"></i> FAQ
                     </div>
-                    <h4 class="faq-v2-title">Direct answers from a seasoned <span>website development company.</span></h4>
+                    <h4 class="faq-v2-title">E-commerce website development questions answered with clarity and precision.</h4>
                     <div class="faq-v2-img-wrap">
                         <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=800"
                             alt="Specialist working">
@@ -308,68 +305,70 @@
                     <!-- FAQ Item 1 -->
                     <div class="faq-v2-item active">
                         <button class="faq-v2-header">
-                            <h4>What defines quality web development services versus just a template?</h4>
+                            <h4>What is the difference between using Shopify development services and building a custom ecommerce website?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>It's the difference between leasing a generic billboard and owning a piece of real estate. We build with custom code that allows for unlimited scalability and specific functionality integration that template platforms simply cannot accommodate.</p>
+                            <p>Shopify development services use a managed, template-based platform with faster deployment, lower upfront costs, and built-in security — ideal for standard direct-to-consumer (DTC) models and growing businesses.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 2 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>How involved do I need to be if I hire web designer and developer talent from you?</h4>
+                            <h4>How much should a business budget for professional ecommerce web development services?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>As involved as you wish to be. We handle the heavy lifting, but we require your unique business insight during the discovery and content-gathering phases. We present, you approve, we build.</p>
+                            <p>Ongoing monthly costs for maintenance, security patches, hosting, and support generally add 10–20% of the initial development cost annually.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 3 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>Are responsive web design services really that critical for business website design?</h4>
+                            <h4>What is the expected timeline for launching a new online store development project?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>It is non-negotiable. Over half of web traffic is mobile. If the site doesn't adjust intuitively, you are actively turning away revenue. Every site we build meets stringent mobile-first standards.</p>
+                            <p>Timelines vary based on project scope, approval cycles, and third-party dependencies — we provide a detailed roadmap before any work begins.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 4 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>Can you handle complex ecommerce website development with high SKU counts?</h4>
+                            <h4>Will my existing product data and customer records transfer safely to the new ecommerce website?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>Absolutely. We have extensive experience structuring large catalogs with advanced filtering logic, ensuring customers find what they need without friction.</p>
+                            <p>We use secure migration protocols, data validation checks, and backup procedures to ensure zero data loss or corruption during the transition.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> <!-- SECTION: PREMIUM CTA -->
+        </section> 
+        
+        <!-- SECTION: PREMIUM CTA -->
         <section class="section8-cta">
             <div class="s8-container">
                 <div class="s8-box-custom">
                     <div class="s8-left">
-                        <h2 class="s8-title-custom">Protect business, custom software solution today!</h2>
+                        <h2 class="s8-title-custom">Ready to transform your digital storefront? Let's build a revenue engine together.</h2>
                         <div class="s8-contacts">
                             <div class="s8-contact-item">
                                 <i class="bi bi-telephone-outbound"></i>
                                 <div class="s8-contact-info">
-                                    <span>Get contact now</span>
-                                    <strong>{{ settingValue('phone') }}</strong>
+                                    <span>Discuss Your E-commerce Project</span>
+                                    <strong>(855)5267890</strong>
                                 </div>
                             </div>
                             <div class="s8-sep"></div>
                             <div class="s8-contact-item">
                                 <i class="bi bi-envelope-at"></i>
                                 <div class="s8-contact-info">
-                                    <span>Sent e-mail</span>
-                                    <strong>{{ settingValue('email') }}</strong>
+                                    <span>Email</span>
+                                    <strong>info@mounteko.com</strong>
                                 </div>
                             </div>
                         </div>
@@ -390,7 +389,6 @@
                 </div>
             </div>
         </section>
-        >
 
     </main>
 
@@ -413,5 +411,4 @@
             });
         });
     </script>
-    >
 @endsection

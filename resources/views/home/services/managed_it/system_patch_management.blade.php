@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'End-to-End IT Support & Helpdesk | Mounteko')
+@section('title', 'System Patch Management & Update Orchestration | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -18,21 +18,21 @@
                     <!-- Left Column -->
                     <div class="hd-hero-left">
                         <div class="hd-hero-tag">
-                            <i class="bi bi-shield-check"></i> 24/7 TECHNICAL EXCELLENCE
+                            <i class="bi bi-shield-check"></i> PROACTIVE SECURITY & COMPLIANCE
                         </div>
-                        <h1 class="hd-hero-title">Complete End-to-End IT Support & Managed Helpdesk Services</h1>
-                        <p class="hd-hero-desc">Equip your organization with reliable, full-spectrum technical assistance. Our dedicated support specialists and proactive monitoring systems work continuously to preserve productivity, secure digital assets, and maintain seamless business continuity.</p>
+                        <h1 class="hd-hero-title">Enterprise System Patch Management & Update Orchestration</h1>
+                        <p class="hd-hero-desc">Fortify your infrastructure against evolving threats. Our automated patch deployment and rigorous testing protocols eliminate vulnerabilities without disrupting your business productivity.</p>
 
                         <!-- Quick Features Badges -->
                         <div class="hd-hero-badges">
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Always-On Availability</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Sub-15 Minute Response</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Seasoned IT Professionals</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Secure Issue Handling</div>
+                            <div class="hd-badge"><i class="bi bi-lightning-fill"></i> Zero-Day Response</div>
+                            <div class="hd-badge"><i class="bi bi-calendar-event"></i> Automated Scheduling</div>
+                            <div class="hd-badge"><i class="bi bi-shield-lock"></i> CVE Remediation</div>
+                            <div class="hd-badge"><i class="bi bi-arrow-counterclockwise"></i> Rollback Protection</div>
                         </div>
 
                         <div class="hd-hero-btns">
-                            <a href="{{ route('contactUs') }}" class="btn-hd-primary">Connect with Support</a>
+                            <a href="{{ route('contactUs') }}" class="btn-hd-primary">Schedule Updates</a>
                             <a href="{{ route('contactUs') }}" class="btn-hd-outline">Learn More</a>
                         </div>
                     </div>
@@ -41,23 +41,23 @@
                     <div class="hd-hero-right">
                         <div class="hd-hero-img-wrap">
                             <img src="{{ asset('home/assets/homepage/images/it-support-specialist.png') }}"
-                                alt="IT Support Specialist" class="hd-hero-img">
+                                alt="Patch Management Specialist" class="hd-hero-img">
 
                             <!-- Floating Card 1 -->
                             <div class="hd-float-card hd-float-1">
-                                <div class="hd-float-icon"><i class="bi bi-lightning-fill"></i></div>
+                                <div class="hd-float-icon"><i class="bi bi-graph-up-arrow"></i></div>
                                 <div class="hd-float-content">
-                                    <strong>15 Minutes</strong>
-                                    <span>Avg. Response Time</span>
+                                    <strong>99.9%</strong>
+                                    <span>Patch Success Rate</span>
                                 </div>
                             </div>
 
                             <!-- Floating Card 2 -->
                             <div class="hd-float-card hd-float-2">
-                                <div class="hd-float-icon"><i class="bi bi-headset"></i></div>
+                                <div class="hd-float-icon"><i class="bi bi-clock-history"></i></div>
                                 <div class="hd-float-content">
-                                    <strong>Active Support</strong>
-                                    <span>24/7 Live Assistance</span>
+                                    <strong>After-Hours</strong>
+                                    <span>Deployment Standard</span>
                                 </div>
                             </div>
                         </div>
@@ -71,19 +71,19 @@
             <div class="hd-feature-grid">
                 <!-- Left Content -->
                 <div class="hd-feature-left">
-                    <span class="hd-feature-tag">IT SOLUTIONS</span>
-                    <h2 class="hd-feature-title">Integrated Helpdesk Solutions for Uninterrupted Business Flow</h2>
-                    <p class="hd-feature-desc">We deliver a complete suite of IT support capabilities engineered to sustain operational momentum. Functioning as a seamless extension of your internal staff, our model bridges the distance between immediate remote fixes and essential on-location hardware intervention.</p>
+                    <span class="hd-feature-tag">SECURITY FIRST</span>
+                    <h2 class="hd-feature-title">Unified Vulnerability Remediation & Patch Governance</h2>
+                    <p class="hd-feature-desc">We deliver a meticulous approach to software and firmware updates that balances security urgency with operational stability. From critical OS security patches to third-party application updates, we ensure your ecosystem is resilient and audit-ready.</p>
 
                     <ul class="hd-feature-list">
-                        <li><i class="bi bi-check-circle-fill"></i> Continuous proactive infrastructure oversight</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Accelerated incident identification & remediation</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Seamless extension of your internal team</li>
-                        <li><i class="bi bi-check-circle-fill"></i> End‑to‑end hardware & application lifecycle management</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Automated Patch Testing & Sandbox Validation</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Critical CVE & Zero-Day Vulnerability Remediation</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Custom Maintenance Window Scheduling</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Firmware & Driver Lifecycle Oversight</li>
                     </ul>
 
                     <div class="hd-feature-actions">
-                        <a href="{{ route('contactUs') }}" class="btn-hd-primary">Explore services</a>
+                        <a href="{{ route('contactUs') }}" class="btn-hd-primary">Explore Patching Services</a>
                     </div>
                 </div>
 
@@ -92,21 +92,21 @@
                     <div class="hd-collage">
                         <!-- Top Image (Mobile) -->
                         <div class="collage-item item-top">
-                            <img src="{{ asset('home/assets/homepage/images/it-support-mobile.png') }}" alt="Support App">
+                            <img src="{{ asset('home/assets/homepage/images/it-support-mobile.png') }}" alt="Patch Support App">
                         </div>
                         <!-- Main Image (Team) -->
                         <div class="collage-item item-main">
-                            <img src="{{ asset('home/assets/homepage/images/it-support-team.png') }}" alt="IT Support Team">
+                            <img src="{{ asset('home/assets/homepage/images/it-support-team.png') }}" alt="Vulnerability Team">
                         </div>
                         <!-- Left Image (Laptop) -->
                         <div class="collage-item item-left">
                             <img src="{{ asset('home/assets/homepage/images/it-support-laptop.png') }}"
-                                alt="Remote Support">
+                                alt="Patching Interface">
                         </div>
                         <!-- Bottom Image (Desktop) -->
                         <div class="collage-item item-bottom">
                             <img src="{{ asset('home/assets/homepage/images/it-support-desk.png') }}"
-                                alt="Modern Workspace">
+                                alt="Managed Patching">
                         </div>
                     </div>
                 </div>
@@ -117,99 +117,99 @@
         <section class="hd-services">
             <div class="hd-services-container">
                 <div class="hd-section-header">
-                    <span class="hd-feature-tag" style="background:#eff6ff;">WHAT WE PROVIDE</span>
-                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Full-Spectrum Technical Support Capabilities</h2>
-                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">We deliver tailored technical solutions that integrate seamlessly with your existing environment, ensuring sustained accessibility and fortified resilience.
+                    <span class="hd-feature-tag" style="background:#eff6ff;">WHAT WE COVER</span>
+                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Comprehensive Patch Management Services for Hybrid Workforces</h2>
+                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">Robust update strategies tailored to your compliance requirements, ensuring endpoint integrity across cloud and on-premise environments.
                     </p>
                 </div>
 
                 <div class="hd-services-grid">
-                    <!-- Card 1: Comprehensive IT Helpdesk -->
+                    <!-- Card 1: OS & Security Patch Deployment -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-support-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-display"></i></div>
-                        <h3 class="hd-service-title">Comprehensive IT Helpdesk</h3>
+                        <div class="hd-service-icon"><i class="bi bi-windows"></i></div>
+                        <h3 class="hd-service-title">OS & Security Patch Deployment</h3>
                         <p class="hd-service-text">
-                            • Hybrid support: remote and on-premise remediation<br>
-                            • Centralized case management and tracking portal<br>
-                            • Direct assistance for workforce productivity tools
+                            • Windows, Linux, MacOS updates<br>
+                            • Critical security rollups<br>
+                            • Emergency out-of-band patching
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 2: Network Connectivity & Stability -->
+                    <!-- Card 2: Third-Party Application Patching -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-network-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-broadcast"></i></div>
-                        <h3 class="hd-service-title">Network Connectivity & Stability</h3>
+                        <div class="hd-service-icon"><i class="bi bi-box-seam"></i></div>
+                        <h3 class="hd-service-title">Third-Party Application Patching</h3>
                         <p class="hd-service-text">
-                            • Real-time traffic analysis and monitoring<br>
-                            • Bottleneck identification and throughput enhancement<br>
-                            • Rapid resolution of connectivity interruptions
+                            • Adobe, Java, Zoom, Browser updates<br>
+                            • Vulnerability risk scoring<br>
+                            • Exploit mitigation protocols
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 3: Cybersecurity & Threat Safeguards -->
+                    <!-- Card 3: Pre-Deployment Staging & Testing -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-security-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-shield-lock"></i></div>
-                        <h3 class="hd-service-title">Cybersecurity & Threat Safeguards</h3>
+                        <div class="hd-service-icon"><i class="bi bi-flask"></i></div>
+                        <h3 class="hd-service-title">Pre-Deployment Staging & Testing</h3>
                         <p class="hd-service-text">
-                            • Device-level defense and antivirus enforcement<br>
-                            • Perimeter gateway configuration and rule management<br>
-                            • Continuous vulnerability scanning and real‑time alerting
+                            • Ring-based deployment groups<br>
+                            • Application compatibility checks<br>
+                            • Staged rollout protocols
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 4: Cloud Environment Support -->
+                    <!-- Card 4: Compliance & Audit Reporting -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-cloud-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-cloud-check"></i></div>
-                        <h3 class="hd-service-title">Cloud Environment Support</h3>
+                        <div class="hd-service-icon"><i class="bi bi-file-earmark-check"></i></div>
+                        <h3 class="hd-service-title">Compliance & Audit Reporting</h3>
                         <p class="hd-service-text">
-                            • Administration of virtual resource pools<br>
-                            • Systematic data replication and restoration<br>
-                            • Resource allocation and cost‑efficiency optimization
+                            • Patch compliance dashboards<br>
+                            • Proof of remediation logs<br>
+                            • HIPAA, PCI-DSS alignment
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 5: Operational Continuity & Data Restoration -->
+                    <!-- Card 5: Mobile Device & Endpoint Updates -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-backup-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-sd-card"></i></div>
-                        <h3 class="hd-service-title">Operational Continuity & Data Restoration</h3>
+                        <div class="hd-service-icon"><i class="bi bi-phone"></i></div>
+                        <h3 class="hd-service-title">Mobile Device & Endpoint Updates</h3>
                         <p class="hd-service-text">
-                            • Scheduled, verified data duplication routines<br>
-                            • Rapid file and system state recovery processes<br>
-                            • Disruption planning for sustained operations
+                            • iOS/Android security fixes<br>
+                            • Remote workforce synchronization<br>
+                            • Endpoint configuration management
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 6: Proactive System Stewardship -->
+                    <!-- Card 6: Driver & Firmware Assurance -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-maint-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-gear-wide-connected"></i></div>
-                        <h3 class="hd-service-title">Proactive System Stewardship</h3>
+                        <div class="hd-service-icon"><i class="bi bi-cpu"></i></div>
+                        <h3 class="hd-service-title">Driver & Firmware Assurance</h3>
                         <p class="hd-service-text">
-                            • Routine patch management and version upgrades<br>
-                            • Backend infrastructure health checks<br>
-                            • Performance tuning for optimal responsiveness
+                            • Server BIOS updates<br>
+                            • Network appliance firmware<br>
+                            • Performance stability patches
                         </p>
                         <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
@@ -222,58 +222,58 @@
             <div class="hd-workflow-container">
                 <div class="hd-workflow-header">
                     <span class="hd-workflow-tag">How it Works</span>
-                    <h2 class="hd-workflow-title">Our Methodology for Seamless Technology Management</h2>
+                    <h2 class="hd-workflow-title">Our Systematic Update Process</h2>
                 </div>
 
                 <div class="hd-steps-row">
-                    <!-- Step 1: Discovery & Evaluation -->
+                    <!-- Step 1: Assess & Inventory -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
-                            <img src="{{ asset('home/assets/homepage/images/it-workflow-audit.png') }}" alt="IT Audit">
+                            <img src="{{ asset('home/assets/homepage/images/it-workflow-audit.png') }}" alt="Assess">
                         </div>
                         <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
                             alt="arrow">
                         <div class="hd-step-info">
-                            <h3 class="hd-step-title">Discovery & Evaluation</h3>
-                            <p class="hd-step-desc">We begin with a thorough review of the current technology landscape to map dependencies and pinpoint areas for improvement or risk.</p>
+                            <h3 class="hd-step-title">Assess & Inventory</h3>
+                            <p class="hd-step-desc">Scan endpoints and servers to identify missing security patches, deprecated software versions, and active CVEs.</p>
                         </div>
                     </div>
 
-                    <!-- Step 2: Strategic Alignment & Design -->
+                    <!-- Step 2: Prioritize & Test -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
-                            <img src="{{ asset('home/assets/homepage/images/it-workflow-plan.png') }}" alt="IT Plan">
+                            <img src="{{ asset('home/assets/homepage/images/it-workflow-plan.png') }}" alt="Prioritize">
                         </div>
                         <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
                             alt="arrow">
                         <div class="hd-step-info">
-                            <h3 class="hd-step-title">Strategic Alignment & Design</h3>
-                            <p class="hd-step-desc">We draft a tailored support and management roadmap that corresponds directly with your long-term operational targets and budget.</p>
+                            <h3 class="hd-step-title">Prioritize & Test</h3>
+                            <p class="hd-step-desc">Categorize updates by severity (Critical/Important/Moderate) and validate functionality in a staging environment.</p>
                         </div>
                     </div>
 
-                    <!-- Step 3: Seamless Integration & Deployment -->
+                    <!-- Step 3: Deploy Strategically -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
                             <img src="{{ asset('home/assets/homepage/images/it-workflow-implement.png') }}"
-                                alt="IT Implement">
+                                alt="Deploy">
                         </div>
                         <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
                             alt="arrow">
                         <div class="hd-step-info">
-                            <h3 class="hd-step-title">Seamless Integration & Deployment</h3>
-                            <p class="hd-step-desc">We activate robust management toolsets and support protocols without disrupting your daily business activities.</p>
+                            <h3 class="hd-step-title">Deploy Strategically</h3>
+                            <p class="hd-step-desc">Execute ringed deployments during approved maintenance windows to minimize end-user impact and network strain.</p>
                         </div>
                     </div>
 
-                    <!-- Step 4: Sustained Oversight & Continuous Improvement -->
+                    <!-- Step 4: Verify & Document -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
-                            <img src="{{ asset('home/assets/homepage/images/it-workflow-manage.png') }}" alt="IT Manage">
+                            <img src="{{ asset('home/assets/homepage/images/it-workflow-manage.png') }}" alt="Verify">
                         </div>
                         <div class="hd-step-info">
-                            <h3 class="hd-step-title">Sustained Oversight & Continuous Improvement</h3>
-                            <p class="hd-step-desc">We provide round-the-clock surveillance, rapid-response remediation, and regular reporting on the health of your technology ecosystem.</p>
+                            <h3 class="hd-step-title">Verify & Document</h3>
+                            <p class="hd-step-desc">Confirm successful installation and generate detailed reports to satisfy internal audits and regulatory standards.</p>
                         </div>
                     </div>
                 </div>
@@ -286,36 +286,36 @@
                 <!-- Left: Image with Circle Overlay -->
                 <div class="hd-why-us-left">
                     <div class="hd-why-us-img-frame">
-                        <img src="{{ asset('home/assets/homepage/images/it-why-us-team.png') }}" alt="IT Experience Team">
+                        <img src="{{ asset('home/assets/homepage/images/it-why-us-team.png') }}" alt="Patching Experts">
                     </div>
                 </div>
 
                 <!-- Right: Content -->
                 <div class="hd-why-us-right">
                     <span class="hd-why-us-tag">Why Choose Us</span>
-                    <h2 class="hd-why-us-title">Why Organizations Rely on Our Established Expertise</h2>
+                    <h2 class="hd-why-us-title">Why Our Patch Strategy Delivers Higher Security ROI</h2>
                     <p class="hd-why-us-text">
-                        We provide superior technical stewardship that allows companies to pursue growth initiatives without technological friction. Our forward-looking maintenance model ensures infrastructure serves as a foundation for success, not a recurring obstacle.
+                        We bridge the gap between security alerts and system stability. Our process ensures that the fix doesn't break the workflow, providing a seamless path to compliance.
                     </p>
 
                     <div class="hd-feature-row">
                         <div class="hd-feature-box">
-                            <div class="hd-feature-icon-circle"><i class="bi bi-globe"></i></div>
-                            <span class="hd-feature-label">Expert around<br>the world</span>
+                            <div class="hd-feature-icon-circle"><i class="bi bi-shield-check"></i></div>
+                            <span class="hd-feature-label">Expert security<br>compliance</span>
                         </div>
                         <div class="hd-feature-box">
-                            <div class="hd-feature-icon-circle"><i class="bi bi-briefcase"></i></div>
-                            <span class="hd-feature-label">Best Practice For<br>Business</span>
+                            <div class="hd-feature-icon-circle"><i class="bi bi-lightning-charge"></i></div>
+                            <span class="hd-feature-label">Rapid threat<br>response</span>
                         </div>
                     </div>
 
                     <div class="hd-check-grid">
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Adherence to Industry-Standard Protocols</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Scalable Virtual Infrastructure Management</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Nonstop Remote System Oversight</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Routine Security Posture Assessments</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Structured Data Safeguarding Procedures</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Connection Speed and Reliability Tuning</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Vulnerability Window Reduction</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Legacy System Support</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Compliance Posture Management</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Predictable Maintenance</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Vendor Risk Mitigation</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Executive Dashboard Access</div>
                     </div>
 
                     <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
@@ -323,14 +323,10 @@
             </div>
         </section>
 
-
-
-        </section>
-
         <!-- SECTION 6: LATEST FROM OUR BLOG -->
         <section class="dev-blog-section">
             <div class="dev-blog-container">
-                <span class="dev-blog-tag">IT INSIGHTS</span>
+                <span class="dev-blog-tag">SECURITY INSIGHTS</span>
                 <h2 class="dev-blog-title">Latest From Our Blog</h2>
                 <div class="dev-blog-divider"></div>
 
@@ -338,45 +334,45 @@
                     <!-- Post 1 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700" alt="IT Support Blog">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700" alt="Security Patching Blog">
                         </div>
                         <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-it-support">STRATEGY</span>
+                            <span class="dev-blog-cat cat-it-support">SECURITY</span>
                             <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 12 Mar, 2024</span>
-                                <span><i class="bi bi-person"></i> By IT Expert</span>
+                                <span><i class="bi bi-calendar3"></i> 18 Mar, 2024</span>
+                                <span><i class="bi bi-person"></i> By Sec Expert</span>
                             </div>
-                            <h4 class="dev-blog-heading">How Proactive IT Support Prevents Costly Downtime</h4>
+                            <h4 class="dev-blog-heading">The Hidden Risks of Delayed Security Patching</h4>
                         </div>
                     </div>
 
                     <!-- Post 2 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Managed IT Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Vulnerability Blog">
                         </div>
                         <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-management">MANAGEMENT</span>
+                            <span class="dev-blog-cat cat-management">COMPLIANCE</span>
                             <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 15 Mar, 2024</span>
-                                <span><i class="bi bi-person"></i> By Admin</span>
+                                <span><i class="bi bi-calendar3"></i> 22 Mar, 2024</span>
+                                <span><i class="bi bi-person"></i> By Compliance Lead</span>
                             </div>
-                            <h4 class="dev-blog-heading">The Importance of 24/7 Monitoring for Modern Businesses</h4>
+                            <h4 class="dev-blog-heading">Staying Ahead of Zero-Day Threats in 2024</h4>
                         </div>
                     </div>
 
                     <!-- Post 3 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Cybersecurity Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Managed Updates Blog">
                         </div>
                         <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-security">SECURITY</span>
+                            <span class="dev-blog-cat cat-security">UPDATES</span>
                             <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 20 Mar, 2024</span>
-                                <span><i class="bi bi-person"></i> By Sec Lead</span>
+                                <span><i class="bi bi-calendar3"></i> 25 Mar, 2024</span>
+                                <span><i class="bi bi-person"></i> By System Admin</span>
                             </div>
-                            <h4 class="dev-blog-heading">Top 5 Cybersecurity Threats to Remote Teams in 2024</h4>
+                            <h4 class="dev-blog-heading">Automated vs. Manual Patching: Which is Better?</h4>
                         </div>
                     </div>
                 </div>
@@ -397,7 +393,7 @@
 
                     <!-- Left: Text + Contact -->
                     <div class="hd-cta-left">
-                        <h2 class="hd-cta-banner-title">Protect business, cyber security solution today!</h2>
+                        <h2 class="hd-cta-banner-title">Strengthen your compliance posture today!</h2>
                         
                         <div class="hd-cta-contact-grid">
                             <!-- Phone -->
@@ -427,7 +423,7 @@
                     <!-- Right: Framed Image -->
                     <div class="hd-cta-right">
                         <div class="hd-cta-image-frame">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="Cyber Security Monitoring">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="Vulnerability Management">
                         </div>
                     </div>
 

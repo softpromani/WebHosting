@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Advanced Firewall Setup & Configuration | Mounteko')
+@section('title', 'Advanced VPN Setup & Remote Access Security | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -24,18 +24,18 @@
         <section class="header2-section">
             <div class="h2-container">
                 <div class="h2-content">
-                    <h2>Advanced Firewall Setup & Configuration to Protect Your <span>Business</span></h2>
-                    <p>Proactive network perimeter defense, zero-trust configuration, and compliance-driven firewall management to safeguard your data, internal networks, and remote users.</p>
+                    <h2>Advanced VPN Setup & Remote Access Security for Your <span>Business</span></h2>
+                    <p>Secure VPN setup services and managed remote access solutions to encrypt data, protect hybrid workforces, and ensure only authorized users reach your critical infrastructure.</p>
                     <div class="h2-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
                         <a href="{{ route('contactUs') }}" class="btn-blue-grad">Get a Free Security Assessment</a>
-                        <a href="{{ route('contactUs') }}" class="btn-blue-grad" style="background: transparent; border: 2px solid white;">Talk to a Firewall Expert</a>
+                        <a href="{{ route('contactUs') }}" class="btn-blue-grad" style="background: transparent; border: 2px solid white;">Talk to a VPN Expert</a>
                     </div>
                 </div>
                 <div class="h2-visual">
                     <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600"
-                        class="dashboard-img" alt="Firewall Security Dashboard">
+                        class="dashboard-img" alt="VPN Security Dashboard">
                     <div class="shield-overlay" style="display: flex; justify-content: center; align-items: center;">
-                        <i class="bi bi-shield-fill-check"
+                        <i class="bi bi-globe2"
                             style="font-size: 150px; color: white; filter: drop-shadow(0 0 30px rgba(77, 163, 255, 0.9));"></i>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
             <div class="h2-bottom-bar">
                 <div class="h2-bottom-text">
                     <div class="h2-line"></div>
-                    Without a properly configured network security firewall setup, businesses remain vulnerable to unauthorized access and lateral movement 24x7.
+                    Without a secure business VPN setup, remote employees and branch offices remain vulnerable 24x7.
                     <div class="h2-line"></div>
                 </div>
             </div>
@@ -94,12 +94,12 @@
         <div class="service-pill-menu">
             <div class="container">
                 <div class="pill-track">
-                    <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> Firewall Setup</span>
-                    <a href="{{ route('services.vpn-setup-remote-access') }}" class="service-pill">VPN Setup & Remote Access</a>
+                    <a href="{{ route('services.firewall-router-configuration') }}" class="service-pill">Firewall Setup</a>
+                    <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> VPN Setup & Remote Access</span>
                     <a href="{{ route('services.cloud-security-firewall') }}" class="service-pill">Cloud Security</a>
                     <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
                     <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
-                    <a href="#" class="service-pill">Security Audit</a>
+                    <a href="{{ route('services.security-audits') }}" class="service-pill">Security Audit</a>
                     <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall Monitoring</a>
                     <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application Security</a>
                 </div>
@@ -112,13 +112,13 @@
                 <div class="s3-visual">
                     <div class="img-tall-wrap">
                         <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=600"
-                            class="s3-img" style="height: 380px;" alt="Firewall Control Center">
+                            class="s3-img" style="height: 380px;" alt="VPN Management Center">
                     </div>
                     <div class="img-stack-wrap">
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400"
-                            class="s3-img" style="height: 180px;" alt="Secure Server Room">
+                            class="s3-img" style="height: 180px;" alt="Secure Remote Access">
                         <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400"
-                            class="s3-img" style="height: 180px;" alt="Cyber Defense Data">
+                            class="s3-img" style="height: 180px;" alt="Security Network">
                     </div>
                     <div class="badge-circular">
                         <div class="badge-inner">
@@ -132,24 +132,24 @@
                     <div class="s3-tag">
                         <i class="bi bi-eye-fill"></i> ABOUT US
                     </div>
-                    <h2>Your trusted partner in <span>enterprise firewall solutions</span></h2>
-                    <p>We provide reliable, cutting-edge firewall configuration services to protect your digital perimeter. From initial firewall installation services to ongoing managed firewall services, we ensure your network traffic is filtered, secured, and compliant.</p>
+                    <h2>Your trusted partner in managed VPN services and <span class="together">secure connectivity.</span></h2>
+                    <p>We provide reliable, cutting-edge VPN configuration services to protect your remote workforce. From corporate VPN setup to advanced remote access security solutions, we ensure your data remains encrypted and your network invisible to threats.</p>
 
                     <div class="s3-feature-box">
                         <div class="s3-feature-img">
                             <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=300"
-                                alt="Firewall Security Expert">
+                                alt="VPN Security Expert">
                         </div>
                         <div class="s3-feature-text">
-                            <h5>24/7 firewall security assistance</h5>
+                            <h5>24/7 VPN monitoring & assistance</h5>
                             <p>Ensuring optimal uptime and continuous defense against emerging threats with expert assistance.</p>
                         </div>
                     </div>
 
                     <ul class="s3-checklist">
-                        <li><i class="bi bi-check-circle-fill"></i> Real-Time Threat Detection and Monitoring</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Granular Access Control Management (ACL & Zero Trust)</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Continuous Security Policy Auditing & Tuning</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Enterprise VPN Solutions & Site-to-Site Setup</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Secure Remote Access VPN Setup & Zero Trust Policies</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Managed VPN Services & Performance Optimization</li>
                     </ul>
 
                     <div class="s3-footer">
@@ -160,7 +160,7 @@
                             <strong>(855) 526-7890</strong>
                         </div>
                         <a href="{{ route('contactUs') }}" class="btn-s3-grad">
-                            More About Our Firewall Service Provider Team <i class="bi bi-arrow-right-short"></i>
+                            More About Our VPN Service Provider Network <i class="bi bi-arrow-right-short"></i>
                         </a>
                     </div>
                 </div>
@@ -171,44 +171,44 @@
         <section class="section4-services">
             <div class="container">
                 <span class="s4-tagline">WHAT WE PROVIDE</span>
-                <h2 class="s4-title">Firewall Setup Services for <span>Today's Network Threats</span></h2>
-                <p class="s4-desc">Protect your business from ever-evolving cyber risks with our end-to-end firewall configuration and network security firewall setup.</p>
+                <h2 class="s4-title">VPN Setup Services for <span>Today's Hybrid Workforce</span></h2>
+                <p class="s4-desc">Protect your business from exposed RDP ports and insecure public Wi-Fi with our end-to-end remote access security solutions.</p>
 
                 <div class="s4-grid">
                     <div class="s4-card card-network">
-                        <div class="s4-icon-box"><i class="bi bi-router-fill"></i></div>
-                        <h4>Network Firewall Setup</h4>
-                        <p>Deploying next-gen firewalls and intrusion prevention systems to safeguard your entire network perimeter.</p>
+                        <div class="s4-icon-box"><i class="bi bi-shield-shaded"></i></div>
+                        <h4>Business VPN Setup</h4>
+                        <p>Deploying secure, encrypted tunnels for small to medium businesses connecting to cloud apps and on-premise servers.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-data">
-                        <div class="s4-icon-box"><i class="bi bi-shield-lock-fill"></i></div>
-                        <h4>Secure Configuration</h4>
-                        <p>Hardening firewall policies and applying strict rule sets using industry best practices (CIS Benchmarks).</p>
+                        <div class="s4-icon-box"><i class="bi bi-diagram-3-fill"></i></div>
+                        <h4>Enterprise VPN Solutions</h4>
+                        <p>Advanced site-to-site and mesh network configurations ensuring seamless, protected connectivity across global offices.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-identity">
-                        <div class="s4-icon-box"><i class="bi bi-person-badge-fill"></i></div>
-                        <h4>Identity & Access Control</h4>
-                        <p>Integrating VPN and Multi-Factor Authentication (MFA) to manage user access with detailed granular control.</p>
+                        <div class="s4-icon-box"><i class="bi bi-person-workspace"></i></div>
+                        <h4>Remote Access VPN Setup</h4>
+                        <p>Enabling secure, identity-verified access for remote employees using modern protocols like WireGuard and OpenVPN.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-monitor">
-                        <div class="s4-icon-box"><i class="bi bi-eye-fill"></i></div>
-                        <h4>Managed Firewall Services</h4>
-                        <p>24/7 monitoring and management of firewall logs with advanced SIEM integration for real-time incident response.</p>
+                        <div class="s4-icon-box"><i class="bi bi-radar"></i></div>
+                        <h4>Secure VPN Services</h4>
+                        <p>24/7 monitoring of VPN gateways with advanced SIEM integration for real-time threat detection and anomaly response.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-backup">
-                        <div class="s4-icon-box"><i class="bi bi-arrow-repeat"></i></div>
-                        <h4>Backup & Recovery</h4>
-                        <p>Protecting critical firewall configuration backups and ensuring rapid disaster recovery plans for network continuity.</p>
+                        <div class="s4-icon-box"><i class="bi bi-gear-fill"></i></div>
+                        <h4>Managed VPN Services</h4>
+                        <p>Fully outsourced VPN configuration services including patch management, user onboarding, and bandwidth optimization.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-config">
-                        <div class="s4-icon-box"><i class="bi bi-building"></i></div>
-                        <h4>Business Firewall Setup</h4>
-                        <p>Customized enterprise firewall solutions designed specifically for SMBs and large corporate infrastructure needs.</p>
+                        <div class="s4-icon-box"><i class="bi bi-lock-fill"></i></div>
+                        <h4>VPN Configuration Services</h4>
+                        <p>Hardening VPN appliances and applying strict cipher suites and multi-factor authentication (MFA) across infrastructure.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                 </div>
@@ -218,31 +218,31 @@
         <!-- SECTION 5 (WHY CHOOSE US) -->
         <section class="section5-why-us">
             <div class="container">
-                <h2 class="s5-title">Why Choose Our Firewall Setup Services?</h2>
+                <h2 class="s5-title">Why Choose Our VPN Setup & Remote Access Services?</h2>
                 <div class="s5-row" style="flex-wrap: wrap; justify-content: center;">
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-activity"></i></div>
                         <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Proactive Monitoring</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
+                        <div class="s5-icon-circle"><i class="bi bi-shield-check"></i></div>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">WireGuard Ready</h5>
+                    </div>
+                    <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-shield-lock"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Zero-Trust Architecture</h5>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Zero Trust Access</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
-                        <div class="s5-icon-circle"><i class="bi bi-arrows-angle-expand"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Scalable Solutions</h5>
-                    </div>
-                    <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
-                        <div class="s5-icon-circle"><i class="bi bi-lightning-charge-fill"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Fast Response Time</h5>
+                        <div class="s5-icon-circle"><i class="bi bi-speedometer2"></i></div>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Fast Tunnel Speed</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-person-check-fill"></i></div>
                         <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Single IT Partner</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center; border-right: none;">
-                        <div class="s5-icon-circle"><i class="bi bi-wallet2"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Cost-Effective Plans</h5>
+                        <div class="s5-icon-circle"><i class="bi bi-hdd-network"></i></div>
+                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Scalable Gateway</h5>
                     </div>
                 </div>
             </div>
@@ -259,25 +259,25 @@
                         <h2 class="s7-title">Securing your digital world <span class="together">together</span></h2>
 
                         <div class="s7-service-block">
-                            <h5>Real-Time Threat Monitoring & Filtering</h5>
-                            <p>Our firewall configuration services continuously analyze network traffic, user behavior, and system activity to detect and respond to potential intrusions and malware threats as they occur. This blocks malicious IPs before they breach the internal network.</p>
+                            <h5>Real-Time VPN Threat Monitoring</h5>
+                            <p>Corporate VPN setup with Deep Packet Inspection (DPI) and flow analysis to detect credential stuffing attempts or suspicious geo-location logins in real-time.</p>
                         </div>
 
                         <div class="s7-service-block">
-                            <h5>Compliance And Risk Management</h5>
-                            <p>Our firewall installation services ensure compliance with PCI-DSS, HIPAA, and GDPR standards. We continuously analyze egress traffic and system activity to prevent data exfiltration and detect potential security vulnerabilities in your rule set.</p>
+                            <h5>Secure Remote Access Compliance</h5>
+                            <p>Remote access security solutions designed to meet GDPR, HIPAA, and PCI-DSS standards. We ensure your VPN configuration services align with strict regulatory risk management.</p>
                         </div>
                     </div>
 
                     <div class="s7-right">
                         <div class="s7-image-wrap">
                             <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&q=80&w=800"
-                                alt="Network Security Operations">
+                                alt="VPN Operations Center">
                         </div>
 
                         <div class="s7-service-block">
-                            <h5>Identity And Access Management (IAM) Integration</h5>
-                            <p>Identity and access management integrated with your network firewall setup continuously verifies user credentials against policy. It analyzes user behavior and system activity to detect and respond to potential unauthorized access attempts and insider threats.</p>
+                            <h5>Identity And Access Management (IAM) for VPN</h5>
+                            <p>Our remote access VPN setup integrates with Azure AD and Okta. We enforce MFA and conditional access policies before a secure VPN tunnel is even established, reducing lateral movement risk.</p>
                         </div>
                     </div>
                 </div>
@@ -290,23 +290,23 @@
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 text-center">
                         <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-pc-display" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">COMPUTER SECURITY</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting endpoint systems and data from unauthorized access and network-based cyber threats.</p>
+                            <i class="bi bi-shield-lock-fill" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">CORPORATE VPN SECURITY</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting data in transit from unauthorized access and man-in-the-middle attacks on public networks.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
                         <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-files" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">FILE DUPLICATION & ACCESS</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Restricting lateral movement and controlling access to sensitive file shares and databases via VLAN segmentation.</p>
+                            <i class="bi bi-signpost-split-fill" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">SPLIT TUNNELING & ACCESS</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Optimizing bandwidth by routing only sensitive corporate traffic through the secure VPN services gateway.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
                         <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-shield-shaded" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">NETWORK PROTECTIONS</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Safeguarding the entire perimeter against DDoS attacks, port scanning, and external digital vulnerabilities.</p>
+                            <i class="bi bi-pc-display-horizontal" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">ENDPOINT COMPLIANCE</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Ensuring devices meet security posture checks before the enterprise VPN solution grants network entry.</p>
                         </div>
                     </div>
                 </div>

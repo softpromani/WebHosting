@@ -44,21 +44,35 @@ Route::get('/services/vpn-remote-access', [HomeController::class, 'vpnRemoteAcce
 Route::get('/services/network-monitoring', [HomeController::class, 'networkMonitoring'])->name('services.network-monitoring');
 Route::get('/services/firewall-router-configuration', [HomeController::class, 'firewallRouterConfiguration'])->name('services.firewall-router-configuration');
 Route::get('/services/disaster-recovery-redundancy', [HomeController::class, 'disasterRecoveryRedundancy'])->name('services.disaster-recovery-redundancy');
-Route::get('/services/security-audits-vulnerability-assessments', [HomeController::class, 'securityAudits'])->name('services.security-audits');
-Route::get('/services/penetration-testing', [HomeController::class, 'penetrationTesting'])->name('services.penetration-testing');
-Route::get('/services/endpoint-protection', [HomeController::class, 'endpointProtection'])->name('services.endpoint-protection');
-Route::get('/services/network-intrusion-detection', [HomeController::class, 'networkIntrusionDetection'])->name('services.network-intrusion-detection');
+Route::get('/services/firewall-setup-configuration', [HomeController::class, 'securityAudits'])->name('services.security-audits');
+Route::get('/services/vpn-setup-remote-access', [HomeController::class, 'vpnSetupRemoteAccess'])->name('services.vpn-setup-remote-access');
+Route::get('/services/threat-detection-endpoint-security', [HomeController::class, 'endpointProtection'])->name('services.endpoint-protection');
+Route::get('/services/cloud-security-firewall', [HomeController::class, 'cloudSecurityFirewall'])->name('services.cloud-security-firewall');
+Route::get('/services/network-security-configuration', [HomeController::class, 'networkIntrusionDetection'])->name('services.network-intrusion-detection');
 Route::get('/services/email-phishing-protection', [HomeController::class, 'emailPhishingProtection'])->name('services.email-phishing-protection');
-Route::get('/services/security-operations-center-setup-monitoring', [HomeController::class, 'socSetupMonitoring'])->name('services.soc_setup_monitoring');
-Route::get('/services/incident-response-recovery', [HomeController::class, 'incidentResponseRecovery'])->name('services.incident_response_recovery');
+Route::get('/services/security-audit-vulnerability-scan', [HomeController::class, 'socSetupMonitoring'])->name('services.soc_setup_monitoring');
+Route::get('/services/firewall-monitoring-management', [HomeController::class, 'incidentResponseRecovery'])->name('services.incident_response_recovery');
 
 // Development Services
 Route::get('/services/custom-software-development', [HomeController::class, 'customSoftwareDevelopment'])->name('services.custom_software');
+Route::get('/services/ecommerce-development', [HomeController::class, 'ecommerceDevelopment'])->name('services.ecommerce_development');
+Route::get('/services/custom-web-applications', [HomeController::class, 'customWebApplications'])->name('services.custom_web_applications');
+Route::get('/services/api-development', [HomeController::class, 'apiDevelopment'])->name('services.api_development');
+Route::get('/services/website-maintenance', [HomeController::class, 'websiteMaintenance'])->name('services.website_maintenance');
+Route::get('/services/web-performance-seo', [HomeController::class, 'webPerformanceSeo'])->name('services.web_performance_seo');
 
 // Cloud & IT Infrastructure Services
 Route::get('/services/cloud-architecture-consulting', [HomeController::class, 'cloudArchitectureConsulting'])->name('services.cloud_architecture');
+Route::get('/services/backup-disaster-recovery', [HomeController::class, 'backupDisasterRecovery'])->name('services.backup_disaster_recovery');
+Route::get('/services/hybrid-cloud-integration', [HomeController::class, 'hybridCloudIntegration'])->name('services.hybrid_cloud_integration');
+Route::get('/services/it-audit-consulting', [HomeController::class, 'itAuditConsulting'])->name('services.it_audit_consulting');
+Route::get('/services/server-infrastructure-management', [HomeController::class, 'serverInfrastructureManagement'])->name('services.server_infrastructure_management');
+Route::get('/services/cloud-security-compliance', [HomeController::class, 'cloudSecurityCompliance'])->name('services.cloud_security_compliance');
 Route::get('/services/managed-it-services', [HomeController::class, 'managedItServices'])->name('services.managed_it');
 Route::get('/services/managed-it/it-support-helpdesk', [HomeController::class, 'itSupportHelpdesk'])->name('services.it_support_helpdesk');
+Route::get('/services/managed-it/system-monitoring-maintenance', [HomeController::class, 'systemMonitoringMaintenance'])->name('services.system_monitoring');
+Route::get('/services/managed-it/system-patch-management-updates', [HomeController::class, 'systemPatchManagement'])->name('services.patch_management');
+Route::get('/services/managed-it/hardware-software-procurement', [HomeController::class, 'hardwareSoftwareProcurement'])->name('services.hardware_software_procurement');
 
 // Miscellaneous
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');

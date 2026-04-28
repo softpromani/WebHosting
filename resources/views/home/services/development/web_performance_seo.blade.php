@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Custom Software & Application Development Solutions | Mounteko')
+@section('title', 'Web Performance, SEO & Optimization Solutions | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -22,8 +22,8 @@
         <section class="dev-hero-section">
             <div class="dev-hero-container">
                 <div class="dev-hero-content">
-                    <h1>Professional Website Design & Development Services</h1>
-                    <p>We engineer custom digital platforms that drive engagement and convert visitors. As a leading web design and development company, we bridge the gap between visual artistry and technical performance.</p>
+                    <h1>Web Performance, SEO & Optimization Solutions</h1>
+                    <p>We accelerate load times, boost search visibility, and optimize every aspect of your digital presence for sustainable growth.</p>
                     <div class="dev-hero-btns">
                         <a href="{{ route('contactUs') }}" class="btn-dev-primary">Get a Free Project Consultation</a>
                         <a href="{{ route('contactUs') }}" class="btn-dev-secondary">Request a Development Quote</a>
@@ -37,20 +37,20 @@
         <div class="dev-feature-bar">
             <div class="dev-feature-box">
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-laptop"></i></div>
-                    <span>Responsive Design</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-speedometer"></i></div>
+                    <span>Website Speed Optimization</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-code-slash"></i></div>
-                    <span>Custom Development</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-gear-wide-connected"></i></div>
+                    <span>Technical SEO Services</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-cart3"></i></div>
-                    <span>E-Commerce</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-graph-up-arrow"></i></div>
+                    <span>Core Web Vitals</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-building"></i></div>
-                    <span>Business Sites</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-search"></i></div>
+                    <span>Search Engine Visibility</span>
                 </div>
             </div>
         </div>
@@ -65,15 +65,12 @@
                 <div class="dev-company-grid">
                     <!-- LEFT CONTENT -->
                     <div class="dev-company-left">
-                        <span class="company-tag">Our Company</span>
-                        <h3 class="company-title alt-font">Building digital authority one pixel at a time.</h3>
+                        <span class="company-tag">OUR COMPANY</span>
+                        <h3 class="company-title alt-font">We've spent years mastering the algorithms and infrastructure that drive online success.</h3>
                         <p class="company-desc">
-                            <strong>What we believe:</strong> Clarity over clutter. Results over rhetoric.<br><br>
-                            <strong>What we do:</strong> We are a dedicated website development company that rejects one-size-fits-all templates. We focus on custom website development that mirrors the exact operational rhythm of your business.<br><br>
-                            <strong>How we work:</strong> For over a decade, our team has refined a methodology that balances aesthetic precision with backend stability. We prioritize clean code and user-centric navigation.<br><br>
-                            <strong>Why it matters:</strong> When you hire web designer talent from our team, you're investing in a platform that strengthens your market position — without unnecessary complexity.
+                            A slow website doesn't just frustrate users—it costs you rankings and revenue. Our approach to website performance optimization goes beyond surface-level tweaks. We dive deep into server response times, render-blocking resources, and Core Web Vitals to ensure your site loads with precision. As a dedicated website optimization company, we understand that every millisecond matters. Whether you're looking for comprehensive search engine optimization services or targeted technical SEO services, our methodology combines performance engineering with strategic content visibility.
                         </p>
-                        <a href="{{ route('contactUs') }}" class="btn-company-more">View Our Work</a>
+                        <a href="{{ route('contactUs') }}" class="btn-company-more">Find out more</a>
                     </div>
 
                     <!-- RIGHT IMAGES -->
@@ -107,63 +104,63 @@
             <div class="dev-services-grid-container">
                 <div class="dev-services-header text-center">
                     <span class="dev-services-tag">OUR SERVICES</span>
-                    <h2 class="dev-services-title alt-font">Services Built Around Your Business,<br><span>Not Templates</span></h2>
+                    <h2 class="dev-services-title alt-font">For your specific performance goals and ranking targets,<br><span>we deliver precise optimization solutions.</span></h2>
                 </div>
 
                 <div class="dev-services-grid">
                     <!-- Service 1 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Custom Website Development">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Website Speed Optimization">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Custom Website Development</h4>
+                            <h4>Website Speed Optimization</h4>
                         </div>
                     </div>
                     <!-- Service 2 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="User-Centric UI/UX Design">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="Technical SEO Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>User-Centric UI/UX Design</h4>
+                            <h4>Technical SEO Services</h4>
                         </div>
                     </div>
                     <!-- Service 3 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/security.png') }}" alt="Clean Code">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/security.png') }}" alt="SEO Audit Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Clean Code & Backend Stability</h4>
+                            <h4>SEO Audit Services</h4>
                         </div>
                     </div>
                     <!-- Service 4 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Performance Optimization">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Website Performance Optimization">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Performance Optimization</h4>
+                            <h4>Website Performance Optimization</h4>
                         </div>
                     </div>
                     <!-- Service 5 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/managed.png') }}" alt="Maintenance">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/managed.png') }}" alt="Web Performance Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Ongoing Maintenance & Support</h4>
+                            <h4>Web Performance Services</h4>
                         </div>
                     </div>
                     <!-- Service 6 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
                             <img src="{{ asset('home/assets/homepage/images/services_v2/consultancy.png') }}"
-                                alt="Web Designer Talent">
+                                alt="SEO Optimization Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Web Designer Talent on Demand</h4>
+                            <h4>SEO Optimization Services</h4>
                         </div>
                     </div>
                 </div>
@@ -175,8 +172,8 @@
             <div class="dev-process-v2-container">
                 <div class="dev-process-header text-center">
                     <span class="process-tag">PROCESS</span>
-                    <h2 class="process-title">Our Development <span>Process</span></h2>
-                    <p class="process-subtitle">Our work as a web design and development company is methodical. We don't just code; we solve business problems.</p>
+                    <h2 class="process-title">Our Performance & SEO Methodology</h2>
+                    <p class="process-subtitle">We follow a structured 5-step framework to deliver measurable improvements in speed and visibility.</p>
                 </div>
 
                 <div class="process-flow-wrapper">
@@ -187,8 +184,8 @@
                             <i class="bi bi-search"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Discover & Strategize</h4>
-                            <p>Map user journeys before writing code.</p>
+                            <h4>Audit</h4>
+                            <p>Comprehensive website performance optimization and SEO audit services</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -199,8 +196,8 @@
                             <i class="bi bi-bezier2"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Wireframe & Blueprint</h4>
-                            <p>Define UX hierarchy that guides the eye.</p>
+                            <h4>Strategize</h4>
+                            <p>Develop a prioritized roadmap</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -211,8 +208,8 @@
                             <i class="bi bi-code-slash"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Develop & Engineer</h4>
-                            <p>Fast, secure, maintainable custom code.</p>
+                            <h4>Implement</h4>
+                            <p>Execute technical SEO services</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -223,8 +220,8 @@
                             <i class="bi bi-rocket-takeoff"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Quality Assurance & Deploy</h4>
-                            <p>Cross-browser tested. Zero-downtime launch.</p>
+                            <h4>Validate</h4>
+                            <p>Rigorous testing across devices and search console monitoring</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -235,8 +232,8 @@
                             <i class="bi bi-headset"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Iterate & Evolve</h4>
-                            <p>Review analytics. Enhance continuously.</p>
+                            <h4>Sustain</h4>
+                            <p>Continuous monitoring and iterative enhancements</p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +293,7 @@
                     <div class="faq-v2-tag">
                         <i class="bi bi-record-circle"></i> FAQ
                     </div>
-                    <h4 class="faq-v2-title">Direct answers from a seasoned <span>website development company.</span></h4>
+                    <h4 class="faq-v2-title">Web performance and search optimization questions answered with clarity</h4>
                     <div class="faq-v2-img-wrap">
                         <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=800"
                             alt="Specialist working">
@@ -308,68 +305,70 @@
                     <!-- FAQ Item 1 -->
                     <div class="faq-v2-item active">
                         <button class="faq-v2-header">
-                            <h4>What defines quality web development services versus just a template?</h4>
+                            <h4>How do website performance and SEO work together?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>It's the difference between leasing a generic billboard and owning a piece of real estate. We build with custom code that allows for unlimited scalability and specific functionality integration that template platforms simply cannot accommodate.</p>
+                            <p>Page speed and Core Web Vitals are confirmed ranking factors. A fast, technically sound site creates a better user experience, which reduces bounce rates and signals quality to search engines. Our website optimization services address both simultaneously.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 2 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>How involved do I need to be if I hire web designer and developer talent from you?</h4>
+                            <h4>What does a typical SEO audit services engagement include?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>As involved as you wish to be. We handle the heavy lifting, but we require your unique business insight during the discovery and content-gathering phases. We present, you approve, we build.</p>
+                            <p>We examine crawl accessibility, indexation health, on-page element structure, internal linking architecture, and page speed benchmarks. The deliverable is a prioritized action plan specific to your domain's technical standing.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 3 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>Are responsive web design services really that critical for business website design?</h4>
+                            <h4>How quickly can website speed optimization impact my traffic?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>It is non-negotiable. Over half of web traffic is mobile. If the site doesn't adjust intuitively, you are actively turning away revenue. Every site we build meets stringent mobile-first standards.</p>
+                            <p>Technical improvements to server response time and resource loading can yield immediate user experience gains. Search ranking adjustments may take several weeks to fully reflect as Google recrawls and reassesses the updated pages.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 4 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>Can you handle complex ecommerce website development with high SKU counts?</h4>
+                            <h4>Do you work with existing marketing teams or as a standalone website optimization company?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>Absolutely. We have extensive experience structuring large catalogs with advanced filtering logic, ensuring customers find what they need without friction.</p>
+                            <p>We adapt to your operational structure. We can function as an extension of your internal team providing specialized technical SEO services and web performance services, or we can manage the entire optimization lifecycle independently.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> <!-- SECTION: PREMIUM CTA -->
+        </section> 
+        
+        <!-- SECTION: PREMIUM CTA -->
         <section class="section8-cta">
             <div class="s8-container">
                 <div class="s8-box-custom">
                     <div class="s8-left">
-                        <h2 class="s8-title-custom">Protect business, custom software solution today!</h2>
+                        <h2 class="s8-title-custom">Ready to accelerate your site performance and search visibility?</h2>
                         <div class="s8-contacts">
                             <div class="s8-contact-item">
                                 <i class="bi bi-telephone-outbound"></i>
                                 <div class="s8-contact-info">
-                                    <span>Get contact now</span>
-                                    <strong>{{ settingValue('phone') }}</strong>
+                                    <span>Phone</span>
+                                    <strong>(855) 526-7890</strong>
                                 </div>
                             </div>
                             <div class="s8-sep"></div>
                             <div class="s8-contact-item">
                                 <i class="bi bi-envelope-at"></i>
                                 <div class="s8-contact-info">
-                                    <span>Sent e-mail</span>
-                                    <strong>{{ settingValue('email') }}</strong>
+                                    <span>Email</span>
+                                    <strong>info@mounteko.com</strong>
                                 </div>
                             </div>
                         </div>
@@ -390,7 +389,6 @@
                 </div>
             </div>
         </section>
-        >
 
     </main>
 
@@ -413,5 +411,4 @@
             });
         });
     </script>
-    >
 @endsection

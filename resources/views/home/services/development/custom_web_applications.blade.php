@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Custom Software & Application Development Solutions | Mounteko')
+@section('title', 'Custom Software & Web Application Development Solutions | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -22,8 +22,8 @@
         <section class="dev-hero-section">
             <div class="dev-hero-container">
                 <div class="dev-hero-content">
-                    <h1>Professional Website Design & Development Services</h1>
-                    <p>We engineer custom digital platforms that drive engagement and convert visitors. As a leading web design and development company, we bridge the gap between visual artistry and technical performance.</p>
+                    <h1>Custom Software & Web Application Development Solutions</h1>
+                    <p>We design, develop, and scale secure, high-performance digital products tailored precisely to how your business operates—no generic templates, no unnecessary features.</p>
                     <div class="dev-hero-btns">
                         <a href="{{ route('contactUs') }}" class="btn-dev-primary">Get a Free Project Consultation</a>
                         <a href="{{ route('contactUs') }}" class="btn-dev-secondary">Request a Development Quote</a>
@@ -37,20 +37,20 @@
         <div class="dev-feature-bar">
             <div class="dev-feature-box">
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-laptop"></i></div>
-                    <span>Responsive Design</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-window"></i></div>
+                    <span>Web Applications</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-code-slash"></i></div>
-                    <span>Custom Development</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-phone"></i></div>
+                    <span>Mobile Applications</span>
                 </div>
                 <div class="dev-feature-item">
-                    <div class="dev-feature-icon-wrap"><i class="bi bi-cart3"></i></div>
-                    <span>E-Commerce</span>
+                    <div class="dev-feature-icon-wrap"><i class="bi bi-cpu"></i></div>
+                    <span>Custom Software</span>
                 </div>
                 <div class="dev-feature-item">
                     <div class="dev-feature-icon-wrap"><i class="bi bi-building"></i></div>
-                    <span>Business Sites</span>
+                    <span>Enterprise Solutions</span>
                 </div>
             </div>
         </div>
@@ -65,15 +65,12 @@
                 <div class="dev-company-grid">
                     <!-- LEFT CONTENT -->
                     <div class="dev-company-left">
-                        <span class="company-tag">Our Company</span>
-                        <h3 class="company-title alt-font">Building digital authority one pixel at a time.</h3>
+                        <span class="company-tag">Custom Software & Web Applications</span>
+                        <h3 class="company-title alt-font">Software That Removes Friction, Not Just Adds Features</h3>
                         <p class="company-desc">
-                            <strong>What we believe:</strong> Clarity over clutter. Results over rhetoric.<br><br>
-                            <strong>What we do:</strong> We are a dedicated website development company that rejects one-size-fits-all templates. We focus on custom website development that mirrors the exact operational rhythm of your business.<br><br>
-                            <strong>How we work:</strong> For over a decade, our team has refined a methodology that balances aesthetic precision with backend stability. We prioritize clean code and user-centric navigation.<br><br>
-                            <strong>Why it matters:</strong> When you hire web designer talent from our team, you're investing in a platform that strengthens your market position — without unnecessary complexity.
+                            Great software doesn't come from a feature checklist—it comes from understanding the friction points inside a business and removing them. Mounteko approaches every engagement by first learning how your teams work, where data gets stuck, and what "better" actually looks like for your specific operation. Our development methodology prioritizes security architecture and database integrity from day one, ensuring that what we build isn't just functional today but remains resilient as your company grows.
                         </p>
-                        <a href="{{ route('contactUs') }}" class="btn-company-more">View Our Work</a>
+                        <a href="{{ route('contactUs') }}" class="btn-company-more">Find out more</a>
                     </div>
 
                     <!-- RIGHT IMAGES -->
@@ -107,63 +104,63 @@
             <div class="dev-services-grid-container">
                 <div class="dev-services-header text-center">
                     <span class="dev-services-tag">OUR SERVICES</span>
-                    <h2 class="dev-services-title alt-font">Services Built Around Your Business,<br><span>Not Templates</span></h2>
+                    <h2 class="dev-services-title alt-font">For your specific operational requirements,<br><span>precisely-targeted development expertise.</span></h2>
                 </div>
 
                 <div class="dev-services-grid">
                     <!-- Service 1 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Custom Website Development">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Custom Software Development">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Custom Website Development</h4>
+                            <h4>Custom Software Development</h4>
                         </div>
                     </div>
                     <!-- Service 2 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="User-Centric UI/UX Design">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="Web Application Development">
                         </div>
                         <div class="dev-service-info">
-                            <h4>User-Centric UI/UX Design</h4>
+                            <h4>Web Application Development</h4>
                         </div>
                     </div>
                     <!-- Service 3 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/security.png') }}" alt="Clean Code">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/security.png') }}" alt="Enterprise Software Development">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Clean Code & Backend Stability</h4>
+                            <h4>Enterprise Software Development</h4>
                         </div>
                     </div>
                     <!-- Service 4 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Performance Optimization">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="SaaS Application Development">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Performance Optimization</h4>
+                            <h4>SaaS Application Development</h4>
                         </div>
                     </div>
                     <!-- Service 5 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/managed.png') }}" alt="Maintenance">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/managed.png') }}" alt="Business Software Development">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Ongoing Maintenance & Support</h4>
+                            <h4>Business Software Development</h4>
                         </div>
                     </div>
                     <!-- Service 6 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
                             <img src="{{ asset('home/assets/homepage/images/services_v2/consultancy.png') }}"
-                                alt="Web Designer Talent">
+                                alt="Software & Web Development Services">
                         </div>
                         <div class="dev-service-info">
-                            <h4>Web Designer Talent on Demand</h4>
+                            <h4>Software & Web Development Services</h4>
                         </div>
                     </div>
                 </div>
@@ -175,8 +172,8 @@
             <div class="dev-process-v2-container">
                 <div class="dev-process-header text-center">
                     <span class="process-tag">PROCESS</span>
-                    <h2 class="process-title">Our Development <span>Process</span></h2>
-                    <p class="process-subtitle">Our work as a web design and development company is methodical. We don't just code; we solve business problems.</p>
+                    <h2 class="process-title">Our Development Process</h2>
+                    <p class="process-subtitle">We follow a structured 5-step approach to ensure high-quality software delivery.</p>
                 </div>
 
                 <div class="process-flow-wrapper">
@@ -187,8 +184,8 @@
                             <i class="bi bi-search"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Discover & Strategize</h4>
-                            <p>Map user journeys before writing code.</p>
+                            <h4>Discover</h4>
+                            <p>Map user journeys, goals, and logic before writing code.</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -199,8 +196,8 @@
                             <i class="bi bi-bezier2"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Wireframe & Blueprint</h4>
-                            <p>Define UX hierarchy that guides the eye.</p>
+                            <h4>Design</h4>
+                            <p>Define UX hierarchy that guides the user effectively.</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -211,8 +208,8 @@
                             <i class="bi bi-code-slash"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Develop & Engineer</h4>
-                            <p>Fast, secure, maintainable custom code.</p>
+                            <h4>Develop</h4>
+                            <p>Fast, secure, maintainable custom code architecture.</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -223,8 +220,8 @@
                             <i class="bi bi-rocket-takeoff"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Quality Assurance & Deploy</h4>
-                            <p>Cross-browser tested. Zero-downtime launch.</p>
+                            <h4>Deploy</h4>
+                            <p>Rigorous QA testing for a zero-downtime launch.</p>
                         </div>
                         <div class="process-line"></div>
                     </div>
@@ -235,8 +232,8 @@
                             <i class="bi bi-headset"></i>
                         </div>
                         <div class="process-step-content">
-                            <h4>Iterate & Evolve</h4>
-                            <p>Review analytics. Enhance continuously.</p>
+                            <h4>Support</h4>
+                            <p>Review analytics and enhance performance continuously.</p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +293,7 @@
                     <div class="faq-v2-tag">
                         <i class="bi bi-record-circle"></i> FAQ
                     </div>
-                    <h4 class="faq-v2-title">Direct answers from a seasoned <span>website development company.</span></h4>
+                    <h4 class="faq-v2-title">Common questions about custom software and web application engagements</h4>
                     <div class="faq-v2-img-wrap">
                         <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=800"
                             alt="Specialist working">
@@ -308,68 +305,70 @@
                     <!-- FAQ Item 1 -->
                     <div class="faq-v2-item active">
                         <button class="faq-v2-header">
-                            <h4>What defines quality web development services versus just a template?</h4>
+                            <h4>What distinguishes custom software development from purchasing licensed products?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>It's the difference between leasing a generic billboard and owning a piece of real estate. We build with custom code that allows for unlimited scalability and specific functionality integration that template platforms simply cannot accommodate.</p>
+                            <p>Custom software development builds solutions tailored exactly to your unique workflows, data structures, and business logic — licensed products force you to adapt your operations to fit their fixed features.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 2 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>How involved do I need to be if I hire web designer and developer talent from you?</h4>
+                            <h4>How do you determine the scope and investment for a web application development project?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>As involved as you wish to be. We handle the heavy lifting, but we require your unique business insight during the discovery and content-gathering phases. We present, you approve, we build.</p>
+                            <p>We determine scope by first understanding your business goals, user needs, and key workflows — then mapping every required feature, integration, and technical dependency.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 3 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>Are responsive web design services really that critical for business website design?</h4>
+                            <h4>What is the typical timeline for enterprise software development engagements?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>It is non-negotiable. Over half of web traffic is mobile. If the site doesn't adjust intuitively, you are actively turning away revenue. Every site we build meets stringent mobile-first standards.</p>
+                            <p>Custom features, third-party integrations (ERP, CRM, legacy systems), and compliance requirements can extend timelines — we provide phased roadmaps to deliver value incrementally.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 4 -->
                     <div class="faq-v2-item">
                         <button class="faq-v2-header">
-                            <h4>Can you handle complex ecommerce website development with high SKU counts?</h4>
+                            <h4>Can you integrate new custom web application development with our current infrastructure?</h4>
                             <div class="faq-v2-icon"><i class="bi bi-chevron-down"></i></div>
                         </button>
                         <div class="faq-v2-content">
-                            <p>Absolutely. We have extensive experience structuring large catalogs with advanced filtering logic, ensuring customers find what they need without friction.</p>
+                            <p>Our development process begins with a thorough assessment of your current architecture to design APIs, middleware, or data bridges that ensure smooth communication between old and new systems.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> <!-- SECTION: PREMIUM CTA -->
+        </section> 
+        
+        <!-- SECTION: PREMIUM CTA -->
         <section class="section8-cta">
             <div class="s8-container">
                 <div class="s8-box-custom">
                     <div class="s8-left">
-                        <h2 class="s8-title-custom">Protect business, custom software solution today!</h2>
+                        <h2 class="s8-title-custom">Protect your competitive advantage with software built specifically for your business.</h2>
                         <div class="s8-contacts">
                             <div class="s8-contact-item">
                                 <i class="bi bi-telephone-outbound"></i>
                                 <div class="s8-contact-info">
-                                    <span>Get contact now</span>
-                                    <strong>{{ settingValue('phone') }}</strong>
+                                    <span>Phone</span>
+                                    <strong>(855) 526-7890</strong>
                                 </div>
                             </div>
                             <div class="s8-sep"></div>
                             <div class="s8-contact-item">
                                 <i class="bi bi-envelope-at"></i>
                                 <div class="s8-contact-info">
-                                    <span>Sent e-mail</span>
-                                    <strong>{{ settingValue('email') }}</strong>
+                                    <span>Email</span>
+                                    <strong>info@mounteko.com</strong>
                                 </div>
                             </div>
                         </div>
@@ -390,7 +389,6 @@
                 </div>
             </div>
         </section>
-        >
 
     </main>
 
@@ -413,5 +411,4 @@
             });
         });
     </script>
-    >
 @endsection

@@ -95,14 +95,19 @@ class HomeController extends Controller
         return view('home.services.cybersecurity.security_audits');
     }
 
-    public function penetrationTesting()
+    public function vpnSetupRemoteAccess()
     {
-        return view('home.services.cybersecurity.penetration_testing');
+        return view('home.services.cybersecurity.vpn_setup_remote_access');
     }
 
     public function endpointProtection()
     {
         return view('home.services.cybersecurity.endpoint_protection');
+    }
+
+    public function cloudSecurityFirewall()
+    {
+        return view('home.services.cybersecurity.cloud_security_firewall');
     }
 
     public function networkIntrusionDetection()
@@ -130,9 +135,59 @@ class HomeController extends Controller
         return view('home.services.development.custom_software');
     }
 
+    public function ecommerceDevelopment()
+    {
+        return view('home.services.development.ecommerce_development');
+    }
+
+    public function customWebApplications()
+    {
+        return view('home.services.development.custom_web_applications');
+    }
+
+    public function apiDevelopment()
+    {
+        return view('home.services.development.api_development');
+    }
+
+    public function websiteMaintenance()
+    {
+        return view('home.services.development.website_maintenance');
+    }
+
+    public function webPerformanceSeo()
+    {
+        return view('home.services.development.web_performance_seo');
+    }
+
     public function cloudArchitectureConsulting()
     {
         return view('home.services.cloud.cloud_architecture');
+    }
+
+    public function backupDisasterRecovery()
+    {
+        return view('home.services.cloud.backup_disaster_recovery');
+    }
+
+    public function hybridCloudIntegration()
+    {
+        return view('home.services.cloud.hybrid_cloud_integration');
+    }
+
+    public function itAuditConsulting()
+    {
+        return view('home.services.cloud.it_audit_consulting');
+    }
+
+    public function serverInfrastructureManagement()
+    {
+        return view('home.services.cloud.server_infrastructure_management');
+    }
+
+    public function cloudSecurityCompliance()
+    {
+        return view('home.services.cloud.cloud_security_compliance');
     }
 
     public function managedItServices()
@@ -143,6 +198,21 @@ class HomeController extends Controller
     public function itSupportHelpdesk()
     {
         return view('home.services.managed_it.it_support_helpdesk');
+    }
+
+    public function systemMonitoringMaintenance()
+    {
+        return view('home.services.managed_it.system_monitoring');
+    }
+
+    public function systemPatchManagement()
+    {
+        return view('home.services.managed_it.system_patch_management');
+    }
+
+    public function hardwareSoftwareProcurement()
+    {
+        return view('home.services.managed_it.hardware_software_procurement');
     }
 
     public function contactUs()

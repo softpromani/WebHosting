@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Cloud Architecture Consulting (AWS, Azure, GCP) | Mounteko')
+@section('title', 'IT Audit, Consulting & Cost Optimization | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -26,7 +26,7 @@
 
                 <!-- LEFT: Heading + Buttons -->
                 <div class="cloud-hero-left">
-                    <h3 class="cloud-hero-heading">Future‑proof your business with end‑to‑end cloud transformation services.</h3>
+                    <h3 class="cloud-hero-heading">Optimize, Audit & Transform IT Operations</h3>
                     <div class="cloud-hero-btns">
                         <a href="{{ route('contactUs') }}" class="cloud-btn-primary">
                             <i class="bi bi-download"></i> Request proposal
@@ -44,46 +44,47 @@
 
                     <!-- Floating Cards -->
                     <div class="cloud-float-card cloud-card-top-left">
-                        <div class="cloud-float-icon aws"><i class="bi bi-cloud-fill"></i></div>
+                        <div class="cloud-float-icon aws"><i class="bi bi-graph-down-arrow"></i></div>
                         <div class="cloud-float-text">
-                            <strong>Multi-Cloud Vendor Management</strong>
-                            <span>AWS / Azure / GCP / Hybrid</span>
+                            <strong>Average Cost Reduction</strong>
+                            <span>32%</span>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-top-right">
                         <div class="cloud-float-chart">
-                            <div class="cloud-chart-label">avg. cost optimization</div>
+                            <div class="cloud-chart-label">IT Efficiency Gain</div>
                             <div class="cloud-chart-bar-wrap">
                                 <div class="cloud-chart-bar" style="height:60%"></div>
                                 <div class="cloud-chart-bar" style="height:75%"></div>
                                 <div class="cloud-chart-bar" style="height:50%"></div>
-                                <div class="cloud-chart-bar highlight" style="height:90%"></div>
+                                <div class="cloud-chart-bar highlight" style="height:95%"></div>
                             </div>
-                            <div class="cloud-chart-value">$42k/yr</div>
+                            <div class="cloud-chart-value">45%</div>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-mid-left">
-                        <div class="cloud-float-stat">
-                            <span class="cloud-stat-num">99.99%</span>
+                        <div class="cloud-float-icon secure"><i class="bi bi-file-earmark-check"></i></div>
+                        <div class="cloud-float-text">
+                            <strong>Compliance Readiness</strong>
+                            <span>& Audit Pass Rate</span>
                         </div>
-                        <div class="cloud-float-desc">targeted uptime SLA</div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-mid-right">
-                        <div class="cloud-float-icon azure"><i class="bi bi-diagram-3-fill"></i></div>
+                        <div class="cloud-float-icon azure"><i class="bi bi-shield-check"></i></div>
                         <div class="cloud-float-text">
-                            <strong>24/7 managed</strong>
-                            <span>cloud services</span>
+                            <strong>Security & Compliance</strong>
+                            <span>SOC 2 / ISO 27001 / GDPR</span>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-bottom-right">
-                        <div class="cloud-float-icon secure"><i class="bi bi-shield-check"></i></div>
+                        <div class="cloud-float-icon aws"><i class="bi bi-award"></i></div>
                         <div class="cloud-float-text">
-                            <strong>15+ years</strong>
-                            <span>cloud infrastructure experience</span>
+                            <strong>Years Of Experience</strong>
+                            <span>15</span>
                         </div>
                     </div>
 
@@ -104,14 +105,14 @@
                     <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=500"
                         alt="Cloud Team" class="scale-img-bottom">
                     <div class="scale-years-badge">
-                        <span class="scale-years-num">20</span>
+                        <span class="scale-years-num">15</span>
                         <span class="scale-years-text">Years Of<br>Experience</span>
                     </div>
                 </div>
 
                 <div class="dev-scale-content">
-                    <h4 class="scale-title">We Help IT Companies<br>Scale Cloud Engineering</h4>
-                    <p class="scale-desc">Your business shouldn’t slow down because your cloud doesn’t fit. We provide cloud implementation services that grow with you — from startup environments to enterprise‑grade multi‑region deployments. Our team handles the heavy lifting so your engineers focus on what matters: your product.</p>
+                    <h4 class="scale-title">Hidden inefficiencies and unchecked cloud spend drain profits.</h4>
+                    <p class="scale-desc">We help you implement IT audit and consulting services that uncover waste, strengthen compliance, and align technology with business goals. From infrastructure reviews to full-scale optimization, we turn IT into a competitive advantage.</p>
 
                     <div class="scale-feature-list">
                         <div class="scale-feature-item">
@@ -119,8 +120,8 @@
                                 <i class="bi bi-patch-check-fill"></i>
                             </div>
                             <div class="scale-feature-text">
-                                <h5>Certified Cloud Partner</h5>
-                                <p>ISO 27001, SOC 2, and AWS Advanced Tier partner with audited security and compliance frameworks.</p>
+                                <h5>Certified IT Auditors</h5>
+                                <p>Independent, thorough IT infrastructure audit with actionable remediation plans. We identify risks, gaps, and overprovisioning before they cost you.</p>
                             </div>
                         </div>
                         <div class="scale-feature-item">
@@ -128,8 +129,8 @@
                                 <i class="bi bi-award-fill"></i>
                             </div>
                             <div class="scale-feature-text">
-                                <h5>Award‑Winning Deployment</h5>
-                                <p>Recognized for excellence in cloud deployment services with zero‑downtime migrations and automated CI/CD pipelines.</p>
+                                <h5>Award-Winning Consulting</h5>
+                                <p>Recognized for delivering measurable ROI through technology consulting services. Our clients see 30%+ cost savings within six months.</p>
                             </div>
                         </div>
                     </div>
@@ -142,34 +143,34 @@
             <div class="dev-why-container">
                 <!-- TAB NAVIGATION -->
                 <div class="dev-tabs-nav">
-                    <button class="dev-tab-btn" data-tab="analytics">Analytic Solutions</button>
-                    <button class="dev-tab-btn active" data-tab="risk">Risk Management</button>
-                    <button class="dev-tab-btn" data-tab="it-manage">IT Management</button>
+                    <button class="dev-tab-btn active" data-tab="analytics">Reclamation</button>
+                    <button class="dev-tab-btn" data-tab="risk">Optimization</button>
+                    <button class="dev-tab-btn" data-tab="it-manage">Assurance</button>
                 </div>
 
                 <div class="dev-tab-content">
                     <!-- ANALYTIC SOLUTIONS TAB -->
-                    <div class="dev-tab-pane" id="analytics">
+                    <div class="dev-tab-pane active" id="analytics">
                         <div class="dev-why-image">
                             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=700"
                                 alt="Analytic Solutions">
                         </div>
                         <div class="dev-why-content">
-                            <span class="dev-why-tag">CLOUD ANALYTICS</span>
-                            <h2 class="dev-why-title">Transform raw cloud data into predictive intelligence</h2>
-                            <p class="dev-why-desc">Stop guessing. Start knowing. Our analytic solutions turn logs, metrics, and traces into real‑time dashboards and long‑term trend analysis. We help you answer: Where are we spending too much? Which workloads underperform? What fails next?</p>
+                            <span class="dev-why-tag">RECLAMATION</span>
+                            <h2 class="dev-why-title">Transforming cloud waste into strategic savings</h2>
+                            <p class="dev-why-desc">Stop paying for idle resources. We provide IT cost optimization services that analyze usage patterns, right-size instances, and eliminate waste—turning your IT budget from a cost center into a growth enabler.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Cost intelligence dashboards – Visualize spend by service, team, or project with anomaly alerts
+                                    Real-time cost anomaly detection
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Usage forecasting – ML‑driven predictions to right‑size resources and avoid over‑provisioning
+                                    Reserved instance & savings plan recommendations
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Custom reports – Scheduled exports for finance, engineering, or compliance teams
+                                    Automated rightsizing & scheduling
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -178,27 +179,28 @@
                         </div>
                     </div>
 
-                    <!-- RISK MANAGEMENT TAB (ACTIVE) -->
-                    <div class="dev-tab-pane active" id="risk">
+                    <!-- RISK MANAGEMENT TAB -->
+                    <div class="dev-tab-pane" id="risk">
                         <div class="dev-why-image">
                             <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=700"
                                 alt="Risk Management">
                         </div>
                         <div class="dev-why-content">
-                            <h2 class="dev-why-title">Proactive risk detection across your entire cloud footprint</h2>
-                            <p class="dev-why-desc">Security and compliance aren't "set and forget." Our risk management framework continuously scans, prioritizes, and remediates threats across identities, networks, data, and configurations.</p>
+                            <span class="dev-why-tag">OPTIMIZATION</span>
+                            <h2 class="dev-why-title">Collecting meaningful infrastructure data & improving spend efficiency</h2>
+                            <p class="dev-why-desc">Precise observability reveals hidden cost patterns across cloud environments. Our analytics provide actionable financial governance. We optimize every resource consumed.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Compliance mapping – HIPAA, SOC2, ISO 27001, PCI‑DSS, GDPR
+                                    Granular cost allocation & chargeback
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Incident response runbooks – Pre‑tested workflows for breach scenarios
+                                    Underutilized resource identification
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Audit‑ready logging – Centralized with 12‑month retention
+                                    Predictive budget forecasting
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -214,21 +216,21 @@
                                 alt="IT Management">
                         </div>
                         <div class="dev-why-content">
-                            <span class="dev-why-tag">IT MANAGEMENT</span>
-                            <h2 class="dev-why-title">Unified control plane for multi‑cloud and hybrid environments</h2>
-                            <p class="dev-why-desc">Juggling AWS, Azure, GCP, and on‑prem? Stop toggling between consoles. Our IT management layer gives you a single pane of glass for governance, operations, and automation.</p>
+                            <span class="dev-why-tag">ASSURANCE</span>
+                            <h2 class="dev-why-title">Strengthening systems with comprehensive audit & advisory</h2>
+                            <p class="dev-why-desc">Gain complete visibility into your IT estate. Our IT audit services provide the governance, security oversight, and risk assessment needed to run a compliant, efficient, and secure infrastructure.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Automated patch & version management
+                                    Full-stack IT infrastructure audit (network, servers, cloud, endpoints)
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Centralized security & access oversight
+                                    Compliance gap analysis (SOC 2, ISO 27001, PCI DSS, HIPAA)
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Continuous compliance & audit readiness
+                                    Vendor contract & license optimization
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -249,9 +251,8 @@
                     <!-- Left Column -->
                     <div class="dev-it-left">
                         <span class="dev-it-tag">WHY CHOOSE US</span>
-                        <h2 class="dev-it-title">Custom IT Solutions for Your Business</h2>
-                        <h4 style="font-size: 1.05rem; font-weight: 500; color: #4b5563; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Your trusted cloud solutions provider for the entire lifecycle</h4>
-                        <p class="dev-it-desc">Not every cloud fits every workload. We design enterprise cloud solutions tailored to your data, compliance needs, and growth roadmap. Whether lift‑and‑shift or full refactoring, we deliver.</p>
+                        <h2 class="dev-it-title">Enterprise-grade software. Tailored to your workflow. Built to grow with you.</h2>
+                        <p class="dev-it-desc">Every business faces unique challenges — and generic, off-the-shelf software rarely solves them. That’s why we deliver top custom IT solutions designed specifically around your operations, goals, and industry demands. Whether you need a scalable CRM, a real-time analytics dashboard, or a fully managed IT infrastructure, our solutions evolve with your business.</p>
 
                         <a href="javascript:void(0)" class="video-showcase-btn">
                             <div class="video-play-icon">
@@ -266,30 +267,30 @@
                         <div class="dev-it-grid">
                             <!-- Card 1: Active -->
                             <div class="dev-it-card active">
-                                <i class="bi bi-gear-wide-connected it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Setup Service</h4>
-                                <p class="it-card-desc">Greenfield environment provisioning with IAC (Terraform, CDK)</p>
+                                <i class="bi bi-code-slash it-card-icon"></i>
+                                <h4 class="it-card-title">Enterprise-grade software development</h4>
+                                <p class="it-card-desc">Custom CRMs, ERPs, and business automation tools.</p>
                             </div>
 
                             <!-- Card 2 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-cloud-check it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Migration Services</h4>
-                                <p class="it-card-desc">Minimal-downtime migration plans with rollback strategies</p>
+                                <i class="bi bi-cloud-arrow-up it-card-icon"></i>
+                                <h4 class="it-card-title">Cloud integration & migration</h4>
+                                <p class="it-card-desc">Seamless access, storage, and scalability.</p>
                             </div>
 
                             <!-- Card 3 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-shield-lock it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Deployment Services</h4>
-                                <p class="it-card-desc">Blue/green, canary, or rolling deployments automated</p>
+                                <i class="bi bi-robot it-card-icon"></i>
+                                <h4 class="it-card-title">AI-driven automation</h4>
+                                <p class="it-card-desc">Smarter workflows, reduced manual effort.</p>
                             </div>
 
                             <!-- Card 4 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-folder-check it-card-icon"></i>
-                                <h4 class="it-card-title">Managed Cloud Services</h4>
-                                <p class="it-card-desc">24/7 monitoring, patching, backup, and disaster recovery</p>
+                                <i class="bi bi-shield-lock it-card-icon"></i>
+                                <h4 class="it-card-title">Advanced cybersecurity frameworks</h4>
+                                <p class="it-card-desc">Protect sensitive data and ensure compliance.</p>
                             </div>
                         </div>
                     </div>
@@ -302,42 +303,41 @@
         <section class="dev-process-section">
             <div class="dev-process-container">
                 <span class="dev-process-tag">PROCESS</span>
-                <h2 class="dev-process-title">How We Work</h2>
-                <p style="text-align: center; color: #6b7280; font-size: 16px; margin-bottom: 40px;">Your roadmap to successful cloud transformation</p>
+                <h2 class="dev-process-title">How We Works</h2>
                 <div class="dev-process-divider"></div>
 
                 <div class="dev-process-steps">
 
                     <div class="dev-process-step" data-step="01">
                         <div class="dev-process-icon">
-                            <i class="bi bi-grid-1x2"></i>
+                            <i class="bi bi-search"></i>
                         </div>
-                        <h4>Choose a Service</h4>
-                        <p>Select from cloud migration services, cloud setup, or ongoing managed cloud operations.</p>
+                        <h4>Discover & Assess</h4>
+                        <p>We inventory your entire IT estate, spending, and compliance posture.</p>
                     </div>
 
                     <div class="dev-process-step" data-step="02">
                         <div class="dev-process-icon">
-                            <i class="bi bi-calendar-check"></i>
+                            <i class="bi bi-graph-up-arrow"></i>
                         </div>
-                        <h4>Request a Meeting</h4>
-                        <p>Meet with certified architects to define scope, timeline, and compliance needs.</p>
+                        <h4>Analyze & Benchmark</h4>
+                        <p>We compare your metrics against industry standards and identify waste.</p>
                     </div>
 
                     <div class="dev-process-step" data-step="03">
                         <div class="dev-process-icon">
-                            <i class="bi bi-file-earmark-text"></i>
+                            <i class="bi bi-card-checklist"></i>
                         </div>
-                        <h4>Receive Custom Plan</h4>
-                        <p>Get a detailed runbook: architecture diagrams, cost estimates, and migration phases.</p>
+                        <h4>Recommend & Plan</h4>
+                        <p>We deliver a prioritized roadmap of IT optimization services with ROI projections.</p>
                     </div>
 
                     <div class="dev-process-step last" data-step="04">
                         <div class="dev-process-icon">
                             <i class="bi bi-rocket-takeoff"></i>
                         </div>
-                        <h4>Let’s Make it Happen</h4>
-                        <p>We execute using AWS cloud migration services (or Azure/GCP) with post‑deployment support included.</p>
+                        <h4>Implement & Optimize</h4>
+                        <p>We execute changes, track savings, and provide ongoing IT advisory services.</p>
                     </div>
 
                 </div>
@@ -350,7 +350,7 @@
 
                 <div class="dev-faq-left">
                     <span class="dev-faq-tag">— FAQ</span>
-                    <h2 class="dev-faq-title">Most common questions about backup and disaster recovery services</h2>
+                    <h2 class="dev-faq-title">Most common question about our IT audit & consulting services</h2>
                     <a href="{{ route('contactUs') }}" class="dev-faq-btn">View All</a>
                 </div>
 
@@ -359,33 +359,44 @@
                     <div class="dev-faq-item active">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            What cloud platforms do you support?
+                            What IT audit services do you offer?
                             <i class="bi bi-chevron-up dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer">
-                            <p>We are a multi‑cloud cloud solutions provider supporting AWS, Microsoft Azure, and Google Cloud Platform (GCP). We also deliver enterprise cloud solutions for hybrid and on‑prem integrations.</p>
+                            <p>We provide comprehensive IT audit services including security audits, compliance audits (SOC 2, ISO 27001, PCI DSS, HIPAA), operational efficiency audits, and vendor contract reviews.</p>
                         </div>
                     </div>
 
                     <div class="dev-faq-item">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            Do you offer ongoing managed cloud services after deployment?
+                            How can an IT consulting company help reduce costs?
                             <i class="bi bi-chevron-down dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer" style="display:none;">
-                            <p>Yes. Our managed cloud services include 24/7 monitoring, automated backups, security patching, and cost optimization reviews.</p>
+                            <p>As a specialized IT consulting company, we identify waste, renegotiate vendor contracts, right‑size cloud resources, and automate manual processes—typically reducing IT spend by 25–40%.</p>
                         </div>
                     </div>
 
                     <div class="dev-faq-item">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            Can you help with a multi‑cloud strategy?
+                            Do you offer cloud cost optimization services?
                             <i class="bi bi-chevron-down dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer" style="display:none;">
-                            <p>Absolutely. We design cloud infrastructure services that work across AWS, Azure, and GCP with consistent policy and identity management.</p>
+                            <p>Yes. Our cloud cost optimization services cover AWS, Azure, and GCP. We analyze usage, recommend savings plans, eliminate idle resources, and implement FinOps best practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="dev-faq-item">
+                        <button class="dev-faq-question">
+                            <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
+                            What is included in an IT infrastructure audit?
+                            <i class="bi bi-chevron-down dev-faq-arrow"></i>
+                        </button>
+                        <div class="dev-faq-answer" style="display:none;">
+                            <p>An IT infrastructure audit reviews your hardware, software, network, cloud environments, security controls, backup systems, and disaster recovery readiness—with a full risk and gap analysis.</p>
                         </div>
                     </div>
 

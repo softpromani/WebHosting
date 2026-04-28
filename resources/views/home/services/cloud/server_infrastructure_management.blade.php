@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Cloud Architecture Consulting (AWS, Azure, GCP) | Mounteko')
+@section('title', 'Server & Infrastructure Management | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -9,10 +9,30 @@
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/cloud_architecture.css') }}">
     <style>
         /* Override global heading sizes for this page */
-        .cloud-hero-heading { font-size: 28px !important; }
-        .scale-title, .dev-why-title, .dev-it-title, .dev-process-title, .dev-faq-title, .dev-blog-title { font-size: 1.8rem !important; line-height: 1.3 !important; }
-        @media (max-width: 767px) { 
-            .scale-title, .dev-why-title, .dev-it-title, .dev-process-title, .dev-faq-title, .dev-blog-title { font-size: 1.5rem !important; } 
+        .cloud-hero-heading {
+            font-size: 28px !important;
+        }
+
+        .scale-title,
+        .dev-why-title,
+        .dev-it-title,
+        .dev-process-title,
+        .dev-faq-title,
+        .dev-blog-title {
+            font-size: 1.8rem !important;
+            line-height: 1.3 !important;
+        }
+
+        @media (max-width: 767px) {
+
+            .scale-title,
+            .dev-why-title,
+            .dev-it-title,
+            .dev-process-title,
+            .dev-faq-title,
+            .dev-blog-title {
+                font-size: 1.5rem !important;
+            }
         }
     </style>
 @endsection
@@ -26,7 +46,8 @@
 
                 <!-- LEFT: Heading + Buttons -->
                 <div class="cloud-hero-left">
-                    <h3 class="cloud-hero-heading">Future‑proof your business with end‑to‑end cloud transformation services.</h3>
+                    <h3 class="cloud-hero-heading">Server & Infrastructure Management to ensure full-stack IT reliability.
+                    </h3>
                     <div class="cloud-hero-btns">
                         <a href="{{ route('contactUs') }}" class="cloud-btn-primary">
                             <i class="bi bi-download"></i> Request proposal
@@ -44,46 +65,48 @@
 
                     <!-- Floating Cards -->
                     <div class="cloud-float-card cloud-card-top-left">
-                        <div class="cloud-float-icon aws"><i class="bi bi-cloud-fill"></i></div>
+                        <div class="cloud-float-icon aws"><i class="bi bi-stopwatch"></i></div>
                         <div class="cloud-float-text">
-                            <strong>Multi-Cloud Vendor Management</strong>
-                            <span>AWS / Azure / GCP / Hybrid</span>
+                            <strong>Avg. Server Response Time</strong>
+                            <span>
+                                < 50 ms</span>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-top-right">
                         <div class="cloud-float-chart">
-                            <div class="cloud-chart-label">avg. cost optimization</div>
+                            <div class="cloud-chart-label">Infrastructure Uptime</div>
                             <div class="cloud-chart-bar-wrap">
                                 <div class="cloud-chart-bar" style="height:60%"></div>
                                 <div class="cloud-chart-bar" style="height:75%"></div>
                                 <div class="cloud-chart-bar" style="height:50%"></div>
-                                <div class="cloud-chart-bar highlight" style="height:90%"></div>
+                                <div class="cloud-chart-bar highlight" style="height:100%"></div>
                             </div>
-                            <div class="cloud-chart-value">$42k/yr</div>
+                            <div class="cloud-chart-value">99.99% SLA</div>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-mid-left">
-                        <div class="cloud-float-stat">
-                            <span class="cloud-stat-num">99.99%</span>
+                        <div class="cloud-float-icon secure"><i class="bi bi-activity"></i></div>
+                        <div class="cloud-float-text">
+                            <strong>Proactive Monitoring</strong>
+                            <span>24/7/365</span>
                         </div>
-                        <div class="cloud-float-desc">targeted uptime SLA</div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-mid-right">
                         <div class="cloud-float-icon azure"><i class="bi bi-diagram-3-fill"></i></div>
                         <div class="cloud-float-text">
-                            <strong>24/7 managed</strong>
-                            <span>cloud services</span>
+                            <strong>Multi-Cloud & On-Prem</strong>
+                            <span>Unified Management</span>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-bottom-right">
-                        <div class="cloud-float-icon secure"><i class="bi bi-shield-check"></i></div>
+                        <div class="cloud-float-icon secure"><i class="bi bi-shield-lock-fill"></i></div>
                         <div class="cloud-float-text">
-                            <strong>15+ years</strong>
-                            <span>cloud infrastructure experience</span>
+                            <strong>Security Compliance</strong>
+                            <span>SOC 2 / ISO 27001</span>
                         </div>
                     </div>
 
@@ -104,14 +127,17 @@
                     <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=500"
                         alt="Cloud Team" class="scale-img-bottom">
                     <div class="scale-years-badge">
-                        <span class="scale-years-num">20</span>
+                        <span class="scale-years-num">10</span>
                         <span class="scale-years-text">Years Of<br>Experience</span>
                     </div>
                 </div>
 
                 <div class="dev-scale-content">
-                    <h4 class="scale-title">We Help IT Companies<br>Scale Cloud Engineering</h4>
-                    <p class="scale-desc">Your business shouldn’t slow down because your cloud doesn’t fit. We provide cloud implementation services that grow with you — from startup environments to enterprise‑grade multi‑region deployments. Our team handles the heavy lifting so your engineers focus on what matters: your product.</p>
+                    <h4 class="scale-title">Optimize Server & Infrastructure Performance</h4>
+                    <p class="scale-desc">Slow, unreliable servers cost you revenue and reputation. We provide server
+                        management services that keep your systems fast, secure, and always online. From cloud
+                        infrastructure management to on-premise optimization, we handle the complexity so you focus on
+                        growth.</p>
 
                     <div class="scale-feature-list">
                         <div class="scale-feature-item">
@@ -119,8 +145,9 @@
                                 <i class="bi bi-patch-check-fill"></i>
                             </div>
                             <div class="scale-feature-text">
-                                <h5>Certified Cloud Partner</h5>
-                                <p>ISO 27001, SOC 2, and AWS Advanced Tier partner with audited security and compliance frameworks.</p>
+                                <h5>Certified Infrastructure Experts</h5>
+                                <p>Enterprise-grade monitoring, patching, and automation. We don't just watch your servers —
+                                    we actively optimize them.</p>
                             </div>
                         </div>
                         <div class="scale-feature-item">
@@ -128,8 +155,9 @@
                                 <i class="bi bi-award-fill"></i>
                             </div>
                             <div class="scale-feature-text">
-                                <h5>Award‑Winning Deployment</h5>
-                                <p>Recognized for excellence in cloud deployment services with zero‑downtime migrations and automated CI/CD pipelines.</p>
+                                <h5>Award-Winning Support</h5>
+                                <p>Recognized for excellence in server support services. Our team resolves issues before
+                                    they impact your business.</p>
                             </div>
                         </div>
                     </div>
@@ -142,34 +170,37 @@
             <div class="dev-why-container">
                 <!-- TAB NAVIGATION -->
                 <div class="dev-tabs-nav">
-                    <button class="dev-tab-btn" data-tab="analytics">Analytic Solutions</button>
-                    <button class="dev-tab-btn active" data-tab="risk">Risk Management</button>
-                    <button class="dev-tab-btn" data-tab="it-manage">IT Management</button>
+                    <button class="dev-tab-btn active" data-tab="analytics">SERVER & INFRASTRUCTURE MANAGEMENT</button>
+                    <button class="dev-tab-btn" data-tab="risk">SERVER HEALTH INTELLIGENCE</button>
+                    <button class="dev-tab-btn" data-tab="it-manage">ENTERPRISE INFRASTRUCTURE MANAGEMENT</button>
                 </div>
 
                 <div class="dev-tab-content">
                     <!-- ANALYTIC SOLUTIONS TAB -->
-                    <div class="dev-tab-pane" id="analytics">
+                    <div class="dev-tab-pane active" id="analytics">
                         <div class="dev-why-image">
                             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=700"
                                 alt="Analytic Solutions">
                         </div>
                         <div class="dev-why-content">
-                            <span class="dev-why-tag">CLOUD ANALYTICS</span>
-                            <h2 class="dev-why-title">Transform raw cloud data into predictive intelligence</h2>
-                            <p class="dev-why-desc">Stop guessing. Start knowing. Our analytic solutions turn logs, metrics, and traces into real‑time dashboards and long‑term trend analysis. We help you answer: Where are we spending too much? Which workloads underperform? What fails next?</p>
+                            <span class="dev-why-tag">SERVER MANAGEMENT</span>
+                            <h2 class="dev-why-title">Transforming raw server data into actionable infrastructure insights
+                            </h2>
+                            <p class="dev-why-desc">Stop guessing about server health. We implement intelligent IT
+                                infrastructure management services that provide real-time visibility, predictive analytics,
+                                and automated remediation across your entire environment.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Cost intelligence dashboards – Visualize spend by service, team, or project with anomaly alerts
+                                    Real-time server performance dashboards
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Usage forecasting – ML‑driven predictions to right‑size resources and avoid over‑provisioning
+                                    Predictive capacity planning & auto-scaling
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Custom reports – Scheduled exports for finance, engineering, or compliance teams
+                                    Centralized log aggregation & analysis
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -178,27 +209,32 @@
                         </div>
                     </div>
 
-                    <!-- RISK MANAGEMENT TAB (ACTIVE) -->
-                    <div class="dev-tab-pane active" id="risk">
+                    <!-- RISK MANAGEMENT TAB -->
+                    <div class="dev-tab-pane" id="risk">
                         <div class="dev-why-image">
                             <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=700"
                                 alt="Risk Management">
                         </div>
                         <div class="dev-why-content">
-                            <h2 class="dev-why-title">Proactive risk detection across your entire cloud footprint</h2>
-                            <p class="dev-why-desc">Security and compliance aren't "set and forget." Our risk management framework continuously scans, prioritizes, and remediates threats across identities, networks, data, and configurations.</p>
+                            <span class="dev-why-tag">HEALTH INTELLIGENCE</span>
+                            <h2 class="dev-why-title">Collecting meaningful server telemetry & improving infrastructure
+                                reliability</h2>
+                            <p class="dev-why-desc">We collect real-time server telemetry across CPU, memory, disk, and
+                                network to eliminate blind spots. Our proactive analytics detect anomalies before they
+                                become outages, improving overall infrastructure reliability. You get actionable insights
+                                and automated remediation — keeping your servers healthy, secure, and high-performing.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Compliance mapping – HIPAA, SOC2, ISO 27001, PCI‑DSS, GDPR
+                                    Automated patch & vulnerability management
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Incident response runbooks – Pre‑tested workflows for breach scenarios
+                                    Cross-platform server monitoring (Windows, Linux, Unix)
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Audit‑ready logging – Centralized with 12‑month retention
+                                    Proactive alerting & root cause analysis
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -214,17 +250,19 @@
                                 alt="IT Management">
                         </div>
                         <div class="dev-why-content">
-                            <span class="dev-why-tag">IT MANAGEMENT</span>
-                            <h2 class="dev-why-title">Unified control plane for multi‑cloud and hybrid environments</h2>
-                            <p class="dev-why-desc">Juggling AWS, Azure, GCP, and on‑prem? Stop toggling between consoles. Our IT management layer gives you a single pane of glass for governance, operations, and automation.</p>
+                            <span class="dev-why-tag">ENTERPRISE INFRASTRUCTURE</span>
+                            <h2 class="dev-why-title">Strengthening infrastructure with unified management</h2>
+                            <p class="dev-why-desc">Simplify complex environments with centralized control. Our enterprise
+                                infrastructure management solutions provide the governance, automation, and oversight needed
+                                for a lean, secure, and high-performing IT ecosystem.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Automated patch & version management
+                                    Hybrid & multi-cloud infrastructure orchestration
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Centralized security & access oversight
+                                    Centralized identity & access management
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
@@ -250,8 +288,10 @@
                     <div class="dev-it-left">
                         <span class="dev-it-tag">WHY CHOOSE US</span>
                         <h2 class="dev-it-title">Custom IT Solutions for Your Business</h2>
-                        <h4 style="font-size: 1.05rem; font-weight: 500; color: #4b5563; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Your trusted cloud solutions provider for the entire lifecycle</h4>
-                        <p class="dev-it-desc">Not every cloud fits every workload. We design enterprise cloud solutions tailored to your data, compliance needs, and growth roadmap. Whether lift‑and‑shift or full refactoring, we deliver.</p>
+                        <p class="dev-it-desc">Every infrastructure is unique — so are our solutions. We don't believe in
+                            one-size-fits-all IT management. Whether you run on-premise servers, cloud platforms, or a
+                            hybrid environment, we design strategies that fit your exact needs. Our server management
+                            services scale with your business, from startups to enterprise-level deployments.</p>
 
                         <a href="javascript:void(0)" class="video-showcase-btn">
                             <div class="video-play-icon">
@@ -266,30 +306,34 @@
                         <div class="dev-it-grid">
                             <!-- Card 1: Active -->
                             <div class="dev-it-card active">
-                                <i class="bi bi-gear-wide-connected it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Setup Service</h4>
-                                <p class="it-card-desc">Greenfield environment provisioning with IAC (Terraform, CDK)</p>
+                                <i class="bi bi-server it-card-icon"></i>
+                                <h4 class="it-card-title">Server Management Services</h4>
+                                <p class="it-card-desc">Complete lifecycle management — provisioning, patching, performance
+                                    tuning, and decommissioning.</p>
                             </div>
 
                             <!-- Card 2 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-cloud-check it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Migration Services</h4>
-                                <p class="it-card-desc">Minimal-downtime migration plans with rollback strategies</p>
+                                <i class="bi bi-diagram-3 it-card-icon"></i>
+                                <h4 class="it-card-title">IT Infrastructure Management Services</h4>
+                                <p class="it-card-desc">End-to-end oversight of networks, storage, compute, and security
+                                    across all locations.</p>
                             </div>
 
                             <!-- Card 3 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-shield-lock it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Deployment Services</h4>
-                                <p class="it-card-desc">Blue/green, canary, or rolling deployments automated</p>
+                                <i class="bi bi-gear-wide-connected it-card-icon"></i>
+                                <h4 class="it-card-title">Managed Server Services</h4>
+                                <p class="it-card-desc">Fully hands-off server administration including monitoring, updates,
+                                    backups, and security.</p>
                             </div>
 
                             <!-- Card 4 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-folder-check it-card-icon"></i>
-                                <h4 class="it-card-title">Managed Cloud Services</h4>
-                                <p class="it-card-desc">24/7 monitoring, patching, backup, and disaster recovery</p>
+                                <i class="bi bi-headset it-card-icon"></i>
+                                <h4 class="it-card-title">Server Support Services</h4>
+                                <p class="it-card-desc">24/7 technical support for server-related issues — rapid ticket
+                                    resolution and root cause analysis.</p>
                             </div>
                         </div>
                     </div>
@@ -302,42 +346,41 @@
         <section class="dev-process-section">
             <div class="dev-process-container">
                 <span class="dev-process-tag">PROCESS</span>
-                <h2 class="dev-process-title">How We Work</h2>
-                <p style="text-align: center; color: #6b7280; font-size: 16px; margin-bottom: 40px;">Your roadmap to successful cloud transformation</p>
+                <h2 class="dev-process-title">How We Works</h2>
                 <div class="dev-process-divider"></div>
 
                 <div class="dev-process-steps">
 
                     <div class="dev-process-step" data-step="01">
                         <div class="dev-process-icon">
-                            <i class="bi bi-grid-1x2"></i>
+                            <i class="bi bi-search"></i>
                         </div>
-                        <h4>Choose a Service</h4>
-                        <p>Select from cloud migration services, cloud setup, or ongoing managed cloud operations.</p>
+                        <h4>Assess & Discover</h4>
+                        <p>Audit your current servers, workloads, and infrastructure gaps.</p>
                     </div>
 
                     <div class="dev-process-step" data-step="02">
                         <div class="dev-process-icon">
-                            <i class="bi bi-calendar-check"></i>
+                            <i class="bi bi-bezier2"></i>
                         </div>
-                        <h4>Request a Meeting</h4>
-                        <p>Meet with certified architects to define scope, timeline, and compliance needs.</p>
+                        <h4>Design & Architect</h4>
+                        <p>Create a tailored managed IT infrastructure services plan with SLAs.</p>
                     </div>
 
                     <div class="dev-process-step" data-step="03">
                         <div class="dev-process-icon">
-                            <i class="bi bi-file-earmark-text"></i>
+                            <i class="bi bi-rocket-takeoff"></i>
                         </div>
-                        <h4>Receive Custom Plan</h4>
-                        <p>Get a detailed runbook: architecture diagrams, cost estimates, and migration phases.</p>
+                        <h4>Deploy & Migrate</h4>
+                        <p>Seamless onboarding with zero downtime — agents, policies, and automation.</p>
                     </div>
 
                     <div class="dev-process-step last" data-step="04">
                         <div class="dev-process-icon">
-                            <i class="bi bi-rocket-takeoff"></i>
+                            <i class="bi bi-activity"></i>
                         </div>
-                        <h4>Let’s Make it Happen</h4>
-                        <p>We execute using AWS cloud migration services (or Azure/GCP) with post‑deployment support included.</p>
+                        <h4>Monitor & Optimize</h4>
+                        <p>24/7 server monitoring services with continuous performance tuning.</p>
                     </div>
 
                 </div>
@@ -350,7 +393,7 @@
 
                 <div class="dev-faq-left">
                     <span class="dev-faq-tag">— FAQ</span>
-                    <h2 class="dev-faq-title">Most common questions about backup and disaster recovery services</h2>
+                    <h2 class="dev-faq-title">Most common questions about our server management services</h2>
                     <a href="{{ route('contactUs') }}" class="dev-faq-btn">View All</a>
                 </div>
 
@@ -359,33 +402,37 @@
                     <div class="dev-faq-item active">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            What cloud platforms do you support?
+                            What server management services do you offer?
                             <i class="bi bi-chevron-up dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer">
-                            <p>We are a multi‑cloud cloud solutions provider supporting AWS, Microsoft Azure, and Google Cloud Platform (GCP). We also deliver enterprise cloud solutions for hybrid and on‑prem integrations.</p>
+                            <p>We provide complete server management services including 24/7 monitoring, patching, security
+                                hardening, backup integration, and performance optimization for physical, virtual, and cloud
+                                servers.</p>
                         </div>
                     </div>
 
                     <div class="dev-faq-item">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            Do you offer ongoing managed cloud services after deployment?
+                            Are you an infrastructure management company?
                             <i class="bi bi-chevron-down dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer" style="display:none;">
-                            <p>Yes. Our managed cloud services include 24/7 monitoring, automated backups, security patching, and cost optimization reviews.</p>
+                            <p>Yes. As a dedicated infrastructure management company, we handle everything from network and
+                                storage to compute and security — on-premise, hybrid, or multi-cloud.</p>
                         </div>
                     </div>
 
                     <div class="dev-faq-item">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            Can you help with a multi‑cloud strategy?
+                            Do you provide managed server services?
                             <i class="bi bi-chevron-down dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer" style="display:none;">
-                            <p>Absolutely. We design cloud infrastructure services that work across AWS, Azure, and GCP with consistent policy and identity management.</p>
+                            <p>Absolutely. Our managed server services include proactive maintenance, automated updates,
+                                security compliance, and 24/7 support with defined SLAs.</p>
                         </div>
                     </div>
 

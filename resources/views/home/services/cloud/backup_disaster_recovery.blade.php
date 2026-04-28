@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'Cloud Architecture Consulting (AWS, Azure, GCP) | Mounteko')
+@section('title', 'Backup, Disaster Recovery & Data Protection | Mounteko')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -26,7 +26,7 @@
 
                 <!-- LEFT: Heading + Buttons -->
                 <div class="cloud-hero-left">
-                    <h3 class="cloud-hero-heading">Future‑proof your business with end‑to‑end cloud transformation services.</h3>
+                    <h3 class="cloud-hero-heading">Backup, Disaster Recovery & Data Protection to ensure full-stack business resilience.</h3>
                     <div class="cloud-hero-btns">
                         <a href="{{ route('contactUs') }}" class="cloud-btn-primary">
                             <i class="bi bi-download"></i> Request proposal
@@ -44,46 +44,47 @@
 
                     <!-- Floating Cards -->
                     <div class="cloud-float-card cloud-card-top-left">
-                        <div class="cloud-float-icon aws"><i class="bi bi-cloud-fill"></i></div>
+                        <div class="cloud-float-icon aws"><i class="bi bi-clock-history"></i></div>
                         <div class="cloud-float-text">
-                            <strong>Multi-Cloud Vendor Management</strong>
-                            <span>AWS / Azure / GCP / Hybrid</span>
+                            <strong>Average Recovery Time</strong>
+                            <span><15 min</span>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-top-right">
                         <div class="cloud-float-chart">
-                            <div class="cloud-chart-label">avg. cost optimization</div>
+                            <div class="cloud-chart-label">Restore Success Rate</div>
                             <div class="cloud-chart-bar-wrap">
                                 <div class="cloud-chart-bar" style="height:60%"></div>
                                 <div class="cloud-chart-bar" style="height:75%"></div>
                                 <div class="cloud-chart-bar" style="height:50%"></div>
-                                <div class="cloud-chart-bar highlight" style="height:90%"></div>
+                                <div class="cloud-chart-bar highlight" style="height:100%"></div>
                             </div>
-                            <div class="cloud-chart-value">$42k/yr</div>
+                            <div class="cloud-chart-value">99.99%</div>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-mid-left">
-                        <div class="cloud-float-stat">
-                            <span class="cloud-stat-num">99.99%</span>
+                        <div class="cloud-float-icon secure"><i class="bi bi-lock-fill"></i></div>
+                        <div class="cloud-float-text">
+                            <strong>Data Immutability</strong>
+                            <span>& Ransomware Proof</span>
                         </div>
-                        <div class="cloud-float-desc">targeted uptime SLA</div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-mid-right">
-                        <div class="cloud-float-icon azure"><i class="bi bi-diagram-3-fill"></i></div>
+                        <div class="cloud-float-icon azure"><i class="bi bi-cloud-arrow-up-fill"></i></div>
                         <div class="cloud-float-text">
-                            <strong>24/7 managed</strong>
-                            <span>cloud services</span>
+                            <strong>Automated Failover</strong>
+                            <span>Multi-Cloud DR Orchestration</span>
                         </div>
                     </div>
 
                     <div class="cloud-float-card cloud-card-bottom-right">
                         <div class="cloud-float-icon secure"><i class="bi bi-shield-check"></i></div>
                         <div class="cloud-float-text">
-                            <strong>15+ years</strong>
-                            <span>cloud infrastructure experience</span>
+                            <strong>Compliance Standards</strong>
+                            <span>SOC2 / ISO 27001</span>
                         </div>
                     </div>
 
@@ -110,8 +111,8 @@
                 </div>
 
                 <div class="dev-scale-content">
-                    <h4 class="scale-title">We Help IT Companies<br>Scale Cloud Engineering</h4>
-                    <p class="scale-desc">Your business shouldn’t slow down because your cloud doesn’t fit. We provide cloud implementation services that grow with you — from startup environments to enterprise‑grade multi‑region deployments. Our team handles the heavy lifting so your engineers focus on what matters: your product.</p>
+                    <h4 class="scale-title">Ensure Business Continuity with Enterprise-Grade Backup & DR</h4>
+                    <p class="scale-desc">We help you eliminate downtime risk with fully managed backup and disaster recovery services that ensure rapid recovery, data integrity, and operational continuity — whether you run on AWS, Azure, Google Cloud, or on-premise infrastructure.</p>
 
                     <div class="scale-feature-list">
                         <div class="scale-feature-item">
@@ -119,8 +120,8 @@
                                 <i class="bi bi-patch-check-fill"></i>
                             </div>
                             <div class="scale-feature-text">
-                                <h5>Certified Cloud Partner</h5>
-                                <p>ISO 27001, SOC 2, and AWS Advanced Tier partner with audited security and compliance frameworks.</p>
+                                <h5>Certified BCDR Specialists</h5>
+                                <p>Verified recovery testing every 30 days with documented runbooks. We don't just configure backups — we prove restoration under real-world failure scenarios.</p>
                             </div>
                         </div>
                         <div class="scale-feature-item">
@@ -128,8 +129,8 @@
                                 <i class="bi bi-award-fill"></i>
                             </div>
                             <div class="scale-feature-text">
-                                <h5>Award‑Winning Deployment</h5>
-                                <p>Recognized for excellence in cloud deployment services with zero‑downtime migrations and automated CI/CD pipelines.</p>
+                                <h5>Award-Winning Business Continuity</h5>
+                                <p>Recognised for excellence in business continuity solutions. Our strategies have kept enterprises operational through ransomware, hardware failures, and natural disasters.</p>
                             </div>
                         </div>
                     </div>
@@ -142,34 +143,34 @@
             <div class="dev-why-container">
                 <!-- TAB NAVIGATION -->
                 <div class="dev-tabs-nav">
-                    <button class="dev-tab-btn" data-tab="analytics">Analytic Solutions</button>
-                    <button class="dev-tab-btn active" data-tab="risk">Risk Management</button>
-                    <button class="dev-tab-btn" data-tab="it-manage">IT Management</button>
+                    <button class="dev-tab-btn active" data-tab="analytics">DATA PROTECTION & RECOVERY</button>
+                    <button class="dev-tab-btn" data-tab="risk">DATA-DRIVEN RESILIENCE</button>
+                    <button class="dev-tab-btn" data-tab="it-manage">IT DISASTER RECOVERY</button>
                 </div>
 
                 <div class="dev-tab-content">
                     <!-- ANALYTIC SOLUTIONS TAB -->
-                    <div class="dev-tab-pane" id="analytics">
+                    <div class="dev-tab-pane active" id="analytics">
                         <div class="dev-why-image">
                             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=700"
                                 alt="Analytic Solutions">
                         </div>
                         <div class="dev-why-content">
-                            <span class="dev-why-tag">CLOUD ANALYTICS</span>
-                            <h2 class="dev-why-title">Transform raw cloud data into predictive intelligence</h2>
-                            <p class="dev-why-desc">Stop guessing. Start knowing. Our analytic solutions turn logs, metrics, and traces into real‑time dashboards and long‑term trend analysis. We help you answer: Where are we spending too much? Which workloads underperform? What fails next?</p>
+                            <span class="dev-why-tag">PROTECTION</span>
+                            <h2 class="dev-why-title">Transforming data protection services into your strongest security layer</h2>
+                            <p class="dev-why-desc">Stop treating backup as an afterthought. We build proactive data protection services that combine immutable storage, anomaly detection, and instant recovery — turning your backup infrastructure into an active defence against data loss and cyber threats.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Cost intelligence dashboards – Visualize spend by service, team, or project with anomaly alerts
+                                    Real-time replication with sub-15-minute RPO
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Usage forecasting – ML‑driven predictions to right‑size resources and avoid over‑provisioning
+                                    AI-driven ransomware detection before encryption spreads
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Custom reports – Scheduled exports for finance, engineering, or compliance teams
+                                    Unified DR orchestration across AWS, Azure, and on-prem
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -178,27 +179,27 @@
                         </div>
                     </div>
 
-                    <!-- RISK MANAGEMENT TAB (ACTIVE) -->
-                    <div class="dev-tab-pane active" id="risk">
+                    <!-- RISK MANAGEMENT TAB -->
+                    <div class="dev-tab-pane" id="risk">
                         <div class="dev-why-image">
                             <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=700"
                                 alt="Risk Management">
                         </div>
                         <div class="dev-why-content">
-                            <h2 class="dev-why-title">Proactive risk detection across your entire cloud footprint</h2>
-                            <p class="dev-why-desc">Security and compliance aren't "set and forget." Our risk management framework continuously scans, prioritizes, and remediates threats across identities, networks, data, and configurations.</p>
+                            <h2 class="dev-why-title">From backup storage to guaranteed recovery. Zero failure tolerated.</h2>
+                            <p class="dev-why-desc">Automated recovery testing has increased our clients' restore success rates from 62% to 99.9%. We continuously monitor backup integrity, test failover workflows, and provide actionable intelligence to eliminate hidden recovery gaps.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Compliance mapping – HIPAA, SOC2, ISO 27001, PCI‑DSS, GDPR
+                                    Automated daily recovery drills with pass/fail reporting
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Incident response runbooks – Pre‑tested workflows for breach scenarios
+                                    Cross-region backup redundancy for geographic resilience
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Audit‑ready logging – Centralized with 12‑month retention
+                                    One-click failover & failback with zero data loss
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -214,21 +215,21 @@
                                 alt="IT Management">
                         </div>
                         <div class="dev-why-content">
-                            <span class="dev-why-tag">IT MANAGEMENT</span>
-                            <h2 class="dev-why-title">Unified control plane for multi‑cloud and hybrid environments</h2>
-                            <p class="dev-why-desc">Juggling AWS, Azure, GCP, and on‑prem? Stop toggling between consoles. Our IT management layer gives you a single pane of glass for governance, operations, and automation.</p>
+                            <span class="dev-why-tag">RECOVERY</span>
+                            <h2 class="dev-why-title">Strengthening infrastructure with IT disaster recovery solutions and unified DR management</h2>
+                            <p class="dev-why-desc">Simplify complex recovery with centralized control. Our IT disaster recovery solutions provide automated orchestration, governance, and compliance-ready reporting — so your team can fail over with confidence, anytime.</p>
                             <ul class="dev-why-list">
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Automated patch & version management
+                                    Orchestrated multi-cloud failover (AWS, Azure, GCP)
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Centralized security & access oversight
+                                    Centralized recovery runbooks with version control
                                 </li>
                                 <li>
                                     <span class="dev-why-check"><i class="bi bi-check-circle-fill"></i></span>
-                                    Continuous compliance & audit readiness
+                                    Continuous compliance audits for HIPAA, GDPR, SOC 2
                                 </li>
                             </ul>
                             <a href="{{ route('contactUs') }}" class="dev-why-cta">
@@ -249,9 +250,8 @@
                     <!-- Left Column -->
                     <div class="dev-it-left">
                         <span class="dev-it-tag">WHY CHOOSE US</span>
-                        <h2 class="dev-it-title">Custom IT Solutions for Your Business</h2>
-                        <h4 style="font-size: 1.05rem; font-weight: 500; color: #4b5563; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Your trusted cloud solutions provider for the entire lifecycle</h4>
-                        <p class="dev-it-desc">Not every cloud fits every workload. We design enterprise cloud solutions tailored to your data, compliance needs, and growth roadmap. Whether lift‑and‑shift or full refactoring, we deliver.</p>
+                        <h2 class="dev-it-title">Custom backup and disaster recovery services for your business</h2>
+                        <p class="dev-it-desc">We provide custom backup and disaster recovery solutions tailored to your business needs. Our proven approach ensures minimal downtime, data integrity, and faster restore success rates through meaningful recovery telemetry. With a focus on reliability and proactive protection, we help you maintain business continuity even in the face of unexpected disruptions.</p>
 
                         <a href="javascript:void(0)" class="video-showcase-btn">
                             <div class="video-play-icon">
@@ -266,30 +266,30 @@
                         <div class="dev-it-grid">
                             <!-- Card 1: Active -->
                             <div class="dev-it-card active">
-                                <i class="bi bi-gear-wide-connected it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Setup Service</h4>
-                                <p class="it-card-desc">Greenfield environment provisioning with IAC (Terraform, CDK)</p>
+                                <i class="bi bi-hdd-network it-card-icon"></i>
+                                <h4 class="it-card-title">Data Backup Services</h4>
+                                <p class="it-card-desc">Automated, encrypted, verified backups with instant file/folder restore</p>
                             </div>
 
                             <!-- Card 2 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-cloud-check it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Migration Services</h4>
-                                <p class="it-card-desc">Minimal-downtime migration plans with rollback strategies</p>
+                                <i class="bi bi-shield-check it-card-icon"></i>
+                                <h4 class="it-card-title">Data Protection Services</h4>
+                                <p class="it-card-desc">End-to-end encryption, access controls, and ransomware-proof immutability</p>
                             </div>
 
                             <!-- Card 3 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-shield-lock it-card-icon"></i>
-                                <h4 class="it-card-title">Cloud Deployment Services</h4>
-                                <p class="it-card-desc">Blue/green, canary, or rolling deployments automated</p>
+                                <i class="bi bi-activity it-card-icon"></i>
+                                <h4 class="it-card-title">Business Continuity Solutions</h4>
+                                <p class="it-card-desc">Maintain critical operations during outages, cyberattacks, or facility loss</p>
                             </div>
 
                             <!-- Card 4 -->
                             <div class="dev-it-card">
-                                <i class="bi bi-folder-check it-card-icon"></i>
-                                <h4 class="it-card-title">Managed Cloud Services</h4>
-                                <p class="it-card-desc">24/7 monitoring, patching, backup, and disaster recovery</p>
+                                <i class="bi bi-arrow-counterclockwise it-card-icon"></i>
+                                <h4 class="it-card-title">Data Recovery Services</h4>
+                                <p class="it-card-desc">Forensic-level recovery from failed drives, corrupted DBs, or accidental deletion</p>
                             </div>
                         </div>
                     </div>
@@ -302,42 +302,41 @@
         <section class="dev-process-section">
             <div class="dev-process-container">
                 <span class="dev-process-tag">PROCESS</span>
-                <h2 class="dev-process-title">How We Work</h2>
-                <p style="text-align: center; color: #6b7280; font-size: 16px; margin-bottom: 40px;">Your roadmap to successful cloud transformation</p>
+                <h2 class="dev-process-title">How We Works</h2>
                 <div class="dev-process-divider"></div>
 
                 <div class="dev-process-steps">
 
                     <div class="dev-process-step" data-step="01">
                         <div class="dev-process-icon">
-                            <i class="bi bi-grid-1x2"></i>
+                            <i class="bi bi-search"></i>
                         </div>
-                        <h4>Choose a Service</h4>
-                        <p>Select from cloud migration services, cloud setup, or ongoing managed cloud operations.</p>
+                        <h4>Assess & Audit</h4>
+                        <p>Review your current infrastructure, define RTO/RPO, identify compliance needs, and audit existing backup gaps.</p>
                     </div>
 
                     <div class="dev-process-step" data-step="02">
                         <div class="dev-process-icon">
-                            <i class="bi bi-calendar-check"></i>
+                            <i class="bi bi-bezier2"></i>
                         </div>
-                        <h4>Request a Meeting</h4>
-                        <p>Meet with certified architects to define scope, timeline, and compliance needs.</p>
+                        <h4>Design Strategy</h4>
+                        <p>Create a customized BCDR plan selecting from cloud backup services, DRaaS services, hybrid, or on-premise architecture.</p>
                     </div>
 
                     <div class="dev-process-step" data-step="03">
                         <div class="dev-process-icon">
-                            <i class="bi bi-file-earmark-text"></i>
+                            <i class="bi bi-gear-wide-connected"></i>
                         </div>
-                        <h4>Receive Custom Plan</h4>
-                        <p>Get a detailed runbook: architecture diagrams, cost estimates, and migration phases.</p>
+                        <h4>Deploy & Integrate</h4>
+                        <p>Deploy automated backup, replication, and failover systems with zero downtime. Integrate with your existing stack.</p>
                     </div>
 
                     <div class="dev-process-step last" data-step="04">
                         <div class="dev-process-icon">
-                            <i class="bi bi-rocket-takeoff"></i>
+                            <i class="bi bi-clipboard-check"></i>
                         </div>
-                        <h4>Let’s Make it Happen</h4>
-                        <p>We execute using AWS cloud migration services (or Azure/GCP) with post‑deployment support included.</p>
+                        <h4>Test & Maintain</h4>
+                        <p>Run automated recovery drills every 30 days, update runbooks, and provide 24/7 monitoring with proactive alerting.</p>
                     </div>
 
                 </div>
@@ -359,33 +358,33 @@
                     <div class="dev-faq-item active">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            What cloud platforms do you support?
+                            What backup and disaster recovery services do you offer?
                             <i class="bi bi-chevron-up dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer">
-                            <p>We are a multi‑cloud cloud solutions provider supporting AWS, Microsoft Azure, and Google Cloud Platform (GCP). We also deliver enterprise cloud solutions for hybrid and on‑prem integrations.</p>
+                            <p>We provide complete backup and disaster recovery services including data backup services, managed backup services, DRaaS services, cloud backup services, and IT disaster recovery solutions. We also offer data recovery services for existing failed infrastructure.</p>
                         </div>
                     </div>
 
                     <div class="dev-faq-item">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            Do you offer ongoing managed cloud services after deployment?
+                            How do your data recovery services work?
                             <i class="bi bi-chevron-down dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer" style="display:none;">
-                            <p>Yes. Our managed cloud services include 24/7 monitoring, automated backups, security patching, and cost optimization reviews.</p>
+                            <p>Our data recovery services use forensic-grade tools and redundant immutable backups to restore lost or corrupted data — even from ransomware attacks, physically damaged media, or accidental deletion.</p>
                         </div>
                     </div>
 
                     <div class="dev-faq-item">
                         <button class="dev-faq-question">
                             <span class="dev-faq-icon"><i class="bi bi-question-circle-fill"></i></span>
-                            Can you help with a multi‑cloud strategy?
+                            Do you offer managed backup services?
                             <i class="bi bi-chevron-down dev-faq-arrow"></i>
                         </button>
                         <div class="dev-faq-answer" style="display:none;">
-                            <p>Absolutely. We design cloud infrastructure services that work across AWS, Azure, and GCP with consistent policy and identity management.</p>
+                            <p>Yes. Our managed backup services include 24/7 monitoring, automated recovery testing, proactive alerting, and detailed reporting. Completely hands-off for your internal team.</p>
                         </div>
                     </div>
 
