@@ -212,13 +212,13 @@
                 </li> -->
                 <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li class="dropdown"><a href="{{ route('aboutUs') }}"><span>About Us</span></a></li>
-                        <li class="dropdown"><a href="{{ route('security') }}"><span>Our Security</span></a></li>
-                        <li class="dropdown"><a href="{{ route('partner') }}"><span>Partner</span></a></li>
-                        <li class="dropdown"><a href="{{ route('testimonial') }}"><span>Testimonials</span></a></li>
-                        <li class="dropdown"><a href="#"><span>Knowledgebase</span></a></li>
-                        <li class="dropdown"><a href="{{ route('whyUsPage') }}"><span>Why Us</span></a></li>
-                        <li class="dropdown"><a href="{{ route('faq') }}"><span>FAQ</span></a></li>
+                        <li><a href="{{ route('aboutUs') }}"><span>About Us</span></a></li>
+                        <li><a href="{{ route('security') }}"><span>Our Security</span></a></li>
+                        <li><a href="{{ route('partner') }}"><span>Partner</span></a></li>
+                        <li><a href="{{ route('testimonial') }}"><span>Testimonials</span></a></li>
+                        <li><a href="#"><span>Knowledgebase</span></a></li>
+                        <li><a href="{{ route('whyUsPage') }}"><span>Why Us</span></a></li>
+                        <li><a href="{{ route('faq') }}"><span>FAQ</span></a></li>
                     </ul>
                 </li>
 
