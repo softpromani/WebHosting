@@ -41,8 +41,8 @@
                 <h4 class="footer-heading">Company</h4>
                 <ul class="footer-links-list">
                     <li><a href="{{ route('aboutUs') }}">About Us</a></li>
-                    <li><a href="{{ route('whyUsPage') }}">Why Mounteko</a></li>
-                    <li><a href="{{ route('testimonial') }}">Testimonials</a></li>
+                    <!-- <li><a href="{{ route('whyUsPage') }}">Why Mounteko</a></li> -->
+                    <!-- <li><a href="{{ route('testimonial') }}">Testimonials</a></li> -->
                     <li><a href="{{ route('contactUs') }}">Contact Us</a></li>
                     <li><a href="{{ route('faq') }}">Privacy Policy</a></li>
                 </ul>
