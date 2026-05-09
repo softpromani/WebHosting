@@ -1,0 +1,120 @@
+.work-services-section {
+    padding: 90px 0;
+    background-color: #fafbfc;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cpath fill='%232563eb' fill-opacity='0.02' d='M-10 100c100 0 100 50 200 50s100-50 200-50 100 50 200 50 100-50 200-50 100 50 200 50 100-50 200-50 100 50 200 50v700H-10z'/%3E%3Cpath fill='%232563eb' fill-opacity='0.03' d='M-10 200c100 0 100 50 200 50s100-50 200-50 100 50 200 50 100-50 200-50 100 50 200 50 100-50 200-50 100 50 200 50v600H-10z'/%3E%3Cpath fill='%232563eb' fill-opacity='0.01' d='M-10 300c100 0 100 50 200 50s100-50 200-50 100 50 200 50 100-50 200-50 100 50 200 50 100-50 200-50 100 50 200 50v500H-10z'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+}
+
+.work-services-section .section-header {
+    margin-bottom: 60px;
+}
+
+.work-services-section .subtitle {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.work-services-section .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.work-service-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f7f9ff 100%);
+    padding: 40px 35px;
+    border-radius: 16px;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    border: 1px solid rgba(37, 99, 235, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Gradient line that expands on hover */
+.work-service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: #ffffff; /* Turns white on hover since the card is blue */
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: -1;
+}
+
+.work-service-card:hover {
+    transform: translateY(-12px);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); /* Softer, lighter blue on hover */
+    box-shadow: 0 30px 60px rgba(37, 99, 235, 0.2);
+    border-color: transparent;
+}
+
+.work-service-card:hover::after {
+    width: 100%;
+}
+
+.work-service-card .icon-box {
+    margin-bottom: 30px;
+    width: 80px;
+    height: 80px;
+    background: rgba(37, 99, 235, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.work-service-card:hover .icon-box {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotateY(360deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.work-service-card .icon-box i {
+    font-size: 36px;
+    color: #2563eb;
+    transition: all 0.5s ease;
+}
+
+.work-service-card:hover .icon-box i {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.work-service-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    transition: color 0.5s ease;
+}
+
+.work-service-card:hover h3 {
+    color: #ffffff;
+}
+
+.work-service-card p {
+    font-size: 15px;
+    color: #6c757d;
+    line-height: 1.7;
+    margin-bottom: 0;
+    transition: color 0.5s ease;
+}
+
+.work-service-card:hover p {
+    color: rgba(255, 255, 255, 0.85);
+}

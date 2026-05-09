@@ -65,7 +65,7 @@
                                 <li><a href="{{ route('services.hardware_software_procurement') }}">Hardware procurement</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">AI & Automation</a></li>
+                        <li><a href="{{ route('services.ai_integration_automation') }}">AI & Automation</a></li>
                     </ul>
 
                     <!-- Desktop Mega Menu -->
@@ -99,7 +99,8 @@
                                         <span>Managed IT Services</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
-                                    <div class="mega-cat-link" data-target="mega-tab-consulting">
+                                    <div class="mega-cat-link" data-target="mega-tab-consulting"
+                                        onclick="window.location.href='{{ route('services.ai_integration_automation') }}'">
                                         <span>AI Integration & Business Automation</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
@@ -213,12 +214,11 @@
                 <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="{{ route('aboutUs') }}"><span>About Us</span></a></li>
-                        <li><a href="{{ route('security') }}"><span>Our Security</span></a></li>
-                        <!-- <li><a href="{{ route('partner') }}"><span>Partner</span></a></li>
-                        <li><a href="{{ route('testimonial') }}"><span>Testimonials</span></a></li>
-                        <li><a href="#"><span>Knowledgebase</span></a></li>
+                        <li><a href="{{ route('our-security') }}"><span>Our Security</span></a></li>
+                        <li><a href="{{ url('/blog') }}"><span>Blog</span></a></li>
+                        <li><a href="{{ route('faq') }}"><span>FAQ</span></a></li>
+                        <li><a href="{{ route('partner') }}"><span>Partner</span></a></li>
                         <li><a href="{{ route('whyUsPage') }}"><span>Why Us</span></a></li>
-                        <li><a href="{{ route('faq') }}"><span>FAQ</span></a></li> -->
                     </ul>
                 </li>
 

@@ -52,6 +52,7 @@ Route::get('/services/network-security-configuration', [HomeController::class, '
 Route::get('/services/email-phishing-protection', [HomeController::class, 'emailPhishingProtection'])->name('services.email-phishing-protection');
 Route::get('/services/security-audit-vulnerability-scan', [HomeController::class, 'socSetupMonitoring'])->name('services.soc_setup_monitoring');
 Route::get('/services/firewall-monitoring-management', [HomeController::class, 'incidentResponseRecovery'])->name('services.incident_response_recovery');
+Route::get('/services/ai-integration-business-automation', [HomeController::class, 'aiIntegrationAutomation'])->name('services.ai_integration_automation');
 
 // Development Services
 Route::get('/services/custom-software-development', [HomeController::class, 'customSoftwareDevelopment'])->name('services.custom_software');
@@ -83,11 +84,13 @@ Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginS
 
 Route::get('pricing', [HomeController::class, 'pricing'])->name('pricing');
 Route::get('security', [HomeController::class, 'securityAudits'])->name('security');
+Route::get('our-security', [HomeController::class, 'ourSecurity'])->name('our-security');
 Route::get('partner', [HomeController::class, 'partner'])->name('partner');
 Route::get('why-us', [HomeController::class, 'whyUsPage'])->name('whyUsPage');
 Route::get('faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('testimonial', [HomeController::class, 'testimonial'])->name('testimonial');
 
+Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [\App\Http\Controllers\BlogController::class, 'show'])->name('single-blog'); // Contact Us
 Route::post('user-contact/store', [HomeController::class, 'contactStore'])->name('contactStore');
 
@@ -119,7 +122,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::resource('faqs', FaqController::class);
     Route::resource('blog', BlogController::class);
     Route::resource('price-plan', PricePlanController::class);
-    Route::resource('callschedule', CallScheduleController::class);
+    // Route::resource('callschedule', CallScheduleController::class);
     // Route::resource('ticketsubmission', TicketSubmissionController::class);
 
     Route::get('category-description', [CategoryDescriptionController::class, 'index'])->name('category-description.index');

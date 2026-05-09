@@ -95,6 +95,14 @@ class HomeController extends Controller
         return view('home.services.cybersecurity.security_audits');
     }
 
+    public function ourSecurity()
+    {
+        $faqs = Faq::where('type', 'security-page')->get();
+        $testimonial = Testimonial::get();
+        $blogs = Blog::with('blogImage')->get();
+        return view('home.company.our_security', compact('testimonial', 'faqs', 'blogs'));
+    }
+
     public function vpnSetupRemoteAccess()
     {
         return view('home.services.cybersecurity.vpn_setup_remote_access');
@@ -213,6 +221,11 @@ class HomeController extends Controller
     public function hardwareSoftwareProcurement()
     {
         return view('home.services.managed_it.hardware_software_procurement');
+    }
+
+    public function aiIntegrationAutomation()
+    {
+        return view('home.services.ai_automation.ai_integration_automation');
     }
 
     public function contactUs()

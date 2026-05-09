@@ -8,12 +8,33 @@
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/cybersecurity_services.css') }}">
     <style>
         /* Decrease heading sizes across the entire page */
-        .h2-content h2 { font-size: 1.8rem !important; }
-        .s3-content h2, .s4-title, .s5-title, .s7-title, .s8-title { font-size: 1.6rem !important; }
-        .s3-feature-text h5 { font-size: 1.1rem !important; }
-        .s4-card h4 { font-size: 1.1rem !important; }
-        .s7-service-block h5 { font-size: 1.1rem !important; }
-        .s5-item h5 { font-size: 13px !important; }
+        .h2-content h2 {
+            font-size: 1.8rem !important;
+        }
+
+        .s3-content h2,
+        .s4-title,
+        .s5-title,
+        .s7-title,
+        .s8-title {
+            font-size: 1.6rem !important;
+        }
+
+        .s3-feature-text h5 {
+            font-size: 1.1rem !important;
+        }
+
+        .s4-card h4 {
+            font-size: 1.1rem !important;
+        }
+
+        .s7-service-block h5 {
+            font-size: 1.1rem !important;
+        }
+
+        .s5-item h5 {
+            font-size: 13px !important;
+        }
     </style>
 @endsection
 
@@ -25,10 +46,12 @@
             <div class="h2-container">
                 <div class="h2-content">
                     <h2>Advanced Firewall Setup & Configuration to Protect Your <span>Business</span></h2>
-                    <p>Proactive network perimeter defense, zero-trust configuration, and compliance-driven firewall management to safeguard your data, internal networks, and remote users.</p>
+                    <p>Proactive network perimeter defense, zero-trust configuration, and compliance-driven firewall
+                        management to safeguard your data, internal networks, and remote users.</p>
                     <div class="h2-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
                         <a href="{{ route('contactUs') }}" class="btn-blue-grad">Get a Free Security Assessment</a>
-                        <a href="{{ route('contactUs') }}" class="btn-blue-grad" style="background: transparent; border: 2px solid white;">Talk to a Firewall Expert</a>
+                        <a href="{{ route('contactUs') }}" class="btn-blue-grad"
+                            style="background: transparent; border: 2px solid white;">Talk to a Firewall Expert</a>
                     </div>
                 </div>
                 <div class="h2-visual">
@@ -44,7 +67,8 @@
             <div class="h2-bottom-bar">
                 <div class="h2-bottom-text">
                     <div class="h2-line"></div>
-                    Without a properly configured network security firewall setup, businesses remain vulnerable to unauthorized access and lateral movement 24x7.
+                    Without a properly configured network security firewall setup, businesses remain vulnerable to
+                    unauthorized access and lateral movement 24x7.
                     <div class="h2-line"></div>
                 </div>
             </div>
@@ -57,12 +81,14 @@
                 padding: 30px 0;
                 border-bottom: 2px solid #e1ecf8;
             }
+
             .pill-track {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 12px;
             }
+
             .service-pill {
                 background: #ffffff;
                 color: #4b5d73;
@@ -71,37 +97,44 @@
                 font-size: 14px;
                 font-weight: 600;
                 text-decoration: none !important;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
                 transition: all 0.3s ease;
                 border: 1px solid #e1ecf8;
                 display: inline-flex;
                 align-items: center;
             }
+
             .service-pill:hover {
                 background: #4facfe;
                 color: white;
                 transform: translateY(-2px);
-                box-shadow: 0 6px 15px rgba(79,172,254,0.3);
+                box-shadow: 0 6px 15px rgba(79, 172, 254, 0.3);
                 border-color: #4facfe;
             }
+
             .service-pill.active {
                 background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
                 color: white;
                 border-color: #1a237e;
-                box-shadow: 0 6px 15px rgba(26,35,126,0.3);
+                box-shadow: 0 6px 15px rgba(26, 35, 126, 0.3);
             }
         </style>
         <div class="service-pill-menu">
             <div class="container">
                 <div class="pill-track">
-                    <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> Firewall Setup</span>
-                    <a href="{{ route('services.vpn-setup-remote-access') }}" class="service-pill">VPN Setup & Remote Access</a>
+                    <span class="service-pill active"><i class="bi bi-check2-circle"
+                            style="margin-right: 6px; font-size: 16px;"></i> Firewall Setup</span>
+                    <a href="{{ route('services.vpn-setup-remote-access') }}" class="service-pill">VPN Setup & Remote
+                        Access</a>
                     <a href="{{ route('services.cloud-security-firewall') }}" class="service-pill">Cloud Security</a>
                     <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
-                    <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
+                    <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection &
+                        Endpoint</a>
                     <a href="#" class="service-pill">Security Audit</a>
-                    <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall Monitoring</a>
-                    <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application Security</a>
+                    <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall
+                        Monitoring</a>
+                    <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application
+                        Security</a>
                 </div>
             </div>
         </div>
@@ -133,7 +166,9 @@
                         <i class="bi bi-eye-fill"></i> ABOUT US
                     </div>
                     <h2>Your trusted partner in <span>enterprise firewall solutions</span></h2>
-                    <p>We provide reliable, cutting-edge firewall configuration services to protect your digital perimeter. From initial firewall installation services to ongoing managed firewall services, we ensure your network traffic is filtered, secured, and compliant.</p>
+                    <p>We provide reliable, cutting-edge firewall configuration services to protect your digital perimeter.
+                        From initial firewall installation services to ongoing managed firewall services, we ensure your
+                        network traffic is filtered, secured, and compliant.</p>
 
                     <div class="s3-feature-box">
                         <div class="s3-feature-img">
@@ -142,13 +177,15 @@
                         </div>
                         <div class="s3-feature-text">
                             <h5>24/7 firewall security assistance</h5>
-                            <p>Ensuring optimal uptime and continuous defense against emerging threats with expert assistance.</p>
+                            <p>Ensuring optimal uptime and continuous defense against emerging threats with expert
+                                assistance.</p>
                         </div>
                     </div>
 
                     <ul class="s3-checklist">
                         <li><i class="bi bi-check-circle-fill"></i> Real-Time Threat Detection and Monitoring</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Granular Access Control Management (ACL & Zero Trust)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Granular Access Control Management (ACL & Zero Trust)
+                        </li>
                         <li><i class="bi bi-check-circle-fill"></i> Continuous Security Policy Auditing & Tuning</li>
                     </ul>
 
@@ -172,43 +209,50 @@
             <div class="container">
                 <span class="s4-tagline">WHAT WE PROVIDE</span>
                 <h2 class="s4-title">Firewall Setup Services for <span>Today's Network Threats</span></h2>
-                <p class="s4-desc">Protect your business from ever-evolving cyber risks with our end-to-end firewall configuration and network security firewall setup.</p>
+                <p class="s4-desc">Protect your business from ever-evolving cyber risks with our end-to-end firewall
+                    configuration and network security firewall setup.</p>
 
                 <div class="s4-grid">
                     <div class="s4-card card-network">
                         <div class="s4-icon-box"><i class="bi bi-router-fill"></i></div>
                         <h4>Network Firewall Setup</h4>
-                        <p>Deploying next-gen firewalls and intrusion prevention systems to safeguard your entire network perimeter.</p>
+                        <p>Deploying next-gen firewalls and intrusion prevention systems to safeguard your entire network
+                            perimeter.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-data">
                         <div class="s4-icon-box"><i class="bi bi-shield-lock-fill"></i></div>
                         <h4>Secure Configuration</h4>
-                        <p>Hardening firewall policies and applying strict rule sets using industry best practices (CIS Benchmarks).</p>
+                        <p>Hardening firewall policies and applying strict rule sets using industry best practices (CIS
+                            Benchmarks).</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-identity">
                         <div class="s4-icon-box"><i class="bi bi-person-badge-fill"></i></div>
                         <h4>Identity & Access Control</h4>
-                        <p>Integrating VPN and Multi-Factor Authentication (MFA) to manage user access with detailed granular control.</p>
+                        <p>Integrating VPN and Multi-Factor Authentication (MFA) to manage user access with detailed
+                            granular control.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-monitor">
                         <div class="s4-icon-box"><i class="bi bi-eye-fill"></i></div>
                         <h4>Managed Firewall Services</h4>
-                        <p>24/7 monitoring and management of firewall logs with advanced SIEM integration for real-time incident response.</p>
+                        <p>24/7 monitoring and management of firewall logs with advanced SIEM integration for real-time
+                            incident response.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-backup">
                         <div class="s4-icon-box"><i class="bi bi-arrow-repeat"></i></div>
                         <h4>Backup & Recovery</h4>
-                        <p>Protecting critical firewall configuration backups and ensuring rapid disaster recovery plans for network continuity.</p>
+                        <p>Protecting critical firewall configuration backups and ensuring rapid disaster recovery plans for
+                            network continuity.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-config">
                         <div class="s4-icon-box"><i class="bi bi-building"></i></div>
                         <h4>Business Firewall Setup</h4>
-                        <p>Customized enterprise firewall solutions designed specifically for SMBs and large corporate infrastructure needs.</p>
+                        <p>Customized enterprise firewall solutions designed specifically for SMBs and large corporate
+                            infrastructure needs.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                 </div>
@@ -222,27 +266,40 @@
                 <div class="s5-row" style="flex-wrap: wrap; justify-content: center;">
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-activity"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Proactive Monitoring</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Proactive Monitoring</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-shield-lock"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Zero-Trust Architecture</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Zero-Trust Architecture</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-arrows-angle-expand"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Scalable Solutions</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Scalable Solutions</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-lightning-charge-fill"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Fast Response Time</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Fast Response Time</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-person-check-fill"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Single IT Partner</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Single IT Partner</h5>
                     </div>
-                    <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center; border-right: none;">
+                    <div class="s5-item"
+                        style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center; border-right: none;">
                         <div class="s5-icon-circle"><i class="bi bi-wallet2"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Cost-Effective Plans</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Cost-Effective Plans</h5>
                     </div>
                 </div>
             </div>
@@ -260,12 +317,16 @@
 
                         <div class="s7-service-block">
                             <h5>Real-Time Threat Monitoring & Filtering</h5>
-                            <p>Our firewall configuration services continuously analyze network traffic, user behavior, and system activity to detect and respond to potential intrusions and malware threats as they occur. This blocks malicious IPs before they breach the internal network.</p>
+                            <p>Our firewall configuration services continuously analyze network traffic, user behavior, and
+                                system activity to detect and respond to potential intrusions and malware threats as they
+                                occur. This blocks malicious IPs before they breach the internal network.</p>
                         </div>
 
                         <div class="s7-service-block">
                             <h5>Compliance And Risk Management</h5>
-                            <p>Our firewall installation services ensure compliance with PCI-DSS, HIPAA, and GDPR standards. We continuously analyze egress traffic and system activity to prevent data exfiltration and detect potential security vulnerabilities in your rule set.</p>
+                            <p>Our firewall installation services ensure compliance with PCI-DSS, HIPAA, and GDPR standards.
+                                We continuously analyze egress traffic and system activity to prevent data exfiltration and
+                                detect potential security vulnerabilities in your rule set.</p>
                         </div>
                     </div>
 
@@ -277,50 +338,66 @@
 
                         <div class="s7-service-block">
                             <h5>Identity And Access Management (IAM) Integration</h5>
-                            <p>Identity and access management integrated with your network firewall setup continuously verifies user credentials against policy. It analyzes user behavior and system activity to detect and respond to potential unauthorized access attempts and insider threats.</p>
+                            <p>Identity and access management integrated with your network firewall setup continuously
+                                verifies user credentials against policy. It analyzes user behavior and system activity to
+                                detect and respond to potential unauthorized access attempts and insider threats.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- BOTTOM BAR - 3 MINI FEATURES -->
+        <!-- SECTION 8 BOTTOM BAR - 3 MINI FEATURES -->
         <section style="background-color: #f0f5fb; padding: 50px 0;">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 text-center">
-                        <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-pc-display" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">COMPUTER SECURITY</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting endpoint systems and data from unauthorized access and network-based cyber threats.</p>
+                        <div
+                            style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <i class="bi bi-pc-display"
+                                style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">COMPUTER
+                                SECURITY</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting endpoint systems and data from
+                                unauthorized access and network-based cyber threats.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
-                        <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-files" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">FILE DUPLICATION & ACCESS</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Restricting lateral movement and controlling access to sensitive file shares and databases via VLAN segmentation.</p>
+                        <div
+                            style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <i class="bi bi-files"
+                                style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">FILE
+                                DUPLICATION & ACCESS</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Restricting lateral movement and
+                                controlling access to sensitive file shares and databases via VLAN segmentation.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
-                        <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-shield-shaded" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">NETWORK PROTECTIONS</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Safeguarding the entire perimeter against DDoS attacks, port scanning, and external digital vulnerabilities.</p>
+                        <div
+                            style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <i class="bi bi-shield-shaded"
+                                style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">NETWORK
+                                PROTECTIONS</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Safeguarding the entire perimeter against
+                                DDoS attacks, port scanning, and external digital vulnerabilities.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 8 (MODERN CTA) -->
+        <!-- SECTION 9 (MODERN CTA) -->
         <section class="section8-cta">
             <div class="s8-container">
                 <div class="s8-box">
                     <div class="s8-left">
                         <h2 class="s8-title">Protect your business from sophisticated cyber threats today!</h2>
                         <span
-                            style="color: rgba(255,255,255,0.8); display: block; margin-bottom: 25px; font-size: 1.1rem;">Don't let hidden vulnerabilities and unpatched systems compromise your entire network infrastructure.</span>
+                            style="color: rgba(255,255,255,0.8); display: block; margin-bottom: 25px; font-size: 1.1rem;">Don't
+                            let hidden vulnerabilities and unpatched systems compromise your entire network
+                            infrastructure.</span>
                         <div class="s8-contacts">
                             <div class="s8-contact-item">
                                 <i class="bi bi-telephone-outbound"></i>

@@ -6,6 +6,12 @@ use App\Models\Testimonial;
 
 class BlogController extends Controller
 {
+    public function index()
+    {
+        $blogs = Blog::with('blogImage')->latest()->paginate(9);
+        return view('home.blogs_index', compact('blogs'));
+    }
+
     public function show($slug)
     {
         $blog         = Blog::where('slug', $slug)->first();

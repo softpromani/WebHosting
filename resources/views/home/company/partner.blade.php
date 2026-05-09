@@ -14,123 +14,86 @@
 
     <main id="main">
 
-       <!-- ======= Breadcrumbs Section ======= -->
-       <section class="breadcrumbs">
-        @php
-        $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
-        $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
-        $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
-        @endphp
-         <div class="optech-breadcrumb"
-         style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                height: 450px;">
+        <!-- ======= Partner Hero Section (Premium Sundar Version) ======= -->
+        <section class="partner-hero-sundar">
+            <div class="sundar-bg-mesh"></div>
             <div class="container">
-                <h1 class="post__title" style="color: white;">Partners</h1>
-                <nav class="breadcrumbs">
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
-                        <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
-                        <li aria-current="page" style="color: white;">Partners</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </section><!-- Breadcrumbs Section -->
-
-        <section class="rts-pricing-five inner">
-            <div class="container">
-                <div class="section-inner">
-                    <div class="pricing-list">
-                        <div class="row setrow g-30">
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="pricing-wrapper">
-                                    <div class="icon">
-                                        <img src="{{ asset('home/assets/img/icon-1.svg') }}" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">Earn at Your Pace</h4>
-                                        <p class="description">SUPER affiliate? Our customized
-                                            affiliate commission
-                                        </p>
-                                    </div>
-                                    <div class="pricing-shape-area">
-                                        <img src="{{ asset('home/assets/img/pricing-bg-shape.svg') }}" alt=""
-                                            class="one">
-                                        <img src="{{ asset('home/assets/img/pricing-shape-01.svg') }}" alt=""
-                                            class="two">
-                                        <img src="{{ asset('home/assets/img/pricing-shape-02.svg') }}" alt=""
-                                            class="three">
-                                    </div>
-                                </div>
+                <div class="row align-items-center g-5">
+                    <!-- Left Content -->
+                    <div class="col-lg-6">
+                        <div class="sundar-content">
+                            <span class="sundar-label">PARTNERSHIP PROGRAM</span>
+                            <h1 class="sundar-title">Elevate Your Business With Our <span>Winning Partnership</span></h1>
+                            <p class="sundar-desc">
+                                Join our exclusive ecosystem of service partners and unlock premium tools, expertise, and
+                                growth opportunities designed for your success.
+                            </p>
+                            <div class="sundar-actions">
+                                <a href="{{ route('applyNow') }}" class="sundar-btn">
+                                    Apply now <i class="bi bi-arrow-right"></i>
+                                </a>
+                                <span class="sundar-badge">
+                                    <i class="bi bi-shield-check"></i> Trusted by 500+ Partners
+                                </span>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="pricing-wrapper">
-                                    <div class="icon">
-                                        <img src="{{ asset('home/assets/img/icon-2.svg') }}" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">WordPress Hosting</h4>
-                                        <p class="description">Leverage Cloud ways to your
-                                            passive income with lifetime</p>
-                                    </div>
-                                    <div class="pricing-shape-area">
-                                        <img src="{{ asset('home/assets/img/pricing-bg-shape.svg') }}" alt=""
-                                            class="one">
-                                        <img src="{{ asset('home/assets/img/pricing-shape-01.svg') }}" alt=""
-                                            class="two">
-                                        <img src="{{ asset('home/assets/img/pricing-shape-02.svg') }}" alt=""
-                                            class="three">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="pricing-wrapper">
-                                    <div class="icon">
-                                        <img src="{{ asset('home/assets/img/icon-3.svg') }}" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">Low Customer Churn</h4>
-                                        <p class="description">Leverage Cloud ways to your passive income with lifetime</p>
-                                    </div>
-                                    <div class="pricing-shape-area">
-                                        <img src="{{ asset('home/assets/img/pricing-bg-shape.svg') }}" alt=""
-                                            class="one">
-                                        <img src="{{ asset('home/assets/img/pricing-shape-01.svg') }}" alt=""
-                                            class="two">
-                                        <img src="{{ asset('home/assets/img/pricing-shape-02.svg') }}" alt=""
-                                            class="three">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="pricing-wrapper">
-                                    <div class="icon">
-                                        <img src="{{ asset('home/assets/img/icon-4.svg') }}" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">Affiliate Support</h4>
-                                        <p class="description">Dedicated account managers and resources</p>
-                                    </div>
-                                    <div class="pricing-shape-area">
-                                        <img src="{{ asset('home/assets/img/pricing-bg-shape.svg') }}" alt=""
-                                            class="one">
-                                        <img src="{{ asset('home/assets/img/pricing-shape-01.svg') }}" alt=""
-                                            class="two">
-                                        <img src="{{ asset('home/assets/img/pricing-shape-02.svg') }}" alt=""
-                                            class="three">
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <!-- Right Content -->
+                    <div class="col-lg-6">
+                        <div class="sundar-media">
+                            <div class="sundar-img-wrapper">
+                                <img src="{{ asset('home/assets/img/partner_hero_dark_3d.png') }}"
+                                    alt="Partnership 3D Illustration" class="sundar-main-img">
+                                <div class="sundar-glow"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+
+        <!-- ======= Why Partner Section ======= -->
+        <section class="partner-why-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="why-title">Why partner with Intercom?</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="partner-3d-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Grow with the industry leader</h3>
+                                <p class="card-desc">Earn commission on clients you refer to us, and get in front of our
+                                    25,000+ customers, too.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="partner-3d-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Scale your clients' reach</h3>
+                                <p class="card-desc">Help your clients engage their customers better through a personal
+                                    Business Messenger.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="partner-3d-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Become a messaging expert</h3>
+                                <p class="card-desc">Outsmart the competition with our technical product enablement and
+                                    go-to-market resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
             <div class="container">
                 <div class="row mt--90 g-30">
                     <div class="col-lg-5">
@@ -249,189 +212,153 @@
             </div>
         </section>
 
-        <section class="rts-affiliate alice__blue section__padding">
-            <div class="ms-4">
-                <div class="row  g-30">
-                    <div class="col-lg-5">
-                        <div class="become__affiliate__text">
-                            <h3 class="title">
-                                Become an Affiliate in
-                                Three Simple Steps
-                            </h3>
-                            <p>You don’t need to fill long forms or wait for any approval call. Join the hostie affiliate
-                                program flawlessly.</p>
-                            <a href="pricing.html" class="rts-btn btn__long primary__bg white__color">View Plan <i
-                                    class="fa-solid fa-arrow-right"></i></a>
+        <!-- ======= Getting Started Section (Amplemarket Style) ======= -->
+        <section class="partner-stepper-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Left: Vertical Stepper -->
+                    <div class="col-lg-6">
+                        <div class="partner-stepper">
+                            <!-- Step 1 -->
+                            <div class="stepper-item">
+                                <div class="stepper-node">
+                                    <div class="stepper-icon-box">
+                                        <i class="bi bi-window-sidebar"></i>
+                                    </div>
+                                    <div class="stepper-line"></div>
+                                    <div class="stepper-dot"></div>
+                                </div>
+                                <div class="stepper-content">
+                                    <span class="stepper-badge apply">APPLY</span>
+                                    <h4>Connect with our Partnerships team.</h4>
+                                </div>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="stepper-item">
+                                <div class="stepper-node">
+                                    <div class="stepper-icon-box">
+                                        <i class="bi bi-graph-up-arrow"></i>
+                                    </div>
+                                    <div class="stepper-line"></div>
+                                    <div class="stepper-dot"></div>
+                                </div>
+                                <div class="stepper-content">
+                                    <span class="stepper-badge plan">PLAN</span>
+                                    <h4>We create together a custom plan for our partnership.</h4>
+                                </div>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="stepper-item">
+                                <div class="stepper-node">
+                                    <div class="stepper-icon-box">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                </div>
+                                <div class="stepper-content">
+                                    <span class="stepper-badge earn">EARN</span>
+                                    <h4>Generate profit while helping others grow their business as well.</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="become__affiliate">
-                            <div class="become__affiliate__content">
 
-                                <div class="single">
-                                    <div class="icon">
-                                        <img src="{{ asset('home/assets/img/intersect.svg') }}" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h4>Join</h4>
-                                        <p class="mb-0">Sign up for a Hostie account and fill in the required details.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="single">
-                                    <div class="icon">
-                                        <img src="{{ asset('home/assets/img/mike.svg') }}" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h4>promote</h4>
-                                        <p class="mb-0">Sign up for a Hostie account and fill in the required details.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="single">
-                                    <div class="icon">
-                                        <img src="{{ asset('home/assets/img/earn-api.svg') }}" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <h4>Earn</h4>
-                                        <p class="mb-0">Sign up for a Hostie account and fill in the required details.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="become__affiliate__image">
-                                <img src="{{ asset('home/assets/img/affilate-image (1).png') }}" height="400"
-                                    width="310" alt="">
-                            </div>
+                    <!-- Right: Content -->
+                    <div class="col-lg-6">
+                        <div class="stepper-text-content">
+                            <span class="stepper-subtitle">GETTING STARTED</span>
+                            <h2 class="stepper-main-title">How can I be an Mounteko partner?</h2>
+                            <p class="stepper-description">
+                                As easy as just sending us a partner request through the form below. No commitments and no
+                                hassles, just opportunities.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="rts-promote-hostie  section__padding">
+        <!-- ======= Benefits Section (What You Will Get) ======= -->
+        <section class="partner-benefits-section">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="rts-section w-420 text-center">
-                        <h2 class="rts-section__title">Why Promote Hostie</h2>
-                        <p class="rts-section__description">
-                            We are uniquely positioned to offer the best web hosting affiliate program
-                        </p>
+                    <div class="col-lg-8 text-center">
+                        <div class="benefits-header">
+                            <span class="benefits-subtitle">OUR BENEFITS</span>
+                            <h2 class="benefits-title">What You Will Get</h2>
+                        </div>
                     </div>
                 </div>
-                <div class="row g-30">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card-feature">
-                            <div class="card-feature__single">
-                                <div class="card-feature__single--icon">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M52.5 15H45V7.5C44.9989 6.50579 44.6034 5.55262 43.9004 4.84961C43.1974 4.1466 42.2442 3.75114 41.25 3.75H7.5C6.50579 3.75114 5.55262 4.1466 4.84961 4.84961C4.1466 5.55262 3.75114 6.50579 3.75 7.5V41.25C3.75114 42.2442 4.1466 43.1974 4.84961 43.9004C5.55262 44.6034 6.50579 44.9989 7.5 45H15V52.5C15.0011 53.4942 15.3966 54.4474 16.0996 55.1504C16.8026 55.8534 17.7558 56.2489 18.75 56.25H52.5C53.4942 56.2489 54.4474 55.8534 55.1504 55.1504C55.8534 54.4474 56.2489 53.4942 56.25 52.5V18.75C56.2489 17.7558 55.8534 16.8026 55.1504 16.0996C54.4474 15.3966 53.4942 15.0011 52.5 15ZM7.5 41.25V7.5H41.25V15H18.75C17.7558 15.0011 16.8026 15.3966 16.0996 16.0996C15.3966 16.8026 15.0011 17.7558 15 18.75V41.25H7.5ZM41.25 41.25H36.4014L18.75 23.5988V18.75H23.5986L41.2523 36.4043L41.25 41.25ZM18.75 28.9014L31.0986 41.25H18.75V28.9014ZM41.2519 31.1006L28.9014 18.75H41.25L41.2519 31.1006ZM18.75 52.5V45H41.25C42.2442 44.9989 43.1974 44.6034 43.9004 43.9004C44.6034 43.1974 44.9989 42.2442 45 41.25V18.75H52.5V52.5H18.75Z"
-                                            fill="white" />
-                                        <path
-                                            d="M52.5 15H45V7.5C44.9989 6.50579 44.6034 5.55262 43.9004 4.84961C43.1974 4.1466 42.2442 3.75114 41.25 3.75H7.5C6.50579 3.75114 5.55262 4.1466 4.84961 4.84961C4.1466 5.55262 3.75114 6.50579 3.75 7.5V41.25C3.75114 42.2442 4.1466 43.1974 4.84961 43.9004C5.55262 44.6034 6.50579 44.9989 7.5 45H15V52.5C15.0011 53.4942 15.3966 54.4474 16.0996 55.1504C16.8026 55.8534 17.7558 56.2489 18.75 56.25H52.5C53.4942 56.2489 54.4474 55.8534 55.1504 55.1504C55.8534 54.4474 56.2489 53.4942 56.25 52.5V18.75C56.2489 17.7558 55.8534 16.8026 55.1504 16.0996C54.4474 15.3966 53.4942 15.0011 52.5 15ZM7.5 41.25V7.5H41.25V15H18.75C17.7558 15.0011 16.8026 15.3966 16.0996 16.0996C15.3966 16.8026 15.0011 17.7558 15 18.75V41.25H7.5ZM41.25 41.25H36.4014L18.75 23.5988V18.75H23.5986L41.2523 36.4043L41.25 41.25ZM18.75 28.9014L31.0986 41.25H18.75V28.9014ZM41.2519 31.1006L28.9014 18.75H41.25L41.2519 31.1006ZM18.75 52.5V45H41.25C42.2442 44.9989 43.1974 44.6034 43.9004 43.9004C44.6034 43.1974 44.9989 42.2442 45 41.25V18.75H52.5V52.5H18.75Z"
-                                            fill="white" />
-                                    </svg>
-                                </div>
-                                <h5 class="card-feature__single--title">
-                                    Freedom of Choice
-                                </h5>
-                                <p class="card-feature__single--description">
-                                    Ample cloud hosting flexibility with 5 industry-leading
-                                </p>
-                                <a href="#" class="readmore"><i class="fa-solid fa-arrow-right"></i></a>
+                <div class="row g-4 mt-4">
+                    <!-- Benefit 1 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="benefit-card">
+                            <div class="benefit-icon-box">
+                                <i class="bi bi-person-video3"></i>
                             </div>
+                            <h4 class="benefit-card-title">Confirm Speakers</h4>
+                            <p class="benefit-card-desc">Integer ac felis ac augue tempu id non dui. Nam feugiat finibus
+                                scelerisque. Proin semper</p>
+                            <a href="#" class="benefit-link">READ MORE <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card-feature">
-                            <div class="card-feature__single">
-                                <div class="card-feature__single--icon">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M30 0C46.5685 0 60 13.4315 60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0ZM30 3.15789C15.1755 3.15789 3.15789 15.1755 3.15789 30C3.15789 44.8245 15.1755 56.8421 30 56.8421C44.8245 56.8421 56.8421 44.8245 56.8421 30C56.8421 15.1755 44.8245 3.15789 30 3.15789ZM46.906 13.094C47.4751 13.6632 47.5778 14.6899 46.906 15.327L35.4413 26.7916C35.9969 27.7319 36.3158 28.8287 36.3158 30C36.3158 33.4881 33.4881 36.3158 30 36.3158C26.5119 36.3158 23.6842 33.4881 23.6842 30C23.6842 26.5119 26.5119 23.6842 30 23.6842C31.1713 23.6842 32.2681 24.0031 33.2084 24.5587L44.673 13.094C45.2896 12.4774 46.2893 12.4774 46.906 13.094ZM30 26.8421C28.2559 26.8421 26.8421 28.2559 26.8421 30C26.8421 31.7441 28.2559 33.1579 30 33.1579C31.7441 33.1579 33.1579 31.7441 33.1579 30C33.1579 28.2559 31.7441 26.8421 30 26.8421ZM48.6594 21.4359C49.8839 24.0996 50.5263 27.0059 50.5263 30C50.5263 30.872 49.8194 31.5789 48.9474 31.5789C48.0753 31.5789 47.3684 30.872 47.3684 30C47.3684 27.4636 46.8254 25.0069 45.7902 22.7548C45.4259 21.9625 45.773 21.0249 46.5653 20.6607C47.3577 20.2965 48.2952 20.6436 48.6594 21.4359ZM30 9.47368C33.0217 9.47368 35.9539 10.1281 38.6373 11.3744C39.4282 11.7417 39.7715 12.6806 39.4042 13.4715C39.0369 14.2624 38.0979 14.6058 37.3071 14.2384C35.0384 13.1847 32.5599 12.6316 30 12.6316C20.4077 12.6316 12.6316 20.4077 12.6316 30C12.6316 30.872 11.9247 31.5789 11.0526 31.5789C10.1806 31.5789 9.47368 30.872 9.47368 30C9.47368 18.6636 18.6636 9.47368 30 9.47368Z"
-                                            fill="#2D3C58" />
-                                    </svg>
-                                </div>
-                                <h5 class="card-feature__single--title">
-                                    Good Performance
-                                </h5>
-                                <p class="card-feature__single--description">
-                                    Add social networking right into WordPress site.
-                                </p>
-                                <a href="#" class="readmore"><i class="fa-solid fa-arrow-right"></i></a>
+                    <!-- Benefit 2 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="benefit-card">
+                            <div class="benefit-icon-box">
+                                <i class="bi bi-lightbulb"></i>
                             </div>
+                            <h4 class="benefit-card-title">Best Digital Ideas</h4>
+                            <p class="benefit-card-desc">Integer ac felis ac augue tempu id non dui. Nam feugiat finibus
+                                scelerisque. Proin semper</p>
+                            <a href="#" class="benefit-link">READ MORE <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card-feature">
-                            <div class="card-feature__single">
-                                <div class="card-feature__single--icon">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M46.875 18.75H46.7625C46.2854 14.6389 44.3142 10.8465 41.2236 8.09387C38.133 5.34123 34.1387 3.82031 30 3.82031C25.8613 3.82031 21.867 5.34123 18.7764 8.09387C15.6858 10.8465 13.7146 14.6389 13.2375 18.75H13.125C10.6386 18.75 8.25403 19.7377 6.49587 21.4959C4.73772 23.254 3.75 25.6386 3.75 28.125C3.75 30.6114 4.73772 32.996 6.49587 34.7541C8.25403 36.5123 10.6386 37.5 13.125 37.5H16.875V20.625C16.875 17.144 18.2578 13.8056 20.7192 11.3442C23.1806 8.88281 26.519 7.50001 30 7.50001C33.481 7.50001 36.8194 8.88281 39.2808 11.3442C41.7422 13.8056 43.125 17.144 43.125 20.625V39.375C43.1237 41.0929 42.5328 42.7583 41.4509 44.0928C40.369 45.4272 38.8618 46.3498 37.1813 46.7063C36.6807 44.9508 35.5572 43.4382 34.0212 42.4519C32.4852 41.4655 30.6422 41.0732 28.8377 41.3485C27.0332 41.6238 25.391 42.5477 24.2189 43.9471C23.0469 45.3465 22.4254 47.1254 22.471 48.9502C22.5167 50.775 23.2262 52.5206 24.4668 53.8597C25.7073 55.1988 27.3936 56.0395 29.2096 56.2242C31.0256 56.409 32.8467 55.9251 34.3315 54.8633C35.8163 53.8014 36.8628 52.2345 37.275 50.4563C39.9356 50.0618 42.3669 48.7271 44.128 46.6942C45.8892 44.6613 46.8637 42.0647 46.875 39.375V37.5C49.3614 37.5 51.746 36.5123 53.5041 34.7541C55.2623 32.996 56.25 30.6114 56.25 28.125C56.25 25.6386 55.2623 23.254 53.5041 21.4959C51.746 19.7377 49.3614 18.75 46.875 18.75ZM7.5 28.125C7.5 26.6332 8.09263 25.2024 9.14752 24.1475C10.2024 23.0926 11.6332 22.5 13.125 22.5V33.75C11.6332 33.75 10.2024 33.1574 9.14752 32.1025C8.09263 31.0476 7.5 29.6169 7.5 28.125ZM30 52.5C29.2583 52.5 28.5333 52.2801 27.9166 51.868C27.2999 51.456 26.8193 50.8703 26.5355 50.1851C26.2516 49.4999 26.1774 48.7459 26.3221 48.0184C26.4667 47.291 26.8239 46.6228 27.3484 46.0984C27.8728 45.5739 28.541 45.2168 29.2684 45.0721C29.9958 44.9274 30.7498 45.0016 31.4351 45.2855C32.1203 45.5693 32.706 46.0499 33.118 46.6666C33.5301 47.2833 33.75 48.0083 33.75 48.75C33.75 49.7446 33.3549 50.6984 32.6516 51.4017C31.9484 52.1049 30.9946 52.5 30 52.5ZM46.875 33.75V22.5C48.3668 22.5 49.7976 23.0926 50.8525 24.1475C51.9074 25.2024 52.5 26.6332 52.5 28.125C52.5 29.6169 51.9074 31.0476 50.8525 32.1025C49.7976 33.1574 48.3668 33.75 46.875 33.75Z"
-                                            fill="#2D3C58" />
-                                    </svg>
-                                </div>
-                                <h5 class="card-feature__single--title">
-                                    24/7 Expert Support
-                                </h5>
-                                <p class="card-feature__single--description">
-                                    Easily eCommerce functionality
-                                    to site with woocommerce
-                                </p>
-                                <a href="#" class="readmore"><i class="fa-solid fa-arrow-right"></i></a>
+                    <!-- Benefit 3 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="benefit-card">
+                            <div class="benefit-icon-box">
+                                <i class="bi bi-people-fill"></i>
                             </div>
+                            <h4 class="benefit-card-title">Networking People</h4>
+                            <p class="benefit-card-desc">Integer ac felis ac augue tempu id non dui. Nam feugiat finibus
+                                scelerisque. Proin semper</p>
+                            <a href="#" class="benefit-link">READ MORE <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card-feature">
-                            <div class="card-feature__single">
-                                <div class="card-feature__single--icon">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M20.625 3.75H3.75V20.625H7.5V7.5H20.625V3.75ZM3.75 39.375V56.25H20.625V52.5H7.5V39.375H3.75ZM56.25 3.75V20.625H52.5V7.5H39.375V3.75H56.25ZM39.375 56.25H56.25V39.375H52.5V52.5H39.375V56.25ZM30.9188 9.61888L47.7938 18.9939C48.0834 19.1567 48.3245 19.3935 48.4926 19.6801C48.6606 19.9668 48.7494 20.2929 48.75 20.6251V39.3751C48.7532 39.7037 48.67 40.0273 48.5088 40.3136C48.3476 40.5999 48.1139 40.8388 47.8313 41.0064L30.9563 50.3814C30.6712 50.5459 30.3479 50.6326 30.0188 50.6326C29.6896 50.6326 29.3663 50.5459 29.0813 50.3814L12.2063 41.0064C11.9166 40.8436 11.6755 40.6068 11.5074 40.3201C11.3394 40.0335 11.2506 39.7074 11.25 39.3751V20.6251C11.2468 20.2966 11.33 19.9729 11.4912 19.6866C11.6525 19.4003 11.8861 19.1614 12.1688 18.9939L29.0438 9.61888C29.3288 9.45431 29.6521 9.36768 29.9813 9.36768C30.3104 9.36768 30.6337 9.45431 30.9188 9.61888ZM43.0125 20.6251L30 13.3876L16.9875 20.6251L30 27.8626L43.0125 20.6251ZM28.125 31.1064L15 23.8126V38.2689L28.125 45.5626V31.1064ZM31.875 31.1064V45.5626L45 38.2689V23.8126L31.875 31.1064Z"
-                                            fill="#2D3C58" />
-                                    </svg>
-                                </div>
-                                <h5 class="card-feature__single--title">
-                                    Simplicity
-                                </h5>
-                                <p class="card-feature__single--description">
-                                    Makes it easy for your visitors to email you from your site!
-                                </p>
-                                <a href="#" class="readmore"><i class="fa-solid fa-arrow-right"></i></a>
+                    <!-- Benefit 4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="benefit-card">
+                            <div class="benefit-icon-box">
+                                <i class="bi bi-stars"></i>
                             </div>
+                            <h4 class="benefit-card-title">Inspiring Keynotes</h4>
+                            <p class="benefit-card-desc">Integer ac felis ac augue tempu id non dui. Nam feugiat finibus
+                                scelerisque. Proin semper</p>
+                            <a href="#" class="benefit-link">READ MORE <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ======= Testimonials Section ======= -->
+        {{-- <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
             <div class="container" data-aos="zoom-in">
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper">
                         @foreach ($testimonial as $t)
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <img src="{{ asset($t->pic) }}" class="testimonial-img" alt="">
-                                    <h3>{{ $t->name }}</h3>
-                                    <h4>{{ $t->position }}</h4>
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        {{ $t->description }}
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div><!-- End testimonial item -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="{{ asset($t->pic) }}" class="testimonial-img" alt="">
+                                <h3>{{ $t->name }}</h3>
+                                <h4>{{ $t->position }}</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    {{ $t->description }}
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
                         @endforeach
 
 
@@ -440,14 +367,136 @@
                 </div>
 
             </div>
-        </section><!-- End Testimonials Section -->
-        <!-- ======= F.A.Q Section ======= -->
-        <x-faq :faqs="$faqs" />
-        {{-- Blog section --}}
-        <section class="user-blog" class="footer-top">
-            <x-blog-grid :blogs="$blogs" />
+        </section><!-- End Testimonials Section --> --}}
+        <!-- ======= FAQ Section ======= -->
+        <section class="partner-faq-section py-4">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Left: FAQ Content -->
+                    <div class="col-lg-6">
+                        <div class="benefits-header text-start mb-4">
+                            <span class="benefits-subtitle" style="justify-content: flex-start;">HELP CENTER</span>
+                            <h2 class="benefits-title" style="font-size: 28px;">Frequently Asked Questions</h2>
+                        </div>
+                        <div class="static-faq-accordion" id="partnerFaq">
+                            <!-- FAQ Item 1 -->
+                            <div class="static-faq-item">
+                                <button class="static-faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    How do I join the Mounteko Affiliate Program?
+                                    <span class="faq-icon-plus"></span>
+                                </button>
+                                <div id="faq1" class="collapse" data-bs-parent="#partnerFaq">
+                                    <div class="static-faq-body">
+                                        Joining is easy! Simply click the "Apply Now" button, fill out the application form,
+                                        and our team will review it within 24-48 hours.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item 2 -->
+                            <div class="static-faq-item">
+                                <button class="static-faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    What are the commission rates?
+                                    <span class="faq-icon-plus"></span>
+                                </button>
+                                <div id="faq2" class="collapse" data-bs-parent="#partnerFaq">
+                                    <div class="static-faq-body">
+                                        We offer some of the highest commission rates in the industry. You can earn up to
+                                        40% per sale depending on your volume.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item 3 -->
+                            <div class="static-faq-item">
+                                <button class="static-faq-btn collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    When and how do I get paid?
+                                    <span class="faq-icon-plus"></span>
+                                </button>
+                                <div id="faq3" class="collapse" data-bs-parent="#partnerFaq">
+                                    <div class="static-faq-body">
+                                        Payments are processed monthly via PayPal or Direct Bank Transfer with a minimum
+                                        payout threshold of $50.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: Illustration -->
+                    <div class="col-lg-6">
+                        <div class="faq-image-box text-center p-4">
+                            <img src="{{ asset('home/assets/img/faq_partner_img.png') }}" alt="FAQ Support"
+                                class="img-fluid faq-floating-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        {{-- End Blog --}}
+
+        <!-- ======= Blog Section ======= -->
+        <section class="partner-blog-section py-5" style="background: #f8fafc;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="benefits-header">
+                            <span class="benefits-subtitle">LATEST NEWS</span>
+                            <h2 class="benefits-title">Read Our Blogs</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <!-- Blog Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="static-blog-card">
+                            <div class="blog-img-wrapper">
+                                <img src="{{ asset('home/assets/img/blog_static_1.png') }}" alt="Blog 1">
+                                <span class="blog-date">10 May 2024</span>
+                            </div>
+                            <div class="blog-content">
+                                <span class="blog-cat">Affiliate Tips</span>
+                                <h4 class="blog-title">How to scale your affiliate earnings in 2024</h4>
+                                <p class="blog-excerpt">Learn the latest strategies to grow your affiliate business and
+                                    maximize your monthly commission...</p>
+                                <a href="#" class="blog-btn-link">READ MORE <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="static-blog-card">
+                            <div class="blog-img-wrapper">
+                                <img src="{{ asset('home/assets/img/blog_static_2.png') }}" alt="Blog 2">
+                                <span class="blog-date">08 May 2024</span>
+                            </div>
+                            <div class="blog-content">
+                                <span class="blog-cat">Hosting</span>
+                                <h4 class="blog-title">Why Cloud Hosting is the best choice for SEO</h4>
+                                <p class="blog-excerpt">Discover how our high-performance cloud infrastructure helps your
+                                    website rank higher on search engines...</p>
+                                <a href="#" class="blog-btn-link">READ MORE <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="static-blog-card">
+                            <div class="blog-img-wrapper">
+                                <img src="{{ asset('home/assets/img/blog_static_3.png') }}" alt="Blog 3">
+                                <span class="blog-date">05 May 2024</span>
+                            </div>
+                            <div class="blog-content">
+                                <span class="blog-cat">Business</span>
+                                <h4 class="blog-title">Partnering for success: Our global network</h4>
+                                <p class="blog-excerpt">Explore the benefits of joining our global network of entrepreneurs
+                                    and growing your business together...</p>
+                                <a href="#" class="blog-btn-link">READ MORE <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main><!-- End #main -->
 
@@ -488,10 +537,10 @@
                 },
             },
         });
-        $(document).ready(function() {
+        $(document).ready(function () {
             /*=========== Tab Js ===========*/
             try {
-                $(".tab__btn").click(function() {
+                $(".tab__btn").click(function () {
                     const tabId = $(this).data("tab");
                     $(".tab__btn").removeClass("active");
                     $(this).addClass("active");
