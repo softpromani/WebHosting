@@ -1,3 +1,43 @@
+<style>
+    @media (max-width: 991px) {
+        .navbar-mobile a.ai-wrap-menu, .navbar-mobile a.ai-wrap-menu:focus {
+            white-space: normal !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding: 12px 20px !important;
+        }
+        .navbar-mobile a.ai-wrap-menu span {
+            flex: 1;
+            padding-right: 10px;
+            line-height: 1.4;
+        }
+        .navbar-mobile a.ai-wrap-menu i {
+            font-size: 14px !important;
+        }
+    }
+
+    /* Desktop Mega Menu Sidebar Wrap */
+    .mega-cat-link.ai-wrap-menu {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: auto !important;
+        min-height: 50px;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+    .mega-cat-link.ai-wrap-menu span {
+        white-space: normal !important;
+        line-height: 1.3 !important;
+        flex: 1;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .mega-cat-link.ai-wrap-menu i {
+        margin-left: auto;
+    }
+</style>
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -12,7 +52,7 @@
 
                 <li class="dropdown mega-menu-item">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-                    
+
                     <!-- Mobile Services Menu (Standard Dropdown) -->
                     <ul class="d-lg-none">
                         <li class="dropdown"><a href="#"><span>Network Solutions</span> <i class="bi bi-chevron-right"></i></a>
@@ -65,7 +105,17 @@
                                 <li><a href="{{ route('services.hardware_software_procurement') }}">Hardware procurement</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ route('services.ai_integration_automation') }}">AI & Automation</a></li>
+                        <li class="dropdown"><a href="#" class="ai-wrap-menu"><span>AI Integration & Business Automation</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="{{ route('services.ai_integration_automation') }}">AI Integration & Business Automation</a></li>
+                                <li><a href="#">AI-Powered Sales Automation System</a></li>
+                                <li><a href="#">AI Chatbots & Customer Support Automation</a></li>
+                                <li><a href="#">Workflow & Process Automation</a></li>
+                                <li><a href="#">Marketing Automation Systems</a></li>
+                                <li><a href="#">System Integration & Data Automation</a></li>
+                                <li><a href="#">AI Analytics & Business Insights</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <!-- Desktop Mega Menu -->
@@ -99,7 +149,7 @@
                                         <span>Managed IT Services</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
-                                    <div class="mega-cat-link" data-target="mega-tab-consulting"
+                                    <div class="mega-cat-link ai-wrap-menu" data-target="mega-tab-consulting"
                                         onclick="window.location.href='{{ route('services.ai_integration_automation') }}'">
                                         <span>AI Integration & Business Automation</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
@@ -113,13 +163,15 @@
                                             onclick="window.location.href='{{ route('services.network-architecture') }}'">
                                             Network Solutions</h4>
                                         <div class="content-grid">
-                                            <a href="{{ route('services.network-architecture') }}">Network architecture
+                                            <a href="{{ route('services.network-architecture') }}">Network
+                                                architecture
                                                 design (LAN, WAN, SD-WAN)</a>
                                             <a href="{{ route('services.enterprise-wireless-solutions') }}">Enterprise
                                                 wireless solutions and implementation</a>
                                             <a href="{{ route('services.vpn-remote-access') }}">VPN setup and remote
                                                 access solutions</a>
-                                            <a href="{{ route('services.network-monitoring') }}">Network monitoring and
+                                            <a href="{{ route('services.network-monitoring') }}">Network monitoring
+                                                and
                                                 performance optimization</a>
                                             <a href="{{ route('services.firewall-router-configuration') }}">Firewall &
                                                 router configuration</a>
@@ -134,7 +186,8 @@
                                         <div class="content-grid">
                                             <a href="{{ route('services.security-audits') }}">Firewall Setup &
                                                 Configuration</a>
-                                            <a href="{{ route('services.vpn-setup-remote-access') }}">VPN Setup & Remote
+                                            <a href="{{ route('services.vpn-setup-remote-access') }}">VPN Setup &
+                                                Remote
                                                 Access Security</a>
                                             <a href="{{ route('services.cloud-security-firewall') }}">Cloud Security &
                                                 Firewall Protection</a>
@@ -157,11 +210,16 @@
                                         <div class="content-grid">
                                             <a href="{{ route('services.custom_software') }}">Website Design &
                                                 Development</a>
-                                            <a href="{{ route('services.ecommerce_development') }}">E-commerce Development</a>
-                                            <a href="{{ route('services.custom_web_applications') }}">Custom Software & Web Applications</a>
-                                            <a href="{{ route('services.api_development') }}">API Development & System Integration</a>
-                                            <a href="{{ route('services.website_maintenance') }}">Website Maintenance & Support</a>
-                                            <a href="{{ route('services.web_performance_seo') }}">Web Performance, SEO & Optimization</a>
+                                            <a href="{{ route('services.ecommerce_development') }}">E-commerce
+                                                Development</a>
+                                            <a href="{{ route('services.custom_web_applications') }}">Custom Software
+                                                & Web Applications</a>
+                                            <a href="{{ route('services.api_development') }}">API Development & System
+                                                Integration</a>
+                                            <a href="{{ route('services.website_maintenance') }}">Website Maintenance
+                                                & Support</a>
+                                            <a href="{{ route('services.web_performance_seo') }}">Web Performance, SEO
+                                                & Optimization</a>
                                         </div>
                                     </div>
                                     <div id="mega-tab-cloud" class="mega-cat-content">
@@ -169,13 +227,19 @@
                                             onclick="window.location.href='{{ route('services.cloud_architecture') }}'">
                                             Cloud & IT Infrastructure</h4>
                                         <div class="content-grid">
-                                            <a href="{{ route('services.cloud_architecture') }}">Cloud Setup, Migration
+                                            <a href="{{ route('services.cloud_architecture') }}">Cloud Setup,
+                                                Migration
                                                 & Deployment</a>
-                                            <a href="{{ route('services.backup_disaster_recovery') }}">Backup, Disaster Recovery & Data Protection</a>
-                                            <a href="{{ route('services.server_infrastructure_management') }}">Server & Infrastructure Management</a>
-                                            <a href="{{ route('services.it_audit_consulting') }}">IT Audit, Consulting & Cost Optimization</a>
-                                            <a href="{{ route('services.cloud_security_compliance') }}">Cloud Security & Compliance</a>
-                                            <a href="{{ route('services.hybrid_cloud_integration') }}">Hybrid Cloud & On-Premise Integration</a>
+                                            <a href="{{ route('services.backup_disaster_recovery') }}">Backup,
+                                                Disaster Recovery & Data Protection</a>
+                                            <a href="{{ route('services.server_infrastructure_management') }}">Server
+                                                & Infrastructure Management</a>
+                                            <a href="{{ route('services.it_audit_consulting') }}">IT Audit, Consulting
+                                                & Cost Optimization</a>
+                                            <a href="{{ route('services.cloud_security_compliance') }}">Cloud Security
+                                                & Compliance</a>
+                                            <a href="{{ route('services.hybrid_cloud_integration') }}">Hybrid Cloud &
+                                                On-Premise Integration</a>
                                         </div>
                                     </div>
                                     <div id="mega-tab-managed" class="mega-cat-content">
@@ -183,11 +247,15 @@
                                                 style="color: inherit; text-decoration: none;">Managed IT Services</a>
                                         </h4>
                                         <div class="content-grid">
-                                            <a href="{{ route('services.it_support_helpdesk') }}">End-to-end IT support
+                                            <a href="{{ route('services.it_support_helpdesk') }}">End-to-end IT
+                                                support
                                                 & helpdesk</a>
-                                            <a href="{{ route('services.system_monitoring') }}">System monitoring & maintenance</a>
-                                            <a href="{{ route('services.patch_management') }}">System patch management & updates</a>
-                                            <a href="{{ route('services.hardware_software_procurement') }}">Hardware & software procurement</a>
+                                            <a href="{{ route('services.system_monitoring') }}">System monitoring &
+                                                maintenance</a>
+                                            <a href="{{ route('services.patch_management') }}">System patch management
+                                                & updates</a>
+                                            <a href="{{ route('services.hardware_software_procurement') }}">Hardware &
+                                                software procurement</a>
                                             {{-- <a href="#">IT asset & hardware-software procurement</a> --}}
                                         </div>
                                     </div>
@@ -237,12 +305,12 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         const triggers = document.querySelectorAll('.mega-cat-link');
         const contents = document.querySelectorAll('.mega-cat-content');
 
         triggers.forEach(trigger => {
-            trigger.addEventListener('mouseenter', function () {
+            trigger.addEventListener('mouseenter', function() {
                 // Remove active class from all
                 triggers.forEach(t => t.classList.remove('active'));
                 contents.forEach(c => c.classList.remove('active'));
