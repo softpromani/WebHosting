@@ -45,7 +45,7 @@
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 15px;
-    max-width: 500px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -307,7 +307,7 @@
 }
 
 .ai-about-title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 15px;
@@ -534,7 +534,7 @@
 }
 
 .ai-transform-content .ai-about-title {
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 800;
     color: #030d0a;
 }
@@ -1136,7 +1136,7 @@
 }
 
 .ai-exp-title {
-    font-size: 34px; /* Scaled down heading */
+    font-size: 28px; /* Scaled down heading */
     font-weight: 800;
     color: #0f172a;
     line-height: 1.2;
@@ -1345,6 +1345,7 @@
     color: #64748b;
     cursor: pointer;
     margin-bottom: 25px;
+    white-space: nowrap;
 }
 
 /* Form Footer */
@@ -1664,3 +1665,50 @@
         font-size: 26px;
     }
 }
+
+/* Extra decorative floating icons animation */
+.ai-float-decor {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 255, 204, 0.1);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: var(--ai-accent);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.ai-float-decor i {
+    filter: drop-shadow(0 0 5px var(--ai-accent));
+}
+
+.decor-1 {
+    top: 20%;
+    left: 15%;
+    animation: float 5s ease-in-out infinite;
+}
+
+.decor-2 {
+    top: 15%;
+    right: 15%;
+    animation: float 6s ease-in-out infinite 1s;
+}
+
+.decor-3 {
+    bottom: 25%;
+    left: 10%;
+    animation: float 7s ease-in-out infinite 0.5s;
+}
+
+.decor-4 {
+    bottom: 20%;
+    right: 10%;
+    animation: float 5.5s ease-in-out infinite 1.5s;
+}
+

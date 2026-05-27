@@ -53,6 +53,16 @@ Route::get('/services/email-phishing-protection', [HomeController::class, 'email
 Route::get('/services/security-audit-vulnerability-scan', [HomeController::class, 'socSetupMonitoring'])->name('services.soc_setup_monitoring');
 Route::get('/services/firewall-monitoring-management', [HomeController::class, 'incidentResponseRecovery'])->name('services.incident_response_recovery');
 Route::get('/services/ai-integration-business-automation', [HomeController::class, 'aiIntegrationAutomation'])->name('services.ai_integration_automation');
+Route::get('/services/ai-powered-sales-automation-system', [HomeController::class, 'aiPoweredSalesAutomation'])->name('services.ai_powered_sales_automation');
+Route::get('/services/ai-chatbots-customer-support-automation', [HomeController::class, 'aiChatbotsCustomerSupport'])->name('services.ai_chatbots_customer_support');
+Route::get('/services/workflow-process-automation', [HomeController::class, 'workflowProcessAutomation'])->name('services.workflow_process_automation');
+Route::get('/services/marketing-automation-systems', [HomeController::class, 'marketingAutomationSystems'])->name('services.marketing_automation_systems');
+Route::get('/services/system-integration-data-automation', [HomeController::class, 'systemIntegrationAutomation'])->name('services.system_integration_automation');
+Route::get('/services/ai-analytics-business-insights', [HomeController::class, 'aiAnalyticsBusinessInsights'])->name('services.ai_analytics_business_insights');
+
+
+
+
 
 // Development Services
 Route::get('/services/custom-software-development', [HomeController::class, 'customSoftwareDevelopment'])->name('services.custom_software');

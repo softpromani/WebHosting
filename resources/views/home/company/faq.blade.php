@@ -70,12 +70,12 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqL1"
                                     aria-expanded="true">
-                                    GLOBAL SEARCH ENGINE OPTIMIZATION
+                                    What makes Mounteko Global Solutions different from other web development agencies?
                                     <i class="bi bi-chevron-up faq-icon"></i>
                                 </button>
                                 <div id="faqL1" class="collapse show">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                        We focus on performance-first, scalable websites tailored to your industry. Unlike template-based developers, we combine custom coding with AI-driven UX insights, ensuring faster load times, better conversion rates, and seamless integration with your existing business tools.
                                     </div>
                                 </div>
                             </div>
@@ -86,12 +86,12 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqL2"
                                     aria-expanded="false">
-                                    HOW CAN I BOOK THE APPOINTMENT DATE?
+                                    Do you only build websites, or also redesign old ones?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqL2" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                        Both. We specialize in full redesigns of outdated or slow websites, migrating them to modern frameworks while preserving SEO value. Our redesigns improve mobile responsiveness, security, and user engagement without losing your digital footprint.
                                     </div>
                                 </div>
                             </div>
@@ -102,12 +102,12 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqL3"
                                     aria-expanded="false">
-                                    WHAT DO YOU DO IN HEART OPERATIONS?
+                                    What does “managed IT service” include at Mounteko?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqL3" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                        Our managed IT covers 24/7 monitoring, helpdesk support, backup & disaster recovery, patch management, and cybersecurity audits. We act as your remote IT department, preventing downtime before it affects your revenue.
                                     </div>
                                 </div>
                             </div>
@@ -118,12 +118,12 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqL4"
                                     aria-expanded="false">
-                                    WHAT KIND OF PATIENTS DO YOU TREAT?
+                                    How do you integrate AI into an existing business that has no AI experience?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqL4" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                        We start with an AI readiness audit, then implement low-risk, high-impact use cases like intelligent chatbots, document processing automation, or predictive analytics for sales. No AI expertise is required from your side — we handle training, integration, and maintenance.
                                     </div>
                                 </div>
                             </div>
@@ -135,66 +135,66 @@
                     <div class="col-lg-6">
                         <div class="faq-custom-accordion" id="faqRight">
 
-                            <!-- Item 1 - Active/Open -->
+                            <!-- Item 5 - Active/Open -->
                             <div class="faq-item">
                                 <button class="faq-item-header active"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqR1"
                                     aria-expanded="true">
-                                    GLOBAL SEARCH ENGINE OPTIMIZATION
+                                    Is AI integration expensive for small businesses?
                                     <i class="bi bi-chevron-up faq-icon"></i>
                                 </button>
                                 <div id="faqR1" class="collapse show">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                        Not with our approach. We offer modular AI solutions — pay only for what you use. For example, an AI-powered lead scoring system costs a fraction of a full-time analyst. We also provide scalable cloud AI services that grow with your budget.
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Item 2 -->
+                            <!-- Item 6 -->
                             <div class="faq-item">
                                 <button class="faq-item-header"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqR2"
                                     aria-expanded="false">
-                                    HOW CAN I BOOK THE APPOINTMENT DATE?
+                                    How long does it take to build a custom website with Mounteko?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqR2" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                        Most custom websites are delivered in 4–12 weeks, depending on complexity. Using AI-assisted wireframing and component libraries, we cut development time by 30% without compromising quality. An e-commerce site may take longer due to payment and inventory integrations.
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Item 3 -->
+                            <!-- Item 7 -->
                             <div class="faq-item">
                                 <button class="faq-item-header"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqR3"
                                     aria-expanded="false">
-                                    WHAT DO YOU DO IN HEART OPERATIONS?
+                                    Do you offer maintenance after the website goes live?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqR3" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                        Yes — through our managed IT and web care plans. We handle plugin updates, security patches, daily backups, uptime monitoring, and emergency fixes. You can focus on your business while we keep your website fast and secure.
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Item 4 -->
+                            <!-- Item 8 -->
                             <div class="faq-item">
                                 <button class="faq-item-header"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqR4"
                                     aria-expanded="false">
-                                    WHAT KIND OF PATIENTS DO YOU TREAT?
+                                    Will an AI-integrated website affect my SEO rankings?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqR4" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                        Positively, if done right. Our AI features (personalization, smart search, automated schema markup) improve dwell time and CTR — both SEO factors. We ensure all AI-generated content is indexable and follows Google’s guidelines for automation.
                                     </div>
                                 </div>
                             </div>
@@ -205,8 +205,6 @@
                 </div>
             </div>
         </section>
-
-        </script>
 
         <!-- ======= FAQ with Image Section ======= -->
         <section class="faq-image-section">
@@ -219,7 +217,7 @@
                             GENERAL QUESTIONS
                             <span class="line"></span>
                         </div>
-                        <h2 class="faq-img-title">Frequent Asked Questions!!</h2>
+                        <h2 class="faq-img-title">Frequently Asked Questions</h2>
                         <div class="faq-wave mb-4">〰〰〰</div>
 
                         <div class="faq-custom-accordion" id="faqImg">
@@ -230,12 +228,12 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqI1"
                                     aria-expanded="true">
-                                    GLOBAL SEARCH ENGINE OPTIMIZATION
+                                    Do you provide training for our staff on new IT or AI tools?
                                     <i class="bi bi-chevron-up faq-icon"></i>
                                 </button>
                                 <div id="faqI1" class="collapse show">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo <a href="#" class="faq-link">ligula eget</a> dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur <a href="#" class="faq-link">ridiculus mus</a>.
+                                        Absolutely. Each deployment includes video tutorials, live Q&A sessions, and documentation. For AI tools, we also offer ongoing prompt engineering and workflow optimization workshops for your team.
                                     </div>
                                 </div>
                             </div>
@@ -246,12 +244,12 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqI2"
                                     aria-expanded="false">
-                                    HOW CAN I BOOK THE APPOINTMENT DATE?
+                                    Can you support our company if we use multiple cloud providers (AWS, Azure, Google)?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqI2" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                        Yes — we are cloud-agnostic network and IT managers. We unify monitoring, security policies, and cost optimization across AWS, Azure, Google Cloud, and on-prem servers, giving you one dashboard for all resources.
                                     </div>
                                 </div>
                             </div>
@@ -262,12 +260,12 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqI3"
                                     aria-expanded="false">
-                                    WHAT DO YOU DO IN HEART OPERATIONS?
+                                    What is the first step to start a project with Mounteko Global Solutions?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqI3" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                        Fill out our free discovery form on the website, and we’ll schedule a 30-minute strategy call. During this call, we’ll assess your current setup, recommend quick wins (in web, IT, network, or AI), and provide a fixed-price quote — no obligation.
                                     </div>
                                 </div>
                             </div>
@@ -278,12 +276,12 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#faqI4"
                                     aria-expanded="false">
-                                    WHAT KIND OF PATIENTS DO YOU TREAT?
+                                    What industries does Mounteko serve?
                                     <i class="bi bi-chevron-down faq-icon"></i>
                                 </button>
                                 <div id="faqI4" class="collapse">
                                     <div class="faq-item-body">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                        We support a broad range of industries, including retail, automotive, manufacturing, banking, finance, and technology, delivering compliant and scalable IT solutions.
                                     </div>
                                 </div>
                             </div>
@@ -297,7 +295,7 @@
                             <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=600&h=450" alt="Professional team" class="faq-side-img">
                             <div class="faq-quote-box">
                                 <span class="faq-quote-icon">"</span>
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Delivering digital excellence and enterprise-grade scale through modern cloud solutions and intelligence.</p>
                             </div>
                         </div>
                     </div>

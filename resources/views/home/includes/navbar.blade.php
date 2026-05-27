@@ -108,12 +108,12 @@
                         <li class="dropdown"><a href="#" class="ai-wrap-menu"><span>AI Integration & Business Automation</span> <i class="bi bi-chevron-right"></i></a>
                             <ul>
                                 <li><a href="{{ route('services.ai_integration_automation') }}">AI Integration & Business Automation</a></li>
-                                <li><a href="#">AI-Powered Sales Automation System</a></li>
-                                <li><a href="#">AI Chatbots & Customer Support Automation</a></li>
-                                <li><a href="#">Workflow & Process Automation</a></li>
-                                <li><a href="#">Marketing Automation Systems</a></li>
-                                <li><a href="#">System Integration & Data Automation</a></li>
-                                <li><a href="#">AI Analytics & Business Insights</a></li>
+                                <li><a href="{{ route('services.ai_powered_sales_automation') }}">AI-Powered Sales Automation System</a></li>
+                                <li><a href="{{ route('services.ai_chatbots_customer_support') }}">AI Chatbots & Customer Support Automation</a></li>
+                                <li><a href="{{ route('services.workflow_process_automation') }}">Workflow & Process Automation</a></li>
+                                <li><a href="{{ route('services.marketing_automation_systems') }}">Marketing Automation Systems</a></li>
+                                <li><a href="{{ route('services.system_integration_automation') }}">System Integration & Data Automation</a></li>
+                                <li><a href="{{ route('services.ai_analytics_business_insights') }}">AI Analytics & Business Insights</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -262,12 +262,12 @@
                                     <div id="mega-tab-consulting" class="mega-cat-content">
                                         <h4>AI Integration & Business Automation</h4>
                                         <div class="content-grid">
-                                            <a href="#">AI-Powered Sales Automation System</a>
-                                            <a href="#">AI Chatbots & Customer Support Automation</a>
-                                            <a href="#">Workflow & Process Automation</a>
-                                            <a href="#">Marketing Automation Systems</a>
-                                            <a href="#">System Integration & Data Automation</a>
-                                            <a href="#">AI Analytics & Business Insights</a>
+                                            <a href="{{ route('services.ai_powered_sales_automation') }}">AI-Powered Sales Automation System</a>
+                                            <a href="{{ route('services.ai_chatbots_customer_support') }}">AI Chatbots & Customer Support Automation</a>
+                                            <a href="{{ route('services.workflow_process_automation') }}">Workflow & Process Automation</a>
+                                            <a href="{{ route('services.marketing_automation_systems') }}">Marketing Automation Systems</a>
+                                            <a href="{{ route('services.system_integration_automation') }}">System Integration & Data Automation</a>
+                                            <a href="{{ route('services.ai_analytics_business_insights') }}">AI Analytics & Business Insights</a>
                                         </div>
                                     </div>
                                 </div>

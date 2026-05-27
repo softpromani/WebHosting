@@ -228,6 +228,40 @@ class HomeController extends Controller
         return view('home.services.ai_automation.ai_integration_automation');
     }
 
+    public function aiPoweredSalesAutomation()
+    {
+        return view('home.services.ai_automation.ai_powered_sales_automation');
+    }
+
+    public function aiChatbotsCustomerSupport()
+    {
+        return view('home.services.ai_automation.ai_chatbots_customer_support');
+    }
+
+    public function workflowProcessAutomation()
+    {
+        return view('home.services.ai_automation.workflow_process_automation');
+    }
+
+    public function marketingAutomationSystems()
+    {
+        return view('home.services.ai_automation.marketing_automation_systems');
+    }
+
+    public function systemIntegrationAutomation()
+    {
+        return view('home.services.ai_automation.system_integration_automation');
+    }
+
+    public function aiAnalyticsBusinessInsights()
+    {
+        return view('home.services.ai_automation.ai_analytics_business_insights');
+    }
+
+
+
+
+
     public function contactUs()
     {
         return view('home.contact_us');

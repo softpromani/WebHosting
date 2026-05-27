@@ -232,7 +232,8 @@
             <div class="container">
                 <div class="section-header text-center">
                     <span class="subtitle">WHY CHOOSE US</span>
-                    <h2 class="title">Our Work Services</h2>
+                    <h2 class="title" style="margin-bottom: 15px;">Your Trusted Partner for IT Management & Web Development</h2>
+                    <p class="subtitle-desc" style="color: #64748b; font-size: 16px; max-width: 600px; margin: 0 auto 30px;">We don't just build systems — we build long-term partnerships. Here's why businesses choose us.</p>
                 </div>
                 <div class="row g-4">
                     <!-- Service 1 -->
@@ -241,28 +242,28 @@
                             <div class="icon-box">
                                 <i class="bi bi-pc-display"></i>
                             </div>
-                            <h3>National consulting</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                            <h3>Enterprise IT Management</h3>
+                            <p>Proactive monitoring, cybersecurity, cloud infrastructure, and 24/7 support. We keep your business running without interruptions.</p>
                         </div>
                     </div>
                     <!-- Service 2 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="work-service-card">
                             <div class="icon-box">
-                                <i class="bi bi-person-workspace"></i>
+                                <i class="bi bi-shield-lock"></i>
                             </div>
-                            <h3>Safety First Always</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                            <h3>Safety-First IT Compliance</h3>
+                            <p>GDPR, ISO, SOC2, and industry-specific security standards. We build compliance into every layer — so you're always audit-ready.</p>
                         </div>
                     </div>
                     <!-- Service 3 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="work-service-card">
                             <div class="icon-box">
-                                <i class="bi bi-pencil-square"></i>
+                                <i class="bi bi-activity"></i>
                             </div>
-                            <h3>Monitoring & Review</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                            <h3>Continuous Monitoring & Review</h3>
+                            <p>Real-time system health checks, performance audits, and monthly strategy reviews. No surprises — just improvements.</p>
                         </div>
                     </div>
                     <!-- Service 4 -->
@@ -271,28 +272,28 @@
                             <div class="icon-box">
                                 <i class="bi bi-gear-wide-connected"></i>
                             </div>
-                            <h3>Business Digg System</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                            <h3>Business-Grade Digital Systems</h3>
+                            <p>Custom ERP, CRM, automation workflows, and cloud migration. We replace spreadsheets with systems that actually work.</p>
                         </div>
                     </div>
                     <!-- Service 5 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="work-service-card">
                             <div class="icon-box">
-                                <i class="bi bi-graph-up-arrow"></i>
+                                <i class="bi bi-code-slash"></i>
                             </div>
-                            <h3>Project Established</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                            <h3>Project-Established Web Development</h3>
+                            <p>From MVPs to enterprise portals. We deliver on time, on budget, and with full transparency — no ghosting, no overpromising.</p>
                         </div>
                     </div>
                     <!-- Service 6 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="work-service-card">
                             <div class="icon-box">
-                                <i class="bi bi-car-front"></i>
+                                <i class="bi bi-graph-up-arrow"></i>
                             </div>
-                            <h3>Car Parking Space</h3>
-                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                            <h3>No Fluff. Just Results.</h3>
+                            <p>We don't fill space with vague promises or buzzwords. You get real technology solutions that drive revenue, reduce costs, and eliminate technical debt.</p>
                         </div>
                     </div>
                 </div>
@@ -313,13 +314,12 @@
                             <div class="static-faq-item">
                                 <button class="static-faq-btn collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq1">
-                                    How do I join the Mounteko Affiliate Program?
+                                    When and how do I get support if something goes wrong?
                                     <span class="faq-icon-plus"></span>
                                 </button>
                                 <div id="faq1" class="collapse" data-bs-parent="#partnerFaq">
                                     <div class="static-faq-body">
-                                        Joining is easy! Simply click the "Apply Now" button, fill out the application form,
-                                        and our team will review it within 24-48 hours.
+                                        We offer 24/7 support via phone, email, and Slack. All clients get a dedicated account manager and access to our real-time status dashboard.
                                     </div>
                                 </div>
                             </div>
@@ -327,13 +327,12 @@
                             <div class="static-faq-item">
                                 <button class="static-faq-btn collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq2">
-                                    What are the commission rates?
+                                    Can you migrate my existing website or IT systems?
                                     <span class="faq-icon-plus"></span>
                                 </button>
                                 <div id="faq2" class="collapse" data-bs-parent="#partnerFaq">
                                     <div class="static-faq-body">
-                                        We offer some of the highest commission rates in the industry. You can earn up to
-                                        40% per sale depending on your volume.
+                                        Absolutely. We specialize in seamless migrations with zero downtime. Whether it's moving from shared hosting to the cloud, switching CRMs, or rebuilding a legacy website — we handle everything. Free migration assessment included.
                                     </div>
                                 </div>
                             </div>
@@ -341,13 +340,12 @@
                             <div class="static-faq-item">
                                 <button class="static-faq-btn collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq3">
-                                    When and how do I get paid?
+                                    What industries do you typically work with?
                                     <span class="faq-icon-plus"></span>
                                 </button>
                                 <div id="faq3" class="collapse" data-bs-parent="#partnerFaq">
                                     <div class="static-faq-body">
-                                        Payments are processed monthly via PayPal or Direct Bank Transfer with a minimum
-                                        payout threshold of $50.
+                                        We serve businesses across healthcare, finance, logistics, e-commerce, SaaS, manufacturing, and professional services. If you handle sensitive data or need high-performance systems, we're the right fit.
                                     </div>
                                 </div>
                             </div>

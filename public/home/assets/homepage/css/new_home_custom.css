@@ -3735,6 +3735,9 @@ div#owl-demo1 .item {
     height: 100%;
     z-index: 1;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Mesh Gradient Background for Card */
@@ -3811,6 +3814,10 @@ div#owl-demo1 .item {
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 15px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .benefit-card-desc {
@@ -3831,6 +3838,8 @@ div#owl-demo1 .item {
     justify-content: center;
     gap: 8px;
     transition: all 0.3s ease;
+    margin-top: auto;
+    min-height: 42px;
 }
 
 .benefit-link i {
