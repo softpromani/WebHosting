@@ -1,0 +1,17 @@
+# Mounteko Global Solutions
+
+Enterprise-grade cloud solutions, managed IT services, network architecture, and advanced cybersecurity for growing US businesses.
+
+## Key Services
+- Network Solutions: LAN, WAN, SD-WAN, and remote access.
+- Cybersecurity: Threat detection, SOC monitoring, VAPT, and endpoint security.
+- Cloud & IT Infrastructure: AWS/Azure cloud migration, backup, and server management.
+- Managed IT Services: 24/7 IT support, remote management, and SLA-based services.
+- Software & Web Development: Website design, ecommerce, custom web apps, and API development.
+- AI Integration & Automation: AI workflows, chatbots, sales automation, and analytics.
+
+## Main Pages
+- [Homepage](https://mounteko.com)
+- [About Us](https://mounteko.com/about-us)
+- [Our Security](https://mounteko.com/our-security)
+- [Contact Us](https://mounteko.com/contact-us)

@@ -443,4 +443,10 @@ class HomeController extends Controller
         // }
     }
 
+    // added - Privacy Policy Page Method
+    public function privacyPolicy()
+    {
+        return view('home.company.privacy');
+    }
+
 }

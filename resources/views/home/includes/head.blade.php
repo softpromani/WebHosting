@@ -1,9 +1,41 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>@yield('title') </title>
-<meta name="keywods" content="@yield('meta-keyword')">
-<meta name="description" content="@yield('meta-description')">
+<title>@yield('title', 'Secure. Scalable. Smart IT Solutions | Mounteko')</title>
+<!-- removed - <meta name="keywods" content="@yield('meta-keyword')"> -->
+<!-- added -->
+<meta name="keywords" content="@yield('meta-keyword', 'managed IT services, cybersecurity, cloud infrastructure, AI automation, network solutions, Mounteko')">
+<!-- removed - <meta name="description" content="@yield('meta-description')"> -->
+<!-- added -->
+<meta name="description" content="@yield('meta-description', 'Enterprise-grade cloud solutions, managed IT services, network architecture, and advanced cybersecurity for growing US businesses.')">
+<!-- added -->
+<link rel="canonical" href="https://www.mounteko.com{{ request()->getPathInfo() }}">
+
+<!-- added - Structured Data Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Mounteko Global Solutions",
+  "url": "{{ url('/') }}",
+  "logo": "{{ asset('storage/' . settingValue('logo')) }}",
+  "description": "Enterprise-grade cloud solutions, managed IT services, network architecture, and advanced cybersecurity for growing US businesses.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ settingValue('address') }}",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10005",
+    "addressCountry": "US"
+  },
+  "telephone": "{{ settingValue('phone') }}",
+  "sameAs": [
+    "{{ settingValue('twitter') }}",
+    "{{ settingValue('facebook') }}",
+    "{{ settingValue('linkdin') }}"
+  ]
+}
+</script>
 
 <!-- Favicons -->
 <link href="{{ asset('home/assets/img/favicon.png') }}" rel="icon">
@@ -38,7 +70,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jarallax/dist/jarallax.min.js"></script>
 <meta name="google-site-verification" content="TowyqeqANQPzTSTRfMIifyCC6_1dyStdpZq7GiGa4KE" />
 
-<!-- Google tag (gtag.js) -->
+<!-- removed - Google tag (gtag.js) G-EQNV0FBQ99
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EQNV0FBQ99"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -49,6 +81,17 @@
     gtag('js', new Date());
 
     gtag('config', 'G-EQNV0FBQ99');
+</script>
+-->
+<!-- added -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZRV8FHQ7M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9ZRV8FHQ7M');
 </script>
 
 @php

@@ -1,4 +1,4 @@
-﻿@extends('home.includes.layout')
+@extends('home.includes.layout')
 @section('title', 'Secure. Scalable. Smart IT Solutions | Mounteko')
 @section('meta-description', 'End-to-end Network, Cybersecurity, Cloud & Managed IT Services to keep your business running 24x7.')
 @section('header-area')
@@ -66,7 +66,9 @@
                             and manage secure networks, scalable cloud environments, and proactive security systems to
                             ensure high availability, compliance, and data protection across all IT operations.
                         </p>
-                        <a href="#" class="btn-shiny-lizard">
+                        <!-- removed - <a href="#" class="btn-shiny-lizard"> -->
+                        <!-- added -->
+                        <a href="#core-services" class="btn-shiny-lizard">
                             <span>Check out our services.</span>
                             <div class="container-stars">
                                 <div id="star-1">
@@ -181,7 +183,9 @@
                                 <li>SD-WAN</li>
                                 <li>Network Design & Optimization</li>
                             </ul>
-                            <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <!-- removed - <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a> -->
+                            <!-- added -->
+                            <a href="{{ route('services.network-architecture') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Cybersecurity -->
@@ -196,7 +200,9 @@
                                 <li>SOC Monitoring</li>
                                 <li>VAPT & Compliance</li>
                             </ul>
-                            <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <!-- removed - <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a> -->
+                            <!-- added -->
+                            <a href="{{ route('security') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Cloud & IT Infrastructure -->
@@ -211,7 +217,9 @@
                                 <li>Servers & Storage</li>
                                 <li>Virtualization & Backup</li>
                             </ul>
-                            <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <!-- removed - <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a> -->
+                            <!-- added -->
+                            <a href="{{ route('services.cloud_architecture') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Managed IT Services -->
@@ -226,7 +234,9 @@
                                 <li>Remote & On-Site Management</li>
                                 <li>AMC & SLA-based Services</li>
                             </ul>
-                            <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <!-- removed - <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a> -->
+                            <!-- added -->
+                            <a href="{{ route('services.managed_it') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -410,9 +420,12 @@
                     cybersecurity, and scale with confidence. Our case studies highlight real-world success through managed
                     IT services, cloud solutions, and network optimization.
                 </p>
-                <p class="mb-4">Letâ€™s work together to digitally transform your business and build the solutions of
-                    tomorrow.</p>
-                <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i
+                <!-- removed - <p class="mb-4">Letâ€™s work together to digitally transform your business and build the solutions of tomorrow.</p> -->
+                <!-- added -->
+                <p class="mb-4">Let's work together to digitally transform your business and build the solutions of tomorrow.</p>
+                <!-- removed - <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i class="fas fa-chevron-right ms-2"></i></a> -->
+                <!-- added -->
+                <a href="{{ route('contactUs') }}" class="btn btn-case-study"><span>Talk to an expert</span> <i
                         class="fas fa-chevron-right ms-2"></i></a>
             </div>
 
@@ -425,17 +438,18 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Retail</span>
-                                    <p class="case-quote">â€œTheir managed IT services reduced our downtime by 60%.â€</p>
+                                    <!-- removed - <p class="case-quote">â€œTheir managed IT services reduced our downtime by 60%.â€ </p> -->
+                                    <p class="case-quote">"Their managed IT services reduced our downtime by 60%."</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">Retail Solutions Inc.</h5>
                                         <span class="industry-name">Retail Industry</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
-                                        â†’
+                                        →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -445,17 +459,18 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1558486012-818148f97521?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Automotive</span>
-                                    <p class="case-quote">â€œOptimized our cloud infrastructure for peak performance.â€</p>
+                                    <!-- removed - <p class="case-quote">â€œOptimized our cloud infrastructure for peak performance.â€ </p> -->
+                                    <p class="case-quote">"Optimized our cloud infrastructure for peak performance."</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">AutoDrive Tech</h5>
                                         <span class="industry-name">Automotive</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
-                                        â†’
+                                        →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -465,18 +480,20 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Manufacturing</span>
-                                    <p class="case-quote">â€œScalable solutions that grew with our manufacturing needs.â€
-                                    </p>
+                                    <!-- removed - <p class="case-quote">â€œScalable solutions that grew with our manufacturing needs.â€ </p> -->
+                                    <p class="case-quote">"Scalable solutions that grew with our manufacturing needs."</p>
                                     <div class="case-footer">
-                                        <h5 class="company-name">Stefanini Group</h5>
+                                        <!-- removed - <h5 class="company-name">Stefanini Group</h5> -->
+                                        <!-- added -->
+                                        <h5 class="company-name">Global Manufacturing Corp</h5>
                                         <span class="industry-name">Manufacturing</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
-                                        â†’
+                                        →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -486,17 +503,18 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Banking</span>
-                                    <p class="case-quote">â€œEnhanced security compliance for our financial data.â€</p>
+                                    <!-- removed - <p class="case-quote">â€œEnhanced security compliance for our financial data.â€ </p> -->
+                                    <p class="case-quote">"Enhanced security compliance for our financial data."</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">FinSecure Bank</h5>
                                         <span class="industry-name">Banking & Finance</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
-                                        â†’
+                                        →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -506,17 +524,20 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Tech</span>
-                                    <p class="case-quote">â€œSeamless migration with zero data loss.â€</p>
+                                    <!-- removed - <p class="case-quote">â€œSeamless migration with zero data loss.â€ </p> -->
+                                    <p class="case-quote">"Seamless migration with zero data loss."</p>
                                     <div class="case-footer">
-                                        <h5 class="company-name">Nordzucker</h5>
+                                        <!-- removed - <h5 class="company-name">Nordzucker</h5> -->
+                                        <!-- added -->
+                                        <h5 class="company-name">Enterprise Technology Solutions</h5>
                                         <span class="industry-name">Technology</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
-                                        â†’
+                                        →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -540,8 +561,13 @@
                             future-ready solutions.
                         </p>
                         <div class="d-flex flex-wrap gap-3">
+                            <!-- removed
                             <a href="#" class="btn btn-cta-primary">Talk to an IT Expert</a>
                             <a href="#" class="btn btn-cta-outline">Schedule a Free IT Assessment</a>
+                            -->
+                            <!-- added -->
+                            <a href="{{ route('contactUs') }}" class="btn btn-cta-primary">Talk to an IT Expert</a>
+                            <a href="#" class="btn btn-cta-outline" data-bs-toggle="modal" data-bs-target="#scheduleModal">Schedule a Free IT Assessment</a>
                         </div>
                     </div>
                     <!-- Right Image Area -->

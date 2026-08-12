@@ -44,7 +44,9 @@
                     <!-- <li><a href="{{ route('whyUsPage') }}">Why Mounteko</a></li> -->
                     <!-- <li><a href="{{ route('testimonial') }}">Testimonials</a></li> -->
                     <li><a href="{{ route('contactUs') }}">Contact Us</a></li>
-                    <li><a href="{{ route('faq') }}">Privacy Policy</a></li>
+                    <!-- removed - <li><a href="{{ route('faq') }}">Privacy Policy</a></li> -->
+                    <!-- added -->
+                    <li><a href="{{ route('privacyPolicy') }}">Privacy Policy</a></li>
                 </ul>
             </div>
 

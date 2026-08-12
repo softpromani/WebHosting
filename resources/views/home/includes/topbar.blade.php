@@ -7,8 +7,13 @@
         </div> --}}
         <div class="contact-info d-flex align-items-center">
             <div class="d-flex align-items-center">
+                <!-- removed -
                 <i class="bi bi-envelope d-flex align-items-center"><a
                     href="mailto:contact@example.com">{{ settingValue('email') }}</a></i>
+                -->
+                <!-- added -->
+                <i class="bi bi-envelope d-flex align-items-center"><a
+                    href="mailto:{{ settingValue('email') }}">{{ settingValue('email') }}</a></i>
             </div>
             <div class="d-flex align-items-center ms-4 text-nowrap">
                 <i class="bi bi-phone me-1"></i>

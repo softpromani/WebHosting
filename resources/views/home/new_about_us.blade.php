@@ -195,8 +195,13 @@
                             <!-- Decorative Badge (Top Left overlap) -->
                             <div class="position-absolute top-25 start-0 translate-middle-y z-3 p-4 bg-dark text-white rounded-3 shadow-lg text-center"
                                 style="top: 20%; left: -20px !important;">
+                                <!-- removed
                                 <h2 class="display-4 fw-bold mb-0 text-primary">25+</h2>
                                 <p class="mb-0 small text-uppercase fw-bold">Years of Experience</p>
+                                -->
+                                <!-- added -->
+                                <h2 class="display-4 fw-bold mb-0 text-primary">24/7</h2>
+                                <p class="mb-0 small text-uppercase fw-bold">Managed IT Support</p>
                             </div>
 
                             <!-- Play Button Overlay (Center) -->

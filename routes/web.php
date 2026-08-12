@@ -98,6 +98,8 @@ Route::get('our-security', [HomeController::class, 'ourSecurity'])->name('our-se
 Route::get('partner', [HomeController::class, 'partner'])->name('partner');
 Route::get('why-us', [HomeController::class, 'whyUsPage'])->name('whyUsPage');
 Route::get('faq', [HomeController::class, 'faq'])->name('faq');
+// added - Privacy Policy Page Route
+Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacyPolicy');
 Route::get('testimonial', [HomeController::class, 'testimonial'])->name('testimonial');
 
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');

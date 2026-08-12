@@ -48,7 +48,10 @@
                                         <p>Give us a ring. Our Experts are standing by <strong>monday to friday</strong>
                                             from <strong>9am to 5pm EST.</strong></p>
                                     </div>
-                                    <a href="tel:00-976-561-008"
+                                    <!-- removed - <a href="tel:00-976-561-008"
+                                        class="btn btn-link mt-auto">{{ settingValue('phone') }}</a> -->
+                                    <!-- added -->
+                                    <a href="tel:{{ preg_replace('/[^0-9+]/', '', settingValue('phone')) }}"
                                         class="btn btn-link mt-auto">{{ settingValue('phone') }}</a>
                                 </div>
                             </div>

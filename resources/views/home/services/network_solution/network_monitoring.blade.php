@@ -158,8 +158,13 @@
                 </div>
                 <div class="row align-items-center justify-content-center">
                     <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-10 text-center text-lg-start">
+                        <!-- removed -
                         <div class="swiper slider-one-slide md-mb-50px sm-mb-40px text-slider-style-01"
                             data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".slider-one-slide-pagination", "clickable": true }, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
+                        -->
+                        <!-- added -->
+                        <div class="swiper slider-one-slide md-mb-50px sm-mb-40px text-slider-style-01"
+                            data-slider-options='{ "slidesPerView": 1, "loop": false, "pagination": { "el": ".slider-one-slide-pagination", "clickable": true }, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
                             <div class="swiper-wrapper mb-30px">
                                 <!-- start text slider item -->
                                 <div class="swiper-slide">
@@ -361,7 +366,9 @@
                                     <p class="case-quote">"Scalable solutions that grew with our manufacturing needs."
                                     </p>
                                     <div class="case-footer">
-                                        <h5 class="company-name">Stefanini Group</h5>
+                                        <!-- removed - <h5 class="company-name">Stefanini Group</h5> -->
+                                        <!-- added -->
+                                        <h5 class="company-name">Global Manufacturing Corp</h5>
                                         <span class="industry-name">Manufacturing</span>
                                     </div>
                                 </div>

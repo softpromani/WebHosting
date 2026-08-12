@@ -363,7 +363,9 @@
                                     <p class="case-quote">“Scalable solutions that grew with our manufacturing needs.”
                                     </p>
                                     <div class="case-footer">
-                                        <h5 class="company-name">Stefanini Group</h5>
+                                        <!-- removed - <h5 class="company-name">Stefanini Group</h5> -->
+                                        <!-- added -->
+                                        <h5 class="company-name">Global Manufacturing Corp</h5>
                                         <span class="industry-name">Manufacturing</span>
                                     </div>
                                 </div>

@@ -185,9 +185,13 @@
                             <div class="choose-content">
                                 <div class="title-area mb-30">
                                     <h5 class="sec-title mb-3 text-white">Expertise and Experience</h5>
+                                    <!-- removed -
                                     <p class="box-text">While Google Ads is undoubtedly a powerful advertising platform,
                                         it’s important to recognize that there are various other avenues to effectively
                                         display ads...</p>
+                                    -->
+                                    <!-- added -->
+                                    <p class="box-text">Our team of seasoned IT professionals brings decades of collective experience in managed services, cloud architecture, and cybersecurity. We ensure your business is supported by certified experts who understand your unique technological needs and industry compliance standards.</p>
                                 </div>
                                 <div class="checklist">
                                     <ul>
@@ -208,9 +212,13 @@
                             <div class="choose-content">
                                 <div class="title-area mb-30">
                                     <h5 class="sec-title mb-3 text-white">Quality Workmanship</h5>
+                                    <!-- removed -
                                     <p class="box-text">While Google Ads is undoubtedly a powerful advertising platform,
                                         it’s important to recognize that there are various other avenues to effectively
                                         display ads...</p>
+                                    -->
+                                    <!-- added -->
+                                    <p class="box-text">We hold ourselves to the highest standards of technical execution. From designing redundant cloud topologies to routing physical office networks, we deliver clean, reliable, and scalable infrastructure engineered to perform under heavy workloads.</p>
                                 </div>
                                 <div class="checklist">
                                     <ul>
@@ -231,9 +239,13 @@
                             <div class="choose-content">
                                 <div class="title-area mb-30">
                                     <h5 class="sec-title mb-3 text-white">Commitment to Safety</h5>
+                                    <!-- removed -
                                     <p class="box-text">While Google Ads is undoubtedly a powerful advertising platform,
                                         it’s important to recognize that there are various other avenues to effectively
                                         display ads...</p>
+                                    -->
+                                    <!-- added -->
+                                    <p class="box-text">Security is built into every layer of our solutions. We prioritize the protection of your digital assets by implementing zero-trust network access, robust firewall policies, automated security patches, and compliant data handling practices.</p>
                                 </div>
                                 <div class="checklist">
                                     <ul>
@@ -254,9 +266,13 @@
                             <div class="choose-content">
                                 <div class="title-area mb-30">
                                     <h5 class="sec-title mb-3 text-white">Reliability and Consistency</h5>
+                                    <!-- removed -
                                     <p class="box-text">While Google Ads is undoubtedly a powerful advertising platform,
                                         it’s important to recognize that there are various other avenues to effectively
                                         display ads...</p>
+                                    -->
+                                    <!-- added -->
+                                    <p class="box-text">With 24/7 proactive monitoring and system redundancies, we guarantee consistent uptime for your operations. We resolve anomalies before they impact productivity, providing your enterprise with a reliable platform for growth.</p>
                                 </div>
                                 <div class="checklist">
                                     <ul>

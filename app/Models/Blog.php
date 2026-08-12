@@ -14,7 +14,11 @@ class Blog extends Model
     protected $fillable=['slug','title','blog_image','description'];
 
     protected static function boot(){
-        Parent::boot();
+        parent::boot();
+        // added - Global scope to exclude test-blog from index and related lists (SEO)
+        static::addGlobalScope('excludeTestBlog', function ($builder) {
+            $builder->where('slug', '!=', 'test-blog');
+        });
         static::creating(function ($blog) {
             $blog->slug =$blog->generateUniqueBlogSlug($blog->title);
         });

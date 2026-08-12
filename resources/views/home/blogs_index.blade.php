@@ -28,42 +28,54 @@
                                     'img' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800',
                                     'cat' => 'Strategy',
                                     'title' => 'Building an AI-First Culture: A Leadership Guide',
-                                    'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // removed - 'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // added -
+                                    'desc' => 'How modern enterprises can foster organizational alignment, invest in proper training, and successfully deploy AI initiatives.',
                                 ];
                             } elseif ($index === 1) {
                                 $staticData = [
                                     'img' => 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
                                     'cat' => 'Technical',
                                     'title' => 'MLOps Best Practices for Enterprise Deployment',
-                                    'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // removed - 'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // added -
+                                    'desc' => 'Key principles for managing, monitoring, and scaling machine learning pipelines in production environments safely.',
                                 ];
                             } elseif ($index === 2) {
                                 $staticData = [
                                     'img' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
                                     'cat' => 'ROI',
                                     'title' => 'Measuring AI ROI: Beyond the Hype',
-                                    'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // removed - 'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // added -
+                                    'desc' => 'Practical frameworks and metrics for assessing the real business value and ROI of your AI investments.',
                                 ];
                             } elseif ($index === 3) {
                                 $staticData = [
                                     'img' => asset('home/assets/homepage/images/ai_assistant_robot.png'),
                                     'cat' => 'AI Assistants',
                                     'title' => 'Building AI Assistants That Actually Help',
-                                    'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // removed - 'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // added -
+                                    'desc' => 'How to design intuitive, secure, and context-aware conversational agents that deliver real customer value.',
                                 ];
                             } elseif ($index === 4) {
                                 $staticData = [
                                     'img' => asset('home/assets/homepage/images/ai_security_shield.png'),
                                     'cat' => 'Security',
                                     'title' => 'AI Security & Compliance: Protecting Your Data',
-                                    'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // removed - 'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // added -
+                                    'desc' => 'Understanding data privacy, threat mitigation, and regulatory compliance standards for enterprise AI models.',
                                 ];
                             } elseif ($index === 5) {
                                 $staticData = [
                                     'img' => 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800',
                                     'cat' => 'Trends',
                                     'title' => 'Measuring AI ROI: Beyond the Hype',
-                                    'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // removed - 'desc' => 'Lorem ipsum dolor sit amet adipiscing elit Ut et massa mi. Aliquam in hendrerit.',
+                                    // added -
+                                    'desc' => 'Exploring the next wave of generative models, agentic workflows, and their impact on enterprise systems.',
                                 ];
                             }
                         }

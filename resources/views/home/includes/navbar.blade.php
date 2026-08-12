@@ -41,7 +41,9 @@
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}" alt=""></a>
+        <!-- removed - <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}" alt=""></a> -->
+        <!-- added -->
+        <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}" alt="{{ settingValue('company Name') ?? 'Mounteko Global Solutions' }}"></a>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
