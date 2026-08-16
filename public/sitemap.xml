@@ -1,94 +1,150 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-  <loc>https://mounteko.com/</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<!-- removed -
-<url>
-  <loc>https://mounteko.com/product/quickbooks-pro-desktop-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://www.mounteko.com/Web Hosting</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/product/quickbooks-enterprise-cloud-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/product/quickbooks-desktop-premier-cloud-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/network-architecture</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/product/sage-50-cloud-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/enterprise-wireless-solutions</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/product/sage-100-cloud-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/vpn-remote-access</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/product/sage-300-cloud-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/network-monitoring</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/product/drake-tax-software-cloud-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/firewall-router-configuration</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/product/ultratax-software-cloud-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/disaster-recovery-redundancy</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/product/proseries-tax-software-cloud-hosting</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
--->
-<url>
-  <loc>https://mounteko.com/pricing</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/firewall-setup-configuration</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/about-us</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/vpn-setup-remote-access</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/security</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/cloud-security-firewall</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/partner</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/network-security-configuration</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/why-us</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/threat-detection-endpoint-security</loc>
 </url>
 <url>
-  <loc>https://mounteko.com/contact-us</loc>
-  <lastmod>2024-11-29T14:10:55+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.mounteko.com/services/security-audit-vulnerability-scan</loc>
 </url>
-
-
+<url>
+  <loc>https://www.mounteko.com/services/firewall-monitoring-management</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/email-phishing-protection</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/custom-software-development</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/ecommerce-development</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/custom-web-applications</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/api-development</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/website-maintenance</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/web-performance-seo</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/cloud-architecture-consulting</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/backup-disaster-recovery</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/server-infrastructure-management</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/it-audit-consulting</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/cloud-security-compliance</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/hybrid-cloud-integration</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/managed-it/it-support-helpdesk</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/managed-it/system-monitoring-maintenance</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/managed-it/system-patch-management-updates</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/managed-it/hardware-software-procurement</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/ai-integration-business-automation</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/ai-powered-sales-automation-system</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/ai-chatbots-customer-support-automation</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/workflow-process-automation</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/marketing-automation-systems</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/system-integration-data-automation</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/ai-analytics-business-insights</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/services/managed-it-services</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/about-us</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/our-security</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/blog</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/faq</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/partner</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/why-us</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/contact-us</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/apply-now</loc>
+</url>
+<url>
+  <loc>https://www.mounteko.com/security</loc>
+</url>
 </urlset>

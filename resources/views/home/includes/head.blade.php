@@ -45,9 +45,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
-<!-- Favicons -->
-<link href="{{ asset('home/assets/img/favicon.png') }}" rel="icon">
-<link href="{{ asset('home/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+<!-- Open Graph / Social Media Link Previews (WhatsApp, LinkedIn, Facebook, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mounteko">
+<meta property="og:title" content="@yield('title', 'Secure. Scalable. Smart IT Solutions | Mounteko')">
+<meta property="og:description" content="@yield('meta-description', 'End-to-end Network, Cybersecurity, Cloud & Managed IT Services to keep your business running 24x7.')">
+<meta property="og:image" content="{{ asset('home/assets/img/mounteko-og-image.png') }}">
+<meta property="og:url" content="https://www.mounteko.com{{ request()->getPathInfo() }}">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="@yield('title', 'Secure. Scalable. Smart IT Solutions | Mounteko')">
+<meta name="twitter:description" content="@yield('meta-description', 'End-to-end Network, Cybersecurity, Cloud & Managed IT Services to keep your business running 24x7.')">
+<meta name="twitter:image" content="{{ asset('home/assets/img/mounteko-og-image.png') }}">
+
+<!-- Favicons & Apple Touch Icons -->
+<link rel="icon" type="image/png" href="{{ asset('home/assets/img/favicon.png') }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('home/assets/img/apple-touch-icon.png') }}">
 <!-- Google Fonts -->
 <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
