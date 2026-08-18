@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'System Integration & Data Automation | Mounteko')
+@section('title', 'System Integration & Data Automation Services | Mounteko')
+@section('meta-description',
+'Connect your tools and automate the data flow between them — system integration built by Mounteko's automation team.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
