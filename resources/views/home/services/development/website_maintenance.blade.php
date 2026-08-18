@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Website Maintenance & Support Solutions | Mounteko')
+@section('title', 'Website Maintenance & Support Services | Mounteko')
+@section('meta-description',
+'Ongoing website maintenance and support for growing US businesses — updates, backups, and monitoring so your site never falls behind.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

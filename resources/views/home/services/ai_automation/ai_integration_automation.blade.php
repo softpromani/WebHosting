@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'AI Integration & Business Automation | Mounteko')
+@section('title', 'AI Integration & Business Automation Services | Mounteko')
+@section('meta-description',
+'AI-powered automation for sales, support, marketing, and operations — built for growing US businesses by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

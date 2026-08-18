@@ -1,6 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Secure VPN & Remote Access Solutions | Mounteko Global Solutions')
-@section('meta-description', 'Build a seamless and protected digital workspace for your distributed team with enterprise-grade connectivity.')
+@section('title', 'Secure VPN & Remote Access Security Services | Mounteko')
+@section('meta-description', 'Enterprise VPN setup and remote-access security for distributed teams. Encrypted, monitored, and built to keep every connection safe.')
 
 @section('header-area')
     <!-- google fonts preconnect -->

@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'API Development & System Integration Solutions | Mounteko')
+@section('title', 'API Development & System Integration Services | Mounteko')
+@section('meta-description',
+' Custom API development and system integration that connects your tools and automates your workflows — built by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

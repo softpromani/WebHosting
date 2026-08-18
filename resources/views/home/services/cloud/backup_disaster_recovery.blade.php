@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Backup, Disaster Recovery & Data Protection | Mounteko')
+@section('title', 'Backup & Disaster Recovery Services | Mounteko')
+@section('meta-description',
+'Reliable backup, disaster recovery, and data protection for growing US businesses — minimize downtime, protect what matters.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

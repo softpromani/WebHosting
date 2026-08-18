@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'IT Audit, Consulting & Cost Optimization | Mounteko')
+@section('title', 'IT Audit & Cost Optimization Consulting | Mounteko')
+@section('meta-description',
+'Independent IT audits and cost-optimization consulting that find waste and risk in your current infrastructure.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

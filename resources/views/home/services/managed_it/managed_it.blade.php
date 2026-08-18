@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'End-to-End IT Support & Helpdesk | Mounteko')
+@section('title', 'Managed IT Services (MSP) for Growing US Businesses | Mounteko')
+@section('meta-description',
+'Full-service managed IT (MSP) for growing US businesses — helpdesk, monitoring, patching, and procurement, all in one plan.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

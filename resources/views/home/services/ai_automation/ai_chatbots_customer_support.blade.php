@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'AI Chatbots & Customer Support Automation | Mounteko')
+@section('title', 'AI Chatbot & Customer Support Automation | Mounteko')
+@section('meta-description',
+'Custom AI chatbots that handle support around the clock, without losing the human touch — built by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

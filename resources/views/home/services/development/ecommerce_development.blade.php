@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'E-commerce Website Development & Digital Storefront Solutions | Mounteko')
+@section('title', 'E-commerce Website Development Services | Mounteko ')
+@section('meta-description',
+'Custom e-commerce development for growing US retailers — fast, secure, conversion-focused stores built by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Frequently Asked Questions by Users ')
+@section('title', 'Managed IT, Cybersecurity & Cloud Services — Mounteko ')
+@section('meta-description',
+'Answers to common questions about Mounteko's managed IT, cybersecurity, and cloud services — pricing, onboarding, support hours, and more.')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">

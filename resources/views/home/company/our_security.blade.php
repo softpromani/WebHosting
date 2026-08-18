@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Our Security | Securing your Digital World')
+@section('title', 'N/A — redirect rather than re-optimize')
+@section('meta-description',
+'N/A')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">

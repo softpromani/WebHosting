@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Advanced Email & Application Security | Mounteko')
+@section('title', 'Email & Application Security Services | Mounteko')
+@section('meta-description',
+'Stop phishing and application-layer attacks before they reach your team. Managed email and application security from Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

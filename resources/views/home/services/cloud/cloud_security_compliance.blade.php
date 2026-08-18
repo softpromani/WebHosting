@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Cloud Security & Compliance | Mounteko')
+@section('title', 'Cloud Security & Compliance Services | Mounteko ')
+@section('meta-description',
+'Cloud security and compliance services that keep your AWS, Azure, or GCP environment audit-ready and protected.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

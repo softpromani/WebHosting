@@ -1,6 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Enterprise Wireless Solutions | Mounteko Global Solutions')
-@section('meta-description', 'Secure, Scalable & High-Performance Wireless Networks for Modern Enterprises.')
+@section('title', 'Office WiFi Setup & Optimization Services | Mounteko')
+@section('meta-description', 'Fast, reliable office WiFi setup and optimization for growing teams. Enterprise-grade wireless coverage, installed and tuned by Mounteko.')
 
 @section('header-area')
     <!-- google fonts preconnect -->

@@ -1,9 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Apply for Hosting on Mounteko Cloud Hosting Providers')
+@section('title', 'N/A — redirect this URL rather than re-optimize it')
 @section('meta-description',
-    'We are a trusted provider of cloud solutions, dedicated to making technology accessible
-    and secure. Our mission is to empower businesses with efficient, scalable, and adaptable tools that fit today’s dynamic
-    work environment.')
+'N/A')
 @section('header-area')
 @endsection
 @section('content')

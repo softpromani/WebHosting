@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'System Patch Management & Update Orchestration | Mounteko')
+@section('title', 'IT Patch Management & Update Services | Mounteko')
+@section('meta-description',
+'Automated patch management and system updates for growing US businesses — close security gaps before they're exploited.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

@@ -1,6 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Expert Firewall & Router Configuration Services | Mounteko Global Solutions')
-@section('meta-description', 'Build a secure and intelligent network perimeter with professionally configured hardware that protects your data and optimizes traffic flow.')
+@section('title', 'Firewall Setup & Configuration Services | Mounteko ')
+@section('meta-description', 'Expert firewall setup and configuration for growing US businesses. Hardened, monitored, and tuned to your network by Mounteko's security team.')
 
 @section('header-area')
     <!-- google fonts preconnect -->

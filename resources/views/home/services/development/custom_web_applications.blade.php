@@ -1,6 +1,8 @@
 @extends('home.includes.layout')
-@section('title', 'Custom Software & Web Application Development Solutions | Mounteko')
+@section('title', 'Custom Software Development Services | Mounteko')
 
+@section('meta-description',
+'Bespoke software and web application development for growing US businesses — built to your exact workflow, not off-the-shelf.')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">

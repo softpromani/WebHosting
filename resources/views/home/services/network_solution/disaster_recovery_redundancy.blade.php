@@ -1,6 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Disaster Recovery & Network Redundancy Planning | Mounteko Global Solutions')
-@section('meta-description', 'Ensure business continuity and operational resilience with robust, strategic planning for unexpected outages and disruptions.')
+@section('title', 'Network Troubleshooting & Optimization Services | Mounteko')
+@section('meta-description', 'Fast network troubleshooting and performance optimization for growing US businesses — diagnose issues, cut downtime, and keep teams online.')
 
 @section('header-area')
     <!-- google fonts preconnect -->

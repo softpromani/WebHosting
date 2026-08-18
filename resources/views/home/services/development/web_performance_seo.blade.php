@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Web Performance, SEO & Optimization Solutions | Mounteko')
+@section('title', 'Web Performance & SEO Optimization Services | Mounteko')
+@section('meta-description',
+'Website speed, technical SEO, and performance optimization for growing US businesses — faster sites, better rankings.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

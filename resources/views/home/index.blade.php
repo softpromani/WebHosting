@@ -1,8 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Best Cloud Hosting Solutions Providers | Mounteko')
+@section('title', 'Managed IT, Cybersecurity & Cloud Services for US Businesses | Mounteko')
 @section('meta-description',
-    'Mounteko Cloud Hosting provides trustworthy cloud hosting options for accounting applications.
-    Trust us for reliable QuickBooks hosting and increased accessibility.')
+    'Managed IT services, cybersecurity, cloud migration & AI automation for growing US businesses. 24/7 support, real results. Get a free consultation')
 @section('header-area')
     <!-- google fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>

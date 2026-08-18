@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'System Monitoring & Preventive Maintenance | Mounteko')
+@section('title', '24/7 System Monitoring & Maintenance Services | Mounteko')
+@section('meta-description',
+'Proactive system monitoring and maintenance that catches problems before they cause downtime — 24/7, from Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

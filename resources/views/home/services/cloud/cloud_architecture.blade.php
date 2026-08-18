@@ -1,5 +1,8 @@
 @extends('home.includes.layout')
-@section('title', 'Cloud Architecture Consulting (AWS, Azure, GCP) | Mounteko')
+@section('title', 'Cloud Migration & Setup Services (AWS, Azure, GCP) | Mounteko')
+
+@section('meta-description',
+'Cloud migration, setup, and deployment for AWS, Azure, and GCP — planned and executed by Mounteko's cloud architects.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

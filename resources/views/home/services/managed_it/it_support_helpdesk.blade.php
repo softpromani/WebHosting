@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'End-to-End IT Support & Helpdesk | Mounteko')
+@section('title', '24/7 IT Support & Helpdesk Services | Mounteko')
+@section('meta-description',
+'Round-the-clock IT support and helpdesk services for growing US businesses — fast response, real people, no ticket black holes.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

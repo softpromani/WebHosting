@@ -1,6 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Contact Us')
-
+@section('title', 'Contact Mounteko | Talk to a Managed IT & Security Expert')
+@section('meta-description',
+'Get in touch with Mounteko's IT support team. Call, email, or fill out our form — we respond within one business day.')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">

@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Server & Infrastructure Management | Mounteko')
+@section('title', 'Server & Infrastructure Management Services | Mounteko ')
+@section('meta-description',
+'Proactive server and infrastructure management for growing US businesses — monitored, maintained, and optimized by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

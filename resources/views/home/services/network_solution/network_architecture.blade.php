@@ -1,6 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Network Solutions | Mounteko Global Solutions')
-@section('meta-description', 'Robust and scalable network infrastructure solutions including LAN, WAN, and SD-WAN services.')
+@section('title', 'Office Network Setup Services (LAN/WAN) | Mounteko')
+@section('meta-description', 'Professional office network setup and LAN/WAN installation for growing US businesses. Scalable, secure infrastructure built by Mounteko's network team.')
 
 @section('header-area')
     <!-- google fonts preconnect -->

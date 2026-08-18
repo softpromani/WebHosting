@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
 @section('title', 'Privacy Policy | Mounteko Global Solutions')
+@section('meta-description',
+'How Mounteko Global Solutions collects, uses, and protects your personal information, including data submitted through our contact form.')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">

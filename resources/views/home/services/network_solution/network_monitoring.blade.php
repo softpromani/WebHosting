@@ -1,6 +1,6 @@
 @extends('home.includes.layout')
-@section('title', 'Proactive Network Monitoring & Performance Optimization | Mounteko Global Solutions')
-@section('meta-description', 'Gain unparalleled visibility and control over your network infrastructure to ensure maximum uptime, speed, and reliability.')
+@section('title', 'Network Monitoring & Management Services | Mounteko')
+@section('meta-description', '24/7 network monitoring and management with proactive alerts, performance tuning, and reporting — built for growing US businesses.')
 
 @section('header-area')
     <!-- google fonts preconnect -->

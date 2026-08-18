@@ -1,6 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Threat Detection & Endpoint Security | Mounteko')
-
+@section('title', 'Threat Detection & Endpoint Security Services | Mounteko')
+@section('meta-description',
+'24/7 threat detection, prevention, and endpoint security for growing businesses — stop attacks before they reach your team.')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">

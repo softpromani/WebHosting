@@ -1,9 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'About Mounteko Cloud Hosting Providers')
+@section('title', 'About Mounteko | Trusted Managed IT & Cybersecurity Partner')
 @section('meta-description',
-    'We are a trusted provider of cloud solutions, dedicated to making technology accessible
-    and secure. Our mission is to empower businesses with efficient, scalable, and adaptable tools that fit today’s dynamic
-    work environment.')
+    'Meet the team behind Mounteko Global Solutions — a US-focused IT, cybersecurity, and cloud partner built to keep growing businesses secure and online.')
 @section('header-area')
     <!-- style sheets and font icons -->
     {{-- <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-vendors.min.css') }}">

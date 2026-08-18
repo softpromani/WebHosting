@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Hybrid Cloud & On-Premise Integration | Mounteko')
+@section('title', 'Hybrid Cloud & On-Premise Integration Services | Mounteko')
+@section('meta-description',
+'Seamless hybrid cloud and on-premise integration for businesses that aren't ready to go all-in on the cloud yet.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

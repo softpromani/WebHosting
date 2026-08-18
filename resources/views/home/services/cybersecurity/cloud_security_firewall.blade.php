@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Advanced Cloud Security & Firewall Solutions | Mounteko')
+@section('title', 'Cloud Security & Firewall Protection Services | Mounteko')
+@section('meta-description',
+'Cloud-native firewall protection and security services for AWS, Azure, and GCP environments — configured and monitored by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Advanced Firewall Setup & Configuration | Mounteko')
+@section('title', 'Security Audit & Vulnerability Scan Services | Mounteko')
+@section('meta-description',
+'Independent security audits and vulnerability scans that find the gaps before attackers do. Clear, actionable reporting from Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

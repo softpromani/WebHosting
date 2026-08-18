@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Hardware & Software Procurement | Mounteko')
+@section('title', 'IT Hardware & Software Procurement Services | Mounteko')
+@section('meta-description',
+'Hassle-free IT hardware and software procurement and licensing for growing US businesses — sourced and managed by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

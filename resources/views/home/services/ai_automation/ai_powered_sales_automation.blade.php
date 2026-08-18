@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'AI-Powered Sales Automation System | Mounteko')
+@section('title', 'AI-Powered Sales Automation Services | Mounteko')
+@section('meta-description',
+'AI sales automation that qualifies leads and fills your pipeline automatically — built and managed by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

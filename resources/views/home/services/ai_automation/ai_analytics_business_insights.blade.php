@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'AI Analytics & Business Insights | Mounteko')
+@section('title', 'AI Analytics & Business Insights Services | Mounteko')
+@section('meta-description',
+'Turn your business data into clear, actionable insight with AI-powered analytics and dashboards from Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

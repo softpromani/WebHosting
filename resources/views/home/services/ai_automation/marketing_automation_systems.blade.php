@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Marketing Automation Systems | Mounteko')
+@section('title', 'Marketing Automation Systems for Growing Businesses | Mounteko')
+@section('meta-description',
+'AI-powered marketing automation — email, lead nurture, and campaign workflows built and managed by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

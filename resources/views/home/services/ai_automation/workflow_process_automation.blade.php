@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Workflow & Process Automation | Mounteko')
+@section('title', 'Workflow & Business Process Automation Services | Mounteko')
+@section('meta-description',
+'Workflow and process automation that cuts manual work and human error across your operations — built by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">

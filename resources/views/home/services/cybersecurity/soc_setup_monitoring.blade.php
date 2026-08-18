@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Security Audit & VAPT Services | Mounteko')
+@section('title', '24/7 Firewall Monitoring & Management | Mounteko')
+@section('meta-description',
+'Round-the-clock firewall monitoring and management so threats get caught and handled before they become incidents.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
