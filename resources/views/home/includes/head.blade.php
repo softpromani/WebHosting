@@ -23,24 +23,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "Organization",
   "name": "Mounteko Global Solutions",
-  "url": "{{ url('/') }}",
-  "logo": "{{ asset('storage/' . settingValue('logo')) }}",
+  "alternateName": "Mounteko",
+  "url": "https://www.mounteko.com",
+  "logo": "https://www.mounteko.com/home/assets/img/favicon.png",
   "description": "Enterprise-grade cloud solutions, managed IT services, network architecture, and advanced cybersecurity for growing US businesses.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "{{ settingValue('address') }}",
+    "streetAddress": "140 Broadway, 46th Floor",
     "addressLocality": "New York",
     "addressRegion": "NY",
     "postalCode": "10005",
     "addressCountry": "US"
   },
-  "telephone": "{{ settingValue('phone') }}",
+  "telephone": "+18555267890",
   "sameAs": [
-    "{{ settingValue('twitter') }}",
-    "{{ settingValue('facebook') }}",
-    "{{ settingValue('linkdin') }}"
+    "https://www.facebook.com/Mounteko",
+    "https://www.linkedin.com/company/Mounteko",
+    "https://www.instagram.com/Mounteko",
+    "https://twitter.com/Mounteko"
   ]
 }
 </script>
@@ -116,6 +118,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-9ZRV8FHQ7M');
 </script>
+
+<!-- Dynamic Breadcrumb & Service Schemas -->
+@php
+    $segments = request()->segments();
+    $breadcrumbs = [
+        [
+            "@type" => "ListItem",
+            "position" => 1,
+            "name" => "Home",
+            "item" => "https://www.mounteko.com"
+        ]
+    ];
+    $currentUrl = "https://www.mounteko.com";
+    $position = 2;
+    foreach ($segments as $segment) {
+        if (is_numeric($segment)) continue;
+        $currentUrl .= "/" . $segment;
+        $name = ucwords(str_replace('-', ' ', $segment));
+        if ($name == 'Faq') $name = 'FAQ';
+        elseif ($name == 'It') $name = 'IT';
+        elseif ($name == 'Soc') $name = 'SOC';
+        elseif ($name == 'Vpn') $name = 'VPN';
+        elseif ($name == 'Seo') $name = 'SEO';
+        
+        $breadcrumbs[] = [
+            "@type" => "ListItem",
+            "position" => $position,
+            "name" => $name,
+            "item" => $currentUrl
+        ];
+        $position++;
+    }
+@endphp
+
+@if(count($segments) > 0)
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": {!! json_encode($breadcrumbs, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+}
+</script>
+@endif
+
+@if(request()->is('services/*') || request()->is('services'))
+    @php
+        $slug = end($segments);
+        $title = ucwords(str_replace('-', ' ', $slug));
+        if ($title == 'Managed It Services') {
+            $title = 'Managed IT Services';
+        } elseif ($title == 'Soc Setup Monitoring') {
+            $title = 'SOC Setup & Security Monitoring';
+        }
+    @endphp
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "{{ $title }}",
+      "serviceType": "{{ $title }}",
+      "provider": {
+        "@type": "Organization",
+        "name": "Mounteko Global Solutions",
+        "url": "https://www.mounteko.com",
+        "logo": "https://www.mounteko.com/home/assets/img/favicon.png",
+        "telephone": "+18555267890"
+      },
+      "areaServed": "United States"
+    }
+    </script>
+@endif
 
 @php
     function hex2rgb($hex)

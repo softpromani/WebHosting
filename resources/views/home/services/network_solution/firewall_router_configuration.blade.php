@@ -1,6 +1,8 @@
 @extends('home.includes.layout')
-@section('title', 'Firewall Setup & Configuration Services | Mounteko ')
-@section('meta-description', 'Expert firewall setup and configuration for growing US businesses. Hardened, monitored, and tuned to your network by Mounteko's security team.')
+{{-- @section('title', 'Firewall Setup & Configuration Services | Mounteko ') --}}
+@section('title', 'Business Firewall & Router Setup Services | Mounteko')
+{{-- @section('meta-description', 'Expert firewall setup and configuration for growing US businesses. Hardened, monitored, and tuned to your network by Mounteko\'s security team.') --}}
+@section('meta-description', 'Professional firewall and router configuration for secure office networks. Installed, hardened, and monitored by Mounteko\'s security team.')
 
 @section('header-area')
     <!-- google fonts preconnect -->
@@ -55,12 +57,7 @@
                     </div>
                     <div class="col-lg-6">
                         <p class="section-desc">
-                            Firewalls and routers form the critical gateway between your business and the outside world.
-                            Default configurations leave dangerous gaps, while overly complex setups can hinder performance.
-                            Our configuration service transforms these essential devices into a robust, intelligent defense
-                            system that enforces security policy, controls access, and ensures reliable connectivity for
-                            your
-                            business operations.
+                            We specialize in the physical deployment, network routing configuration, and port security tuning of enterprise routers and hardware firewalls. Our network setup focuses on hardware-level IP routing, WAN link aggregation, VLAN segmentation, and perimeter access control lists (ACLs) to establish a hardened and reliable physical gateway for your business infrastructure.
                         </p>
                     </div>
                 </div>
@@ -308,7 +305,7 @@
                     cybersecurity, and scale with confidence. Our case studies highlight real-world success through managed
                     IT services, cloud solutions, and network optimization.
                 </p>
-                <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i
+                <a href="{{ route('contactUs') }}" class="btn btn-case-study"><span>Talk to an expert</span> <i
                         class="fas fa-chevron-right ms-2"></i></a>
             </div>
 
@@ -327,11 +324,11 @@
                                         <span class="industry-name">Retail Industry</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -347,11 +344,11 @@
                                         <span class="industry-name">Automotive</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -370,11 +367,11 @@
                                         <span class="industry-name">Manufacturing</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -390,7 +387,7 @@
                 <div style="width: 50px; height: 3px; background-color: #dee2e6; margin: 0 auto 20px;"></div>
                 <p class="fs-6 text-muted mb-4">Don't let a weak or poorly configured perimeter be your downfall. Ensure
                     your firewall and router are strategically configured to protect and perform.</p>
-                <a href="#" class="btn btn-network-cta fw-bold shadow-sm">Schedule a Configuration Review & Quote</a>
+                <a href="{{ route('contactUs') }}" class="btn btn-network-cta fw-bold shadow-sm">Schedule a Configuration Review & Quote</a>
             </div>
         </section>
 

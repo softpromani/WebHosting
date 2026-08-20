@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
-@section('title', 'Advanced Firewall Monitoring & Management | Mounteko')
+{{-- @section('title', 'Advanced Firewall Monitoring & Management | Mounteko') --}}
+@section('title', 'Firewall Monitoring & Management Services | Mounteko')
+@section('meta-description', '24/7 threat detection, policy optimization, and compliance-driven firewall monitoring and management to safeguard your network perimeter.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -100,16 +102,14 @@
         <div class="service-pill-menu">
             <div class="container">
                 <div class="pill-track">
-                    <a href="{{ route('services.firewall-router-configuration') }}" class="service-pill">Firewall Setup</a>
-                    <a href="#" class="service-pill">VPN Setup & Remote Access</a>
-                    <a href="#" class="service-pill">Cloud Security</a>
-                    <a href="#" class="service-pill">Network Security</a>
-                    <a href="#" class="service-pill">Threat Detection & Endpoint</a>
-                    <a href="#" class="service-pill">Security Audit</a>
-                    <span class="service-pill active"><i class="bi bi-check2-circle"
-                            style="margin-right: 6px; font-size: 16px;"></i> Firewall Monitoring</span>
-                    <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application
-                        Security</a>
+                    <a href="{{ route('services.security-audits') }}" class="service-pill">Firewall Setup</a>
+                    <a href="{{ route('services.vpn-setup-remote-access') }}" class="service-pill">VPN Setup & Remote Access</a>
+                    <a href="{{ route('services.cloud-security-firewall') }}" class="service-pill">Cloud Security</a>
+                    <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
+                    <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
+                    <a href="{{ route('services.soc_setup_monitoring') }}" class="service-pill">Security Audit</a>
+                    <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> Firewall Monitoring</span>
+                    <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application Security</a>
                 </div>
             </div>
         </div>
@@ -167,7 +167,7 @@
                             <div class="s3-phone-icon">
                                 <i class="bi bi-telephone-fill"></i>
                             </div>
-                            <strong>(855) 347-9255 (FIRE-WALL)</strong>
+                            <strong><a href="tel:+18555267890" style="color: inherit; text-decoration: none;">(855) 526-7890</a></strong>
                         </div>
                         <a href="{{ route('contactUs') }}" class="btn-s3-grad">
                             More About Our NOC <i class="bi bi-arrow-right-short"></i>
@@ -372,7 +372,7 @@
                                 <i class="bi bi-telephone-outbound"></i>
                                 <div class="s8-contact-info">
                                     <span>Get contact now</span>
-                                    <strong>(855) 347-9255</strong>
+                                    <strong><a href="tel:+18555267890" style="color: inherit; text-decoration: none;">(855) 526-7890</a></strong>
                                 </div>
                             </div>
                             <div class="s8-sep"></div>
@@ -380,7 +380,7 @@
                                 <i class="bi bi-envelope-at"></i>
                                 <div class="s8-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong>info@mounteko.com</strong>
+                                    <strong><a href="mailto:info@mounteko.com" style="color: inherit; text-decoration: none;">info@mounteko.com</a></strong>
                                 </div>
                             </div>
                         </div>

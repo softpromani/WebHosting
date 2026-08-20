@@ -1,6 +1,8 @@
 @extends('home.includes.layout')
-@section('title', 'Secure VPN & Remote Access Security Services | Mounteko')
-@section('meta-description', 'Enterprise VPN setup and remote-access security for distributed teams. Encrypted, monitored, and built to keep every connection safe.')
+{{-- @section('title', 'Secure VPN & Remote Access Solutions | Mounteko Global Solutions') --}}
+@section('title', 'Business VPN Setup & Site-to-Site Remote Access | Mounteko')
+{{-- @section('meta-description', 'Build a seamless and protected digital workspace for your distributed team with enterprise-grade connectivity.') --}}
+@section('meta-description', 'Secure site-to-site and remote-access VPN setup for distributed teams. Reliable, encrypted connectivity configured by Mounteko\'s network engineers.')
 
 @section('header-area')
     <!-- google fonts preconnect -->
@@ -55,10 +57,7 @@
                     </div>
                     <div class="col-lg-6">
                         <p class="section-desc">
-                            In today's flexible work environment, secure and reliable remote access is critical for business
-                            continuity and productivity. We deliver robust VPN and remote access solutions that ensure your
-                            team can connect to essential resources from anywhere, with enterprise-level security protecting
-                            every session.
+                            We design, deploy, and maintain high-performance site-to-site and remote-access VPN infrastructures that connect your physical office locations, branch sites, and remote workers directly to your corporate network servers. Our network setup focuses on reliable office-to-office connectivity, dedicated IP routing, WAN optimizations, and hardware-level site integration to ensure low-latency, stable business operations.
                         </p>
                     </div>
                 </div>

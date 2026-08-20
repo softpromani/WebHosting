@@ -1,6 +1,9 @@
 @extends('home.includes.layout')
-@section('title', 'Secure. Scalable. Smart IT Solutions | Mounteko')
-@section('meta-description', 'End-to-end Network, Cybersecurity, Cloud & Managed IT Services to keep your business running 24x7.')
+{{-- @section('title', 'Secure. Scalable. Smart IT Solutions | Mounteko') --}}
+@section('title', 'Managed IT, Cybersecurity & Cloud Services for US Businesses | Mounteko')
+@section('meta-description',
+    'Managed IT services, cybersecurity, cloud migration & AI automation for growing US
+    businesses. 24/7 support, real results. Get a free consultation.')
 @section('header-area')
     <!-- google fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -31,10 +34,10 @@
                         </p>
                         <div
                             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center gap-3">
-                            <a href="#" class="btn btn-sm custom-outline-btn2 w-md-auto" data-bs-toggle="modal"
-                                data-bs-target="#scheduleModal">Get Free Consultation</a>
-                            <a href="{{ url('apply-now') }}" target="_blank"
-                                class="btn btn-sm custom-outline-btn w-md-auto">Explore Our Services</a>
+                            <a href="{{ route('contactUs') }}" class="btn btn-sm custom-outline-btn2 w-md-auto">Get Free
+                                Consultation</a>
+                            <a href="#core-services" class="btn btn-sm custom-outline-btn w-md-auto">Explore Our
+                                Services</a>
                         </div>
                     </div>
                 </div>
@@ -185,7 +188,8 @@
                             </ul>
                             <!-- removed - <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a> -->
                             <!-- added -->
-                            <a href="{{ route('services.network-architecture') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.network-architecture') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Cybersecurity -->
@@ -202,7 +206,8 @@
                             </ul>
                             <!-- removed - <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a> -->
                             <!-- added -->
-                            <a href="{{ route('security') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.security-audits') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Cloud & IT Infrastructure -->
@@ -219,7 +224,8 @@
                             </ul>
                             <!-- removed - <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a> -->
                             <!-- added -->
-                            <a href="{{ route('services.cloud_architecture') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.cloud_architecture') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Managed IT Services -->
@@ -236,7 +242,8 @@
                             </ul>
                             <!-- removed - <a href="#" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a> -->
                             <!-- added -->
-                            <a href="{{ route('services.managed_it') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.managed_it') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -413,7 +420,8 @@
         <section class="case-studies py-5">
             <div class="container text-center mb-5">
                 <h2 class="common-section-heading section-heading mb-3">Featured Case Studies</h2>
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; color: var(--primary-color);">Real Results. Real Business
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; color: var(--primary-color);">Real Results. Real
+                    Business
                     Transformation.</h3>
                 <p class="section-subtitle mb-4">
                     Discover how Mounteko Global Solutions enables businesses to modernize their IT infrastructure, enhance
@@ -422,7 +430,8 @@
                 </p>
                 <!-- removed - <p class="mb-4">Letâ€™s work together to digitally transform your business and build the solutions of tomorrow.</p> -->
                 <!-- added -->
-                <p class="mb-4">Let's work together to digitally transform your business and build the solutions of tomorrow.</p>
+                <p class="mb-4">Let's work together to digitally transform your business and build the solutions of
+                    tomorrow.</p>
                 <!-- removed - <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i class="fas fa-chevron-right ms-2"></i></a> -->
                 <!-- added -->
                 <a href="{{ route('contactUs') }}" class="btn btn-case-study"><span>Talk to an expert</span> <i
@@ -562,12 +571,13 @@
                         </p>
                         <div class="d-flex flex-wrap gap-3">
                             <!-- removed
-                            <a href="#" class="btn btn-cta-primary">Talk to an IT Expert</a>
-                            <a href="#" class="btn btn-cta-outline">Schedule a Free IT Assessment</a>
-                            -->
+                                    <a href="#" class="btn btn-cta-primary">Talk to an IT Expert</a>
+                                    <a href="#" class="btn btn-cta-outline">Schedule a Free IT Assessment</a>
+                                    -->
                             <!-- added -->
                             <a href="{{ route('contactUs') }}" class="btn btn-cta-primary">Talk to an IT Expert</a>
-                            <a href="#" class="btn btn-cta-outline" data-bs-toggle="modal" data-bs-target="#scheduleModal">Schedule a Free IT Assessment</a>
+                            <a href="{{ route('contactUs') }}" class="btn btn-cta-outline">Schedule a Free IT
+                                Assessment</a>
                         </div>
                     </div>
                     <!-- Right Image Area -->
@@ -585,7 +595,7 @@
 @endsection
 @section('script-area')
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             var industrySwiper = new Swiper('.industries-slider', {
                 slidesPerView: 1,
                 spaceBetween: 20,
@@ -595,9 +605,15 @@
                     disableOnInteraction: false,
                 },
                 breakpoints: {
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
-                    1200: { slidesPerView: 4 },
+                    640: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    },
+                    1200: {
+                        slidesPerView: 4
+                    },
                 }
             });
 
@@ -614,16 +630,20 @@
                     clickable: true,
                 },
                 breakpoints: {
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
+                    640: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    },
                 }
             });
 
             // Link sidebar arrows to industry swiper
-            document.querySelector('.fa-chevron-left').addEventListener('click', function () {
+            document.querySelector('.fa-chevron-left').addEventListener('click', function() {
                 industrySwiper.slidePrev();
             });
-            document.querySelector('.fa-chevron-right').addEventListener('click', function () {
+            document.querySelector('.fa-chevron-right').addEventListener('click', function() {
                 industrySwiper.slideNext();
             });
         });

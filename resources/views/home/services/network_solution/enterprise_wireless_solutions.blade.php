@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
+{{-- @section('title', 'Enterprise Wireless Solutions | Mounteko Global Solutions') --}}
 @section('title', 'Office WiFi Setup & Optimization Services | Mounteko')
+{{-- @section('meta-description', 'Secure, Scalable & High-Performance Wireless Networks for Modern Enterprises.') --}}
 @section('meta-description', 'Fast, reliable office WiFi setup and optimization for growing teams. Enterprise-grade wireless coverage, installed and tuned by Mounteko.')
 
 @section('header-area')
@@ -307,7 +309,7 @@
                     cybersecurity, and scale with confidence. Our case studies highlight real-world success through managed
                     IT services, cloud solutions, and network optimization.
                 </p>
-                <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i
+                <a href="{{ route('contactUs') }}" class="btn btn-case-study"><span>Talk to an expert</span> <i
                         class="fas fa-chevron-right ms-2"></i></a>
             </div>
 
@@ -326,11 +328,11 @@
                                         <span class="industry-name">Retail Industry</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -346,11 +348,11 @@
                                         <span class="industry-name">Automotive</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -369,11 +371,11 @@
                                         <span class="industry-name">Manufacturing</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -390,7 +392,7 @@
                 <p class="fs-6 text-muted mb-4">Ready to upgrade your enterprise wireless network? Get in touch with our
                     experts for a free wireless assessment and discover how a secure, high-performance Wi-Fi infrastructure
                     can transform your business operations.</p>
-                <a href="#" class="btn btn-network-cta fw-bold shadow-sm">Request a Free Wireless Assessment</a>
+                <a href="{{ route('contactUs') }}" class="btn btn-network-cta fw-bold shadow-sm">Request a Free Wireless Assessment</a>
             </div>
         </section>
 

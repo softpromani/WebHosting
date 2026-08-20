@@ -93,7 +93,7 @@ Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');
 
 Route::get('pricing', [HomeController::class, 'pricing'])->name('pricing');
-Route::get('security', [HomeController::class, 'securityAudits'])->name('security');
+Route::redirect('security', '/services/firewall-setup-configuration', 301)->name('security');
 Route::get('our-security', [HomeController::class, 'ourSecurity'])->name('our-security');
 Route::get('partner', [HomeController::class, 'partner'])->name('partner');
 Route::get('why-us', [HomeController::class, 'whyUsPage'])->name('whyUsPage');
@@ -107,7 +107,7 @@ Route::get('/blog/{slug}', [\App\Http\Controllers\BlogController::class, 'show']
 Route::post('user-contact/store', [HomeController::class, 'contactStore'])->name('contactStore');
 
 Route::post('user-newsletter/store', [HomeController::class, 'newsletterStore'])->name('newsletterStore');
-Route::get('apply-now', [HomeController::class, 'applyNow'])->name('applyNow');
+Route::redirect('apply-now', '/contact-us', 301)->name('applyNow');
 Route::Post('apply-nowapplyNowStore', [HomeController::class, 'applyNowStore'])->name('applyNow-store');
 
 Route::post('/schedule-submit', [HomeController::class, 'scheduleBook'])->name('schedule.submit')->middleware('throttle:2,10');

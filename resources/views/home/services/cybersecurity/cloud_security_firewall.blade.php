@@ -1,7 +1,9 @@
 @extends('home.includes.layout')
+{{-- @section('title', 'Cloud Security & Firewall Protection Services | Mounteko') --}}
 @section('title', 'Cloud Security & Firewall Protection Services | Mounteko')
-@section('meta-description',
-'Cloud-native firewall protection and security services for AWS, Azure, and GCP environments — configured and monitored by Mounteko.')
+{{-- @section('meta-description',
+'Cloud-native firewall protection and security services for AWS, Azure, and GCP environments — configured and monitored by Mounteko.') --}}
+@section('meta-description', 'Cloud-native firewall protection and security services for AWS, Azure, and GCP environments — configured and monitored by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -96,12 +98,12 @@
         <div class="service-pill-menu">
             <div class="container">
                 <div class="pill-track">
-                    <a href="{{ route('services.firewall-router-configuration') }}" class="service-pill">Firewall Setup</a>
-                    <a href="#" class="service-pill">VPN Setup & Remote Access</a>
+                    <a href="{{ route('services.security-audits') }}" class="service-pill">Firewall Setup</a>
+                    <a href="{{ route('services.vpn-setup-remote-access') }}" class="service-pill">VPN Setup & Remote Access</a>
                     <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> Cloud Security</span>
                     <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
                     <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
-                    <a href="{{ route('services.security-audits') }}" class="service-pill">Security Audit</a>
+                    <a href="{{ route('services.soc_setup_monitoring') }}" class="service-pill">Security Audit</a>
                     <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall Monitoring</a>
                     <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application Security</a>
                 </div>

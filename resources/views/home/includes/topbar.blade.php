@@ -13,19 +13,19 @@
                 -->
                 <!-- added -->
                 <i class="bi bi-envelope d-flex align-items-center"><a
-                    href="mailto:{{ settingValue('email') }}">{{ settingValue('email') }}</a></i>
+                    href="mailto:info@mounteko.com">info@mounteko.com</a></i>
             </div>
             <div class="d-flex align-items-center ms-4 text-nowrap">
                 <i class="bi bi-phone me-1"></i>
-                <span>{{ settingValue('phone') }}</span>
+                <a href="tel:+18555267890" style="color: inherit; text-decoration: none;">(855) 526-7890</a>
             </div>
         </div>
 
         <div class="social-links d-none d-md-flex align-items-center">
-            <a href="{{ settingValue('twitter') }}" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="{{ settingValue('facebook') }}" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="{{ settingValue('instagram') }}" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="{{ settingValue('linkdin') }}" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            <a href="https://twitter.com/Mounteko" target="_blank" rel="noopener" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/Mounteko" target="_blank" rel="noopener" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/mountekogs" target="_blank" rel="noopener" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/Mounteko" target="_blank" rel="noopener" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
     </div>
 </section>

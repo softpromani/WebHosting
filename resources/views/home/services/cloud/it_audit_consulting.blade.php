@@ -85,8 +85,8 @@
                     <div class="cloud-float-card cloud-card-bottom-right">
                         <div class="cloud-float-icon aws"><i class="bi bi-award"></i></div>
                         <div class="cloud-float-text">
-                            <strong>Years Of Experience</strong>
-                            <span>15</span>
+                            <strong>Team Experience</strong>
+                            <span>15+ Years</span>
                         </div>
                     </div>
 
@@ -107,8 +107,8 @@
                     <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=500"
                         alt="Cloud Team" class="scale-img-bottom">
                     <div class="scale-years-badge">
-                        <span class="scale-years-num">15</span>
-                        <span class="scale-years-text">Years Of<br>Experience</span>
+                        <span class="scale-years-num">15+</span>
+                        <span class="scale-years-text">Years Team<br>Experience</span>
                     </div>
                 </div>
 

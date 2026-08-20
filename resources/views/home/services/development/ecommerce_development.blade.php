@@ -70,7 +70,7 @@
                         <span class="company-tag">Ecommerce Development</span>
                         <h3 class="company-title alt-font">Ecommerce Development That Converts Browsers Into Buyers</h3>
                         <p class="company-desc">
-                            We build ecommerce stores that sell, not just showcase. With four decades of retail experience, we know that precision removes friction and friction destroys revenue. Every store we develop combines speed optimization, intuitive navigation, secure architecture, and consumer psychology. The result? Lower cart abandonment, faster load times, and ROI from launch day. You get a development partner, not just a vendor.
+                            We build ecommerce stores that sell, not just showcase. With over 15 years of collective experience in retail and digital commerce, we know that precision removes friction and friction destroys revenue. Every store we develop combines speed optimization, intuitive navigation, secure architecture, and consumer psychology. The result? Lower cart abandonment, faster load times, and ROI from launch day. You get a development partner, not just a vendor.
                         </p>
                         <a href="{{ route('contactUs') }}" class="btn-company-more">Discover Our Approach</a>
                     </div>

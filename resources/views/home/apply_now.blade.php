@@ -26,7 +26,7 @@
                 <nav class="breadcrumbs">
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 10px;">
                         <li><a href="{{ route('home') }}" style="color: white; text-decoration: none;">Home</a></li>
-                        <li aria-current="page" style="color: white;">About Us</li>
+                        <li aria-current="page" style="color: white;">Apply Now</li>
                     </ul>
                 </nav>
             </div>
@@ -109,7 +109,7 @@
                                     name="agreement" required>
                                 <label class="form-check-label" for="defaultCheck1">
                                     I agree to the <a href="#" style="color: var(--primary-color);">Terms of
-                                        Service</a> and <a href="#" style="color: var(--primary-color);">Privacy
+                                        Service</a> and <a href="{{ route('privacyPolicy') }}" style="color: var(--primary-color);">Privacy
                                         Policy</a>.
                                 </label>
                             </div>

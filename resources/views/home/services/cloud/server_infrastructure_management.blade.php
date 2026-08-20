@@ -129,8 +129,8 @@
                     <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=500"
                         alt="Cloud Team" class="scale-img-bottom">
                     <div class="scale-years-badge">
-                        <span class="scale-years-num">10</span>
-                        <span class="scale-years-text">Years Of<br>Experience</span>
+                        <span class="scale-years-num">15+</span>
+                        <span class="scale-years-text">Years Team<br>Experience</span>
                     </div>
                 </div>
 

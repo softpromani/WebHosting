@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
+{{-- @section('title', 'Network Monitoring & Management Services | Mounteko') --}}
 @section('title', 'Network Monitoring & Management Services | Mounteko')
+{{-- @section('meta-description', '24/7 network monitoring and management with proactive alerts, performance tuning, and reporting — built for growing US businesses.') --}}
 @section('meta-description', '24/7 network monitoring and management with proactive alerts, performance tuning, and reporting — built for growing US businesses.')
 
 @section('header-area')
@@ -310,7 +312,7 @@
                     cybersecurity, and scale with confidence. Our case studies highlight real-world success through managed
                     IT services, cloud solutions, and network optimization.
                 </p>
-                <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i
+                <a href="{{ route('contactUs') }}" class="btn btn-case-study"><span>Talk to an expert</span> <i
                         class="fas fa-chevron-right ms-2"></i></a>
             </div>
 
@@ -329,11 +331,11 @@
                                         <span class="industry-name">Retail Industry</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -349,11 +351,11 @@
                                         <span class="industry-name">Automotive</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -372,11 +374,11 @@
                                         <span class="industry-name">Manufacturing</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -393,7 +395,7 @@
                 <div style="width: 50px; height: 3px; background-color: #dee2e6; margin: 0 auto 20px;"></div>
                 <p class="fs-6 text-muted mb-4">Stop guessing about your network's performance. Gain the insights and
                     expertise needed to optimize your most critical business asset.</p>
-                <a href="#" class="btn btn-network-cta fw-bold shadow-sm">Begin with a Free Network Health Audit</a>
+                <a href="{{ route('contactUs') }}" class="btn btn-network-cta fw-bold shadow-sm">Begin with a Free Network Health Audit</a>
             </div>
         </section>
 

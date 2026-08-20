@@ -1469,12 +1469,12 @@
                         -->
                         <!-- added -->
                         <div class="cta-wrapper">
-                            <div class="cta-icon"><a href="tel:{{ preg_replace('/[^0-9+]/', '', settingValue('phone')) }}"><img
+                            <div class="cta-icon"><a href="tel:+18555267890"><img
                                         src="{{ asset('home/assets/img/call.svg') }}" alt=""></a>
                             </div>
                             <div class="media-body"><span class="header-info_label text-white">Call For More Info</span>
                                 <p class="header-info_link"><a
-                                        href="tel:{{ preg_replace('/[^0-9+]/', '', settingValue('phone')) }}">{{ settingValue('phone') }}</a></p>
+                                        href="tel:+18555267890">(855) 526-7890</a></p>
                             </div>
                         </div>
                         <div class="title-area mb-0">

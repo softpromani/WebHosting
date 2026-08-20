@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
+{{-- @section('title', 'Advanced VPN Setup & Remote Access Security | Mounteko') --}}
 @section('title', 'Advanced VPN Setup & Remote Access Security | Mounteko')
+@section('meta-description', 'Protect hybrid workforces with secure Zero-Trust VPN setup and remote access security. Encrypted sessions and MFA support, configured by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -25,7 +27,7 @@
             <div class="h2-container">
                 <div class="h2-content">
                     <h2>Advanced VPN Setup & Remote Access Security for Your <span>Business</span></h2>
-                    <p>Secure VPN setup services and managed remote access solutions to encrypt data, protect hybrid workforces, and ensure only authorized users reach your critical infrastructure.</p>
+                    <p>Protect your hybrid workforce with Zero-Trust Access Control, Multi-Factor Authentication (MFA), and end-to-end encryption. Our security posture focus ensures that only verified, compliant remote user devices can establish secure remote-access connections to your servers, preventing unauthorized credential abuse and lateral movement threats.</p>
                     <div class="h2-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
                         <a href="{{ route('contactUs') }}" class="btn-blue-grad">Get a Free Security Assessment</a>
                         <a href="{{ route('contactUs') }}" class="btn-blue-grad" style="background: transparent; border: 2px solid white;">Talk to a VPN Expert</a>
@@ -94,12 +96,12 @@
         <div class="service-pill-menu">
             <div class="container">
                 <div class="pill-track">
-                    <a href="{{ route('services.firewall-router-configuration') }}" class="service-pill">Firewall Setup</a>
+                    <a href="{{ route('services.security-audits') }}" class="service-pill">Firewall Setup</a>
                     <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> VPN Setup & Remote Access</span>
                     <a href="{{ route('services.cloud-security-firewall') }}" class="service-pill">Cloud Security</a>
                     <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
                     <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
-                    <a href="{{ route('services.security-audits') }}" class="service-pill">Security Audit</a>
+                    <a href="{{ route('services.soc_setup_monitoring') }}" class="service-pill">Security Audit</a>
                     <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall Monitoring</a>
                     <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application Security</a>
                 </div>
@@ -133,7 +135,7 @@
                         <i class="bi bi-eye-fill"></i> ABOUT US
                     </div>
                     <h2>Your trusted partner in managed VPN services and <span class="together">secure connectivity.</span></h2>
-                    <p>We provide reliable, cutting-edge VPN configuration services to protect your remote workforce. From corporate VPN setup to advanced remote access security solutions, we ensure your data remains encrypted and your network invisible to threats.</p>
+                    <p>We provide advanced cybersecurity solutions that harden your remote access endpoints. Unlike general site-to-site connectivity setups, our VPN security focus implements identity management, device posture health checks, encrypted sessions, and continuous monitoring to guard your company against phishing, unauthorized logins, and data leaks.</p>
 
                     <div class="s3-feature-box">
                         <div class="s3-feature-img">

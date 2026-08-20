@@ -300,7 +300,7 @@
                 <!-- Right: Content -->
                 <div class="hd-why-us-right">
                     <span class="hd-why-us-tag">Why Choose Us</span>
-                    <h2 class="hd-why-us-title">We are working with 10+ years experience</h2>
+                    <h2 class="hd-why-us-title">We are working with over 15 years of team experience</h2>
                     <p class="hd-why-us-text">
                         We deliver world-class IT support and managed services that empower businesses to scale with confidence. Our proactive approach ensures your technology works for you, not against you.
                     </p>
@@ -416,7 +416,7 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Get contact now</span>
-                                    <strong>+123 456 789</strong>
+                                    <strong><a href="tel:+18555267890" style="color: inherit; text-decoration: none;">(855) 526-7890</a></strong>
                                 </div>
                             </div>
 
@@ -427,7 +427,7 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong>info@domainname.com</strong>
+                                    <strong><a href="mailto:info@mounteko.com" style="color: inherit; text-decoration: none;">info@mounteko.com</a></strong>
                                 </div>
                             </div>
                         </div>

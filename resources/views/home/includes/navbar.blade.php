@@ -132,7 +132,7 @@
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
                                     <div class="mega-cat-link" data-target="mega-tab-cybersecurity"
-                                        onclick="window.location.href='{{ route('security') }}'">
+                                        onclick="window.location.href='{{ route('services.security-audits') }}'">
                                         <span>Security & Firewall</span>
                                         <i class="bi bi-chevron-right arrow-icon"></i>
                                     </div>
@@ -183,7 +183,7 @@
                                     </div>
                                     <div id="mega-tab-cybersecurity" class="mega-cat-content">
                                         <h4 style="cursor: pointer;"
-                                            onclick="window.location.href='{{ route('security') }}'">Cybersecurity
+                                            onclick="window.location.href='{{ route('services.security-audits') }}'">Cybersecurity
                                             Services</h4>
                                         <div class="content-grid">
                                             <a href="{{ route('services.security-audits') }}">Firewall Setup &

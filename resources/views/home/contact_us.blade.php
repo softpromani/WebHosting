@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
+{{-- @section('title', 'Contact Mounteko') --}}
 @section('title', 'Contact Mounteko | Talk to a Managed IT & Security Expert')
-@section('meta-description',
-'Get in touch with Mounteko's IT support team. Call, email, or fill out our form — we respond within one business day.')
+{{-- @section('meta-description', 'Get in touch with us.') --}}
+@section('meta-description', 'Get in touch with Mounteko\'s IT support team. Call, email, or fill out our form — we respond within one business day.')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
@@ -39,46 +40,41 @@
 
                 <section class="contact-promo ptb-120">
                     <div class="container">
-                        <div class="row ">
+                        <div class="row">
+                            <!-- Card 1: Phone -->
                             <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                                <div
-                                    class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                                <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
                                     <i class="fas fa-phone fa-3x"></i>
                                     <div class="contact-promo-info mb-4">
                                         <h5>Give us a call</h5>
                                         <p>Give us a ring. Our Experts are standing by <strong>monday to friday</strong>
                                             from <strong>9am to 5pm EST.</strong></p>
                                     </div>
-                                    <!-- removed - <a href="tel:00-976-561-008"
-                                        class="btn btn-link mt-auto">{{ settingValue('phone') }}</a> -->
-                                    <!-- added -->
-                                    <a href="tel:{{ preg_replace('/[^0-9+]/', '', settingValue('phone')) }}"
-                                        class="btn btn-link mt-auto">{{ settingValue('phone') }}</a>
+                                    <a href="tel:+18555267890" class="btn btn-primary mt-auto">(855) 526-7890</a>
                                 </div>
                             </div>
+                            <!-- Card 2: Email -->
                             <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                                <div
-                                    class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                                <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
                                     <i class="fas fa-envelope fa-3x"></i>
                                     <div class="contact-promo-info mb-4">
                                         <h5>Email Us</h5>
-                                        <p>Simply drop us an email at <a href="#"><strong
-                                                    class="mai">{{ settingValue('email') }}</strong></a>
-                                            and you'll receive a reply within 24 hours.</p>
+                                        <p>Simply drop us an email at <a href="mailto:info@mounteko.com"><strong class="mai">info@mounteko.com</strong></a>
+                                             and you'll receive a reply within 24 hours.</p>
                                     </div>
-                                    <a href="#" class="btn btn-primary mt-auto">Email Us</a>
+                                    <a href="mailto:info@mounteko.com" class="btn btn-primary mt-auto">Email Us</a>
                                 </div>
                             </div>
+                            <!-- Card 3: Chat -->
                             <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                                <div
-                                    class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                                <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
                                     <i class="fas fa-comments fa-3x"></i>
                                     <div class="contact-promo-info mb-4">
                                         <h5>Chat with us</h5>
                                         <p>We've got live Social Experts waiting to help you <strong>monday to
                                                 friday</strong> from <strong>9am to 5pm EST.</strong></p>
                                     </div>
-                                    <a href="#" class="btn btn-link mt-auto">Chat with us</a>
+                                    <a href="#" onclick="if(typeof Tawk_API !== 'undefined') { Tawk_API.maximize(); } return false;" class="btn btn-primary mt-auto">Chat with us</a>
                                 </div>
                             </div>
                         </div>
@@ -169,8 +165,7 @@
                     <div class="col-lg-6 col-md-8">
                         <div class="section-heading">
                             <h2>Talk to Our Sales & Marketing Department Team</h2>
-                            <p>Collaboratively promote client-focused convergence vis-a-vis customer directed
-                                alignments via standardized infrastructures.</p>
+                            <p>Tell us what you need — our team typically replies within one business day.</p>
                         </div>
                         <form action="{{ route('contactStore') }}" method="post" role="form" class="php-email-form">
                             @csrf
@@ -203,6 +198,19 @@
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" id="phone" name="phone" required
                                             placeholder="Phone" aria-label="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="mb-1">What are you contacting us about? <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <select class="form-control" id="subject" name="subject" required>
+                                            <option value="" disabled selected>Select an option...</option>
+                                            <option value="IT Support">IT Support</option>
+                                            <option value="Cybersecurity">Cybersecurity</option>
+                                            <option value="Cloud">Cloud</option>
+                                            <option value="Website">Website</option>
+                                            <option value="Other">Other</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-12">

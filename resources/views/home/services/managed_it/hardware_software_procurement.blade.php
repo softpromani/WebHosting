@@ -308,7 +308,7 @@
                 <!-- Right: Content -->
                 <div class="hd-why-us-right">
                     <span class="hd-why-us-tag">WHY CHOOSE US</span>
-                    <h2 class="hd-why-us-title">We Leverage 10+ Years of Sourcing Expertise</h2>
+                    <h2 class="hd-why-us-title">We Leverage Over 15 Years of Sourcing Expertise</h2>
                     <p class="hd-why-us-text">
                         We deliver strategic procurement that balances performance with fiscal responsibility. Our approach
                         ensures you acquire the tools needed for success without the administrative burden or hidden fees.
@@ -431,7 +431,7 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Get contact now</span>
-                                    <strong>+123 456 789</strong>
+                                    <strong><a href="tel:+18555267890" style="color: inherit; text-decoration: none;">(855) 526-7890</a></strong>
                                 </div>
                             </div>
 
@@ -442,7 +442,7 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong>info@domainname.com</strong>
+                                    <strong><a href="mailto:info@mounteko.com" style="color: inherit; text-decoration: none;">info@mounteko.com</a></strong>
                                 </div>
                             </div>
                         </div>

@@ -1,12 +1,142 @@
 @extends('home.includes.layout')
-@section('title', 'Managed IT, Cybersecurity & Cloud Services — Mounteko ')
-@section('meta-description',
-'Answers to common questions about Mounteko's managed IT, cybersecurity, and cloud services — pricing, onboarding, support hours, and more.')
+{{-- @section('title', 'Managed IT, Cybersecurity & Cloud Services — Mounteko ') --}}
+@section('title', 'FAQs | Managed IT, Cybersecurity & Cloud Services — Mounteko')
+{{-- @section('meta-description',
+'Answers to common questions about Mounteko\'s managed IT, cybersecurity, and cloud services — pricing, onboarding, support hours, and more.') --}}
+@section('meta-description', 'Answers to common questions about Mounteko\'s managed IT, cybersecurity, and cloud services — pricing, onboarding, support hours, and more.')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}">
     <link href="{{ asset('home/assets/css/whyUs.css') }}" rel="stylesheet">
+    
+    <!-- FAQPage JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What makes Mounteko Global Solutions different from other web development agencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We focus on performance-first, scalable websites tailored to your industry. Unlike template-based developers, we combine custom coding with AI-driven UX insights, ensuring faster load times, better conversion rates, and seamless integration with your existing business tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you only build websites, or also redesign old ones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. We specialize in full redesigns of outdated or slow websites, migrating them to modern frameworks while preserving SEO value. Our redesigns improve mobile responsiveness, security, and user engagement without losing your digital footprint."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does “managed IT service” include at Mounteko?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our managed IT covers 24/7 monitoring, helpdesk support, backup & disaster recovery, patch management, and cybersecurity audits. We act as your remote IT department, preventing downtime before it affects your revenue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you integrate AI into an existing business that has no AI experience?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We start with an AI readiness audit, then implement low-risk, high-impact use cases like intelligent chatbots, document processing automation, or predictive analytics for sales. No AI expertise is required from your side — we handle training, integration, and maintenance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI integration expensive for small businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not with our approach. We offer modular AI solutions — pay only for what you use. For example, an AI-powered lead scoring system costs a fraction of a full-time analyst. We also provide scalable cloud AI services that grow with your budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a custom website with Mounteko?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most custom websites are delivered in 4–12 weeks, depending on complexity. Using AI-assisted wireframing and component libraries, we cut development time by 30% without compromising quality. An e-commerce site may take longer due to payment and inventory integrations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer maintenance after the website goes live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — through our managed IT and web care plans. We handle plugin updates, security patches, daily backups, uptime monitoring, and emergency fixes. You can focus on your business while we keep your website fast and secure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will an AI-integrated website affect my SEO rankings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Positively, if done right. Our AI features (personalization, smart search, automated schema markup) improve dwell time and CTR — both SEO factors. We ensure all AI-generated content is indexable and follows Google’s guidelines for automation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide training for our staff on new IT or AI tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Each deployment includes video tutorials, live Q&A sessions, and documentation. For AI tools, we also offer ongoing prompt engineering and workflow optimization workshops for your team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you support our company if we use multiple cloud providers (AWS, Azure, Google)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we are cloud-agnostic network and IT managers. We unify monitoring, security policies, and cost optimization across AWS, Azure, Google Cloud, and on-prem servers, giving you one dashboard for all resources."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the first step to start a project with Mounteko Global Solutions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fill out our free discovery form on the website, and we’ll schedule a 30-minute strategy call. During this call, we’ll assess your current setup, recommend quick wins (in web, IT, network, or AI), and provide a fixed-price quote — no obligation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries does Mounteko serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We support a broad range of industries, including retail, automotive, manufacturing, banking, finance, and technology, delivering compliant and scalable IT solutions."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.mounteko.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://www.mounteko.com/faq"
+        }
+      ]
+    }
+    </script>
 @endsection
 @section('content')
 

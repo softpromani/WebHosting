@@ -1,6 +1,8 @@
 @extends('home.includes.layout')
-@section('title', 'About Us | Mounteko Global Solutions')
-@section('meta-description', 'Learn about Mounteko Global Solutions - our mission, vision, and the founder\'s message.')
+{{-- @section('title', 'About Us | Mounteko Global Solutions') --}}
+@section('title', 'About Mounteko | Trusted Managed IT & Cybersecurity Partner')
+{{-- @section('meta-description', 'Learn about Mounteko Global Solutions - our mission, vision, and the founder\'s message.') --}}
+@section('meta-description', 'Meet the team behind Mounteko Global Solutions — a US-focused IT, cybersecurity, and cloud partner built to keep growing businesses secure and online.')
 
 @section('header-area')
     <!-- google fonts preconnect -->
@@ -73,8 +75,8 @@
 
                         <div class="mt-2">
                             <p class="section-desc">When we started
-                                <strong>Mounteko Global Solutions</strong>, the goal was never to build just another IT
-                                services company. The goal was to build a technology partner that businesses could
+                                <strong>Mounteko Global Solutions</strong>, our goal was never to build just another IT
+                                services company. Bringing over 15 years of collective IT experience, our goal was to build a technology partner that businesses could
                                 actually rely on—clear in communication, strong in execution, and honest in approach.
                             </p>
 
@@ -195,13 +197,8 @@
                             <!-- Decorative Badge (Top Left overlap) -->
                             <div class="position-absolute top-25 start-0 translate-middle-y z-3 p-4 bg-dark text-white rounded-3 shadow-lg text-center"
                                 style="top: 20%; left: -20px !important;">
-                                <!-- removed
-                                <h2 class="display-4 fw-bold mb-0 text-primary">25+</h2>
-                                <p class="mb-0 small text-uppercase fw-bold">Years of Experience</p>
-                                -->
-                                <!-- added -->
-                                <h2 class="display-4 fw-bold mb-0 text-primary">24/7</h2>
-                                <p class="mb-0 small text-uppercase fw-bold">Managed IT Support</p>
+                                <h2 class="display-4 fw-bold mb-0 text-primary">15+</h2>
+                                <p class="mb-0 small text-uppercase fw-bold">Years of Team Experience</p>
                             </div>
 
                             <!-- Play Button Overlay (Center) -->
@@ -247,7 +244,7 @@
                                 High-performance cloud infrastructure built for speed, security, and always-on business
                                 operations.
                             </p>
-                            <a href="#" class="btn-read-more-new">Read More +</a>
+                            <a href="{{ route('services.cloud_architecture') }}" class="btn-read-more-new">Read More +</a>
                         </div>
                     </div>
 
@@ -262,7 +259,7 @@
                                 Proactive managed IT services that keep your systems secure, optimized, and running without
                                 disruption.
                             </p>
-                            <a href="#" class="btn-read-more-new">Read More +</a>
+                            <a href="{{ route('services.managed_it') }}" class="btn-read-more-new">Read More +</a>
                         </div>
                     </div>
 
@@ -277,7 +274,7 @@
                                 Security-first IT solutions that protect your data, systems, and business from evolving
                                 cyber threats.
                             </p>
-                            <a href="#" class="btn-read-more-new">Read More +</a>
+                            <a href="{{ route('services.security-audits') }}" class="btn-read-more-new">Read More +</a>
                         </div>
                     </div>
 
@@ -292,7 +289,7 @@
                                 Intelligent automation that reduces manual work, accelerates workflows, and delivers real
                                 business impact.
                             </p>
-                            <a href="#" class="btn-read-more-new">Read More +</a>
+                            <a href="{{ route('services.ai_integration_automation') }}" class="btn-read-more-new">Read More +</a>
                         </div>
                     </div>
 
@@ -307,7 +304,7 @@
                                 Strategic IT consulting that aligns technology with business goals for scalable digital
                                 growth.
                             </p>
-                            <a href="#" class="btn-read-more-new">Read More +</a>
+                            <a href="{{ route('services.it_audit_consulting') }}" class="btn-read-more-new">Read More +</a>
                         </div>
                     </div>
                 </div>
@@ -348,7 +345,7 @@
                                 </div>
                                 <h4 class="feature-title-dark">Trusted Expertise</h4>
                                 <p class="feature-desc-dark">
-                                    Backed by years of experience and a proven track record, we are your reliable partner
+                                    Backed by over 15 years of collective experience and a proven track record, we are your reliable partner
                                     for success.
                                 </p>
                             </div>

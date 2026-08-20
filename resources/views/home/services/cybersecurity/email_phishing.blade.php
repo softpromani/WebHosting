@@ -1,7 +1,9 @@
 @extends('home.includes.layout')
+{{-- @section('title', 'Email & Application Security Services | Mounteko') --}}
 @section('title', 'Email & Application Security Services | Mounteko')
-@section('meta-description',
-'Stop phishing and application-layer attacks before they reach your team. Managed email and application security from Mounteko.')
+{{-- @section('meta-description',
+'Stop phishing and application-layer attacks before they reach your team. Managed email and application security from Mounteko.') --}}
+@section('meta-description', 'Stop phishing and application-layer attacks before they reach your team. Managed email and application security from Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -48,13 +50,13 @@
         <div class="service-pill-menu">
             <div class="container">
                 <div class="pill-track">
-                    <a href="#" class="service-pill">Firewall Setup</a>
-                    <a href="#" class="service-pill">VPN Setup & Remote Access</a>
-                    <a href="#" class="service-pill">Cloud Security</a>
-                    <a href="#" class="service-pill">Network Security</a>
-                    <a href="#" class="service-pill">Threat Detection & Endpoint</a>
-                    <a href="#" class="service-pill">Security Audit</a>
-                    <a href="#" class="service-pill">Firewall Monitoring</a>
+                    <a href="{{ route('services.security-audits') }}" class="service-pill">Firewall Setup</a>
+                    <a href="{{ route('services.vpn-setup-remote-access') }}" class="service-pill">VPN Setup & Remote Access</a>
+                    <a href="{{ route('services.cloud-security-firewall') }}" class="service-pill">Cloud Security</a>
+                    <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
+                    <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
+                    <a href="{{ route('services.soc_setup_monitoring') }}" class="service-pill">Security Audit</a>
+                    <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall Monitoring</a>
                     <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> Email & Application Security</span>
                 </div>
             </div>

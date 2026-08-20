@@ -13,14 +13,10 @@
                     solutions tailored to your business needs.
                 </p>
                 <div class="social-links d-flex gap-3">
-                    <a href="{{ settingValue('facebook') }}" class="text-white opacity-75 hover-opacity-100"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="{{ settingValue('twitter') }}" class="text-white opacity-75 hover-opacity-100"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="{{ settingValue('linkdin') }}" class="text-white opacity-75 hover-opacity-100"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="{{ settingValue('instagram') }}" class="text-white opacity-75 hover-opacity-100"><i
-                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/Mounteko" target="_blank" rel="noopener" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Mounteko" target="_blank" rel="noopener" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/Mounteko" target="_blank" rel="noopener" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mountekogs" target="_blank" rel="noopener" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
@@ -29,7 +25,7 @@
                 <h4 class="footer-heading">Services</h4>
                 <ul class="footer-links-list">
                     <li><a href="{{ route('services.network-architecture') }}">Network Solutions</a></li>
-                    <li><a href="{{ route('security') }}">Cybersecurity</a></li>
+                    <li><a href="{{ route('services.security-audits') }}">Cybersecurity</a></li>
                     <li><a href="#">Cloud & Infrastructure</a></li>
                     <li><a href="{{ route('home') }}#core-services">Managed Services</a></li>
                     <li><a href="#"> Business workflow & automation</a></li>
@@ -55,11 +51,11 @@
                 <h4 class="footer-heading">Contact</h4>
                 <div class="footer-contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>{{ settingValue('address') }}</span>
+                    <span>140 Broadway, 46th Floor, New York, NY 10005</span>
                 </div>
                 <div class="footer-contact-item">
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:{{ settingValue('email') }}">{{ settingValue('email') }}</a>
+                    <a href="mailto:info@mounteko.com">info@mounteko.com</a>
                 </div>
                 <div class="footer-contact-item">
                     <i class="fas fa-globe"></i>
@@ -67,7 +63,7 @@
                 </div>
                 <div class="footer-contact-item">
                     <i class="fas fa-phone-alt"></i>
-                    <span>{{ settingValue('phone') }}</span>
+                    <a href="tel:+18555267890">(855) 526-7890</a>
                 </div>
             </div>
         </div>

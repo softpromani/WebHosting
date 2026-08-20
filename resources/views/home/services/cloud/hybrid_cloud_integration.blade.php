@@ -80,8 +80,8 @@
                     <div class="cloud-float-card cloud-card-bottom-right">
                         <div class="cloud-float-icon aws"><i class="bi bi-award-fill"></i></div>
                         <div class="cloud-float-text">
-                            <strong>Years Of Experience</strong>
-                            <span>20+</span>
+                            <strong>Team Experience</strong>
+                            <span>15+ Years</span>
                         </div>
                     </div>
 
@@ -102,8 +102,8 @@
                     <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=500"
                         alt="Cloud Team" class="scale-img-bottom">
                     <div class="scale-years-badge">
-                        <span class="scale-years-num">20</span>
-                        <span class="scale-years-text">Years Of<br>Experience</span>
+                        <span class="scale-years-num">15+</span>
+                        <span class="scale-years-text">Years Team<br>Experience</span>
                     </div>
                 </div>
 
@@ -250,7 +250,7 @@
                         <span class="dev-it-tag">WHY CHOOSE US</span>
                         <h2 class="dev-it-title">We deliver server & infrastructure excellence, not just monitoring.</h2>
                         <h4 style="font-size: 1.05rem; font-weight: 500; color: #4b5563; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Optimizing performance, security, and cost-efficiency</h4>
-                        <p class="dev-it-desc">We don't just watch your servers — we actively optimize them for performance, security, and cost-efficiency. Our certified engineers bring 20+ years of enterprise infrastructure experience to every client, big or small. You get proactive issue resolution before downtime happens, thanks to our AI-driven telemetry and 24/7 monitoring. We offer flexible engagement models — from fully managed server services to co-managed support alongside your internal IT team.</p>
+                        <p class="dev-it-desc">We don't just watch your servers — we actively optimize them for performance, security, and cost-efficiency. Our certified engineers bring over 15 years of collective enterprise infrastructure experience to every client, big or small. You get proactive issue resolution before downtime happens, thanks to our AI-driven telemetry and 24/7 monitoring. We offer flexible engagement models — from fully managed server services to co-managed support alongside your internal IT team.</p>
 
                         <a href="javascript:void(0)" class="video-showcase-btn">
                             <div class="video-play-icon">

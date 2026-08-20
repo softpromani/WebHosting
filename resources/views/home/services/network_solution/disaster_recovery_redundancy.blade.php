@@ -1,5 +1,7 @@
 @extends('home.includes.layout')
+{{-- @section('title', 'Disaster Recovery & Network Redundancy Planning | Mounteko Global Solutions') --}}
 @section('title', 'Network Troubleshooting & Optimization Services | Mounteko')
+{{-- @section('meta-description', 'Ensure business continuity and operational resilience with robust, strategic planning for unexpected outages and disruptions.') --}}
 @section('meta-description', 'Fast network troubleshooting and performance optimization for growing US businesses — diagnose issues, cut downtime, and keep teams online.')
 
 @section('header-area')
@@ -305,7 +307,7 @@
                     cybersecurity, and scale with confidence. Our case studies highlight real-world success through managed
                     IT services, cloud solutions, and network optimization.
                 </p>
-                <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i
+                <a href="{{ route('contactUs') }}" class="btn btn-case-study"><span>Talk to an expert</span> <i
                         class="fas fa-chevron-right ms-2"></i></a>
             </div>
 
@@ -324,11 +326,11 @@
                                         <span class="industry-name">Retail Industry</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -344,11 +346,11 @@
                                         <span class="industry-name">Automotive</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -367,11 +369,11 @@
                                         <span class="industry-name">Manufacturing</span>
                                     </div>
                                 </div>
-                                <div class="go-corner" href="#">
+                                <a class="go-corner" href="{{ route('contactUs') }}">
                                     <div class="go-arrow">
                                         →
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -388,7 +390,7 @@
                 <div style="width: 50px; height: 3px; background-color: #dee2e6; margin: 0 auto 20px;"></div>
                 <p class="fs-6 text-muted mb-4">Don't wait for a disruption to reveal the gaps in your continuity plan.
                     Proactive planning is the most effective defense against downtime.</p>
-                <a href="#" class="btn btn-network-cta fw-bold shadow-sm">Begin Your Resilience Journey with a Free
+                <a href="{{ route('contactUs') }}" class="btn btn-network-cta fw-bold shadow-sm">Begin Your Resilience Journey with a Free
                     Planning Guide</a>
             </div>
         </section>

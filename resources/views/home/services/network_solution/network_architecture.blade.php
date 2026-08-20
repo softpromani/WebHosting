@@ -1,6 +1,8 @@
 @extends('home.includes.layout')
+{{-- @section('title', 'Network Solutions | Mounteko Global Solutions') --}}
 @section('title', 'Office Network Setup Services (LAN/WAN) | Mounteko')
-@section('meta-description', 'Professional office network setup and LAN/WAN installation for growing US businesses. Scalable, secure infrastructure built by Mounteko's network team.')
+{{-- @section('meta-description', 'Robust and scalable network infrastructure solutions including LAN, WAN, and SD-WAN services.') --}}
+@section('meta-description', 'Professional office network setup and LAN/WAN installation for growing US businesses. Scalable, secure infrastructure built by Mounteko\'s network team.')
 
 @section('header-area')
     <!-- google fonts preconnect -->
@@ -463,7 +465,7 @@
                 <h2 class="fs-2 fw-bold text-primary mb-3">Need a Reliable Network?</h2>
                 <div style="width: 50px; height: 3px; background-color: #dee2e6; margin: 0 auto 20px;"></div>
                 <p class="fs-6 text-muted mb-4">Let us help you build a secure and efficient network for your business.</p>
-                <a href="#" class="btn btn-network-cta fw-bold shadow-sm">Request a Free
+                <a href="{{ route('contactUs') }}" class="btn btn-network-cta fw-bold shadow-sm">Request a Free
                     Assessment</a>
             </div>
         </section>

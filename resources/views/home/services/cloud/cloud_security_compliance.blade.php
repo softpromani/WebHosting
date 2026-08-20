@@ -110,8 +110,8 @@
                     <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=500"
                         alt="Cloud Team" class="scale-img-bottom">
                     <div class="scale-years-badge">
-                        <span class="scale-years-num">20</span>
-                        <span class="scale-years-text">Years Of<br>Experience</span>
+                        <span class="scale-years-num">15+</span>
+                        <span class="scale-years-text">Years Team<br>Experience</span>
                     </div>
                 </div>
 
@@ -257,7 +257,7 @@
                     <div class="dev-it-left">
                         <span class="dev-it-tag">WHY CHOOSE US</span>
                         <h2 class="dev-it-title">Enterprise-Grade Cloud Security & Compliance</h2>
-                        <p class="dev-it-desc">You don't need another checklist. You need a partner who understands how to balance security agility with regulatory rigor. We've spent 20+ years helping SaaS, fintech, healthcare, and enterprise companies secure multi-cloud environments — without slowing down innovation. From architecture design to managed detection and response, every solution is tailored to your risk profile and business goals.</p>
+                        <p class="dev-it-desc">You don't need another checklist. You need a partner who understands how to balance security agility with regulatory rigor. We leverage over 15 years of collective experience helping SaaS, fintech, healthcare, and enterprise companies secure multi-cloud environments — without slowing down innovation. From architecture design to managed detection and response, every solution is tailored to your risk profile and business goals.</p>
 
                         <a href="javascript:void(0)" class="video-showcase-btn">
                             <div class="video-play-icon">

@@ -409,7 +409,7 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Get contact now</span>
-                                    <strong>+123 456 789</strong>
+                                    <strong><a href="tel:+18555267890" style="color: inherit; text-decoration: none;">(855) 526-7890</a></strong>
                                 </div>
                             </div>
 
@@ -420,7 +420,7 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong>info@domainname.com</strong>
+                                    <strong><a href="mailto:info@mounteko.com" style="color: inherit; text-decoration: none;">info@mounteko.com</a></strong>
                                 </div>
                             </div>
                         </div>
