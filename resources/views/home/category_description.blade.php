@@ -1429,7 +1429,7 @@
 
                 {{-- <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
                     <div class="card-img" style="margin-left: 70px">
-                        <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="no available"
+                        <img src="{{ asset('storage/' . optional($products->content_img)->media) }}" alt="Category Service Image - Mounteko"
                             class="img-fluid services-img rounded" style="height:400px; width:400px">
 
                     </div>
@@ -1526,7 +1526,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-4 ">
                         <div class="card-img mb-3">
-                            <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
+                            <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="Frequently Asked Questions - Mounteko"
                                 class="img-fluid services-img rounded hover-animate" style="position: relative;width: 400px;height: 400px;">
                         </div>
 

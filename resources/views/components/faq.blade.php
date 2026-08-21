@@ -11,7 +11,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-4 ">
                         <div class="card-img mb-3">
-                            <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="no available"
+                            <img src="{{ asset('home/assets/img/faqimage.png') }}" alt="Frequently Asked Questions - Mounteko"
                                 class="img-fluid services-img rounded hover-animate" style="position: relative;width: 400px;height: 400px;">
                         </div>
 
