@@ -450,52 +450,7 @@
                 <div class="dev-blog-divider"></div>
 
                 <div class="dev-blog-grid">
-
-                    <div class="dev-blog-card">
-                        <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=700"
-                                alt="Technology Blog">
-                        </div>
-                        <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-tech">TECHNOLOGY</span>
-                            <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 31 Aug, 2020</span>
-                                <span><i class="bi bi-person"></i> By Admin</span>
-                            </div>
-                            <h4 class="dev-blog-heading">Additions in conveying or collected objection</h4>
-                        </div>
-                    </div>
-
-                    <div class="dev-blog-card">
-                        <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=80&w=700"
-                                alt="Cloud Blog">
-                        </div>
-                        <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-firewall">CLOUD</span>
-                            <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 08 Oct, 2020</span>
-                                <span><i class="bi bi-person"></i> By Admin</span>
-                            </div>
-                            <h4 class="dev-blog-heading">Discourse ye continued pronounce we abilities</h4>
-                        </div>
-                    </div>
-
-                    <div class="dev-blog-card">
-                        <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=700"
-                                alt="Infrastructure Blog">
-                        </div>
-                        <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-security">INFRASTRUCTURE</span>
-                            <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 27 Sep, 2020</span>
-                                <span><i class="bi bi-person"></i> By Admin</span>
-                            </div>
-                            <h4 class="dev-blog-heading">Children greatest online extended delicate of</h4>
-                        </div>
-                    </div>
-
+                    @include('home.includes.cloud_blog_widget')
                 </div>
             </div>
         </section>

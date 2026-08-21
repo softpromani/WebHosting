@@ -416,7 +416,7 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Get contact now</span>
-                                    <strong><a href="tel:+18555267890" style="color: inherit; text-decoration: none;">(855) 526-7890</a></strong>
+                                    <strong><a href="tel:{{ settingValue('phone') }}" style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
                                 </div>
                             </div>
 
@@ -427,7 +427,7 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong><a href="mailto:info@mounteko.com" style="color: inherit; text-decoration: none;">info@mounteko.com</a></strong>
+                                    <strong><a href="mailto:{{ settingValue('email') }}" style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
                                 </div>
                             </div>
                         </div>

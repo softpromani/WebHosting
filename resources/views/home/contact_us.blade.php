@@ -50,7 +50,7 @@
                                         <p>Give us a ring. Our Experts are standing by <strong>monday to friday</strong>
                                             from <strong>9am to 5pm EST.</strong></p>
                                     </div>
-                                    <a href="tel:+18555267890" class="btn btn-primary mt-auto">(855) 526-7890</a>
+                                    <a href="tel:{{ settingValue('phone') }}" class="btn btn-primary mt-auto">{{ settingValue('phone') }}</a>
                                 </div>
                             </div>
                             <!-- Card 2: Email -->
@@ -59,10 +59,10 @@
                                     <i class="fas fa-envelope fa-3x"></i>
                                     <div class="contact-promo-info mb-4">
                                         <h5>Email Us</h5>
-                                        <p>Simply drop us an email at <a href="mailto:info@mounteko.com"><strong class="mai">info@mounteko.com</strong></a>
+                                        <p>Simply drop us an email at <a href="mailto:{{ settingValue('email') }}"><strong class="mai">{{ settingValue('email') }}</strong></a>
                                              and you'll receive a reply within 24 hours.</p>
                                     </div>
-                                    <a href="mailto:info@mounteko.com" class="btn btn-primary mt-auto">Email Us</a>
+                                    <a href="mailto:{{ settingValue('email') }}" class="btn btn-primary mt-auto">Email Us</a>
                                 </div>
                             </div>
                             <!-- Card 3: Chat -->

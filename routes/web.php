@@ -93,7 +93,7 @@ Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');
 
 Route::get('pricing', [HomeController::class, 'pricing'])->name('pricing');
-Route::redirect('security', '/services/firewall-setup-configuration', 301)->name('security');
+Route::redirect('/security', '/services/firewall-setup-configuration', 301)->name('security');
 Route::get('our-security', [HomeController::class, 'ourSecurity'])->name('our-security');
 Route::get('partner', [HomeController::class, 'partner'])->name('partner');
 Route::get('why-us', [HomeController::class, 'whyUsPage'])->name('whyUsPage');

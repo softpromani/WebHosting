@@ -55,7 +55,7 @@
                 </div>
                 <div class="footer-contact-item">
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:info@mounteko.com">info@mounteko.com</a>
+                    <a href="mailto:{{ settingValue('email') }}">{{ settingValue('email') }}</a>
                 </div>
                 <div class="footer-contact-item">
                     <i class="fas fa-globe"></i>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="footer-contact-item">
                     <i class="fas fa-phone-alt"></i>
-                    <a href="tel:+18555267890">(855) 526-7890</a>
+                    <a href="tel:{{ settingValue('phone') }}">{{ settingValue('phone') }}</a>
                 </div>
             </div>
         </div>

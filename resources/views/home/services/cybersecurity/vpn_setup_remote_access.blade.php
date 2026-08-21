@@ -1,7 +1,6 @@
 @extends('home.includes.layout')
-{{-- @section('title', 'Advanced VPN Setup & Remote Access Security | Mounteko') --}}
-@section('title', 'Advanced VPN Setup & Remote Access Security | Mounteko')
-@section('meta-description', 'Protect hybrid workforces with secure Zero-Trust VPN setup and remote access security. Encrypted sessions and MFA support, configured by Mounteko.')
+@section('title', 'Secure VPN & Remote Access Security Services | Mounteko')
+@section('meta-description', 'Enterprise VPN setup and remote-access security for distributed teams. Encrypted, monitored, and built to keep every connection safe.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -27,7 +26,7 @@
             <div class="h2-container">
                 <div class="h2-content">
                     <h2>Advanced VPN Setup & Remote Access Security for Your <span>Business</span></h2>
-                    <p>Protect your hybrid workforce with Zero-Trust Access Control, Multi-Factor Authentication (MFA), and end-to-end encryption. Our security posture focus ensures that only verified, compliant remote user devices can establish secure remote-access connections to your servers, preventing unauthorized credential abuse and lateral movement threats.</p>
+                    <p>Our Security & Firewall team focuses on the security posture and threat protection of your remote endpoints, securing every connection through Zero-Trust Network Access (ZTNA) policies, Multi-Factor Authentication (MFA), and continuous device compliance verification. Rather than just establishing basic connectivity, we protect your network perimeter against unauthorized credential abuse, compromised endpoints, and lateral movement threats.</p>
                     <div class="h2-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
                         <a href="{{ route('contactUs') }}" class="btn-blue-grad">Get a Free Security Assessment</a>
                         <a href="{{ route('contactUs') }}" class="btn-blue-grad" style="background: transparent; border: 2px solid white;">Talk to a VPN Expert</a>
@@ -53,60 +52,7 @@
         </section>
 
         <!-- PREMIUM SERVICES MENU PILLS -->
-        <style>
-            .service-pill-menu {
-                background: #f8fbff;
-                padding: 30px 0;
-                border-bottom: 2px solid #e1ecf8;
-            }
-            .pill-track {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-            .service-pill {
-                background: #ffffff;
-                color: #4b5d73;
-                padding: 10px 22px;
-                border-radius: 50px;
-                font-size: 14px;
-                font-weight: 600;
-                text-decoration: none !important;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-                transition: all 0.3s ease;
-                border: 1px solid #e1ecf8;
-                display: inline-flex;
-                align-items: center;
-            }
-            .service-pill:hover {
-                background: #4facfe;
-                color: white;
-                transform: translateY(-2px);
-                box-shadow: 0 6px 15px rgba(79,172,254,0.3);
-                border-color: #4facfe;
-            }
-            .service-pill.active {
-                background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
-                color: white;
-                border-color: #1a237e;
-                box-shadow: 0 6px 15px rgba(26,35,126,0.3);
-            }
-        </style>
-        <div class="service-pill-menu">
-            <div class="container">
-                <div class="pill-track">
-                    <a href="{{ route('services.security-audits') }}" class="service-pill">Firewall Setup</a>
-                    <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> VPN Setup & Remote Access</span>
-                    <a href="{{ route('services.cloud-security-firewall') }}" class="service-pill">Cloud Security</a>
-                    <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
-                    <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
-                    <a href="{{ route('services.soc_setup_monitoring') }}" class="service-pill">Security Audit</a>
-                    <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall Monitoring</a>
-                    <a href="{{ route('services.email-phishing-protection') }}" class="service-pill">Email & Application Security</a>
-                </div>
-            </div>
-        </div>
+        @include('home.includes.cybersecurity_pills')
 
         <!-- SECTION 3 (FEATURES / ABOUT US) -->
         <section class="section3-features">

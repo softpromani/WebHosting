@@ -1,9 +1,8 @@
 @extends('home.includes.layout')
-{{-- @section('title', 'Email & Application Security Services | Mounteko') --}}
 @section('title', 'Email & Application Security Services | Mounteko')
-{{-- @section('meta-description',
-'Stop phishing and application-layer attacks before they reach your team. Managed email and application security from Mounteko.') --}}
-@section('meta-description', 'Stop phishing and application-layer attacks before they reach your team. Managed email and application security from Mounteko.')
+@section('meta-description',
+    'Stop phishing and application-layer attacks before they reach your team. Managed email and
+    application security from Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -20,10 +19,12 @@
             <div class="h2-container">
                 <div class="h2-content">
                     <h2>Advanced Email & Application Security to Protect Your <span>Business</span></h2>
-                    <p>Proactive phishing protection, business email compromise (BEC) prevention, and rigorous application security testing to safeguard your communications, data, and critical web assets.</p>
+                    <p>Proactive phishing protection, business email compromise (BEC) prevention, and rigorous application
+                        security testing to safeguard your communications, data, and critical web assets.</p>
                     <div class="h2-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
                         <a href="{{ route('contactUs') }}" class="btn-blue-grad">Get a Free Security Assessment</a>
-                        <a href="{{ route('contactUs') }}" class="btn-blue-grad" style="background: transparent; border: 2px solid white;">Talk to a Security Expert</a>
+                        <a href="{{ route('contactUs') }}" class="btn-blue-grad"
+                            style="background: transparent; border: 2px solid white;">Talk to a Security Expert</a>
                     </div>
                 </div>
                 <div class="h2-visual">
@@ -39,28 +40,15 @@
             <div class="h2-bottom-bar">
                 <div class="h2-bottom-text">
                     <div class="h2-line"></div>
-                    Without proactive email filtering and application hardening, businesses remain vulnerable to phishing and zero-day exploits 24x7.
+                    Without proactive email filtering and application hardening, businesses remain vulnerable to phishing
+                    and zero-day exploits 24x7.
                     <div class="h2-line"></div>
                 </div>
             </div>
         </section>
 
         <!-- PREMIUM SERVICES MENU PILLS -->
-
-        <div class="service-pill-menu">
-            <div class="container">
-                <div class="pill-track">
-                    <a href="{{ route('services.security-audits') }}" class="service-pill">Firewall Setup</a>
-                    <a href="{{ route('services.vpn-setup-remote-access') }}" class="service-pill">VPN Setup & Remote Access</a>
-                    <a href="{{ route('services.cloud-security-firewall') }}" class="service-pill">Cloud Security</a>
-                    <a href="{{ route('services.network-intrusion-detection') }}" class="service-pill">Network Security</a>
-                    <a href="{{ route('services.endpoint-protection') }}" class="service-pill">Threat Detection & Endpoint</a>
-                    <a href="{{ route('services.soc_setup_monitoring') }}" class="service-pill">Security Audit</a>
-                    <a href="{{ route('services.incident_response_recovery') }}" class="service-pill">Firewall Monitoring</a>
-                    <span class="service-pill active"><i class="bi bi-check2-circle" style="margin-right: 6px; font-size: 16px;"></i> Email & Application Security</span>
-                </div>
-            </div>
-        </div>
+        @include('home.includes.cybersecurity_pills')
 
         <!-- SECTION 3 (FEATURES / ABOUT US) -->
         <section class="section3-features">
@@ -89,7 +77,9 @@
                         <i class="bi bi-eye-fill"></i> About Us
                     </div>
                     <h2>Your trusted partner in email and application <span>security solutions</span></h2>
-                    <p>We provide reliable, cutting-edge cybersecurity solutions focused on securing the two most exploited vectors: human inboxes and business applications. We ensure safety and peace of mind through advanced threat detection and secure gateways.</p>
+                    <p>We provide reliable, cutting-edge cybersecurity solutions focused on securing the two most exploited
+                        vectors: human inboxes and business applications. We ensure safety and peace of mind through
+                        advanced threat detection and secure gateways.</p>
 
                     <div class="s3-feature-box">
                         <div class="s3-feature-img">
@@ -98,7 +88,8 @@
                         </div>
                         <div class="s3-feature-text">
                             <h5>24/7 email security assistance</h5>
-                            <p>Protecting your organization from advanced persistent threats, phishing attempts, and ransomware with our round-the-clock expert monitoring.</p>
+                            <p>Protecting your organization from advanced persistent threats, phishing attempts, and
+                                ransomware with our round-the-clock expert monitoring.</p>
                         </div>
                     </div>
 
@@ -128,43 +119,50 @@
             <div class="container">
                 <span class="s4-tagline">WHAT WE PROVIDE</span>
                 <h2 class="s4-title">Robust Email & Application Security for <span>Today's Threats</span></h2>
-                <p class="s4-desc">Protect your business from ever-evolving phishing campaigns and application vulnerabilities with our end-to-end security solutions.</p>
+                <p class="s4-desc">Protect your business from ever-evolving phishing campaigns and application
+                    vulnerabilities with our end-to-end security solutions.</p>
 
                 <div class="s4-grid">
                     <div class="s4-card card-network">
                         <div class="s4-icon-box"><i class="bi bi-envelope-check"></i></div>
                         <h4>Email Security Services</h4>
-                        <p>Deploying advanced filtering and secure email gateway services to block spam, malware, and sophisticated phishing attempts before they reach the inbox.</p>
+                        <p>Deploying advanced filtering and secure email gateway services to block spam, malware, and
+                            sophisticated phishing attempts before they reach the inbox.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-data">
                         <div class="s4-icon-box"><i class="bi bi-code-slash"></i></div>
                         <h4>Application Security Testing</h4>
-                        <p>Static and dynamic analysis (SAST/DAST) to identify vulnerabilities in web and mobile applications, ensuring code is secure before deployment.</p>
+                        <p>Static and dynamic analysis (SAST/DAST) to identify vulnerabilities in web and mobile
+                            applications, ensuring code is secure before deployment.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-identity">
                         <div class="s4-icon-box"><i class="bi bi-person-badge"></i></div>
                         <h4>Business Email Compromise Protection</h4>
-                        <p>Managing user identities and behavior analytics to detect impersonation, domain spoofing, and anomalous login activity in business email solutions.</p>
+                        <p>Managing user identities and behavior analytics to detect impersonation, domain spoofing, and
+                            anomalous login activity in business email solutions.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-monitor">
                         <div class="s4-icon-box"><i class="bi bi-shield-slash"></i></div>
                         <h4>Phishing Protection Services</h4>
-                        <p>24/7 monitoring and real-time link rewriting to neutralize credential harvesting sites and malicious attachments at the point of click.</p>
+                        <p>24/7 monitoring and real-time link rewriting to neutralize credential harvesting sites and
+                            malicious attachments at the point of click.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-backup">
                         <div class="s4-icon-box"><i class="bi bi-shield-lock-fill"></i></div>
                         <h4>Web Application Security Services</h4>
-                        <p>Protecting critical web assets with Web Application Firewalls (WAF) and runtime application self-protection (RASP) against OWASP Top 10 threats.</p>
+                        <p>Protecting critical web assets with Web Application Firewalls (WAF) and runtime application
+                            self-protection (RASP) against OWASP Top 10 threats.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                     <div class="s4-card card-config">
                         <div class="s4-icon-box"><i class="bi bi-gear-wide-connected"></i></div>
                         <h4>Managed Email Security Services</h4>
-                        <p>Hardening email infrastructure and applying secure configurations. We manage your email protection solutions so you can focus on business operations.</p>
+                        <p>Hardening email infrastructure and applying secure configurations. We manage your email
+                            protection solutions so you can focus on business operations.</p>
                         <a href="{{ route('contactUs') }}" class="btn-learn">Learn More</a>
                     </div>
                 </div>
@@ -178,27 +176,40 @@
                 <div class="s5-row" style="flex-wrap: wrap; justify-content: center;">
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-shield-check"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Phishing Protection</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Phishing Protection</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-braces-asterisk"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Application Hardening</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Application Hardening</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-door-closed-fill"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Secure Gateway</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Secure Gateway</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-lightning-charge-fill"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Rapid Remediation</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Rapid Remediation</h5>
                     </div>
                     <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center;">
                         <div class="s5-icon-circle"><i class="bi bi-headset"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Managed Services</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Managed Services</h5>
                     </div>
-                    <div class="s5-item" style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center; border-right: none;">
+                    <div class="s5-item"
+                        style="flex: 0 0 calc(16.66% - 10px); min-width: 150px; text-align: center; border-right: none;">
                         <div class="s5-icon-circle"><i class="bi bi-clipboard-check-fill"></i></div>
-                        <h5 style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">Compliance Ready</h5>
+                        <h5
+                            style="color: #1a237e; font-size: 14px; font-weight: 700; margin-bottom: 5px; white-space: nowrap; letter-spacing: -0.3px;">
+                            Compliance Ready</h5>
                     </div>
                 </div>
             </div>
@@ -216,12 +227,16 @@
 
                         <div class="s7-service-block">
                             <h5>Real-Time Phishing Protection</h5>
-                            <p>Our phishing protection services continuously analyze email traffic, link behavior, and attachment sandboxing to detect and quarantine credential harvesting attempts before users click. We stop ransomware and BEC attacks at the gateway.</p>
+                            <p>Our phishing protection services continuously analyze email traffic, link behavior, and
+                                attachment sandboxing to detect and quarantine credential harvesting attempts before users
+                                click. We stop ransomware and BEC attacks at the gateway.</p>
                         </div>
 
                         <div class="s7-service-block">
                             <h5>Web Application & API Security</h5>
-                            <p>Web application security services provide continuous monitoring of application traffic to detect and block OWASP Top 10 vulnerabilities, including SQL injection and cross-site scripting (XSS). We protect APIs and user data in real-time.</p>
+                            <p>Web application security services provide continuous monitoring of application traffic to
+                                detect and block OWASP Top 10 vulnerabilities, including SQL injection and cross-site
+                                scripting (XSS). We protect APIs and user data in real-time.</p>
                         </div>
                     </div>
 
@@ -233,7 +248,9 @@
 
                         <div class="s7-service-block">
                             <h5>Secure Email Gateway & Access Management</h5>
-                            <p>Secure email gateway services manage inbound and outbound message flow with granular policy enforcement. Combined with identity access controls, this prevents account takeovers and data leaks across all business email security solutions.</p>
+                            <p>Secure email gateway services manage inbound and outbound message flow with granular policy
+                                enforcement. Combined with identity access controls, this prevents account takeovers and
+                                data leaks across all business email security solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -245,24 +262,36 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 text-center">
-                        <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-envelope-check-fill" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">EMAIL SECURITY SERVICES</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting systems and data from unauthorized access, spam, and advanced phishing threats.</p>
+                        <div
+                            style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <i class="bi bi-envelope-check-fill"
+                                style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">EMAIL
+                                SECURITY SERVICES</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting systems and data from
+                                unauthorized access, spam, and advanced phishing threats.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
-                        <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-braces-asterisk" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">APPLICATION SECURITY TESTING</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Identifying vulnerabilities in custom code and third-party libraries to prevent digital exploits.</p>
+                        <div
+                            style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <i class="bi bi-braces-asterisk"
+                                style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">
+                                APPLICATION SECURITY TESTING</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Identifying vulnerabilities in custom code
+                                and third-party libraries to prevent digital exploits.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
-                        <div style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                            <i class="bi bi-display" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">MANAGED MONITORING & REMEDIATION</h5>
-                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting your environment with 24/7 expert oversight from our application security company.</p>
+                        <div
+                            style="background: white; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <i class="bi bi-display"
+                                style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                            <h5 style="font-weight: 700; color: #1a237e; margin-bottom: 15px; font-size: 1.1rem;">MANAGED
+                                MONITORING & REMEDIATION</h5>
+                            <p style="color: #555; font-size: 14px; margin: 0;">Protecting your environment with 24/7
+                                expert oversight from our application security company.</p>
                         </div>
                     </div>
                 </div>
@@ -276,7 +305,8 @@
                     <div class="s8-left">
                         <h2 class="s8-title">Protect your business from the #1 cyber threat today!</h2>
                         <span
-                            style="color: rgba(255,255,255,0.8); display: block; margin-bottom: 25px; font-size: 1.1rem;">Don't let a single phishing email or app vulnerability compromise your entire network.</span>
+                            style="color: rgba(255,255,255,0.8); display: block; margin-bottom: 25px; font-size: 1.1rem;">Don't
+                            let a single phishing email or app vulnerability compromise your entire network.</span>
                         <div class="s8-contacts">
                             <div class="s8-contact-item">
                                 <i class="bi bi-telephone-outbound"></i>

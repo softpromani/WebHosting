@@ -13,11 +13,11 @@
                 -->
                 <!-- added -->
                 <i class="bi bi-envelope d-flex align-items-center"><a
-                    href="mailto:info@mounteko.com">info@mounteko.com</a></i>
+                    href="mailto:{{ settingValue('email') }}">{{ settingValue('email') }}</a></i>
             </div>
             <div class="d-flex align-items-center ms-4 text-nowrap">
                 <i class="bi bi-phone me-1"></i>
-                <a href="tel:+18555267890" style="color: inherit; text-decoration: none;">(855) 526-7890</a>
+                <a href="tel:{{ settingValue('phone') }}" style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a>
             </div>
         </div>
 

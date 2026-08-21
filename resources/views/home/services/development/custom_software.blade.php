@@ -116,7 +116,7 @@
                     <!-- Service 1 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/backup.png') }}" alt="Custom Website Development">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Custom Website Development">
                         </div>
                         <div class="dev-service-info">
                             <h4>Custom Website Development</h4>
@@ -125,7 +125,7 @@
                     <!-- Service 2 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="User-Centric UI/UX Design">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/consultancy.png') }}" alt="User-Centric UI/UX Design">
                         </div>
                         <div class="dev-service-info">
                             <h4>User-Centric UI/UX Design</h4>
@@ -143,7 +143,7 @@
                     <!-- Service 4 -->
                     <div class="dev-service-card">
                         <div class="dev-service-icon">
-                            <img src="{{ asset('home/assets/homepage/images/services_v2/software.png') }}" alt="Performance Optimization">
+                            <img src="{{ asset('home/assets/homepage/images/services_v2/cloud.png') }}" alt="Performance Optimization">
                         </div>
                         <div class="dev-service-info">
                             <h4>Performance Optimization</h4>
@@ -392,7 +392,6 @@
                 </div>
             </div>
         </section>
-        >
 
     </main>
 
@@ -415,5 +414,4 @@
             });
         });
     </script>
-    >
 @endsection

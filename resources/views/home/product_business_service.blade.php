@@ -182,7 +182,7 @@
                                         display ads...</p>
                                     -->
                                     <!-- added -->
-                                    <p class="box-text">Our team of seasoned IT professionals brings decades of collective experience in managed services, cloud architecture, and cybersecurity. We ensure your business is supported by certified experts who understand your unique technological needs and industry compliance standards.</p>
+                                    <p class="box-text">Our team of seasoned IT professionals brings over 15 years of collective experience in managed services, cloud architecture, and cybersecurity. We ensure your business is supported by certified experts who understand your unique technological needs and industry compliance standards.</p>
                                 </div>
                                 <div class="checklist">
                                     <ul>

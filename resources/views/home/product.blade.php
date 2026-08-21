@@ -1469,12 +1469,12 @@
                         -->
                         <!-- added -->
                         <div class="cta-wrapper">
-                            <div class="cta-icon"><a href="tel:+18555267890"><img
+                            <div class="cta-icon"><a href="tel:{{ settingValue('phone') }}"><img
                                         src="{{ asset('home/assets/img/call.svg') }}" alt=""></a>
                             </div>
                             <div class="media-body"><span class="header-info_label text-white">Call For More Info</span>
                                 <p class="header-info_link"><a
-                                        href="tel:+18555267890">(855) 526-7890</a></p>
+                                        href="tel:{{ settingValue('phone') }}">{{ settingValue('phone') }}</a></p>
                             </div>
                         </div>
                         <div class="title-area mb-0">
@@ -1632,13 +1632,7 @@
                 <div class="col-lg-6 mb-4 pe-5">
                     <h6 class="text-uppercase fw-semibold">Work With Us</h6>
                     <h2 class="fw-bold mb-3">We Are Ready To Work For Your Projects</h2>
-                    <!-- removed -
-                    <p class="mb-4">
-                        Phasellus parturient est cum dictum habitant eros fames, enim curabitur convallis arcu dictumst
-                        fermentum cubilia leo maecenas in pellentesque.
-                    </p>
-                    -->
-                    <!-- added -->
+                    
                     <p class="mb-4">
                         Our team of certified IT specialists is ready to design, deploy, and manage your custom cloud infrastructure and cybersecurity protocols. Let's build a secure foundation for your business.
                     </p>
