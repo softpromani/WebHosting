@@ -1,5 +1,5 @@
 @extends('home.includes.layout')
-@section('title', 'AI Chatbot & Customer Support Automation | Mounteko')
+@section('title', 'AI Chatbot & Customer Support Automation Services | Mounteko')
 @section('meta-description',
 'Custom AI chatbots that handle support around the clock, without losing the human touch — built by Mounteko.')
 
@@ -8,6 +8,53 @@
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/ai_automation.css') }}">
+    <style>
+        /* Extra decorative floating icons animation */
+        .ai-float-decor {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background: rgba(0, 255, 204, 0.1);
+            border: 1px solid rgba(0, 255, 204, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            color: var(--ai-accent);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+
+        .ai-float-decor i {
+            filter: drop-shadow(0 0 5px var(--ai-accent));
+        }
+
+        .decor-1 {
+            top: 20%;
+            left: 15%;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .decor-2 {
+            top: 15%;
+            right: 15%;
+            animation: float 6s ease-in-out infinite 1s;
+        }
+
+        .decor-3 {
+            bottom: 25%;
+            left: 10%;
+            animation: float 7s ease-in-out infinite 0.5s;
+        }
+
+        .decor-4 {
+            bottom: 20%;
+            right: 10%;
+            animation: float 5.5s ease-in-out infinite 1.5s;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -30,43 +77,151 @@
             </div>
 
             <!-- Robot Visuals -->
-            <img src="{{ asset('home/assets/homepage/images/ai/robot_left.png') }}" alt="AI Robot Left"
+            <img src="{{ asset('home/assets/homepage/images/ai/robot_left.png') }}" alt="AI Support Bot Left"
                 class="ai-robot-left">
-            <img src="{{ asset('home/assets/homepage/images/ai/robot_right.png') }}" alt="AI Robot Right"
+            <img src="{{ asset('home/assets/homepage/images/ai/robot_right.png') }}" alt="AI Support Bot Right"
                 class="ai-robot-right">
 
             <div class="ai-hero-container">
-                <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Enhance Customer Experience with Advanced AI-Powered Chatbot Solutions</h1>
-                <p class="ai-hero-desc">Streamline support operations, deliver instant resolutions, and drive customer loyalty with our custom-built conversational AI solutions and intelligent support automation workflows.</p>
+                <div class="ai-welcome-badge">24/7 CONVERSATIONAL SUPPORT</div>
+                <h1 class="ai-hero-title">AI Chatbot & Customer Support Automation Services</h1>
+                <p class="ai-hero-desc">Customers expect an answer now, not a next-business-day email reply — and most support questions are the same handful of things asked over and over. Mounteko builds AI chatbots that handle common questions instantly, around the clock, and hand off to a real person the moment a conversation needs one.</p>
 
                 <div class="ai-pills-row">
-                    <span class="ai-pill">SOC2 Compliant</span>
-                    <span class="ai-pill">Salesforce Partner</span>
-                    <span class="ai-pill">Microsoft Partner</span>
-                    <span class="ai-pill">AWS Partner</span>
+                    <span class="ai-pill">Natural, Context-Aware Dialogue</span>
+                    <span class="ai-pill">Seamless Human Escalation</span>
+                    <span class="ai-pill">24/7/365 Zero-Wait Support</span>
+                    <span class="ai-pill">Omnichannel Deployment</span>
                 </div>
 
                 <a href="{{ route('contactUs') }}" class="btn-ai-get-started">
-                    Get Started <i><i class="bi bi-arrow-right"></i></i>
+                    Deploy a Custom Support Bot <i><i class="bi bi-arrow-right"></i></i>
                 </a>
             </div>
         </section>
 
-        <!-- WHO WE ARE SECTION -->
+        <!-- SECTION 2: CONVERSATIONAL AI THAT DOESN'T FEEL ROBOTIC (6-CARD GRID) -->
+        <section class="ai-services-grid-section">
+            <div class="ai-services-grid-container">
+                <div class="ai-services-header">
+                    <div class="ai-tag-red" style="justify-content: center;">
+                        <div class="dot"></div>
+                        NATURAL LANGUAGE UNDERSTANDING
+                    </div>
+                    <h2 class="ai-about-title" style="font-size: 38px;">Conversational AI That Doesn't Feel Robotic</h2>
+                    <p style="color: #94a3b8; max-width: 750px; margin: 15px auto 0; font-size: 15px; line-height: 1.6;">
+                        Nobody likes rigid, scripted chat trees that loop endlessly and fail to understand basic questions. We engineer LLM-powered support agents that comprehend nuance, tone, and complex phrasing.
+                    </p>
+                </div>
+
+                <div class="ai-services-grid">
+                    <!-- Card 01: Context-Aware Intent Parsing -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 20%; left: 80%;"></div>
+                        <div class="ai-card-particle" style="top: 60%; left: 90%;"></div>
+                        <span class="ai-service-number">01</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-chat-heart-fill"></i>
+                        </div>
+                        <h3 class="ai-service-title">Context-Aware Intent Parsing</h3>
+                        <p class="ai-service-desc">Advanced NLP understands natural phrasing, typos, and multi-part questions without forcing customers into rigid, frustrating button menus.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 02: Multi-Turn Memory & Coherence -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 15%; left: 75%;"></div>
+                        <div class="ai-card-particle" style="top: 55%; left: 85%;"></div>
+                        <span class="ai-service-number">02</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-memory"></i>
+                        </div>
+                        <h3 class="ai-service-title">Multi-Turn Conversation Memory</h3>
+                        <p class="ai-service-desc">Retains user context across the entire interaction, referencing previous statements naturally so customers never have to repeat themselves.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 03: Brand Voice Calibration -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 25%; left: 70%;"></div>
+                        <div class="ai-card-particle" style="top: 65%; left: 95%;"></div>
+                        <span class="ai-service-number">03</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-palette2"></i>
+                        </div>
+                        <h3 class="ai-service-title">Brand Voice Calibration</h3>
+                        <p class="ai-service-desc">Tuned to embody your company's exact persona — professional, empathetic, friendly, or deeply technical — with strict guardrails.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 04: Dynamic Knowledge Base Ingestion -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 10%; left: 85%;"></div>
+                        <div class="ai-card-particle" style="top: 50%; left: 75%;"></div>
+                        <span class="ai-service-number">04</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-book-half"></i>
+                        </div>
+                        <h3 class="ai-service-title">Live Knowledge Sync</h3>
+                        <p class="ai-service-desc">Automatically indexes your help center, product manuals, and internal documentation to deliver 100% verified, hallucination-free answers.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 05: Omnichannel Consistency -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 30%; left: 90%;"></div>
+                        <div class="ai-card-particle" style="top: 70%; left: 80%;"></div>
+                        <span class="ai-service-number">05</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-share-fill"></i>
+                        </div>
+                        <h3 class="ai-service-title">Omnichannel Integration</h3>
+                        <p class="ai-service-desc">Deploy your AI assistant seamlessly across web live chat, WhatsApp, SMS, mobile apps, and Zendesk/Freshdesk email queues.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 06: Multilingual Support -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 20%; left: 75%;"></div>
+                        <div class="ai-card-particle" style="top: 60%; left: 85%;"></div>
+                        <span class="ai-service-number">06</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-translate"></i>
+                        </div>
+                        <h3 class="ai-service-title">Multilingual Fluency</h3>
+                        <p class="ai-service-desc">Supports 50+ languages with automatic real-time language detection, providing seamless localized support to global buyers.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CUSTOMER SUPPORT AUTOMATION, NOT FULL REPLACEMENT -->
         <section class="ai-about-section">
             <div class="ai-about-container">
                 <div class="ai-about-visual">
                     <div class="ai-main-img-wrap">
-                        <img src="{{ asset('home/assets/homepage/images/ai/ai_face_digital.png') }}" alt="AI Creative Face">
+                        <img src="{{ asset('home/assets/homepage/images/ai/ai_face_digital.png') }}" alt="AI Support and Human Collaboration">
                     </div>
                     <div class="ai-floating-card">
                         <div class="ai-card-icon">
-                            <img src="{{ asset('home/assets/homepage/images/ai/ai_data_node.png') }}" alt="Mini AI">
+                            <img src="{{ asset('home/assets/homepage/images/ai/ai_data_node.png') }}" alt="Human Handoff">
                         </div>
                         <div class="ai-card-text">
-                            <strong>24/7</strong>
-                            <span>Instant Resolutions</span>
+                            <strong>70%+</strong>
+                            <span>Tier-1 Inquiries Deflected</span>
                         </div>
                     </div>
                 </div>
@@ -74,68 +229,72 @@
                 <div class="ai-about-content">
                     <div class="ai-tag-red">
                         <div class="dot"></div>
-                        Who We Are
+                        SMART HUMAN COLLABORATION
                     </div>
-                    <h2 class="ai-about-title">Revolutionizing Customer Support with Next-Generation Conversational AI</h2>
-                    <p class="ai-about-desc">As a premier conversational AI development company, we specialize in transforming ordinary support interactions into exceptional customer experiences. Our mission is to equip businesses with intelligent automation that delivers instant, personalized, and scalable assistance.</p>
+                    <h2 class="ai-about-title">Customer Support Automation, Not Full Replacement</h2>
+                    <p class="ai-about-desc">
+                        We don't believe in overselling full automation. High-value customer relationships require human empathy for complex grievances, custom billing negotiations, and sensitive edge cases. Our AI chatbots handle the repetitive 70% of tier-1 inquiries — password resets, order status checks, policy details, and basic troubleshooting — so your human support team can focus on high-priority tickets.
+                    </p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
-                            <div class="ai-feat-icon"><i class="bi bi-chat-heart-fill"></i></div>
-                            <div class="ai-feat-text">Empathetic Human<br>Conversations</div>
+                            <div class="ai-feat-icon"><i class="bi bi-person-badge-fill"></i></div>
+                            <div class="ai-feat-text">Instant Human<br>Escalation</div>
                         </div>
                         <div class="ai-feature-item">
-                            <div class="ai-feat-icon"><i class="bi bi-globe2"></i></div>
-                            <div class="ai-feat-text">Global Always-On<br>Support</div>
+                            <div class="ai-feat-icon"><i class="bi bi-journal-text"></i></div>
+                            <div class="ai-feat-text">Full Context<br>Handoff</div>
                         </div>
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Powering empathetic, context-aware conversations that feel genuinely human.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Ensuring real-time issue resolution across all digital channels, day or night.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Deploying custom AI agents for high-volume support environments in under four weeks.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Effortless Human Escalation:</strong> When a customer expresses frustration or asks for an agent, the bot transfers them instantly with zero dead ends.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Comprehensive Agent Briefing:</strong> Live agents receive an executive summary and full chat transcript before answering.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Automated Helpdesk Ticket Sync:</strong> Categorizes and updates tickets in Zendesk, Freshdesk, HubSpot, or Salesforce automatically.</li>
                     </ul>
 
                     <div>
-                        <a href="{{ route('contactUs') }}" class="btn-ai-red">Get Started Now <i
+                        <a href="{{ route('contactUs') }}" class="btn-ai-red">Optimize Your Support Workflow <i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
 
-                    <img src="{{ asset('home/assets/homepage/images/ai/cute_robot_side.png') }}" alt="Small Robot"
+                    <img src="{{ asset('home/assets/homepage/images/ai/cute_robot_side.png') }}" alt="AI Assistant"
                         class="ai-side-robot-new">
                 </div>
             </div>
         </section>
 
-        <!-- TRANSFORMING BUSINESSES SECTION -->
+        <!-- SECTION 4: AVAILABLE AROUND THE CLOCK -->
         <section class="ai-transform-section">
             <div class="ai-transform-container">
                 <div class="ai-transform-visual">
                     <div class="ai-main-img-transform">
                         <img src="{{ asset('home/assets/homepage/images/ai/robot_hand_touch_new.png') }}"
-                            alt="AI Robot Hand Touch">
+                            alt="24/7 Always-On AI Support">
                     </div>
                     <div class="ai-transform-overlay">
                         <img src="{{ asset('home/assets/homepage/images/ai/robot_profile_overlay_new.png') }}"
-                            alt="Robot Profile">
+                            alt="Zero Wait Support">
                     </div>
                 </div>
 
                 <div class="ai-transform-content">
                     <div class="ai-tag-red">
                         <div class="dot"></div>
-                        About Us
+                        24/7/365 AVAILABILITY
                     </div>
-                    <h2 class="ai-about-title">AI Chatbots for Enterprise-Grade Customer Support Automation</h2>
-                    <p class="ai-about-desc">We specialize in deploying high-performance AI chatbots that automate customer support workflows while preserving brand voice and context. Our solutions empower support teams to focus on complex issues by handling routine inquiries instantly and accurately.</p>
+                    <h2 class="ai-about-title">Available Around the Clock: Instant Answers at 2 AM</h2>
+                    <p class="ai-about-desc">
+                        When a customer runs into an issue outside normal business hours, waiting 12+ hours for the morning team often leads to frustration, lost sales, or customer churn. Mounteko's AI support agents never sleep, take breaks, or create queue delays — delivering instantaneous, verified solutions at midnight or during weekend traffic surges.
+                    </p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Instant, 24/7 Customer Support – AI chatbots that never sleep, reducing wait times to zero.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Smart Escalation Logic – Seamless handoff to human agents with full conversation history.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Actionable Automation Insights – Track containment rates, resolution paths, and customer effort scores.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Sub-Second First Response Time:</strong> Eliminates customer wait times completely.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Weekend & Holiday Continuity:</strong> Keeps your brand responsive when your office is closed.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Elastic Surge Capacity:</strong> Effortlessly handles 10 or 10,000 concurrent conversations without extra headcount.</li>
                     </ul>
 
-                    <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Project <i
+                    <a href="{{ route('contactUs') }}" class="btn-ai-gradient">Get 24/7 Chatbot Coverage <i
                             class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
@@ -144,186 +303,23 @@
                 class="ai-reaching-hand-clean">
         </section>
 
-        <!-- INNOVATIVE SOLUTIONS SECTION -->
-        <section class="ai-services-grid-section">
-            <div class="ai-services-grid-container">
-                <div class="ai-services-header">
-                    <div class="ai-tag-red" style="justify-content: center;">
-                        <div class="dot"></div>
-                        Our Best Services
-                    </div>
-                    <h2 class="ai-about-title" style="font-size: 30px;">Enterprise AI Chatbots & Intelligent Customer Support Automation</h2>
-                </div>
-
-
-                <div class="ai-services-grid">
-                    <!-- Card 01 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 20%; left: 80%;"></div>
-                        <div class="ai-card-particle" style="top: 60%; left: 90%;"></div>
-                        <span class="ai-service-number">01</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-ticket-detailed"></i>
-                        </div>
-                        <h3 class="ai-service-title">End-to-End Support Automation</h3>
-                        <p class="ai-service-desc">Design fully automated workflows that intelligently handle tier-1 tickets, order inquiries, return requests, and FAQ resolution—without human intervention.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 02 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 15%; left: 75%;"></div>
-                        <div class="ai-card-particle" style="top: 55%; left: 85%;"></div>
-                        <span class="ai-service-number">02</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-chat-quote"></i>
-                        </div>
-                        <h3 class="ai-service-title">Conversational AI for Customer Service</h3>
-                        <p class="ai-service-desc">Deploy advanced NLP-driven chatbots that understand context, detect sentiment, manage multi-turn dialogues, and escalate complex issues seamlessly to human agents.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 03 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 25%; left: 70%;"></div>
-                        <div class="ai-card-particle" style="top: 65%; left: 95%;"></div>
-                        <span class="ai-service-number">03</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-diagram-3"></i>
-                        </div>
-                        <h3 class="ai-service-title">Smart Ticketing & Workflow Automation</h3>
-                        <p class="ai-service-desc">Automate ticket categorization, prioritization, routing, and response generation to reduce resolution times and improve first-contact resolution rates.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 04 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 10%; left: 85%;"></div>
-                        <div class="ai-card-particle" style="top: 50%; left: 75%;"></div>
-                        <span class="ai-service-number">04</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-share"></i>
-                        </div>
-                        <h3 class="ai-service-title">Omnichannel Chatbot Deployment</h3>
-                        <p class="ai-service-desc">Launch and manage AI-powered support agents consistently across web chat, mobile apps, WhatsApp, Messenger, Instagram, and voice assistants from one unified platform.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 05 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 30%; left: 90%;"></div>
-                        <div class="ai-card-particle" style="top: 70%; left: 80%;"></div>
-                        <span class="ai-service-number">05</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-graph-up-arrow"></i>
-                        </div>
-                        <h3 class="ai-service-title">AI-Driven Insights from Support</h3>
-                        <p class="ai-service-desc">Analyze chatbot interactions to identify recurring customer pain points, optimize response accuracy, and uncover opportunities for proactive support.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 06 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 20%; left: 75%;"></div>
-                        <div class="ai-card-particle" style="top: 60%; left: 85%;"></div>
-                        <span class="ai-service-number">06</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-compass"></i>
-                        </div>
-                        <h3 class="ai-service-title">Chatbot & Automation Consulting</h3>
-                        <p class="ai-service-desc">Empower your team with a strategic roadmap to assess, implement, and scale AI chatbot solutions that reduce costs while elevating customer experience.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI TRANSFORMATION JOURNEY SECTION -->
-        <section class="ai-journey-section">
-            <div class="ai-journey-container">
-                <div class="ai-services-header">
-                    <div class="ai-tag-red" style="justify-content: center;">
-                        <div class="dot"></div>
-                        How It Works
-                    </div>
-                    <h2 class="ai-about-title" style="font-size: 28px;">The AI Support Transformation Journey</h2>
-                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed consultation to learn about your support challenges, ticket volume, and key opportunities for AI integration.</p>
-                </div>
-
-
-                <div class="ai-journey-flex">
-                    <!-- Step 1 -->
-                    <div class="ai-journey-card">
-                        <i class="bi bi-search"></i>
-                        <h3>Discover &<br>Assess</h3>
-                    </div>
-
-                    <!-- Connector 1 -->
-                    <div class="ai-journey-arrow">
-                        <span>Auditing Volumes</span>
-                        <div class="arrow-line"></div>
-                    </div>
-
-                    <!-- Step 2 (Center) -->
-                    <div class="ai-journey-center">
-                        <div class="ai-circle-step ai-circle-top">
-                            <i class="bi bi-node-plus"></i>
-                            <h3>Build &<br>Integrate</h3>
-                        </div>
-                        <div class="ai-circle-step ai-circle-bottom">
-                            Develop and integrate custom AI chatbots with your helpdesk platform.
-                        </div>
-                    </div>
-
-                    <!-- Connector 2 -->
-                    <div class="ai-journey-arrow">
-                        <span>Iterative Tuning</span>
-                        <div class="arrow-line"></div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="ai-journey-card">
-                        <i class="bi bi-arrow-repeat"></i>
-                        <h3>Optimize &<br>Evolve</h3>
-                    </div>
-                </div>
-            </div>
-            <!-- Robotic Hand Visual -->
-            <img src="{{ asset('home/assets/homepage/images/ai/robot_hand_clean.png') }}" alt="Robot Hand"
-                class="ai-reaching-hand-clean">
-        </section>
-
-
-
-        <!-- AI EXPERIENCE SECTION -->
+        <!-- SECTION 5: TELECOM INDUSTRY SPOTLIGHT -->
         <section class="ai-experience-section">
             <div class="ai-experience-container">
                 <!-- Left Visual Composition -->
                 <div class="ai-visual-composition">
                     <div class="ai-main-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=800"
-                            alt="AI Support Conversations" class="ai-exp-main-img">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800"
+                            alt="Telecom Support Automation" class="ai-exp-main-img">
 
                         <!-- Floating Glass Badge -->
                         <div class="ai-glass-badge-exp">
                             <div class="badge-icon">
-                                <i class="bi bi-chat-left-dots"></i>
+                                <i class="bi bi-broadcast-pin"></i>
                             </div>
                             <div class="badge-text">
-                                <span class="badge-title">AI Support Core</span>
-                                <span class="badge-sub">Intelligent CSAT</span>
+                                <span class="badge-title">80% Deflection</span>
+                                <span class="badge-sub">High-Volume Telecom</span>
                             </div>
                         </div>
 
@@ -335,42 +331,40 @@
 
                 <!-- Right Content -->
                 <div class="ai-experience-content">
-                    <span class="ai-tag-purple">Our Experience</span>
-                    <h2 class="ai-exp-title">Step into the future of intelligent customer conversations</h2>
+                    <span class="ai-tag-purple">INDUSTRY SPOTLIGHT</span>
+                    <h2 class="ai-exp-title">Telecom & High-Volume Subscriber Inquiries</h2>
                     <p class="ai-exp-desc">
-                        As a forward-thinking AI agency and trusted chatbot solutions provider, we help businesses unlock the full potential of artificial intelligence — automating support, boosting CSAT scores, and delivering tailored experiences at scale.
+                        For telecommunications providers, ISPs, and VoIP operators, support desks face a relentless influx of repetitive inquiries: billing questions, data limit checks, payment renewals, plan upgrades, and service outage status updates.
+                    </p>
+                    <p class="ai-exp-desc">
+                        Mounteko deploys AI support chatbots connected directly to subscriber billing databases and network telemetry. When an outage happens, the bot detects the subscriber's postal code, confirms regional line maintenance, and logs a ticket automatically — deflecting up to 80% of call center volume and freeing phone lines for complex technical escalations.
                     </p>
 
                     <div class="ai-exp-checklist">
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Smart Ticket Deflection
+                            Automated Billing & Plan Inquiries
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Hyper-Personalized Interactions
+                            Real-Time Outage Lookup by ZIP
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Always-On, Instant Support
+                            Step-by-Step Modem Diagnostics
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Effortless Helpdesk & CRM Integration
+                            Direct Dispatch & Ticket Logging
                         </div>
                     </div>
 
-                    <p class="ai-exp-footer-text">
-                        Automate standard requests instantly and let your teams focus on high-value human connections.
-                    </p>
-
                     <a href="{{ route('contactUs') }}" class="btn-ai-purple">
-                        Explore More <i class="bi bi-arrow-right"></i>
+                        Automate High-Volume Support <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
             </div>
         </section>
-
 
         <!-- FAQ & Contact Section -->
         <section class="ai-faq-contact-section">
@@ -379,43 +373,35 @@
                 <div class="ai-contact-card-wrapper">
                     <div class="ai-contact-card">
                         <div class="ai-card-tag">
-                            <span class="dot"></span> RESPONSE TIME: 1 HOURS
+                            <span class="dot"></span> RESPONSE TIME: WITHIN 15 MINUTES
                         </div>
-                        <h2 class="ai-card-title">Tell details about your project</h2>
-                        <p class="ai-card-desc">Just fill out the form and our global experts will be in touch right away
-                            with package and price solution to help you!</p>
+                        <h2 class="ai-card-title">Ready to Launch Your AI Support Assistant?</h2>
+                        <p class="ai-card-desc">Tell us about your support volume and helpdesk tools, and our engineers will build a tailored demo agent trained on your sample FAQs.</p>
 
-                        <form class="ai-contact-form">
+                        <form class="ai-contact-form" action="{{ route('contactStore') }}" method="POST">
+                            @csrf
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Full name">
+                                    <input type="text" name="name" placeholder="Full name" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" placeholder="Your Email">
+                                    <input type="email" name="email" placeholder="Your Work Email" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea placeholder="Your Message" rows="3"></textarea>
-                            </div>
-
-                            <div class="form-check-group">
-                                <label class="ai-checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                    Subscribe to Newsletter
-                                </label>
+                                <textarea name="message" placeholder="Describe the repetitive questions or support tools you want to automate..." rows="3" required></textarea>
                             </div>
 
                             <div class="ai-form-footer">
                                 <div class="support-person">
-                                    <img src="https://ui-avatars.com/api/?name=Richard+Martines&background=random"
-                                        alt="Support">
+                                    <img src="https://ui-avatars.com/api/?name=Chatbot+Architect&background=00ffcc&color=030d0a"
+                                        alt="Chatbot Architect">
                                     <div class="support-info">
-                                        <h4>Richard Martines</h4>
-                                        <p>Support Developer</p>
+                                        <h4>Senior Conversational AI Architect</h4>
+                                        <p>Support Automation Team</p>
                                     </div>
                                 </div>
-                                <button type="button" class="btn-ai-red">View All Price <i
+                                <button type="submit" class="btn-ai-red">Request Demo Bot <i
                                         class="bi bi-arrow-right"></i></button>
                             </div>
                         </form>
@@ -427,35 +413,39 @@
                     <div class="ai-card-tag">
                         <span class="dot"></span> FAQ
                     </div>
-                    <h2 class="ai-faq-title">Learn more from FAQs</h2>
-                    <p class="ai-faq-desc">We've heard it all. Here's everything you need to know before working with us.
+                    <h2 class="ai-faq-title">AI Chatbot FAQs</h2>
+                    <p class="ai-faq-desc">Clear answers on how our conversational AI integrates with your support infrastructure.
                     </p>
 
-                    <!-- Tabs (Only General Ask) -->
+                    <!-- Tabs -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                                type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="safety-tab" data-bs-toggle="tab" data-bs-target="#safety"
+                                type="button" role="tab" aria-controls="safety" aria-selected="false">Accuracy & Safety</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
                         <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
-                            <!-- Accordion General -->
+                            <!-- Accordion -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Is it complex to integrate a chatbot with my current helpdesk?
+                                            How does the bot handle questions it doesn't know?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Not at all. We build user-friendly AI platforms with pre-built connectors for major CRMs and helpdesks. Our team handles the technical complexity.
+                                            The bot gracefully acknowledges limitations and immediately offers to connect the customer with a live human agent or create a prioritized helpdesk ticket with full context.
                                         </div>
                                     </div>
                                 </div>
@@ -464,13 +454,13 @@
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Will the AI chatbot understand my business terminology?
+                                            Which helpdesk software can the bot connect to?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                         data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Yes, our AI customer support solutions are custom-trained on your specific knowledge base, product catalog, and historical support tickets to ensure accurate, brand-aligned responses.
+                                            We support native integrations with Zendesk, Freshdesk, HubSpot Service Hub, Intercom, Salesforce Service Cloud, Jira Service Desk, and custom REST ticketing APIs.
                                         </div>
                                     </div>
                                 </div>
@@ -480,17 +470,20 @@
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false"
                                             aria-controls="collapseThree">
-                                            Can the automation scale during high-traffic periods?
+                                            How long does training and deployment take?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Absolutely. We offer scalable, cloud-native automated customer support systems that handle unlimited concurrent conversations without compromising performance.
+                                            A standard AI support bot can be trained on your knowledge base, tested for accuracy, and deployed live across your website or WhatsApp within 2 to 3 weeks.
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="tab-pane fade" id="safety" role="tabpanel" aria-labelledby="safety-tab">
+                            <p class="mt-4 text-muted">We use Retrieval-Augmented Generation (RAG) with strict source attribution, guaranteeing that your bot only responds using approved company documents.</p>
                         </div>
                     </div>
                 </div>
@@ -503,9 +496,9 @@
                 <!-- Section Header -->
                 <div class="ai-blog-header text-center">
                     <div class="ai-card-tag justify-content-center">
-                        <span class="dot"></span> LATEST BLOG
+                        <span class="dot"></span> SUPPORT INSIGHTS
                     </div>
-                    <h2 class="ai-blog-title">AI and Creativity Stories Tips.</h2>
+                    <h2 class="ai-blog-title">Latest From Our Support Automation Blog</h2>
                 </div>
 
                 <!-- Blog Grid -->
@@ -513,51 +506,51 @@
                     <!-- Blog Card 1 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
-                                alt="Unlocking Data">
+                            <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=800"
+                                alt="Support Deflection">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> By Support Lead</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> 20 Mar, 2024</span>
                             </div>
-                            <h3 class="blog-card-title">Unlocking the Power of Data for Business Success.</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">How to Deflect 70% of Tier-1 Support Tickets Without Frustrating Customers</h3>
+                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
 
                     <!-- Blog Card 2 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800"
-                                alt="Future of Work">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+                                alt="Conversational AI vs Rigid Trees">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> By AI Architect</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> 24 Mar, 2024</span>
                             </div>
-                            <h3 class="blog-card-title">The Future of Work Embracin Digital Transformation.</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">Why Legacy Rule-Based Chatbots Fail (And How LLMs Fix Them)</h3>
+                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
 
                     <!-- Blog Card 3 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
-                                alt="AI Revolutionizing">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                                alt="Omnichannel AI Support">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> By CX Strategist</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> 28 Mar, 2024</span>
                             </div>
-                            <h3 class="blog-card-title">How AI is Revolutionizing Business and Industry Today</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">Designing Seamless Human-in-the-Loop Escalation Workflows</h3>
+                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>

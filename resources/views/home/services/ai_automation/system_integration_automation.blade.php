@@ -77,43 +77,151 @@
             </div>
 
             <!-- Robot Visuals -->
-            <img src="{{ asset('home/assets/homepage/images/ai/robot_left.png') }}" alt="AI Robot Left"
+            <img src="{{ asset('home/assets/homepage/images/ai/robot_left.png') }}" alt="AI Integration Left"
                 class="ai-robot-left">
-            <img src="{{ asset('home/assets/homepage/images/ai/robot_right.png') }}" alt="AI Robot Right"
+            <img src="{{ asset('home/assets/homepage/images/ai/robot_right.png') }}" alt="AI Integration Right"
                 class="ai-robot-right">
 
             <div class="ai-hero-container">
-                <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Transform your business with seamless System Integration & Data Automation</h1>
-                <p class="ai-hero-desc">Unify your technology ecosystem, eliminate data silos, and accelerate decision-making with our enterprise-grade system integration services and intelligent data automation solutions.</p>
+                <div class="ai-welcome-badge">UNIFIED DATA PIPELINES</div>
+                <h1 class="ai-hero-title">System Integration & Data Automation Services</h1>
+                <p class="ai-hero-desc">Data that lives in five different systems isn't really useful in any of them — someone still has to pull it together manually before it means anything. Mounteko integrates your business systems and automates the data flow between them, so information updates everywhere it needs to, automatically.</p>
 
                 <div class="ai-pills-row">
-                    <span class="ai-pill">SOC2 Compliant</span>
-                    <span class="ai-pill">Salesforce Partner</span>
-                    <span class="ai-pill">Microsoft Partner</span>
-                    <span class="ai-pill">AWS Partner</span>
+                    <span class="ai-pill">Zero Platform Migration Required</span>
+                    <span class="ai-pill">Real-Time & Scheduled Sync</span>
+                    <span class="ai-pill">Resilient Schema-Proof Pipelines</span>
+                    <span class="ai-pill">Bi-Directional Middleware</span>
                 </div>
 
                 <a href="{{ route('contactUs') }}" class="btn-ai-get-started">
-                    Get Started <i><i class="bi bi-arrow-right"></i></i>
+                    Connect Your Business Systems <i><i class="bi bi-arrow-right"></i></i>
                 </a>
             </div>
         </section>
 
-        <!-- WHO WE ARE SECTION -->
+        <!-- SECTION 2: DATA AUTOMATION THAT KEEPS EVERYTHING IN SYNC (6-CARD GRID) -->
+        <section class="ai-services-grid-section">
+            <div class="ai-services-grid-container">
+                <div class="ai-services-header">
+                    <div class="ai-tag-red" style="justify-content: center;">
+                        <div class="dot"></div>
+                        REAL-TIME SYNCHRONIZATION
+                    </div>
+                    <h2 class="ai-about-title" style="font-size: 38px;">Data Automation That Keeps Everything in Sync</h2>
+                    <p style="color: #94a3b8; max-width: 750px; margin: 15px auto 0; font-size: 15px; line-height: 1.6;">
+                        True integration isn't a one-time connection — it's an always-on data pipeline that keeps records accurate across all your core business platforms in real time or on precision schedules.
+                    </p>
+                </div>
+
+                <div class="ai-services-grid">
+                    <!-- Card 01: Real-Time Webhook Pipelines -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 20%; left: 80%;"></div>
+                        <div class="ai-card-particle" style="top: 60%; left: 90%;"></div>
+                        <span class="ai-service-number">01</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <h3 class="ai-service-title">Real-Time Webhook Pipelines</h3>
+                        <p class="ai-service-desc">Instantaneous record creation and field updates triggered the exact second a transaction, lead status change, or support ticket occurs.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 02: Scheduled Batch ETL Jobs -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 15%; left: 75%;"></div>
+                        <div class="ai-card-particle" style="top: 55%; left: 85%;"></div>
+                        <span class="ai-service-number">02</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <h3 class="ai-service-title">Scheduled Batch ETL Jobs</h3>
+                        <p class="ai-service-desc">High-volume data transformation, nightly financial ledger reconciliation, and off-peak bulk data transfers with zero daytime performance lag.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 03: Bi-Directional Synchronization -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 25%; left: 70%;"></div>
+                        <div class="ai-card-particle" style="top: 65%; left: 95%;"></div>
+                        <span class="ai-service-number">03</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-arrow-left-right"></i>
+                        </div>
+                        <h3 class="ai-service-title">Bi-Directional Synchronization</h3>
+                        <p class="ai-service-desc">Two-way sync with smart conflict resolution, ensuring updates made in your CRM or ERP mirror accurately across all connected endpoints.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 04: Data Cleansing & Validation -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 10%; left: 85%;"></div>
+                        <div class="ai-card-particle" style="top: 50%; left: 75%;"></div>
+                        <span class="ai-service-number">04</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="ai-service-title">In-Flight Data Cleansing</h3>
+                        <p class="ai-service-desc">Automated deduplication, format normalization, and schema validation that scrubs data clean before writing into destination databases.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 05: Legacy Database Connectors -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 30%; left: 90%;"></div>
+                        <div class="ai-card-particle" style="top: 70%; left: 80%;"></div>
+                        <span class="ai-service-number">05</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-database-gear"></i>
+                        </div>
+                        <h3 class="ai-service-title">Legacy Database Bridges</h3>
+                        <p class="ai-service-desc">Custom REST and GraphQL middleware connecting modern cloud SaaS tools to on-premise SQL servers, AS400, and proprietary backends.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 06: API Rate Limit & Queue Telemetry -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 20%; left: 75%;"></div>
+                        <div class="ai-card-particle" style="top: 60%; left: 85%;"></div>
+                        <span class="ai-service-number">06</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h3 class="ai-service-title">Centralized Queue Telemetry</h3>
+                        <p class="ai-service-desc">Live dashboards tracking API rate limits, payload throughput, queue health, and instant alerting on any dropped payloads.</p>
+                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CONNECTING THE SYSTEMS YOUR BUSINESS ALREADY RUNS ON -->
         <section class="ai-about-section">
             <div class="ai-about-container">
                 <div class="ai-about-visual">
                     <div class="ai-main-img-wrap">
-                        <img src="{{ asset('home/assets/homepage/images/ai/ai_face_digital.png') }}" alt="AI Creative Face">
+                        <img src="{{ asset('home/assets/homepage/images/ai/ai_face_digital.png') }}" alt="System Integration Middleware">
                     </div>
                     <div class="ai-floating-card">
                         <div class="ai-card-icon">
-                            <img src="{{ asset('home/assets/homepage/images/ai/ai_data_node.png') }}" alt="Mini AI">
+                            <img src="{{ asset('home/assets/homepage/images/ai/ai_data_node.png') }}" alt="Connected Platforms">
                         </div>
                         <div class="ai-card-text">
-                            <strong>100%</strong>
-                            <span>Secure Integration Blueprints</span>
+                            <strong>Zero</strong>
+                            <span>Platform Migration Required</span>
                         </div>
                     </div>
                 </div>
@@ -121,68 +229,72 @@
                 <div class="ai-about-content">
                     <div class="ai-tag-red">
                         <div class="dot"></div>
-                        Who We Are
+                        ZERO PLATFORM DISRUPTION
                     </div>
-                    <h2 class="ai-about-title">Redefining Enterprise Connectivity with the Power of Intelligent Automation.</h2>
-                    <p class="ai-about-desc">We are a premier system integration company passionate about turning fragmented data landscapes into unified operational powerhouses. Our mission is to empower businesses through seamless business system integration and intelligent data orchestration.</p>
+                    <h2 class="ai-about-title">Connecting the Systems Your Business Already Runs On</h2>
+                    <p class="ai-about-desc">
+                        You don't need to rip out your existing software or undergo an expensive, high-risk platform migration to fix broken data flows. Mounteko builds secure, middleware connectors directly between the tools your team already relies on every day — including Salesforce, HubSpot, NetSuite, SAP, QuickBooks, Shopify, Microsoft Dynamics, Slack, and custom in-house databases. Your systems communicate automatically behind the scenes with zero disruption to daily workflows.
+                    </p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
-                            <div class="ai-feat-icon"><i class="bi bi-cpu-fill"></i></div>
-                            <div class="ai-feat-text">Unified Data<br>Ecosystem</div>
+                            <div class="ai-feat-icon"><i class="bi bi-plug-fill"></i></div>
+                            <div class="ai-feat-text">Native Middleware<br>Bridges</div>
                         </div>
                         <div class="ai-feature-item">
-                            <div class="ai-feat-icon"><i class="bi bi-palette-fill"></i></div>
-                            <div class="ai-feat-text">Intelligent<br>Process Flows</div>
+                            <div class="ai-feat-icon"><i class="bi bi-shield-lock-fill"></i></div>
+                            <div class="ai-feat-text">Enterprise Data<br>Encryption</div>
                         </div>
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Breaking down silos with leading enterprise system integration to create a single source of truth.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> From simple connections to complex, cross-application automation and integration services.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Automate data pipelines to deliver real-time analytics and drive proactive decision-making.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Works With Your Existing Stack:</strong> Syncs CRM, ERP, e-commerce, and accounting platforms seamlessly.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Zero Costly Software Replacements:</strong> Maximize ROI on current tools without retraining staff on new platforms.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Custom Business Logic Handling:</strong> Tailors data transformation rules to match your unique operational processes.</li>
                     </ul>
 
                     <div>
-                        <a href="{{ route('contactUs') }}" class="btn-ai-red">Get Started Now <i
+                        <a href="{{ route('contactUs') }}" class="btn-ai-red">Discuss Your Integration Architecture <i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
 
-                    <img src="{{ asset('home/assets/homepage/images/ai/cute_robot_side.png') }}" alt="Small Robot"
+                    <img src="{{ asset('home/assets/homepage/images/ai/cute_robot_side.png') }}" alt="AI Assistant"
                         class="ai-side-robot-new">
                 </div>
             </div>
         </section>
 
-        <!-- TRANSFORMING BUSINESSES SECTION -->
+        <!-- SECTION 4: ENTERPRISE-SCALE INTEGRATION, BUILT TO LAST -->
         <section class="ai-transform-section">
             <div class="ai-transform-container">
                 <div class="ai-transform-visual">
                     <div class="ai-main-img-transform">
                         <img src="{{ asset('home/assets/homepage/images/ai/robot_hand_touch_new.png') }}"
-                            alt="AI Robot Hand Touch">
+                            alt="Resilient Data Architecture">
                     </div>
                     <div class="ai-transform-overlay">
                         <img src="{{ asset('home/assets/homepage/images/ai/robot_profile_overlay_new.png') }}"
-                            alt="Robot Profile">
+                            alt="Enterprise Data Sync">
                     </div>
                 </div>
 
                 <div class="ai-transform-content">
                     <div class="ai-tag-red">
                         <div class="dot"></div>
-                        About Us
+                        RESILIENT ARCHITECTURE
                     </div>
-                    <h2 class="ai-about-title">Transforming Operations with Holistic Data Automation Services</h2>
-                    <p class="ai-about-desc">We are pioneers in the fusion of complex business systems and cutting-edge data automation services. Our mission is to transform the way organizations manage their digital infrastructure by delivering innovative, scalable integration blueprints.</p>
+                    <h2 class="ai-about-title">Enterprise-Scale Integration, Built to Last</h2>
+                    <p class="ai-about-desc">
+                        Nothing is more frustrating than an amateur integration script that crashes every time a vendor updates their API or a user inputs an unexpected special character. Mounteko engineers robust, enterprise-grade integration architecture built with automated retry logic, exponential backoff, dead-letter queues, and schema change alerts — ensuring your data flows continue running smoothly year after year without breaking.
+                    </p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Advanced Application Integration Services for Seamless Cross-Platform Connectivity.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Real-time ETL Automation Services for Optimized Data Transformation and Loading.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> AI-Powered Data Automation for Intelligent, Self-Optimizing Workflows.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Automated Failover & Retries:</strong> Transient network errors or vendor API rate limits never drop critical business transactions.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>Dead-Letter Queue Buffering:</strong> Failed payloads are safely isolated and logged with one-click re-processing tools.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> <strong>API Versioning Resilience:</strong> Built on versioned endpoints with proactive monitoring for API deprecation notices.</li>
                     </ul>
 
-                    <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Projects <i
+                    <a href="{{ route('contactUs') }}" class="btn-ai-gradient">Build Resilient Data Pipelines <i
                             class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
@@ -191,186 +303,23 @@
                 class="ai-reaching-hand-clean">
         </section>
 
-        <!-- INNOVATIVE SOLUTIONS SECTION -->
-        <section class="ai-services-grid-section">
-            <div class="ai-services-grid-container">
-                <div class="ai-services-header">
-                    <div class="ai-tag-red" style="justify-content: center;">
-                        <div class="dot"></div>
-                        Our Best Services
-                    </div>
-                    <h2 class="ai-about-title" style="font-size: 42px;">Best Innovative Solution for Integrated Enterprises</h2>
-                </div>
-
-
-                <div class="ai-services-grid">
-                    <!-- Card 01 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 20%; left: 80%;"></div>
-                        <div class="ai-card-particle" style="top: 60%; left: 90%;"></div>
-                        <span class="ai-service-number">01</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-cpu"></i>
-                        </div>
-                        <h3 class="ai-service-title">Enterprise System Integration</h3>
-                        <p class="ai-service-desc">Specialize in delivering comprehensive enterprise system integration that revolutionizes the way your core platforms communicate. By leveraging the latest API-driven architectures.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 02 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 15%; left: 75%;"></div>
-                        <div class="ai-card-particle" style="top: 55%; left: 85%;"></div>
-                        <span class="ai-service-number">02</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-pc-display"></i>
-                        </div>
-                        <h3 class="ai-service-title">Data Automation Solutions</h3>
-                        <p class="ai-service-desc">Designing and implementing intelligent data automation solutions that streamline data collection, transformation, and distribution across your entire organization.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 03 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 25%; left: 70%;"></div>
-                        <div class="ai-card-particle" style="top: 65%; left: 95%;"></div>
-                        <span class="ai-service-number">03</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-diagram-3"></i>
-                        </div>
-                        <h3 class="ai-service-title">AI Data Automation</h3>
-                        <p class="ai-service-desc">Harness the power of machine learning within your pipelines. Our AI data automation services predict failures, cleanse data dynamically, and optimize flows in real-time.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 04 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 10%; left: 85%;"></div>
-                        <div class="ai-card-particle" style="top: 50%; left: 75%;"></div>
-                        <span class="ai-service-number">04</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-bar-chart-line"></i>
-                        </div>
-                        <h3 class="ai-service-title">ETL Automation Services</h3>
-                        <p class="ai-service-desc">Modernize your data warehouse strategy with robust ETL automation services that handle extraction, transformation, and loading with speed and precision.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 05 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 30%; left: 90%;"></div>
-                        <div class="ai-card-particle" style="top: 70%; left: 80%;"></div>
-                        <span class="ai-service-number">05</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-gear-wide-connected"></i>
-                        </div>
-                        <h3 class="ai-service-title">Application Integration Services</h3>
-                        <p class="ai-service-desc">Connect CRM, ERP, HRM, and proprietary systems seamlessly. Our application integration services ensure flawless, bidirectional data synchronization.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 06 -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 20%; left: 75%;"></div>
-                        <div class="ai-card-particle" style="top: 60%; left: 85%;"></div>
-                        <span class="ai-service-number">06</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-mortarboard"></i>
-                        </div>
-                        <h3 class="ai-service-title">Data Integration Services</h3>
-                        <p class="ai-service-desc">Create a consolidated view of your business with our foundational data integration services, designed for accuracy, consistency, and high availability.</p>
-                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI TRANSFORMATION JOURNEY SECTION -->
-        <section class="ai-journey-section">
-            <div class="ai-journey-container">
-                <div class="ai-services-header">
-                    <div class="ai-tag-red" style="justify-content: center;">
-                        <div class="dot"></div>
-                        How It Works
-                    </div>
-                    <h2 class="ai-about-title" style="font-size: 28px;">The Business System Integration Journey</h2>
-                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed architectural audit to analyze your current tech stack, data pain points, and integration objectives.</p>
-                </div>
-
-
-                <div class="ai-journey-flex">
-                    <!-- Step 1 -->
-                    <div class="ai-journey-card">
-                        <i class="bi bi-vinyl"></i>
-                        <h3>Discovery &<br>Architecture Audit</h3>
-                    </div>
-
-                    <!-- Connector 1 -->
-                    <div class="ai-journey-arrow">
-                        <span>Audit & Analysis</span>
-                        <div class="arrow-line"></div>
-                    </div>
-
-                    <!-- Step 2 (Center) -->
-                    <div class="ai-journey-center">
-                        <div class="ai-circle-step ai-circle-top">
-                            <i class="bi bi-node-plus"></i>
-                            <h3>Strategy &<br>Feasibility Analysis</h3>
-                        </div>
-                        <div class="ai-circle-step ai-circle-bottom">
-                            Our experts design a secure, scalable blueprint tailored to your business system integration needs.
-                        </div>
-                    </div>
-
-                    <!-- Connector 2 -->
-                    <div class="ai-journey-arrow">
-                        <span>Designing Blueprint</span>
-                        <div class="arrow-line"></div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="ai-journey-card">
-                        <i class="bi bi-shield-check"></i>
-                        <h3>Development &<br>Automated Deployment</h3>
-                    </div>
-                </div>
-            </div>
-            <!-- Robotic Hand Visual -->
-            <img src="{{ asset('home/assets/homepage/images/ai/robot_hand_clean.png') }}" alt="Robot Hand"
-                class="ai-reaching-hand-clean">
-        </section>
-
-
-
-        <!-- AI EXPERIENCE SECTION -->
+        <!-- SECTION 5: AUTOMOTIVE INDUSTRY SPOTLIGHT -->
         <section class="ai-experience-section">
             <div class="ai-experience-container">
                 <!-- Left Visual Composition -->
                 <div class="ai-visual-composition">
                     <div class="ai-main-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
-                            alt="Advanced AI Technology" class="ai-exp-main-img">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800"
+                            alt="Automotive Inventory Data Integration" class="ai-exp-main-img">
 
                         <!-- Floating Glass Badge -->
                         <div class="ai-glass-badge-exp">
                             <div class="badge-icon">
-                                <i class="bi bi-cpu-fill"></i>
+                                <i class="bi bi-car-front-fill"></i>
                             </div>
                             <div class="badge-text">
-                                <span class="badge-title">Connected Core</span>
-                                <span class="badge-sub">Intelligent Pipelines</span>
+                                <span class="badge-title">Real-Time Sync</span>
+                                <span class="badge-sub">DMS & Listing Portals</span>
                             </div>
                         </div>
 
@@ -382,42 +331,40 @@
 
                 <!-- Right Content -->
                 <div class="ai-experience-content">
-                    <span class="ai-tag-purple">Our Experience</span>
-                    <h2 class="ai-exp-title">Welcome to the era of the AI-connected enterprise</h2>
+                    <span class="ai-tag-purple">INDUSTRY SPOTLIGHT</span>
+                    <h2 class="ai-exp-title">Automotive: Real-Time Vehicle Inventory Sync Across All Channels</h2>
                     <p class="ai-exp-desc">
-                        Our integration agency is a strategic technology partner that specializes in delivering automation and integration services to help businesses unify their operations, improve data fidelity, and enhance system intelligence. By leveraging the power of a connected ecosystem.
+                        For automotive dealer groups, managing vehicle inventory across disconnected platforms is an operational nightmare. A car sold on the showroom lot takes hours to manually remove from the dealer website, CRM, Dealer Management System (DMS), AutoTrader, and Cars.com — resulting in customer frustration and wasted ad spend.
+                    </p>
+                    <p class="ai-exp-desc">
+                        Mounteko builds real-time automated data integration pipelines between the dealership DMS, website inventory feeds, and third-party syndication channels. When a vehicle is acquired, repriced, or marked sold in the DMS, updates propagate across all listing portals within minutes, ensuring 100% price consistency and zero manual data duplication.
                     </p>
 
                     <div class="ai-exp-checklist">
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Legacy System Modernization
+                            DMS-to-Web Real-Time Inventory Sync
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Real-Time Data Synchronization
+                            Automated Sold Vehicle De-Listing
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Custom Connector Development
+                            100% Price Consistency Across Channels
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Intelligent Workflow Automation
+                            Zero Manual Re-Entry in Listing Portals
                         </div>
                     </div>
 
-                    <p class="ai-exp-footer-text">
-                        Enterprise systems and data pipelines optimized for absolute security and real-time reliability.
-                    </p>
-
                     <a href="{{ route('contactUs') }}" class="btn-ai-purple">
-                        Explore More <i class="bi bi-arrow-right"></i>
+                        Synchronize Your Inventory Feeds <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
             </div>
         </section>
-
 
         <!-- FAQ & Contact Section -->
         <section class="ai-faq-contact-section">
@@ -426,42 +373,35 @@
                 <div class="ai-contact-card-wrapper">
                     <div class="ai-contact-card">
                         <div class="ai-card-tag">
-                            <span class="dot"></span> RESPONSE TIME: 1 HOUR
+                            <span class="dot"></span> RESPONSE TIME: WITHIN 15 MINUTES
                         </div>
-                        <h2 class="ai-card-title">Tell details about your project</h2>
-                        <p class="ai-card-desc">Just fill out the form and our global experts will be in touch right away with a customized package and pricing solution to help you!</p>
+                        <h2 class="ai-card-title">Ready to Connect Your Disconnected Systems?</h2>
+                        <p class="ai-card-desc">Tell us which software platforms and databases you need to integrate, and our data architects will design a secure, automated data pipeline.</p>
 
-                        <form class="ai-contact-form">
+                        <form class="ai-contact-form" action="{{ route('contactStore') }}" method="POST">
+                            @csrf
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Full name">
+                                    <input type="text" name="name" placeholder="Full name" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" placeholder="Your Email">
+                                    <input type="email" name="email" placeholder="Your Work Email" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea placeholder="Your Message" rows="3"></textarea>
-                            </div>
-
-                            <div class="form-check-group">
-                                <label class="ai-checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                    Subscribe to Newsletter
-                                </label>
+                                <textarea name="message" placeholder="Describe the software systems and data flows you want to synchronize..." rows="3" required></textarea>
                             </div>
 
                             <div class="ai-form-footer">
                                 <div class="support-person">
-                                    <img src="https://ui-avatars.com/api/?name=Richard+Martines&background=random"
-                                        alt="Support">
+                                    <img src="https://ui-avatars.com/api/?name=Integration+Architect&background=00ffcc&color=030d0a"
+                                        alt="Integration Architect">
                                     <div class="support-info">
-                                        <h4>Richard Martines</h4>
-                                        <p>Support Developer</p>
+                                        <h4>Senior Data Integration Architect</h4>
+                                        <p>Enterprise Pipelines Team</p>
                                     </div>
                                 </div>
-                                <button type="button" class="btn-ai-red">Submit Request <i
+                                <button type="submit" class="btn-ai-red">Request Integration Blueprint <i
                                         class="bi bi-arrow-right"></i></button>
                             </div>
                         </form>
@@ -473,15 +413,19 @@
                     <div class="ai-card-tag">
                         <span class="dot"></span> FAQ
                     </div>
-                    <h2 class="ai-faq-title">Learn more from FAQs</h2>
-                    <p class="ai-faq-desc">We've heard it all. Here's everything you need to know before working with us.
+                    <h2 class="ai-faq-title">System Integration FAQs</h2>
+                    <p class="ai-faq-desc">Answers to common questions about syncing data across legacy and modern cloud software.
                     </p>
 
                     <!-- Tabs -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                                type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security"
+                                type="button" role="tab" aria-controls="security" aria-selected="false">Security & Uptime</button>
                         </li>
                     </ul>
 
@@ -495,13 +439,13 @@
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Will system integration disrupt my daily operations?
+                                            How do you handle integrations when an app has strict API rate limits?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Not at all. Our enterprise system integration approach involves phased rollouts and rigorous sandbox testing to ensure business continuity. Our team handles the technical complexity, allowing your team to remain focused.
+                                            We design intelligent queuing and caching middleware with rate-limit throttling and exponential backoff, ensuring high-volume sync operations never breach API thresholds.
                                         </div>
                                     </div>
                                 </div>
@@ -510,13 +454,13 @@
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Can you connect legacy on-premise systems to modern cloud apps?
+                                            Can you sync data with proprietary on-premise ERPs?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                         data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Yes, our application integration services specialize in bridging legacy infrastructure with modern cloud platforms through custom connectors and middleware.
+                                            Yes. We build lightweight, secure agent middleware and direct ODBC/SQL connectors that bridge on-premise ERPs with cloud applications through encrypted tunnels.
                                         </div>
                                     </div>
                                 </div>
@@ -526,17 +470,20 @@
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false"
                                             aria-controls="collapseThree">
-                                            How does AI improve traditional data automation solutions?
+                                            What happens when a software vendor updates their API?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Absolutely. AI data automation brings intelligence to your pipelines, enabling anomaly detection, automated data mapping suggestions, and self-healing data flows, moving beyond rigid, rule-based tasks.
+                                            Our managed integration services monitor vendor API change logs and test version migrations proactively in staging environments so your production pipelines never break.
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                            <p class="mt-4 text-muted">All data in transit is encrypted using TLS 1.3, with zero persistent storage of sensitive credentials in middleware layers.</p>
                         </div>
                     </div>
                 </div>
@@ -549,9 +496,9 @@
                 <!-- Section Header -->
                 <div class="ai-blog-header text-center">
                     <div class="ai-card-tag justify-content-center">
-                        <span class="dot"></span> LATEST BLOG
+                        <span class="dot"></span> INTEGRATION INSIGHTS
                     </div>
-                    <h2 class="ai-blog-title">AI and Creativity Stories Tips.</h2>
+                    <h2 class="ai-blog-title">Latest From Our Data Integration Blog</h2>
                 </div>
 
                 <!-- Blog Grid -->
@@ -559,51 +506,51 @@
                     <!-- Blog Card 1 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
-                                alt="Unlocking Data">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800"
+                                alt="Data Synchronization">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> By Data Lead</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> 20 Mar, 2024</span>
                             </div>
-                            <h3 class="blog-card-title">Unlocking the Power of Data for Business Success.</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">Real-Time Webhooks vs Scheduled Batch ETL: Choosing the Right Sync Model</h3>
+                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
 
                     <!-- Blog Card 2 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800"
-                                alt="Future of Work">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800"
+                                alt="Resilient Integrations">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> By Systems Architect</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> 24 Mar, 2024</span>
                             </div>
-                            <h3 class="blog-card-title">The Future of Work Embracing Digital Transformation.</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">Why Custom Integration Scripts Break (And How to Build Schema-Proof Pipelines)</h3>
+                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
 
                     <!-- Blog Card 3 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
-                                alt="AI Revolutionizing">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800"
+                                alt="Automotive Data Feeds">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> By Auto Tech Specialist</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> 28 Mar, 2024</span>
                             </div>
-                            <h3 class="blog-card-title">How AI is Revolutionizing Business and Industry Today</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">Case Study: Eliminating Inventory Lag Across 15+ Dealership Listing Portals</h3>
+                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
