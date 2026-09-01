@@ -1153,8 +1153,16 @@ body {
     font-size: 1.2rem;
     /* Reduced from default/inherited */
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: #333;
+}
+
+.service-card-desc {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
 }
 
 .service-card ul {
