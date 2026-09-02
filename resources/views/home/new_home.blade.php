@@ -29,7 +29,8 @@
                             Managed IT Services, Cybersecurity & Cloud Solutions for Growing US Businesses
                         </h1>
                         <p class="lead mb-4 responsive-paragraph">
-                            From network setup and 24/7 monitoring to cybersecurity, cloud migration, and AI automation — Mounteko keeps growing US businesses secure, connected, and online.
+                            From network setup and 24/7 monitoring to cybersecurity, cloud migration, and AI automation —
+                            Mounteko keeps growing US businesses secure, connected, and online.
                         </p>
                         <div
                             class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center gap-3">
@@ -63,7 +64,12 @@
                             </span>
                         </h3>
                         <p class="mb-35px sm-mb-25px">
-                            Mounteko Global Solutions is a managed IT services provider built for businesses that can't afford downtime, a breach, or a slow-moving vendor. We design and manage the network your team relies on, the cybersecurity that keeps it safe, the cloud infrastructure that lets it scale, and the AI automation that takes repetitive work off your team's plate — all from one accountable partner instead of five different vendors who don't talk to each other. If something breaks at 2 a.m., you call one number and a real engineer picks up.
+                            Mounteko Global Solutions is a managed IT services provider built for businesses that can't
+                            afford downtime, a breach, or a slow-moving vendor. We design and manage the network your team
+                            relies on, the cybersecurity that keeps it safe, the cloud infrastructure that lets it scale,
+                            and the AI automation that takes repetitive work off your team's plate — all from one
+                            accountable partner instead of five different vendors who don't talk to each other. If something
+                            breaks at 2 a.m., you call one number and a real engineer picks up.
                         </p>
                         <!-- removed - <a href="#" class="btn-shiny-lizard"> -->
                         <!-- added -->
@@ -177,13 +183,15 @@
                                 <i class="fas fa-tools"></i>
                             </div>
                             <h4>Managed IT Services</h4>
-                            <p class="service-card-desc">Eliminate costly downtime and sluggish tech support with 24/7 proactive monitoring, rapid helpdesk response, and dedicated engineering.</p>
+                            <p class="service-card-desc">Eliminate costly downtime and sluggish tech support with 24/7
+                                proactive monitoring, rapid helpdesk response, and dedicated engineering.</p>
                             <ul>
                                 <li>24/7 Support & Helpdesk</li>
                                 <li>Proactive System Monitoring & Maintenance</li>
                                 <li>Patch Management & Procurement</li>
                             </ul>
-                            <a href="{{ route('services.managed_it') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.managed_it') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Cybersecurity -->
@@ -193,13 +201,15 @@
                                 <i class="fas fa-shield-alt"></i>
                             </div>
                             <h4>Cybersecurity</h4>
-                            <p class="service-card-desc">Stop breaches before they cost you a client with multi-layered firewall protection, endpoint security, and proactive SOC monitoring.</p>
+                            <p class="service-card-desc">Stop breaches before they cost you a client with multi-layered
+                                firewall protection, endpoint security, and proactive SOC monitoring.</p>
                             <ul>
                                 <li>Firewall Setup & Endpoint Protection</li>
                                 <li>24/7 SOC Monitoring & Threat Detection</li>
                                 <li>Security Audits, VAPT & Compliance</li>
                             </ul>
-                            <a href="{{ route('services.security-audits') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.security-audits') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Cloud & IT Infrastructure -->
@@ -209,13 +219,15 @@
                                 <i class="fas fa-cloud"></i>
                             </div>
                             <h4>Cloud & IT Infrastructure</h4>
-                            <p class="service-card-desc">End server sprawl and costly outages by migrating workloads to secure, high-availability AWS, Azure, and hybrid cloud architectures.</p>
+                            <p class="service-card-desc">End server sprawl and costly outages by migrating workloads to
+                                secure, high-availability AWS, Azure, and hybrid cloud architectures.</p>
                             <ul>
                                 <li>Cloud Architecture & AWS/Azure Migration</li>
                                 <li>Servers, Storage & Virtualization</li>
                                 <li>Automated Backup & Disaster Recovery</li>
                             </ul>
-                            <a href="{{ route('services.cloud_architecture') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.cloud_architecture') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Network Solutions -->
@@ -225,13 +237,15 @@
                                 <i class="fas fa-network-wired"></i>
                             </div>
                             <h4>Network Solutions</h4>
-                            <p class="service-card-desc">Prevent network outages and latency bottlenecks with enterprise-grade LAN/WAN architecture, SD-WAN, and high-speed Wi-Fi.</p>
+                            <p class="service-card-desc">Prevent network outages and latency bottlenecks with
+                                enterprise-grade LAN/WAN architecture, SD-WAN, and high-speed Wi-Fi.</p>
                             <ul>
                                 <li>Network Architecture Design & Optimization</li>
                                 <li>Enterprise Wireless & SD-WAN</li>
                                 <li>Secure VPN & Remote Access</li>
                             </ul>
-                            <a href="{{ route('services.network-architecture') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.network-architecture') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- AI Integration & Automation -->
@@ -241,13 +255,15 @@
                                 <i class="fas fa-robot"></i>
                             </div>
                             <h4>AI Integration & Automation</h4>
-                            <p class="service-card-desc">Cut manual work and reduce operational bottlenecks with custom AI workflows, sales bots, and seamless data automations.</p>
+                            <p class="service-card-desc">Cut manual work and reduce operational bottlenecks with custom AI
+                                workflows, sales bots, and seamless data automations.</p>
                             <ul>
                                 <li>AI Workflow & Process Automation</li>
                                 <li>Sales & Support Chatbot Systems</li>
                                 <li>System Integration & Business Analytics</li>
                             </ul>
-                            <a href="{{ route('services.ai_integration_automation') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.ai_integration_automation') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- Software & Web Development -->
@@ -257,13 +273,15 @@
                                 <i class="fas fa-code"></i>
                             </div>
                             <h4>Software & Web Development</h4>
-                            <p class="service-card-desc">Replace clunky off-the-shelf tools with bespoke web applications, robust APIs, and custom software tailored to your workflow.</p>
+                            <p class="service-card-desc">Replace clunky off-the-shelf tools with bespoke web applications,
+                                robust APIs, and custom software tailored to your workflow.</p>
                             <ul>
                                 <li>Custom Web Applications & Portals</li>
                                 <li>API Development & System Integration</li>
                                 <li>E-Commerce & Ongoing Maintenance</li>
                             </ul>
-                            <a href="{{ route('services.custom_software') }}" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('services.custom_software') }}" class="service-cta">Learn More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -288,8 +306,10 @@
                                             alt="Healthcare">
                                         <div class="industry-card-overlay">
                                             <h4>Healthcare</h4>
-                                            <p class="industry-desc">HIPAA-compliant infrastructure and 24/7 support for practices and clinics that can't afford a system outage.</p>
-                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore Solutions</a>
+                                            <p class="industry-desc">HIPAA-compliant infrastructure and 24/7 support for
+                                                practices and clinics that can't afford a system outage.</p>
+                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore
+                                                Solutions</a>
                                         </div>
                                     </div>
                                 </div>
@@ -300,8 +320,10 @@
                                             alt="Banking & Finance">
                                         <div class="industry-card-overlay">
                                             <h4>Banking & Finance</h4>
-                                            <p class="industry-desc">SOC 2-compliant cloud architectures, encrypted communications, and zero-trust security for financial operations.</p>
-                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore Solutions</a>
+                                            <p class="industry-desc">SOC 2-compliant cloud architectures, encrypted
+                                                communications, and zero-trust security for financial operations.</p>
+                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore
+                                                Solutions</a>
                                         </div>
                                     </div>
                                 </div>
@@ -312,8 +334,10 @@
                                             alt="Manufacturing">
                                         <div class="industry-card-overlay">
                                             <h4>Manufacturing</h4>
-                                            <p class="industry-desc">Zero-downtime networks, IoT connectivity, and automated telemetry to keep production lines running 24/7.</p>
-                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore Solutions</a>
+                                            <p class="industry-desc">Zero-downtime networks, IoT connectivity, and
+                                                automated telemetry to keep production lines running 24/7.</p>
+                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore
+                                                Solutions</a>
                                         </div>
                                     </div>
                                 </div>
@@ -324,8 +348,10 @@
                                             alt="Retail & E-Commerce">
                                         <div class="industry-card-overlay">
                                             <h4>Retail & E-Commerce</h4>
-                                            <p class="industry-desc">PCI-compliant POS integration and high-traffic cloud scalability to handle peak transactions without slowdowns.</p>
-                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore Solutions</a>
+                                            <p class="industry-desc">PCI-compliant POS integration and high-traffic cloud
+                                                scalability to handle peak transactions without slowdowns.</p>
+                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore
+                                                Solutions</a>
                                         </div>
                                     </div>
                                 </div>
@@ -336,8 +362,10 @@
                                             alt="Automotive">
                                         <div class="industry-card-overlay">
                                             <h4>Automotive</h4>
-                                            <p class="industry-desc">Secure multi-site connectivity, telematics backends, and low-latency cloud infrastructure for mobility operations.</p>
-                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore Solutions</a>
+                                            <p class="industry-desc">Secure multi-site connectivity, telematics backends,
+                                                and low-latency cloud infrastructure for mobility operations.</p>
+                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore
+                                                Solutions</a>
                                         </div>
                                     </div>
                                 </div>
@@ -348,8 +376,10 @@
                                             alt="Consumer Goods">
                                         <div class="industry-card-overlay">
                                             <h4>Consumer Goods</h4>
-                                            <p class="industry-desc">Real-time supply chain data pipelines and automated order processing systems for faster market responsiveness.</p>
-                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore Solutions</a>
+                                            <p class="industry-desc">Real-time supply chain data pipelines and automated
+                                                order processing systems for faster market responsiveness.</p>
+                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore
+                                                Solutions</a>
                                         </div>
                                     </div>
                                 </div>
@@ -360,8 +390,10 @@
                                             alt="Technology & Telecom">
                                         <div class="industry-card-overlay">
                                             <h4>Technology & Telecom</h4>
-                                            <p class="industry-desc">High-throughput network framing, scalable cloud platforms, and 24/7 engineering support for high-demand services.</p>
-                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore Solutions</a>
+                                            <p class="industry-desc">High-throughput network framing, scalable cloud
+                                                platforms, and 24/7 engineering support for high-demand services.</p>
+                                            <a href="{{ route('contactUs') }}" class="btn btn-see-more">Explore
+                                                Solutions</a>
                                         </div>
                                     </div>
                                 </div>
@@ -385,11 +417,15 @@
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-12 text-center">
                         <p class="why-desc">
-                            Stop worrying about IT outages, cyber threats, and sluggish vendor response times. Mounteko Global Solutions
-                            provides unified managed IT, cybersecurity, cloud architecture, and automation under strict SLAs. We give your
-                            business dedicated senior engineers, guaranteed rapid response, and transparent single-source accountability.
+                            Stop worrying about IT outages, cyber threats, and sluggish vendor response times. Mounteko
+                            Global Solutions
+                            provides unified managed IT, cybersecurity, cloud architecture, and automation under strict
+                            SLAs. We give your
+                            business dedicated senior engineers, guaranteed rapid response, and transparent single-source
+                            accountability.
                         </p>
-                        <a href="{{ route('contactUs') }}" class="why-cta">GET A FREE IT ASSESSMENT — SPEAK WITH AN ENGINEER</a>
+                        <a href="{{ route('contactUs') }}" class="why-cta">GET A FREE IT ASSESSMENT — SPEAK WITH AN
+                            ENGINEER</a>
                     </div>
                 </div>
 
@@ -401,7 +437,7 @@
                             <span class="feature-text">15-Min Critical Response SLA</span>
                         </div>
                         <div class="feature-item mb-5">
-                            <span class="feature-text">24/7/365 US Support & Monitoring</span>
+                            <span class="feature-text">24*7 US Support & Monitoring</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-text">99.99% Infrastructure Uptime</span>
@@ -419,10 +455,10 @@
                     <!-- Right Features -->
                     <div class="col-md-3 text-start feature-col">
                         <div class="feature-item mb-5">
-                            <span class="feature-text">6 Integrated Service Lines</span>
+                            <span class="feature-text">Scalable Cloud Infrastructure</span>
                         </div>
                         <div class="feature-item mb-5">
-                            <span class="feature-text">Zero-Vendor Finger-Pointing</span>
+                            <span class="feature-text">One Partner. Full Accountability</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-text">NIST & HIPAA Security Standards</span>
@@ -436,11 +472,14 @@
         <section class="case-studies py-5">
             <div class="container text-center mb-5">
                 <h2 class="common-section-heading section-heading mb-3">Featured Case Studies</h2>
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; color: var(--primary-color);">Measurable Outcomes. Real Business Impact.</h3>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; color: var(--primary-color);">Measurable Outcomes. Real
+                    Business Impact.</h3>
                 <p class="section-subtitle mb-4">
-                    See how growing businesses achieve higher uptime, hardened cybersecurity, and streamlined operations with Mounteko's managed IT, cloud, and automation solutions.
+                    See how growing businesses achieve higher uptime, hardened cybersecurity, and streamlined operations
+                    with Mounteko's managed IT, cloud, and automation solutions.
                 </p>
-                <p class="mb-4">Let's work together to digitally transform your business and build the solutions of tomorrow.</p>
+                <p class="mb-4">Let's work together to digitally transform your business and build the solutions of
+                    tomorrow.</p>
                 <a href="{{ route('contactUs') }}" class="btn btn-case-study"><span>Talk to an expert</span> <i
                         class="fas fa-chevron-right ms-2"></i></a>
             </div>
@@ -454,7 +493,8 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Logistics & Supply Chain</span>
-                                    <p class="case-quote">"A 40-employee logistics company cut ticket resolution time by 55% and eliminated dispatch server downtime with 24/7 managed infrastructure."</p>
+                                    <p class="case-quote">"A 40-employee logistics company cut ticket resolution time by
+                                        55% and eliminated dispatch server downtime with 24/7 managed infrastructure."</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">Midwest Logistics Carrier (40 Users)</h5>
                                         <span class="industry-name">Managed IT & Cloud Infrastructure</span>
@@ -474,7 +514,8 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Healthcare Practice</span>
-                                    <p class="case-quote">"A multi-location medical group achieved 100% HIPAA compliance and eliminated daily VPN drops across 4 clinic locations."</p>
+                                    <p class="case-quote">"A multi-location medical group achieved 100% HIPAA compliance
+                                        and eliminated daily VPN drops across 4 clinic locations."</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">Regional Healthcare Group (65 Staff)</h5>
                                         <span class="industry-name">Cybersecurity & Remote Access</span>
@@ -494,7 +535,8 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Financial Services</span>
-                                    <p class="case-quote">"A boutique investment firm migrated 100% of legacy servers to Azure cloud with zero data loss, zero trading disruption, and SOC 2 alignment."</p>
+                                    <p class="case-quote">"A boutique investment firm migrated 100% of legacy servers to
+                                        Azure cloud with zero data loss, zero trading disruption, and SOC 2 alignment."</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">Wealth Management Firm ($120M AUM)</h5>
                                         <span class="industry-name">Cloud Migration & Compliance</span>
@@ -514,7 +556,8 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">Manufacturing</span>
-                                    <p class="case-quote">"A precision manufacturer reduced factory floor network packet drops by 98% and secured industrial IoT endpoints against ransomware."</p>
+                                    <p class="case-quote">"A precision manufacturer reduced factory floor network packet
+                                        drops by 98% and secured industrial IoT endpoints against ransomware."</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">Precision Manufacturing Plant (110 Employees)</h5>
                                         <span class="industry-name">Network Optimization & Endpoint Security</span>
@@ -534,7 +577,8 @@
                                 style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600');">
                                 <div class="case-card-content">
                                     <span class="case-tag">E-Commerce & Retail</span>
-                                    <p class="case-quote">"A fast-growing D2C retailer scaled through 300% holiday traffic spikes by automating inventory syncing with AI pipelines."</p>
+                                    <p class="case-quote">"A fast-growing D2C retailer scaled through 300% holiday traffic
+                                        spikes by automating inventory syncing with AI pipelines."</p>
                                     <div class="case-footer">
                                         <h5 class="company-name">National D2C Retailer (75+ Team)</h5>
                                         <span class="industry-name">AI Automation & Cloud Hosting</span>
@@ -569,9 +613,9 @@
                         </p>
                         <div class="d-flex flex-wrap gap-3">
                             <!-- removed
-                                    <a href="#" class="btn btn-cta-primary">Talk to an IT Expert</a>
-                                    <a href="#" class="btn btn-cta-outline">Schedule a Free IT Assessment</a>
-                                    -->
+                                            <a href="#" class="btn btn-cta-primary">Talk to an IT Expert</a>
+                                            <a href="#" class="btn btn-cta-outline">Schedule a Free IT Assessment</a>
+                                            -->
                             <!-- added -->
                             <a href="{{ route('contactUs') }}" class="btn btn-cta-primary">Talk to an IT Expert</a>
                             <a href="{{ route('contactUs') }}" class="btn btn-cta-outline">Schedule a Free IT
