@@ -167,6 +167,7 @@ P {
   z-index: 997;
   height: 86px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 #header.fixed-top {
@@ -342,7 +343,7 @@ P {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: var(--text-color);
+  color: #222222;
 }
 
 @media (max-width: 991px) {
@@ -356,6 +357,7 @@ P {
 }
 
 .navbar-mobile {
+  display: block !important;
   position: absolute !important;
   top: 100% !important;
   left: 0 !important;
@@ -363,8 +365,9 @@ P {
   background: #fff !important;
   transition: 0.3s;
   z-index: 9999 !important;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
-  border-top: 1px solid #eee;
+  box-shadow: none !important;
+  border: none !important;
+  border-top: none !important;
   min-height: calc(100vh - 100%);
 }
 
@@ -377,9 +380,14 @@ P {
   position: static !important;
   width: 100% !important;
   margin: 0 !important;
-  padding: 10px 0 !important;
+  padding: 15px 0 !important;
   background-color: #fff !important;
   overflow-y: visible !important;
+}
+
+.navbar-mobile > ul > li {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .navbar-mobile a,

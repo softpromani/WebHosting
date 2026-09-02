@@ -1,17 +1,30 @@
 <style>
     @media (max-width: 991px) {
-        .navbar-mobile a.ai-wrap-menu, .navbar-mobile a.ai-wrap-menu:focus {
+        #header {
+            box-shadow: none !important;
+        }
+
+        .navbar-mobile {
+            box-shadow: none !important;
+            border: none !important;
+            border-top: none !important;
+        }
+
+        .navbar-mobile a.ai-wrap-menu,
+        .navbar-mobile a.ai-wrap-menu:focus {
             white-space: normal !important;
             display: flex !important;
             align-items: center !important;
             justify-content: space-between !important;
             padding: 12px 20px !important;
         }
+
         .navbar-mobile a.ai-wrap-menu span {
             flex: 1;
             padding-right: 10px;
             line-height: 1.4;
         }
+
         .navbar-mobile a.ai-wrap-menu i {
             font-size: 14px !important;
         }
@@ -27,6 +40,7 @@
         padding-top: 12px !important;
         padding-bottom: 12px !important;
     }
+
     .mega-cat-link.ai-wrap-menu span {
         white-space: normal !important;
         line-height: 1.3 !important;
@@ -34,6 +48,7 @@
         padding-right: 10px;
         font-size: 14px;
     }
+
     .mega-cat-link.ai-wrap-menu i {
         margin-left: auto;
     }
@@ -41,11 +56,10 @@
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <!-- removed - <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}" alt=""></a> -->
-        <!-- added -->
-        <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}" alt="{{ settingValue('company Name') ?? 'Mounteko Global Solutions' }}"></a>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+        <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}"
+                alt="{{ settingValue('company Name') ?? 'Mounteko Global Solutions' }}"></a>
+
 
         <nav id="navbar" class="navbar">
             <ul>
@@ -57,65 +71,100 @@
 
                     <!-- Mobile Services Menu (Standard Dropdown) -->
                     <ul class="d-lg-none">
-                        <li class="dropdown"><a href="#"><span>Network Solutions</span> <i class="bi bi-chevron-right"></i></a>
+                        <li class="dropdown"><a href="#"><span>Network Solutions</span> <i
+                                    class="bi bi-chevron-right"></i></a>
                             <ul>
-                                <li><a href="{{ route('services.network-architecture') }}">Network architecture design</a></li>
-                                <li><a href="{{ route('services.enterprise-wireless-solutions') }}">Enterprise wireless solutions</a></li>
-                                <li><a href="{{ route('services.vpn-remote-access') }}">VPN setup & remote access</a></li>
+                                <li><a href="{{ route('services.network-architecture') }}">Network architecture
+                                        design</a></li>
+                                <li><a href="{{ route('services.enterprise-wireless-solutions') }}">Enterprise wireless
+                                        solutions</a></li>
+                                <li><a href="{{ route('services.vpn-remote-access') }}">VPN setup & remote access</a>
+                                </li>
                                 <li><a href="{{ route('services.network-monitoring') }}">Network monitoring</a></li>
-                                <li><a href="{{ route('services.firewall-router-configuration') }}">Firewall & router config</a></li>
-                                <li><a href="{{ route('services.disaster-recovery-redundancy') }}">Disaster recovery planning</a></li>
+                                <li><a href="{{ route('services.firewall-router-configuration') }}">Firewall & router
+                                        config</a></li>
+                                <li><a href="{{ route('services.disaster-recovery-redundancy') }}">Disaster recovery
+                                        planning</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#"><span>Security & Firewall</span> <i class="bi bi-chevron-right"></i></a>
+                        <li class="dropdown"><a href="#"><span>Security & Firewall</span> <i
+                                    class="bi bi-chevron-right"></i></a>
                             <ul>
                                 <li><a href="{{ route('services.security-audits') }}">Firewall Setup & Config</a></li>
-                                <li><a href="{{ route('services.vpn-setup-remote-access') }}">VPN Setup & Remote Access Security</a></li>
-                                <li><a href="{{ route('services.cloud-security-firewall') }}">Cloud Security & Firewall Protection</a></li>
-                                <li><a href="{{ route('services.network-intrusion-detection') }}">Network Security configuration</a></li>
-                                <li><a href="{{ route('services.endpoint-protection') }}">Threat Detection, Prevention & Endpoint Security</a></li>
+                                <li><a href="{{ route('services.vpn-setup-remote-access') }}">VPN Setup & Remote Access
+                                        Security</a></li>
+                                <li><a href="{{ route('services.cloud-security-firewall') }}">Cloud Security & Firewall
+                                        Protection</a></li>
+                                <li><a href="{{ route('services.network-intrusion-detection') }}">Network Security
+                                        configuration</a></li>
+                                <li><a href="{{ route('services.endpoint-protection') }}">Threat Detection, Prevention
+                                        & Endpoint Security</a></li>
                                 <li><a href="{{ route('services.soc_setup_monitoring') }}">Security Audit</a></li>
-                                <li><a href="{{ route('services.incident_response_recovery') }}">Firewall Monitoring & management</a></li>
-                                <li><a href="{{ route('services.email-phishing-protection') }}">Email & Application Security</a></li>
+                                <li><a href="{{ route('services.incident_response_recovery') }}">Firewall Monitoring &
+                                        management</a></li>
+                                <li><a href="{{ route('services.email-phishing-protection') }}">Email & Application
+                                        Security</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#"><span>Software & Web</span> <i class="bi bi-chevron-right"></i></a>
+                        <li class="dropdown"><a href="#"><span>Software & Web</span> <i
+                                    class="bi bi-chevron-right"></i></a>
                             <ul>
                                 <li><a href="{{ route('services.custom_software') }}">Website Design & Dev</a></li>
-                                <li><a href="{{ route('services.ecommerce_development') }}">E-commerce Development</a></li>
-                                <li><a href="{{ route('services.custom_web_applications') }}">Custom Software & Web Applications</a></li>
-                                <li><a href="{{ route('services.api_development') }}">API Development & System Integration</a></li>
+                                <li><a href="{{ route('services.ecommerce_development') }}">E-commerce Development</a>
+                                </li>
+                                <li><a href="{{ route('services.custom_web_applications') }}">Custom Software & Web
+                                        Applications</a></li>
+                                <li><a href="{{ route('services.api_development') }}">API Development & System
+                                        Integration</a></li>
                                 <li><a href="{{ route('services.website_maintenance') }}">Website Maintenance</a></li>
                                 <li><a href="{{ route('services.web_performance_seo') }}">SEO & Optimization</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#"><span>Cloud & IT</span> <i class="bi bi-chevron-right"></i></a>
+                        <li class="dropdown"><a href="#"><span>Cloud & IT</span> <i
+                                    class="bi bi-chevron-right"></i></a>
                             <ul>
-                                <li><a href="{{ route('services.cloud_architecture') }}">Cloud Setup, Migration & Deployment</a></li>
-                                <li><a href="{{ route('services.backup_disaster_recovery') }}">Backup & Recovery</a></li>
-                                <li><a href="{{ route('services.server_infrastructure_management') }}">Server Management</a></li>
-                                <li><a href="{{ route('services.it_audit_consulting') }}">IT Audit & Consulting</a></li>
+                                <li><a href="{{ route('services.cloud_architecture') }}">Cloud Setup, Migration &
+                                        Deployment</a></li>
+                                <li><a href="{{ route('services.backup_disaster_recovery') }}">Backup & Recovery</a>
+                                </li>
+                                <li><a href="{{ route('services.server_infrastructure_management') }}">Server
+                                        Management</a></li>
+                                <li><a href="{{ route('services.it_audit_consulting') }}">IT Audit & Consulting</a>
+                                </li>
                                 <li><a href="{{ route('services.cloud_security_compliance') }}">Cloud Security</a></li>
                                 <li><a href="{{ route('services.hybrid_cloud_integration') }}">Hybrid Cloud</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#"><span>Managed IT Services</span> <i class="bi bi-chevron-right"></i></a>
+                        <li class="dropdown"><a href="#"><span>Managed IT Services</span> <i
+                                    class="bi bi-chevron-right"></i></a>
                             <ul>
-                                <li><a href="{{ route('services.it_support_helpdesk') }}">End to End IT support & Helpdesk</a></li>
-                                <li><a href="{{ route('services.system_monitoring') }}">System monitoring & maintenance</a></li>
-                                <li><a href="{{ route('services.patch_management') }}">System patch management & updates</a></li>
-                                <li><a href="{{ route('services.hardware_software_procurement') }}">Hardware & software procurement</a></li>
+                                <li><a href="{{ route('services.it_support_helpdesk') }}">End to End IT support &
+                                        Helpdesk</a></li>
+                                <li><a href="{{ route('services.system_monitoring') }}">System monitoring &
+                                        maintenance</a></li>
+                                <li><a href="{{ route('services.patch_management') }}">System patch management &
+                                        updates</a></li>
+                                <li><a href="{{ route('services.hardware_software_procurement') }}">Hardware & software
+                                        procurement</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#" class="ai-wrap-menu"><span>AI Integration & Business Automation</span> <i class="bi bi-chevron-right"></i></a>
+                        <li class="dropdown"><a href="#" class="ai-wrap-menu"><span>AI Integration & Business
+                                    Automation</span> <i class="bi bi-chevron-right"></i></a>
                             <ul>
-                                <li><a href="{{ route('services.ai_integration_automation') }}">AI Integration & Business Automation</a></li>
-                                <li><a href="{{ route('services.ai_powered_sales_automation') }}">AI-Powered Sales Automation System</a></li>
-                                <li><a href="{{ route('services.ai_chatbots_customer_support') }}">AI Chatbots & Customer Support Automation</a></li>
-                                <li><a href="{{ route('services.workflow_process_automation') }}">Workflow & Process Automation</a></li>
-                                <li><a href="{{ route('services.marketing_automation_systems') }}">Marketing Automation Systems</a></li>
-                                <li><a href="{{ route('services.system_integration_automation') }}">System Integration & Data Automation</a></li>
-                                <li><a href="{{ route('services.ai_analytics_business_insights') }}">AI Analytics & Business Insights</a></li>
+                                <li><a href="{{ route('services.ai_integration_automation') }}">AI Integration &
+                                        Business Automation</a></li>
+                                <li><a href="{{ route('services.ai_powered_sales_automation') }}">AI-Powered Sales
+                                        Automation System</a></li>
+                                <li><a href="{{ route('services.ai_chatbots_customer_support') }}">AI Chatbots &
+                                        Customer Support Automation</a></li>
+                                <li><a href="{{ route('services.workflow_process_automation') }}">Workflow & Process
+                                        Automation</a></li>
+                                <li><a href="{{ route('services.marketing_automation_systems') }}">Marketing Automation
+                                        Systems</a></li>
+                                <li><a href="{{ route('services.system_integration_automation') }}">System Integration
+                                        & Data Automation</a></li>
+                                <li><a href="{{ route('services.ai_analytics_business_insights') }}">AI Analytics &
+                                        Business Insights</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -183,7 +232,8 @@
                                     </div>
                                     <div id="mega-tab-cybersecurity" class="mega-cat-content">
                                         <h4 style="cursor: pointer;"
-                                            onclick="window.location.href='{{ route('services.security-audits') }}'">Cybersecurity
+                                            onclick="window.location.href='{{ route('services.security-audits') }}'">
+                                            Cybersecurity
                                             Services</h4>
                                         <div class="content-grid">
                                             <a href="{{ route('services.security-audits') }}">Firewall Setup &
@@ -249,7 +299,8 @@
                                                 style="color: inherit; text-decoration: none;">Managed IT Services</a>
                                         </h4>
                                         <div class="content-grid">
-                                            <a href="{{ route('services.it_support_helpdesk') }}">End to End IT support & Helpdesk</a>
+                                            <a href="{{ route('services.it_support_helpdesk') }}">End to End IT
+                                                support & Helpdesk</a>
                                             <a href="{{ route('services.system_monitoring') }}">System monitoring &
                                                 maintenance</a>
                                             <a href="{{ route('services.patch_management') }}">System patch management
@@ -261,14 +312,21 @@
                                     </div>
                                     <div id="mega-tab-consulting" class="mega-cat-content">
                                         <h4 style="cursor: pointer;"
-                                            onclick="window.location.href='{{ route('services.ai_integration_automation') }}'">AI Integration & Business Automation</h4>
+                                            onclick="window.location.href='{{ route('services.ai_integration_automation') }}'">
+                                            AI Integration & Business Automation</h4>
                                         <div class="content-grid">
-                                            <a href="{{ route('services.ai_powered_sales_automation') }}">AI-Powered Sales Automation System</a>
-                                            <a href="{{ route('services.ai_chatbots_customer_support') }}">AI Chatbots & Customer Support Automation</a>
-                                            <a href="{{ route('services.workflow_process_automation') }}">Workflow & Process Automation</a>
-                                            <a href="{{ route('services.marketing_automation_systems') }}">Marketing Automation Systems</a>
-                                            <a href="{{ route('services.system_integration_automation') }}">System Integration & Data Automation</a>
-                                            <a href="{{ route('services.ai_analytics_business_insights') }}">AI Analytics & Business Insights</a>
+                                            <a href="{{ route('services.ai_powered_sales_automation') }}">AI-Powered
+                                                Sales Automation System</a>
+                                            <a href="{{ route('services.ai_chatbots_customer_support') }}">AI Chatbots
+                                                & Customer Support Automation</a>
+                                            <a href="{{ route('services.workflow_process_automation') }}">Workflow &
+                                                Process Automation</a>
+                                            <a href="{{ route('services.marketing_automation_systems') }}">Marketing
+                                                Automation Systems</a>
+                                            <a href="{{ route('services.system_integration_automation') }}">System
+                                                Integration & Data Automation</a>
+                                            <a href="{{ route('services.ai_analytics_business_insights') }}">AI
+                                                Analytics & Business Insights</a>
                                         </div>
                                     </div>
                                 </div>
@@ -291,15 +349,16 @@
                     </ul>
                 </li>
 
-                <li class="nav-link">
+                {{-- <li class="nav-link">
                     <a href="#">Downloads</a>
-                </li>
+                </li> --}}
                 <li>
-                    <a class="nav-link scrollto" href="{{ route('contactUs') }}">Contact Us</a>
+                    <a class="nav-link" href="{{ route('contactUs') }}">Contact Us</a>
                 </li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
 
     </div>
 </header>

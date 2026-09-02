@@ -2,7 +2,9 @@
 {{-- @section('title', 'Contact Mounteko') --}}
 @section('title', 'Contact Mounteko | Talk to a Managed IT & Security Expert')
 {{-- @section('meta-description', 'Get in touch with us.') --}}
-@section('meta-description', 'Get in touch with Mounteko\'s IT support team. Call, email, or fill out our form — we respond within one business day.')
+@section('meta-description',
+    'Get in touch with Mounteko\'s IT support team. Call, email, or fill out our form — we
+    respond within one business day.')
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
@@ -15,13 +17,13 @@
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
             @php
-            $baseColor =  settingValue('primary') ?? '#65E82E'; // Change this dynamically
-            $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
-            $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
+                $baseColor = settingValue('primary') ?? '#65E82E'; // Change this dynamically
+                $lightColor = adjustBrightness($baseColor, 100); // Lighter Shade
+                $darkColor = adjustBrightness($baseColor, -50); // Darker Shade
             @endphp
             <div class="optech-breadcrumb"
-            style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');">
-               <div class="container">
+                style="background-image: url('{{ asset('storage/' . settingValue('breadcrumb_image')) }}');">
+                <div class="container">
                     <h1 class="post__title" style="color: white;">Contact us</h1>
                     <nav class="breadcrumbs">
                         <ul class="breadcrumb-nav-list">
@@ -32,58 +34,63 @@
                 </div>
             </div>
         </section><!-- Breadcrumbs Section -->
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container" data-aos="fade-up">
-
-
-                <section class="contact-promo ptb-120">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Card 1: Phone -->
-                            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                                <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
-                                    <i class="fas fa-phone fa-3x"></i>
-                                    <div class="contact-promo-info mb-4">
-                                        <h5>Give us a call</h5>
-                                        <p>Give us a ring. Our Experts are standing by <strong>monday to friday</strong>
-                                            from <strong>9am to 5pm EST.</strong></p>
-                                    </div>
-                                    <a href="tel:{{ settingValue('phone') }}" class="btn btn-primary mt-auto">{{ settingValue('phone') }}</a>
-                                </div>
+        <section class="contact-promo ptb-120">
+            <div class="container">
+                <div class="row">
+                    <!-- Card 1: Phone -->
+                    <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                        <div
+                            class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                            <i class="fas fa-phone fa-3x"></i>
+                            <div class="contact-promo-info mb-4">
+                                <h5>Give us a call</h5>
+                                <p>Give us a ring. Our Experts are standing by <strong>monday to friday</strong>
+                                    from <strong>9am to 5pm EST.</strong></p>
                             </div>
-                            <!-- Card 2: Email -->
-                            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                                <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
-                                    <i class="fas fa-envelope fa-3x"></i>
-                                    <div class="contact-promo-info mb-4">
-                                        <h5>Email Us</h5>
-                                        <p>Simply drop us an email at <a href="mailto:{{ settingValue('email') }}"><strong class="mai">{{ settingValue('email') }}</strong></a>
-                                             and you'll receive a reply within 24 hours.</p>
-                                    </div>
-                                    <a href="mailto:{{ settingValue('email') }}" class="btn btn-primary mt-auto">Email Us</a>
-                                </div>
-                            </div>
-                            <!-- Card 3: Chat -->
-                            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                                <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
-                                    <i class="fas fa-comments fa-3x"></i>
-                                    <div class="contact-promo-info mb-4">
-                                        <h5>Chat with us</h5>
-                                        <p>We've got live Social Experts waiting to help you <strong>monday to
-                                                friday</strong> from <strong>9am to 5pm EST.</strong></p>
-                                    </div>
-                                    <a href="#" onclick="if(typeof Tawk_API !== 'undefined') { Tawk_API.maximize(); } return false;" class="btn btn-primary mt-auto">Chat with us</a>
-                                </div>
-                            </div>
+                            <a href="tel:{{ settingValue('phone') }}"
+                                class="btn btn-primary mt-auto">{{ settingValue('phone') }}</a>
                         </div>
                     </div>
-                </section>
+                    <!-- Card 2: Email -->
+                    <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                        <div
+                            class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                            <i class="fas fa-envelope fa-3x"></i>
+                            <div class="contact-promo-info mb-4">
+                                <h5>Email Us</h5>
+                                <p>Simply drop us an email at <a href="mailto:{{ settingValue('email') }}"><strong
+                                            class="mai">{{ settingValue('email') }}</strong></a>
+                                    and you'll receive a reply within 24 hours.</p>
+                            </div>
+                            <a href="mailto:{{ settingValue('email') }}" class="btn btn-primary mt-auto">Email
+                                Us</a>
+                        </div>
+                    </div>
+                    <!-- Card 3: Chat -->
+                    <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                        <div
+                            class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                            <i class="fas fa-comments fa-3x"></i>
+                            <div class="contact-promo-info mb-4">
+                                <h5>Chat with us</h5>
+                                <p>We've got live Social Experts waiting to help you <strong>monday to
+                                        friday</strong> from <strong>9am to 5pm EST.</strong></p>
+                            </div>
+                            <a href="#"
+                                onclick="if(typeof Tawk_API !== 'undefined') { Tawk_API.maximize(); } return false;"
+                                class="btn btn-primary mt-auto">Chat with us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Contact Section ======= -->
+        {{-- <section id="contact" class="contact py-5">
+            <div class="container">
 
 
-
-                {{-- <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
                     <div class="col-lg-6">
                         <div class="info-box mb-4">
                             <i class="bx bx-map"></i>
@@ -108,9 +115,9 @@
                         </div>
                     </div>
 
-                </div> --}}
+                </div>
 
-                {{-- <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
 
                     <div class="col-lg-6 ">
                         <iframe class="mb-4 mb-lg-0"
@@ -148,10 +155,10 @@
                         </form>
                     </div>
 
-                </div> --}}
+                </div>
 
             </div>
-        </section>
+        </section> --}}
 
         <section class="contact-us-form pt-60 pb-120 bg-solitude-blue contact" id="contact  ">
             <div class="container">
@@ -167,7 +174,8 @@
                             <h2>Talk to Our Sales & Marketing Department Team</h2>
                             <p>Tell us what you need — our team typically replies within one business day.</p>
                         </div>
-                        <form action="{{ route('contactStore') }}" method="post" role="form" class="php-email-form">
+                        <form action="{{ route('contactStore') }}" method="post" role="form"
+                            class="php-email-form">
                             @csrf
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="row">
@@ -182,8 +190,8 @@
                                 <div class="col-sm-6">
                                     <label for="lname" class="mb-1">Last name</label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="lastName" placeholder="Last name"
-                                            aria-label="Last name" name="lname">
+                                        <input type="text" class="form-control" id="lastName"
+                                            placeholder="Last name" aria-label="Last name" name="lname">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -196,12 +204,13 @@
                                 <div class="col-sm-6">
                                     <label for="phone" class="mb-1">Phone <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="phone" name="phone" required
-                                            placeholder="Phone" aria-label="Phone">
+                                        <input type="text" class="form-control" id="phone" name="phone"
+                                            required placeholder="Phone" aria-label="Phone">
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <label for="subject" class="mb-1">What are you contacting us about? <span class="text-danger">*</span></label>
+                                    <label for="subject" class="mb-1">What are you contacting us about? <span
+                                            class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
                                         <select class="form-control" id="subject" name="subject" required>
                                             <option value="" disabled selected>Select an option...</option>

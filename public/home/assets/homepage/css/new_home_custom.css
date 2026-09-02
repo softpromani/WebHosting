@@ -2531,7 +2531,23 @@ div#owl-demo1 .item {
 }
 
 .contact-us-form .section-heading {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+.contact-us-form .section-heading h2 {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #1a202c !important;
+    margin-bottom: 10px !important;
+    font-family: inherit !important;
+}
+
+.contact-us-form .section-heading p {
+    font-size: 15px !important;
+    color: #64748b !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
 }
 
 .contact-us-form .register-form label {

@@ -13,11 +13,17 @@
    * Easy selector helper function
    */
   const select = (el, all = false) => {
+    if (!el || typeof el !== 'string') return all ? [] : null;
     el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
+    if (!el || el === '#' || el.length === 0) return all ? [] : null;
+    try {
+      if (all) {
+        return [...document.querySelectorAll(el)]
+      } else {
+        return document.querySelector(el)
+      }
+    } catch (e) {
+      return all ? [] : null;
     }
   }
 
