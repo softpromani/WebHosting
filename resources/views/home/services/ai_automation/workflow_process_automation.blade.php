@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'Workflow & Business Process Automation Services | Mounteko')
 @section('meta-description',
-'Workflow and process automation that cuts manual work and human error across your operations — built by Mounteko.')
+    'Workflow and process automation that cuts manual work and human error across your
+    operations — built by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -37,8 +38,11 @@
 
             <div class="ai-hero-container">
                 <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Intelligent Workflow & Process Automation Services</h1>
-                <p class="ai-hero-desc">Empower your enterprise with seamless workflow automation services that eliminate bottlenecks, connect systems, and accelerate operational excellence through intelligent design.</p>
+                <h1 class="ai-hero-title">Workflow & Business Process Automation Services</h1>
+                <p class="ai-hero-desc">Every business has a process that still runs on someone remembering to do it
+                    manually — forwarding an email, updating a spreadsheet, moving a task from one system to another.
+                    Mounteko automates these workflows so the process runs itself, consistently, without depending on
+                    someone's memory. </p>
 
                 <div class="ai-pills-row">
                     <span class="ai-pill">SOC2 Compliant</span>
@@ -77,7 +81,10 @@
                         Who We Are
                     </div>
                     <h2 class="ai-about-title">Redefining Business Productivity with Workflow & Process Automation</h2>
-                    <p class="ai-about-desc">We are a premier workflow automation company passionate transforming disconnected, manual tasks into seamless, end-to-end automated processes. Our mission is to empower organizations with intelligent workflow solutions that eliminate inefficiencies and accelerate operational excellence.</p>
+                    <p class="ai-about-desc">We are a premier workflow automation company passionate transforming
+                        disconnected, manual tasks into seamless, end-to-end automated processes. Our mission is to empower
+                        organizations with intelligent workflow solutions that eliminate inefficiencies and accelerate
+                        operational excellence.</p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
@@ -91,9 +98,12 @@
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> From simple approval chains to complex, cross-functional process orchestration.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Leveraging AI to identify bottlenecks, redundancies, and optimization opportunities across workflows.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> A unified dashboard to design, execute, monitor, and refine every business process in real time.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> From simple approval chains to complex, cross-functional
+                            process orchestration.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Leveraging AI to identify bottlenecks, redundancies, and
+                            optimization opportunities across workflows.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> A unified dashboard to design, execute, monitor, and
+                            refine every business process in real time.</li>
                     </ul>
 
                     <div>
@@ -127,12 +137,20 @@
                         About Us
                     </div>
                     <h2 class="ai-about-title">Supercharge Business Agility with High-Performance Workflow Automation</h2>
-                    <p class="ai-about-desc">Stop dealing with slow, messy workflows. We give you automation that helps your business run better and faster. Our platform uses smart tools to build a workflow system that grows with you—and works smoothly with what you already have.</p>
+                    <p class="ai-about-desc">Stop dealing with slow, messy workflows. We give you automation that helps your
+                        business run better and faster. Our platform uses smart tools to build a workflow system that grows
+                        with you—and works smoothly with what you already have.</p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Enterprise-Ready Automation Engine – Execute thousands of parallel processes with sub-second latency, role-based access control, and audit-ready logging.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Real-Time Process Intelligence – Monitor every task, detect anomalies instantly, and trigger corrective workflows automatically using live analytics and custom SLAs.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Seamless API-First Integration – Connect seamlessly to Salesforce, SAP, Oracle, Microsoft Dynamics, legacy on-premise systems, and any standard API — in days, not months.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Enterprise-Ready Automation Engine – Execute thousands
+                            of parallel processes with sub-second latency, role-based access control, and audit-ready
+                            logging.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Real-Time Process Intelligence – Monitor every task,
+                            detect anomalies instantly, and trigger corrective workflows automatically using live analytics
+                            and custom SLAs.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Seamless API-First Integration – Connect seamlessly to
+                            Salesforce, SAP, Oracle, Microsoft Dynamics, legacy on-premise systems, and any standard API —
+                            in days, not months.</li>
                     </ul>
 
                     <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Project <i
@@ -152,7 +170,8 @@
                         <div class="dot"></div>
                         Our Best Services
                     </div>
-                    <h2 class="ai-about-title" style="font-size: 30px;">Comprehensive Automation Solutions for Business Growth</h2>
+                    <h2 class="ai-about-title" style="font-size: 30px;">Comprehensive Automation Solutions for Business
+                        Growth</h2>
                 </div>
 
 
@@ -168,7 +187,9 @@
                             <i class="bi bi-search"></i>
                         </div>
                         <h3 class="ai-service-title">Intelligent Process Discovery</h3>
-                        <p class="ai-service-desc">Our business process automation services begin by identifying high-impact automation opportunities, mapping your workflows to pinpoint inefficiencies and bottlenecks before designing a solution.</p>
+                        <p class="ai-service-desc">Our business process automation services begin by identifying
+                            high-impact automation opportunities, mapping your workflows to pinpoint inefficiencies and
+                            bottlenecks before designing a solution.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -183,7 +204,8 @@
                             <i class="bi bi-diagram-3-fill"></i>
                         </div>
                         <h3 class="ai-service-title">End-to-End Workflow Automation</h3>
-                        <p class="ai-service-desc">We design and deploy custom workflow automation solutions that connect people, processes, and data across your entire organization for hands-free operation.</p>
+                        <p class="ai-service-desc">We design and deploy custom workflow automation solutions that connect
+                            people, processes, and data across your entire organization for hands-free operation.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -198,7 +220,9 @@
                             <i class="bi bi-cpu"></i>
                         </div>
                         <h3 class="ai-service-title">AI Workflow Automation</h3>
-                        <p class="ai-service-desc">Go beyond rules-based tasks. We embed artificial intelligence into your process automation services to handle unstructured data, make predictions, and initiate smart actions.</p>
+                        <p class="ai-service-desc">Go beyond rules-based tasks. We embed artificial intelligence into your
+                            process automation services to handle unstructured data, make predictions, and initiate smart
+                            actions.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -213,7 +237,8 @@
                             <i class="bi bi-robot"></i>
                         </div>
                         <h3 class="ai-service-title">Robotic Process Automation (RPA)</h3>
-                        <p class="ai-service-desc">Our process automation company deploys software robots to handle repetitive, high-volume tasks with 100% accuracy, freeing your talent for strategic work.</p>
+                        <p class="ai-service-desc">Our process automation company deploys software robots to handle
+                            repetitive, high-volume tasks with 100% accuracy, freeing your talent for strategic work.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -228,7 +253,8 @@
                             <i class="bi bi-link-45deg"></i>
                         </div>
                         <h3 class="ai-service-title">Business Automation & Integration</h3>
-                        <p class="ai-service-desc">We build a cohesive workflow management system by seamlessly integrating your core applications, APIs, and data sources into one automated, synced environment.</p>
+                        <p class="ai-service-desc">We build a cohesive workflow management system by seamlessly integrating
+                            your core applications, APIs, and data sources into one automated, synced environment.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -243,7 +269,8 @@
                             <i class="bi bi-map"></i>
                         </div>
                         <h3 class="ai-service-title">Enterprise Automation Strategy</h3>
-                        <p class="ai-service-desc">A top-to-bottom roadmap for enterprise workflow automation, ensuring governance, scalability, and alignment with your long-term business objectives.</p>
+                        <p class="ai-service-desc">A top-to-bottom roadmap for enterprise workflow automation, ensuring
+                            governance, scalability, and alignment with your long-term business objectives.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
                 </div>
@@ -258,8 +285,11 @@
                         <div class="dot"></div>
                         How It Works
                     </div>
-                    <h2 class="ai-about-title" style="font-size: 28px;">Your Journey to Enterprise Workflow Automation</h2>
-                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed consultation to understand your operational pain points, process dependencies, and strategic goals for automation.</p>
+                    <h2 class="ai-about-title" style="font-size: 28px;">Your Journey to Enterprise Workflow Automation
+                    </h2>
+                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed consultation to
+                        understand your operational pain points, process dependencies, and strategic goals for automation.
+                    </p>
                 </div>
 
 
@@ -338,7 +368,9 @@
                     <span class="ai-tag-purple">Our Experience</span>
                     <h2 class="ai-exp-title">Welcome to smarter, faster, more reliable process automation</h2>
                     <p class="ai-exp-desc">
-                        As a proven workflow automation specialist, we deliver solutions that adapt to your unique operational reality. Whether finance, HR, IT, or sales, our automation engine helps you standardize repeatable tasks, enforce business rules, and free your teams for higher-value work.
+                        As a proven workflow automation specialist, we deliver solutions that adapt to your unique
+                        operational reality. Whether finance, HR, IT, or sales, our automation engine helps you standardize
+                        repeatable tasks, enforce business rules, and free your teams for higher-value work.
                     </p>
 
                     <div class="ai-exp-checklist">
@@ -361,7 +393,8 @@
                     </div>
 
                     <p class="ai-exp-footer-text">
-                        Enforce consistent execution of business rules while providing full visibility into operational outcomes.
+                        Enforce consistent execution of business rules while providing full visibility into operational
+                        outcomes.
                     </p>
 
                     <a href="{{ route('contactUs') }}" class="btn-ai-purple">
@@ -434,59 +467,69 @@
                     <!-- Tabs (Only General Ask) -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                                data-bs-target="#general" type="button" role="tab" aria-controls="general"
+                                aria-selected="true">General Ask</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
-                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                            aria-labelledby="general-tab">
                             <!-- Accordion General -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
                                             Is business process automation suitable for small and mid-sized businesses?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Absolutely. Our business automation services are modular and scalable. We build affordable workflow automation solutions that grow with your business, not just for large enterprises.
+                                            Absolutely. Our business automation services are modular and scalable. We build
+                                            affordable workflow automation solutions that grow with your business, not just
+                                            for large enterprises.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                             How does AI workflow automation differ from basic RPA?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#faqAccordion">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Basic RPA handles rule-based, structured tasks. Our AI workflow automation integrates machine learning to process unstructured data, understand context, and make intelligent decisions, expanding automation's potential.
+                                            Basic RPA handles rule-based, structured tasks. Our AI workflow automation
+                                            integrates machine learning to process unstructured data, understand context,
+                                            and make intelligent decisions, expanding automation's potential.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             We have legacy systems. Can a workflow management system still integrate?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Yes, it’s our specialty as a process automation company. We design automation solutions for businesses that wrap around your existing legacy infrastructure without requiring a costly rip-and-replace.
+                                            Yes, it’s our specialty as a process automation company. We design automation
+                                            solutions for businesses that wrap around your existing legacy infrastructure
+                                            without requiring a costly rip-and-replace.
                                         </div>
                                     </div>
                                 </div>

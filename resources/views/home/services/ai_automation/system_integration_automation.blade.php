@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'System Integration & Data Automation Services | Mounteko')
 @section('meta-description',
-"Connect your tools and automate the data flow between them — system integration built by Mounteko's automation team.")
+    "Connect your tools and automate the data flow between them — system integration built by
+    Mounteko's automation team.")
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -84,8 +85,11 @@
 
             <div class="ai-hero-container">
                 <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Transform your business with seamless System Integration & Data Automation</h1>
-                <p class="ai-hero-desc">Unify your technology ecosystem, eliminate data silos, and accelerate decision-making with our enterprise-grade system integration services and intelligent data automation solutions.</p>
+                <h1 class="ai-hero-title">System Integration & Data Automation Services </h1>
+                <p class="ai-hero-desc">Data that lives in five different systems isn't really useful in any of them —
+                    someone still has to pull it together manually before it means anything. Mounteko integrates your
+                    business systems and automates the data flow between them, so information updates everywhere it needs
+                    to, automatically. </p>
 
                 <div class="ai-pills-row">
                     <span class="ai-pill">SOC2 Compliant</span>
@@ -123,8 +127,11 @@
                         <div class="dot"></div>
                         Who We Are
                     </div>
-                    <h2 class="ai-about-title">Redefining Enterprise Connectivity with the Power of Intelligent Automation.</h2>
-                    <p class="ai-about-desc">We are a premier system integration company passionate about turning fragmented data landscapes into unified operational powerhouses. Our mission is to empower businesses through seamless business system integration and intelligent data orchestration.</p>
+                    <h2 class="ai-about-title">Redefining Enterprise Connectivity with the Power of Intelligent Automation.
+                    </h2>
+                    <p class="ai-about-desc">We are a premier system integration company passionate about turning fragmented
+                        data landscapes into unified operational powerhouses. Our mission is to empower businesses through
+                        seamless business system integration and intelligent data orchestration.</p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
@@ -138,9 +145,12 @@
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Breaking down silos with leading enterprise system integration to create a single source of truth.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> From simple connections to complex, cross-application automation and integration services.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Automate data pipelines to deliver real-time analytics and drive proactive decision-making.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Breaking down silos with leading enterprise system
+                            integration to create a single source of truth.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> From simple connections to complex, cross-application
+                            automation and integration services.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Automate data pipelines to deliver real-time analytics
+                            and drive proactive decision-making.</li>
                     </ul>
 
                     <div>
@@ -174,12 +184,17 @@
                         About Us
                     </div>
                     <h2 class="ai-about-title">Transforming Operations with Holistic Data Automation Services</h2>
-                    <p class="ai-about-desc">We are pioneers in the fusion of complex business systems and cutting-edge data automation services. Our mission is to transform the way organizations manage their digital infrastructure by delivering innovative, scalable integration blueprints.</p>
+                    <p class="ai-about-desc">We are pioneers in the fusion of complex business systems and cutting-edge data
+                        automation services. Our mission is to transform the way organizations manage their digital
+                        infrastructure by delivering innovative, scalable integration blueprints.</p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Advanced Application Integration Services for Seamless Cross-Platform Connectivity.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Real-time ETL Automation Services for Optimized Data Transformation and Loading.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> AI-Powered Data Automation for Intelligent, Self-Optimizing Workflows.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Advanced Application Integration Services for Seamless
+                            Cross-Platform Connectivity.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Real-time ETL Automation Services for Optimized Data
+                            Transformation and Loading.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> AI-Powered Data Automation for Intelligent,
+                            Self-Optimizing Workflows.</li>
                     </ul>
 
                     <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Projects <i
@@ -199,7 +214,8 @@
                         <div class="dot"></div>
                         Our Best Services
                     </div>
-                    <h2 class="ai-about-title" style="font-size: 42px;">Best Innovative Solution for Integrated Enterprises</h2>
+                    <h2 class="ai-about-title" style="font-size: 42px;">Best Innovative Solution for Integrated
+                        Enterprises</h2>
                 </div>
 
 
@@ -215,7 +231,9 @@
                             <i class="bi bi-cpu"></i>
                         </div>
                         <h3 class="ai-service-title">Enterprise System Integration</h3>
-                        <p class="ai-service-desc">Specialize in delivering comprehensive enterprise system integration that revolutionizes the way your core platforms communicate. By leveraging the latest API-driven architectures.</p>
+                        <p class="ai-service-desc">Specialize in delivering comprehensive enterprise system integration
+                            that revolutionizes the way your core platforms communicate. By leveraging the latest API-driven
+                            architectures.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -230,7 +248,9 @@
                             <i class="bi bi-pc-display"></i>
                         </div>
                         <h3 class="ai-service-title">Data Automation Solutions</h3>
-                        <p class="ai-service-desc">Designing and implementing intelligent data automation solutions that streamline data collection, transformation, and distribution across your entire organization.</p>
+                        <p class="ai-service-desc">Designing and implementing intelligent data automation solutions that
+                            streamline data collection, transformation, and distribution across your entire organization.
+                        </p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -245,7 +265,9 @@
                             <i class="bi bi-diagram-3"></i>
                         </div>
                         <h3 class="ai-service-title">AI Data Automation</h3>
-                        <p class="ai-service-desc">Harness the power of machine learning within your pipelines. Our AI data automation services predict failures, cleanse data dynamically, and optimize flows in real-time.</p>
+                        <p class="ai-service-desc">Harness the power of machine learning within your pipelines. Our AI data
+                            automation services predict failures, cleanse data dynamically, and optimize flows in real-time.
+                        </p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -260,7 +282,8 @@
                             <i class="bi bi-bar-chart-line"></i>
                         </div>
                         <h3 class="ai-service-title">ETL Automation Services</h3>
-                        <p class="ai-service-desc">Modernize your data warehouse strategy with robust ETL automation services that handle extraction, transformation, and loading with speed and precision.</p>
+                        <p class="ai-service-desc">Modernize your data warehouse strategy with robust ETL automation
+                            services that handle extraction, transformation, and loading with speed and precision.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -275,7 +298,8 @@
                             <i class="bi bi-gear-wide-connected"></i>
                         </div>
                         <h3 class="ai-service-title">Application Integration Services</h3>
-                        <p class="ai-service-desc">Connect CRM, ERP, HRM, and proprietary systems seamlessly. Our application integration services ensure flawless, bidirectional data synchronization.</p>
+                        <p class="ai-service-desc">Connect CRM, ERP, HRM, and proprietary systems seamlessly. Our
+                            application integration services ensure flawless, bidirectional data synchronization.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -290,7 +314,8 @@
                             <i class="bi bi-mortarboard"></i>
                         </div>
                         <h3 class="ai-service-title">Data Integration Services</h3>
-                        <p class="ai-service-desc">Create a consolidated view of your business with our foundational data integration services, designed for accuracy, consistency, and high availability.</p>
+                        <p class="ai-service-desc">Create a consolidated view of your business with our foundational data
+                            integration services, designed for accuracy, consistency, and high availability.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
                 </div>
@@ -306,7 +331,8 @@
                         How It Works
                     </div>
                     <h2 class="ai-about-title" style="font-size: 28px;">The Business System Integration Journey</h2>
-                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed architectural audit to analyze your current tech stack, data pain points, and integration objectives.</p>
+                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed architectural audit
+                        to analyze your current tech stack, data pain points, and integration objectives.</p>
                 </div>
 
 
@@ -330,7 +356,8 @@
                             <h3>Strategy &<br>Feasibility Analysis</h3>
                         </div>
                         <div class="ai-circle-step ai-circle-bottom">
-                            Our experts design a secure, scalable blueprint tailored to your business system integration needs.
+                            Our experts design a secure, scalable blueprint tailored to your business system integration
+                            needs.
                         </div>
                     </div>
 
@@ -385,7 +412,9 @@
                     <span class="ai-tag-purple">Our Experience</span>
                     <h2 class="ai-exp-title">Welcome to the era of the AI-connected enterprise</h2>
                     <p class="ai-exp-desc">
-                        Our integration agency is a strategic technology partner that specializes in delivering automation and integration services to help businesses unify their operations, improve data fidelity, and enhance system intelligence. By leveraging the power of a connected ecosystem.
+                        Our integration agency is a strategic technology partner that specializes in delivering automation
+                        and integration services to help businesses unify their operations, improve data fidelity, and
+                        enhance system intelligence. By leveraging the power of a connected ecosystem.
                     </p>
 
                     <div class="ai-exp-checklist">
@@ -429,7 +458,8 @@
                             <span class="dot"></span> RESPONSE TIME: 1 HOUR
                         </div>
                         <h2 class="ai-card-title">Tell details about your project</h2>
-                        <p class="ai-card-desc">Just fill out the form and our global experts will be in touch right away with a customized package and pricing solution to help you!</p>
+                        <p class="ai-card-desc">Just fill out the form and our global experts will be in touch right away
+                            with a customized package and pricing solution to help you!</p>
 
                         <form class="ai-contact-form">
                             <div class="form-row">
@@ -480,59 +510,69 @@
                     <!-- Tabs -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                                data-bs-target="#general" type="button" role="tab" aria-controls="general"
+                                aria-selected="true">General Ask</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
-                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                            aria-labelledby="general-tab">
                             <!-- Accordion -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
                                             Will system integration disrupt my daily operations?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Not at all. Our enterprise system integration approach involves phased rollouts and rigorous sandbox testing to ensure business continuity. Our team handles the technical complexity, allowing your team to remain focused.
+                                            Not at all. Our enterprise system integration approach involves phased rollouts
+                                            and rigorous sandbox testing to ensure business continuity. Our team handles the
+                                            technical complexity, allowing your team to remain focused.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                             Can you connect legacy on-premise systems to modern cloud apps?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#faqAccordion">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Yes, our application integration services specialize in bridging legacy infrastructure with modern cloud platforms through custom connectors and middleware.
+                                            Yes, our application integration services specialize in bridging legacy
+                                            infrastructure with modern cloud platforms through custom connectors and
+                                            middleware.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             How does AI improve traditional data automation solutions?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Absolutely. AI data automation brings intelligence to your pipelines, enabling anomaly detection, automated data mapping suggestions, and self-healing data flows, moving beyond rigid, rule-based tasks.
+                                            Absolutely. AI data automation brings intelligence to your pipelines, enabling
+                                            anomaly detection, automated data mapping suggestions, and self-healing data
+                                            flows, moving beyond rigid, rule-based tasks.
                                         </div>
                                     </div>
                                 </div>

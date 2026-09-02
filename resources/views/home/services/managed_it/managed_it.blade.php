@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'Managed IT Services (MSP) for Growing US Businesses | Mounteko')
 @section('meta-description',
-'Full-service managed IT (MSP) for growing US businesses — helpdesk, monitoring, patching, and procurement, all in one plan.')
+    'Full-service managed IT (MSP) for growing US businesses — helpdesk, monitoring, patching,
+    and procurement, all in one plan.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -22,7 +23,7 @@
                         <div class="hd-hero-tag">
                             <i class="bi bi-shield-check"></i> 24/7 TECHNICAL EXCELLENCE
                         </div>
-                        <h1 class="hd-hero-title">Premier End-to-End IT Support & Managed Helpdesk</h1>
+                        <h1 class="hd-hero-title">Managed IT Services (MSP) for Growing US Businesses </h1>
                         <p class="hd-hero-desc">Empower your business with enterprise-grade technical support. Our
                             proactive experts ensure maximum uptime, securing your operations around the clock.</p>
 
@@ -269,7 +270,8 @@
                             alt="arrow">
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Implement</h3>
-                            <p class="hd-step-desc">Deploy enterprise-grade tools and solutions for your infrastructure.</p>
+                            <p class="hd-step-desc">Deploy enterprise-grade tools and solutions for your infrastructure.
+                            </p>
                         </div>
                     </div>
 
@@ -293,7 +295,8 @@
                 <!-- Left: Image with Circle Overlay -->
                 <div class="hd-why-us-left">
                     <div class="hd-why-us-img-frame">
-                        <img src="{{ asset('home/assets/homepage/images/it-why-us-team.png') }}" alt="IT Experience Team">
+                        <img src="{{ asset('home/assets/homepage/images/it-why-us-team.png') }}"
+                            alt="IT Experience Team">
                     </div>
                 </div>
 
@@ -302,7 +305,8 @@
                     <span class="hd-why-us-tag">Why Choose Us</span>
                     <h2 class="hd-why-us-title">We are working with over 15 years of team experience</h2>
                     <p class="hd-why-us-text">
-                        We deliver world-class IT support and managed services that empower businesses to scale with confidence. Our proactive approach ensures your technology works for you, not against you.
+                        We deliver world-class IT support and managed services that empower businesses to scale with
+                        confidence. Our proactive approach ensures your technology works for you, not against you.
                     </p>
 
                     <div class="hd-feature-row">
@@ -347,7 +351,8 @@
                     <!-- Post 1 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700" alt="IT Support Blog">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700"
+                                alt="IT Support Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-it-support">STRATEGY</span>
@@ -362,7 +367,8 @@
                     <!-- Post 2 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Managed IT Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
+                                alt="Managed IT Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-management">MANAGEMENT</span>
@@ -377,7 +383,8 @@
                     <!-- Post 3 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Cybersecurity Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
+                                alt="Cybersecurity Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-security">SECURITY</span>
@@ -400,7 +407,8 @@
                     <!-- SVG Scribble Arrow -->
                     <div class="hd-cta-scribble">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 20C40 10 60 40 50 60C45 70 30 65 35 50C40 35 60 45 80 80M80 80L70 80M80 80L80 70" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 20C40 10 60 40 50 60C45 70 30 65 35 50C40 35 60 45 80 80M80 80L70 80M80 80L80 70"
+                                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
 
@@ -416,7 +424,8 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Get contact now</span>
-                                    <strong><a href="tel:{{ settingValue('phone') }}" style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
+                                    <strong><a href="tel:{{ settingValue('phone') }}"
+                                            style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
                                 </div>
                             </div>
 
@@ -427,7 +436,8 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong><a href="mailto:{{ settingValue('email') }}" style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
+                                    <strong><a href="mailto:{{ settingValue('email') }}"
+                                            style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
                                 </div>
                             </div>
                         </div>
@@ -436,7 +446,8 @@
                     <!-- Right: Framed Image -->
                     <div class="hd-cta-right">
                         <div class="hd-cta-image-frame">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="Cyber Security Monitoring">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600"
+                                alt="Cyber Security Monitoring">
                         </div>
                     </div>
 

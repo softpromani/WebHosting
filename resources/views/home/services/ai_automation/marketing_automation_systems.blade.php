@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'Marketing Automation Systems for Growing Businesses | Mounteko')
 @section('meta-description',
-'AI-powered marketing automation — email, lead nurture, and campaign workflows built and managed by Mounteko.')
+    'AI-powered marketing automation — email, lead nurture, and campaign workflows built and
+    managed by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -37,8 +38,11 @@
 
             <div class="ai-hero-container">
                 <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Transform your marketing with intelligent automation systems</h1>
-                <p class="ai-hero-desc">Nurture leads, scale personalized campaigns, and drive measurable revenue growth with our custom-built marketing automation services and AI-powered customer journey workflows.</p>
+                <h1 class="ai-hero-title">Marketing Automation Systems for Growing Businesses </h1>
+                <p class="ai-hero-desc">Most marketing teams know exactly what should happen after someone downloads a guide
+                    or abandons a cart — they just don't have time to make it happen for every single lead, every time.
+                    Mounteko builds marketing automation systems that handle the follow-up, nurture, and segmentation
+                    automatically, consistently, for every lead that comes in. </p>
 
                 <div class="ai-pills-row">
                     <span class="ai-pill">SOC2 Compliant</span>
@@ -77,7 +81,10 @@
                         Who We Are
                     </div>
                     <h2 class="ai-about-title">Redefining Marketing Performance with AI-Driven Workflows</h2>
-                    <p class="ai-about-desc">We are a next-generation marketing automation platform built to transform fragmented campaigns into cohesive, intelligent customer journeys. Our mission is to help brands unlock hyper-efficiency by replacing manual processes with adaptive automation and real-time analytics.</p>
+                    <p class="ai-about-desc">We are a next-generation marketing automation platform built to transform
+                        fragmented campaigns into cohesive, intelligent customer journeys. Our mission is to help brands
+                        unlock hyper-efficiency by replacing manual processes with adaptive automation and real-time
+                        analytics.</p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
@@ -91,9 +98,12 @@
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Use machine learning to identify high-intent segments and automatically deploy personalized content across channels.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Seamlessly connect email, mobile push, in-app messaging, and paid social into a unified engagement layer.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Build closed-loop systems that track every interaction—from first click to conversion—and optimize for lifetime value at scale.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Use machine learning to identify high-intent segments
+                            and automatically deploy personalized content across channels.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Seamlessly connect email, mobile push, in-app messaging,
+                            and paid social into a unified engagement layer.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Build closed-loop systems that track every
+                            interaction—from first click to conversion—and optimize for lifetime value at scale.</li>
                     </ul>
 
                     <div>
@@ -127,12 +137,17 @@
                         About Us
                     </div>
                     <h2 class="ai-about-title">Transforming Marketing Teams with Intelligent Automation Systems</h2>
-                    <p class="ai-about-desc">We are pioneers in the fusion of strategic marketing and cutting-edge AI technology. Our mission is to transform how businesses approach customer engagement and revenue operations by delivering innovative automated marketing solutions.</p>
+                    <p class="ai-about-desc">We are pioneers in the fusion of strategic marketing and cutting-edge AI
+                        technology. Our mission is to transform how businesses approach customer engagement and revenue
+                        operations by delivering innovative automated marketing solutions.</p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Advanced AI-Powered Segmentation for Hyper-Targeted Campaigns.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Real-time Behavioral Triggers Optimizing Every Customer Touchpoint.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Seamless CRM Marketing Automation for Unified Sales and Marketing Alignment.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Advanced AI-Powered Segmentation for Hyper-Targeted
+                            Campaigns.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Real-time Behavioral Triggers Optimizing Every Customer
+                            Touchpoint.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Seamless CRM Marketing Automation for Unified Sales and
+                            Marketing Alignment.</li>
                     </ul>
 
                     <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Project <i
@@ -152,7 +167,8 @@
                         <div class="dot"></div>
                         Our Best Services
                     </div>
-                    <h2 class="ai-about-title" style="font-size: 30px;">Best Innovative Marketing Automation Systems for Growth</h2>
+                    <h2 class="ai-about-title" style="font-size: 30px;">Best Innovative Marketing Automation Systems for
+                        Growth</h2>
                 </div>
 
 
@@ -168,7 +184,8 @@
                             <i class="bi bi-person-plus"></i>
                         </div>
                         <h3 class="ai-service-title">Lead Generation Automation</h3>
-                        <p class="ai-service-desc">Our lead generation automation solutions capture, score, and qualify leads 24/7, ensuring your sales team focuses only on high-intent prospects ready to convert.</p>
+                        <p class="ai-service-desc">Our lead generation automation solutions capture, score, and qualify
+                            leads 24/7, ensuring your sales team focuses only on high-intent prospects ready to convert.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -183,7 +200,9 @@
                             <i class="bi bi-envelope-paper-heart"></i>
                         </div>
                         <h3 class="ai-service-title">Email Marketing Automation</h3>
-                        <p class="ai-service-desc">Design personalized, behavior-triggered email journeys that nurture subscriber relationships and dramatically improve open rates, click-throughs, and customer lifetime value.</p>
+                        <p class="ai-service-desc">Design personalized, behavior-triggered email journeys that nurture
+                            subscriber relationships and dramatically improve open rates, click-throughs, and customer
+                            lifetime value.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -198,7 +217,9 @@
                             <i class="bi bi-cpu"></i>
                         </div>
                         <h3 class="ai-service-title">AI Marketing Automation</h3>
-                        <p class="ai-service-desc">Deploy predictive intelligence that anticipates customer needs, recommends next-best-actions, and automates personalization at an individual level across all channels.</p>
+                        <p class="ai-service-desc">Deploy predictive intelligence that anticipates customer needs,
+                            recommends next-best-actions, and automates personalization at an individual level across all
+                            channels.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -213,7 +234,8 @@
                             <i class="bi bi-link-45deg"></i>
                         </div>
                         <h3 class="ai-service-title">CRM Marketing Automation</h3>
-                        <p class="ai-service-desc">Integrate your CRM deeply with automated workflows to sync data, track engagement, and create a single source of truth for marketing and sales orchestration.</p>
+                        <p class="ai-service-desc">Integrate your CRM deeply with automated workflows to sync data, track
+                            engagement, and create a single source of truth for marketing and sales orchestration.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -228,7 +250,9 @@
                             <i class="bi bi-phone-vibrate"></i>
                         </div>
                         <h3 class="ai-service-title">Digital Marketing Automation</h3>
-                        <p class="ai-service-desc">Unify your entire digital footprint with automated cross-channel campaigns that maintain a consistent brand voice from paid ads to organic content distribution.</p>
+                        <p class="ai-service-desc">Unify your entire digital footprint with automated cross-channel
+                            campaigns that maintain a consistent brand voice from paid ads to organic content distribution.
+                        </p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -243,7 +267,8 @@
                             <i class="bi bi-compass"></i>
                         </div>
                         <h3 class="ai-service-title">Custom Automated Marketing</h3>
-                        <p class="ai-service-desc">We engineer bespoke marketing automation software tailored to your unique business logic, integrating proprietary systems for a perfect fit.</p>
+                        <p class="ai-service-desc">We engineer bespoke marketing automation software tailored to your
+                            unique business logic, integrating proprietary systems for a perfect fit.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
                 </div>
@@ -258,8 +283,10 @@
                         <div class="dot"></div>
                         How It Works
                     </div>
-                    <h2 class="ai-about-title" style="font-size: 28px;">The Marketing Automation Transformation Journey</h2>
-                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed consultation to learn about your customer lifecycle, campaign goals, and current technology ecosystem.</p>
+                    <h2 class="ai-about-title" style="font-size: 28px;">The Marketing Automation Transformation Journey
+                    </h2>
+                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed consultation to learn
+                        about your customer lifecycle, campaign goals, and current technology ecosystem.</p>
                 </div>
 
 
@@ -283,7 +310,8 @@
                             <h3>Strategy &<br>Architecture</h3>
                         </div>
                         <div class="ai-circle-step ai-circle-bottom">
-                            Our experts design the ideal marketing automation systems architecture and data flows for your specific needs.
+                            Our experts design the ideal marketing automation systems architecture and data flows for your
+                            specific needs.
                         </div>
                     </div>
 
@@ -338,7 +366,8 @@
                     <span class="ai-tag-purple">Our Experience</span>
                     <h2 class="ai-exp-title">Automate Smarter. Engage Faster. Grow Stronger.</h2>
                     <p class="ai-exp-desc">
-                        As a trusted marketing automation provider, we empower businesses to streamline complex campaigns, accelerate revenue growth, and deliver meaningful engagement across every channel.
+                        As a trusted marketing automation provider, we empower businesses to streamline complex campaigns,
+                        accelerate revenue growth, and deliver meaningful engagement across every channel.
                     </p>
 
                     <div class="ai-exp-checklist">
@@ -361,7 +390,8 @@
                     </div>
 
                     <p class="ai-exp-footer-text">
-                        Coordinate campaign execution across touchpoints while mapping results back to concrete commercial pipeline metrics.
+                        Coordinate campaign execution across touchpoints while mapping results back to concrete commercial
+                        pipeline metrics.
                     </p>
 
                     <a href="{{ route('contactUs') }}" class="btn-ai-purple">
@@ -434,59 +464,69 @@
                     <!-- Tabs (Only General Ask) -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                                data-bs-target="#general" type="button" role="tab" aria-controls="general"
+                                aria-selected="true">General Ask</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
-                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                            aria-labelledby="general-tab">
                             <!-- Accordion General -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
                                             Will these systems integrate with my current CRM and tools?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Yes, our marketing automation services are designed for seamless integration. We specialize in CRM marketing automation, ensuring your marketing and sales data flow perfectly between platforms.
+                                            Yes, our marketing automation services are designed for seamless integration. We
+                                            specialize in CRM marketing automation, ensuring your marketing and sales data
+                                            flow perfectly between platforms.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                             Is it complex to set up lead generation automation?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#faqAccordion">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Not with our approach. We build user-friendly automated marketing solutions. Our team handles the technical setup so you can start capturing and nurturing leads through automated workflows right away.
+                                            Not with our approach. We build user-friendly automated marketing solutions. Our
+                                            team handles the technical setup so you can start capturing and nurturing leads
+                                            through automated workflows right away.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             Is a large marketing team required to manage the software?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            No, the purpose of our marketing automation software is to multiply your team's output. We provide thorough training and support so even lean teams can manage complex, multi-channel campaigns effectively.
+                                            No, the purpose of our marketing automation software is to multiply your team's
+                                            output. We provide thorough training and support so even lean teams can manage
+                                            complex, multi-channel campaigns effectively.
                                         </div>
                                     </div>
                                 </div>

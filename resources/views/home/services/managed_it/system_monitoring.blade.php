@@ -1,7 +1,7 @@
 @extends('home.includes.layout')
 @section('title', '24/7 System Monitoring & Maintenance Services | Mounteko')
-@section('meta-description',
-'Proactive system monitoring and maintenance that catches problems before they cause downtime — 24/7, from Mounteko.')
+@section('meta-description', 'Proactive system monitoring and maintenance that catches problems before they cause
+    downtime — 24/7, from Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -22,8 +22,11 @@
                         <div class="hd-hero-tag">
                             <i class="bi bi-shield-check"></i> 24/7 PROACTIVE SURVEILLANCE & RELIABILITY
                         </div>
-                        <h1 class="hd-hero-title">Enterprise-Grade System Monitoring & Preventive Maintenance</h1>
-                        <p class="hd-hero-desc">Ensure continuous business operations with real-time infrastructure oversight. Our automated monitoring and scheduled maintenance eliminate performance degradation before it impacts your bottom line.</p>
+                        <h1 class="hd-hero-title">24/7 System Monitoring & Maintenance Services</h1>
+                        <p class="hd-hero-desc">Most IT problems are preventable if someone catches them early enough — a
+                            drive filling up, a service quietly failing, a certificate about to expire. Mounteko provides
+                            24/7 system monitoring and proactive maintenance, catching these signals and acting on them
+                            before your team even notices something was wrong. </p>
 
                         <!-- Quick Features Badges -->
                         <div class="hd-hero-badges">
@@ -75,13 +78,20 @@
                 <div class="hd-feature-left">
                     <span class="hd-feature-tag">IT SOLUTIONS</span>
                     <h2 class="hd-feature-title">Holistic Infrastructure Monitoring & Automated System Maintenance</h2>
-                    <p class="hd-feature-desc">We deliver a rigorous maintenance framework that extends the lifecycle of your hardware and software assets. Our approach combines remote telemetry with scheduled on-site servicing to prevent configuration drift, reduce security vulnerabilities, and eliminate unexpected outages.</p>
+                    <p class="hd-feature-desc">We deliver a rigorous maintenance framework that extends the lifecycle of
+                        your hardware and software assets. Our approach combines remote telemetry with scheduled on-site
+                        servicing to prevent configuration drift, reduce security vulnerabilities, and eliminate unexpected
+                        outages.</p>
 
                     <ul class="hd-feature-list">
-                        <li><i class="bi bi-check-circle-fill"></i> Continuous performance baseline analysis and anomaly detection</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Automated patch orchestration and vulnerability remediation</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Proactive capacity planning and disk space management</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Server health diagnostics and firmware lifecycle management</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Continuous performance baseline analysis and anomaly
+                            detection</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Automated patch orchestration and vulnerability
+                            remediation</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Proactive capacity planning and disk space management
+                        </li>
+                        <li><i class="bi bi-check-circle-fill"></i> Server health diagnostics and firmware lifecycle
+                            management</li>
                     </ul>
 
                     <div class="hd-feature-actions">
@@ -120,8 +130,11 @@
             <div class="hd-services-container">
                 <div class="hd-section-header">
                     <span class="hd-feature-tag" style="background:#eff6ff;">WHAT WE PROVIDE</span>
-                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Comprehensive System Care for Mission-Critical Environments</h2>
-                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">Technical maintenance protocols designed to stabilize your digital ecosystem, enhance throughput, and fortify operational resilience.
+                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Comprehensive System Care for
+                        Mission-Critical Environments</h2>
+                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">Technical
+                        maintenance protocols designed to stabilize your digital ecosystem, enhance throughput, and fortify
+                        operational resilience.
                     </p>
                 </div>
 
@@ -237,7 +250,8 @@
                             alt="arrow">
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Discovery & Baseline Audit</h3>
-                            <p class="hd-step-desc">Deep scan of network topology, installed software versions, and current hardware health metrics to establish a performance baseline.</p>
+                            <p class="hd-step-desc">Deep scan of network topology, installed software versions, and current
+                                hardware health metrics to establish a performance baseline.</p>
                         </div>
                     </div>
 
@@ -250,7 +264,8 @@
                             alt="arrow">
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Policy Configuration & Automation</h3>
-                            <p class="hd-step-desc">Deploy monitoring agents and configure automated maintenance windows aligned with your operational schedule to minimize end-user disruption.</p>
+                            <p class="hd-step-desc">Deploy monitoring agents and configure automated maintenance windows
+                                aligned with your operational schedule to minimize end-user disruption.</p>
                         </div>
                     </div>
 
@@ -264,7 +279,8 @@
                             alt="arrow">
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Continuous Remediation & Patching</h3>
-                            <p class="hd-step-desc">Routine deployment of critical updates and configuration changes during defined change windows, tracked through a dedicated ticketing audit trail.</p>
+                            <p class="hd-step-desc">Routine deployment of critical updates and configuration changes during
+                                defined change windows, tracked through a dedicated ticketing audit trail.</p>
                         </div>
                     </div>
 
@@ -275,7 +291,8 @@
                         </div>
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Reporting & Strategic Roadmap</h3>
-                            <p class="hd-step-desc">Monthly executive summaries detailing system health trends, uptime statistics, and predictive capacity forecasts for future budgeting.</p>
+                            <p class="hd-step-desc">Monthly executive summaries detailing system health trends, uptime
+                                statistics, and predictive capacity forecasts for future budgeting.</p>
                         </div>
                     </div>
                 </div>
@@ -288,7 +305,8 @@
                 <!-- Left: Image with Circle Overlay -->
                 <div class="hd-why-us-left">
                     <div class="hd-why-us-img-frame">
-                        <img src="{{ asset('home/assets/homepage/images/it-why-us-team.png') }}" alt="IT Experience Team">
+                        <img src="{{ asset('home/assets/homepage/images/it-why-us-team.png') }}"
+                            alt="IT Experience Team">
                     </div>
                 </div>
 
@@ -297,7 +315,9 @@
                     <span class="hd-why-us-tag">Why Choose Us</span>
                     <h2 class="hd-why-us-title">We are working with over 15 years of team experience</h2>
                     <p class="hd-why-us-text">
-                        We deliver comprehensive system monitoring and preventive maintenance programs that empower businesses to operate with absolute reliability. Our proactive approach ensures your infrastructure identifies and resolves issues before they disrupt your workflow.
+                        We deliver comprehensive system monitoring and preventive maintenance programs that empower
+                        businesses to operate with absolute reliability. Our proactive approach ensures your infrastructure
+                        identifies and resolves issues before they disrupt your workflow.
                     </p>
 
                     <div class="hd-feature-row">
@@ -312,12 +332,18 @@
                     </div>
 
                     <div class="hd-check-grid">
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Performance Baseline Analytics</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> 24/7 Infrastructure Telemetry</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Automated Patch Compliance</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> System State Backup Validation</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Resource Utilization Tuning</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Hardware Lifecycle Management</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Performance Baseline Analytics
+                        </div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> 24/7 Infrastructure Telemetry
+                        </div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Automated Patch Compliance
+                        </div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> System State Backup Validation
+                        </div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Resource Utilization Tuning
+                        </div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Hardware Lifecycle Management
+                        </div>
                     </div>
 
                     <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More →</a>
@@ -336,7 +362,8 @@
                     <!-- Post 1 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700" alt="IT Support Blog">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700"
+                                alt="IT Support Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-it-support">STRATEGY</span>
@@ -351,7 +378,8 @@
                     <!-- Post 2 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Managed IT Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
+                                alt="Managed IT Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-management">MANAGEMENT</span>
@@ -366,7 +394,8 @@
                     <!-- Post 3 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Cybersecurity Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
+                                alt="Cybersecurity Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-security">SECURITY</span>
@@ -385,18 +414,19 @@
         <section class="hd-cta-section">
             <div class="hd-cta-container">
                 <div class="hd-cta-banner">
-                    
+
                     <!-- SVG Scribble Arrow -->
                     <div class="hd-cta-scribble">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 20C40 10 60 40 50 60C45 70 30 65 35 50C40 35 60 45 80 80M80 80L70 80M80 80L80 70" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 20C40 10 60 40 50 60C45 70 30 65 35 50C40 35 60 45 80 80M80 80L70 80M80 80L80 70"
+                                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
 
                     <!-- Left: Text + Contact -->
                     <div class="hd-cta-left">
                         <h2 class="hd-cta-banner-title">Protect business, cyber security solution today!</h2>
-                        
+
                         <div class="hd-cta-contact-grid">
                             <!-- Phone -->
                             <div class="hd-cta-contact-item">
@@ -405,7 +435,8 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Get contact now</span>
-                                    <strong><a href="tel:{{ settingValue('phone') }}" style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
+                                    <strong><a href="tel:{{ settingValue('phone') }}"
+                                            style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
                                 </div>
                             </div>
 
@@ -416,7 +447,8 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong><a href="mailto:{{ settingValue('email') }}" style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
+                                    <strong><a href="mailto:{{ settingValue('email') }}"
+                                            style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
                                 </div>
                             </div>
                         </div>
@@ -425,7 +457,8 @@
                     <!-- Right: Framed Image -->
                     <div class="hd-cta-right">
                         <div class="hd-cta-image-frame">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="Cyber Security Monitoring">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600"
+                                alt="Cyber Security Monitoring">
                         </div>
                     </div>
 

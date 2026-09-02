@@ -1,7 +1,7 @@
 @extends('home.includes.layout')
 @section('title', 'AI Integration & Business Automation Services | Mounteko')
-@section('meta-description',
-'AI-powered automation for sales, support, marketing, and operations — built for growing US businesses by Mounteko.')
+@section('meta-description', 'AI-powered automation for sales, support, marketing, and operations — built for growing US
+    businesses by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -84,9 +84,11 @@
 
             <div class="ai-hero-container">
                 <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Transform your business with the power of AI</h1>
-                <p class="ai-hero-desc">Streamline operations, enhance customer experiences, and drive unprecedented growth
-                    with our custom-built AI solutions and intelligent business automation workflows.</p>
+                <h1 class="ai-hero-title">AI Integration & Business Automation Services </h1>
+                <p class="ai-hero-desc">Every business has repetitive work eating into hours that should go toward actual
+                    growth — manual data entry, answering the same customer questions, chasing leads that fall through the
+                    cracks. Mounteko builds AI-powered automation into sales, support, marketing, and operations, so your
+                    team spends time on the work that actually needs a human</p>
 
                 <div class="ai-pills-row">
                     <span class="ai-pill">ISO 27001</span>
@@ -501,29 +503,34 @@
                     <!-- Tabs -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                                data-bs-target="#general" type="button" role="tab" aria-controls="general"
+                                aria-selected="true">General Ask</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="career-tab" data-bs-toggle="tab" data-bs-target="#career"
-                                type="button" role="tab" aria-controls="career" aria-selected="false">Job Career</button>
+                                type="button" role="tab" aria-controls="career" aria-selected="false">Job
+                                Career</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pricing-tab" data-bs-toggle="tab" data-bs-target="#pricing"
-                                type="button" role="tab" aria-controls="pricing" aria-selected="false">Pricing Plan</button>
+                                type="button" role="tab" aria-controls="pricing" aria-selected="false">Pricing
+                                Plan</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
-                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                            aria-labelledby="general-tab">
                             <!-- Accordion -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
                                             What industries can benefit from your AI solutions?
                                         </button>
                                     </h2>
@@ -538,13 +545,14 @@
                                 <!-- Item 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                             Do I need technical knowledge to use your AI services?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#faqAccordion">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
                                             Yes, our AI services are designed to be user-friendly, although having some
                                             technical background can be beneficial.
@@ -554,9 +562,9 @@
                                 <!-- Item 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             Do you provide bulk image generation for businesses?
                                         </button>
                                     </h2>
@@ -571,14 +579,14 @@
                                 <!-- Item 4 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseFour" aria-expanded="false"
-                                            aria-controls="collapseFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
                                             Can AI-generated images be used for marketing or branding?
                                         </button>
                                     </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                        data-bs-parent="#faqAccordion">
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
                                             Yes, our AI-generated images are fully licensed for commercial use.
                                         </div>

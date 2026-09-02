@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'IT Hardware & Software Procurement Services | Mounteko')
 @section('meta-description',
-'Hassle-free IT hardware and software procurement and licensing for growing US businesses — sourced and managed by Mounteko.')
+    'Hassle-free IT hardware and software procurement and licensing for growing US businesses —
+    sourced and managed by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -22,10 +23,12 @@
                         <div class="hd-hero-tag">
                             <i class="bi bi-shield-check"></i> VENDOR-NEUTRAL SOURCING EXCELLENCE
                         </div>
-                        <h1 class="hd-hero-title">Strategic Hardware & Software Procurement & Lifecycle Management</h1>
-                        <p class="hd-hero-desc">Optimize your technology investments with transparent, agnostic sourcing. We
-                            leverage global partner networks to secure the right technology at the right price—eliminating
-                            vendor lock-in.</p>
+                        <h1 class="hd-hero-title">IT Hardware & Software Procurement Services</h1>
+                        <p class="hd-hero-desc">Buying IT equipment and software licenses directly means chasing multiple
+                            vendors, comparing options with no real technical guidance, and often overpaying or under-buying
+                            for what your team actually needs. Mounteko manages IT hardware and software procurement end to
+                            end — sourcing, licensing, and vendor coordination handled by people who already know your
+                            environment. </p>
 
                         <!-- Quick Features Badges -->
                         <div class="hd-hero-badges">
@@ -269,7 +272,8 @@
                     <!-- Step 3: Staging & Configuration -->
                     <div class="hd-step-item">
                         <div class="hd-step-img-wrap">
-                            <img src="{{ asset('home/assets/homepage/images/it-workflow-implement.png') }}" alt="Staging">
+                            <img src="{{ asset('home/assets/homepage/images/it-workflow-implement.png') }}"
+                                alt="Staging">
                         </div>
                         <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
                             alt="arrow">
@@ -287,7 +291,8 @@
                         </div>
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Lifecycle Optimization</h3>
-                            <p class="hd-step-desc">Proactive monitoring of warranties, license expirations, and end-of-life
+                            <p class="hd-step-desc">Proactive monitoring of warranties, license expirations, and
+                                end-of-life
                                 dates to maintain continuous compliance.</p>
                         </div>
                     </div>
@@ -327,7 +332,8 @@
 
                     <div class="hd-check-grid">
                         <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Vendor Price Benchmarking</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Volume License Optimization</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Volume License Optimization
+                        </div>
                         <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Secure IT Asset Disposition
                             (ITAD)</div>
                         <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Custom Configuration & Imaging
@@ -338,11 +344,13 @@
                         </div>
                         <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Contract Negotiation Expertise
                         </div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Hardware Standardization Advisory
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Hardware Standardization
+                            Advisory
                         </div>
                     </div>
 
-                    <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More <i
+                            class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -431,7 +439,8 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Get contact now</span>
-                                    <strong><a href="tel:{{ settingValue('phone') }}" style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
+                                    <strong><a href="tel:{{ settingValue('phone') }}"
+                                            style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
                                 </div>
                             </div>
 
@@ -442,7 +451,8 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong><a href="mailto:{{ settingValue('email') }}" style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
+                                    <strong><a href="mailto:{{ settingValue('email') }}"
+                                            style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
                                 </div>
                             </div>
                         </div>

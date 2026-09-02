@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'AI Chatbot & Customer Support Automation | Mounteko')
 @section('meta-description',
-'Custom AI chatbots that handle support around the clock, without losing the human touch — built by Mounteko.')
+    'Custom AI chatbots that handle support around the clock, without losing the human touch —
+    built by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -37,8 +38,12 @@
 
             <div class="ai-hero-container">
                 <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Enhance Customer Experience with Advanced AI-Powered Chatbot Solutions</h1>
-                <p class="ai-hero-desc">Streamline support operations, deliver instant resolutions, and drive customer loyalty with our custom-built conversational AI solutions and intelligent support automation workflows.</p>
+                <h1 class="ai-hero-title">AI Chatbot & Customer Support Automation Services</h1>
+                <p class="ai-hero-desc">Customers expect an answer now, not a next-business-day email reply — and most
+                    support questions are the same handful of things asked over and over. Mounteko builds AI chatbots that
+                    handle common questions instantly, around the clock, and hand off to a real person the moment a
+                    conversation needs one.
+                </p>
 
                 <div class="ai-pills-row">
                     <span class="ai-pill">SOC2 Compliant</span>
@@ -77,7 +82,10 @@
                         Who We Are
                     </div>
                     <h2 class="ai-about-title">Revolutionizing Customer Support with Next-Generation Conversational AI</h2>
-                    <p class="ai-about-desc">As a premier conversational AI development company, we specialize in transforming ordinary support interactions into exceptional customer experiences. Our mission is to equip businesses with intelligent automation that delivers instant, personalized, and scalable assistance.</p>
+                    <p class="ai-about-desc">As a premier conversational AI development company, we specialize in
+                        transforming ordinary support interactions into exceptional customer experiences. Our mission is to
+                        equip businesses with intelligent automation that delivers instant, personalized, and scalable
+                        assistance.</p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
@@ -91,9 +99,12 @@
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Powering empathetic, context-aware conversations that feel genuinely human.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Ensuring real-time issue resolution across all digital channels, day or night.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Deploying custom AI agents for high-volume support environments in under four weeks.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Powering empathetic, context-aware conversations that
+                            feel genuinely human.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Ensuring real-time issue resolution across all digital
+                            channels, day or night.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Deploying custom AI agents for high-volume support
+                            environments in under four weeks.</li>
                     </ul>
 
                     <div>
@@ -127,12 +138,17 @@
                         About Us
                     </div>
                     <h2 class="ai-about-title">AI Chatbots for Enterprise-Grade Customer Support Automation</h2>
-                    <p class="ai-about-desc">We specialize in deploying high-performance AI chatbots that automate customer support workflows while preserving brand voice and context. Our solutions empower support teams to focus on complex issues by handling routine inquiries instantly and accurately.</p>
+                    <p class="ai-about-desc">We specialize in deploying high-performance AI chatbots that automate customer
+                        support workflows while preserving brand voice and context. Our solutions empower support teams to
+                        focus on complex issues by handling routine inquiries instantly and accurately.</p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Instant, 24/7 Customer Support – AI chatbots that never sleep, reducing wait times to zero.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Smart Escalation Logic – Seamless handoff to human agents with full conversation history.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Actionable Automation Insights – Track containment rates, resolution paths, and customer effort scores.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Instant, 24/7 Customer Support – AI chatbots that never
+                            sleep, reducing wait times to zero.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Smart Escalation Logic – Seamless handoff to human
+                            agents with full conversation history.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Actionable Automation Insights – Track containment
+                            rates, resolution paths, and customer effort scores.</li>
                     </ul>
 
                     <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Project <i
@@ -152,7 +168,8 @@
                         <div class="dot"></div>
                         Our Best Services
                     </div>
-                    <h2 class="ai-about-title" style="font-size: 30px;">Enterprise AI Chatbots & Intelligent Customer Support Automation</h2>
+                    <h2 class="ai-about-title" style="font-size: 30px;">Enterprise AI Chatbots & Intelligent Customer
+                        Support Automation</h2>
                 </div>
 
 
@@ -168,7 +185,8 @@
                             <i class="bi bi-ticket-detailed"></i>
                         </div>
                         <h3 class="ai-service-title">End-to-End Support Automation</h3>
-                        <p class="ai-service-desc">Design fully automated workflows that intelligently handle tier-1 tickets, order inquiries, return requests, and FAQ resolution—without human intervention.</p>
+                        <p class="ai-service-desc">Design fully automated workflows that intelligently handle tier-1
+                            tickets, order inquiries, return requests, and FAQ resolution—without human intervention.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -183,7 +201,9 @@
                             <i class="bi bi-chat-quote"></i>
                         </div>
                         <h3 class="ai-service-title">Conversational AI for Customer Service</h3>
-                        <p class="ai-service-desc">Deploy advanced NLP-driven chatbots that understand context, detect sentiment, manage multi-turn dialogues, and escalate complex issues seamlessly to human agents.</p>
+                        <p class="ai-service-desc">Deploy advanced NLP-driven chatbots that understand context, detect
+                            sentiment, manage multi-turn dialogues, and escalate complex issues seamlessly to human agents.
+                        </p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -198,7 +218,8 @@
                             <i class="bi bi-diagram-3"></i>
                         </div>
                         <h3 class="ai-service-title">Smart Ticketing & Workflow Automation</h3>
-                        <p class="ai-service-desc">Automate ticket categorization, prioritization, routing, and response generation to reduce resolution times and improve first-contact resolution rates.</p>
+                        <p class="ai-service-desc">Automate ticket categorization, prioritization, routing, and response
+                            generation to reduce resolution times and improve first-contact resolution rates.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -213,7 +234,9 @@
                             <i class="bi bi-share"></i>
                         </div>
                         <h3 class="ai-service-title">Omnichannel Chatbot Deployment</h3>
-                        <p class="ai-service-desc">Launch and manage AI-powered support agents consistently across web chat, mobile apps, WhatsApp, Messenger, Instagram, and voice assistants from one unified platform.</p>
+                        <p class="ai-service-desc">Launch and manage AI-powered support agents consistently across web
+                            chat, mobile apps, WhatsApp, Messenger, Instagram, and voice assistants from one unified
+                            platform.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -228,7 +251,8 @@
                             <i class="bi bi-graph-up-arrow"></i>
                         </div>
                         <h3 class="ai-service-title">AI-Driven Insights from Support</h3>
-                        <p class="ai-service-desc">Analyze chatbot interactions to identify recurring customer pain points, optimize response accuracy, and uncover opportunities for proactive support.</p>
+                        <p class="ai-service-desc">Analyze chatbot interactions to identify recurring customer pain points,
+                            optimize response accuracy, and uncover opportunities for proactive support.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -243,7 +267,8 @@
                             <i class="bi bi-compass"></i>
                         </div>
                         <h3 class="ai-service-title">Chatbot & Automation Consulting</h3>
-                        <p class="ai-service-desc">Empower your team with a strategic roadmap to assess, implement, and scale AI chatbot solutions that reduce costs while elevating customer experience.</p>
+                        <p class="ai-service-desc">Empower your team with a strategic roadmap to assess, implement, and
+                            scale AI chatbot solutions that reduce costs while elevating customer experience.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
                 </div>
@@ -259,7 +284,8 @@
                         How It Works
                     </div>
                     <h2 class="ai-about-title" style="font-size: 28px;">The AI Support Transformation Journey</h2>
-                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed consultation to learn about your support challenges, ticket volume, and key opportunities for AI integration.</p>
+                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed consultation to learn
+                        about your support challenges, ticket volume, and key opportunities for AI integration.</p>
                 </div>
 
 
@@ -338,7 +364,9 @@
                     <span class="ai-tag-purple">Our Experience</span>
                     <h2 class="ai-exp-title">Step into the future of intelligent customer conversations</h2>
                     <p class="ai-exp-desc">
-                        As a forward-thinking AI agency and trusted chatbot solutions provider, we help businesses unlock the full potential of artificial intelligence — automating support, boosting CSAT scores, and delivering tailored experiences at scale.
+                        As a forward-thinking AI agency and trusted chatbot solutions provider, we help businesses unlock
+                        the full potential of artificial intelligence — automating support, boosting CSAT scores, and
+                        delivering tailored experiences at scale.
                     </p>
 
                     <div class="ai-exp-checklist">
@@ -434,59 +462,67 @@
                     <!-- Tabs (Only General Ask) -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                                data-bs-target="#general" type="button" role="tab" aria-controls="general"
+                                aria-selected="true">General Ask</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
-                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                            aria-labelledby="general-tab">
                             <!-- Accordion General -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
                                             Is it complex to integrate a chatbot with my current helpdesk?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Not at all. We build user-friendly AI platforms with pre-built connectors for major CRMs and helpdesks. Our team handles the technical complexity.
+                                            Not at all. We build user-friendly AI platforms with pre-built connectors for
+                                            major CRMs and helpdesks. Our team handles the technical complexity.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                             Will the AI chatbot understand my business terminology?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#faqAccordion">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Yes, our AI customer support solutions are custom-trained on your specific knowledge base, product catalog, and historical support tickets to ensure accurate, brand-aligned responses.
+                                            Yes, our AI customer support solutions are custom-trained on your specific
+                                            knowledge base, product catalog, and historical support tickets to ensure
+                                            accurate, brand-aligned responses.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             Can the automation scale during high-traffic periods?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Absolutely. We offer scalable, cloud-native automated customer support systems that handle unlimited concurrent conversations without compromising performance.
+                                            Absolutely. We offer scalable, cloud-native automated customer support systems
+                                            that handle unlimited concurrent conversations without compromising performance.
                                         </div>
                                     </div>
                                 </div>

@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'AI-Powered Sales Automation Services | Mounteko')
 @section('meta-description',
-'AI sales automation that qualifies leads and fills your pipeline automatically — built and managed by Mounteko.')
+    'AI sales automation that qualifies leads and fills your pipeline automatically — built and
+    managed by Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -37,8 +38,11 @@
 
             <div class="ai-hero-container">
                 <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Transform Your Sales Engine with AI-Powered Automation</h1>
-                <p class="ai-hero-desc">Streamline your entire sales cycle, accelerate pipeline velocity, and drive predictable revenue growth with our custom-built AI sales automation solutions designed for modern enterprises.</p>
+                <h1 class="ai-hero-title">AI-Powered Sales Automation Services </h1>
+                <p class="ai-hero-desc">Sales teams lose deals to slow follow-up more often than to a better competitor — a
+                    lead goes cold simply because nobody reached out fast enough. Mounteko builds AI-powered sales
+                    automation that qualifies leads, triggers timely follow-up, and keeps your CRM updated automatically, so
+                    no opportunity slips through because someone forgot. </p>
 
                 <div class="ai-pills-row">
                     <span class="ai-pill">SOC2 Compliant</span>
@@ -77,7 +81,9 @@
                         Who We Are
                     </div>
                     <h2 class="ai-about-title">Redefining Sales Performance with the Power of AI</h2>
-                    <p class="ai-about-desc">We are a specialized AI sales solutions provider dedicated to turning your sales data into a strategic growth asset. Our mission is to empower revenue teams with intelligent automation that eliminates manual tasks and unlocks human potential.</p>
+                    <p class="ai-about-desc">We are a specialized AI sales solutions provider dedicated to turning your
+                        sales data into a strategic growth asset. Our mission is to empower revenue teams with intelligent
+                        automation that eliminates manual tasks and unlocks human potential.</p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
@@ -91,9 +97,12 @@
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Ingest and harmonize data from your CRM, emails, calls, and marketing platforms.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Automate lead routing, follow-ups, and deal management with precision.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Deliver real-time guidance to reps, moving deals forward with data-driven confidence.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Ingest and harmonize data from your CRM, emails, calls,
+                            and marketing platforms.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Automate lead routing, follow-ups, and deal management
+                            with precision.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Deliver real-time guidance to reps, moving deals forward
+                            with data-driven confidence.</li>
                     </ul>
 
                     <div>
@@ -127,12 +136,17 @@
                         About Us
                     </div>
                     <h2 class="ai-about-title">Transforming Revenue Operations with AI-Powered Intelligence</h2>
-                    <p class="ai-about-desc">We are pioneers in applying advanced AI to the complexities of the modern sales cycle. Our solution transforms how revenue teams operate, from the first touchpoint to a closed-won deal, by automating non-selling activities and augmenting strategic decision-making.</p>
+                    <p class="ai-about-desc">We are pioneers in applying advanced AI to the complexities of the modern sales
+                        cycle. Our solution transforms how revenue teams operate, from the first touchpoint to a closed-won
+                        deal, by automating non-selling activities and augmenting strategic decision-making.</p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Augmented Sales Force Capabilities for Accelerated Deal Velocity.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Real-Time Pipeline Analysis and Predictive Forecasting for Optimized Resource Allocation.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Seamless CRM Integration and Autonomous Task Execution for a friction-free rep experience.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Augmented Sales Force Capabilities for Accelerated Deal
+                            Velocity.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Real-Time Pipeline Analysis and Predictive Forecasting
+                            for Optimized Resource Allocation.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Seamless CRM Integration and Autonomous Task Execution
+                            for a friction-free rep experience.</li>
                     </ul>
 
                     <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Project <i
@@ -152,7 +166,8 @@
                         <div class="dot"></div>
                         Our Best Services
                     </div>
-                    <h2 class="ai-about-title" style="font-size: 30px;">A Complete Intelligent Automation Suite for Sales</h2>
+                    <h2 class="ai-about-title" style="font-size: 30px;">A Complete Intelligent Automation Suite for Sales
+                    </h2>
                 </div>
 
 
@@ -168,7 +183,8 @@
                             <i class="bi bi-person-check"></i>
                         </div>
                         <h3 class="ai-service-title">Intelligent Lead Orchestration</h3>
-                        <p class="ai-service-desc">Automate lead capture, enrichment, scoring, and routing to the right rep at the perfect time, ensuring no opportunity is missed.</p>
+                        <p class="ai-service-desc">Automate lead capture, enrichment, scoring, and routing to the right rep
+                            at the perfect time, ensuring no opportunity is missed.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -183,7 +199,8 @@
                             <i class="bi bi-mic"></i>
                         </div>
                         <h3 class="ai-service-title">Conversational Intelligence</h3>
-                        <p class="ai-service-desc">Record, transcribe, and analyze every customer interaction to surface winning behaviors, coach reps, and automatically update deal records.</p>
+                        <p class="ai-service-desc">Record, transcribe, and analyze every customer interaction to surface
+                            winning behaviors, coach reps, and automatically update deal records.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -198,7 +215,8 @@
                             <i class="bi bi-envelope-paper"></i>
                         </div>
                         <h3 class="ai-service-title">Automated Sales Engagement</h3>
-                        <p class="ai-service-desc">Deploy AI-personalized, multi-channel outreach sequences that engage prospects at scale while maintaining a human, value-driven touch.</p>
+                        <p class="ai-service-desc">Deploy AI-personalized, multi-channel outreach sequences that engage
+                            prospects at scale while maintaining a human, value-driven touch.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -213,7 +231,8 @@
                             <i class="bi bi-bar-chart-line"></i>
                         </div>
                         <h3 class="ai-service-title">Predictive Pipeline Analytics</h3>
-                        <p class="ai-service-desc">Move beyond gut-feel forecasts. Visualize deal health, receive risk alerts, and get AI-driven predictions to commit with confidence.</p>
+                        <p class="ai-service-desc">Move beyond gut-feel forecasts. Visualize deal health, receive risk
+                            alerts, and get AI-driven predictions to commit with confidence.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -228,7 +247,8 @@
                             <i class="bi bi-database-check"></i>
                         </div>
                         <h3 class="ai-service-title">Autonomous CRM Data Hygiene</h3>
-                        <p class="ai-service-desc">Eliminate manual data entry. The system automatically captures, logs, and enriches all sales activities, keeping your CRM flawlessly updated.</p>
+                        <p class="ai-service-desc">Eliminate manual data entry. The system automatically captures, logs,
+                            and enriches all sales activities, keeping your CRM flawlessly updated.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -243,7 +263,8 @@
                             <i class="bi bi-compass"></i>
                         </div>
                         <h3 class="ai-service-title">Dynamic Guided Selling</h3>
-                        <p class="ai-service-desc">Equip your reps with real-time, next-best-action recommendations, battle cards, and content suggestions precisely when they need them.</p>
+                        <p class="ai-service-desc">Equip your reps with real-time, next-best-action recommendations, battle
+                            cards, and content suggestions precisely when they need them.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
                 </div>
@@ -259,7 +280,8 @@
                         How It Works
                     </div>
                     <h2 class="ai-about-title" style="font-size: 28px;">Your Journey to an Intelligent Sales System</h2>
-                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We start by mapping your unique sales process and identifying your most valuable automation opportunities to deliver rapid time-to-value.</p>
+                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We start by mapping your unique sales process
+                        and identifying your most valuable automation opportunities to deliver rapid time-to-value.</p>
                 </div>
 
 
@@ -338,7 +360,9 @@
                     <span class="ai-tag-purple">Our Experience</span>
                     <h2 class="ai-exp-title">Welcome to the Era of the Self-Driving Sales Pipeline</h2>
                     <p class="ai-exp-desc">
-                        Our AI sales automation platform is a purpose-built partner for revenue growth, helping B2B and B2C sales organizations automate administrative burden, sharpen selling focus, and forge deeper customer relationships through contextual intelligence.
+                        Our AI sales automation platform is a purpose-built partner for revenue growth, helping B2B and B2C
+                        sales organizations automate administrative burden, sharpen selling focus, and forge deeper customer
+                        relationships through contextual intelligence.
                     </p>
 
                     <div class="ai-exp-checklist">
@@ -434,63 +458,74 @@
                     <!-- Tabs -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                                data-bs-target="#general" type="button" role="tab" aria-controls="general"
+                                aria-selected="true">General Ask</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pricing-tab" data-bs-toggle="tab" data-bs-target="#pricing"
-                                type="button" role="tab" aria-controls="pricing" aria-selected="false">Pricing Plan</button>
+                                type="button" role="tab" aria-controls="pricing" aria-selected="false">Pricing
+                                Plan</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
-                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                            aria-labelledby="general-tab">
                             <!-- Accordion General -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
                                             What industries can benefit from your AI sales automation?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            We typically work with B2B and B2C teams across technology, financial services, manufacturing, and professional services. The system is industry-agnostic and adapts to any structured sales process.
+                                            We typically work with B2B and B2C teams across technology, financial services,
+                                            manufacturing, and professional services. The system is industry-agnostic and
+                                            adapts to any structured sales process.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                             Do I need a technical team to manage the automation?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#faqAccordion">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Our platform is built for revenue teams. Day-to-day management is intuitive, and our customer success team provides full technical support so your reps can focus on selling.
+                                            Our platform is built for revenue teams. Day-to-day management is intuitive, and
+                                            our customer success team provides full technical support so your reps can focus
+                                            on selling.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             Can AI-generated insights be used for board-level forecasting and strategy?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Yes, our predictive analytics and narrative reports are designed for both operational use and executive-level strategic decisions in every commercial context.
+                                            Yes, our predictive analytics and narrative reports are designed for both
+                                            operational use and executive-level strategic decisions in every commercial
+                                            context.
                                         </div>
                                     </div>
                                 </div>
@@ -503,45 +538,54 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingPricingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapsePricingOne" aria-expanded="true" aria-controls="collapsePricingOne">
+                                            data-bs-target="#collapsePricingOne" aria-expanded="true"
+                                            aria-controls="collapsePricingOne">
                                             Do you offer flexible pricing models for different sales team sizes?
                                         </button>
                                     </h2>
                                     <div id="collapsePricingOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingPricingOne" data-bs-parent="#pricingAccordion">
                                         <div class="accordion-body">
-                                            Yes. We offer packages designed for growth-stage teams, scaling companies, and large global enterprises. Pricing is based on the number of users, data volume, and the complexity of your sales automation needs. Contact us for a tailored proposal.
+                                            Yes. We offer packages designed for growth-stage teams, scaling companies, and
+                                            large global enterprises. Pricing is based on the number of users, data volume,
+                                            and the complexity of your sales automation needs. Contact us for a tailored
+                                            proposal.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingPricingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapsePricingTwo" aria-expanded="false" aria-controls="collapsePricingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsePricingTwo"
+                                            aria-expanded="false" aria-controls="collapsePricingTwo">
                                             Is there a long-term licensing contract, or can we test the solution first?
                                         </button>
                                     </h2>
-                                    <div id="collapsePricingTwo" class="accordion-collapse collapse" aria-labelledby="headingPricingTwo"
-                                        data-bs-parent="#pricingAccordion">
+                                    <div id="collapsePricingTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingPricingTwo" data-bs-parent="#pricingAccordion">
                                         <div class="accordion-body">
-                                            We operate on both proof-of-concept models and annual license agreements. Many clients start with a paid pilot program focused on a single workflow, such as automated lead routing, to prove impact before scaling.
+                                            We operate on both proof-of-concept models and annual license agreements. Many
+                                            clients start with a paid pilot program focused on a single workflow, such as
+                                            automated lead routing, to prove impact before scaling.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingPricingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapsePricingThree" aria-expanded="false"
-                                            aria-controls="collapsePricingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsePricingThree"
+                                            aria-expanded="false" aria-controls="collapsePricingThree">
                                             What does ongoing support and platform evolution cost?
                                         </button>
                                     </h2>
                                     <div id="collapsePricingThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingPricingThree" data-bs-parent="#pricingAccordion">
                                         <div class="accordion-body">
-                                            Our pricing is transparent and includes continuous model monitoring, retuning, and access to new features as they are released. We build long-term partnerships focused on driving compounding returns on your AI investment.
+                                            Our pricing is transparent and includes continuous model monitoring, retuning,
+                                            and access to new features as they are released. We build long-term partnerships
+                                            focused on driving compounding returns on your AI investment.
                                         </div>
                                     </div>
                                 </div>

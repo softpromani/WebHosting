@@ -1,7 +1,7 @@
 @extends('home.includes.layout')
 @section('title', 'IT Patch Management & Update Services | Mounteko')
-@section('meta-description',
-"Automated patch management and system updates for growing US businesses — close security gaps before they're exploited.")
+@section('meta-description', "Automated patch management and system updates for growing US businesses — close security
+    gaps before they're exploited.")
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -22,8 +22,11 @@
                         <div class="hd-hero-tag">
                             <i class="bi bi-shield-check"></i> PROACTIVE SECURITY & COMPLIANCE
                         </div>
-                        <h1 class="hd-hero-title">Enterprise System Patch Management & Update Orchestration</h1>
-                        <p class="hd-hero-desc">Fortify your infrastructure against evolving threats. Our automated patch deployment and rigorous testing protocols eliminate vulnerabilities without disrupting your business productivity.</p>
+                        <h1 class="hd-hero-title">IT Patch Management & Update Services </h1>
+                        <p class="hd-hero-desc">Unpatched software is one of the most common ways attackers get into a
+                            business — not through some sophisticated exploit, but through a known vulnerability that's had
+                            a fix available for months. Mounteko manages patching and updates across your systems
+                            automatically, closing security gaps on a schedule instead of whenever someone remembers. .</p>
 
                         <!-- Quick Features Badges -->
                         <div class="hd-hero-badges">
@@ -75,7 +78,9 @@
                 <div class="hd-feature-left">
                     <span class="hd-feature-tag">SECURITY FIRST</span>
                     <h2 class="hd-feature-title">Unified Vulnerability Remediation & Patch Governance</h2>
-                    <p class="hd-feature-desc">We deliver a meticulous approach to software and firmware updates that balances security urgency with operational stability. From critical OS security patches to third-party application updates, we ensure your ecosystem is resilient and audit-ready.</p>
+                    <p class="hd-feature-desc">We deliver a meticulous approach to software and firmware updates that
+                        balances security urgency with operational stability. From critical OS security patches to
+                        third-party application updates, we ensure your ecosystem is resilient and audit-ready.</p>
 
                     <ul class="hd-feature-list">
                         <li><i class="bi bi-check-circle-fill"></i> Automated Patch Testing & Sandbox Validation</li>
@@ -94,11 +99,13 @@
                     <div class="hd-collage">
                         <!-- Top Image (Mobile) -->
                         <div class="collage-item item-top">
-                            <img src="{{ asset('home/assets/homepage/images/it-support-mobile.png') }}" alt="Patch Support App">
+                            <img src="{{ asset('home/assets/homepage/images/it-support-mobile.png') }}"
+                                alt="Patch Support App">
                         </div>
                         <!-- Main Image (Team) -->
                         <div class="collage-item item-main">
-                            <img src="{{ asset('home/assets/homepage/images/it-support-team.png') }}" alt="Vulnerability Team">
+                            <img src="{{ asset('home/assets/homepage/images/it-support-team.png') }}"
+                                alt="Vulnerability Team">
                         </div>
                         <!-- Left Image (Laptop) -->
                         <div class="collage-item item-left">
@@ -120,8 +127,11 @@
             <div class="hd-services-container">
                 <div class="hd-section-header">
                     <span class="hd-feature-tag" style="background:#eff6ff;">WHAT WE COVER</span>
-                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Comprehensive Patch Management Services for Hybrid Workforces</h2>
-                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">Robust update strategies tailored to your compliance requirements, ensuring endpoint integrity across cloud and on-premise environments.
+                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Comprehensive Patch Management
+                        Services for Hybrid Workforces</h2>
+                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">Robust update
+                        strategies tailored to your compliance requirements, ensuring endpoint integrity across cloud and
+                        on-premise environments.
                     </p>
                 </div>
 
@@ -237,7 +247,8 @@
                             alt="arrow">
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Assess & Inventory</h3>
-                            <p class="hd-step-desc">Scan endpoints and servers to identify missing security patches, deprecated software versions, and active CVEs.</p>
+                            <p class="hd-step-desc">Scan endpoints and servers to identify missing security patches,
+                                deprecated software versions, and active CVEs.</p>
                         </div>
                     </div>
 
@@ -250,7 +261,8 @@
                             alt="arrow">
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Prioritize & Test</h3>
-                            <p class="hd-step-desc">Categorize updates by severity (Critical/Important/Moderate) and validate functionality in a staging environment.</p>
+                            <p class="hd-step-desc">Categorize updates by severity (Critical/Important/Moderate) and
+                                validate functionality in a staging environment.</p>
                         </div>
                     </div>
 
@@ -264,7 +276,8 @@
                             alt="arrow">
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Deploy Strategically</h3>
-                            <p class="hd-step-desc">Execute ringed deployments during approved maintenance windows to minimize end-user impact and network strain.</p>
+                            <p class="hd-step-desc">Execute ringed deployments during approved maintenance windows to
+                                minimize end-user impact and network strain.</p>
                         </div>
                     </div>
 
@@ -275,7 +288,8 @@
                         </div>
                         <div class="hd-step-info">
                             <h3 class="hd-step-title">Verify & Document</h3>
-                            <p class="hd-step-desc">Confirm successful installation and generate detailed reports to satisfy internal audits and regulatory standards.</p>
+                            <p class="hd-step-desc">Confirm successful installation and generate detailed reports to
+                                satisfy internal audits and regulatory standards.</p>
                         </div>
                     </div>
                 </div>
@@ -297,7 +311,8 @@
                     <span class="hd-why-us-tag">Why Choose Us</span>
                     <h2 class="hd-why-us-title">Why Our Patch Strategy Delivers Higher Security ROI</h2>
                     <p class="hd-why-us-text">
-                        We bridge the gap between security alerts and system stability. Our process ensures that the fix doesn't break the workflow, providing a seamless path to compliance.
+                        We bridge the gap between security alerts and system stability. Our process ensures that the fix
+                        doesn't break the workflow, providing a seamless path to compliance.
                     </p>
 
                     <div class="hd-feature-row">
@@ -312,15 +327,19 @@
                     </div>
 
                     <div class="hd-check-grid">
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Vulnerability Window Reduction</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Vulnerability Window Reduction
+                        </div>
                         <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Legacy System Support</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Compliance Posture Management</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Compliance Posture Management
+                        </div>
                         <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Predictable Maintenance</div>
                         <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Vendor Risk Mitigation</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Executive Dashboard Access</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Executive Dashboard Access
+                        </div>
                     </div>
 
-                    <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More <i
+                            class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -336,7 +355,8 @@
                     <!-- Post 1 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700" alt="Security Patching Blog">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700"
+                                alt="Security Patching Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-it-support">SECURITY</span>
@@ -351,7 +371,8 @@
                     <!-- Post 2 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Vulnerability Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
+                                alt="Vulnerability Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-management">COMPLIANCE</span>
@@ -366,7 +387,8 @@
                     <!-- Post 3 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Managed Updates Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
+                                alt="Managed Updates Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-security">UPDATES</span>
@@ -385,18 +407,19 @@
         <section class="hd-cta-section">
             <div class="hd-cta-container">
                 <div class="hd-cta-banner">
-                    
+
                     <!-- SVG Scribble Arrow -->
                     <div class="hd-cta-scribble">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 20C40 10 60 40 50 60C45 70 30 65 35 50C40 35 60 45 80 80M80 80L70 80M80 80L80 70" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 20C40 10 60 40 50 60C45 70 30 65 35 50C40 35 60 45 80 80M80 80L70 80M80 80L80 70"
+                                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
 
                     <!-- Left: Text + Contact -->
                     <div class="hd-cta-left">
                         <h2 class="hd-cta-banner-title">Strengthen your compliance posture today!</h2>
-                        
+
                         <div class="hd-cta-contact-grid">
                             <!-- Phone -->
                             <div class="hd-cta-contact-item">
@@ -405,7 +428,8 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Get contact now</span>
-                                    <strong><a href="tel:{{ settingValue('phone') }}" style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
+                                    <strong><a href="tel:{{ settingValue('phone') }}"
+                                            style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
                                 </div>
                             </div>
 
@@ -416,7 +440,8 @@
                                 </div>
                                 <div class="hd-cta-contact-info">
                                     <span>Sent e-mail</span>
-                                    <strong><a href="mailto:{{ settingValue('email') }}" style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
+                                    <strong><a href="mailto:{{ settingValue('email') }}"
+                                            style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
                                 </div>
                             </div>
                         </div>
@@ -425,7 +450,8 @@
                     <!-- Right: Framed Image -->
                     <div class="hd-cta-right">
                         <div class="hd-cta-image-frame">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="Vulnerability Management">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600"
+                                alt="Vulnerability Management">
                         </div>
                     </div>
 

@@ -1,7 +1,8 @@
 @extends('home.includes.layout')
 @section('title', 'AI Analytics & Business Insights Services | Mounteko')
 @section('meta-description',
-'Turn your business data into clear, actionable insight with AI-powered analytics and dashboards from Mounteko.')
+    'Turn your business data into clear, actionable insight with AI-powered analytics and
+    dashboards from Mounteko.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -84,8 +85,11 @@
 
             <div class="ai-hero-container">
                 <div class="ai-welcome-badge">Welcome to Mounteko</div>
-                <h1 class="ai-hero-title">Unlock the full potential of your data with AI-driven business intelligence</h1>
-                <p class="ai-hero-desc">Detect hidden patterns, forecast future outcomes, and improve decision velocity through our comprehensive AI analytics services and scalable analytics infrastructure.</p>
+                <h1 class="ai-hero-title">AI Analytics & Business Insights Services </h1>
+                <p class="ai-hero-desc">Most businesses have plenty of data and very little insight — numbers sitting in
+                    spreadsheets and dashboards nobody has time to actually analyze. Mounteko builds AI-powered analytics
+                    and business intelligence that turns raw data into clear, specific recommendations your team can act on,
+                    not just another dashboard to check occasionally. </p>
 
                 <div class="ai-pills-row">
                     <span class="ai-pill">SOC2 Compliant</span>
@@ -124,7 +128,9 @@
                         Who We Are
                     </div>
                     <h2 class="ai-about-title">Driving Business Agility with AI-Powered Strategy.</h2>
-                    <p class="ai-about-desc">We are a specialized analytics consultancy dedicated to transforming raw data into decisive action. Our mission is to equip business leaders and teams with adaptive intelligence solutions and immersive data storytelling that drive faster, smarter decisions.</p>
+                    <p class="ai-about-desc">We are a specialized analytics consultancy dedicated to transforming raw data
+                        into decisive action. Our mission is to equip business leaders and teams with adaptive intelligence
+                        solutions and immersive data storytelling that drive faster, smarter decisions.</p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
@@ -138,9 +144,12 @@
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Leveraging generative AI and predictive modeling to simulate business outcomes.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> From live KPI tracking to automated alert systems for proactive management.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Building flexible, cloud-native data environments that scale with your strategic goals.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Leveraging generative AI and predictive modeling to
+                            simulate business outcomes.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> From live KPI tracking to automated alert systems for
+                            proactive management.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Building flexible, cloud-native data environments that
+                            scale with your strategic goals.</li>
                     </ul>
 
                     <div>
@@ -174,12 +183,17 @@
                         About Us
                     </div>
                     <h2 class="ai-about-title">Unlocking Growth with AI-Driven Business Insights</h2>
-                    <p class="ai-about-desc">We specialize in converting complex data into strategic advantage through cutting-edge AI analytics. Our custom solutions empower organizations to move beyond reporting and into intelligent, real-time decision-making.</p>
+                    <p class="ai-about-desc">We specialize in converting complex data into strategic advantage through
+                        cutting-edge AI analytics. Our custom solutions empower organizations to move beyond reporting and
+                        into intelligent, real-time decision-making.</p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> Smart KPI Dashboards with natural language querying and automated insights.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Anomaly Detection and Root Cause Analysis for proactive issue resolution.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> End-to-End Data Integration from source to insight, ensuring accuracy and scalability.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Smart KPI Dashboards with natural language querying and
+                            automated insights.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Anomaly Detection and Root Cause Analysis for proactive
+                            issue resolution.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> End-to-End Data Integration from source to insight,
+                            ensuring accuracy and scalability.</li>
                     </ul>
 
                     <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Projects <i
@@ -199,7 +213,8 @@
                         <div class="dot"></div>
                         Our Best Services
                     </div>
-                    <h2 class="ai-about-title" style="font-size: 42px;">End-to-End Analytics Solutions for Modern Enterprises</h2>
+                    <h2 class="ai-about-title" style="font-size: 42px;">End-to-End Analytics Solutions for Modern
+                        Enterprises</h2>
                 </div>
 
 
@@ -215,7 +230,8 @@
                             <i class="bi bi-cpu"></i>
                         </div>
                         <h3 class="ai-service-title">Predictive Analytics Services</h3>
-                        <p class="ai-service-desc">Specialize in building AI models that forecast customer churn, demand fluctuations, and market shifts to revolutionize proactive business planning.</p>
+                        <p class="ai-service-desc">Specialize in building AI models that forecast customer churn, demand
+                            fluctuations, and market shifts to revolutionize proactive business planning.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -230,7 +246,8 @@
                             <i class="bi bi-pc-display"></i>
                         </div>
                         <h3 class="ai-service-title">Data Visualization Services</h3>
-                        <p class="ai-service-desc">Transform static spreadsheets into interactive, real-time analytics dashboard development that tells a clear story for every stakeholder.</p>
+                        <p class="ai-service-desc">Transform static spreadsheets into interactive, real-time analytics
+                            dashboard development that tells a clear story for every stakeholder.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -245,7 +262,8 @@
                             <i class="bi bi-diagram-3"></i>
                         </div>
                         <h3 class="ai-service-title">AI Business Insights</h3>
-                        <p class="ai-service-desc">Leverage natural language processing and deep learning to extract granular AI business insights from unstructured text, reviews, and call logs.</p>
+                        <p class="ai-service-desc">Leverage natural language processing and deep learning to extract
+                            granular AI business insights from unstructured text, reviews, and call logs.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -260,7 +278,8 @@
                             <i class="bi bi-bar-chart-line"></i>
                         </div>
                         <h3 class="ai-service-title">Business Intelligence Solutions</h3>
-                        <p class="ai-service-desc">Consolidate disparate data sources into a single source of truth with robust business intelligence solutions built for scale and speed.</p>
+                        <p class="ai-service-desc">Consolidate disparate data sources into a single source of truth with
+                            robust business intelligence solutions built for scale and speed.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -275,7 +294,8 @@
                             <i class="bi bi-gear-wide-connected"></i>
                         </div>
                         <h3 class="ai-service-title">Data Analytics Consulting</h3>
-                        <p class="ai-service-desc">Auditing your current data maturity and architecting a tailored roadmap of data analytics services that align with your fiscal goals.</p>
+                        <p class="ai-service-desc">Auditing your current data maturity and architecting a tailored roadmap
+                            of data analytics services that align with your fiscal goals.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
@@ -290,7 +310,8 @@
                             <i class="bi bi-mortarboard"></i>
                         </div>
                         <h3 class="ai-service-title">Managed Analytics & Reporting</h3>
-                        <p class="ai-service-desc">On-going support and optimization of your AI analytics services stack, ensuring your dashboards evolve with your business strategy.</p>
+                        <p class="ai-service-desc">On-going support and optimization of your AI analytics services stack,
+                            ensuring your dashboards evolve with your business strategy.</p>
                         <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
                     </div>
                 </div>
@@ -306,7 +327,8 @@
                         How It Works
                     </div>
                     <h2 class="ai-about-title" style="font-size: 28px;">The Business Insights Transformation Journey</h2>
-                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed audit to understand your data data maturity, key business questions, and blind spots in your current reporting.</p>
+                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed audit to understand
+                        your data data maturity, key business questions, and blind spots in your current reporting.</p>
                 </div>
 
 
@@ -330,7 +352,8 @@
                             <h3>Feasibility &<br>Modeling</h3>
                         </div>
                         <div class="ai-circle-step ai-circle-bottom">
-                            Our experts cleanse your data, engineer features, and train tailored predictive analytics services.
+                            Our experts cleanse your data, engineer features, and train tailored predictive analytics
+                            services.
                         </div>
                     </div>
 
@@ -385,7 +408,9 @@
                     <span class="ai-tag-purple">Our Experience</span>
                     <h2 class="ai-exp-title">Welcome to the era of intelligent IT analytics</h2>
                     <p class="ai-exp-desc">
-                        Our AI analytics practice empowers technology enterprises to move beyond descriptive reporting into predictive and prescriptive intelligence. We help businesses eliminate data silos, accelerate decision velocity, and drive measurable business outcomes through enterprise-grade AI.
+                        Our AI analytics practice empowers technology enterprises to move beyond descriptive reporting into
+                        predictive and prescriptive intelligence. We help businesses eliminate data silos, accelerate
+                        decision velocity, and drive measurable business outcomes through enterprise-grade AI.
                     </p>
 
                     <div class="ai-exp-checklist">
@@ -429,7 +454,8 @@
                             <span class="dot"></span> RESPONSE TIME: 1 HOUR
                         </div>
                         <h2 class="ai-card-title">Tell details about your project</h2>
-                        <p class="ai-card-desc">Just fill out the form and our global experts will be in touch right away with a customized package and pricing solution to help you!</p>
+                        <p class="ai-card-desc">Just fill out the form and our global experts will be in touch right away
+                            with a customized package and pricing solution to help you!</p>
 
                         <form class="ai-contact-form">
                             <div class="form-row">
@@ -480,59 +506,69 @@
                     <!-- Tabs -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                                data-bs-target="#general" type="button" role="tab" aria-controls="general"
+                                aria-selected="true">General Ask</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
-                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                            aria-labelledby="general-tab">
                             <!-- Accordion -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
                                             Is our business too small for advanced AI analytics services?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Not at all. We build scalable, user-friendly analytics frameworks that fit the budget and complexity needs of growing SMBs as well as large enterprises. Our packages grow with you.
+                                            Not at all. We build scalable, user-friendly analytics frameworks that fit the
+                                            budget and complexity needs of growing SMBs as well as large enterprises. Our
+                                            packages grow with you.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                             Do we need a data warehouse to start with business analytics services?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#faqAccordion">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            While a warehouse helps, it’s not a barrier. Our data analytics services include helping you aggregate and clean data from spreadsheets, CRMs, and legacy tools as a preliminary step.
+                                            While a warehouse helps, it’s not a barrier. Our data analytics services include
+                                            helping you aggregate and clean data from spreadsheets, CRMs, and legacy tools
+                                            as a preliminary step.
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             How do you ensure our AI business insights are accurate?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            We focus on rigorous data validation and model transparency. We provide explainable AI, meaning you don't just get a prediction; you understand the "why" behind the business insights solutions.
+                                            We focus on rigorous data validation and model transparency. We provide
+                                            explainable AI, meaning you don't just get a prediction; you understand the
+                                            "why" behind the business insights solutions.
                                         </div>
                                     </div>
                                 </div>
