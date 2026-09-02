@@ -8,7 +8,28 @@
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}?v={{ time() }}">
+    <style>
+        .contact-us-form .section-heading {
+            margin-bottom: 25px !important;
+        }
+        .contact-us-form .section-heading h2,
+        h2.sales-team-heading {
+            font-size: 28px !important;
+            font-weight: 700 !important;
+            line-height: 1.35 !important;
+            color: #1a202c !important;
+            margin-bottom: 10px !important;
+            font-family: inherit !important;
+        }
+        .contact-us-form .section-heading p,
+        p.sales-team-sub {
+            font-size: 15px !important;
+            color: #64748b !important;
+            line-height: 1.5 !important;
+            margin-bottom: 0 !important;
+        }
+    </style>
 @endsection
 @section('content')
 
@@ -171,8 +192,8 @@
                     </div>
                     <div class="col-lg-6 col-md-8">
                         <div class="section-heading">
-                            <h2>Talk to Our Sales & Marketing Department Team</h2>
-                            <p>Tell us what you need — our team typically replies within one business day.</p>
+                            <h2 class="sales-team-heading" style="font-size: 28px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #1a202c !important; margin-bottom: 10px !important; font-family: inherit !important;">Talk to Our Sales & Marketing Department Team</h2>
+                            <p class="sales-team-sub" style="font-size: 15px !important; color: #64748b !important; line-height: 1.5 !important; margin-bottom: 0 !important;">Tell us what you need — our team typically replies within one business day.</p>
                         </div>
                         <form action="{{ route('contactStore') }}" method="post" role="form"
                             class="php-email-form">
