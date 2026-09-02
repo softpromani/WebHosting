@@ -1,7 +1,7 @@
 @extends('home.includes.layout')
-@section('title', '24/7 IT Support & Helpdesk Services for US Businesses | Mounteko')
-@section('meta-description', 'Round-the-clock IT support and helpdesk services for growing US businesses — fast
-    response, real people, no ticket black holes.')
+@section('title', '24/7 IT Support & Helpdesk Services | Mounteko')
+@section('meta-description',
+'Round-the-clock IT support and helpdesk services for growing US businesses — fast response, real people, no ticket black holes.')
 
 @section('header-area')
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-style.min.css') }}">
@@ -13,32 +13,29 @@
 @section('content')
     <main class="hd-main">
 
-        <!-- SECTION 1: HERO HEADER -->
+        <!-- SECTION 1: PREMIUM DARK HERO HEADER -->
         <section class="hd-hero">
             <div class="hd-hero-container">
                 <div class="hd-hero-row">
                     <!-- Left Column -->
                     <div class="hd-hero-left">
                         <div class="hd-hero-tag">
-                            <i class="bi bi-headset"></i> 24/7 IT SUPPORT SERVICES
+                            <i class="bi bi-shield-check"></i> 24/7 TECHNICAL EXCELLENCE
                         </div>
-                        <h1 class="hd-hero-title">24/7 IT Support & Helpdesk Services</h1>
-                        <p class="hd-hero-desc">A slow help desk costs more than the ticket it's attached to — it's an
-                            employee sitting idle, a deadline slipping, a small annoyance becoming a daily source of
-                            frustration with the whole IT setup. Mounteko provides end-to-end IT support and helpdesk
-                            services, with real people who pick up, not a ticket queue that disappears into silence.</p>
+                        <h1 class="hd-hero-title">Complete End-to-End IT Support & Managed Helpdesk Services</h1>
+                        <p class="hd-hero-desc">Equip your organization with reliable, full-spectrum technical assistance. Our dedicated support specialists and proactive monitoring systems work continuously to preserve productivity, secure digital assets, and maintain seamless business continuity.</p>
 
                         <!-- Quick Features Badges -->
                         <div class="hd-hero-badges">
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> 15-Min Response SLA</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> 24/7/365 US Engineers</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Remote & Hybrid Ready</div>
-                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Tier-1 to Tier-3 Depth</div>
+                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Always-On Availability</div>
+                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Sub-15 Minute Response</div>
+                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Seasoned IT Professionals</div>
+                            <div class="hd-badge"><i class="bi bi-check-circle-fill"></i> Secure Issue Handling</div>
                         </div>
 
                         <div class="hd-hero-btns">
-                            <a href="{{ route('contactUs') }}" class="btn-hd-primary">Get Fast IT Support</a>
-                            <a href="#helpdesk-features" class="btn-hd-outline">Explore Capabilities</a>
+                            <a href="{{ route('contactUs') }}" class="btn-hd-primary">Connect with Support</a>
+                            <a href="{{ route('contactUs') }}" class="btn-hd-outline">Learn More</a>
                         </div>
                     </div>
 
@@ -46,14 +43,14 @@
                     <div class="hd-hero-right">
                         <div class="hd-hero-img-wrap">
                             <img src="{{ asset('home/assets/homepage/images/it-support-specialist.png') }}"
-                                alt="24/7 IT Support Specialist" class="hd-hero-img">
+                                alt="IT Support Specialist" class="hd-hero-img">
 
                             <!-- Floating Card 1 -->
                             <div class="hd-float-card hd-float-1">
                                 <div class="hd-float-icon"><i class="bi bi-lightning-fill"></i></div>
                                 <div class="hd-float-content">
                                     <strong>15 Minutes</strong>
-                                    <span>Guaranteed Response SLA</span>
+                                    <span>Avg. Response Time</span>
                                 </div>
                             </div>
 
@@ -61,8 +58,8 @@
                             <div class="hd-float-card hd-float-2">
                                 <div class="hd-float-icon"><i class="bi bi-headset"></i></div>
                                 <div class="hd-float-content">
-                                    <strong>Live Engineer</strong>
-                                    <span>Real Technical Experts</span>
+                                    <strong>Active Support</strong>
+                                    <span>24/7 Live Assistance</span>
                                 </div>
                             </div>
                         </div>
@@ -71,33 +68,24 @@
             </div>
         </section>
 
-        <!-- SECTION 2: REAL RESPONSE TIMES, NOT VAGUE PROMISES -->
-        <section id="helpdesk-features" class="hd-feature">
+        <!-- SECTION 2: UNIFIED FEATURE SECTION -->
+        <section class="hd-feature">
             <div class="hd-feature-grid">
                 <!-- Left Content -->
                 <div class="hd-feature-left">
-                    <span class="hd-feature-tag">COMMITTED RESPONSE TIMES</span>
-                    <h2 class="hd-feature-title">Real Response Times, Not Vague Promises</h2>
-                    <p class="hd-feature-desc">
-                        When an employee encounters a technical barrier, waiting hours for a generic automated ticket
-                        confirmation derails projects and frustrates your team. Mounteko backs your operations with a
-                        concrete, SLA-committed response time: critical tickets are picked up in under 15 minutes by
-                        experienced technical engineers, not call dispatchers.
-                    </p>
+                    <span class="hd-feature-tag">IT SOLUTIONS</span>
+                    <h2 class="hd-feature-title">Integrated Helpdesk Solutions for Uninterrupted Business Flow</h2>
+                    <p class="hd-feature-desc">We deliver a complete suite of IT support capabilities engineered to sustain operational momentum. Functioning as a seamless extension of your internal staff, our model bridges the distance between immediate remote fixes and essential on-location hardware intervention.</p>
 
                     <ul class="hd-feature-list">
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>15-Minute Critical Response SLA:</strong>
-                            Immediate triage and rapid escalation for productivity blockers.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Direct Engineer Access:</strong> Speak directly
-                            to certified technicians via phone, email, or live chat.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>85%+ First-Contact Resolution:</strong> Most
-                            common desktop and software issues fixed on the first call.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Transparent Telemetry & Tracking:</strong>
-                            Real-time ticket progress updates and monthly SLA performance metrics.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Continuous proactive infrastructure oversight</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Accelerated incident identification & remediation</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Seamless extension of your internal team</li>
+                        <li><i class="bi bi-check-circle-fill"></i> End‑to‑end hardware & application lifecycle management</li>
                     </ul>
 
                     <div class="hd-feature-actions">
-                        <a href="{{ route('contactUs') }}" class="btn-hd-primary">Speak With Our Support Team</a>
+                        <a href="{{ route('contactUs') }}" class="btn-hd-primary">Explore services</a>
                     </div>
                 </div>
 
@@ -106,262 +94,239 @@
                     <div class="hd-collage">
                         <!-- Top Image (Mobile) -->
                         <div class="collage-item item-top">
-                            <img src="{{ asset('home/assets/homepage/images/it-support-mobile.png') }}"
-                                alt="Mobile Support App">
+                            <img src="{{ asset('home/assets/homepage/images/it-support-mobile.png') }}" alt="Support App">
                         </div>
                         <!-- Main Image (Team) -->
                         <div class="collage-item item-main">
-                            <img src="{{ asset('home/assets/homepage/images/it-support-team.png') }}"
-                                alt="Mounteko IT Support Engineers">
+                            <img src="{{ asset('home/assets/homepage/images/it-support-team.png') }}" alt="IT Support Team">
                         </div>
                         <!-- Left Image (Laptop) -->
                         <div class="collage-item item-left">
                             <img src="{{ asset('home/assets/homepage/images/it-support-laptop.png') }}"
-                                alt="Remote Desktop Troubleshooting">
+                                alt="Remote Support">
                         </div>
                         <!-- Bottom Image (Desktop) -->
                         <div class="collage-item item-bottom">
                             <img src="{{ asset('home/assets/homepage/images/it-support-desk.png') }}"
-                                alt="Modern IT Workstation Support">
+                                alt="Modern Workspace">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 3: REMOTE IT SUPPORT FOR DISTRIBUTED TEAMS (6-CARD GRID) -->
+        <!-- SECTION 3: PREMIUM DARK SERVICE TYPES (6-CARD GRID) -->
         <section class="hd-services">
             <div class="hd-services-container">
                 <div class="hd-section-header">
-                    <span class="hd-feature-tag" style="background:#eff6ff;">HYBRID & REMOTE WORK READY</span>
-                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Remote IT Support for Distributed
-                        Teams</h2>
-                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">
-                        Modern businesses operate across physical offices, branch locations, and remote home environments.
-                        Mounteko provides unified technical support that delivers identical reliability regardless of where
-                        your team logs in.
+                    <span class="hd-feature-tag" style="background:#eff6ff;">WHAT WE PROVIDE</span>
+                    <h2 class="hd-section-title" style="color:white; margin-bottom:15px;">Full-Spectrum Technical Support Capabilities</h2>
+                    <p class="hd-section-subtitle" style="color:#94a3b8; max-width:850px; margin: 0 auto;">We deliver tailored technical solutions that integrate seamlessly with your existing environment, ensuring sustained accessibility and fortified resilience.
                     </p>
                 </div>
 
                 <div class="hd-services-grid">
-                    <!-- Card 1: Secure Remote Desktop Access -->
+                    <!-- Card 1: Comprehensive IT Helpdesk -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-support-bg.png') }}');">
                         </div>
                         <div class="hd-service-icon"><i class="bi bi-display"></i></div>
-                        <h3 class="hd-service-title">Secure Remote Desktop Access</h3>
+                        <h3 class="hd-service-title">Comprehensive IT Helpdesk</h3>
                         <p class="hd-service-text">
-                            Instant, encrypted screen-sharing and diagnostic tools that allow our engineers to troubleshoot
-                            and resolve software, driver, and OS issues in minutes.
+                            • Hybrid support: remote and on-premise remediation<br>
+                            • Centralized case management and tracking portal<br>
+                            • Direct assistance for workforce productivity tools
                         </p>
-                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Request Support</a>
+                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 2: Zero-Touch Device Onboarding -->
+                    <!-- Card 2: Network Connectivity & Stability -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-network-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-laptop"></i></div>
-                        <h3 class="hd-service-title">Zero-Touch Device Onboarding</h3>
+                        <div class="hd-service-icon"><i class="bi bi-broadcast"></i></div>
+                        <h3 class="hd-service-title">Network Connectivity & Stability</h3>
                         <p class="hd-service-text">
-                            Pre-configuring enterprise laptops, MDM profiles, productivity software, and security
-                            credentials shipped directly to remote new hires' doors.
+                            • Real-time traffic analysis and monitoring<br>
+                            • Bottleneck identification and throughput enhancement<br>
+                            • Rapid resolution of connectivity interruptions
                         </p>
-                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Request Support</a>
+                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 3: VPN & Remote Connectivity -->
+                    <!-- Card 3: Cybersecurity & Threat Safeguards -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-security-bg.png') }}');">
                         </div>
                         <div class="hd-service-icon"><i class="bi bi-shield-lock"></i></div>
-                        <h3 class="hd-service-title">VPN & Secure Connectivity</h3>
+                        <h3 class="hd-service-title">Cybersecurity & Threat Safeguards</h3>
                         <p class="hd-service-text">
-                            Resolving VPN drops, home Wi-Fi bottlenecks, firewall access permissions, and VoIP audio latency
-                            to keep distributed staff seamlessly connected.
+                            • Device-level defense and antivirus enforcement<br>
+                            • Perimeter gateway configuration and rule management<br>
+                            • Continuous vulnerability scanning and real‑time alerting
                         </p>
-                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Request Support</a>
+                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 4: SaaS & Cloud App Management -->
+                    <!-- Card 4: Cloud Environment Support -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-cloud-bg.png') }}');">
                         </div>
                         <div class="hd-service-icon"><i class="bi bi-cloud-check"></i></div>
-                        <h3 class="hd-service-title">SaaS & Cloud App Support</h3>
+                        <h3 class="hd-service-title">Cloud Environment Support</h3>
                         <p class="hd-service-text">
-                            Comprehensive assistance for Microsoft 365, Google Workspace, Single Sign-On (SSO), and
-                            Multi-Factor Authentication (MFA) lockouts.
+                            • Administration of virtual resource pools<br>
+                            • Systematic data replication and restoration<br>
+                            • Resource allocation and cost‑efficiency optimization
                         </p>
-                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Request Support</a>
+                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 5: Endpoint Security & Antivirus -->
+                    <!-- Card 5: Operational Continuity & Data Restoration -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-backup-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-shield-check"></i></div>
-                        <h3 class="hd-service-title">Endpoint Defense & Compliance</h3>
+                        <div class="hd-service-icon"><i class="bi bi-sd-card"></i></div>
+                        <h3 class="hd-service-title">Operational Continuity & Data Restoration</h3>
                         <p class="hd-service-text">
-                            Continuous EDR monitoring, automated patch verification, disk encryption (BitLocker/FileVault),
-                            and instant threat containment on all remote laptops.
+                            • Scheduled, verified data duplication routines<br>
+                            • Rapid file and system state recovery processes<br>
+                            • Disruption planning for sustained operations
                         </p>
-                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Request Support</a>
+                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
 
-                    <!-- Card 6: Hardware Hot-Swapping & Logistics -->
+                    <!-- Card 6: Proactive System Stewardship -->
                     <div class="hd-service-card">
                         <div class="hd-card-bg"
                             style="background-image: url('{{ asset('home/assets/homepage/images/it-card-maint-bg.png') }}');">
                         </div>
-                        <div class="hd-service-icon"><i class="bi bi-arrow-repeat"></i></div>
-                        <h3 class="hd-service-title">Hardware Replacement Logistics</h3>
+                        <div class="hd-service-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                        <h3 class="hd-service-title">Proactive System Stewardship</h3>
                         <p class="hd-service-text">
-                            Rapid emergency replacement, advance hardware provisioning, and data recovery for damaged or
-                            failing employee workstations.
+                            • Routine patch management and version upgrades<br>
+                            • Backend infrastructure health checks<br>
+                            • Performance tuning for optimal responsiveness
                         </p>
-                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Request Support</a>
+                        <a href="{{ route('contactUs') }}" class="hd-service-btn">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 4: END-TO-END, NOT JUST TIER-1 TICKETS & TELECOM SPOTLIGHT -->
+        <!-- SECTION 4: HOW OUR MANAGED SERVICES WORK (CIRCULAR WORKFLOW) -->
+        <section class="hd-workflow">
+            <div class="hd-workflow-container">
+                <div class="hd-workflow-header">
+                    <span class="hd-workflow-tag">How it Works</span>
+                    <h2 class="hd-workflow-title">Our Methodology for Seamless Technology Management</h2>
+                </div>
+
+                <div class="hd-steps-row">
+                    <!-- Step 1: Discovery & Evaluation -->
+                    <div class="hd-step-item">
+                        <div class="hd-step-img-wrap">
+                            <img src="{{ asset('home/assets/homepage/images/it-workflow-audit.png') }}" alt="IT Audit">
+                        </div>
+                        <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
+                            alt="arrow">
+                        <div class="hd-step-info">
+                            <h3 class="hd-step-title">Discovery & Evaluation</h3>
+                            <p class="hd-step-desc">We begin with a thorough review of the current technology landscape to map dependencies and pinpoint areas for improvement or risk.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Strategic Alignment & Design -->
+                    <div class="hd-step-item">
+                        <div class="hd-step-img-wrap">
+                            <img src="{{ asset('home/assets/homepage/images/it-workflow-plan.png') }}" alt="IT Plan">
+                        </div>
+                        <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
+                            alt="arrow">
+                        <div class="hd-step-info">
+                            <h3 class="hd-step-title">Strategic Alignment & Design</h3>
+                            <p class="hd-step-desc">We draft a tailored support and management roadmap that corresponds directly with your long-term operational targets and budget.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Seamless Integration & Deployment -->
+                    <div class="hd-step-item">
+                        <div class="hd-step-img-wrap">
+                            <img src="{{ asset('home/assets/homepage/images/it-workflow-implement.png') }}"
+                                alt="IT Implement">
+                        </div>
+                        <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
+                            alt="arrow">
+                        <div class="hd-step-info">
+                            <h3 class="hd-step-title">Seamless Integration & Deployment</h3>
+                            <p class="hd-step-desc">We activate robust management toolsets and support protocols without disrupting your daily business activities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Sustained Oversight & Continuous Improvement -->
+                    <div class="hd-step-item">
+                        <div class="hd-step-img-wrap">
+                            <img src="{{ asset('home/assets/homepage/images/it-workflow-manage.png') }}" alt="IT Manage">
+                        </div>
+                        <div class="hd-step-info">
+                            <h3 class="hd-step-title">Sustained Oversight & Continuous Improvement</h3>
+                            <p class="hd-step-desc">We provide round-the-clock surveillance, rapid-response remediation, and regular reporting on the health of your technology ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: WHY CHOOSE US (EXPERIENCE SHOWCASE) -->
         <section class="hd-why-us">
-            <div class="hd-why-us-container" style="max-width: 1200px;">
-                <!-- Left: Image with Frame Overlay -->
+            <div class="hd-why-us-container">
+                <!-- Left: Image with Circle Overlay -->
                 <div class="hd-why-us-left">
                     <div class="hd-why-us-img-frame">
-                        <img src="{{ asset('home/assets/homepage/images/it-why-us-team.png') }}"
-                            alt="Mounteko Full-Stack IT Engineering Team">
+                        <img src="{{ asset('home/assets/homepage/images/it-why-us-team.png') }}" alt="IT Experience Team">
                     </div>
                 </div>
 
                 <!-- Right: Content -->
                 <div class="hd-why-us-right">
-                    <span class="hd-why-us-tag">FULL-STACK TECHNICAL DEPTH</span>
-                    <h2 class="hd-why-us-title">End-to-End, Not Just Tier-1 Tickets</h2>
+                    <span class="hd-why-us-tag">Why Choose Us</span>
+                    <h2 class="hd-why-us-title">Why Organizations Rely on Our Established Expertise</h2>
                     <p class="hd-why-us-text">
-                        Basic helpdesk providers only handle routine password resets and script-based reboots. When a real
-                        crisis occurs, they tell you to call an external network or cloud vendor. Mounteko delivers
-                        end-to-end technical escalation. When an incident stems from an Active Directory sync failure,
-                        firewall misconfiguration, or cloud database bottleneck, our internal Tier-2 and Tier-3
-                        infrastructure engineers take over instantly — with zero third-party handoffs and complete
-                        accountability.
+                        We provide superior technical stewardship that allows companies to pursue growth initiatives without technological friction. Our forward-looking maintenance model ensures infrastructure serves as a foundation for success, not a recurring obstacle.
                     </p>
 
+                    <div class="hd-feature-row">
+                        <div class="hd-feature-box">
+                            <div class="hd-feature-icon-circle"><i class="bi bi-globe"></i></div>
+                            <span class="hd-feature-label">Expert around<br>the world</span>
+                        </div>
+                        <div class="hd-feature-box">
+                            <div class="hd-feature-icon-circle"><i class="bi bi-briefcase"></i></div>
+                            <span class="hd-feature-label">Best Practice For<br>Business</span>
+                        </div>
+                    </div>
+
                     <div class="hd-check-grid">
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Tier-1 to Tier-3 Unified
-                            Escalation</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Zero Third-Party Handoffs</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Proactive Root-Cause Analysis
-                        </div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Dedicated Systems Engineers
-                        </div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Centralized Multi-Channel
-                            Portal</div>
-                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> 24/7/365 Around-the-Clock
-                            Support</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Adherence to Industry-Standard Protocols</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Scalable Virtual Infrastructure Management</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Nonstop Remote System Oversight</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Routine Security Posture Assessments</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Structured Data Safeguarding Procedures</div>
+                        <div class="hd-check-item"><i class="bi bi-check-circle-fill"></i> Connection Speed and Reliability Tuning</div>
                     </div>
 
-                    <a href="{{ route('contactUs') }}" class="btn-hd-primary"
-                        style="display: inline-block; margin-top: 10px;">Get Dedicated Helpdesk Support</a>
-                </div>
-            </div>
-
-            <!-- Telecom & High-Volume Contact Center Industry Spotlight Card -->
-            <div class="container" style="max-width: 1200px; margin: 40px auto 0; padding: 0 40px;">
-                <div class="hd-industry-spotlight">
-                    <div class="hd-industry-icon">
-                        <i class="bi bi-reception-4"></i>
-                    </div>
-                    <div class="hd-industry-content">
-                        <h4>Industry Spotlight: Telecom & High-Volume Contact Centers</h4>
-                        <p>
-                            For telecom operators and customer-facing contact centers, staff cannot afford systems going
-                            down mid-shift. Even 10 minutes of softphone instability, CRM latency, or VPN disconnections
-                            leaves hundreds of callers stranded and causes immediate reputational damage. Mounteko provides
-                            the low-latency, rapid-response IT support needed to keep frontline agents online and operating
-                            at maximum efficiency 24/7/365.
-                        </p>
-                    </div>
+                    <a href="{{ route('contactUs') }}" class="hd-btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 5: HOW OUR HELPDESK PROCESS WORKS -->
-        <section class="hd-workflow">
-            <div class="hd-workflow-container">
-                <div class="hd-workflow-header">
-                    <span class="hd-workflow-tag">STREAMLINED TICKET RESOLUTION</span>
-                    <h2 class="hd-workflow-title">How Our Helpdesk Support <em>Works</em></h2>
-                </div>
 
-                <div class="hd-steps-row">
-                    <!-- Step 1: Submit -->
-                    <div class="hd-step-item">
-                        <div class="hd-step-img-wrap">
-                            <img src="{{ asset('home/assets/homepage/images/it-workflow-audit.png') }}"
-                                alt="Multi-Channel Ticket Submission">
-                        </div>
-                        <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
-                            alt="arrow">
-                        <div class="hd-step-info">
-                            <h3 class="hd-step-title">1. Instant Ticket Logging</h3>
-                            <p class="hd-step-desc">Employees reach out via phone, email, web portal, or chat. Tickets are
-                                automatically categorized and prioritized.</p>
-                        </div>
-                    </div>
 
-                    <!-- Step 2: Triage -->
-                    <div class="hd-step-item">
-                        <div class="hd-step-img-wrap">
-                            <img src="{{ asset('home/assets/homepage/images/it-workflow-plan.png') }}"
-                                alt="15-Minute Engineering Triage">
-                        </div>
-                        <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
-                            alt="arrow">
-                        <div class="hd-step-info">
-                            <h3 class="hd-step-title">2. 15-Minute SLA Pickup</h3>
-                            <p class="hd-step-desc">A qualified technical engineer claims the ticket within 15 minutes and
-                                initiates live diagnosis.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Resolve -->
-                    <div class="hd-step-item">
-                        <div class="hd-step-img-wrap">
-                            <img src="{{ asset('home/assets/homepage/images/it-workflow-implement.png') }}"
-                                alt="Remote Remediation & Fix">
-                        </div>
-                        <img src="https://img.icons8.com/ios/50/2563eb/long-arrow-right.png" class="hd-step-arrow"
-                            alt="arrow">
-                        <div class="hd-step-info">
-                            <h3 class="hd-step-title">3. Rapid Remediation</h3>
-                            <p class="hd-step-desc">Secure remote screen-sharing or deep-system diagnostics resolve the
-                                root problem quickly and permanently.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 4: Verify -->
-                    <div class="hd-step-item">
-                        <div class="hd-step-img-wrap">
-                            <img src="{{ asset('home/assets/homepage/images/it-workflow-manage.png') }}"
-                                alt="User Verification and Reporting">
-                        </div>
-                        <div class="hd-step-info">
-                            <h3 class="hd-step-title">4. Verification & Reporting</h3>
-                            <p class="hd-step-desc">The user confirms complete resolution. Incident telemetry is logged for
-                                monthly SLA transparency and continuous improvement.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- SECTION 6: LATEST FROM OUR BLOG -->
@@ -375,8 +340,7 @@
                     <!-- Post 1 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700"
-                                alt="IT Support Blog">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700" alt="IT Support Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-it-support">STRATEGY</span>
@@ -384,16 +348,14 @@
                                 <span><i class="bi bi-calendar3"></i> 12 Mar, 2024</span>
                                 <span><i class="bi bi-person"></i> By IT Expert</span>
                             </div>
-                            <h4 class="dev-blog-heading">How Proactive IT Support Prevents Costly Downtime for Growing
-                                Businesses</h4>
+                            <h4 class="dev-blog-heading">How Proactive IT Support Prevents Costly Downtime</h4>
                         </div>
                     </div>
 
                     <!-- Post 2 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
-                                alt="Managed IT Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Managed IT Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-management">MANAGEMENT</span>
@@ -401,15 +363,14 @@
                                 <span><i class="bi bi-calendar3"></i> 15 Mar, 2024</span>
                                 <span><i class="bi bi-person"></i> By Admin</span>
                             </div>
-                            <h4 class="dev-blog-heading">The Strategic Advantage of 24/7 Infrastructure Monitoring</h4>
+                            <h4 class="dev-blog-heading">The Importance of 24/7 Monitoring for Modern Businesses</h4>
                         </div>
                     </div>
 
                     <!-- Post 3 -->
                     <div class="dev-blog-card">
                         <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
-                                alt="Cybersecurity Blog">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700" alt="Cybersecurity Blog">
                         </div>
                         <div class="dev-blog-body">
                             <span class="dev-blog-cat cat-security">SECURITY</span>
@@ -417,8 +378,7 @@
                                 <span><i class="bi bi-calendar3"></i> 20 Mar, 2024</span>
                                 <span><i class="bi bi-person"></i> By Sec Lead</span>
                             </div>
-                            <h4 class="dev-blog-heading">Why Timely Patch Management is Your Best Defense Against
-                                Ransomware</h4>
+                            <h4 class="dev-blog-heading">Top 5 Cybersecurity Threats to Remote Teams in 2024</h4>
                         </div>
                     </div>
                 </div>
@@ -429,19 +389,18 @@
         <section class="hd-cta-section">
             <div class="hd-cta-container">
                 <div class="hd-cta-banner">
-
+                    
                     <!-- SVG Scribble Arrow -->
                     <div class="hd-cta-scribble">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 20C40 10 60 40 50 60C45 70 30 65 35 50C40 35 60 45 80 80M80 80L70 80M80 80L80 70"
-                                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20 20C40 10 60 40 50 60C45 70 30 65 35 50C40 35 60 45 80 80M80 80L70 80M80 80L80 70" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
 
                     <!-- Left: Text + Contact -->
                     <div class="hd-cta-left">
-                        <h2 class="hd-cta-banner-title">Tired of Slow IT Support and Lost Productivity?</h2>
-
+                        <h2 class="hd-cta-banner-title">Protect business, cyber security solution today!</h2>
+                        
                         <div class="hd-cta-contact-grid">
                             <!-- Phone -->
                             <div class="hd-cta-contact-item">
@@ -449,9 +408,8 @@
                                     <i class="bi bi-telephone-fill"></i>
                                 </div>
                                 <div class="hd-cta-contact-info">
-                                    <span>Call our engineering team</span>
-                                    <strong><a href="tel:{{ settingValue('phone') }}"
-                                            style="color: inherit; text-decoration: none;">{{ settingValue('phone') ?? '+1 (800) 555-0199' }}</a></strong>
+                                    <span>Get contact now</span>
+                                    <strong><a href="tel:{{ settingValue('phone') }}" style="color: inherit; text-decoration: none;">{{ settingValue('phone') }}</a></strong>
                                 </div>
                             </div>
 
@@ -461,9 +419,8 @@
                                     <i class="bi bi-envelope-at-fill"></i>
                                 </div>
                                 <div class="hd-cta-contact-info">
-                                    <span>Send an inquiry</span>
-                                    <strong><a href="mailto:{{ settingValue('email') }}"
-                                            style="color: inherit; text-decoration: none;">{{ settingValue('email') ?? 'support@mounteko.com' }}</a></strong>
+                                    <span>Sent e-mail</span>
+                                    <strong><a href="mailto:{{ settingValue('email') }}" style="color: inherit; text-decoration: none;">{{ settingValue('email') }}</a></strong>
                                 </div>
                             </div>
                         </div>
@@ -472,8 +429,7 @@
                     <!-- Right: Framed Image -->
                     <div class="hd-cta-right">
                         <div class="hd-cta-image-frame">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600"
-                                alt="24/7 IT Support Helpdesk Consultation">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="Cyber Security Monitoring">
                         </div>
                     </div>
 

@@ -8,53 +8,6 @@
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/css-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/new_home_custom.css') }}">
     <link rel="stylesheet" href="{{ asset('home/assets/homepage/css/ai_automation.css') }}">
-    <style>
-        /* Extra decorative floating icons animation */
-        .ai-float-decor {
-            position: absolute;
-            width: 35px;
-            height: 35px;
-            background: rgba(0, 255, 204, 0.1);
-            border: 1px solid rgba(0, 255, 204, 0.2);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-            color: var(--ai-accent);
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
-            backdrop-filter: blur(5px);
-            z-index: 1;
-        }
-
-        .ai-float-decor i {
-            filter: drop-shadow(0 0 5px var(--ai-accent));
-        }
-
-        .decor-1 {
-            top: 20%;
-            left: 15%;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        .decor-2 {
-            top: 15%;
-            right: 15%;
-            animation: float 6s ease-in-out infinite 1s;
-        }
-
-        .decor-3 {
-            bottom: 25%;
-            left: 10%;
-            animation: float 7s ease-in-out infinite 0.5s;
-        }
-
-        .decor-4 {
-            bottom: 20%;
-            right: 10%;
-            animation: float 5.5s ease-in-out infinite 1.5s;
-        }
-    </style>
 @endsection
 
 @section('content')
@@ -77,151 +30,43 @@
             </div>
 
             <!-- Robot Visuals -->
-            <img src="{{ asset('home/assets/homepage/images/ai/robot_left.png') }}" alt="AI Marketing Left"
+            <img src="{{ asset('home/assets/homepage/images/ai/robot_left.png') }}" alt="AI Robot Left"
                 class="ai-robot-left">
-            <img src="{{ asset('home/assets/homepage/images/ai/robot_right.png') }}" alt="AI Marketing Right"
+            <img src="{{ asset('home/assets/homepage/images/ai/robot_right.png') }}" alt="AI Robot Right"
                 class="ai-robot-right">
 
             <div class="ai-hero-container">
-                <div class="ai-welcome-badge">BEHAVIOR-DRIVEN MARKETING ENGINES</div>
-                <h1 class="ai-hero-title">Marketing Automation Systems for Growing Businesses</h1>
-                <p class="ai-hero-desc">Most marketing teams know exactly what should happen after someone downloads a guide or abandons a cart — they just don't have time to make it happen for every single lead, every time. Mounteko builds marketing automation systems that handle the follow-up, nurture, and segmentation automatically, consistently, for every lead that comes in.</p>
+                <div class="ai-welcome-badge">Welcome to Mounteko</div>
+                <h1 class="ai-hero-title">Transform your marketing with intelligent automation systems</h1>
+                <p class="ai-hero-desc">Nurture leads, scale personalized campaigns, and drive measurable revenue growth with our custom-built marketing automation services and AI-powered customer journey workflows.</p>
 
                 <div class="ai-pills-row">
-                    <span class="ai-pill">Behavior-Triggered Sequences</span>
-                    <span class="ai-pill">AI Dynamic Segmentation</span>
-                    <span class="ai-pill">Seamless Sales Alignment</span>
-                    <span class="ai-pill">Omnichannel Orchestration</span>
+                    <span class="ai-pill">SOC2 Compliant</span>
+                    <span class="ai-pill">Salesforce Partner</span>
+                    <span class="ai-pill">Microsoft Partner</span>
+                    <span class="ai-pill">AWS Partner</span>
                 </div>
 
                 <a href="{{ route('contactUs') }}" class="btn-ai-get-started">
-                    Build Your Marketing Engine <i><i class="bi bi-arrow-right"></i></i>
+                    Get Started <i><i class="bi bi-arrow-right"></i></i>
                 </a>
             </div>
         </section>
 
-        <!-- SECTION 2: EMAIL MARKETING AUTOMATION THAT ACTUALLY NURTURES (6-CARD GRID) -->
-        <section class="ai-services-grid-section">
-            <div class="ai-services-grid-container">
-                <div class="ai-services-header">
-                    <div class="ai-tag-red" style="justify-content: center;">
-                        <div class="dot"></div>
-                        BEHAVIORAL ENGAGEMENT
-                    </div>
-                    <h2 class="ai-about-title" style="font-size: 38px;">Email Marketing Automation That Actually Nurtures</h2>
-                    <p style="color: #94a3b8; max-width: 750px; margin: 15px auto 0; font-size: 15px; line-height: 1.6;">
-                        Move beyond generic scheduled email blasts. We engineer responsive, behavior-triggered nurture journeys that engage buyers based on real-time actions — page visits, content downloads, and product interactions.
-                    </p>
-                </div>
-
-                <div class="ai-services-grid">
-                    <!-- Card 01: Behavioral Trigger Sequences -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 20%; left: 80%;"></div>
-                        <div class="ai-card-particle" style="top: 60%; left: 90%;"></div>
-                        <span class="ai-service-number">01</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-envelope-check-fill"></i>
-                        </div>
-                        <h3 class="ai-service-title">Behavioral Trigger Sequences</h3>
-                        <p class="ai-service-desc">Automated multi-touch journeys triggered when prospects download a guide, register for webinars, or visit high-intent pricing pages.</p>
-                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 02: Cart & Browse Recovery -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 15%; left: 75%;"></div>
-                        <div class="ai-card-particle" style="top: 55%; left: 85%;"></div>
-                        <span class="ai-service-number">02</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-cart-x-fill"></i>
-                        </div>
-                        <h3 class="ai-service-title">Cart & Browse Recovery</h3>
-                        <p class="ai-service-desc">Intelligent recovery flows that re-engage high-intent shoppers with dynamic product recommendations, inventory alerts, and tailored incentives.</p>
-                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 03: Lead Scoring & Lifecycle Transitions -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 25%; left: 70%;"></div>
-                        <div class="ai-card-particle" style="top: 65%; left: 95%;"></div>
-                        <span class="ai-service-number">03</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-graph-up-arrow"></i>
-                        </div>
-                        <h3 class="ai-service-title">Lead Scoring & Lifecycle Handoffs</h3>
-                        <p class="ai-service-desc">Real-time engagement scoring that transitions leads automatically from cold subscribers to Marketing Qualified (MQL) and Sales Qualified (SQL).</p>
-                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 04: Dynamic Content Personalization -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 10%; left: 85%;"></div>
-                        <div class="ai-card-particle" style="top: 50%; left: 75%;"></div>
-                        <span class="ai-service-number">04</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-magic"></i>
-                        </div>
-                        <h3 class="ai-service-title">Dynamic Content Blocks</h3>
-                        <p class="ai-service-desc">Emails that automatically swap headlines, case studies, and offers to match each recipient's specific industry, role, and company size.</p>
-                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 05: Automated Re-Engagement Flows -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 30%; left: 90%;"></div>
-                        <div class="ai-card-particle" style="top: 70%; left: 80%;"></div>
-                        <span class="ai-service-number">05</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-arrow-repeat"></i>
-                        </div>
-                        <h3 class="ai-service-title">Automated Re-Engagement</h3>
-                        <p class="ai-service-desc">Win-back sequences that detect cooling engagement and deploy targeted content or exclusive promotions to reactivate dormant contacts.</p>
-                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-
-                    <!-- Card 06: Deliverability & Inbox Placement -->
-                    <div class="ai-service-card">
-                        <div class="ai-card-bg-pattern"></div>
-                        <div class="ai-card-grid-lines"></div>
-                        <div class="ai-card-particle" style="top: 20%; left: 75%;"></div>
-                        <div class="ai-card-particle" style="top: 60%; left: 85%;"></div>
-                        <span class="ai-service-number">06</span>
-                        <div class="ai-service-icon">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                        <h3 class="ai-service-title">Deliverability Optimization</h3>
-                        <p class="ai-service-desc">Automated list hygiene, bounce protection, and domain warm-up strategies ensuring your messages land in the primary inbox, never spam.</p>
-                        <a href="{{ route('contactUs') }}" class="ai-service-readmore">Learn More <i class="bi bi-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: AI-POWERED SEGMENTATION AND PERSONALIZATION -->
+        <!-- WHO WE ARE SECTION -->
         <section class="ai-about-section">
             <div class="ai-about-container">
                 <div class="ai-about-visual">
                     <div class="ai-main-img-wrap">
-                        <img src="{{ asset('home/assets/homepage/images/ai/ai_face_digital.png') }}" alt="AI Marketing Segmentation">
+                        <img src="{{ asset('home/assets/homepage/images/ai/ai_face_digital.png') }}" alt="AI Creative Face">
                     </div>
                     <div class="ai-floating-card">
                         <div class="ai-card-icon">
-                            <img src="{{ asset('home/assets/homepage/images/ai/ai_data_node.png') }}" alt="Dynamic Segments">
+                            <img src="{{ asset('home/assets/homepage/images/ai/ai_data_node.png') }}" alt="Mini AI">
                         </div>
                         <div class="ai-card-text">
                             <strong>100%</strong>
-                            <span>Real-Time Behavioral Targeting</span>
+                            <span>Marketing Performance</span>
                         </div>
                     </div>
                 </div>
@@ -229,72 +74,68 @@
                 <div class="ai-about-content">
                     <div class="ai-tag-red">
                         <div class="dot"></div>
-                        HYPER-TARGETING AT SCALE
+                        Who We Are
                     </div>
-                    <h2 class="ai-about-title">AI-Powered Segmentation and Personalization</h2>
-                    <p class="ai-about-desc">
-                        Manually maintaining static email lists is slow, inaccurate, and impossible to scale. Mounteko deploys AI segmentation engines that dynamically group contacts in real time based on live browsing behavior, past purchase history, content affinity, and engagement velocity. Your marketing campaigns adapt automatically, delivering hyper-relevant messaging to thousands of prospects simultaneously.
-                    </p>
+                    <h2 class="ai-about-title">Redefining Marketing Performance with AI-Driven Workflows</h2>
+                    <p class="ai-about-desc">We are a next-generation marketing automation platform built to transform fragmented campaigns into cohesive, intelligent customer journeys. Our mission is to help brands unlock hyper-efficiency by replacing manual processes with adaptive automation and real-time analytics.</p>
 
                     <div class="ai-feature-row">
                         <div class="ai-feature-item">
-                            <div class="ai-feat-icon"><i class="bi bi-pie-chart-fill"></i></div>
-                            <div class="ai-feat-text">Self-Updating<br>Segments</div>
+                            <div class="ai-feat-icon"><i class="bi bi-cursor-fill"></i></div>
+                            <div class="ai-feat-text">Predict Intent,<br>Personalize Everywhere</div>
                         </div>
                         <div class="ai-feature-item">
-                            <div class="ai-feat-icon"><i class="bi bi-clock-history"></i></div>
-                            <div class="ai-feat-text">Send-Time<br>Optimization</div>
+                            <div class="ai-feat-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                            <div class="ai-feat-text">Unify Channels,<br>Maximize Revenue</div>
                         </div>
                     </div>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Dynamic Audience Clustering:</strong> Groups contacts by real-time intent signals rather than outdated static tags.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Predictive Send-Time Intelligence:</strong> Dispatches messages at the exact hour each individual contact is most likely to open.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Cross-Channel Consistency:</strong> Synchronizes audience segments across email, SMS, and ad retargeting platforms.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Use machine learning to identify high-intent segments and automatically deploy personalized content across channels.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Seamlessly connect email, mobile push, in-app messaging, and paid social into a unified engagement layer.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Build closed-loop systems that track every interaction—from first click to conversion—and optimize for lifetime value at scale.</li>
                     </ul>
 
                     <div>
-                        <a href="{{ route('contactUs') }}" class="btn-ai-red">Scale Your Personalization <i
+                        <a href="{{ route('contactUs') }}" class="btn-ai-red">Get Started Now <i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
 
-                    <img src="{{ asset('home/assets/homepage/images/ai/cute_robot_side.png') }}" alt="AI Assistant"
+                    <img src="{{ asset('home/assets/homepage/images/ai/cute_robot_side.png') }}" alt="Small Robot"
                         class="ai-side-robot-new">
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 4: CONNECTED TO SALES, NOT A SEPARATE SILO -->
+        <!-- TRANSFORMING BUSINESSES SECTION -->
         <section class="ai-transform-section">
             <div class="ai-transform-container">
                 <div class="ai-transform-visual">
                     <div class="ai-main-img-transform">
                         <img src="{{ asset('home/assets/homepage/images/ai/robot_hand_touch_new.png') }}"
-                            alt="Marketing and Sales Alignment">
+                            alt="AI Robot Hand Touch">
                     </div>
                     <div class="ai-transform-overlay">
                         <img src="{{ asset('home/assets/homepage/images/ai/robot_profile_overlay_new.png') }}"
-                            alt="Unified Pipeline">
+                            alt="Robot Profile">
                     </div>
                 </div>
 
                 <div class="ai-transform-content">
                     <div class="ai-tag-red">
                         <div class="dot"></div>
-                        UNIFIED REVENUE PIPELINE
+                        About Us
                     </div>
-                    <h2 class="ai-about-title">Connected to Sales, Not a Separate Silo</h2>
-                    <p class="ai-about-desc">
-                        When marketing automation lives in a separate silo from your sales CRM, hot leads get neglected, reps lack context, and attribution disappears. Mounteko bridges marketing workflows directly into your sales systems (Salesforce, HubSpot, Zoho, Pipedrive). The moment a prospect crosses a qualification threshold, the system enriches the contact, notifies the designated rep, and triggers automated sales follow-up.
-                    </p>
+                    <h2 class="ai-about-title">Transforming Marketing Teams with Intelligent Automation Systems</h2>
+                    <p class="ai-about-desc">We are pioneers in the fusion of strategic marketing and cutting-edge AI technology. Our mission is to transform how businesses approach customer engagement and revenue operations by delivering innovative automated marketing solutions.</p>
 
                     <ul class="ai-checklist-about">
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Instant MQL-to-SQL Handoffs:</strong> Account executives receive real-time Slack and CRM alerts when leads show high buying intent.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Complete Engagement History:</strong> Reps see every email opened, webpage visited, and guide downloaded before discovery calls.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Closed-Loop Attribution:</strong> Measure which campaigns generate actual closed-won revenue, not just vanity clicks.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Advanced AI-Powered Segmentation for Hyper-Targeted Campaigns.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Real-time Behavioral Triggers Optimizing Every Customer Touchpoint.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Seamless CRM Marketing Automation for Unified Sales and Marketing Alignment.</li>
                     </ul>
 
-                    <a href="{{ route('contactUs') }}" class="btn-ai-gradient">Connect Marketing to Sales <i
+                    <a href="{{ route('contactUs') }}" class="btn-ai-gradient">View All Project <i
                             class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
@@ -303,23 +144,186 @@
                 class="ai-reaching-hand-clean">
         </section>
 
-        <!-- SECTION 5: CONSUMER GOODS & DTC INDUSTRY SPOTLIGHT -->
+        <!-- INNOVATIVE SOLUTIONS SECTION -->
+        <section class="ai-services-grid-section">
+            <div class="ai-services-grid-container">
+                <div class="ai-services-header">
+                    <div class="ai-tag-red" style="justify-content: center;">
+                        <div class="dot"></div>
+                        Our Best Services
+                    </div>
+                    <h2 class="ai-about-title" style="font-size: 30px;">Best Innovative Marketing Automation Systems for Growth</h2>
+                </div>
+
+
+                <div class="ai-services-grid">
+                    <!-- Card 01 -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 20%; left: 80%;"></div>
+                        <div class="ai-card-particle" style="top: 60%; left: 90%;"></div>
+                        <span class="ai-service-number">01</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-person-plus"></i>
+                        </div>
+                        <h3 class="ai-service-title">Lead Generation Automation</h3>
+                        <p class="ai-service-desc">Our lead generation automation solutions capture, score, and qualify leads 24/7, ensuring your sales team focuses only on high-intent prospects ready to convert.</p>
+                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 02 -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 15%; left: 75%;"></div>
+                        <div class="ai-card-particle" style="top: 55%; left: 85%;"></div>
+                        <span class="ai-service-number">02</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-envelope-paper-heart"></i>
+                        </div>
+                        <h3 class="ai-service-title">Email Marketing Automation</h3>
+                        <p class="ai-service-desc">Design personalized, behavior-triggered email journeys that nurture subscriber relationships and dramatically improve open rates, click-throughs, and customer lifetime value.</p>
+                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 03 -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 25%; left: 70%;"></div>
+                        <div class="ai-card-particle" style="top: 65%; left: 95%;"></div>
+                        <span class="ai-service-number">03</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h3 class="ai-service-title">AI Marketing Automation</h3>
+                        <p class="ai-service-desc">Deploy predictive intelligence that anticipates customer needs, recommends next-best-actions, and automates personalization at an individual level across all channels.</p>
+                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 04 -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 10%; left: 85%;"></div>
+                        <div class="ai-card-particle" style="top: 50%; left: 75%;"></div>
+                        <span class="ai-service-number">04</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-link-45deg"></i>
+                        </div>
+                        <h3 class="ai-service-title">CRM Marketing Automation</h3>
+                        <p class="ai-service-desc">Integrate your CRM deeply with automated workflows to sync data, track engagement, and create a single source of truth for marketing and sales orchestration.</p>
+                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 05 -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 30%; left: 90%;"></div>
+                        <div class="ai-card-particle" style="top: 70%; left: 80%;"></div>
+                        <span class="ai-service-number">05</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-phone-vibrate"></i>
+                        </div>
+                        <h3 class="ai-service-title">Digital Marketing Automation</h3>
+                        <p class="ai-service-desc">Unify your entire digital footprint with automated cross-channel campaigns that maintain a consistent brand voice from paid ads to organic content distribution.</p>
+                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- Card 06 -->
+                    <div class="ai-service-card">
+                        <div class="ai-card-bg-pattern"></div>
+                        <div class="ai-card-grid-lines"></div>
+                        <div class="ai-card-particle" style="top: 20%; left: 75%;"></div>
+                        <div class="ai-card-particle" style="top: 60%; left: 85%;"></div>
+                        <span class="ai-service-number">06</span>
+                        <div class="ai-service-icon">
+                            <i class="bi bi-compass"></i>
+                        </div>
+                        <h3 class="ai-service-title">Custom Automated Marketing</h3>
+                        <p class="ai-service-desc">We engineer bespoke marketing automation software tailored to your unique business logic, integrating proprietary systems for a perfect fit.</p>
+                        <a href="#" class="ai-service-readmore">Read More <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI TRANSFORMATION JOURNEY SECTION -->
+        <section class="ai-journey-section">
+            <div class="ai-journey-container">
+                <div class="ai-services-header">
+                    <div class="ai-tag-red" style="justify-content: center;">
+                        <div class="dot"></div>
+                        How It Works
+                    </div>
+                    <h2 class="ai-about-title" style="font-size: 28px;">The Marketing Automation Transformation Journey</h2>
+                    <p class="ai-journey-desc" style="margin-bottom: 30px;">We begin with a detailed consultation to learn about your customer lifecycle, campaign goals, and current technology ecosystem.</p>
+                </div>
+
+
+                <div class="ai-journey-flex">
+                    <!-- Step 1 -->
+                    <div class="ai-journey-card">
+                        <i class="bi bi-search"></i>
+                        <h3>Discovery &<br>Audit</h3>
+                    </div>
+
+                    <!-- Connector 1 -->
+                    <div class="ai-journey-arrow">
+                        <span>Auditing Tech</span>
+                        <div class="arrow-line"></div>
+                    </div>
+
+                    <!-- Step 2 (Center) -->
+                    <div class="ai-journey-center">
+                        <div class="ai-circle-step ai-circle-top">
+                            <i class="bi bi-node-plus"></i>
+                            <h3>Strategy &<br>Architecture</h3>
+                        </div>
+                        <div class="ai-circle-step ai-circle-bottom">
+                            Our experts design the ideal marketing automation systems architecture and data flows for your specific needs.
+                        </div>
+                    </div>
+
+                    <!-- Connector 2 -->
+                    <div class="ai-journey-arrow">
+                        <span>Seamless Launch</span>
+                        <div class="arrow-line"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="ai-journey-card">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                        <h3>Implementation &<br>Optimization</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Robotic Hand Visual -->
+            <img src="{{ asset('home/assets/homepage/images/ai/robot_hand_clean.png') }}" alt="Robot Hand"
+                class="ai-reaching-hand-clean">
+        </section>
+
+
+
+        <!-- AI EXPERIENCE SECTION -->
         <section class="ai-experience-section">
             <div class="ai-experience-container">
                 <!-- Left Visual Composition -->
                 <div class="ai-visual-composition">
                     <div class="ai-main-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800"
-                            alt="DTC and Consumer Goods Marketing Automation" class="ai-exp-main-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                            alt="Advanced Marketing Automation" class="ai-exp-main-img">
 
                         <!-- Floating Glass Badge -->
                         <div class="ai-glass-badge-exp">
                             <div class="badge-icon">
-                                <i class="bi bi-bag-check-fill"></i>
+                                <i class="bi bi-bullseye"></i>
                             </div>
                             <div class="badge-text">
-                                <span class="badge-title">Modular DTC Engine</span>
-                                <span class="badge-sub">Rapid Seasonal Drops</span>
+                                <span class="badge-title">Campaign Sync</span>
+                                <span class="badge-sub">Intelligent Engagement</span>
                             </div>
                         </div>
 
@@ -331,40 +335,42 @@
 
                 <!-- Right Content -->
                 <div class="ai-experience-content">
-                    <span class="ai-tag-purple">INDUSTRY SPOTLIGHT</span>
-                    <h2 class="ai-exp-title">Consumer Goods & DTC: Agile Seasonal Campaigns at Scale</h2>
+                    <span class="ai-tag-purple">Our Experience</span>
+                    <h2 class="ai-exp-title">Automate Smarter. Engage Faster. Grow Stronger.</h2>
                     <p class="ai-exp-desc">
-                        For fast-growing Direct-to-Consumer (DTC) brands running frequent product drops, flash sales, and seasonal promotions (Black Friday, Summer Launch, Holiday Gift Guides), manually rebuilding campaigns from scratch drains creative resources.
-                    </p>
-                    <p class="ai-exp-desc">
-                        Mounteko designs modular, automated campaign frameworks that dynamically update product catalogs, discounts, and customer segments based on real-time inventory levels and past purchase categories. DTC brands scale revenue and launch multi-channel campaigns in minutes instead of weeks.
+                        As a trusted marketing automation provider, we empower businesses to streamline complex campaigns, accelerate revenue growth, and deliver meaningful engagement across every channel.
                     </p>
 
                     <div class="ai-exp-checklist">
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Dynamic Product & Inventory Feeds
+                            Omnichannel Campaign Orchestration
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Automated VIP Customer Early-Access
+                            Intelligent Lead Scoring & Routing
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Post-Purchase Replenishment Triggers
+                            Dynamic Content Personalization
                         </div>
                         <div class="ai-exp-item">
                             <i class="bi bi-check"></i>
-                            Zero Re-Building of Core Workflows
+                            Actionable Analytics & Attribution
                         </div>
                     </div>
 
+                    <p class="ai-exp-footer-text">
+                        Coordinate campaign execution across touchpoints while mapping results back to concrete commercial pipeline metrics.
+                    </p>
+
                     <a href="{{ route('contactUs') }}" class="btn-ai-purple">
-                        Scale Your DTC Marketing <i class="bi bi-arrow-right"></i>
+                        Explore More <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
             </div>
         </section>
+
 
         <!-- FAQ & Contact Section -->
         <section class="ai-faq-contact-section">
@@ -373,35 +379,43 @@
                 <div class="ai-contact-card-wrapper">
                     <div class="ai-contact-card">
                         <div class="ai-card-tag">
-                            <span class="dot"></span> RESPONSE TIME: WITHIN 15 MINUTES
+                            <span class="dot"></span> RESPONSE TIME: 1 HOURS
                         </div>
-                        <h2 class="ai-card-title">Ready to Automate Your Marketing Funnel?</h2>
-                        <p class="ai-card-desc">Tell us about your current marketing stack and nurture challenges, and our growth architects will map out an automated customer journey.</p>
+                        <h2 class="ai-card-title">Tell details about your project</h2>
+                        <p class="ai-card-desc">Just fill out the form and our global experts will be in touch right away
+                            with package and price solution to help you!</p>
 
-                        <form class="ai-contact-form" action="{{ route('contactStore') }}" method="POST">
-                            @csrf
+                        <form class="ai-contact-form">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" name="name" placeholder="Full name" required>
+                                    <input type="text" placeholder="Full name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" placeholder="Your Work Email" required>
+                                    <input type="email" placeholder="Your Email">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea name="message" placeholder="Describe your current email tools, marketing challenges, and lead volume..." rows="3" required></textarea>
+                                <textarea placeholder="Your Message" rows="3"></textarea>
+                            </div>
+
+                            <div class="form-check-group">
+                                <label class="ai-checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Subscribe to Newsletter
+                                </label>
                             </div>
 
                             <div class="ai-form-footer">
                                 <div class="support-person">
-                                    <img src="https://ui-avatars.com/api/?name=Growth+Architect&background=00ffcc&color=030d0a"
-                                        alt="Growth Architect">
+                                    <img src="https://ui-avatars.com/api/?name=Richard+Martines&background=random"
+                                        alt="Support">
                                     <div class="support-info">
-                                        <h4>Senior Marketing Automation Architect</h4>
-                                        <p>Growth Strategy Team</p>
+                                        <h4>Richard Martines</h4>
+                                        <p>Support Developer</p>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn-ai-red">Request Strategy Audit <i
+                                <button type="button" class="btn-ai-red">View All Price <i
                                         class="bi bi-arrow-right"></i></button>
                             </div>
                         </form>
@@ -413,39 +427,35 @@
                     <div class="ai-card-tag">
                         <span class="dot"></span> FAQ
                     </div>
-                    <h2 class="ai-faq-title">Marketing Automation FAQs</h2>
-                    <p class="ai-faq-desc">Answers to common questions about setting up intelligent nurture and segmentation systems.
+                    <h2 class="ai-faq-title">Learn more from FAQs</h2>
+                    <p class="ai-faq-desc">We've heard it all. Here's everything you need to know before working with us.
                     </p>
 
-                    <!-- Tabs -->
+                    <!-- Tabs (Only General Ask) -->
                     <ul class="nav nav-tabs ai-custom-tabs" id="aiFaqTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
-                                type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="platforms-tab" data-bs-toggle="tab" data-bs-target="#platforms"
-                                type="button" role="tab" aria-controls="platforms" aria-selected="false">Platforms</button>
+                                type="button" role="tab" aria-controls="general" aria-selected="true">General Ask</button>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content ai-tab-content" id="aiFaqTabContent">
                         <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
-                            <!-- Accordion -->
+                            <!-- Accordion General -->
                             <div class="accordion ai-custom-accordion" id="faqAccordion">
                                 <!-- Item 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            How does behavioral automation improve email conversion rates?
+                                            Will these systems integrate with my current CRM and tools?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            Behavioral triggers send emails at the exact moment of highest user intent (e.g. immediately after browsing a specific product or reading a case study), generating up to 3x higher open and click rates compared to static scheduled blasts.
+                                            Yes, our marketing automation services are designed for seamless integration. We specialize in CRM marketing automation, ensuring your marketing and sales data flow perfectly between platforms.
                                         </div>
                                     </div>
                                 </div>
@@ -454,13 +464,13 @@
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Which marketing automation platforms do you build on?
+                                            Is it complex to set up lead generation automation?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                         data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            We build and manage systems across HubSpot, Klaviyo, ActiveCampaign, Marketo, Salesforce Marketing Cloud, Customer.io, and custom webhook-based marketing stacks.
+                                            Not with our approach. We build user-friendly automated marketing solutions. Our team handles the technical setup so you can start capturing and nurturing leads through automated workflows right away.
                                         </div>
                                     </div>
                                 </div>
@@ -470,20 +480,17 @@
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false"
                                             aria-controls="collapseThree">
-                                            How do you ensure our marketing emails don't hit the spam folder?
+                                            Is a large marketing team required to manage the software?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            We configure strict authentication protocols (DKIM, SPF, DMARC), implement automated unengaged subscriber sunsetting, and conduct gradual IP warm-up to ensure top-tier sender reputation.
+                                            No, the purpose of our marketing automation software is to multiply your team's output. We provide thorough training and support so even lean teams can manage complex, multi-channel campaigns effectively.
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="platforms" role="tabpanel" aria-labelledby="platforms-tab">
-                            <p class="mt-4 text-muted">All marketing automation workflows integrate bi-directionally with your CRM, e-commerce backend (Shopify, WooCommerce, Magento), and analytics platforms.</p>
                         </div>
                     </div>
                 </div>
@@ -496,9 +503,9 @@
                 <!-- Section Header -->
                 <div class="ai-blog-header text-center">
                     <div class="ai-card-tag justify-content-center">
-                        <span class="dot"></span> MARKETING INSIGHTS
+                        <span class="dot"></span> LATEST BLOG
                     </div>
-                    <h2 class="ai-blog-title">Latest From Our Marketing Automation Blog</h2>
+                    <h2 class="ai-blog-title">AI and Creativity Stories Tips.</h2>
                 </div>
 
                 <!-- Blog Grid -->
@@ -506,51 +513,51 @@
                     <!-- Blog Card 1 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800"
-                                alt="Behavioral Nurture">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
+                                alt="Unlocking Data">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> By Growth Lead</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-calendar3"></i> 20 Mar, 2024</span>
+                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
                             </div>
-                            <h3 class="blog-card-title">Why Behavior-Triggered Emails Outperform Generic Scheduled Blasts</h3>
-                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">Unlocking the Power of Data for Business Success.</h3>
+                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
 
                     <!-- Blog Card 2 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800"
-                                alt="AI Segmentation">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800"
+                                alt="Future of Work">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> By Data Strategist</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-calendar3"></i> 24 Mar, 2024</span>
+                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
                             </div>
-                            <h3 class="blog-card-title">How AI-Driven Dynamic Segmentation Eliminates Static Email Lists</h3>
-                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">The Future of Work Embracin Digital Transformation.</h3>
+                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
 
                     <!-- Blog Card 3 -->
                     <div class="ai-blog-card">
                         <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800"
-                                alt="DTC Marketing Architecture">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                                alt="AI Revolutionizing">
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> By DTC Specialist</span>
+                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
                                 <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-calendar3"></i> 28 Mar, 2024</span>
+                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
                             </div>
-                            <h3 class="blog-card-title">Scaling Seasonal DTC Campaigns with Modular Automated Frameworks</h3>
-                            <a href="{{ route('contactUs') }}" class="blog-read-more">Read Insights <i class="bi bi-arrow-up-right"></i></a>
+                            <h3 class="blog-card-title">How AI is Revolutionizing Business and Industry Today</h3>
+                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
