@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="{{ asset('admin/assets/auth/css/owl.carousel.min.css') }}">
 
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('admin/assets/auth/css/bootstrap.min.css') }}">
 
@@ -46,9 +49,11 @@
 
                                 </div>
                                 <label for="password">Password</label>
-                                <div class="form-group last mb-4">
-                                    <input type="password" class="form-control" id="password" name="password">
-
+                                <div class="form-group last mb-4 position-relative">
+                                    <input type="password" class="form-control" id="password" name="password" style="padding-right: 45px;">
+                                    <span id="togglePassword" role="button" class="position-absolute" style="right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #888; z-index: 10;">
+                                        <i class="fa-solid fa-eye-slash" id="togglePasswordIcon" style="font-size: 16px;"></i>
+                                    </span>
                                 </div>
 
                                 <div class="d-flex mb-5 align-items-center">
@@ -105,16 +110,17 @@
                 toastr.success('{{ Session::get('success') }}');
             @endif
 
-            $('#password-addon').click(function() {
-                var passwordInput = $('#password-input');
-                var icon = $(this).find('i');
+            $('#togglePassword').on('click', function(e) {
+                e.preventDefault();
+                var passwordInput = $('#password');
+                var icon = $('#togglePasswordIcon');
 
                 if (passwordInput.attr('type') === 'password') {
                     passwordInput.attr('type', 'text');
-                    icon.removeClass('ri-eye-fill').addClass('ri-eye-off-fill');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
                 } else {
                     passwordInput.attr('type', 'password');
-                    icon.removeClass('ri-eye-off-fill').addClass('ri-eye-fill');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
                 }
             });
         });

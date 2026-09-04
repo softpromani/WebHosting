@@ -1,9 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-        <img src="{{ asset('admin/assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
-            class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">WebHosting</span>
+    <a href="{{ route('admin.dashboard') }}" class="brand-link d-flex align-items-center">
+        <img src="{{ asset('storage/' . settingValue('logo')) }}" alt="{{ settingValue('company Name') }}"
+            class="brand-image elevation-3" style="opacity: .9; max-height: 33px; width: auto; object-fit: contain; background: #fff; padding: 2px; border-radius: 4px;">
+        <span class="brand-text font-weight-light ml-2">{{ settingValue('company Name') }}</span>
     </a>
 
     <!-- Sidebar -->

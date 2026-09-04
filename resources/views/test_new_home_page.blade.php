@@ -401,13 +401,84 @@
         </section>
 
         <!-- Featured Case Studies Section -->
-        <section class="case-studies py-5">
-            <div class="container text-center mb-5">
-                <h2 class="common-section-heading section-heading mb-3">Featured Case Studies</h2>
-                <p class="section-subtitle mb-4">Let's work together to digitally transform your business and build the
-                    solutions of tomorrow.</p>
-                <a href="#" class="btn btn-case-study"><span>Talk to an expert</span> <i
-                        class="fas fa-chevron-right ms-2"></i></a>
+        <section class="case-studies py-5 position-relative">
+            <div class="case-studies-bg-overlay"></div>
+            <div class="container position-relative mb-4" style="z-index: 2;">
+                <!-- Section Header -->
+                <div class="case-studies-header text-center mb-4">
+                    <div class="case-studies-badge">
+                        <span class="badge-pulse-dot"></span>
+                        <span class="badge-text">PROVEN CLIENT OUTCOMES</span>
+                    </div>
+                    <h2 class="case-studies-title">Featured Case Studies</h2>
+                    <h3 class="case-studies-subtitle">
+                        Measurable Outcomes. <span class="text-gradient-teal">Real Business Impact.</span>
+                    </h3>
+                    <p class="case-studies-lead">
+                        See how fast-growing enterprises eliminate outages, harden cybersecurity posture, and scale operations with Mounteko's managed IT, cloud architecture, and automation solutions.
+                    </p>
+                </div>
+
+                <!-- Live Impact Metrics Strip -->
+                <div class="case-impact-metrics-row row g-3 justify-content-center mb-4">
+                    <div class="col-6 col-md-3">
+                        <div class="impact-metric-card">
+                            <div class="impact-metric-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="impact-metric-content">
+                                <div class="impact-metric-number">55% Faster</div>
+                                <div class="impact-metric-label">Ticket Resolution</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="impact-metric-card">
+                            <div class="impact-metric-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="impact-metric-content">
+                                <div class="impact-metric-number">99.99%</div>
+                                <div class="impact-metric-label">Guaranteed SLA Uptime</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="impact-metric-card">
+                            <div class="impact-metric-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="impact-metric-content">
+                                <div class="impact-metric-number">100%</div>
+                                <div class="impact-metric-label">HIPAA & SOC 2 Compliance</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="impact-metric-card">
+                            <div class="impact-metric-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <div class="impact-metric-content">
+                                <div class="impact-metric-number">0 Disruption</div>
+                                <div class="impact-metric-label">Cloud Server Migrations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA & Trust Bar -->
+                <div class="case-cta-bar text-center mb-5">
+                    <a href="{{ route('contactUs') }}" class="btn-case-study-modern" style="display: inline-flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; white-space: nowrap !important; width: auto !important; max-width: none !important; min-width: auto !important; padding: 14px 36px !important;">
+                        <span>Talk to an IT Architect</span>
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <div class="case-trust-note mt-3">
+                        <span><i class="fas fa-check-circle text-primary me-1"></i> Dedicated senior engineers</span>
+                        <span class="mx-2 d-none d-sm-inline">&bull;</span>
+                        <span><i class="fas fa-clock text-primary me-1"></i> 15-Minute critical response SLA</span>
+                    </div>
+                </div>
             </div>
 
             <div class="container px-4 px-lg-5">

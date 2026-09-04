@@ -621,82 +621,250 @@ body {
     }
 }
 
-/* Case Studies Section */
+/* ===================================================
+   FEATURED CASE STUDIES - PREMIUM REDESIGN
+   =================================================== */
 .case-studies {
-    background-color: #f8f9fa;
-    /* Light background for contrast */
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #ffffff 100%);
+    padding: 80px 0 70px;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-/* .section-heading handled by common-section-heading */
+.case-studies-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% -10%, rgba(var(--primary-color-rgb, 0, 131, 141), 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
 
-
-.section-subtitle {
-    font-size: 0.9rem;
-    /* Reduced from 1rem */
-    color: #666;
-    max-width: 600px;
+.case-studies-header {
+    max-width: 860px;
     margin: 0 auto;
 }
 
-/* Talk to an expert Button (Wicked Lionfish Style - Updated Size) */
-.btn-case-study {
-    padding: 0.8em 1.8em;
-    /* Increased padding/height */
-    /* Further reduced size as requested */
-    font-size: 1rem;
-    /* Slightly smaller font */
-    background-color: rgb(14, 14, 26);
-    /* Dark background */
-    color: rgb(234, 234, 234);
-    /* Off-white text */
-    border-radius: 12px;
-    /* 12px radius */
-    font-weight: 700;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.6s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Soft shadow, replacing previous glow if desired, or adding to it. User asked for soft shadow. Keeping reduced glow + adding soft shadow may be conflicting, but let's adjust to requested specs. */
-    /* box-shadow: 0px 0px 40px #1f4c65; */
-    /* Commenting out heavy glow for "soft shadow" request? Or keeping both? The prompt said "Add soft shadow", I will replace the heavy glow with a softer one or just append. Let's aim for the user request: soft shadow. */
-    box-shadow: 0 4px 12px rgba(31, 76, 101, 0.3);
-    /* Softer version of original glow */
-    /* Reduced glow intensity slightly */
-    z-index: 1;
+.case-studies-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    /* Tighter gap */
-    border: none;
+    background: rgba(var(--primary-color-rgb, 0, 131, 141), 0.09);
+    border: 1px solid rgba(var(--primary-color-rgb, 0, 131, 141), 0.28);
+    padding: 6px 18px;
+    border-radius: 9999px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 131, 141, 0.08);
+}
+
+.badge-pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color, #00838d);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb, 0, 131, 141), 0.7);
+    animation: caseStudyDotPulse 2s infinite;
+}
+
+@keyframes caseStudyDotPulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb, 0, 131, 141), 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(var(--primary-color-rgb, 0, 131, 141), 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb, 0, 131, 141), 0);
+    }
+}
+
+.case-studies-badge .badge-text {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: var(--primary-color, #00838d);
+}
+
+.case-studies-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-family: var(--bs-body-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif) !important;
+}
+
+.case-studies-subtitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.35;
+    font-family: var(--bs-body-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif) !important;
+}
+
+.text-gradient-teal {
+    background: linear-gradient(135deg, var(--primary-color, #00838d) 0%, var(--secondary-color, #004d55) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.case-studies-lead {
+    font-size: 1.05rem;
+    line-height: 1.68;
+    color: #475569;
+    max-width: 760px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Impact Metrics Strip */
+.case-impact-metrics-row {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.impact-metric-card {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 14px;
+    padding: 16px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+    height: 100%;
+}
+
+.impact-metric-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(var(--primary-color-rgb, 0, 131, 141), 0.35);
+    box-shadow: 0 10px 24px rgba(var(--primary-color-rgb, 0, 131, 141), 0.1);
+}
+
+.impact-metric-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb, 0, 131, 141), 0.12) 0%, rgba(var(--secondary-color-rgb, 0, 77, 85), 0.06) 100%);
+    color: var(--primary-color, #00838d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.impact-metric-content {
+    text-align: start;
+}
+
+.impact-metric-number {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.impact-metric-label {
+    font-size: 0.78rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 2px;
+    line-height: 1.2;
+}
+
+/* Modern CTA Button */
+.case-cta-bar {
+    margin-top: 15px;
+}
+
+.btn-case-study-modern {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #0b132b 0%, #1c2541 60%, var(--secondary-color, #004d55) 100%);
+    color: #ffffff !important;
+    padding: 14px 36px !important;
+    border-radius: 50px !important;
+    font-size: 0.98rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 6px 20px rgba(11, 19, 43, 0.18), 0 2px 6px rgba(0, 131, 141, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-case-study-modern span {
+    white-space: nowrap !important;
+    display: inline !important;
+}
+
+.btn-case-study-modern:hover {
+    background: linear-gradient(135deg, var(--primary-color, #00838d) 0%, #0b132b 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(var(--primary-color-rgb, 0, 131, 141), 0.35);
+    color: #ffffff !important;
+}
+
+.btn-case-study-modern i {
+    transition: transform 0.3s ease;
+}
+
+.btn-case-study-modern:hover i {
+    transform: translateX(4px);
+}
+
+.case-trust-note {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Fallback / legacy support for .btn-case-study */
+.btn-case-study {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0b132b 0%, #1c2541 60%, var(--secondary-color, #004d55) 100%);
+    color: #ffffff !important;
+    padding: 13px 32px;
+    border-radius: 50px;
+    font-size: 0.96rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.35s ease;
+    box-shadow: 0 6px 20px rgba(11, 19, 43, 0.18);
+    border: none;
 }
 
 .btn-case-study:hover {
-    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
-    color: rgb(4, 4, 38);
-    /* Dark text on hover */
+    background: linear-gradient(135deg, var(--primary-color, #00838d) 0%, #0b132b 100%);
     transform: translateY(-2px);
-}
-
-.btn-case-study:active {
-    transform: scale(0.92);
-}
-
-/* Remove previous pseudo-element animations if any */
-.btn-case-study::before {
-    display: none;
+    color: #ffffff !important;
 }
 
 .btn-case-study i {
     transition: transform 0.3s ease;
-    font-size: 0.9em;
-    /* Smaller icon */
 }
 
 .btn-case-study:hover i {
-    transform: translateX(5px);
-    color: rgb(4, 4, 38);
+    transform: translateX(4px);
 }
 
 /* Case Study Cards (Reveal on Hover - Witty Deer Style) */
@@ -711,15 +879,15 @@ body {
     position: relative;
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 24px;
     margin: 10px;
     height: 380px;
-    /* Fixed height for image display */
     text-decoration: none;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Background Image Overlay */
@@ -756,18 +924,19 @@ body {
 }
 
 .case-tag {
-    font-size: 1rem;
+    font-size: 0.82rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(15, 23, 42, 0.65);
     padding: 6px 14px;
     border-radius: 20px;
     display: inline-block;
     margin-bottom: 15px;
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    white-space: nowrap;
 }
 
 .case-quote {

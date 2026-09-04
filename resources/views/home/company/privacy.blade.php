@@ -70,7 +70,7 @@
                 <h2 class="mt-4">7. Contact Us</h2>
                 <p>If you have questions or comments about this Privacy Policy, please contact us at:
                     <br><strong>Mounteko Global Solutions</strong>
-                    <br>140 Broadway, 46th Floor, New York, NY 10005
+                    <br>{{ settingValue('address') }}
                     <br>Email: <a href="mailto:{{ settingValue('email') }}">{{ settingValue('email') }}</a>
                     <br>Phone: <a href="tel:{{ settingValue('phone') }}">{{ settingValue('phone') }}</a>
                 </p>

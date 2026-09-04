@@ -50,7 +50,7 @@
                 <h4 class="footer-heading">Contact</h4>
                 <div class="footer-contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>140 Broadway, 46th Floor, New York, NY 10005</span>
+                    <span>{{ settingValue('address') }}</span>
                 </div>
                 <div class="footer-contact-item">
                     <i class="fas fa-envelope"></i>
@@ -70,7 +70,7 @@
         <!-- Bottom Footer -->
         <div class="footer-bottom">
             <p>&copy; {{ date('Y') }} {{ settingValue('company Name') }}. All rights reserved. Developed by
-                {{ settingValue('developed by') }}
+                <a href="{{ settingValue('developed by url') !== 'N/A' && settingValue('developed by url') ? settingValue('developed by url') : '#' }}" target="_blank" rel="noopener" class="text-white text-decoration-underline">{{ settingValue('developed by') }}</a>
             </p>
         </div>
     </div>

@@ -13,7 +13,7 @@
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="{{ asset('admin/assets/dist/img/AdminLTELogo.png') }}" height="60" width="60">
+            <img class="animation__shake" src="{{ asset('storage/' . settingValue('logo')) }}" alt="{{ settingValue('company Name') }}" height="60" width="auto" style="max-width: 150px; object-fit: contain;">
         </div>
 
         {{-- ===================== Topbar ================== --}}

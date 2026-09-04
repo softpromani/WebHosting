@@ -28,8 +28,9 @@ class WebSettingSeeder extends Seeder
             ['group' => 'Contact', 'key' => 'phone','value'=>'(855) 526-7890','type'=>'text'],
             // removed - ['group' => 'Contact', 'key' => 'address','value'=>'A108 Adam Street, New York, NY 535022','type'=>'text'],
             // added
-            ['group' => 'Contact', 'key' => 'address','value'=>'140 Broadway, 46th Floor, New York, NY 10005','type'=>'text'],
+            ['group' => 'Contact', 'key' => 'address','value'=>'16192 Coastal Highway, Lewes, Delaware 19958','type'=>'text'],
             ['group' => 'Footer', 'key' => 'developed by','value'=>'Innovation Trove ','type'=>'text'],
+            ['group' => 'Footer', 'key' => 'developed by url','value'=>'#','type'=>'text'],
             // removed - ['group' => 'Footer', 'key' => 'company Name','value'=>'Web Hosting','type'=>'text'],
             // added
             ['group' => 'Footer', 'key' => 'company Name','value'=>'Mounteko','type'=>'text'],

@@ -31,10 +31,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "description": "Enterprise-grade cloud solutions, managed IT services, network architecture, and advanced cybersecurity for growing US businesses.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "140 Broadway, 46th Floor",
-    "addressLocality": "New York",
-    "addressRegion": "NY",
-    "postalCode": "10005",
+    "streetAddress": "16192 Coastal Highway",
+    "addressLocality": "Lewes",
+    "addressRegion": "DE",
+    "postalCode": "19958",
     "addressCountry": "US"
   },
   "telephone": "+18555267890",
@@ -191,19 +191,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @endif
 
 @php
-    function hex2rgb($hex)
-    {
-        $hex = str_replace("#", "", $hex);
-        if (strlen($hex) == 3) {
-            $r = hexdec(substr($hex, 0, 1) . substr($hex, 0, 1));
-            $g = hexdec(substr($hex, 1, 1) . substr($hex, 1, 1));
-            $b = hexdec(substr($hex, 2, 1) . substr($hex, 2, 1));
-        } else {
-            $r = hexdec(substr($hex, 0, 2));
-            $g = hexdec(substr($hex, 2, 2));
-            $b = hexdec(substr($hex, 4, 2));
+    if (!function_exists('hex2rgb')) {
+        function hex2rgb($hex)
+        {
+            $hex = str_replace("#", "", $hex);
+            if (strlen($hex) == 3) {
+                $r = hexdec(substr($hex, 0, 1) . substr($hex, 0, 1));
+                $g = hexdec(substr($hex, 1, 1) . substr($hex, 1, 1));
+                $b = hexdec(substr($hex, 2, 1) . substr($hex, 2, 1));
+            } else {
+                $r = hexdec(substr($hex, 0, 2));
+                $g = hexdec(substr($hex, 2, 2));
+                $b = hexdec(substr($hex, 4, 2));
+            }
+            return "$r, $g, $b";
         }
-        return "$r, $g, $b";
     }
     $primary_color = $theme_setting->where('key', 'primary')->first()->value ?? '#00838d';
     $secondary_color = $theme_setting->where('key', 'secondary')->first()->value ?? '#004d55';
