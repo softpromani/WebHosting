@@ -78,6 +78,33 @@
         .blog-theme-container.theme-dark .single-article-heading {
             color: #ffffff !important;
         }
+        /* --- Dark Theme Article Meta Bar --- */
+        .blog-theme-container.theme-dark .article-meta-bar {
+            color: #cbd5e1 !important;
+        }
+        .blog-theme-container.theme-dark .article-meta-bar .meta-item,
+        .blog-theme-container.theme-dark .article-meta-bar .meta-item * {
+            color: #cbd5e1 !important;
+        }
+        .blog-theme-container.theme-dark .article-meta-bar .meta-date,
+        .blog-theme-container.theme-dark .article-meta-bar .meta-date * {
+            color: #34d399 !important;
+        }
+        .blog-theme-container.theme-dark .article-meta-bar .meta-separator {
+            color: #10b981 !important;
+            font-weight: 700;
+        }
+        .blog-theme-container.theme-dark .category-badge {
+            background-color: #021f11 !important;
+            color: #10b981 !important;
+            border: 1.5px solid #10b981 !important;
+        }
+        .blog-theme-container.theme-dark .blog-tags-wrapper {
+            color: #cbd5e1 !important;
+        }
+        .blog-theme-container.theme-dark .text-muted {
+            color: #cbd5e1 !important;
+        }
         /* --- DARK THEME TEXT & INLINE STYLES OVERRIDE (CKEditor HTML Content) --- */
         .blog-theme-container.theme-dark .single-article-body,
         .blog-theme-container.theme-dark .single-article-body * {
@@ -452,6 +479,27 @@
         .blog-theme-container.theme-light .single-article-heading {
             color: #0f172a !important;
         }
+        /* --- Light Theme Article Meta Bar --- */
+        .blog-theme-container.theme-light .article-meta-bar {
+            color: #64748b !important;
+        }
+        .blog-theme-container.theme-light .article-meta-bar .meta-item,
+        .blog-theme-container.theme-light .article-meta-bar .meta-item * {
+            color: #475569 !important;
+        }
+        .blog-theme-container.theme-light .article-meta-bar .meta-date,
+        .blog-theme-container.theme-light .article-meta-bar .meta-date * {
+            color: #059669 !important;
+        }
+        .blog-theme-container.theme-light .article-meta-bar .meta-separator {
+            color: #cbd5e1 !important;
+            font-weight: 700;
+        }
+        .blog-theme-container.theme-light .category-badge {
+            background-color: #ecfdf5 !important;
+            color: #059669 !important;
+            border: 1.5px solid #10b981 !important;
+        }
         /* --- LIGHT THEME TEXT & INLINE STYLES (CKEditor HTML Content) --- */
         .blog-theme-container.theme-light .single-article-body,
         .blog-theme-container.theme-light .single-article-body * {
@@ -810,20 +858,20 @@
                             </div>
 
                             <!-- Article Meta -->
-                            <div class="d-flex flex-wrap align-items-center gap-3 mb-3 pb-3 border-bottom text-muted"
+                            <div class="article-meta-bar d-flex flex-wrap align-items-center gap-3 mb-3 pb-3 border-bottom"
                                 style="font-size: 13.5px; border-color: rgba(16, 185, 129, 0.25) !important;">
-                                <span class="badge px-3 py-1 rounded-pill" style="background-color: #000000; color: #10b981; border: 1.5px solid #10b981;">
+                                <span class="badge px-3 py-1 rounded-pill category-badge">
                                     <i class="bi bi-folder2-open me-1"></i> {{ $blog->category_name }}
                                 </span>
-                                <span class="d-flex align-items-center text-success fw-semibold">
-                                    <i class="bi bi-calendar3 me-1"></i> {{ $blog->formatted_date }}
+                                <span class="meta-item meta-date d-flex align-items-center fw-semibold">
+                                    <i class="bi bi-calendar3 me-1 text-success"></i> {{ $blog->formatted_date }}
                                 </span>
-                                <span>•</span>
-                                <span class="d-flex align-items-center text-muted">
+                                <span class="meta-separator">•</span>
+                                <span class="meta-item meta-readtime d-flex align-items-center">
                                     <i class="bi bi-clock me-1 text-success"></i> {{ $blog->reading_time }}
                                 </span>
-                                <span>•</span>
-                                <span class="d-flex align-items-center text-muted">
+                                <span class="meta-separator">•</span>
+                                <span class="meta-item meta-author d-flex align-items-center">
                                     <i class="bi bi-person-check me-1 text-success"></i> Mounteko Editorial Team
                                 </span>
                             </div>

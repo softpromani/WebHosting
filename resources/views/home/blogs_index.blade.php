@@ -5,6 +5,27 @@
 
 @section('content')
 
+    <style>
+        .custom-blog-category {
+            color: #10b981 !important;
+            transition: color 0.25s ease !important;
+        }
+        .custom-blog-category:hover,
+        .custom-blog-category:focus,
+        .custom-blog-card:hover .custom-blog-category:hover {
+            color: #34d399 !important;
+            text-decoration: underline !important;
+        }
+        .custom-blog-title a {
+            color: #ffffff !important;
+            transition: color 0.25s ease !important;
+        }
+        .custom-blog-title a:hover,
+        .custom-blog-title a:focus {
+            color: #34d399 !important;
+        }
+    </style>
+
     <!-- Blog Hero Section -->
     <section class="blog-hero-section">
         <div class="container text-center">
