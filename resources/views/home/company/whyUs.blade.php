@@ -473,13 +473,13 @@
                         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
                             <div class="premium-blog-card">
                                 <div class="blog-img-box">
-                                    <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}">
+                                    <img src="{{ $blog->image_url }}" alt="{{ $blog->title }}">
                                 </div>
                                 <div class="blog-content">
-                                    <span class="blog-category">{{ $blog->category ?? 'Cloud Hosting' }}</span>
+                                    <span class="blog-category">{{ $blog->category_name }}</span>
                                     <h4>{{ Str::limit($blog->title, 50) }}</h4>
                                     <p>{{ Str::limit(strip_tags($blog->description), 100) }}</p>
-                                    <a href="#" class="read-more-btn">
+                                    <a href="{{ route('single-blog', $blog->slug) }}" class="read-more-btn">
                                         Read More <i class="fas fa-arrow-right"></i>
                                     </a>
                                 </div>

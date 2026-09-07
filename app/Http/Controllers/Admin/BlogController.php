@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Blog;
 use App\Models\Media;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
@@ -16,20 +17,26 @@ class BlogController extends Controller
     public function index(Request  $request)
     {
         if ($request->ajax()) {
-            $data = Blog::with('blogImage')->select(['id', 'title', 'description'])->get();
+            $data = Blog::with('blogImage')->select(['id', 'title', 'category', 'description'])->latest()->get();
 
             return DataTables::of($data)
+                ->editColumn('description', function ($data) {
+                    $clean = strip_tags($data->description ?? '');
+                    $clean = html_entity_decode($clean, ENT_QUOTES, 'UTF-8');
+                    $clean = preg_replace('/\s+/', ' ', $clean);
+                    return Str::limit(trim($clean), 90, '...');
+                })
                 ->addColumn('blog_image', function ($data) {
                     if ($data->blogImage) {
                         $url = asset('storage/' . $data->blogImage->media);
-                        return '<img src="' . $url . '" style="width:80px;height:80px;" alt="Image">';
+                        return '<img src="' . $url . '" style="width:60px;height:60px;object-fit:cover;border-radius:6px;" alt="Image">';
                     }
-                    return 'No Image';
+                    return '<span class="badge bg-secondary">No Image</span>';
                 })
                 ->addColumn('action', function ($data) {
                     return '
-                <a href="' . route('admin.blog.edit', $data->id) . '" class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i></a>
-                <button class="btn btn-sm btn-danger delete-blog" data-id="' . $data->id . '"><i class="nav-icon fa-solid fa-trash"></i></button>
+                <a href="' . route('admin.blog.edit', $data->id) . '" class="btn btn-sm btn-primary" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <button class="btn btn-sm btn-danger delete-blog" data-id="' . $data->id . '" title="Delete"><i class="nav-icon fa-solid fa-trash"></i></button>
             ';
                 })
                 ->rawColumns(['blog_image', 'action'])
@@ -49,18 +56,36 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+     public function store(Request $request)
     {
          $request->validate([
             'title' => 'required',
+            'slug' => 'nullable|string',
+            'category' => 'nullable|string',
             'description' => 'required',
             'blog_image' => 'required|image',
+            'tags' => 'nullable|string',
+            'focus_keywords' => 'nullable|string',
+            'meta_title' => 'nullable|string',
+            'meta_description' => 'nullable|string',
         ]);
 
-        $data = Blog::create([
+        $slugValue = !empty($request->slug) 
+            ? Str::slug($request->slug) 
+            : Str::slug(strtok($request->title ?? '', "\r\n"));
+
+        $payload = [
             'title' => $request->title,
+            'slug' => $slugValue,
+            'category' => $request->category,
             'description' => $request->description,
-        ]);
+            'tags' => $request->tags,
+            'focus_keywords' => $request->focus_keywords,
+            'meta_title' => $request->meta_title,
+            'meta_description' => $request->meta_description,
+        ];
+
+        $data = Blog::create($payload);
 
         if ($request->hasFile('blog_image')) {
             $file = $request->file('blog_image');
@@ -106,16 +131,34 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'nullable|string',
+            'category' => 'nullable|string',
             'description' => 'required',
             'blog_image' => 'nullable|image', 
+            'tags' => 'nullable|string',
+            'focus_keywords' => 'nullable|string',
+            'meta_title' => 'nullable|string',
+            'meta_description' => 'nullable|string',
         ]);
 
         $blog = Blog::find($id);
 
-        $blog->update([
+        $slugValue = !empty($request->slug) 
+            ? Str::slug($request->slug) 
+            : Str::slug(strtok($request->title ?? '', "\r\n"));
+
+        $payload = [
             'title' => $request->title,
+            'slug' => $slugValue,
+            'category' => $request->category,
             'description' => $request->description,
-        ]);
+            'tags' => $request->tags,
+            'focus_keywords' => $request->focus_keywords,
+            'meta_title' => $request->meta_title,
+            'meta_description' => $request->meta_description,
+        ];
+
+        $blog->update($payload);
 
         if ($request->hasFile('blog_image')) {
             $media = Media::uploadMedia($request->file('blog_image'), $blog, 'blog');

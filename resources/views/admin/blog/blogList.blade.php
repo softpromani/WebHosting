@@ -1,11 +1,11 @@
-@extends('admin.includes.layout', ['breadcrumb_title' => 'BLog '])
+@extends('admin.includes.layout', ['breadcrumb_title' => 'Blog '])
 @section('title', 'Blog')
 
 @section('main-content')
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">BLog </h3>
+            {{-- <h3 class="card-title">Blog </h3> --}}
             <a class="btn btn-primary float-end" href="{{ route('admin.blog.create') }}">+ Add New</a>
         </div>
         <!-- /.card-header -->

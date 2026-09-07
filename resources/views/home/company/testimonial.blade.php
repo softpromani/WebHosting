@@ -78,7 +78,7 @@
                         @foreach ($blogs as $blog)
                             <div class="swiper-slide ">
                                 <div class="card">
-                                    <img src="{{ asset('storage/' . $blog->blogImage->media) }}"
+                                    <img src="{{ $blog->image_url }}"
                                         class="card-img-top blogCard" alt="{{ $blog->title }}">
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $blog->title }}</h5>
