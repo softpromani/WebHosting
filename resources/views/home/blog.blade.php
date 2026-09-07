@@ -308,8 +308,66 @@
             align-items: center;
             justify-content: center;
         }
+        /* --- Related Articles Card Styling (Dark Theme) --- */
+        .related-article-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none !important;
+            padding: 8px 10px;
+            border-radius: 12px;
+            transition: all 0.25s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+        .related-article-card:last-child {
+            border-bottom: none !important;
+        }
+        .related-article-thumb {
+            width: 64px;
+            height: 52px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            position: relative;
+            background: #000000;
+        }
+        .related-article-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .related-article-card:hover .related-article-thumb img {
+            transform: scale(1.08);
+        }
+        .related-item-title {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            word-break: break-word;
+            transition: color 0.2s ease;
+        }
+        .related-item-meta {
+            font-size: 11.5px;
+        }
+        .blog-theme-container.theme-dark .related-article-card {
+            background: transparent;
+        }
+        .blog-theme-container.theme-dark .related-article-card:hover {
+            background: rgba(16, 185, 129, 0.12) !important;
+        }
+        .blog-theme-container.theme-dark .related-article-thumb {
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
         .blog-theme-container.theme-dark .related-item-title {
-            color: #ffffff !important;
+            color: #f8fafc !important;
+        }
+        .blog-theme-container.theme-dark .related-article-card:hover .related-item-title {
+            color: #34d399 !important;
         }
         .blog-theme-container.theme-dark .popular-tag-badge {
             background-color: #000000 !important;
@@ -614,8 +672,22 @@
             align-items: center;
             justify-content: center;
         }
+        /* --- Related Articles Card Styling (Light Theme) --- */
+        .blog-theme-container.theme-light .related-article-card {
+            background: transparent;
+            border-bottom: 1px solid #e2e8f0 !important;
+        }
+        .blog-theme-container.theme-light .related-article-card:hover {
+            background: #f1f5f9 !important;
+        }
+        .blog-theme-container.theme-light .related-article-thumb {
+            border: 1px solid #e2e8f0;
+        }
         .blog-theme-container.theme-light .related-item-title {
             color: #0f172a !important;
+        }
+        .blog-theme-container.theme-light .related-article-card:hover .related-item-title {
+            color: #059669 !important;
         }
         .blog-theme-container.theme-light .popular-tag-badge {
             background-color: #f1f5f9 !important;
@@ -867,24 +939,20 @@
                             @if (isset($relatedblogs) && $relatedblogs->count() > 0)
                                 <div class="sidebar-box mb-4">
                                     <h4 class="sidebar-box-title fw-bold">Related Articles</h4>
-                                    <div class="related-articles-list">
+                                    <div class="related-articles-list d-flex flex-column gap-1">
                                         @foreach ($relatedblogs as $related)
                                             <a href="{{ route('single-blog', $related->slug) }}"
-                                                class="d-flex align-items-center gap-3 text-decoration-none py-2 border-bottom"
-                                                style="border-color: rgba(255, 255, 255, 0.1) !important;">
-                                                <div class="flex-shrink-0"
-                                                    style="width: 54px; height: 48px; border-radius: 8px; overflow: hidden;">
-                                                    <img src="{{ $related->image_url }}" alt="{{ $related->title }}"
-                                                    class="w-100 h-100" style="object-fit: cover;">
+                                                class="related-article-card">
+                                                <div class="related-article-thumb">
+                                                    <img src="{{ $related->image_url }}" alt="{{ $related->title }}">
                                                 </div>
                                                 <div class="flex-grow-1 min-w-0">
-                                                    <h6 class="mb-1 fw-semibold related-item-title text-truncate"
-                                                        style="font-size: 13px; line-height: 1.35;">
+                                                    <h6 class="mb-1 related-item-title">
                                                         {{ $related->title }}
                                                     </h6>
-                                                    <span class="text-success" style="font-size: 11px;">
+                                                    <div class="related-item-meta text-success">
                                                         <i class="bi bi-calendar3 me-1"></i> {{ $related->formatted_date }}
-                                                    </span>
+                                                    </div>
                                                 </div>
                                             </a>
                                         @endforeach
