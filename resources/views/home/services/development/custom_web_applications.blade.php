@@ -351,6 +351,9 @@
             </div>
         </section> 
         
+        <!-- SECTION: LATEST FROM OUR BLOG (DYNAMIC AI BLOGS) -->
+        @include('home.services.partials.latest_blog_section', ['sectionTag' => 'DEV INSIGHTS'])
+
         <!-- SECTION: PREMIUM CTA -->
         <section class="section8-cta">
             <div class="s8-container">

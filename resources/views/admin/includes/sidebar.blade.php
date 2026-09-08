@@ -140,10 +140,10 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.blog.index') }}"
-                        class="nav-link {{ Route::currentRouteName() == 'admin.blog.index' ? 'active' : '' }}">
-                        <i class="nav-icon fa-solid fa-quote-left"></i>
+                        class="nav-link {{ in_array(Route::currentRouteName(), ['admin.blog.index', 'admin.blog.create', 'admin.blog.edit']) ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-blog"></i>
                         <p>
-                            BLogs
+                            Blogs
                         </p>
                     </a>
                 </li>

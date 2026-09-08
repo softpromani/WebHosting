@@ -50,7 +50,12 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.createBlog');
+        $categories = Blog::withoutGlobalScopes()
+            ->whereNotNull('category')
+            ->where('category', '!=', '')
+            ->distinct()
+            ->pluck('category');
+        return view('admin.blog.createBlog', compact('categories'));
     }
 
     /**
@@ -121,7 +126,12 @@ class BlogController extends Controller
     public function edit(string $id)
     {
         $editBlog = Blog::with('blogImage')->find($id);
-        return view('admin.blog.createBlog', compact('editBlog'));
+        $categories = Blog::withoutGlobalScopes()
+            ->whereNotNull('category')
+            ->where('category', '!=', '')
+            ->distinct()
+            ->pluck('category');
+        return view('admin.blog.createBlog', compact('editBlog', 'categories'));
     }
 
     /**

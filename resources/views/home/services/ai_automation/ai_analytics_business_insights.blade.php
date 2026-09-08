@@ -579,71 +579,7 @@
             </div>
         </section>
 
-        <!-- Latest Blog Section -->
-        <section class="ai-latest-blog-section">
-            <div class="ai-blog-container">
-                <!-- Section Header -->
-                <div class="ai-blog-header text-center">
-                    <div class="ai-card-tag justify-content-center">
-                        <span class="dot"></span> LATEST BLOG
-                    </div>
-                    <h2 class="ai-blog-title">AI and Creativity Stories Tips.</h2>
-                </div>
-
-                <!-- Blog Grid -->
-                <div class="ai-blog-grid">
-                    <!-- Blog Card 1 -->
-                    <div class="ai-blog-card">
-                        <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
-                                alt="Unlocking Data">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
-                                <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
-                            </div>
-                            <h3 class="blog-card-title">Unlocking the Power of Data for Business Success.</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Blog Card 2 -->
-                    <div class="ai-blog-card">
-                        <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800"
-                                alt="Future of Work">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
-                                <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
-                            </div>
-                            <h3 class="blog-card-title">The Future of Work Embracing Digital Transformation.</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Blog Card 3 -->
-                    <div class="ai-blog-card">
-                        <div class="blog-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
-                                alt="AI Revolutionizing">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span class="meta-item"><i class="bi bi-person"></i> ByAdmin</span>
-                                <span class="meta-separator">|</span>
-                                <span class="meta-item"><i class="bi bi-chat"></i> (03) Comments</span>
-                            </div>
-                            <h3 class="blog-card-title">How AI is Revolutionizing Business and Industry Today</h3>
-                            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-up-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Latest Blog Section (Dynamic AI Blogs) -->
+        @include('home.services.partials.latest_blog_section', ['sectionTag' => 'AI INSIGHTS', 'sectionTitle' => 'Latest AI & Analytics Insights'])
     </main>
 @endsection

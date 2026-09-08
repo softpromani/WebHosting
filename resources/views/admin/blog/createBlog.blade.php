@@ -3,6 +3,75 @@
 
 @section('main-content')
     <style>
+        /* Suppress CKEditor 4 security / upgrade notification */
+        .cke_notification_warning,
+        .cke_notifications_area,
+        .cke_notification {
+            display: none !important;
+        }
+
+        /* Custom Category Combobox Dropdown */
+        .category-combobox-wrapper {
+            position: relative;
+        }
+        .category-combobox-wrapper .dropdown-toggle-btn {
+            border-color: #ced4da;
+            background: #f8fafc;
+            transition: all 0.2s ease;
+        }
+        .category-combobox-wrapper .dropdown-toggle-btn:hover {
+            background: #e2e8f0;
+        }
+        .category-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1050;
+            background: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 0.375rem;
+            max-height: 240px;
+            overflow-y: auto;
+            margin-top: 4px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .category-dropdown-item {
+            padding: 9px 14px;
+            font-size: 13.5px;
+            color: #334155;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.15s ease, color 0.15s ease;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .category-dropdown-item:last-child {
+            border-bottom: none;
+        }
+        .category-dropdown-item:hover,
+        .category-dropdown-item.active {
+            background: #eff6ff;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .category-dropdown-item.is-create {
+            color: #059669;
+            background: #ecfdf5;
+            font-weight: 600;
+        }
+        .category-dropdown-item.is-create:hover {
+            background: #d1fae5;
+            color: #047857;
+        }
+        .category-dropdown-empty {
+            padding: 12px 14px;
+            font-size: 13px;
+            color: #94a3b8;
+            text-align: center;
+        }
+
         .ck-editor__editable {
             min-height: 420px !important;
             max-height: 750px !important;
@@ -168,21 +237,39 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <label for="category" class="fw-bold">Category</label>
-                        <div class="form-group">
-                            <input type="text" list="categoryOptions" name="category" class="form-control" id="category"
-                                placeholder="Select / type category"
-                                value="{{ old('category', isset($editBlog) ? $editBlog->category : '') }}">
-                            <datalist id="categoryOptions">
-                                <option value="Security & Compliance">
-                                <option value="Cloud Architecture">
-                                <option value="Strategy & Roadmaps">
-                                <option value="Design & Research">
-                                <option value="Data & Governance">
-                                <option value="Use Cases by Industry">
-                                <option value="DevOps & Infrastructure">
-                                <option value="AI & Automation">
-                            </datalist>
+                        <label for="categoryInput" class="fw-bold">Category</label>
+                        <div class="form-group position-relative category-combobox-wrapper">
+                            @php
+                                $existingCategories = isset($categories) && count($categories)
+                                    ? (is_array($categories) ? $categories : $categories->toArray())
+                                    : \App\Models\Blog::withoutGlobalScopes()->whereNotNull('category')->where('category', '!=', '')->distinct()->pluck('category')->toArray();
+                                
+                                $popularPresets = [
+                                    'AI & Automation',
+                                    'AI & IT Innovation',
+                                    'Managed IT Services',
+                                    'Security & Compliance',
+                                    'Cloud & Remote Access',
+                                    'Cloud Architecture',
+                                    'Network Solutions',
+                                    'Software & Web Development',
+                                    'DevOps & Infrastructure',
+                                    'Data & Governance',
+                                    'Strategy & Roadmaps',
+                                ];
+
+                                $allCategories = array_values(array_unique(array_filter(array_merge($existingCategories, $popularPresets))));
+                            @endphp
+                            <div class="input-group">
+                                <input type="text" name="category" class="form-control" id="categoryInput"
+                                    placeholder="Select or type new category..."
+                                    value="{{ old('category', isset($editBlog) ? $editBlog->category : '') }}"
+                                    autocomplete="off">
+                                <button class="btn btn-outline-secondary dropdown-toggle-btn" type="button" id="categoryDropdownBtn" tabindex="-1">
+                                    <i class="fa-solid fa-chevron-down text-muted"></i>
+                                </button>
+                            </div>
+                            <div class="category-dropdown-menu shadow-sm" id="categoryDropdownMenu" style="display: none;"></div>
                         </div>
                         @error('category')
                             <div class="alert mt-1 p-1 text-danger small">{{ $message }}</div>
@@ -344,9 +431,18 @@
 @section('script-area')
     <script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
     <script>
+        // Disable CKEditor 4 version check security warning banner
+        if (typeof CKEDITOR !== 'undefined') {
+            CKEDITOR.config.versionCheck = false;
+        }
+
         $(document).ready(function() {
+            if (typeof CKEDITOR !== 'undefined') {
+                CKEDITOR.config.versionCheck = false;
+            }
             if (document.getElementById('description')) {
                 CKEDITOR.replace('description', {
+                    versionCheck: false,
                     height: 450,
                     toolbarGroups: [{
                             name: 'document',
@@ -551,6 +647,109 @@
                     }
                 });
             }
+            // --- DYNAMIC SEARCHABLE & EDITABLE CATEGORY COMBOBOX ---
+            (function() {
+                var categories = @json($allCategories ?? []);
+                var input = document.getElementById('categoryInput');
+                var menu = document.getElementById('categoryDropdownMenu');
+                var btn = document.getElementById('categoryDropdownBtn');
+                if (!input || !menu) return;
+
+                function escapeHtml(text) {
+                    var div = document.createElement('div');
+                    div.textContent = text;
+                    return div.innerHTML;
+                }
+
+                function renderOptions(query) {
+                    query = (query || '').trim().toLowerCase();
+                    menu.innerHTML = '';
+
+                    var matches = categories.filter(function(cat) {
+                        return cat.toLowerCase().indexOf(query) !== -1;
+                    });
+
+                    var exactMatch = categories.some(function(cat) {
+                        return cat.toLowerCase() === query;
+                    });
+
+                    if (query.length > 0 && !exactMatch) {
+                        var createItem = document.createElement('div');
+                        createItem.className = 'category-dropdown-item is-create';
+                        createItem.innerHTML = '<span><i class="fa-solid fa-plus me-2"></i>Use "<strong>' + escapeHtml(input.value.trim()) + '</strong>"</span><span class="badge bg-success-subtle text-success border border-success-subtle">New</span>';
+                        createItem.addEventListener('mousedown', function(e) {
+                            e.preventDefault();
+                            input.value = input.value.trim();
+                            hideMenu();
+                        });
+                        menu.appendChild(createItem);
+                    }
+
+                    if (matches.length > 0) {
+                        matches.forEach(function(cat) {
+                            var isSelected = input.value.trim().toLowerCase() === cat.toLowerCase();
+                            var item = document.createElement('div');
+                            item.className = 'category-dropdown-item' + (isSelected ? ' active' : '');
+                            item.innerHTML = '<span>' + escapeHtml(cat) + '</span>' + (isSelected ? '<i class="fa-solid fa-check text-primary"></i>' : '');
+                            item.addEventListener('mousedown', function(e) {
+                                e.preventDefault();
+                                input.value = cat;
+                                hideMenu();
+                            });
+                            menu.appendChild(item);
+                        });
+                    } else if (query.length === 0) {
+                        var empty = document.createElement('div');
+                        empty.className = 'category-dropdown-empty';
+                        empty.textContent = 'No categories found';
+                        menu.appendChild(empty);
+                    }
+
+                    menu.style.display = 'block';
+                }
+
+                function showMenu() {
+                    renderOptions(input.value);
+                }
+
+                function hideMenu() {
+                    menu.style.display = 'none';
+                }
+
+                input.addEventListener('focus', function() {
+                    showMenu();
+                });
+
+                input.addEventListener('input', function() {
+                    renderOptions(this.value);
+                });
+
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        hideMenu();
+                    } else if (e.key === 'Enter') {
+                        hideMenu();
+                    }
+                });
+
+                if (btn) {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        if (menu.style.display === 'none' || menu.style.display === '') {
+                            input.focus();
+                            showMenu();
+                        } else {
+                            hideMenu();
+                        }
+                    });
+                }
+
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.category-combobox-wrapper')) {
+                        hideMenu();
+                    }
+                });
+            })();
         });
     </script>
 @endsection

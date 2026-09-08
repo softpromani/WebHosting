@@ -327,6 +327,9 @@
             </div>
         </section>
 
+        <!-- SECTION: LATEST FROM OUR BLOG (DYNAMIC AI BLOGS) -->
+        @include('home.services.partials.latest_blog_section', ['sectionTag' => 'SECURITY INSIGHTS'])
+
         <!-- SECTION 8 (MODERN CTA) -->
         <section class="section8-cta">
             <div class="s8-container">

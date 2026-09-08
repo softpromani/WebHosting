@@ -344,64 +344,8 @@
             </div>
         </section>
 
-        <!-- SECTION 6: LATEST FROM OUR BLOG -->
-        <section class="dev-blog-section">
-            <div class="dev-blog-container">
-                <span class="dev-blog-tag">SECURITY INSIGHTS</span>
-                <h2 class="dev-blog-title">Latest From Our Blog</h2>
-                <div class="dev-blog-divider"></div>
-
-                <div class="dev-blog-grid">
-                    <!-- Post 1 -->
-                    <div class="dev-blog-card">
-                        <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=700"
-                                alt="Security Patching Blog">
-                        </div>
-                        <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-it-support">SECURITY</span>
-                            <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 18 Mar, 2024</span>
-                                <span><i class="bi bi-person"></i> By Sec Expert</span>
-                            </div>
-                            <h4 class="dev-blog-heading">The Hidden Risks of Delayed Security Patching</h4>
-                        </div>
-                    </div>
-
-                    <!-- Post 2 -->
-                    <div class="dev-blog-card">
-                        <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
-                                alt="Vulnerability Blog">
-                        </div>
-                        <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-management">COMPLIANCE</span>
-                            <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 22 Mar, 2024</span>
-                                <span><i class="bi bi-person"></i> By Compliance Lead</span>
-                            </div>
-                            <h4 class="dev-blog-heading">Staying Ahead of Zero-Day Threats in 2024</h4>
-                        </div>
-                    </div>
-
-                    <!-- Post 3 -->
-                    <div class="dev-blog-card">
-                        <div class="dev-blog-img">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=700"
-                                alt="Managed Updates Blog">
-                        </div>
-                        <div class="dev-blog-body">
-                            <span class="dev-blog-cat cat-security">UPDATES</span>
-                            <div class="dev-blog-meta">
-                                <span><i class="bi bi-calendar3"></i> 25 Mar, 2024</span>
-                                <span><i class="bi bi-person"></i> By System Admin</span>
-                            </div>
-                            <h4 class="dev-blog-heading">Automated vs. Manual Patching: Which is Better?</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- SECTION 6: LATEST FROM OUR BLOG (DYNAMIC AI BLOGS) -->
+        @include('home.services.partials.latest_blog_section', ['sectionTag' => 'SECURITY INSIGHTS'])
 
         <!-- CTA SECTION -->
         <section class="hd-cta-section">

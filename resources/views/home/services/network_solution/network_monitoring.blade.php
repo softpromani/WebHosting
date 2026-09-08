@@ -387,6 +387,9 @@
             </div>
         </section>
 
+        <!-- SECTION: LATEST FROM OUR BLOG (DYNAMIC AI BLOGS) -->
+        @include('home.services.partials.latest_blog_section', ['sectionTag' => 'NETWORK INSIGHTS'])
+
         <!-- Final CTA Section -->
         <section class="py-5 bg-light">
             <div class="container text-center">

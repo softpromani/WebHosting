@@ -135,4 +135,37 @@ class Blog extends Model
         }
         return array_values(array_filter(array_map('trim', explode(',', $this->tags))));
     }
+
+    /**
+     * Fetch AI-related blogs (matching AI, Artificial Intelligence, Machine Learning, Automation in tags, category, title, or focus keywords)
+     */
+    public static function getAiRelatedBlogs($limit = 3)
+    {
+        $aiBlogs = static::with('blogImage')
+            ->where(function ($q) {
+                $q->where('tags', 'LIKE', '%AI%')
+                  ->orWhere('tags', 'LIKE', '%Artificial Intelligence%')
+                  ->orWhere('tags', 'LIKE', '%Machine Learning%')
+                  ->orWhere('tags', 'LIKE', '%Automation%')
+                  ->orWhere('category', 'LIKE', '%AI%')
+                  ->orWhere('category', 'LIKE', '%Automation%')
+                  ->orWhere('title', 'LIKE', '%AI%')
+                  ->orWhere('focus_keywords', 'LIKE', '%AI%');
+            })
+            ->latest()
+            ->take($limit)
+            ->get();
+
+        if ($aiBlogs->count() < $limit) {
+            $excludeIds = $aiBlogs->pluck('id')->toArray();
+            $fallbacks = static::with('blogImage')
+                ->whereNotIn('id', $excludeIds)
+                ->latest()
+                ->take($limit - $aiBlogs->count())
+                ->get();
+            $aiBlogs = $aiBlogs->concat($fallbacks);
+        }
+
+        return $aiBlogs;
+    }
 }
