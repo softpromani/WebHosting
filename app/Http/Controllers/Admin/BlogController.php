@@ -17,7 +17,7 @@ class BlogController extends Controller
     public function index(Request  $request)
     {
         if ($request->ajax()) {
-            $data = Blog::with('blogImage')->select(['id', 'title', 'category', 'description'])->latest()->get();
+            $data = Blog::with('blogImage')->select(['id', 'title', 'category', 'description', 'blog_image'])->latest()->get();
 
             return DataTables::of($data)
                 ->editColumn('description', function ($data) {
@@ -27,16 +27,15 @@ class BlogController extends Controller
                     return Str::limit(trim($clean), 90, '...');
                 })
                 ->addColumn('blog_image', function ($data) {
-                    if ($data->blogImage) {
-                        $url = asset('storage/' . $data->blogImage->media);
-                        return '<img src="' . $url . '" style="width:60px;height:60px;object-fit:cover;border-radius:6px;" alt="Image">';
-                    }
-                    return '<span class="badge bg-secondary">No Image</span>';
+                    $url = $data->image_url;
+                    return '<img src="' . $url . '" style="width:55px;height:55px;object-fit:cover;border-radius:8px;border:1px solid #e2e8f0;" alt="Blog Image" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800\';">';
                 })
                 ->addColumn('action', function ($data) {
                     return '
-                <a href="' . route('admin.blog.edit', $data->id) . '" class="btn btn-sm btn-primary" title="Edit"><i class="fa-solid fa-pen"></i></a>
-                <button class="btn btn-sm btn-danger delete-blog" data-id="' . $data->id . '" title="Delete"><i class="nav-icon fa-solid fa-trash"></i></button>
+                <div class="d-flex align-items-center gap-1">
+                    <a href="' . route('admin.blog.edit', $data->id) . '" class="btn btn-sm btn-primary" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                    <button class="btn btn-sm btn-danger delete-blog" data-id="' . $data->id . '" title="Delete"><i class="nav-icon fa-solid fa-trash"></i></button>
+                </div>
             ';
                 })
                 ->rawColumns(['blog_image', 'action'])
