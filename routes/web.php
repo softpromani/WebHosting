@@ -87,7 +87,7 @@ Route::get('/services/managed-it/hardware-software-procurement', [HomeController
 
 // Miscellaneous
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
-Route::get('download', [HomeController::class, 'downloads'])->name('download');
+// Route::get('download', [HomeController::class, 'downloads'])->name('download');
 Route::get('product/{slug}', [ProductController::class, 'index'])->name('product');
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login/store', [LoginController::class, 'loginStore'])->name('loginStore');

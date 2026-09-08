@@ -4,10 +4,10 @@
             <!-- Brand Column -->
             <div class="col-lg-4 col-md-6 footer-brand-col">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('storage/' . settingValue('logo')) }}" alt="{{ settingValue('company Name') }}"
-                        class="footer-logo">
+                    <img src="{{ asset('storage/' . settingValue('logo')) }}" alt="Mounteko Global Solutions"
+                        class="footer-logo" style="max-height: 50px; max-width: 220px; object-fit: contain;">
                 </a>
-                <div class="footer-tagline">{{ settingValue('company Name') }}</div>
+                <div class="footer-tagline">Mounteko Global Solutions</div>
                 <p class="footer-description">
                     Empowering businesses with reliable technology, innovation, and global reach. We provide scalable IT
                     solutions tailored to your business needs.
@@ -69,9 +69,7 @@
 
         <!-- Bottom Footer -->
         <div class="footer-bottom">
-            <p>&copy; {{ date('Y') }} {{ settingValue('company Name') }}. All rights reserved. Developed by
-                <a href="{{ settingValue('developed by url') !== 'N/A' && settingValue('developed by url') ? settingValue('developed by url') : '#' }}" target="_blank" rel="noopener" class="text-white text-decoration-underline">{{ settingValue('developed by') }}</a>
-            </p>
+            <p>&copy; {{ date('Y') }} Mounteko Global Solutions LLC. All Rights Reserved.</p>
         </div>
     </div>
 </footer>

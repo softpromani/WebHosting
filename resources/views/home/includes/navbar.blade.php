@@ -49,16 +49,28 @@
         font-size: 14px;
     }
 
-    .mega-cat-link.ai-wrap-menu i {
-        margin-left: auto;
+    /* Header Logo Styling */
+    .header-logo-img {
+        max-height: 50px;
+        max-width: 220px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+    @media (max-width: 768px) {
+        .header-logo-img {
+            max-height: 40px;
+            max-width: 170px;
+        }
     }
 </style>
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
 
-        <a href="{{ route('home') }}"><img src="{{ asset('storage/' . settingValue('logo')) }}"
-                alt="{{ settingValue('company Name') ?? 'Mounteko Global Solutions' }}"></a>
+        <a href="{{ route('home') }}" class="logo d-flex align-items-center"><img src="{{ asset('storage/' . settingValue('logo')) }}"
+                alt="{{ settingValue('company Name') ?? 'Mounteko Global Solutions' }}" class="header-logo-img"></a>
 
 
         <nav id="navbar" class="navbar">
