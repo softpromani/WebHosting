@@ -26,9 +26,9 @@
                 <ul class="footer-links-list">
                     <li><a href="{{ route('services.network-architecture') }}">Network Solutions</a></li>
                     <li><a href="{{ route('services.security-audits') }}">Cybersecurity</a></li>
-                    <li><a href="#">Cloud & Infrastructure</a></li>
-                    <li><a href="{{ route('home') }}#core-services">Managed Services</a></li>
-                    <li><a href="#"> Business workflow & automation</a></li>
+                    <li><a href="{{ route('services.cloud_architecture') }}">Cloud & Infrastructure</a></li>
+                    <li><a href="{{ route('services.managed_it') }}">Managed Services</a></li>
+                    <li><a href="{{ route('services.workflow_process_automation') }}">Business workflow & automation</a></li>
                 </ul>
             </div>
 
