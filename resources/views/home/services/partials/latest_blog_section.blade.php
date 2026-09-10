@@ -41,10 +41,11 @@
     margin: 0 auto 35px;
 }
 
-/* Swiper Wrapper & Card styling */
-.latest-blog-swiper {
-    padding-bottom: 50px !important;
-    position: relative;
+.dev-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
 }
 
 .dev-blog-card {
@@ -57,7 +58,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    text-align: left;
 }
 
 .dev-blog-card:hover {
@@ -157,47 +157,9 @@
     color: #1d4ed8;
 }
 
-/* Slider Controls Styling */
-.latest-blog-slider-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.latest-blog-nav-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    color: #0b1c3d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    z-index: 10;
-}
-
-.latest-blog-nav-btn:hover {
-    background: #2563eb;
-    color: #ffffff;
-    border-color: #2563eb;
-    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
-}
-
-.latest-blog-nav-btn.swiper-button-disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
 /* See More Button Styling */
 .dev-blog-see-more-wrap {
-    margin-top: 35px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -231,6 +193,18 @@
 .dev-blog-see-more-btn:hover i {
     transform: translateX(4px);
 }
+
+@media (max-width: 991px) {
+    .dev-blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .dev-blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 
 <!-- SECTION: LATEST FROM OUR BLOG -->
@@ -241,55 +215,40 @@
         <div class="dev-blog-divider"></div>
 
         @php
-            $sectionBlogs = $blogs ?? $aiBlogs ?? \App\Models\Blog::with('blogImage')->latest()->get();
+            $sectionBlogs = ($blogs ?? $aiBlogs ?? \App\Models\Blog::with('blogImage')->latest()->get())->take(3);
         @endphp
 
         @if($sectionBlogs->count() > 0)
-            <div class="swiper latest-blog-swiper">
-                <div class="swiper-wrapper">
-                    @foreach ($sectionBlogs as $blog)
-                        <div class="swiper-slide">
-                            <article class="dev-blog-card">
-                                <div class="dev-blog-img">
-                                    <a href="{{ route('single-blog', $blog->slug) }}">
-                                        <img src="{{ $blog->image_url }}" alt="{{ $blog->title }}" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="dev-blog-body">
-                                    @php
-                                        $displayTag = !empty($blog->tags_array) ? $blog->tags_array[0] : ($blog->category_name ?? 'Technology');
-                                        $catClasses = ['cat-it-support', 'cat-management', 'cat-security'];
-                                        $catClass = $catClasses[$loop->index % count($catClasses)];
-                                    @endphp
-                                    <div class="dev-blog-meta-top">
-                                        <span class="dev-blog-cat {{ $catClass }}">{{ strtoupper($displayTag) }}</span>
-                                        <span class="dev-blog-date"><i class="bi bi-calendar3 me-1"></i> {{ $blog->formatted_date }}</span>
-                                    </div>
-                                    <h4 class="dev-blog-heading">
-                                        <a href="{{ route('single-blog', $blog->slug) }}" style="color: inherit; text-decoration: none;">
-                                            {{ $blog->title }}
-                                        </a>
-                                    </h4>
-                                    <p class="dev-blog-excerpt">{{ $blog->excerpt }}</p>
-                                    <a href="{{ route('single-blog', $blog->slug) }}" class="dev-blog-link-btn">
-                                        Read Full Article <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </article>
+            <div class="dev-blog-grid">
+                @foreach ($sectionBlogs as $blog)
+                    <article class="dev-blog-card">
+                        <div class="dev-blog-img">
+                            <a href="{{ route('single-blog', $blog->slug) }}">
+                                <img src="{{ $blog->image_url }}" alt="{{ $blog->title }}" loading="lazy">
+                            </a>
                         </div>
-                    @endforeach
-                </div>
-
-                <!-- Slider Navigation & Dots -->
-                <div class="latest-blog-slider-controls">
-                    <button class="latest-blog-nav-btn latest-blog-prev" type="button" aria-label="Previous Slide">
-                        <i class="bi bi-chevron-left"></i>
-                    </button>
-                    <div class="swiper-pagination latest-blog-pagination" style="position: static; width: auto;"></div>
-                    <button class="latest-blog-nav-btn latest-blog-next" type="button" aria-label="Next Slide">
-                        <i class="bi bi-chevron-right"></i>
-                    </button>
-                </div>
+                        <div class="dev-blog-body">
+                            @php
+                                $displayTag = !empty($blog->tags_array) ? $blog->tags_array[0] : ($blog->category_name ?? 'Technology');
+                                $catClasses = ['cat-it-support', 'cat-management', 'cat-security'];
+                                $catClass = $catClasses[$loop->index % count($catClasses)];
+                            @endphp
+                            <div class="dev-blog-meta-top">
+                                <span class="dev-blog-cat {{ $catClass }}">{{ strtoupper($displayTag) }}</span>
+                                <span class="dev-blog-date"><i class="bi bi-calendar3 me-1"></i> {{ $blog->formatted_date }}</span>
+                            </div>
+                            <h4 class="dev-blog-heading">
+                                <a href="{{ route('single-blog', $blog->slug) }}" style="color: inherit; text-decoration: none;">
+                                    {{ $blog->title }}
+                                </a>
+                            </h4>
+                            <p class="dev-blog-excerpt">{{ $blog->excerpt }}</p>
+                            <a href="{{ route('single-blog', $blog->slug) }}" class="dev-blog-link-btn">
+                                Read Full Article <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                @endforeach
             </div>
         @endif
 
@@ -303,48 +262,4 @@
     </div>
 </section>
 
-<!-- Swiper Initialization Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    function initSwiper() {
-        if (typeof Swiper !== 'undefined') {
-            new Swiper('.latest-blog-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 25,
-                loop: {{ $sectionBlogs->count() > 3 ? 'true' : 'false' }},
-                autoplay: {
-                    delay: 4500,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-                pagination: {
-                    el: '.latest-blog-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.latest-blog-next',
-                    prevEl: '.latest-blog-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 25,
-                    },
-                    992: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    }
-                }
-            });
-        } else {
-            setTimeout(initSwiper, 150);
-        }
-    }
-    initSwiper();
-});
-</script>
 

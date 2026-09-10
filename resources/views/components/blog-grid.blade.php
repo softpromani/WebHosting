@@ -1,225 +1,130 @@
 <div>
     <style>
-        .blog-post {
+        .blog-grid-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .blog-post-card {
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
         }
 
-        .blog-post:hover {
+        .blog-post-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
         }
 
-        .blog-post img {
+        .blog-post-img-wrapper {
+            position: relative;
             width: 100%;
-            height: auto;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .blog-post-img-wrapper img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
             display: block;
         }
 
-        .blog-post:hover img {
+        .blog-post-card:hover .blog-post-img-wrapper img {
             transform: scale(1.05);
         }
 
-        .post-content {
-            padding: 2px 20px;
+        .blog-post-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
-        .post-content .category {
-            color: #ff5722;
-            font-weight: bold;
+        .blog-post-body .category {
+            color: #2563eb;
+            font-weight: 700;
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: 11px;
+            letter-spacing: 1px;
             display: inline-block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
-        .post-content h3 {
-            font-size: 20px;
-            margin: 0 0 5px;
-            line-height: 1.4rem;
+        .blog-post-body h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 10px;
+            line-height: 1.4;
+            color: #0b1c3d;
         }
 
-        .post-content .meta {
-            font-size: 13px;
-            color: #888;
+        .blog-post-body h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        .blog-post-body h3 a:hover {
+            color: #2563eb;
+        }
+
+        .blog-post-body .meta {
+            font-size: 12px;
+            color: #64748b;
             margin-bottom: 10px;
         }
 
-        .post-content p {
+        .blog-post-body p {
             font-size: 14px;
-            color: #555;
+            color: #475569;
             line-height: 1.5;
-        }
-
-        .blog-slider-wrapper {
-            position: relative;
-            max-width: 1200px;
-            margin: auto;
-            /* padding: 40px 0; */
-        }
-
-        .custom-nav {
-            position: absolute;
-            top: 45%;
-            transform: translateY(-50%);
-            z-index: 10;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 22px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .custom-nav:hover {
-            background-color: #ff5722;
-            color: #fff;
-        }
-
-        .custom-nav.left {
-            left: -20px;
-        }
-
-        .custom-nav.right {
-            right: -20px;
-        }
-
-        .arrow {
-            font-weight: bold;
-        }
-
-        .image-wrapper {
-            position: relative;
-            width: 100%;
-        }
-
-        .image-loader {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #ff5722;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            z-index: 2;
-        }
-
-        .image-loaded .image-loader {
-            display: none;
-        }
-
-        .owl-stage-outer {
-            padding-bottom: 15px;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
+            margin-bottom: 15px;
+            flex-grow: 1;
         }
     </style>
 
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-
     @php
-        $blogs = (isset($blogs) && count($blogs) > 0) ? $blogs : \App\Models\Blog::with('blogImage')->latest()->get();
+        $gridBlogs = ($blogs ?? \App\Models\Blog::with('blogImage')->latest()->get())->take(3);
     @endphp
 
-    <div class="blog-slider-wrapper">
-        <!-- Left Arrow -->
-        <div class="custom-nav left"><i class="arrow">&#10094;</i></div>
-
-        <!-- Owl Carousel -->
-        <section class="blog-carousel owl-carousel owl-theme">
-
-            @foreach ($blogs as $blog)
-                <div class="blog-post">
-                    <div class="image-wrapper">
-                        <div class="image-loader"></div>
-                        <img loading="lazy" src="{{ $blog->image_url }}"
-                             alt="{{ $blog->title }}"
-                             onload="this.closest('.image-wrapper').classList.add('image-loaded'); setTimeout(setEqualHeight, 50);">
-                    </div>
-                    <div class="post-content">
-                        <span class="category">{{ $blog->category_name ?? (isset($page) ? $page : 'Technology') }}</span>
-                         <a href="{{ route('single-blog', $blog->slug) }}"><h3>{{ $blog->title }}</h3></a>
-                        <div class="meta">{{ $blog->formatted_date }}</div>
-                        <p>{{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}</p>
-                    </div>
+    <div class="blog-grid-container">
+        <div class="row g-4">
+            @foreach ($gridBlogs as $blog)
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-post-card">
+                        <div class="blog-post-img-wrapper">
+                            <a href="{{ route('single-blog', $blog->slug) }}">
+                                <img loading="lazy" src="{{ $blog->image_url }}" alt="{{ $blog->title }}">
+                            </a>
+                        </div>
+                        <div class="blog-post-body">
+                            <span class="category">{{ $blog->category_name ?? (isset($page) ? $page : 'Technology') }}</span>
+                            <h3>
+                                <a href="{{ route('single-blog', $blog->slug) }}">{{ $blog->title }}</a>
+                            </h3>
+                            <div class="meta"><i class="bi bi-calendar3 me-1"></i> {{ $blog->formatted_date }}</div>
+                            <p>{{ \Illuminate\Support\Str::words(strip_tags($blog->description), 20, '...') }}</p>
+                        </div>
+                    </article>
                 </div>
             @endforeach
-        </section>
+        </div>
 
-
-        <!-- Right Arrow -->
-        <div class="custom-nav right"><i class="arrow">&#10095;</i></div>
+        <!-- See More Blogs Button -->
+        <div class="text-center mt-4 pt-2 mb-2">
+            <a href="{{ route('blog.index') }}" class="btn text-white rounded-pill px-4 py-2.5 fw-bold" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); border: none; box-shadow: 0 6px 18px rgba(37,99,235,0.25); font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+                See More Blogs <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
     </div>
-
-    <!-- See More Blogs Button -->
-    <div class="text-center mt-4 mb-2">
-        <a href="{{ route('blog.index') }}" class="btn text-white rounded-pill px-4 py-2.5 fw-bold" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); border: none; box-shadow: 0 6px 18px rgba(37,99,235,0.25); font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
-            See More Blogs <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
-
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <script>
-        function setEqualHeight() {
-            let maxHeight = 0;
-            $('.blog-post').css('height', 'auto');
-            $('.blog-post').each(function () {
-                const h = $(this).outerHeight();
-                if (h > maxHeight) maxHeight = h;
-            });
-            $('.blog-post').css('height', maxHeight + 'px');
-        }
-
-        const owl = $('.blog-carousel');
-
-        owl.owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: false,
-            dots: false,
-            responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                1024: { items: 3 }
-            },
-            onInitialized: () => setTimeout(setEqualHeight, 100),
-            onResized: () => setTimeout(setEqualHeight, 100),
-            onTranslated: () => setTimeout(setEqualHeight, 100)
-        });
-
-        $(window).on('resize', function () {
-            setTimeout(setEqualHeight, 200);
-        });
-
-        // Custom nav buttons
-        $('.custom-nav.left').click(() => owl.trigger('prev.owl.carousel'));
-        $('.custom-nav.right').click(() => owl.trigger('next.owl.carousel'));
-    </script>
 </div>
+
