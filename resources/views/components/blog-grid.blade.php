@@ -140,6 +140,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
+    @php
+        $blogs = (isset($blogs) && count($blogs) > 0) ? $blogs : \App\Models\Blog::with('blogImage')->latest()->get();
+    @endphp
+
     <div class="blog-slider-wrapper">
         <!-- Left Arrow -->
         <div class="custom-nav left"><i class="arrow">&#10094;</i></div>
@@ -169,6 +173,14 @@
         <!-- Right Arrow -->
         <div class="custom-nav right"><i class="arrow">&#10095;</i></div>
     </div>
+
+    <!-- See More Blogs Button -->
+    <div class="text-center mt-4 mb-2">
+        <a href="{{ route('blog.index') }}" class="btn text-white rounded-pill px-4 py-2.5 fw-bold" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); border: none; box-shadow: 0 6px 18px rgba(37,99,235,0.25); font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+            See More Blogs <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

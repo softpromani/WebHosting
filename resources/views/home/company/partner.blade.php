@@ -316,68 +316,8 @@
         </section>
 
         <!-- ======= Blog Section ======= -->
-        <section class="partner-blog-section py-5" style="background: #f8fafc;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <div class="benefits-header">
-                            <span class="benefits-subtitle">LATEST NEWS</span>
-                            <h2 class="benefits-title">Read Our Blogs</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-4">
-                    <!-- Blog Card 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="static-blog-card">
-                            <div class="blog-img-wrapper">
-                                <img src="{{ asset('home/assets/img/blog_static_1.png') }}" alt="Blog 1">
-                                <span class="blog-date">10 May 2024</span>
-                            </div>
-                            <div class="blog-content">
-                                <span class="blog-cat">Affiliate Tips</span>
-                                <h4 class="blog-title">How to scale your affiliate earnings in 2024</h4>
-                                <p class="blog-excerpt">Learn the latest strategies to grow your affiliate business and
-                                    maximize your monthly commission...</p>
-                                <a href="#" class="blog-btn-link">READ MORE <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Blog Card 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="static-blog-card">
-                            <div class="blog-img-wrapper">
-                                <img src="{{ asset('home/assets/img/blog_static_2.png') }}" alt="Blog 2">
-                                <span class="blog-date">08 May 2024</span>
-                            </div>
-                            <div class="blog-content">
-                                <span class="blog-cat">Hosting</span>
-                                <h4 class="blog-title">Why Cloud Hosting is the best choice for SEO</h4>
-                                <p class="blog-excerpt">Discover how our high-performance cloud infrastructure helps your
-                                    website rank higher on search engines...</p>
-                                <a href="#" class="blog-btn-link">READ MORE <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Blog Card 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="static-blog-card">
-                            <div class="blog-img-wrapper">
-                                <img src="{{ asset('home/assets/img/blog_static_3.png') }}" alt="Blog 3">
-                                <span class="blog-date">05 May 2024</span>
-                            </div>
-                            <div class="blog-content">
-                                <span class="blog-cat">Business</span>
-                                <h4 class="blog-title">Partnering for success: Our global network</h4>
-                                <p class="blog-excerpt">Explore the benefits of joining our global network of entrepreneurs
-                                    and growing your business together...</p>
-                                <a href="#" class="blog-btn-link">READ MORE <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        @include('home.services.partials.latest_blog_section', ['sectionTag' => 'LATEST NEWS', 'sectionTitle' => 'Read Our Blogs'])
+
 
     </main><!-- End #main -->
 

@@ -392,16 +392,9 @@
         </section>
 
         <!-- SECTION: LATEST FROM OUR BLOG -->
-        <section class="dev-blog-section">
-            <div class="dev-blog-container">
-                <span class="dev-blog-tag">POPULAR NEWS</span>
-                <h2 class="dev-blog-title">Latest From Our Blog</h2>
-                <div class="dev-blog-divider"></div>
-                <div class="dev-blog-grid">
-                    @include('home.includes.cloud_blog_widget')
-                </div>
-            </div>
-        </section>
+        <!-- SECTION: LATEST FROM OUR BLOG -->
+        @include('home.services.partials.latest_blog_section', ['sectionTag' => 'CLOUD INSIGHTS'])
+
 
 
 
